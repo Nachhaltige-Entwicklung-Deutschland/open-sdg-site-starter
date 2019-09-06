@@ -17,21 +17,21 @@ url: ""
 data_dir: data
 environment: staging
 # Replace my-github-org and open-sdg-data-starter as needed.
-remotedatabaseurl: "https://Nachhaltige-Entwicklung-Deutschland.github.io/open-sdg-data-starter"
+remotedatabaseurl: "https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-data-starter"
 
 jekyll_get_json:
   - data: meta
     # Replace my-github-org and open-sdg-data-starter as needed.
-    json: 'https://Nachhaltige-Entwicklung-Deutschland.github.io/open-sdg-data-starter/meta/all.json'
+    json: 'https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-data-starter/meta/all.json'
   - data: headlines
     # Replace my-github-org and open-sdg-data-starter as needed.
-    json: 'https://Nachhaltige-Entwicklung-Deutschland.github.io/open-sdg-data-starter/headline/all.json'
+    json: 'https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-data-starter/headline/all.json'
   - data: schema
     # Replace my-github-org and open-sdg-data-starter as needed.
-    json: 'https://Nachhaltige-Entwicklung-Deutschland.github.io/open-sdg-data-starter/meta/schema.json'
+    json: 'https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-data-starter/meta/schema.json'
   - data: reporting
     # Replace my-github-org and open-sdg-data-starter as needed.
-    json: 'https://Nachhaltige-Entwicklung-Deutschland.github.io/open-sdg-data-starter/stats/reporting.json'
+    json: 'https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-data-starter/stats/reporting.json'
   - data: translations
     json: 'https://open-sdg.github.io/sdg-translations/translations-0.5.2.json'
 
@@ -55,7 +55,7 @@ email_contacts:
 repo_name: open-sdg-data-starter
 branch: develop
 # Replace this value as needed.
-org_name: Nachhaltige-Entwicklung-Deutschland
+org_name: nachhaltige-entwicklung-deutschland
 
 # Build settings
 markdown: kramdown
