@@ -48,7 +48,7 @@ twitter: 'MyTwitterAccount'
 email_contacts:
   questions: DNS-Indikatoren@destatis.de
   suggestions: DNS-Indikatoren@destatis.de
-  functional: tDNS-Indikatoren@destatis.de
+  functional: DNS-Indikatoren@destatis.de
 
 # Github Repo for Data
 # Replace this value as needed.
