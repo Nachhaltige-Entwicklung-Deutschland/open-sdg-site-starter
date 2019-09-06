@@ -120,7 +120,7 @@ defaults:
 # the base below, completed with: /[language]/[number].png (eg, /fr/6.png).
 #goal_image_base: https://open-sdg.github.io/sdg-translations/assets/img/goals
 #goal_image_base: https://nachhaltige-enticklung-deutschland.github.io/open-sdg-site-starter/blob/develop/assets/img/goals
-goal_image_base: https://g205sdgs.github.io/sdg-indicators/assets/img/goals
+goal_image_base: https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns
 
 
 # Tell Jekyll to use the Remote Theme plugin.
