@@ -89,8 +89,6 @@ collections:
 
 # Menu
 menu:
-  - path: /
-  translation_key: general.goals
   # Use these to customise the main navigation.
   - path: /reporting-status
     # The "translation_key" refers to the key in the SDG Translations repository.
@@ -108,7 +106,7 @@ non_global_metadata: indicator.national_metadata
 
 # The list of languages that are translated. The first one is the default.
 languages:
-  - de
+  - en
 
 # This makes sure that all pages have a language.
 defaults:
