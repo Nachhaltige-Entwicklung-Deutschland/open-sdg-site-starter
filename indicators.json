@@ -25,7 +25,7 @@
           "status": "notstarted"
         },{
           "id": "1-4-2",
-          "title": "Proportion of total adult population with secure tenure rights to land, with legally recognized documentation, and who perceive their rights to land as secure, by sex and by type of tenure",
+          "title": "Proportion of total adult population with secure tenure rights to land, (a) with legally recognized documentation, and (b) who perceive their rights to land as secure, by sex and type of tenure",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/1-4-2",
@@ -108,7 +108,7 @@
       "title": "End hunger, achieve food security and improved nutrition and promote sustainable agriculture",
       "indicators": [{
           "id": "2-a-1",
-          "title": "The agriculture orientation index for government expenditures",
+          "title": "The 'agriculture orientation index' for government expenditures",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/2-a-1",
@@ -359,7 +359,7 @@
           "status": "notstarted"
         },{
           "id": "3-2-1",
-          "title": "Under‐five mortality rate",
+          "title": "Under-5 mortality rate",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/3-2-1",
@@ -601,7 +601,7 @@
           "status": "notstarted"
         },{
           "id": "6-5-1",
-          "title": "Degree of integrated water resources management implementation (0 to 100)",
+          "title": "Degree of integrated water resources management implementation (0–100)",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/6-5-1",
@@ -657,7 +657,7 @@
           "status": "notstarted"
         },{
           "id": "6-2-1",
-          "title": "Proportion of population using safely managed sanitation services, including a handwashing facility with soap and water",
+          "title": "Proportion of population using (a) safely managed sanitation services and (b) a hand-washing facility with soap and water",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/6-2-1",
@@ -899,7 +899,7 @@
           "status": "notstarted"
         },{
           "id": "9-4-1",
-          "title": "CO2 emission per unit of value added",
+          "title": "CO<sub>2</sub> emission per unit of value added",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/9-4-1",
@@ -989,7 +989,7 @@
           "status": "notstarted"
         },{
           "id": "10-5-1",
-          "title": "Financial Soundness Indicators (FSIs)",
+          "title": "Financial Soundness Indicators",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/10-5-1",
@@ -1480,7 +1480,7 @@
           "status": "notstarted"
         },{
           "id": "16-a-1",
-          "title": "Existence of independent national human rights institutions in compliance with the Paris Principles",
+          "title": "Existence of independent national human rights institutions in compliance with the 'Paris Principles'",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/16-a-1",
@@ -1522,7 +1522,7 @@
           "status": "notstarted"
         },{
           "id": "16-2-3",
-          "title": "Proportion of young women and men aged 18–29 years who experienced sexual violence by age 18",
+          "title": "Proportion of young women and men aged 18–29 years who experienced sexual violence by age 1",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/16-2-3",
@@ -1773,7 +1773,7 @@
           "status": "notstarted"
         },{
           "id": "17-17-1",
-          "title": "Amount of United States dollars committed to public-private and civil society partnerships",
+          "title": "Amount of United States dollars committed to (a) public-private partnerships and (b) civil society partnerships",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/17-17-1",
