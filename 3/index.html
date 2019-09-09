@@ -96,7 +96,7 @@ var translations = {
         <title>
           
             
-        Goal 3 - 
+        Ziel 3 - 
         
           
         </title>
@@ -127,7 +127,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20190909000612">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20190909073152">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -135,20 +135,20 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20190909000612"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20190909073152"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
-<body class="language-en layout-goal">
+<body class="language-de layout-goal">
 <!-- <div class="container"> -->
 
-<script>translations['header'] = {"alpha":"Alpha","disclaimer":"This is a development website. We welcome your <a href=\"mailto:%email_address\">feedback</a>.","skip_link":"Skip to main content","tag_line":"17 Goals to Transform our World"};</script>
+<script>translations['header'] = {"alpha":"Alpha-Version","disclaimer":"Diese Seite befindet sich im Entwicklungsstadium.Wir freuen uns über Ihre Kommentare.","skip_link":" Zum Hauptinhalt springen","tag_line":""};</script>
 
-<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
+<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0"> Zum Hauptinhalt springen</a>
 <div id="disclaimer">
   <div class="container">
   <div class="alert alert-danger" role="alert">
-    <strong class="phase-tag">Alpha</strong>
-    This is a development website. We welcome your <a href="mailto:DNS-Indikatoren@destatis.de">feedback</a>.
+    <strong class="phase-tag">Alpha-Version</strong>
+    Diese Seite befindet sich im Entwicklungsstadium.Wir freuen uns über Ihre Kommentare.
   </div>
 </div>
 
@@ -158,7 +158,7 @@ var translations = {
   <div class="container">
 
     <a class="navbar-brand" href="/open-sdg-site-starter/" id="home">
-      <img src="/open-sdg-site-starter/assets/img/SDG_logo.png" alt="Sustainable Development Goals - 17 Goals to Transform our World" />
+      <img src="/open-sdg-site-starter/assets/img/SDG_logo.png" alt="Ziele für Nachhaltige Entwicklung - " />
     </a>
 
   <div class='hidden visible-xs float-right'>
@@ -172,25 +172,25 @@ var translations = {
             aria-haspopup="true"
             aria-expanded="false">
           <span data-target="menu" tabindex="0"
-          role="navigation">Menu</span>
+          role="navigation">Menü</span>
         </li>
-        <li><span data-target="search">Search</span></li>
+        <li><span data-target="search">Suche</span></li>
       </ul>
 
       <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
-            <a href="/open-sdg-site-starter/reporting-status">Reporting Status</a>
+            <a href="/open-sdg-site-starter/reporting-status">Berichtsstatus</a>
           </li><li class="nav-link ">
-            <a href="/open-sdg-site-starter/about">About</a>
+            <a href="/open-sdg-site-starter/about">Über uns</a>
           </li><li class="nav-link ">
-            <a href="/open-sdg-site-starter/guidance">Guidance</a>
+            <a href="/open-sdg-site-starter/guidance">Technische Hinweise</a>
           </li><li class="nav-link ">
             <a href="/open-sdg-site-starter/faq">FAQ</a>
           </li></ul>
 
       <div id="search" class="menu-target">
-  <input id="indicator_search" title="Indicator search" placeholder="Indicator search" data-url="/open-sdg-site-starter/indicators.json" data-pageurl="/open-sdg-site-starter/search/?q=" />
+  <input id="indicator_search" title="Indikatorensuche" placeholder="Indikatorensuche" data-url="/open-sdg-site-starter/indicators.json" data-pageurl="/open-sdg-site-starter/search/?q=" />
   <label for="indicator_search">
-    <button id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false" aria-label=Indicator search></i></button><span>Search:</span>
+    <button id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false" aria-label=Indikatorensuche></i></button><span>Suche:</span>
   </label>
 </div>
 
@@ -207,11 +207,11 @@ var translations = {
   <div class="container">
     <div class="row">
       <div class="col-xs-4 col-md-3 col-lg-2">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/3.png" alt="Good health and well-being - Goal 3" />
+        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/3.png" alt="Gesundheit und Wohlergehen - Ziel 3" />
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10">
         <h1>
-          <span class="hidden-sm hidden-md hidden-lg">Goal 3: </span>Ensure healthy lives and promote well-being for all at all ages
+          <span class="hidden-sm hidden-md hidden-lg">Ziel 3: </span>Ein gesundes Leben für alle Menschen jeden Alters gewährleisten und ihr Wohlergehen fördern
         </h1>
       </div>
     </div>
@@ -225,7 +225,7 @@ var translations = {
   <ol class="breadcrumb">
   <li><a href="/open-sdg-site-starter/">Home</a></li>
   
-      <li class="active">Goal 3</li>
+      <li class="active">Ziel 3</li>
   
 </ol>
 
@@ -247,10 +247,10 @@ var translations = {
             <span>
               3.1.1
               <span class="status notstarted">
-                Exploring data sources
+                Datenquellenanalyse
               </span>
             </span>
-            Maternal mortality ratio
+            Müttersterblichkeitsrate
             
           </a>
         </div>
@@ -272,10 +272,10 @@ var translations = {
             <span>
               3.1.2
               <span class="status notstarted">
-                Exploring data sources
+                Datenquellenanalyse
               </span>
             </span>
-            Proportion of births attended by skilled health personnel
+            Anteil der Geburten unter der Aufsicht von qualifiziertem Gesundheitspersonal
             
           </a>
         </div>
@@ -297,10 +297,10 @@ var translations = {
             <span>
               3.2.1
               <span class="status notstarted">
-                Exploring data sources
+                Datenquellenanalyse
               </span>
             </span>
-            Under-5 mortality rate
+            Sterblichkeitsrate von Kindern unter 5&nbsp;Jahren
             
           </a>
         </div>
@@ -322,10 +322,10 @@ var translations = {
             <span>
               3.2.2
               <span class="status notstarted">
-                Exploring data sources
+                Datenquellenanalyse
               </span>
             </span>
-            Neonatal mortality rate
+            Sterblichkeitsrate von Neugeborenen
             
           </a>
         </div>
@@ -347,10 +347,10 @@ var translations = {
             <span>
               3.3.1
               <span class="status notstarted">
-                Exploring data sources
+                Datenquellenanalyse
               </span>
             </span>
-            Number of new HIV infections per 1,000 uninfected population, by sex, age and key populations
+            Anzahl der HIV-Neuinfektionen je 1&nbsp;000 nicht infizierter Einwohner, nach Geschlecht, Alter und Risikogruppen
             
           </a>
         </div>
@@ -372,10 +372,10 @@ var translations = {
             <span>
               3.3.2
               <span class="status notstarted">
-                Exploring data sources
+                Datenquellenanalyse
               </span>
             </span>
-            Tuberculosis incidence per 100,000 population
+            Tuberkulose-Inzidenz je 100&nbsp;000 Einwohner
             
           </a>
         </div>
@@ -397,10 +397,10 @@ var translations = {
             <span>
               3.3.3
               <span class="status notstarted">
-                Exploring data sources
+                Datenquellenanalyse
               </span>
             </span>
-            Malaria incidence per 1,000 population
+            Malaria-Inzidenz je 1&nbsp;000 Einwohner
             
           </a>
         </div>
@@ -422,10 +422,10 @@ var translations = {
             <span>
               3.3.4
               <span class="status notstarted">
-                Exploring data sources
+                Datenquellenanalyse
               </span>
             </span>
-            Hepatitis B incidence per 100,000 population
+            Hepatitis-B-Inzidenz je 100&nbsp;000 Einwohner
             
           </a>
         </div>
@@ -447,10 +447,10 @@ var translations = {
             <span>
               3.3.5
               <span class="status notstarted">
-                Exploring data sources
+                Datenquellenanalyse
               </span>
             </span>
-            Number of people requiring interventions against neglected tropical diseases
+            Anzahl der Personen, die Maßnahmen gegen vernachlässigte Tropenkrankheiten benötigen
             
           </a>
         </div>
@@ -472,10 +472,10 @@ var translations = {
             <span>
               3.4.1
               <span class="status notstarted">
-                Exploring data sources
+                Datenquellenanalyse
               </span>
             </span>
-            Mortality rate attributed to cardiovascular disease, cancer, diabetes or chronic respiratory disease
+            Sterblichkeitsrate infolge von Herz-Kreislauf-Erkrankungen, Krebs, Diabetes oder chronischen Atemwegserkrankungen
             
           </a>
         </div>
@@ -497,10 +497,10 @@ var translations = {
             <span>
               3.4.2
               <span class="status notstarted">
-                Exploring data sources
+                Datenquellenanalyse
               </span>
             </span>
-            Suicide mortality rate
+            Sterblichkeitsrate bei Suizid
             
           </a>
         </div>
@@ -522,10 +522,10 @@ var translations = {
             <span>
               3.5.1
               <span class="status notstarted">
-                Exploring data sources
+                Datenquellenanalyse
               </span>
             </span>
-            Coverage of treatment interventions (pharmacological, psychosocial and rehabilitation and aftercare services) for substance use disorders
+            Abdeckung durch Behandlungsmaßnahmen (pharmakologische, psychosoziale und Rehabilitations- und Nachsorgeleistungen) bei Substanzmissbrauch
             
           </a>
         </div>
@@ -547,10 +547,10 @@ var translations = {
             <span>
               3.5.2
               <span class="status notstarted">
-                Exploring data sources
+                Datenquellenanalyse
               </span>
             </span>
-            Harmful use of alcohol, defined according to the national context as alcohol per capita consumption (aged 15 years and older) within a calendar year in litres of pure alcohol
+            Schädlicher Alkoholgebrauch, definiert gemäß den nationalen Gegebenheiten als Alkoholkonsum pro Kopf (15&nbsp;Jahre und älter) innerhalb eines Kalenderjahres in Litern reinem Alkohol
             
           </a>
         </div>
@@ -572,10 +572,10 @@ var translations = {
             <span>
               3.6.1
               <span class="status notstarted">
-                Exploring data sources
+                Datenquellenanalyse
               </span>
             </span>
-            Death rate due to road traffic injuries
+            Sterblichkeitsrate aufgrund von Straßenverkehrsunfällen
             
           </a>
         </div>
@@ -597,10 +597,10 @@ var translations = {
             <span>
               3.7.1
               <span class="status notstarted">
-                Exploring data sources
+                Datenquellenanalyse
               </span>
             </span>
-            Proportion of women of reproductive age (aged 15–49 years) who have their need for family planning satisfied with modern methods
+            Anteil der Frauen im gebärfähigen Alter (15-49&nbsp;Jahre), die ihren Anspruch auf Familienplanung durch moderne Methoden umsetzen können
             
           </a>
         </div>
@@ -622,10 +622,10 @@ var translations = {
             <span>
               3.7.2
               <span class="status notstarted">
-                Exploring data sources
+                Datenquellenanalyse
               </span>
             </span>
-            Adolescent birth rate (aged 10–14 years; aged 15–19 years) per 1,000 women in that age group
+            Geburtenrate bei Jugendlichen (10-14&nbsp;Jahre; 15-19&nbsp;Jahre) je 1&nbsp;000 Frauen derselben Altersgruppe
             
           </a>
         </div>
@@ -647,10 +647,10 @@ var translations = {
             <span>
               3.8.1
               <span class="status notstarted">
-                Exploring data sources
+                Datenquellenanalyse
               </span>
             </span>
-            Coverage of essential health services (defined as the average coverage of essential services based on tracer interventions that include reproductive, maternal, newborn and child health, infectious diseases, non-communicable diseases and service capacity and access, among the general and the most disadvantaged population)
+            Abdeckung der grundlegenden Gesundheitsleistungen (definiert als durchschnittliche Abdeckung der grundlegenden Leistungen basierend auf Tracer-Interventionen, einschließlich reproduktiver, Mütter-, Neugeborenen- und Kindergesundheit, infektiöser Krankheiten und nicht übertragbarer Krankheiten sowie Kapazitäten und Zugang zu Serviceleistungen, innerhalb der allgemein und der überwiegend benachteiligten Bevölkerung)
             
           </a>
         </div>
@@ -672,10 +672,10 @@ var translations = {
             <span>
               3.8.2
               <span class="status notstarted">
-                Exploring data sources
+                Datenquellenanalyse
               </span>
             </span>
-            Proportion of population with large household expenditures on health as a share of total household expenditure or income
+            Anteil der Bevölkerung mit hohen Haushaltsausgaben für Gesundheit als Anteil an den gesamten Haushaltsausgaben oder -einkommen
             
           </a>
         </div>
@@ -697,10 +697,10 @@ var translations = {
             <span>
               3.9.1
               <span class="status notstarted">
-                Exploring data sources
+                Datenquellenanalyse
               </span>
             </span>
-            Mortality rate attributed to household and ambient air pollution
+            Sterblichkeitsrate infolge von Luftverschmutzung im Haushalt und der Umgebung
             
           </a>
         </div>
@@ -722,10 +722,10 @@ var translations = {
             <span>
               3.9.2
               <span class="status notstarted">
-                Exploring data sources
+                Datenquellenanalyse
               </span>
             </span>
-            Mortality rate attributed to unsafe water, unsafe sanitation and lack of hygiene (exposure to unsafe Water, Sanitation and Hygiene for All (WASH) services)
+            Sterblichkeitsrate infolge von Kontakt mit verunreinigtem Wasser, unzureichenden sanitären Verhältnissen und mangelnder Hygiene (Kontakt mit unzureichenden "Wasser, Sanitäreinrichtungen und Hygiene für alle"-Leistungen (WASH))
             
           </a>
         </div>
@@ -747,10 +747,10 @@ var translations = {
             <span>
               3.9.3
               <span class="status notstarted">
-                Exploring data sources
+                Datenquellenanalyse
               </span>
             </span>
-            Mortality rate attributed to unintentional poisoning
+            Sterblichkeit infolge unbeabsichtigter Vergiftung
             
           </a>
         </div>
@@ -772,10 +772,10 @@ var translations = {
             <span>
               3.a.1
               <span class="status notstarted">
-                Exploring data sources
+                Datenquellenanalyse
               </span>
             </span>
-            Age-standardized prevalence of current tobacco use among persons aged 15 years and older
+            Altersstandardisierte Prävalenz des aktuellen Tabakkonsums bei Personen im Alter von 15&nbsp;Jahren und älter
             
           </a>
         </div>
@@ -797,10 +797,10 @@ var translations = {
             <span>
               3.b.1
               <span class="status notstarted">
-                Exploring data sources
+                Datenquellenanalyse
               </span>
             </span>
-            Proportion of the target population covered by all vaccines included in their national programme
+            Anteil der Zielbevölkerung, die alle Impfungen laut nationalem Programm besitzt
             
           </a>
         </div>
@@ -822,10 +822,10 @@ var translations = {
             <span>
               3.b.2
               <span class="status notstarted">
-                Exploring data sources
+                Datenquellenanalyse
               </span>
             </span>
-            Total net official development assistance to medical research and basic health sectors
+            Gesamte öffentliche Netto-Entwicklungszusammenarbeit (ODA) für medizinische Forschung und grundlegende Gesundheitsversorgung
             
           </a>
         </div>
@@ -847,10 +847,10 @@ var translations = {
             <span>
               3.b.3
               <span class="status notstarted">
-                Exploring data sources
+                Datenquellenanalyse
               </span>
             </span>
-            Proportion of health facilities that have a core set of relevant essential medicines available and affordable on a sustainable basis
+            Anteil der Gesundheitseinrichtungen, die über einen Kernsatz relevanter und wichtiger Medikamente verfügen, die nachhaltig verfügbar und bezahlbar sind
             
           </a>
         </div>
@@ -872,10 +872,10 @@ var translations = {
             <span>
               3.c.1
               <span class="status notstarted">
-                Exploring data sources
+                Datenquellenanalyse
               </span>
             </span>
-            Health worker density and distribution
+            Dichte und Verteilung von medizinischem Fachpersonal
             
           </a>
         </div>
@@ -897,10 +897,10 @@ var translations = {
             <span>
               3.d.1
               <span class="status notstarted">
-                Exploring data sources
+                Datenquellenanalyse
               </span>
             </span>
-            International Health Regulations (IHR) capacity and health emergency preparedness
+            Kapazitäten für internationale Gesundheitsvorschriften (IGV) und Gesundheitsnotfallvorsorge
             
           </a>
         </div>
@@ -918,7 +918,7 @@ var translations = {
       <div class="col-xs-12">
         <div id="footerLinks">
           <ul>
-            <li><a href="mailto:DNS-Indikatoren@destatis.de">Contact us</a></li>
+            <li><a href="mailto:DNS-Indikatoren@destatis.de">Kontakt</a></li>
             
             <li><a class="twitter-follow-button" href="https://twitter.com/MyTwitterAccount" data-show-count="false">: @MyTwitterAccount</a></li>
             
@@ -956,7 +956,7 @@ var translations = {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20190909000612'></script><script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20190909073152'></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
