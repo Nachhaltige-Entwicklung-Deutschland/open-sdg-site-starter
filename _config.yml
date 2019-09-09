@@ -107,7 +107,7 @@ non_global_metadata: indicator.national_metadata
 # The list of languages that are translated. The first one is the default.
 languages:
   - de
-  
+
 
 # This makes sure that all pages have a language.
 defaults:
@@ -136,3 +136,9 @@ remote_theme: open-sdg/open-sdg@0.8.1
 # Apply any custom CSS.
 custom_css:
   - /assets/css/custom.css
+
+create_goals:
+  layout: goal
+
+create_indicators:
+  layout: indicator
