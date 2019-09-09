@@ -4,7 +4,7 @@
 <div id="main-content" class="container goal-tiles" role="main">
 
     {% assign country_name = site.country.name | t %}
-    {% assign heading_default = t.frontpage.heading_dns | replace: '%name', country_name %}
+    {% assign heading_default = t.frontpage.heading | replace: '%name', country_name %}
     <h1>{{ site.frontpage_heading | default: heading_default | t }}</h1>
 
     {% assign instructions_default = t.frontpage.instructions | replace_first: '%before_link', '<span id="jump-to-search"><a>' | replace_first: '%after_link', '</a></span>' | replace_first: '%name', country_name %}
