@@ -26,7 +26,7 @@
 
   <div class="visible-md-block visible-lg-block">
     <div class="col-md-6">
-      <h4>{{ t.general.targets }}</h4>
+      <h4>{{ t.general.dns_target }}</h4>
     </div>
     <div class="col-md-6">
       <h4>{{ t.general.indicators }}</h4>
@@ -37,7 +37,7 @@
   {% for group in goal_indicators %}
     {% assign target_id = group.name %}
     {% assign target_id_dashes = target_id | replace: ".", "-" %}
-    {% assign translated_target = t.global_targets[target_id_dashes] | default: t.global_targets[target_id] %}
+    {% assign translated_target = t.dns_targets[target_id_dashes] | default: t.dns_targets[target_id] %}
     <div class="indicator-cards target col-md-6">
       <span>
         <label class="hidden-md hidden-lg">{{ t.general.target }}</label>
