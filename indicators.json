@@ -16,25 +16,25 @@
       "id": "2",
       "title": "Den Hunger beenden, Ernährungssicherheit und eine bessere Ernährung erreichen und eine nachhaltige Landwirtschaft fördern",
       "indicators": [{
-          "id": "2-2-1",
-          "title": "Prävalenz von Kleinwuchs (Körpergröße zum Alter <&nbsp;-2 Standardabweichung vom Median des Wachstumsstandards für Kinder der Weltgesundheitsorganisation (WHO)) bei Kindern unter 5&nbsp;Jahren",
+          "id": "2-1-b",
+          "title": "Prevalence of moderate or severe food insecurity in the population, based on the Food Insecurity Experience Scale (FIES)",
           "description": "",
           "keywords": "",
-          "href": "/open-sdg-site-starter/2-2-1",
+          "href": "/open-sdg-site-starter/2-1-b",
           "status": "notstarted"
         },{
-          "id": "2-1-2",
-          "title": "Prävalenz mittlerer oder schwerer Ernährungsunsicherheit in der Bevölkerung, basierend auf der Erfahrungsskala für Ernährungsunsicherheit (FIES)",
+          "id": "2-1-a",
+          "title": "Prevalence of undernourishment",
           "description": "",
           "keywords": "",
-          "href": "/open-sdg-site-starter/2-1-2",
+          "href": "/open-sdg-site-starter/2-1-a",
           "status": "notstarted"
         },{
-          "id": "2-1-1",
-          "title": "Prävalenz von Unterernährung",
+          "id": "2-2-a",
+          "title": "Prevalence of stunting (height for age <-2 standard deviation from the median of the World Health Organization (WHO) Child Growth Standards) among children under 5 years of age",
           "description": "",
           "keywords": "",
-          "href": "/open-sdg-site-starter/2-1-1",
+          "href": "/open-sdg-site-starter/2-2-a",
           "status": "notstarted"
         }]
     }
@@ -43,46 +43,46 @@
       "id": "3",
       "title": "Ein gesundes Leben für alle Menschen jeden Alters gewährleisten und ihr Wohlergehen fördern",
       "indicators": [{
-          "id": "3-1-3",
+          "id": "3-1-cd",
+          "title": "Proportion of births attended by skilled health personnel",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/3-1-cd",
+          "status": "notstarted"
+        },{
+          "id": "3-1-e",
           "title": "Number of people requiring interventions against neglected tropical diseases",
           "description": "",
           "keywords": "",
-          "href": "/open-sdg-site-starter/3-1-3",
+          "href": "/open-sdg-site-starter/3-1-e",
           "status": "notstarted"
         },{
-          "id": "3-1-4",
+          "id": "3-2-b",
+          "title": "Neonatal mortality rate",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/3-2-b",
+          "status": "notstarted"
+        },{
+          "id": "3-1-f",
           "title": "Death rate due to road traffic injuries",
           "description": "",
           "keywords": "",
-          "href": "/open-sdg-site-starter/3-1-4",
+          "href": "/open-sdg-site-starter/3-1-f",
           "status": "notstarted"
         },{
-          "id": "3-1-2",
-          "title": "Anteil der Geburten unter der Aufsicht von qualifiziertem Gesundheitspersonal",
+          "id": "3-1-ab",
+          "title": "Maternal mortality ratio",
           "description": "",
           "keywords": "",
-          "href": "/open-sdg-site-starter/3-1-2",
+          "href": "/open-sdg-site-starter/3-1-ab",
           "status": "notstarted"
         },{
-          "id": "3-2-2",
-          "title": "Sterblichkeitsrate von Neugeborenen",
+          "id": "3-2-a",
+          "title": "Under-five mortality rate",
           "description": "",
           "keywords": "",
-          "href": "/open-sdg-site-starter/3-2-2",
-          "status": "notstarted"
-        },{
-          "id": "3-2-1",
-          "title": "Sterblichkeitsrate von Kindern unter 5&nbsp;Jahren",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/3-2-1",
-          "status": "notstarted"
-        },{
-          "id": "3-1-1",
-          "title": "Müttersterblichkeitsrate",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/3-1-1",
+          "href": "/open-sdg-site-starter/3-2-a",
           "status": "notstarted"
         }]
     }
@@ -91,6 +91,13 @@
       "id": "4",
       "title": "Inklusive, gleichberechtigte und hochwertige Bildung gewährleisten und Möglichkeiten lebenslangen Lernens für alle fördern",
       "indicators": [{
+          "id": "4-1-1",
+          "title": "Anteil der Kinder und Jugendlichen, die (a) in Klasse 2/3; (b) am Ende der Grundschule und (c) am Ende der Sekundarstufe I ein Mindestleistungsniveau in (i) Lesen und (ii) Mathematik erreichen, nach Geschlecht",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/4-1-1",
+          "status": "notstarted"
+        },{
           "id": "4-1-2",
           "title": "Proportion of teachers in: (a) pre-primary; (b) primary; (c) lower secondary; and (d) upper secondary education who have received at least the minimum organized teacher training (e.g. pedagogical training) pre-service or in-service required for teaching at the relevant level in a given country",
           "description": "",
@@ -104,13 +111,6 @@
           "keywords": "",
           "href": "/open-sdg-site-starter/4-2-1",
           "status": "notstarted"
-        },{
-          "id": "4-1-1",
-          "title": "Anteil der Kinder und Jugendlichen, die (a) in Klasse 2/3; (b) am Ende der Grundschule und (c) am Ende der Sekundarstufe I ein Mindestleistungsniveau in (i) Lesen und (ii) Mathematik erreichen, nach Geschlecht",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/4-1-1",
-          "status": "notstarted"
         }]
     }
   },{
@@ -118,13 +118,6 @@
       "id": "5",
       "title": "Geschlechtergleichstellung erreichen und alle Frauen und Mädchen zur Selbstbestimmung befähigen",
       "indicators": [{
-          "id": "5-1-1",
-          "title": "Existenz gesetzlicher Rahmenbedingungen, die Gleichstellung und Nicht-Diskriminierung aufgrund des Geschlechts fördern, durchsetzen und überwachen",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/5-1-1",
-          "status": "notstarted"
-        },{
           "id": "5-1-2",
           "title": "Proportion of individuals who own a mobile telephone, by sex",
           "description": "",
@@ -137,6 +130,13 @@
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/5-1-3",
+          "status": "notstarted"
+        },{
+          "id": "5-1-1",
+          "title": "Existenz gesetzlicher Rahmenbedingungen, die Gleichstellung und Nicht-Diskriminierung aufgrund des Geschlechts fördern, durchsetzen und überwachen",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/5-1-1",
           "status": "notstarted"
         }]
     }
@@ -172,11 +172,11 @@
       "id": "7",
       "title": "Zugang zu bezahlbarer, verlässlicher, nachhaltiger und moderner Energie für alle sichern",
       "indicators": [{
-          "id": "7-2-1",
-          "title": "Anteil der erneuerbaren Energien am gesamten Endenergieverbrauch",
+          "id": "7-2-2",
+          "title": "Investments in energy efficiency as a proportion of GDP and the amount of foreign direct investment in financial transfer for infrastructure and technology to sustainable development services",
           "description": "",
           "keywords": "",
-          "href": "/open-sdg-site-starter/7-2-1",
+          "href": "/open-sdg-site-starter/7-2-2",
           "status": "notstarted"
         },{
           "id": "7-1-1",
@@ -186,11 +186,11 @@
           "href": "/open-sdg-site-starter/7-1-1",
           "status": "notstarted"
         },{
-          "id": "7-2-2",
-          "title": "Investments in energy efficiency as a proportion of GDP and the amount of foreign direct investment in financial transfer for infrastructure and technology to sustainable development services",
+          "id": "7-2-1",
+          "title": "Anteil der erneuerbaren Energien am gesamten Endenergieverbrauch",
           "description": "",
           "keywords": "",
-          "href": "/open-sdg-site-starter/7-2-2",
+          "href": "/open-sdg-site-starter/7-2-1",
           "status": "notstarted"
         }]
     }
@@ -199,6 +199,34 @@
       "id": "8",
       "title": "Dauerhaftes, breitenwirksames und nachhaltiges Wirtschaftswachstum, produktive Vollbeschäftigung und menschenwürdige Arbeit für alle fördern",
       "indicators": [{
+          "id": "8-6-1",
+          "title": "Anteil der Jugendlichen (im Alter von 15-24&nbsp;Jahren), die nicht in schulischer Ausbildung, in Beschäftigung oder Berufsaus- oder -weiterbildung sind",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/8-6-1",
+          "status": "notstarted"
+        },{
+          "id": "8-2-1",
+          "title": "Jährliche Wachstumsrate des realen BIP je Beschäftigtem",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/8-2-1",
+          "status": "notstarted"
+        },{
+          "id": "8-4-1",
+          "title": "Rohstoff-Fußabdruck, Rohstoff-Fußabdruck pro Kopf und Rohstoff-Fußabdruck pro BIP",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/8-4-1",
+          "status": "notstarted"
+        },{
+          "id": "8-2-2",
+          "title": "Level of national compliance of labour rights (freedom of association and collective bargaining) based on International Labour Organization (ILO) textual sources and national legislation, by sex and migrant status",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/8-2-2",
+          "status": "notstarted"
+        },{
           "id": "8-1-1",
           "title": "Jährliche Wachstumsrate des realen BIP pro Kopf",
           "description": "",
@@ -213,39 +241,11 @@
           "href": "/open-sdg-site-starter/8-5-1",
           "status": "notstarted"
         },{
-          "id": "8-6-1",
-          "title": "Anteil der Jugendlichen (im Alter von 15-24&nbsp;Jahren), die nicht in schulischer Ausbildung, in Beschäftigung oder Berufsaus- oder -weiterbildung sind",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/8-6-1",
-          "status": "notstarted"
-        },{
           "id": "8-3-1",
           "title": "Anteil der informellen Beschäftigung an allen Beschäftigungsverhältnissen außerhalb der Landwirtschaft, nach Geschlecht",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/8-3-1",
-          "status": "notstarted"
-        },{
-          "id": "8-2-2",
-          "title": "Level of national compliance of labour rights (freedom of association and collective bargaining) based on International Labour Organization (ILO) textual sources and national legislation, by sex and migrant status",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/8-2-2",
-          "status": "notstarted"
-        },{
-          "id": "8-4-1",
-          "title": "Rohstoff-Fußabdruck, Rohstoff-Fußabdruck pro Kopf und Rohstoff-Fußabdruck pro BIP",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/8-4-1",
-          "status": "notstarted"
-        },{
-          "id": "8-2-1",
-          "title": "Jährliche Wachstumsrate des realen BIP je Beschäftigtem",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/8-2-1",
           "status": "notstarted"
         }]
     }
@@ -287,18 +287,11 @@
       "id": "11",
       "title": "Städte und Siedlungen inklusiv, sicher, widerstandsfähig und nachhaltig gestalten",
       "indicators": [{
-          "id": "11-2-1",
-          "title": "Anteil der Bevölkerung, die einen angemessenen Zugang zu öffentlichen Verkehrsmitteln hat, nach Geschlecht, Alter und Menschen mit Behinderungen",
+          "id": "11-1-1",
+          "title": "Anteil der urbanen Bevölkerung, die in Slums, informellen Siedlungen oder unangemessenen Unterkünften lebt",
           "description": "",
           "keywords": "",
-          "href": "/open-sdg-site-starter/11-2-1",
-          "status": "notstarted"
-        },{
-          "id": "11-2-2",
-          "title": "Annual mean levels of fine particulate matter (e.g. PM2.5 and PM10) in cities (population weighted)",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/11-2-2",
+          "href": "/open-sdg-site-starter/11-1-1",
           "status": "notstarted"
         },{
           "id": "11-1-2",
@@ -308,18 +301,18 @@
           "href": "/open-sdg-site-starter/11-1-2",
           "status": "notstarted"
         },{
-          "id": "11-1-1",
-          "title": "Anteil der urbanen Bevölkerung, die in Slums, informellen Siedlungen oder unangemessenen Unterkünften lebt",
+          "id": "11-2-3",
+          "title": "Proportion of population living in cities that implement urban and regional development plans integrating population projections and resource needs, by size of city",
           "description": "",
           "keywords": "",
-          "href": "/open-sdg-site-starter/11-1-1",
+          "href": "/open-sdg-site-starter/11-2-3",
           "status": "notstarted"
         },{
-          "id": "11-1-3",
-          "title": "Proportion of persons victim of physical or sexual harassment, by sex, age, disability status and place of occurrence, in the previous 12 months",
+          "id": "11-2-2",
+          "title": "Annual mean levels of fine particulate matter (e.g. PM2.5 and PM10) in cities (population weighted)",
           "description": "",
           "keywords": "",
-          "href": "/open-sdg-site-starter/11-1-3",
+          "href": "/open-sdg-site-starter/11-2-2",
           "status": "notstarted"
         },{
           "id": "11-3-1",
@@ -329,11 +322,18 @@
           "href": "/open-sdg-site-starter/11-3-1",
           "status": "notstarted"
         },{
-          "id": "11-2-3",
-          "title": "Proportion of population living in cities that implement urban and regional development plans integrating population projections and resource needs, by size of city",
+          "id": "11-1-3",
+          "title": "Proportion of persons victim of physical or sexual harassment, by sex, age, disability status and place of occurrence, in the previous 12 months",
           "description": "",
           "keywords": "",
-          "href": "/open-sdg-site-starter/11-2-3",
+          "href": "/open-sdg-site-starter/11-1-3",
+          "status": "notstarted"
+        },{
+          "id": "11-2-1",
+          "title": "Anteil der Bevölkerung, die einen angemessenen Zugang zu öffentlichen Verkehrsmitteln hat, nach Geschlecht, Alter und Menschen mit Behinderungen",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/11-2-1",
           "status": "notstarted"
         }]
     }
@@ -342,11 +342,11 @@
       "id": "12",
       "title": "Nachhaltige Konsum- und Produktionsmuster sicherstellen",
       "indicators": [{
-          "id": "12-2-1",
-          "title": "Rohstoff-Fußabdruck, Rohstoff-Fußabdruck pro Kopf und Rohstoff-Fußabdruck pro BIP",
+          "id": "12-1-1",
+          "title": "Anzahl der Staaten mit nationalen Aktionsplänen zu nachhaltigem Konsum und Produktion (SCP) oder SCP, die als Priorität oder Ziel in nationale Politik aufgenommen wurden",
           "description": "",
           "keywords": "",
-          "href": "/open-sdg-site-starter/12-2-1",
+          "href": "/open-sdg-site-starter/12-1-1",
           "status": "notstarted"
         },{
           "id": "12-1-2",
@@ -363,11 +363,11 @@
           "href": "/open-sdg-site-starter/12-3-1",
           "status": "notstarted"
         },{
-          "id": "12-1-1",
-          "title": "Anzahl der Staaten mit nationalen Aktionsplänen zu nachhaltigem Konsum und Produktion (SCP) oder SCP, die als Priorität oder Ziel in nationale Politik aufgenommen wurden",
+          "id": "12-2-1",
+          "title": "Rohstoff-Fußabdruck, Rohstoff-Fußabdruck pro Kopf und Rohstoff-Fußabdruck pro BIP",
           "description": "",
           "keywords": "",
-          "href": "/open-sdg-site-starter/12-1-1",
+          "href": "/open-sdg-site-starter/12-2-1",
           "status": "notstarted"
         }]
     }
@@ -376,18 +376,18 @@
       "id": "13",
       "title": "Umgehend Maßnahmen zur Bekämpfung des Klimawandels und seiner Auswirkungen ergreifen",
       "indicators": [{
-          "id": "13-1-2",
-          "title": "Anzahl der Staaten, die nationale Strategien zur Reduzierung des Katastrophenrisikos in Einklang mit dem Sendai-Rahmenwerk zur Katastrophenvorsorge 2015-2030 verabschiedet und umgesetzt haben",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/13-1-2",
-          "status": "notstarted"
-        },{
           "id": "13-1-1",
           "title": "Anzahl der infolge von Katastrophen getöteten, vermissten und direkt betroffenen Personen, je 100&nbsp;000 Einwohner",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/13-1-1",
+          "status": "notstarted"
+        },{
+          "id": "13-1-2",
+          "title": "Anzahl der Staaten, die nationale Strategien zur Reduzierung des Katastrophenrisikos in Einklang mit dem Sendai-Rahmenwerk zur Katastrophenvorsorge 2015-2030 verabschiedet und umgesetzt haben",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/13-1-2",
           "status": "notstarted"
         }]
     }
@@ -416,11 +416,11 @@
       "id": "15",
       "title": "Landökosysteme schützen, wiederherstellen und ihre nachhaltige Nutzung fördern, Wälder nachhaltig bewirtschaften, Wüstenbildung bekämpfen, Bodendegradation beenden und umkehren und dem Verlust der biologischen Vielfalt ein Ende setzen",
       "indicators": [{
-          "id": "15-2-1",
-          "title": "Fortschritt bei der nachhaltigen Waldbewirtschaftung",
+          "id": "15-1-1",
+          "title": "Waldfläche als Anteil an der gesamten Landfläche",
           "description": "",
           "keywords": "",
-          "href": "/open-sdg-site-starter/15-2-1",
+          "href": "/open-sdg-site-starter/15-1-1",
           "status": "notstarted"
         },{
           "id": "15-3-1",
@@ -430,11 +430,11 @@
           "href": "/open-sdg-site-starter/15-3-1",
           "status": "notstarted"
         },{
-          "id": "15-1-1",
-          "title": "Waldfläche als Anteil an der gesamten Landfläche",
+          "id": "15-2-1",
+          "title": "Fortschritt bei der nachhaltigen Waldbewirtschaftung",
           "description": "",
           "keywords": "",
-          "href": "/open-sdg-site-starter/15-1-1",
+          "href": "/open-sdg-site-starter/15-2-1",
           "status": "notstarted"
         }]
     }
@@ -443,6 +443,13 @@
       "id": "16",
       "title": "Friedliche und inklusive Gesellschaften für eine nachhaltige Entwicklung fördern, allen Menschen Zugang zur Justiz ermöglichen und leistungsfähige, rechenschaftspflichtige und inklusive Institutionen auf allen Ebenen aufbauen",
       "indicators": [{
+          "id": "16-2-1",
+          "title": "Anteil der Kinder im Alter von 1-17&nbsp;Jahren, die im vergangenen Monat eine körperliche Strafe und/oder psychische Aggression durch Betreuungspersonen erfahren haben",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/16-2-1",
+          "status": "notstarted"
+        },{
           "id": "16-3-1",
           "title": "Anteil der Opfer von Gewalttaten in den vergangenen 12&nbsp;Monaten, die ihre Viktimisierung den zuständigen Behörden oder anderen offiziell anerkannten Stellen der Konfliktaufarbeitung gemeldet haben",
           "description": "",
@@ -455,13 +462,6 @@
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/16-1-1",
-          "status": "notstarted"
-        },{
-          "id": "16-2-1",
-          "title": "Anteil der Kinder im Alter von 1-17&nbsp;Jahren, die im vergangenen Monat eine körperliche Strafe und/oder psychische Aggression durch Betreuungspersonen erfahren haben",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/16-2-1",
           "status": "notstarted"
         }]
     }
@@ -477,18 +477,18 @@
           "href": "/open-sdg-site-starter/17-1-1",
           "status": "notstarted"
         },{
-          "id": "17-2-1",
-          "title": "Öffentliche Nettoentwicklungsausgaben, insgesamt und an am wenigsten entwickelte Länder, als Anteil am Bruttonationaleinkommen (BNE) der Geberländer des Ausschusses für Entwicklungshilfe der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD)",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/17-2-1",
-          "status": "notstarted"
-        },{
           "id": "17-3-1",
           "title": "Ausländische Direktinvestitionen, öffentliche Entwicklungszusammenarbeit (ODA) und Süd-Süd-Kooperationen als Anteil am gesamten Haushaltsbudget",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/17-3-1",
+          "status": "notstarted"
+        },{
+          "id": "17-2-1",
+          "title": "Öffentliche Nettoentwicklungsausgaben, insgesamt und an am wenigsten entwickelte Länder, als Anteil am Bruttonationaleinkommen (BNE) der Geberländer des Ausschusses für Entwicklungshilfe der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD)",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/17-2-1",
           "status": "notstarted"
         }]
     }
