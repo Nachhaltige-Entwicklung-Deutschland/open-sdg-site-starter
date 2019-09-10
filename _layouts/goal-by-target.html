@@ -38,10 +38,11 @@
     {% assign target_id = group.name %}
     {% assign target_id_dashes = target_id | replace: ".", "-" %}
     {% assign translated_target = t.dns_targets[target_id_dashes] | default: t.dns_targets[target_id] %}
+    {% assign target_range = t.dns_ranges[target_id_dashes] | default: t.dns_ranges[target_id] %}
     <div class="indicator-cards target col-md-6">
       <span>
         <label class="hidden-md hidden-lg">{{ t.general.target }}</label>
-        {{ target_id }}
+        {{ target_range.title }}
       </span>
       {{ translated_target.title }}
     </div>
