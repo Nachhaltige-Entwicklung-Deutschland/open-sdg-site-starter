@@ -1,3 +1,81 @@
 ---
-# Enter any custom Sass in this file.
 ---
+
+$vanilla: #fff;
+$main-background-color: #eaeaea;
+
+.danger {
+  background-color: #E27874;
+}
+.warning {
+  background-color: #f0ad4e;
+}
+.success {
+  background-color: #5cb85c;
+}
+.notapplicable {
+  background-color: #B7B7B7;
+}
+.notstarted {
+  background-color: #E27874;
+}
+.inprogress {
+  background-color: #f0ad4e;
+}
+.complete {
+  background-color: #5cb85c;
+}
+
+#main-content.goal-indicators .indicator-cards a {
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+#main-content.goal-indicators .indicator-cards.target {
+  margin-bottom: 1.5rem;
+  clear: left;
+  font-weight: bold;
+  span {
+    font-size: larger;
+    @media screen and (min-width: 992px) {
+      font-size: inherit;
+    }
+  }
+}
+
+#main-content .tab-content img {
+  max-height: 130px;
+  width: auto;
+}
+
+header {
+  background: $vanilla /* url('../img/sdgbg.png') bottom left repeat-x;*/;
+  border-bottom: $main-background-color 5px solid;
+}
+
+.navbar {
+  #search {
+    input {
+      width: 160px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  .navbar {
+    .top-level {
+      li {
+        button{
+          color: #E5E6E7;
+          display: block;
+          padding: 15px;
+          border: 0;
+          text-transform: uppercase;
+          background-color: inherit;
+          text-align: left;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
