@@ -1,8 +1,10 @@
 ---
-title: Übersicht zum Status der Indikatoren
+title: Status
 permalink: /status/
 layout: page
 ---
+
+## Übersicht zum Status der Indikatoren
 
 Um sich einen schnellen Überblick zum Status der einzelnen Indikatoren zu verschaffen, wird im Bericht bei jedem Indikator sofern möglich eines von vier möglichen „Wettersymbolen“ abgebildet. Diese Kennzeichnung ist keine politische Bewertung und auch keine Prognose. Stattdessen bieten die Symbole eine erste Einschätzung der Entwicklung, ersetzen aber nicht die erläuternden Texte sowie weitere Analysen und Hintergrundinformationen. Die Art und Weise, wie die Symbole den einzelnen Indikatoren zugeordnet werden, hängt von der Formulierung des jeweiligen Ziels ab.
 
