@@ -100,7 +100,7 @@ menu:
   - path: /faq
     translation_key: menu.faq
   - path: /status
-    translation_key: menu.indicator_status
+    translation_key: menu.status
 
 # Configure the text (or "translation key") to be used on the
 # non-global metadata tab.
