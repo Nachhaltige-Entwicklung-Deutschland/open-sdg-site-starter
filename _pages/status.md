@@ -10,13 +10,13 @@ Um sich einen schnellen Überblick zum Status der einzelnen Indikatoren zu versc
 
 In den meisten Fällen soll ein Indikator einen konkreten absoluten oder relativen Zielwert in einem Zieljahr erreichen (zum Beispiel Indikator 3.1.a). Bei einer solchen Zielformulierung wird zunächst anhand der letzten sechs Datenpunkte der Durchschnitt der letzten fünf jährlichen Veränderungen ermittelt. Dieser Wert wird für die zukünftige jährliche Entwicklung bis zum Zieljahr unterstellt. Auf dieser Entwicklung aufbauend wird ein hypothetischer Zielwert ermittelt und mit dem vorgegebenen Zielwert des Indikators verglichen. Basierend auf der resultierenden Differenz der beiden Werte wird dem Indikator eines der folgenden Symbole zugewiesen:
 
-<img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/Sonne.png" alt="Sonne" /> Bei Fortsetzung der Entwicklung beträgt die Abweichung vom Zielwert weniger als 5 % der Differenz zwischen Zielwert und aktuellem Wert;
+<img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/Sonne.png" alt="Sonne" />  Bei Fortsetzung der Entwicklung beträgt die Abweichung vom Zielwert weniger als 5 % der Differenz zwischen Zielwert und aktuellem Wert;
 
-<img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/Bedeckt.png" alt="Bedeckt" /> Bei Fortsetzung der Entwicklung würde das Ziel voraussichtlich um mindestens 5 %, aber maximal um 20 % der Differenz zwischen Zielwert und aktuellem Wert verfehlt;
+<img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/Bedeckt.png" alt="Bedeckt" />  Bei Fortsetzung der Entwicklung würde das Ziel voraussichtlich um mindestens 5 %, aber maximal um 20 % der Differenz zwischen Zielwert und aktuellem Wert verfehlt;
 
-<img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/Wolke.png" alt="Wolke" /> Der Indikator entwickelt sich zwar in die gewünschte Richtung auf das Ziel zu, bei Fortsetzung der Entwicklung würde das Ziel im Zieljahr aber um mehr als 20 % verfehlt;
+<img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/Wolke.png" alt="Wolke" />  Der Indikator entwickelt sich zwar in die gewünschte Richtung auf das Ziel zu, bei Fortsetzung der Entwicklung würde das Ziel im Zieljahr aber um mehr als 20 % verfehlt;
 
-<img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/Blitz.png" alt="Blitz" /> Der Indikator entwickelt sich nicht in die gewünschte Richtung und somit vergrößert sich der Abstand zum Ziel.
+<img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/Blitz.png" alt="Blitz" />  Der Indikator entwickelt sich nicht in die gewünschte Richtung und somit vergrößert sich der Abstand zum Ziel.
 
 Liegen nicht für jedes Jahr Daten vor, so werden nach Möglichkeit die letzten sechs Zeitpunkte, zu denen gesicherte Daten existieren, für die Berechnung der durchschnittlichen Veränderung verwendet. Wenn weniger als vier verwendbare Zeitpunkte zur Verfügung stehen, wird von einer Berechnung abgesehen.
 
