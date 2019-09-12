@@ -4,20 +4,28 @@ permalink: /status/
 layout: page
 ---
 
-This page shares information for people using this website and for countries or localities wishing to take a copy of it.
+## Übersicht zum Status der Indikatoren
 
-## The platform
+Um sich einen schnellen Überblick zum Status der einzelnen Indikatoren zu verschaffen, wird im Bericht bei jedem Indikator sofern möglich eines von vier möglichen „Wettersymbolen“ abgebildet. Diese Kennzeichnung ist keine politische Bewertung und auch keine Prognose. Stattdessen bieten die Symbole eine erste Einschätzung der Entwicklung, ersetzen aber nicht die erläuternden Texte sowie weitere Analysen und Hintergrundinformationen. Die Art und Weise, wie die Symbole den einzelnen Indikatoren zugeordnet werden, hängt von der Formulierung des jeweiligen Ziels ab.
 
-This site is built and hosted using an open-source platform with 100% free software and services. For detailed documentation on the underlying platform, including information for developers, data providers, and policy makers, see [here](https://open-sdg.readthedocs.io).
+In den meisten Fällen soll ein Indikator einen konkreten absoluten oder relativen Zielwert in einem Zieljahr erreichen (zum Beispiel Indikator 3.1.a). Bei einer solchen Zielformulierung wird zunächst anhand der letzten sechs Datenpunkte der Durchschnitt der letzten fünf jährlichen Veränderungen ermittelt. Dieser Wert wird für die zukünftige jährliche Entwicklung bis zum Zieljahr unterstellt. Auf dieser Entwicklung aufbauend wird ein hypothetischer Zielwert ermittelt und mit dem vorgegebenen Zielwert des Indikators verglichen. Basierend auf der resultierenden Differenz der beiden Werte wird dem Indikator eines der folgenden Symbole zugewiesen:
 
-## Using this website
+<img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/Sonne.png" alt="Sonne" /> Bei Fortsetzung der Entwicklung beträgt die Abweichung vom Zielwert weniger als 5 % der Differenz zwischen Zielwert und aktuellem Wert;
 
-Answers to some specific questions about the website are included in our [Frequently Asked Questions]({{ site.baseurl }}/faq/) page.
+<img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/Bedeckt.png" alt="Bedeckt" /> Bei Fortsetzung der Entwicklung würde das Ziel voraussichtlich um mindestens 5 %, aber maximal um 20 % der Differenz zwischen Zielwert und aktuellem Wert verfehlt;
 
-The platform documentation includes information for people adding [data](https://open-sdg.readthedocs.io/en/latest/data-format/) and [metadata](https://open-sdg.readthedocs.io/en/latest/metadata-format/).
+<img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/Wolke.png" alt="Wolke" /> Der Indikator entwickelt sich zwar in die gewünschte Richtung auf das Ziel zu, bei Fortsetzung der Entwicklung würde das Ziel im Zieljahr aber um mehr als 20 % verfehlt;
 
-## Creating a copy of this website
+<img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/Blitz.png" alt="Blitz" /> Der Indikator entwickelt sich nicht in die gewünschte Richtung und somit vergrößert sich der Abstand zum Ziel.
 
-Other countries or localities wishing to implement a version of this platform are welcome to do so for free.
+Liegen nicht für jedes Jahr Daten vor, so werden nach Möglichkeit die letzten sechs Zeitpunkte, zu denen gesicherte Daten existieren, für die Berechnung der durchschnittlichen Veränderung verwendet. Wenn weniger als vier verwendbare Zeitpunkte zur Verfügung stehen, wird von einer Berechnung abgesehen.
 
-The platform documentation includes [technical information and instructions for developers](https://open-sdg.readthedocs.io/en/latest/quick-start/).
+Falls kein exakter Zielwert, sondern ein Zielintervall vorgegeben ist (zum Beispiel Indikator 11.1.a), so wird zur Bestimmung des Status die schwächste Zielforderung angenommen, die sich aus dem Zielintervall ergibt. Falls für einen Indikator mehrere Zielwerte vorgegeben sind, die in unterschiedlichen Jahren erreicht werden sollen (zum Beispiel Indikator 4.2.b), so wird für die Bestimmung des Status jeweils das nächste zukünftige Zieljahr verwendet.
+
+Auf diese Systematik aufbauend werden zwei Sonderfälle behandelt. Soll ein Ziel- oder Grenz-wert nicht zukünftig erreicht sondern jedes Jahr eingehalten werden (zum Beispiel Indikator 6.2), so werden für die Bewertung zwei Informationen kombiniert, und zwar vorrangig der zuletzt erreichte Wert sowie untergeordnet der Durchschnitt der letzten fünf Veränderungen. Wurde der Zielwert oder ein besserer Wert im letzten Jahr erreicht und deutet die durchschnittliche Veränderung nicht in Richtung einer Verschlechterung, so wird eine Sonne dargestellt. Wurde der Zielwert oder ein besserer Wert im letzten Jahr erreicht, aber die durchschnittliche Veränderung deutet in Richtung einer Verschlechterung, so führt der Indikator weiterhin eine Sonne jedoch leicht verdeckt durch eine Wolke. Falls der Zielwert nicht erreicht wurde, aber die durchschnittliche Entwicklung in Richtung des Ziels zeigt, wird nur eine Wolke dargestellt. Ist der Zielwert verfehlt und der Indikator hat sich im Durchschnitt der letzten Veränderungen nicht in Richtung des Ziels bewegt, wird das Symbol „Gewitter“ gezeigt. Dieses Verfahren wird auch dann angewandt, wenn ein Indikator zwar einen konkreten Zielwert für ein genaues Zieljahr erreichen soll, diesen aber bereits vorher erreicht hat, da für diese Fälle das Standardverfahren keine richtungssicheren Aussagen treffen kann.
+
+Wenn für einen Indikator nur eine Richtung vorgegeben ist, in die er sich entwickeln soll, aber kein konkreter Zielwert (zum Beispiel Indikator 1.1.a), dann werden für die Bewertung zwei Informationen kombiniert, und zwar vorrangig der Durchschnitt der letzten fünf Veränderungen und untergeordnet die letzte jährliche Veränderung. Deuten sowohl der Durchschnittswert als auch die letzte jährliche Veränderung in die richtige Richtung, so wird eine Sonne dargestellt. Zielt die durchschnittliche Entwicklung in die richtige Richtung, im letzten Jahr ergab sich jedoch eine Entwicklung in die falsche Richtung oder gar keine Veränderung, so wird die Sonne um eine Wolke ergänzt. Zielt umgekehrt der Durchschnittswert in die falsche Richtung oder zeigt eine Stagnation an, im letzten Jahr zeigte sich jedoch eine Wende in die gewünschte Richtung, so wird eine Wolke gezeigt. Deuten weder Durchschnittswert noch die letzte Veränderung in die richtige Richtung, wird ein Gewitter dargestellt.
+
+Falls für einen einzelnen Indikator mehrere Ziele vorgegeben sind, die zugleich erfüllt werden sollen (zum Beispiel Indikator 10.1), so wird die Entwicklung für jedes der Ziele bewertet. Das Wettersymbol für den Indikator folgt dann der negativsten Einzelbewertung.
+
+In der Übersichtstabelle sind jeweils auch die Bewertungen eines Indikators nach Stand der vorhergehenden Jahre angegeben. Daran lässt sich ablesen, ob das Wettersymbol für einen Indikator in den vergangenen Jahren stabil oder eher volatil war.
