@@ -142,13 +142,13 @@
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
           <li role="presentation" class="nav-item active">
-            <a class="nav-link" data-toggle="tab" href="#metadata" aria-controls="metadata" role="tab" {% include autotrack.html preset="tab_meta_national" category="Tab change" action="Change metadata view" label="Change to National Metadata tab" %}>{{ t.indicator.metadata }}</a>
+            <a class="nav-link" data-toggle="tab" href="#metadata" aria-controls="metadata" role="tab" {% include autotrack.html preset="tab_meta_national" category="Tab change" action="Change metadata view" label="Change to Metadata tab" %}>{{ t.indicator.metadata }}</a>
           </li>
-          <!--
+
           <li role="presentation" class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#globalmetadata" aria-controls="globalmetadata" role="tab" {% include autotrack.html preset="tab_meta_global" category="Tab change" action="Change metadata view" label="Change to Global Metadata tab" %}>{{ t.indicator.global_metadata }}</a>
           </li>
-          -->
+
           <li role="presentation" class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#sources" aria-controls="sources" role="tab" {% include autotrack.html preset="tab_meta_sources" category="Tab change" action="Change metadata view" label="Change to Sources tab" %}>{{ t.indicator.sources }}</a>
           </li>
@@ -177,16 +177,18 @@
               </article>
             </div>
           </div>
+
           <div role="tabpanel" class="tab-pane" id="globalmetadata">
             <!-- Global Metadata -->
             <div> <!-- formerly <div class="collapsible expanded"> -->
               <!-- <h3 tabindex='0'>Global Metadata</h3> -->
               <article>
                 <p>{{ t.indicator.global_metadata_blurb }}</p>
-                {% include components/metadata.html scope='global' %}
+                {% include components/sources %}
               </article>
             </div>
           </div>
+
           <div role="tabpanel" class="tab-pane" id="sources">
             {% include components/sources.html %}
           </div>

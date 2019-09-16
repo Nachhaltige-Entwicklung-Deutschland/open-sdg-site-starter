@@ -1,0 +1,25 @@
+<!-- Count the non-empty sources (up to 5) -->
+{% assign n_histories = 0 %}
+{% for i in (1..2) %}
+  {% assign hty_active = "history_active_" | append: i %}
+  {% if meta[hty_active] == true %}
+    {% assign n_histories  = n_histories | plus: 1 %}
+  {% endif %}
+{% endfor %}
+
+
+
+{% if n_histories > 0 %}
+  <div class="row no-gutters">
+  {% for i in (1..n_histories) %}
+   {% assign hty_active = "history_active_" | append: i %}
+    {% assign hty_scope = "history_" | append: i %}
+    <div class="col-md-6">
+      {% if n_histories > 1 %}
+        <h4>{{ t.indicator.source }} {{ i }}</h4>
+      {% endif %}
+      {% include components/metadata.html scope=hty_scope %}
+    </div>
+    {% endfor %}
+  </div>
+{% endif %}
