@@ -3,8 +3,8 @@
   {% if goal_uri %}
       <li><a href="{{ goal_uri }}" title="{{ goal_title }}">{{ t.general.goal }} {{ goal_number }}</a></li>
       <li class="active">{{ t.general.indicator }} {{ meta.indicator_display }}</li>
-      <li id = "liRight"> <a href="{{ site.baseurl }}/meta.indicator" title="{{ goal_title }}">previous</a></li>
-      <li id = "liRight"> <a href="{{ site.baseurl }}/meta.indicator" title="{{ goal_title }}">next</a></li>
+      <li id = "liRight"> <a href="{{ site.baseurl }}{{ baseurl_folder }}/meta.indicator" title="{{ goal_title }}">previous</a></li>
+      <li id = "liRight"> <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.indicator }}" title="{{ goal_title }}">next</a></li>
   {% else %}
       <li class="active">{{ t.general.goal }} {{ goal_number }}</li>
 
