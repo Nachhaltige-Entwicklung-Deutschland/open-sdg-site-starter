@@ -1,3 +1,5 @@
+{% assign prev_goal = page.sdg_goal -1 %}
+
 <ol class="breadcrumb">
   <li><a href="{{ site.baseurl }}{{ baseurl_folder }}/">{{ t.general.home }}</a></li>
   {% if goal_uri %}
@@ -19,7 +21,7 @@
   {% else %}
       <li class="active">{{ t.general.goal }} {{ goal_number }}</li>
       <li id = "liRight">
-        <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ goal_number }}-1" title="previous goal">
+        <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ prev_goal }}" title="previous goal">
           <span style="font-size:20px"><
           </span>
         </a>
