@@ -139,7 +139,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20190916081126">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20190916090525">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -147,7 +147,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20190916081126"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20190916090525"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
 <body class="language-de layout-indicator">
@@ -466,10 +466,10 @@ data-event-label="Change to Map tab"
             <a class="nav-link" data-toggle="tab" href="#metadata" aria-controls="metadata" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to National Metadata tab"
+data-event-label="Change to Metadata tab"
 >Metadaten</a>
           </li>
-          <!--
+
           <li role="presentation" class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#globalmetadata" aria-controls="globalmetadata" role="tab" data-on="click"
 data-event-category="Tab change"
@@ -477,7 +477,7 @@ data-event-action="Change metadata view"
 data-event-label="Change to Global Metadata tab"
 >Globale Metadaten</a>
           </li>
-          -->
+
           <li role="presentation" class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#sources" aria-controls="sources" role="tab" data-on="click"
 data-event-category="Tab change"
@@ -634,7 +634,7 @@ data-event-label="Change to Sources tab"
             
 
             
-              <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/967d943ec2184b90e6747d006df2c7066ce2ed14" target="_blank">
+              <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/82c539d2c0faa973483d552b377d240b9af71258" target="_blank">
                 2019-09-16: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
               </a>
             
@@ -715,18 +715,62 @@ data-event-label="Change to Sources tab"
   
   
   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 </table>
 
               </article>
             </div>
           </div>
+
           <div role="tabpanel" class="tab-pane" id="globalmetadata">
             <!-- Global Metadata -->
             <div> <!-- formerly <div class="collapsible expanded"> -->
               <!-- <h3 tabindex='0'>Global Metadata</h3> -->
               <article>
                 <p>Diese Übersicht stellt Informationen zu den globalen Metadaten des jeweiligen SDG-Indikators bereit. Die <a href="https://unstats.un.org/sdgs/metadata/">globalen Metadaten</a> werden durch die Statistische Division der Vereinten Nationen bereitgestellt.</p>
-                <table class="table table-hover">
+                <!-- Count the non-empty sources (up to 5) -->
+
+
+
+
+
+
+  <div class="row no-gutters">
+  
+   
+    
+    <div class="col-md-6">
+      
+      <table class="table table-hover">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -734,10 +778,10 @@ data-event-label="Change to Sources tab"
   
       
       <tr>
-        <th scope="row">Indikatorenbezeichnung </th>
+        <th scope="row">Indicator </th>
         <td>
           
-            <p>Materielle Deprivation sowie erhebliche materielle Deprivation</p>
+            <p>1.1.a, b</p>
 
           
         </td>
@@ -747,10 +791,10 @@ data-event-label="Change to Sources tab"
   
       
       <tr>
-        <th scope="row">Indikatorennummerierung </th>
+        <th scope="row">Target of indicator </th>
         <td>
           
-            <p>1.1.ab</p>
+            <p>Anteil der Personen, die materiell depriviert sind, bis 2030 deutlich unter EU-28-Wert halten.</p>
 
           
         </td>
@@ -760,10 +804,10 @@ data-event-label="Change to Sources tab"
   
       
       <tr>
-        <th scope="row">Unterziel </th>
+        <th scope="row">Year </th>
         <td>
           
-            <p>Armut - Armut begrenzen</p>
+            <p>2014  2015  2016  2017</p>
 
           
         </td>
@@ -773,81 +817,16 @@ data-event-label="Change to Sources tab"
   
       
       <tr>
-        <th scope="row">Unterzielnummerierung </th>
+        <th scope="row">Evaluation </th>
         <td>
           
-            <p>1.1</p>
+            <p>Sonne Wolken Wolken Blitz</p>
 
           
         </td>
         </tr>
         
       
-  
-      
-      <tr>
-        <th scope="row">Globale Indikatorenbeschreibung </th>
-        <td>
-          
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      <tr>
-        <th scope="row"><a href="https://unstats.un.org/sdgs/iaeg-sdgs/tier-classification/">UN Tier Klassifikation</a> </th>
-        <td>
-          
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      <tr>
-        <th scope="row">UN Custodian Agency </th>
-        <td>
-          
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      <tr>
-        <th scope="row">Link zu den globalen Metadaten dieses Indikators </th>
-        <td>
-          
-            
-            
-            
-            
-
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-  
-  
-  
-  
-  
   
   
   
@@ -923,9 +902,15 @@ data-event-label="Change to Sources tab"
   
 </table>
 
+    </div>
+    
+  </div>
+
+
               </article>
             </div>
           </div>
+
           <div role="tabpanel" class="tab-pane" id="sources">
             <!-- Count the non-empty sources (up to 5) -->
 
@@ -939,6 +924,16 @@ data-event-label="Change to Sources tab"
     <div class="col-md-6">
       
       <table class="table table-hover">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -1200,7 +1195,7 @@ data-event-label="Change to Sources tab"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20190916081126'></script><script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20190916090525'></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
