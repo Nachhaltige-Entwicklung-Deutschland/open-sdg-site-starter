@@ -1,7 +1,7 @@
 [{
     "goal": {
       "id": "1",
-      "title": "Armut in allen ihren Formen und überall beenden",
+      "title": "",
       "indicators": [{
           "id": "1-1-ab",
           "title": "Materielle Deprivation sowie erhebliche materielle Deprivation",
@@ -14,7 +14,7 @@
   },{
     "goal": {
       "id": "2",
-      "title": "Den Hunger beenden, Ernährungssicherheit und eine bessere Ernährung erreichen und eine nachhaltige Landwirtschaft fördern",
+      "title": "",
       "indicators": [{
           "id": "2-1-a",
           "title": "Stickstoffüberschuss der Landwirtschaft",
@@ -41,7 +41,7 @@
   },{
     "goal": {
       "id": "3",
-      "title": "Ein gesundes Leben für alle Menschen jeden Alters gewährleisten und ihr Wohlergehen fördern",
+      "title": "",
       "indicators": [{
           "id": "3-2-a",
           "title": "Emissionen von Luftschadstoffen",
@@ -89,7 +89,7 @@
   },{
     "goal": {
       "id": "4",
-      "title": "Inklusive, gleichberechtigte und hochwertige Bildung gewährleisten und Möglichkeiten lebenslangen Lernens für alle fördern",
+      "title": "",
       "indicators": [{
           "id": "4-2-ab",
           "title": "Ganztagsbetreuung für Kinder",
@@ -116,7 +116,7 @@
   },{
     "goal": {
       "id": "5",
-      "title": "Geschlechtergleichstellung erreichen und alle Frauen und Mädchen zur Selbstbestimmung befähigen",
+      "title": "",
       "indicators": [{
           "id": "5-1-b",
           "title": "Frauen in Führungspositionen in der Wirtschaft",
@@ -143,7 +143,7 @@
   },{
     "goal": {
       "id": "6",
-      "title": "Verfügbarkeit und nachhaltige Bewirtschaftung von Wasser und Sanitärversorgung für alle gewährleisten",
+      "title": "",
       "indicators": [{
           "id": "6-1-a",
           "title": "Phosphor in Fließgewässern",
@@ -170,7 +170,7 @@
   },{
     "goal": {
       "id": "7",
-      "title": "Zugang zu bezahlbarer, verlässlicher, nachhaltiger und moderner Energie für alle sichern",
+      "title": "",
       "indicators": [{
           "id": "7-2-b",
           "title": "Anteil des Stroms aus erneuerbaren Energiequellen am Bruttostromverbrauch",
@@ -197,7 +197,7 @@
   },{
     "goal": {
       "id": "8",
-      "title": "Dauerhaftes, breitenwirksames und nachhaltiges Wirtschaftswachstum, produktive Vollbeschäftigung und menschenwürdige Arbeit für alle fördern",
+      "title": "",
       "indicators": [{
           "id": "8-2-ab",
           "title": "Staatsdefizit und strukturelles Defizit",
@@ -252,7 +252,7 @@
   },{
     "goal": {
       "id": "9",
-      "title": "Eine widerstandsfähige Infrastruktur aufbauen, breitenwirksame und nachhaltige Industrialisierung fördern und Innovationen unterstützen",
+      "title": "",
       "indicators": [{
           "id": "9-1-a",
           "title": "Private und Öffentliche Ausgaben für Forschung und Entwicklung",
@@ -265,7 +265,7 @@
   },{
     "goal": {
       "id": "10",
-      "title": "Ungleichheit in und zwischen Ländern verringern",
+      "title": "",
       "indicators": [{
           "id": "10-2-a",
           "title": "Gini-Koeffizient zur Einkommensverteilung",
@@ -285,7 +285,7 @@
   },{
     "goal": {
       "id": "11",
-      "title": "Städte und Siedlungen inklusiv, sicher, widerstandsfähig und nachhaltig gestalten",
+      "title": "",
       "indicators": [{
           "id": "11-2-a",
           "title": "Endenergieverbrauch im Güterverkehr",
@@ -340,7 +340,7 @@
   },{
     "goal": {
       "id": "12",
-      "title": "Nachhaltige Konsum- und Produktionsmuster sicherstellen",
+      "title": "",
       "indicators": [{
           "id": "12-1-b",
           "title": "Energieverbrauch und CO2-Emissionen des Konsum",
@@ -374,7 +374,7 @@
   },{
     "goal": {
       "id": "13",
-      "title": "Umgehend Maßnahmen zur Bekämpfung des Klimawandels und seiner Auswirkungen ergreifen",
+      "title": "",
       "indicators": [{
           "id": "13-1-a",
           "title": "Treibhausgasemissionen",
@@ -394,7 +394,7 @@
   },{
     "goal": {
       "id": "14",
-      "title": "Ozeane, Meere und Meeresressourcen im Sinne nachhaltiger Entwicklung erhalten und nachhaltig nutzen",
+      "title": "",
       "indicators": [{
           "id": "14-1-b",
           "title": "Anteil der nachhaltig befischten Fischbestände in Nord- und Ostsee",
@@ -414,7 +414,7 @@
   },{
     "goal": {
       "id": "15",
-      "title": "Landökosysteme schützen, wiederherstellen und ihre nachhaltige Nutzung fördern, Wälder nachhaltig bewirtschaften, Wüstenbildung bekämpfen, Bodendegradation beenden und umkehren und dem Verlust der biologischen Vielfalt ein Ende setzen",
+      "title": "",
       "indicators": [{
           "id": "15-1-a",
           "title": "Artenvielfalt und Landschaftsqualität",
@@ -441,7 +441,7 @@
   },{
     "goal": {
       "id": "16",
-      "title": "Friedliche und inklusive Gesellschaften für eine nachhaltige Entwicklung fördern, allen Menschen Zugang zur Justiz ermöglichen und leistungsfähige, rechenschaftspflichtige und inklusive Institutionen auf allen Ebenen aufbauen",
+      "title": "",
       "indicators": [{
           "id": "16-1-a",
           "title": "Straftaten",
@@ -468,7 +468,7 @@
   },{
     "goal": {
       "id": "17",
-      "title": "Umsetzungsmittel stärken und die Globale Partnerschaft für nachhaltige Entwicklung mit neuem Leben erfüllen",
+      "title": "",
       "indicators": [{
           "id": "17-3-a",
           "title": "Einfuhren aus am wenigsten entwickelten Ländern",

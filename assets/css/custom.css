@@ -58,3 +58,6 @@ header {
   display: inline-block;
   vertical-align: middle;
   float: none; }
+
+#liRight {
+  float: right; }
