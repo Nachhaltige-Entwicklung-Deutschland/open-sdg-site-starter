@@ -4,12 +4,17 @@
       <li><a href="{{ goal_uri }}" title="{{ goal_title }}">{{ t.general.goal }} {{ goal_number }}</a></li>
       <li class="active">{{ t.general.indicator }} {{ meta.indicator_display }}</li>
       <li id = "liRight">
-        <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.next }}" title="{{ goal_title }}">
-          <span style="font-size:18px">>
+        <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.next }}" title="next indicator">
+          <span style="font-size:20px">> 
           </span>
         </a>
       </li>
-      <li id = "liRight"> <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.previous }}" title="{{ goal_title }}"><b><</b></a></li>
+      <li id = "liRight">
+        <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.previous }}" title="previous indicator">
+          <span style="font-size:20px"><
+          </span>
+        </a>
+      </li>
 
   {% else %}
       <li class="active">{{ t.general.goal }} {{ goal_number }}</li>
