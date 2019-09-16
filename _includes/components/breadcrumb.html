@@ -1,7 +1,7 @@
-{% if page.sdg_goal == '2' %}
-{% assign prev_goal = '1' %}
+{% if page.sdg_goal == '1' %}
+{% assign prev_goal = '17' %}
 {% else %}
-{% assign prev_goal = page.sdg_goal %}
+{% assign prev_goal = parseInt(page.sdg_goal)-1 %}
 {% endif %}
 
 <ol class="breadcrumb">
