@@ -1,16 +1,3 @@
-
-<script>
-var goal = {{ goal_number }}
-var prev = ''
-
-if (goal == '1'){
-  prev = '17'
-}
-else{
-  prev = toString(parseInt( goal ))
-}
-</script>
-
 <ol class="breadcrumb">
   <li><a href="{{ site.baseurl }}{{ baseurl_folder }}/">{{ t.general.home }}</a></li>
   {% if goal_uri %}
@@ -31,12 +18,6 @@ else{
 
   {% else %}
       <li class="active">{{ t.general.goal }} {{ goal_number }}</li>
-      <li id = "liRight">
-        <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ prev }}" title="previous goal">
-          <span style="font-size:20px"><
-          </span>
-        </a>
-      </li>
 
   {% endif %}
 
