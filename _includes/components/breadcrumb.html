@@ -6,5 +6,6 @@
   {% else %}
       <li class="active">{{ t.general.goal }} {{ goal_number }}</li>
   {% endif %}
-  <li id = "liRight"> <a href="{{ goal_uri }}" title="{{ goal_title }}">next</a></li>
+  <li id = "liRight"> <a href="{{ site.baseurl }}/meta.previous" title="{{ goal_title }}">previous</a></li>
+  <li id = "liRight"> <a href="{{ site.baseurl }}/meta.next" title="{{ goal_title }}">next</a></li>
 </ol>
