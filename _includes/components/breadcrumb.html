@@ -1,8 +1,15 @@
-{% if page.sdg_goal == '1' %}
-{% assign prev_goal = '17' %}
-{% else %}
-{% assign prev_goal = toString(parseInt( {{ goal_number }})-1) %}
-{% endif %}
+
+<script>
+var goal = {{ goal_number }}
+var prev = ''
+
+if (goal == '1'){
+  prev = '17'
+}
+else{
+  prev = toString(parseInt( goal ))
+}
+</script>
 
 <ol class="breadcrumb">
   <li><a href="{{ site.baseurl }}{{ baseurl_folder }}/">{{ t.general.home }}</a></li>
