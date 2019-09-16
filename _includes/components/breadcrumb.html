@@ -5,7 +5,7 @@
       <li class="active">{{ t.general.indicator }} {{ meta.indicator_display }}</li>
       <li id = "liRight">
         <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.next }}" title="next indicator">
-          <span style="font-size:20px">> 
+          <span style="font-size:20px">>
           </span>
         </a>
       </li>
@@ -18,6 +18,12 @@
 
   {% else %}
       <li class="active">{{ t.general.goal }} {{ goal_number }}</li>
+      <li id = "liRight">
+        <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ goal_number -1}}" title="previous goal">
+          <span style="font-size:20px"><
+          </span>
+        </a>
+      </li>
 
   {% endif %}
 
