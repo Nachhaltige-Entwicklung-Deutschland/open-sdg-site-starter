@@ -1,6 +1,6 @@
 ---
 title: Welcome
-permalink: /
+permalink: /en/
 layout: frontpage
 language: en
 ---

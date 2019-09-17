@@ -1,6 +1,6 @@
 ---
 layout: categories
-permalink: /categories/
+permalink: /en/categories/
 title: Categories
 language: en
 ---

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Account
-permalink: /account/
+permalink: /en/account/
 language: en
 ---
 

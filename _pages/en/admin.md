@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Admin
-permalink: /admin/
+permalink: /en/admin/
 language: en
 ---
 
