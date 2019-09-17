@@ -42,11 +42,12 @@
     {% assign target_id_dashes = target_id | replace: ".", "-" %}
     {% assign target_title_key = target_id | append: '-title' %}
     {% assign target_title_key_dashes = target_id_dashes | append: '-title' %}
-    {% assign target_title = t.dns_ranges[target_title_key_dashes] | default: t.dns_ranges[target_title_key] %}
+    {% assign target_range = t.dns_ranges[target_title_key_dashes] | default: t.dns_ranges[target_title_key] %}
+    {% assign target_title = t.dns_targets[target_title_key_dashes] | default: t.dns_targets[target_title_key] %}
     <div class="indicator-cards target col-md-6">
       <span>
         <label class="hidden-md hidden-lg">{{ t.general.target }}</label>
-        {{ target_title.title }}
+        {{ target_range }}
       </span>
       {{ target_title }}
     </div>
