@@ -2,17 +2,20 @@
 {% include head.html %}
 {% include header.html %}
 {% assign goal_number = page.sdg_goal %}
-{% assign translated_goal = t.dns_goals[goal_number] %}
+{% assign goal_title_key = goal_number | append: '-title' %}
+{% assign goal_short_key = goal_number | append: '-short' %}
+{% assign goal_title = t.dns_goals[goal_title_key] %}
+{% assign goal_short = t.dns_goals[goal_short_key] %}
 
 <div class="heading goal-{{page.sdg_goal}}">
   <div class="container">
     <div class="row">
       <div class="col-xs-4 col-md-3 col-lg-2">
-        <img src="{{ site.goal_image_base }}/{{ current_language }}/17/{{ goal_number }}.png" alt="{{ translated_goal.short }} - {{ t.general.goal }} {{ goal_number }}" />
+        <img src="{{ site.goal_image_base }}/{{ current_language }}/17/{{ goal_number }}.png" alt="{{ goal_short }} - {{ t.general.goal }} {{ goal_number }}" />
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10">
         <h1>
-          <span class="hidden-sm hidden-md hidden-lg">{{ t.general.goal }} {{ goal_number }}: </span>{{ translated_goal.title }}
+          <span class="hidden-sm hidden-md hidden-lg">{{ t.general.goal }} {{ goal_number }}: </span>{{ goal_title }}
         </h1>
       </div>
     </div>
@@ -37,14 +40,15 @@
   {% for group in goal_indicators %}
     {% assign target_id = group.name %}
     {% assign target_id_dashes = target_id | replace: ".", "-" %}
-    {% assign translated_target = t.dns_targets[target_id_dashes] | default: t.dns_targets[target_id] %}
-    {% assign target_range = t.dns_ranges[target_id_dashes] | default: t.dns_ranges[target_id] %}
+    {% target_title_key = target_id | append: '-title' %}
+    {% target_title_key_dashes = target_id_dashes | append: '-title' %}
+    {% assign target_title = t.dns_ranges[target_title_key_dashes] | default: t.dns_targets[target_title_key] %}
     <div class="indicator-cards target col-md-6">
       <span>
         <label class="hidden-md hidden-lg">{{ t.general.target }}</label>
         {{ target_range.title }}
       </span>
-      {{ translated_target.title }}
+      {{ target_title }}
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
     {% for indicator in group.items %}
