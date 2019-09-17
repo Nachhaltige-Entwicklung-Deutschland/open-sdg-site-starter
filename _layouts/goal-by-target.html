@@ -78,7 +78,11 @@
 
       <div class="col-md-12 {{ tag_classes }}">
         <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ indicator.indicator | slugify }}">
-          
+
+          <span>
+            {{ indicator.indicator_display }}
+            
+          </span>
           {{ indicator.indicator | get_indicator_name }}
           {% if indicator.tags %}
             <ul class="tags">
