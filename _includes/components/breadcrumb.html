@@ -18,6 +18,27 @@
 
   {% else %}
       <li class="active">{{ t.general.goal }} {{ goal_number }}</li>
+      {% if {{ goal_number }} == '1' %}
+        {% assign previous_goal = '17' %}
+      {% elsif {{ goal_number }} == '17' %}
+        {% assign next_goal = '1' %}
+      {% else %}
+        {% assign previous_goal = goal_number | minus: 1 %}
+        {% assign next_goal = goal_number | plus: 1 %}
+
+        <li id = "liRight">
+          <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ next_goal }}" title="next goal">
+            <span style="font-size:20px">>
+            </span>
+          </a>
+        </li>
+        <li id = "liRight">
+          <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ previous_goal }}" title="previous goal">
+            <span style="font-size:20px"><
+            </span>
+          </a>
+        </li>
+
 
   {% endif %}
 
