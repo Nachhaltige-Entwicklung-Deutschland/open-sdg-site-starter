@@ -19,9 +19,11 @@
   {% else %}
       <li class="active">{{ t.general.goal }} {{ goal_number }}</li>
       {% if page.sdg_goal == '1' %}
+        {% assign next_goal = '2' %}
         {% assign previous_goal = '17' %}
       {% elsif page.sdg_goal == '17' %}
         {% assign next_goal = '1' %}
+        {% assign previous_goal = '16' %}
       {% else %}
         {% assign previous_goal = page.sdg_goal | minus: 1 %}
         {% assign next_goal = page.sdg_goal | plus: 1 %}
