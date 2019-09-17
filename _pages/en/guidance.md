@@ -2,6 +2,7 @@
 title: Guidance
 permalink: /guidance/
 layout: page
+language: en
 ---
 
 This page shares information for people using this website and for countries or localities wishing to take a copy of it.
