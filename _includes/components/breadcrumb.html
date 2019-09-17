@@ -25,6 +25,7 @@
       {% else %}
         {% assign previous_goal = goal_number | minus: 1 %}
         {% assign next_goal = goal_number | plus: 1 %}
+      {% endif %}
 
         <li id = "liRight">
           <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ next_goal }}" title="next goal">
