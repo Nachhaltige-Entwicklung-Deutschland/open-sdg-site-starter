@@ -29,24 +29,10 @@
           {% assign goal_indicators = site.data.meta | where: 'sdg_goal', goal_number | sort: 'indicator_sort_order' | group_by: 'target_id' %}
             {% for group in goal_indicators %}
               {% for indicator in group.items %}
-                <h3> Test </h3>
+                <h2> {{ indicator }} </h2>
               {% endfor %}
             {% endfor %}
 
-
-
-
-
-          <div class="summary">
-            <div class="statuses">
-              {%- for status in goalreport.statuses -%}
-              <div>
-                <span class="status {{ status.status | slugify }}">{{ status.count }}</span><strong>{{ status.translation_key | t }}</strong><span class="value">{{ status.percentage | round }}%</span>
-              </div>
-              {%- endfor -%}
-              <br style="clear:both;">
-            </div>
-          </div>
 
           <div class="divider">
           </div>
