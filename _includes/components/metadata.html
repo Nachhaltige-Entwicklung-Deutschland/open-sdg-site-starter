@@ -47,7 +47,12 @@
           {{ assign year_c = meta[indicator_metadata.name] }}
         {% elsif indicator_metadata.name contains "_d_" %}
           {{ assign year_d = meta[indicator_metadata.name] }}
-          {{ year_a }}{{ year_b }}{{ year_c }}{{ year_d }}
+          <tr>
+            <th scope="row">{{ t.data.Year }} </th>
+            <td>
+              {{ year_a }}{{ year_b }}{{ year_c }}{{ year_d }}
+            </td>
+          </tr>
         {% endif %}
 
 
