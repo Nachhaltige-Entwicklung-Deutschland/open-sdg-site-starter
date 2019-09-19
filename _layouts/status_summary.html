@@ -11,6 +11,7 @@
     {%- assign goal_number = goalreport.goal -%}
     {%- assign goal_short_key = goal_number | append: '-short' -%}
     {%- assign goal_short = t.global_goals[goal_short_key] -%}
+
     <div class="goal">
         <div class="frame">
           <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ goal_number }}/">
@@ -29,7 +30,8 @@
           {% assign goal_indicators = site.data.meta | where: 'sdg_goal', goal_number | sort: 'indicator_sort_order' | group_by: 'target_id' %}
             {% for group in goal_indicators %}
               {% for indicator in group.items %}
-                <h2> {{ indicator }} </h2>
+                {% assign  %}
+                <h2> {{ goal_short }} </h2>
               {% endfor %}
             {% endfor %}
 
