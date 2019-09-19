@@ -137,17 +137,17 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20190919094201"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
-<body class="language-de layout-reportingstatus">
+<body class="language-en layout-status_summary">
 <!-- <div class="container"> -->
 
-<script>translations['header'] = {"alpha":"Alpha-Version","disclaimer":"Diese Seite befindet sich im Entwicklungsstadium.Wir freuen uns über Ihre Kommentare.","skip_link":" Zum Hauptinhalt springen","tag_line":""};</script>
+<script>translations['header'] = {"alpha":"Alpha","disclaimer":"This is a development website. We welcome your <a href=\"mailto:%email_address\">feedback</a>.","skip_link":"Skip to main content","tag_line":"17 Goals to Transform our World"};</script>
 
-<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0"> Zum Hauptinhalt springen</a>
+<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
 <div id="disclaimer">
   <div class="container">
   <div class="alert alert-danger" role="alert">
-    <strong class="phase-tag">Alpha-Version</strong>
-    Diese Seite befindet sich im Entwicklungsstadium.Wir freuen uns über Ihre Kommentare.
+    <strong class="phase-tag">Alpha</strong>
+    This is a development website. We welcome your <a href="mailto:DNS-Indikatoren@destatis.de">feedback</a>.
   </div>
 </div>
 
@@ -156,19 +156,19 @@ var translations = {
 <header role="banner">
   <div class="container">
 
-    <a class="navbar-brand" href="/open-sdg-site-starter/" id="home">
-      <img src="/open-sdg-site-starter/assets/img/dns_logo.png" alt="Nachhaltige Entwicklung in Deutschland - " />
+    <a class="navbar-brand" href="/open-sdg-site-starter/en/" id="home">
+      <img src="/open-sdg-site-starter/assets/img/dns_logo.png" alt="Sustainable development in Germany - 17 Goals to Transform our World" />
     </a>
 
   <div class='hidden visible-xs float-right'>
     <ul id='accessibility-nav' class='contrast-switcher'></ul><div class="language-toggle-mobile">
       <a class="language-toggle-button" onclick="$(this).next('.language-toggle').toggle(); return false;">
   <i class="fa fa-globe"></i>
-  <span class="language-toggle-text">Deutsch</span>
+  <span class="language-toggle-text">English</span>
   <i class="language-toggle fa fa-chevron-down"></i>
   <i class="language-toggle fa fa-chevron-up" style="display:none;"></i>
 </a>
-<ul class="language-options language-toggle"><li><a href="/open-sdg-site-starter/en/reporting-status/">English</a></li></ul>
+<ul class="language-options language-toggle"><li><a href="/open-sdg-site-starter/status_summary/">Deutsch</a></li></ul>
 
     </div></div>
 
@@ -180,36 +180,36 @@ var translations = {
             aria-haspopup="true"
             aria-expanded="false">
           <span data-target="menu" tabindex="0"
-          role="navigation">Menü</span>
+          role="navigation">Menu</span>
         </li>
-        <li><span data-target="search">Suche</span></li>
+        <li><span data-target="search">Search</span></li>
       </ul>
 
       <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
-            <a href="/open-sdg-site-starter/">Ziele</a>
+            <a href="/open-sdg-site-starter/en/">Goals</a>
           </li><li class="nav-link ">
-            <a href="/open-sdg-site-starter/status_summary">menu.status_summary</a>
+            <a href="/open-sdg-site-starter/en/status_summary">menu.status_summary</a>
           </li><li class="nav-link ">
-            <a href="/open-sdg-site-starter/about/">Über uns</a>
+            <a href="/open-sdg-site-starter/en/about/">About</a>
           </li><li class="nav-link ">
-            <a href="/open-sdg-site-starter/guidance">Technische Hinweise</a>
+            <a href="/open-sdg-site-starter/en/guidance">Guidance</a>
           </li><li class="nav-link ">
-            <a href="/open-sdg-site-starter/status">Statusübersicht</a>
+            <a href="/open-sdg-site-starter/en/status">Indicator status</a>
           </li><li>
           <a class="language-toggle-button" onclick="$(this).next('.language-toggle').toggle(); return false;">
   <i class="fa fa-globe"></i>
-  <span class="language-toggle-text">Deutsch</span>
+  <span class="language-toggle-text">English</span>
   <i class="language-toggle fa fa-chevron-down"></i>
   <i class="language-toggle fa fa-chevron-up" style="display:none;"></i>
 </a>
-<ul class="language-options language-toggle"><li><a href="/open-sdg-site-starter/en/reporting-status/">English</a></li></ul>
+<ul class="language-options language-toggle"><li><a href="/open-sdg-site-starter/status_summary/">Deutsch</a></li></ul>
 
         </li></ul>
 
       <div id="search" class="menu-target">
-  <input id="indicator_search" title="Indikatorensuche" placeholder="Indikatorensuche" data-url="/open-sdg-site-starter/indicators.json" data-pageurl="/open-sdg-site-starter/search/?q=" />
+  <input id="indicator_search" title="Indicator search" placeholder="Indicator search" data-url="/open-sdg-site-starter/en/indicators.json" data-pageurl="/open-sdg-site-starter/en/search/?q=" />
   <label for="indicator_search">
-    <button id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false" aria-label=Indikatorensuche></i></button><span>Suche:</span>
+    <button id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false" aria-label=Indicator search></i></button><span>Search:</span>
   </label>
 </div>
 
@@ -222,50 +222,50 @@ var translations = {
 
 <div id="main-content" class="container reportingstatus">
 
-  <h1>Berichtsstatus</h1><div class="goal goal-overall">
+  <h1></h1><div class="goal goal-overall">
       <div class="details">
         <h2 class="status-goal">
-            Übersicht zum Berichtsstatus der <span class="total"><span>56</span> indikatoren</span>
+            Overall Reporting Status <span class="total"><span>56</span> indicators</span>
         </h2>
         <div class="summary">
           <div class="statuses"><div>
-              <span class="status complete">56</span><strong>Daten verfügbar</strong><span class="value">100%</span>
+              <span class="status complete">56</span><strong>Reported online</strong><span class="value">100%</span>
             </div><div>
-              <span class="status inprogress">0</span><strong>in Bearbeitung</strong><span class="value">0%</span>
+              <span class="status inprogress">0</span><strong>Statistics in progress</strong><span class="value">0%</span>
             </div><div>
-              <span class="status notstarted">0</span><strong>Datenquellenanalyse</strong><span class="value">0%</span>
+              <span class="status notstarted">0</span><strong>Exploring data sources</strong><span class="value">0%</span>
             </div><br style="clear:both;">
           </div>
         </div>
-        <div class="goal-stats"><span class="complete" style="width:100%" title="Daten verfügbar: 100%"></span><span class="inprogress" style="width:0%" title="in Bearbeitung: 0%"></span><span class="notstarted" style="width:0%" title="Datenquellenanalyse: 0%"></span></div>
+        <div class="goal-stats"><span class="complete" style="width:100%" title="Reported online: 100%"></span><span class="inprogress" style="width:0%" title="Statistics in progress: 0%"></span><span class="notstarted" style="width:0%" title="Exploring data sources: 0%"></span></div>
 
       </div>
     <!--</li>-->
     <br style="clear:both;">
   </div>
 
-  <h2>Status nach Ziel</h2><div class="goal">
+  <h2>Status by goal</h2><div class="goal">
         <div class="frame">
-          <a href="/open-sdg-site-starter/1/">
-            <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/1.png" alt="Keine Armut - Ziel 1" width="100" height="100" />
+          <a href="/open-sdg-site-starter/en/1/">
+            <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/1.png" alt="No poverty - Goal 1" width="100" height="100" />
           </a>
         </div>
         <div class="details">
           <h3 class="status-goal">
-            <a href="/open-sdg-site-starter/1/">Keine Armut</a>
-            <span class="total">1<span></span> indikatoren</span>
+            <a href="/open-sdg-site-starter/en/1/">No poverty</a>
+            <span class="total">1<span></span> indicators</span>
           </h3>
           <div class="summary">
             <div class="statuses"><div>
-                <span class="status complete">1</span><strong>Daten verfügbar</strong><span class="value">100%</span>
+                <span class="status complete">1</span><strong>Reported online</strong><span class="value">100%</span>
               </div><div>
-                <span class="status inprogress">0</span><strong>in Bearbeitung</strong><span class="value">0%</span>
+                <span class="status inprogress">0</span><strong>Statistics in progress</strong><span class="value">0%</span>
               </div><div>
-                <span class="status notstarted">0</span><strong>Datenquellenanalyse</strong><span class="value">0%</span>
+                <span class="status notstarted">0</span><strong>Exploring data sources</strong><span class="value">0%</span>
               </div><br style="clear:both;">
             </div>
           </div>
-          <div class="goal-stats"><span class="complete" style="width:100%" title="Daten verfügbar: 100%"></span><span class="inprogress" style="width:0%" title="in Bearbeitung: 0%"></span><span class="notstarted" style="width:0%" title="Datenquellenanalyse: 0%"></span></div>
+          <div class="goal-stats"><span class="complete" style="width:100%" title="Reported online: 100%"></span><span class="inprogress" style="width:0%" title="Statistics in progress: 0%"></span><span class="notstarted" style="width:0%" title="Exploring data sources: 0%"></span></div>
           <div class="divider">
           </div>
         </div>
@@ -273,26 +273,26 @@ var translations = {
       <br style="clear:both;">
     </div><div class="goal">
         <div class="frame">
-          <a href="/open-sdg-site-starter/2/">
-            <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/2.png" alt="Kein Hunger - Ziel 2" width="100" height="100" />
+          <a href="/open-sdg-site-starter/en/2/">
+            <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/2.png" alt="Zero hunger - Goal 2" width="100" height="100" />
           </a>
         </div>
         <div class="details">
           <h3 class="status-goal">
-            <a href="/open-sdg-site-starter/2/">Kein Hunger</a>
-            <span class="total">3<span></span> indikatoren</span>
+            <a href="/open-sdg-site-starter/en/2/">Zero hunger</a>
+            <span class="total">3<span></span> indicators</span>
           </h3>
           <div class="summary">
             <div class="statuses"><div>
-                <span class="status complete">3</span><strong>Daten verfügbar</strong><span class="value">100%</span>
+                <span class="status complete">3</span><strong>Reported online</strong><span class="value">100%</span>
               </div><div>
-                <span class="status inprogress">0</span><strong>in Bearbeitung</strong><span class="value">0%</span>
+                <span class="status inprogress">0</span><strong>Statistics in progress</strong><span class="value">0%</span>
               </div><div>
-                <span class="status notstarted">0</span><strong>Datenquellenanalyse</strong><span class="value">0%</span>
+                <span class="status notstarted">0</span><strong>Exploring data sources</strong><span class="value">0%</span>
               </div><br style="clear:both;">
             </div>
           </div>
-          <div class="goal-stats"><span class="complete" style="width:100%" title="Daten verfügbar: 100%"></span><span class="inprogress" style="width:0%" title="in Bearbeitung: 0%"></span><span class="notstarted" style="width:0%" title="Datenquellenanalyse: 0%"></span></div>
+          <div class="goal-stats"><span class="complete" style="width:100%" title="Reported online: 100%"></span><span class="inprogress" style="width:0%" title="Statistics in progress: 0%"></span><span class="notstarted" style="width:0%" title="Exploring data sources: 0%"></span></div>
           <div class="divider">
           </div>
         </div>
@@ -300,26 +300,26 @@ var translations = {
       <br style="clear:both;">
     </div><div class="goal">
         <div class="frame">
-          <a href="/open-sdg-site-starter/3/">
-            <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/3.png" alt="Gesundheit und Wohlergehen - Ziel 3" width="100" height="100" />
+          <a href="/open-sdg-site-starter/en/3/">
+            <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/3.png" alt="Good health and well-being - Goal 3" width="100" height="100" />
           </a>
         </div>
         <div class="details">
           <h3 class="status-goal">
-            <a href="/open-sdg-site-starter/3/">Gesundheit und Wohlergehen</a>
-            <span class="total">6<span></span> indikatoren</span>
+            <a href="/open-sdg-site-starter/en/3/">Good health and well-being</a>
+            <span class="total">6<span></span> indicators</span>
           </h3>
           <div class="summary">
             <div class="statuses"><div>
-                <span class="status complete">6</span><strong>Daten verfügbar</strong><span class="value">100%</span>
+                <span class="status complete">6</span><strong>Reported online</strong><span class="value">100%</span>
               </div><div>
-                <span class="status inprogress">0</span><strong>in Bearbeitung</strong><span class="value">0%</span>
+                <span class="status inprogress">0</span><strong>Statistics in progress</strong><span class="value">0%</span>
               </div><div>
-                <span class="status notstarted">0</span><strong>Datenquellenanalyse</strong><span class="value">0%</span>
+                <span class="status notstarted">0</span><strong>Exploring data sources</strong><span class="value">0%</span>
               </div><br style="clear:both;">
             </div>
           </div>
-          <div class="goal-stats"><span class="complete" style="width:100%" title="Daten verfügbar: 100%"></span><span class="inprogress" style="width:0%" title="in Bearbeitung: 0%"></span><span class="notstarted" style="width:0%" title="Datenquellenanalyse: 0%"></span></div>
+          <div class="goal-stats"><span class="complete" style="width:100%" title="Reported online: 100%"></span><span class="inprogress" style="width:0%" title="Statistics in progress: 0%"></span><span class="notstarted" style="width:0%" title="Exploring data sources: 0%"></span></div>
           <div class="divider">
           </div>
         </div>
@@ -327,26 +327,26 @@ var translations = {
       <br style="clear:both;">
     </div><div class="goal">
         <div class="frame">
-          <a href="/open-sdg-site-starter/4/">
-            <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/4.png" alt="Hochwertige Bildung - Ziel 4" width="100" height="100" />
+          <a href="/open-sdg-site-starter/en/4/">
+            <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/4.png" alt="Quality education - Goal 4" width="100" height="100" />
           </a>
         </div>
         <div class="details">
           <h3 class="status-goal">
-            <a href="/open-sdg-site-starter/4/">Hochwertige Bildung</a>
-            <span class="total">3<span></span> indikatoren</span>
+            <a href="/open-sdg-site-starter/en/4/">Quality education</a>
+            <span class="total">3<span></span> indicators</span>
           </h3>
           <div class="summary">
             <div class="statuses"><div>
-                <span class="status complete">3</span><strong>Daten verfügbar</strong><span class="value">100%</span>
+                <span class="status complete">3</span><strong>Reported online</strong><span class="value">100%</span>
               </div><div>
-                <span class="status inprogress">0</span><strong>in Bearbeitung</strong><span class="value">0%</span>
+                <span class="status inprogress">0</span><strong>Statistics in progress</strong><span class="value">0%</span>
               </div><div>
-                <span class="status notstarted">0</span><strong>Datenquellenanalyse</strong><span class="value">0%</span>
+                <span class="status notstarted">0</span><strong>Exploring data sources</strong><span class="value">0%</span>
               </div><br style="clear:both;">
             </div>
           </div>
-          <div class="goal-stats"><span class="complete" style="width:100%" title="Daten verfügbar: 100%"></span><span class="inprogress" style="width:0%" title="in Bearbeitung: 0%"></span><span class="notstarted" style="width:0%" title="Datenquellenanalyse: 0%"></span></div>
+          <div class="goal-stats"><span class="complete" style="width:100%" title="Reported online: 100%"></span><span class="inprogress" style="width:0%" title="Statistics in progress: 0%"></span><span class="notstarted" style="width:0%" title="Exploring data sources: 0%"></span></div>
           <div class="divider">
           </div>
         </div>
@@ -354,26 +354,26 @@ var translations = {
       <br style="clear:both;">
     </div><div class="goal">
         <div class="frame">
-          <a href="/open-sdg-site-starter/5/">
-            <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/5.png" alt="Geschlechtergleichstellung - Ziel 5" width="100" height="100" />
+          <a href="/open-sdg-site-starter/en/5/">
+            <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/5.png" alt="Gender equality - Goal 5" width="100" height="100" />
           </a>
         </div>
         <div class="details">
           <h3 class="status-goal">
-            <a href="/open-sdg-site-starter/5/">Geschlechtergleichstellung</a>
-            <span class="total">3<span></span> indikatoren</span>
+            <a href="/open-sdg-site-starter/en/5/">Gender equality</a>
+            <span class="total">3<span></span> indicators</span>
           </h3>
           <div class="summary">
             <div class="statuses"><div>
-                <span class="status complete">3</span><strong>Daten verfügbar</strong><span class="value">100%</span>
+                <span class="status complete">3</span><strong>Reported online</strong><span class="value">100%</span>
               </div><div>
-                <span class="status inprogress">0</span><strong>in Bearbeitung</strong><span class="value">0%</span>
+                <span class="status inprogress">0</span><strong>Statistics in progress</strong><span class="value">0%</span>
               </div><div>
-                <span class="status notstarted">0</span><strong>Datenquellenanalyse</strong><span class="value">0%</span>
+                <span class="status notstarted">0</span><strong>Exploring data sources</strong><span class="value">0%</span>
               </div><br style="clear:both;">
             </div>
           </div>
-          <div class="goal-stats"><span class="complete" style="width:100%" title="Daten verfügbar: 100%"></span><span class="inprogress" style="width:0%" title="in Bearbeitung: 0%"></span><span class="notstarted" style="width:0%" title="Datenquellenanalyse: 0%"></span></div>
+          <div class="goal-stats"><span class="complete" style="width:100%" title="Reported online: 100%"></span><span class="inprogress" style="width:0%" title="Statistics in progress: 0%"></span><span class="notstarted" style="width:0%" title="Exploring data sources: 0%"></span></div>
           <div class="divider">
           </div>
         </div>
@@ -381,26 +381,26 @@ var translations = {
       <br style="clear:both;">
     </div><div class="goal">
         <div class="frame">
-          <a href="/open-sdg-site-starter/6/">
-            <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/6.png" alt="Sauberes Wasser und Sanitärversorgung - Ziel 6" width="100" height="100" />
+          <a href="/open-sdg-site-starter/en/6/">
+            <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/6.png" alt="Clean water and sanitation - Goal 6" width="100" height="100" />
           </a>
         </div>
         <div class="details">
           <h3 class="status-goal">
-            <a href="/open-sdg-site-starter/6/">Sauberes Wasser und Sanitärversorgung</a>
-            <span class="total">3<span></span> indikatoren</span>
+            <a href="/open-sdg-site-starter/en/6/">Clean water and sanitation</a>
+            <span class="total">3<span></span> indicators</span>
           </h3>
           <div class="summary">
             <div class="statuses"><div>
-                <span class="status complete">3</span><strong>Daten verfügbar</strong><span class="value">100%</span>
+                <span class="status complete">3</span><strong>Reported online</strong><span class="value">100%</span>
               </div><div>
-                <span class="status inprogress">0</span><strong>in Bearbeitung</strong><span class="value">0%</span>
+                <span class="status inprogress">0</span><strong>Statistics in progress</strong><span class="value">0%</span>
               </div><div>
-                <span class="status notstarted">0</span><strong>Datenquellenanalyse</strong><span class="value">0%</span>
+                <span class="status notstarted">0</span><strong>Exploring data sources</strong><span class="value">0%</span>
               </div><br style="clear:both;">
             </div>
           </div>
-          <div class="goal-stats"><span class="complete" style="width:100%" title="Daten verfügbar: 100%"></span><span class="inprogress" style="width:0%" title="in Bearbeitung: 0%"></span><span class="notstarted" style="width:0%" title="Datenquellenanalyse: 0%"></span></div>
+          <div class="goal-stats"><span class="complete" style="width:100%" title="Reported online: 100%"></span><span class="inprogress" style="width:0%" title="Statistics in progress: 0%"></span><span class="notstarted" style="width:0%" title="Exploring data sources: 0%"></span></div>
           <div class="divider">
           </div>
         </div>
@@ -408,26 +408,26 @@ var translations = {
       <br style="clear:both;">
     </div><div class="goal">
         <div class="frame">
-          <a href="/open-sdg-site-starter/7/">
-            <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/7.png" alt="Bezahlbare und saubere Energie - Ziel 7" width="100" height="100" />
+          <a href="/open-sdg-site-starter/en/7/">
+            <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/7.png" alt="Affordable and clean energy - Goal 7" width="100" height="100" />
           </a>
         </div>
         <div class="details">
           <h3 class="status-goal">
-            <a href="/open-sdg-site-starter/7/">Bezahlbare und saubere Energie</a>
-            <span class="total">3<span></span> indikatoren</span>
+            <a href="/open-sdg-site-starter/en/7/">Affordable and clean energy</a>
+            <span class="total">3<span></span> indicators</span>
           </h3>
           <div class="summary">
             <div class="statuses"><div>
-                <span class="status complete">3</span><strong>Daten verfügbar</strong><span class="value">100%</span>
+                <span class="status complete">3</span><strong>Reported online</strong><span class="value">100%</span>
               </div><div>
-                <span class="status inprogress">0</span><strong>in Bearbeitung</strong><span class="value">0%</span>
+                <span class="status inprogress">0</span><strong>Statistics in progress</strong><span class="value">0%</span>
               </div><div>
-                <span class="status notstarted">0</span><strong>Datenquellenanalyse</strong><span class="value">0%</span>
+                <span class="status notstarted">0</span><strong>Exploring data sources</strong><span class="value">0%</span>
               </div><br style="clear:both;">
             </div>
           </div>
-          <div class="goal-stats"><span class="complete" style="width:100%" title="Daten verfügbar: 100%"></span><span class="inprogress" style="width:0%" title="in Bearbeitung: 0%"></span><span class="notstarted" style="width:0%" title="Datenquellenanalyse: 0%"></span></div>
+          <div class="goal-stats"><span class="complete" style="width:100%" title="Reported online: 100%"></span><span class="inprogress" style="width:0%" title="Statistics in progress: 0%"></span><span class="notstarted" style="width:0%" title="Exploring data sources: 0%"></span></div>
           <div class="divider">
           </div>
         </div>
@@ -435,26 +435,26 @@ var translations = {
       <br style="clear:both;">
     </div><div class="goal">
         <div class="frame">
-          <a href="/open-sdg-site-starter/8/">
-            <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/8.png" alt="Menschenwürdige Arbeit und Wirtschaftswachstum - Ziel 8" width="100" height="100" />
+          <a href="/open-sdg-site-starter/en/8/">
+            <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/8.png" alt="Decent jobs and economic growth - Goal 8" width="100" height="100" />
           </a>
         </div>
         <div class="details">
           <h3 class="status-goal">
-            <a href="/open-sdg-site-starter/8/">Menschenwürdige Arbeit und Wirtschaftswachstum</a>
-            <span class="total">7<span></span> indikatoren</span>
+            <a href="/open-sdg-site-starter/en/8/">Decent jobs and economic growth</a>
+            <span class="total">7<span></span> indicators</span>
           </h3>
           <div class="summary">
             <div class="statuses"><div>
-                <span class="status complete">7</span><strong>Daten verfügbar</strong><span class="value">100%</span>
+                <span class="status complete">7</span><strong>Reported online</strong><span class="value">100%</span>
               </div><div>
-                <span class="status inprogress">0</span><strong>in Bearbeitung</strong><span class="value">0%</span>
+                <span class="status inprogress">0</span><strong>Statistics in progress</strong><span class="value">0%</span>
               </div><div>
-                <span class="status notstarted">0</span><strong>Datenquellenanalyse</strong><span class="value">0%</span>
+                <span class="status notstarted">0</span><strong>Exploring data sources</strong><span class="value">0%</span>
               </div><br style="clear:both;">
             </div>
           </div>
-          <div class="goal-stats"><span class="complete" style="width:100%" title="Daten verfügbar: 100%"></span><span class="inprogress" style="width:0%" title="in Bearbeitung: 0%"></span><span class="notstarted" style="width:0%" title="Datenquellenanalyse: 0%"></span></div>
+          <div class="goal-stats"><span class="complete" style="width:100%" title="Reported online: 100%"></span><span class="inprogress" style="width:0%" title="Statistics in progress: 0%"></span><span class="notstarted" style="width:0%" title="Exploring data sources: 0%"></span></div>
           <div class="divider">
           </div>
         </div>
@@ -462,26 +462,26 @@ var translations = {
       <br style="clear:both;">
     </div><div class="goal">
         <div class="frame">
-          <a href="/open-sdg-site-starter/9/">
-            <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/9.png" alt="Industrie, Innovationen und Infrastruktur - Ziel 9" width="100" height="100" />
+          <a href="/open-sdg-site-starter/en/9/">
+            <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/9.png" alt="Industry, innovation and infrastructure - Goal 9" width="100" height="100" />
           </a>
         </div>
         <div class="details">
           <h3 class="status-goal">
-            <a href="/open-sdg-site-starter/9/">Industrie, Innovationen und Infrastruktur</a>
-            <span class="total">1<span></span> indikatoren</span>
+            <a href="/open-sdg-site-starter/en/9/">Industry, innovation and infrastructure</a>
+            <span class="total">1<span></span> indicators</span>
           </h3>
           <div class="summary">
             <div class="statuses"><div>
-                <span class="status complete">1</span><strong>Daten verfügbar</strong><span class="value">100%</span>
+                <span class="status complete">1</span><strong>Reported online</strong><span class="value">100%</span>
               </div><div>
-                <span class="status inprogress">0</span><strong>in Bearbeitung</strong><span class="value">0%</span>
+                <span class="status inprogress">0</span><strong>Statistics in progress</strong><span class="value">0%</span>
               </div><div>
-                <span class="status notstarted">0</span><strong>Datenquellenanalyse</strong><span class="value">0%</span>
+                <span class="status notstarted">0</span><strong>Exploring data sources</strong><span class="value">0%</span>
               </div><br style="clear:both;">
             </div>
           </div>
-          <div class="goal-stats"><span class="complete" style="width:100%" title="Daten verfügbar: 100%"></span><span class="inprogress" style="width:0%" title="in Bearbeitung: 0%"></span><span class="notstarted" style="width:0%" title="Datenquellenanalyse: 0%"></span></div>
+          <div class="goal-stats"><span class="complete" style="width:100%" title="Reported online: 100%"></span><span class="inprogress" style="width:0%" title="Statistics in progress: 0%"></span><span class="notstarted" style="width:0%" title="Exploring data sources: 0%"></span></div>
           <div class="divider">
           </div>
         </div>
@@ -489,26 +489,26 @@ var translations = {
       <br style="clear:both;">
     </div><div class="goal">
         <div class="frame">
-          <a href="/open-sdg-site-starter/10/">
-            <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/10.png" alt="Weniger Ungleichheiten - Ziel 10" width="100" height="100" />
+          <a href="/open-sdg-site-starter/en/10/">
+            <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/10.png" alt="Reduced inequalities - Goal 10" width="100" height="100" />
           </a>
         </div>
         <div class="details">
           <h3 class="status-goal">
-            <a href="/open-sdg-site-starter/10/">Weniger Ungleichheiten</a>
-            <span class="total">2<span></span> indikatoren</span>
+            <a href="/open-sdg-site-starter/en/10/">Reduced inequalities</a>
+            <span class="total">2<span></span> indicators</span>
           </h3>
           <div class="summary">
             <div class="statuses"><div>
-                <span class="status complete">2</span><strong>Daten verfügbar</strong><span class="value">100%</span>
+                <span class="status complete">2</span><strong>Reported online</strong><span class="value">100%</span>
               </div><div>
-                <span class="status inprogress">0</span><strong>in Bearbeitung</strong><span class="value">0%</span>
+                <span class="status inprogress">0</span><strong>Statistics in progress</strong><span class="value">0%</span>
               </div><div>
-                <span class="status notstarted">0</span><strong>Datenquellenanalyse</strong><span class="value">0%</span>
+                <span class="status notstarted">0</span><strong>Exploring data sources</strong><span class="value">0%</span>
               </div><br style="clear:both;">
             </div>
           </div>
-          <div class="goal-stats"><span class="complete" style="width:100%" title="Daten verfügbar: 100%"></span><span class="inprogress" style="width:0%" title="in Bearbeitung: 0%"></span><span class="notstarted" style="width:0%" title="Datenquellenanalyse: 0%"></span></div>
+          <div class="goal-stats"><span class="complete" style="width:100%" title="Reported online: 100%"></span><span class="inprogress" style="width:0%" title="Statistics in progress: 0%"></span><span class="notstarted" style="width:0%" title="Exploring data sources: 0%"></span></div>
           <div class="divider">
           </div>
         </div>
@@ -516,26 +516,26 @@ var translations = {
       <br style="clear:both;">
     </div><div class="goal">
         <div class="frame">
-          <a href="/open-sdg-site-starter/11/">
-            <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/11.png" alt="Nachhaltige Städte und Gemeinden - Ziel 11" width="100" height="100" />
+          <a href="/open-sdg-site-starter/en/11/">
+            <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/11.png" alt="Sustainable cities & communities - Goal 11" width="100" height="100" />
           </a>
         </div>
         <div class="details">
           <h3 class="status-goal">
-            <a href="/open-sdg-site-starter/11/">Nachhaltige Städte und Gemeinden</a>
-            <span class="total">7<span></span> indikatoren</span>
+            <a href="/open-sdg-site-starter/en/11/">Sustainable cities & communities</a>
+            <span class="total">7<span></span> indicators</span>
           </h3>
           <div class="summary">
             <div class="statuses"><div>
-                <span class="status complete">7</span><strong>Daten verfügbar</strong><span class="value">100%</span>
+                <span class="status complete">7</span><strong>Reported online</strong><span class="value">100%</span>
               </div><div>
-                <span class="status inprogress">0</span><strong>in Bearbeitung</strong><span class="value">0%</span>
+                <span class="status inprogress">0</span><strong>Statistics in progress</strong><span class="value">0%</span>
               </div><div>
-                <span class="status notstarted">0</span><strong>Datenquellenanalyse</strong><span class="value">0%</span>
+                <span class="status notstarted">0</span><strong>Exploring data sources</strong><span class="value">0%</span>
               </div><br style="clear:both;">
             </div>
           </div>
-          <div class="goal-stats"><span class="complete" style="width:100%" title="Daten verfügbar: 100%"></span><span class="inprogress" style="width:0%" title="in Bearbeitung: 0%"></span><span class="notstarted" style="width:0%" title="Datenquellenanalyse: 0%"></span></div>
+          <div class="goal-stats"><span class="complete" style="width:100%" title="Reported online: 100%"></span><span class="inprogress" style="width:0%" title="Statistics in progress: 0%"></span><span class="notstarted" style="width:0%" title="Exploring data sources: 0%"></span></div>
           <div class="divider">
           </div>
         </div>
@@ -543,26 +543,26 @@ var translations = {
       <br style="clear:both;">
     </div><div class="goal">
         <div class="frame">
-          <a href="/open-sdg-site-starter/12/">
-            <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/12.png" alt="Verantwortungsvolle Konsum- und Produktionsmuster - Ziel 12" width="100" height="100" />
+          <a href="/open-sdg-site-starter/en/12/">
+            <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/12.png" alt="Responsible consumption and production - Goal 12" width="100" height="100" />
           </a>
         </div>
         <div class="details">
           <h3 class="status-goal">
-            <a href="/open-sdg-site-starter/12/">Verantwortungsvolle Konsum- und Produktionsmuster</a>
-            <span class="total">4<span></span> indikatoren</span>
+            <a href="/open-sdg-site-starter/en/12/">Responsible consumption and production</a>
+            <span class="total">4<span></span> indicators</span>
           </h3>
           <div class="summary">
             <div class="statuses"><div>
-                <span class="status complete">4</span><strong>Daten verfügbar</strong><span class="value">100%</span>
+                <span class="status complete">4</span><strong>Reported online</strong><span class="value">100%</span>
               </div><div>
-                <span class="status inprogress">0</span><strong>in Bearbeitung</strong><span class="value">0%</span>
+                <span class="status inprogress">0</span><strong>Statistics in progress</strong><span class="value">0%</span>
               </div><div>
-                <span class="status notstarted">0</span><strong>Datenquellenanalyse</strong><span class="value">0%</span>
+                <span class="status notstarted">0</span><strong>Exploring data sources</strong><span class="value">0%</span>
               </div><br style="clear:both;">
             </div>
           </div>
-          <div class="goal-stats"><span class="complete" style="width:100%" title="Daten verfügbar: 100%"></span><span class="inprogress" style="width:0%" title="in Bearbeitung: 0%"></span><span class="notstarted" style="width:0%" title="Datenquellenanalyse: 0%"></span></div>
+          <div class="goal-stats"><span class="complete" style="width:100%" title="Reported online: 100%"></span><span class="inprogress" style="width:0%" title="Statistics in progress: 0%"></span><span class="notstarted" style="width:0%" title="Exploring data sources: 0%"></span></div>
           <div class="divider">
           </div>
         </div>
@@ -570,26 +570,26 @@ var translations = {
       <br style="clear:both;">
     </div><div class="goal">
         <div class="frame">
-          <a href="/open-sdg-site-starter/13/">
-            <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/13.png" alt="Maßnahmen zum Klimaschutz - Ziel 13" width="100" height="100" />
+          <a href="/open-sdg-site-starter/en/13/">
+            <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/13.png" alt="Climate action - Goal 13" width="100" height="100" />
           </a>
         </div>
         <div class="details">
           <h3 class="status-goal">
-            <a href="/open-sdg-site-starter/13/">Maßnahmen zum Klimaschutz</a>
-            <span class="total">2<span></span> indikatoren</span>
+            <a href="/open-sdg-site-starter/en/13/">Climate action</a>
+            <span class="total">2<span></span> indicators</span>
           </h3>
           <div class="summary">
             <div class="statuses"><div>
-                <span class="status complete">2</span><strong>Daten verfügbar</strong><span class="value">100%</span>
+                <span class="status complete">2</span><strong>Reported online</strong><span class="value">100%</span>
               </div><div>
-                <span class="status inprogress">0</span><strong>in Bearbeitung</strong><span class="value">0%</span>
+                <span class="status inprogress">0</span><strong>Statistics in progress</strong><span class="value">0%</span>
               </div><div>
-                <span class="status notstarted">0</span><strong>Datenquellenanalyse</strong><span class="value">0%</span>
+                <span class="status notstarted">0</span><strong>Exploring data sources</strong><span class="value">0%</span>
               </div><br style="clear:both;">
             </div>
           </div>
-          <div class="goal-stats"><span class="complete" style="width:100%" title="Daten verfügbar: 100%"></span><span class="inprogress" style="width:0%" title="in Bearbeitung: 0%"></span><span class="notstarted" style="width:0%" title="Datenquellenanalyse: 0%"></span></div>
+          <div class="goal-stats"><span class="complete" style="width:100%" title="Reported online: 100%"></span><span class="inprogress" style="width:0%" title="Statistics in progress: 0%"></span><span class="notstarted" style="width:0%" title="Exploring data sources: 0%"></span></div>
           <div class="divider">
           </div>
         </div>
@@ -597,26 +597,26 @@ var translations = {
       <br style="clear:both;">
     </div><div class="goal">
         <div class="frame">
-          <a href="/open-sdg-site-starter/14/">
-            <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/14.png" alt="Leben unter Wasser - Ziel 14" width="100" height="100" />
+          <a href="/open-sdg-site-starter/en/14/">
+            <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/14.png" alt="Life below water - Goal 14" width="100" height="100" />
           </a>
         </div>
         <div class="details">
           <h3 class="status-goal">
-            <a href="/open-sdg-site-starter/14/">Leben unter Wasser</a>
-            <span class="total">2<span></span> indikatoren</span>
+            <a href="/open-sdg-site-starter/en/14/">Life below water</a>
+            <span class="total">2<span></span> indicators</span>
           </h3>
           <div class="summary">
             <div class="statuses"><div>
-                <span class="status complete">2</span><strong>Daten verfügbar</strong><span class="value">100%</span>
+                <span class="status complete">2</span><strong>Reported online</strong><span class="value">100%</span>
               </div><div>
-                <span class="status inprogress">0</span><strong>in Bearbeitung</strong><span class="value">0%</span>
+                <span class="status inprogress">0</span><strong>Statistics in progress</strong><span class="value">0%</span>
               </div><div>
-                <span class="status notstarted">0</span><strong>Datenquellenanalyse</strong><span class="value">0%</span>
+                <span class="status notstarted">0</span><strong>Exploring data sources</strong><span class="value">0%</span>
               </div><br style="clear:both;">
             </div>
           </div>
-          <div class="goal-stats"><span class="complete" style="width:100%" title="Daten verfügbar: 100%"></span><span class="inprogress" style="width:0%" title="in Bearbeitung: 0%"></span><span class="notstarted" style="width:0%" title="Datenquellenanalyse: 0%"></span></div>
+          <div class="goal-stats"><span class="complete" style="width:100%" title="Reported online: 100%"></span><span class="inprogress" style="width:0%" title="Statistics in progress: 0%"></span><span class="notstarted" style="width:0%" title="Exploring data sources: 0%"></span></div>
           <div class="divider">
           </div>
         </div>
@@ -624,26 +624,26 @@ var translations = {
       <br style="clear:both;">
     </div><div class="goal">
         <div class="frame">
-          <a href="/open-sdg-site-starter/15/">
-            <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/15.png" alt="Leben an Land - Ziel 15" width="100" height="100" />
+          <a href="/open-sdg-site-starter/en/15/">
+            <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/15.png" alt="Life on land - Goal 15" width="100" height="100" />
           </a>
         </div>
         <div class="details">
           <h3 class="status-goal">
-            <a href="/open-sdg-site-starter/15/">Leben an Land</a>
-            <span class="total">3<span></span> indikatoren</span>
+            <a href="/open-sdg-site-starter/en/15/">Life on land</a>
+            <span class="total">3<span></span> indicators</span>
           </h3>
           <div class="summary">
             <div class="statuses"><div>
-                <span class="status complete">3</span><strong>Daten verfügbar</strong><span class="value">100%</span>
+                <span class="status complete">3</span><strong>Reported online</strong><span class="value">100%</span>
               </div><div>
-                <span class="status inprogress">0</span><strong>in Bearbeitung</strong><span class="value">0%</span>
+                <span class="status inprogress">0</span><strong>Statistics in progress</strong><span class="value">0%</span>
               </div><div>
-                <span class="status notstarted">0</span><strong>Datenquellenanalyse</strong><span class="value">0%</span>
+                <span class="status notstarted">0</span><strong>Exploring data sources</strong><span class="value">0%</span>
               </div><br style="clear:both;">
             </div>
           </div>
-          <div class="goal-stats"><span class="complete" style="width:100%" title="Daten verfügbar: 100%"></span><span class="inprogress" style="width:0%" title="in Bearbeitung: 0%"></span><span class="notstarted" style="width:0%" title="Datenquellenanalyse: 0%"></span></div>
+          <div class="goal-stats"><span class="complete" style="width:100%" title="Reported online: 100%"></span><span class="inprogress" style="width:0%" title="Statistics in progress: 0%"></span><span class="notstarted" style="width:0%" title="Exploring data sources: 0%"></span></div>
           <div class="divider">
           </div>
         </div>
@@ -651,26 +651,26 @@ var translations = {
       <br style="clear:both;">
     </div><div class="goal">
         <div class="frame">
-          <a href="/open-sdg-site-starter/16/">
-            <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/16.png" alt="Frieden, Gerechtigkeit und starke Institutionen - Ziel 16" width="100" height="100" />
+          <a href="/open-sdg-site-starter/en/16/">
+            <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/16.png" alt="Peace and justice - strong institutions - Goal 16" width="100" height="100" />
           </a>
         </div>
         <div class="details">
           <h3 class="status-goal">
-            <a href="/open-sdg-site-starter/16/">Frieden, Gerechtigkeit und starke Institutionen</a>
-            <span class="total">3<span></span> indikatoren</span>
+            <a href="/open-sdg-site-starter/en/16/">Peace and justice - strong institutions</a>
+            <span class="total">3<span></span> indicators</span>
           </h3>
           <div class="summary">
             <div class="statuses"><div>
-                <span class="status complete">3</span><strong>Daten verfügbar</strong><span class="value">100%</span>
+                <span class="status complete">3</span><strong>Reported online</strong><span class="value">100%</span>
               </div><div>
-                <span class="status inprogress">0</span><strong>in Bearbeitung</strong><span class="value">0%</span>
+                <span class="status inprogress">0</span><strong>Statistics in progress</strong><span class="value">0%</span>
               </div><div>
-                <span class="status notstarted">0</span><strong>Datenquellenanalyse</strong><span class="value">0%</span>
+                <span class="status notstarted">0</span><strong>Exploring data sources</strong><span class="value">0%</span>
               </div><br style="clear:both;">
             </div>
           </div>
-          <div class="goal-stats"><span class="complete" style="width:100%" title="Daten verfügbar: 100%"></span><span class="inprogress" style="width:0%" title="in Bearbeitung: 0%"></span><span class="notstarted" style="width:0%" title="Datenquellenanalyse: 0%"></span></div>
+          <div class="goal-stats"><span class="complete" style="width:100%" title="Reported online: 100%"></span><span class="inprogress" style="width:0%" title="Statistics in progress: 0%"></span><span class="notstarted" style="width:0%" title="Exploring data sources: 0%"></span></div>
           <div class="divider">
           </div>
         </div>
@@ -678,26 +678,26 @@ var translations = {
       <br style="clear:both;">
     </div><div class="goal">
         <div class="frame">
-          <a href="/open-sdg-site-starter/17/">
-            <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/17.png" alt="Partnerschaften zur Erreichung der Ziele - Ziel 17" width="100" height="100" />
+          <a href="/open-sdg-site-starter/en/17/">
+            <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/17.png" alt="Partnerships for the goals - Goal 17" width="100" height="100" />
           </a>
         </div>
         <div class="details">
           <h3 class="status-goal">
-            <a href="/open-sdg-site-starter/17/">Partnerschaften zur Erreichung der Ziele</a>
-            <span class="total">3<span></span> indikatoren</span>
+            <a href="/open-sdg-site-starter/en/17/">Partnerships for the goals</a>
+            <span class="total">3<span></span> indicators</span>
           </h3>
           <div class="summary">
             <div class="statuses"><div>
-                <span class="status complete">3</span><strong>Daten verfügbar</strong><span class="value">100%</span>
+                <span class="status complete">3</span><strong>Reported online</strong><span class="value">100%</span>
               </div><div>
-                <span class="status inprogress">0</span><strong>in Bearbeitung</strong><span class="value">0%</span>
+                <span class="status inprogress">0</span><strong>Statistics in progress</strong><span class="value">0%</span>
               </div><div>
-                <span class="status notstarted">0</span><strong>Datenquellenanalyse</strong><span class="value">0%</span>
+                <span class="status notstarted">0</span><strong>Exploring data sources</strong><span class="value">0%</span>
               </div><br style="clear:both;">
             </div>
           </div>
-          <div class="goal-stats"><span class="complete" style="width:100%" title="Daten verfügbar: 100%"></span><span class="inprogress" style="width:0%" title="in Bearbeitung: 0%"></span><span class="notstarted" style="width:0%" title="Datenquellenanalyse: 0%"></span></div>
+          <div class="goal-stats"><span class="complete" style="width:100%" title="Reported online: 100%"></span><span class="inprogress" style="width:0%" title="Statistics in progress: 0%"></span><span class="notstarted" style="width:0%" title="Exploring data sources: 0%"></span></div>
           <div class="divider">
           </div>
         </div>
@@ -713,7 +713,7 @@ var translations = {
       <div class="col-xs-12">
         <div id="footerLinks">
           <ul>
-            <li><a href="mailto:DNS-Indikatoren@destatis.de">Kontakt</a></li>
+            <li><a href="mailto:DNS-Indikatoren@destatis.de">Contact us</a></li>
             
             <li><a class="twitter-follow-button" href="https://twitter.com/MyTwitterAccount" data-show-count="false">: @MyTwitterAccount</a></li>
             
