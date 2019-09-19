@@ -23,6 +23,13 @@
             <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ goal_number }}/">{{ goal_short }}</a>
           </h3>
 
+          {%- for i in goalreport.indicators -%}
+            <h3> Test </h3>
+          {%- endfor -%}
+
+
+
+
           <div class="summary">
             <div class="statuses">
               {%- for status in goalreport.statuses -%}
@@ -33,7 +40,7 @@
               <br style="clear:both;">
             </div>
           </div>
-          
+
           <div class="divider">
           </div>
         </div>
