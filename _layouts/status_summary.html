@@ -34,9 +34,11 @@
                   {% assign hty_active = "history_active_" | append: i %}
                   {% assign hty_indicator = "history_indicator_" | append: i %}
                   {% assign hty_years = "history_years_" | append: i %}
+                  {% assign hty_status = "history_url_text_" | append: i %}
                   {% if indicator[hty_active] == true %}
                     <h2> {{ indicator[hty_indicator] }} </h2>
-                    <p> {{ indicator[hty_years] }}
+                    <p> {{ indicator[hty_years] }} </p>
+                    <p> {{ indicator[hty_status] }} </p>
                   {% endif %}
                 {% endfor %}
               {% endfor %}
