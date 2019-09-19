@@ -50,6 +50,7 @@
           <tr>
             <th scope="row">{{ t.data.Year }} </th>
             <td>
+              {{ meta[indicator_metadata.name] | t | markdownify }}
               {{ year_a | markdownify }}{{ year_b | markdownify }}{{ year_c | markdownify }}{{ year_d | markdownify }}
             </td>
           </tr>
