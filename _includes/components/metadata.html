@@ -40,18 +40,17 @@
 
       {% if indicator_metadata.name contains "_year" %}
         {% if indicator_metadata.name contains "_a_" %}
-          {{ assign year_a = meta[indicator_metadata.name] | t | markdownify }}
+          {% assign year_a = meta[indicator_metadata.name] | t | markdownify %}
         {% elsif indicator_metadata.name contains "_b_" %}
-          {{ assign year_b = meta[indicator_metadata.name] | t | markdownify }}
+          {% assign year_b = meta[indicator_metadata.name] | t | markdownify %}
         {% elsif indicator_metadata.name contains "_c_" %}
-          {{ assign year_c = meta[indicator_metadata.name] | t | markdownify }}
+          {% assign year_c = meta[indicator_metadata.name] | t | markdownify %}
         {% elsif indicator_metadata.name contains "_d_" %}
-          {{ assign year_d = meta[indicator_metadata.name] | t | markdownify }}
+          {% assign year_d = meta[indicator_metadata.name] | t | markdownify %}
           <tr>
             <th scope="row">{{ t.data.Year }} </th>
             <td>
-              {{ meta[indicator_metadata.name] | t | markdownify }}
-              {{ year_a }}
+              {{ year_a }}{{ year_b }}{{ year_c }}{{ year_d }}
             </td>
           </tr>
         {% endif %}
