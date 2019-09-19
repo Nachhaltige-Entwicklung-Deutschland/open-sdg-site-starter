@@ -31,7 +31,8 @@
             {% for group in goal_indicators %}
               {% for indicator in group.items %}
 
-                <h2> {{ indicator.indicator_display }} </h2>
+                <h2> {{ indicator.history_indicator_1 }} </h2>
+                {% include components/history.html %}
               {% endfor %}
             {% endfor %}
 
