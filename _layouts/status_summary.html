@@ -6,36 +6,6 @@
 
   <h1>{{ t.summary.status_summary }}</h1>
 
-  {%- assign overall = site.data.reporting.overall -%}
-  <div class="goal goal-overall">
-      <div class="details">
-        <h2 class="status-goal">
-            {{ t.status.overall_reporting_status }} <span class="total"><span>{{ overall.totals.total }}</span> {{ t.general.indicators | downcase }}</span>
-        </h2>
-        <div class="summary">
-          <div class="statuses">
-            {%- for status in overall.statuses -%}
-            <div>
-              <span class="status {{ status.status | slugify }}">{{ status.count }}</span><strong>{{ status.translation_key | t }}</strong><span class="value">{{ status.percentage | round }}%</span>
-            </div>
-            {%- endfor -%}
-
-            <br style="clear:both;">
-          </div>
-        </div>
-        <div class="goal-stats">
-            {%- for status in overall.statuses -%}
-            <span class="{{ status.status | slugify }}" style="width:{{ status.percentage }}%" title="{{ status.translation_key | t }}: {{ status.percentage | round }}%"></span>
-            {%- endfor -%}
-        </div>
-
-      </div>
-    <!--</li>-->
-    <br style="clear:both;">
-  </div>
-
-  <h2>{{ t.status.status_by_goal }}</h2>
-
   {%- for goalreport in site.data.reporting.goals -%}
     {%- assign goal_number = goalreport.goal  | downcase -%}
     {%- assign goal_short_key = goal_number | append: '-short' -%}
