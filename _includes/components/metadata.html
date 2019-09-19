@@ -50,7 +50,7 @@
           <tr>
             <th scope="row">{{ t.data.Year }} </th>
             <td>
-              {{ year_a }}{{ year_b }}{{ year_c }}{{ year_d }}
+              {{ year_a | markdownify }}{{ year_b | markdownify }}{{ year_c | markdownify }}{{ year_d | markdownify }}
             </td>
           </tr>
         {% endif %}
