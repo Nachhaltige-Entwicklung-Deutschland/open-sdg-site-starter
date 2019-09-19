@@ -33,12 +33,32 @@
                 {% for i in (1..2) %}
                   {% assign hty_active = "history_active_" | append: i %}
                   {% assign hty_indicator = "history_indicator_" | append: i %}
-                  {% assign hty_years = "history_years_" | append: i %}
-                  {% assign hty_status = "history_url_text_" | append: i %}
                   {% if indicator[hty_active] == true %}
-                    <h2> {{ indicator[hty_indicator] }} </h2>
-                    <p> {{ indicator[hty_years] }} </p>
-                    <p> {{ indicator[hty_status] }} </p>
+                    <table class="table table-hover">
+                      <tr>
+                        <th> Indicator </th>
+                        <td> {{ indicator[hty_indicator] }} </td>
+                      </tr>
+                      <tr>
+                        <th> Goal </th>
+                        <td> Lorem Ipsum </td>
+                      </tr>
+                      <tr>
+                        <th> Year </th>
+                        {% for j (a,b,c,d) %}
+                          {% assign year = "history_year_" | append: j | append: "_" | append: i %}
+                          <td> {{ year }} </td>
+                        {% endfor %}
+                      </tr>
+                      <tr>
+                        <th> Status </th>
+                        {% for j (a,b,c,d) %}
+                          {% assign status = "history_status_year_" | append: j | append: "_" | append: i %}
+                          <td> {{ status }} </td>
+                        {% endfor %}
+                      </tr>
+                    </table>
+
                   {% endif %}
                 {% endfor %}
               {% endfor %}
