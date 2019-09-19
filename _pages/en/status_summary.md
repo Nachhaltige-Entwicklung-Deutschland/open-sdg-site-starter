@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Status Summary
-permalink: /status_summary/
+permalink: /en/status_summary/
 layout: status_summary
+language: en
 ---
