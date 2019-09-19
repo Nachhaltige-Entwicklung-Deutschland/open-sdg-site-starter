@@ -16,11 +16,11 @@
       "id": "2",
       "title": "End hunger, achieve food security and improved nutrition and promote sustainable agriculture",
       "indicators": [{
-          "id": "2-2-a",
-          "title": "Unterstützung guter Regierungsführung bei der Erreichung einer angemessenen Ernährung weltweit",
+          "id": "2-1-b",
+          "title": "Ökologischer Landbau",
           "description": "",
           "keywords": "",
-          "href": "/open-sdg-site-starter/en/2-2-a",
+          "href": "/open-sdg-site-starter/en/2-1-b",
           "status": "complete"
         },{
           "id": "2-1-a",
@@ -30,11 +30,11 @@
           "href": "/open-sdg-site-starter/en/2-1-a",
           "status": "complete"
         },{
-          "id": "2-1-b",
-          "title": "Ökologischer Landbau",
+          "id": "2-2-a",
+          "title": "Unterstützung guter Regierungsführung bei der Erreichung einer angemessenen Ernährung weltweit",
           "description": "",
           "keywords": "",
-          "href": "/open-sdg-site-starter/en/2-1-b",
+          "href": "/open-sdg-site-starter/en/2-2-a",
           "status": "complete"
         }]
     }
@@ -43,25 +43,25 @@
       "id": "3",
       "title": "Ensure healthy lives and promote well-being for all at all ages",
       "indicators": [{
-          "id": "3-1-cd",
-          "title": "Raucherquote von Jugendlichen und Erwachsenen",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/3-1-cd",
-          "status": "complete"
-        },{
-          "id": "3-2-a",
-          "title": "Emissionen von Luftschadstoffen",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/3-2-a",
-          "status": "complete"
-        },{
           "id": "3-1-e",
           "title": "Adipositasquote von Jugendlichen",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/3-1-e",
+          "status": "complete"
+        },{
+          "id": "3-1-ab",
+          "title": "Vorzeitige Sterblichkeit (weiblich)",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/3-1-ab",
+          "status": "complete"
+        },{
+          "id": "3-1-cd",
+          "title": "Raucherquote von Jugendlichen und Erwachsenen",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/3-1-cd",
           "status": "complete"
         },{
           "id": "3-2-b",
@@ -78,11 +78,11 @@
           "href": "/open-sdg-site-starter/en/3-1-f",
           "status": "complete"
         },{
-          "id": "3-1-ab",
-          "title": "Vorzeitige Sterblichkeit (weiblich)",
+          "id": "3-2-a",
+          "title": "Emissionen von Luftschadstoffen",
           "description": "",
           "keywords": "",
-          "href": "/open-sdg-site-starter/en/3-1-ab",
+          "href": "/open-sdg-site-starter/en/3-2-a",
           "status": "complete"
         }]
     }
@@ -91,6 +91,13 @@
       "id": "4",
       "title": "Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all",
       "indicators": [{
+          "id": "4-2-ab",
+          "title": "Ganztagsbetreuung für Kinder",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/4-2-ab",
+          "status": "complete"
+        },{
           "id": "4-1-a",
           "title": "Frühe Schulabgängerinnen und Schulabgänger",
           "description": "",
@@ -104,13 +111,6 @@
           "keywords": "",
           "href": "/open-sdg-site-starter/en/4-1-b",
           "status": "complete"
-        },{
-          "id": "4-2-ab",
-          "title": "Ganztagsbetreuung für Kinder",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/4-2-ab",
-          "status": "complete"
         }]
     }
   },{
@@ -118,6 +118,13 @@
       "id": "5",
       "title": "Achieve gender equality and empower all women and girls",
       "indicators": [{
+          "id": "5-1-c",
+          "title": "Berufliche Qualifizierung von Mädchen und Frauen durch deutsche entwicklungspolitische Zusammenarbeit",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/5-1-c",
+          "status": "complete"
+        },{
           "id": "5-1-a",
           "title": "Verdienstabstand zwischen Frauen und Männern",
           "description": "",
@@ -131,13 +138,6 @@
           "keywords": "",
           "href": "/open-sdg-site-starter/en/5-1-b",
           "status": "complete"
-        },{
-          "id": "5-1-c",
-          "title": "Berufliche Qualifizierung von Mädchen und Frauen durch deutsche entwicklungspolitische Zusammenarbeit",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/5-1-c",
-          "status": "complete"
         }]
     }
   },{
@@ -145,18 +145,18 @@
       "id": "6",
       "title": "Ensure availability and sustainable management of water and sanitation for all",
       "indicators": [{
-          "id": "6-1-b",
-          "title": "Nitrat im Grundwasser",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/6-1-b",
-          "status": "complete"
-        },{
           "id": "6-1-a",
           "title": "Phosphor in Fließgewässern",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/6-1-a",
+          "status": "complete"
+        },{
+          "id": "6-1-b",
+          "title": "Nitrat im Grundwasser",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/6-1-b",
           "status": "complete"
         },{
           "id": "6-2-a",
@@ -179,18 +179,18 @@
           "href": "/open-sdg-site-starter/en/7-2-a",
           "status": "complete"
         },{
-          "id": "7-2-b",
-          "title": "Anteil des Stroms aus erneuerbaren Energiequellen am Bruttostromverbrauch",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/7-2-b",
-          "status": "complete"
-        },{
           "id": "7-1-ab",
           "title": "Endenergieproduktivität und Primärenergieverbrauch",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/7-1-ab",
+          "status": "complete"
+        },{
+          "id": "7-2-b",
+          "title": "Anteil des Stroms aus erneuerbaren Energiequellen am Bruttostromverbrauch",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/7-2-b",
           "status": "complete"
         }]
     }
@@ -199,11 +199,25 @@
       "id": "8",
       "title": "Promote sustained, inclusive and sustainable economic growth, full and productive employment and decent work for all",
       "indicators": [{
-          "id": "8-3-a",
-          "title": "Verhältnis der Bruttoanlageinvestitionen zum BIP",
+          "id": "8-6-a",
+          "title": "Anzahl der Mitglieder des Textilbündnisses",
           "description": "",
           "keywords": "",
-          "href": "/open-sdg-site-starter/en/8-3-a",
+          "href": "/open-sdg-site-starter/en/8-6-a",
+          "status": "complete"
+        },{
+          "id": "8-2-c",
+          "title": "Schuldenstand",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/8-2-c",
+          "status": "complete"
+        },{
+          "id": "8-5-ab",
+          "title": "Erwerbstätigenquote",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/8-5-ab",
           "status": "complete"
         },{
           "id": "8-2-ab",
@@ -220,20 +234,6 @@
           "href": "/open-sdg-site-starter/en/8-1-a",
           "status": "complete"
         },{
-          "id": "8-2-c",
-          "title": "Schuldenstand",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/8-2-c",
-          "status": "complete"
-        },{
-          "id": "8-6-a",
-          "title": "Anzahl der Mitglieder des Textilbündnisses",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/8-6-a",
-          "status": "complete"
-        },{
           "id": "8-4-a",
           "title": "Bruttoinlandsprodukt je Einwohner",
           "description": "",
@@ -241,11 +241,11 @@
           "href": "/open-sdg-site-starter/en/8-4-a",
           "status": "complete"
         },{
-          "id": "8-5-ab",
-          "title": "Erwerbstätigenquote",
+          "id": "8-3-a",
+          "title": "Verhältnis der Bruttoanlageinvestitionen zum BIP",
           "description": "",
           "keywords": "",
-          "href": "/open-sdg-site-starter/en/8-5-ab",
+          "href": "/open-sdg-site-starter/en/8-3-a",
           "status": "complete"
         }]
     }
@@ -294,27 +294,6 @@
           "href": "/open-sdg-site-starter/en/11-1-c",
           "status": "complete"
         },{
-          "id": "11-2-b",
-          "title": "Endenergieverbrauch im Personenverkehr",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/11-2-b",
-          "status": "complete"
-        },{
-          "id": "11-2-c",
-          "title": "Erreichbarkeit von Mittel- und Oberzentren mit öffentlichen Verkehrsmitteln",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/11-2-c",
-          "status": "complete"
-        },{
-          "id": "11-1-b",
-          "title": "Freiraumverlust",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/11-1-b",
-          "status": "complete"
-        },{
           "id": "11-2-a",
           "title": "Endenergieverbrauch im Güterverkehr",
           "description": "",
@@ -329,11 +308,32 @@
           "href": "/open-sdg-site-starter/en/11-1-a",
           "status": "complete"
         },{
+          "id": "11-2-c",
+          "title": "Erreichbarkeit von Mittel- und Oberzentren mit öffentlichen Verkehrsmitteln",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/11-2-c",
+          "status": "complete"
+        },{
           "id": "11-3-a",
           "title": "Überlastung durch Wohnkosten",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/11-3-a",
+          "status": "complete"
+        },{
+          "id": "11-2-b",
+          "title": "Endenergieverbrauch im Personenverkehr",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/11-2-b",
+          "status": "complete"
+        },{
+          "id": "11-1-b",
+          "title": "Freiraumverlust",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/11-1-b",
           "status": "complete"
         }]
     }
@@ -342,6 +342,20 @@
       "id": "12",
       "title": "Ensure sustainable consumption and production patterns",
       "indicators": [{
+          "id": "12-3-a",
+          "title": "Nachhaltige Beschaffung",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/12-3-a",
+          "status": "complete"
+        },{
+          "id": "12-1-b",
+          "title": "Energieverbrauch und CO2-Emissionen des Konsum",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/12-1-b",
+          "status": "complete"
+        },{
           "id": "12-1-a",
           "title": "Marktanteil von Produkten mit staatlichen Umweltzeichen",
           "description": "",
@@ -355,20 +369,6 @@
           "keywords": "",
           "href": "/open-sdg-site-starter/en/12-2-a",
           "status": "complete"
-        },{
-          "id": "12-1-b",
-          "title": "Energieverbrauch und CO2-Emissionen des Konsum",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/12-1-b",
-          "status": "complete"
-        },{
-          "id": "12-3-a",
-          "title": "Nachhaltige Beschaffung",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/12-3-a",
-          "status": "complete"
         }]
     }
   },{
@@ -376,18 +376,18 @@
       "id": "13",
       "title": "Take urgent action to combat climate change and its impacts",
       "indicators": [{
-          "id": "13-1-b",
-          "title": "Internationale Klimafinanzierung zur Reduktion von Treibhausgasen und zur Anpassung an den Klimawandel",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/13-1-b",
-          "status": "complete"
-        },{
           "id": "13-1-a",
           "title": "Treibhausgasemissionen",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/13-1-a",
+          "status": "complete"
+        },{
+          "id": "13-1-b",
+          "title": "Internationale Klimafinanzierung zur Reduktion von Treibhausgasen und zur Anpassung an den Klimawandel",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/13-1-b",
           "status": "complete"
         }]
     }
@@ -423,18 +423,18 @@
           "href": "/open-sdg-site-starter/en/15-3-a",
           "status": "complete"
         },{
-          "id": "15-2-a",
-          "title": "Eutrophierung der Ökosysteme",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/15-2-a",
-          "status": "complete"
-        },{
           "id": "15-1-a",
           "title": "Artenvielfalt und Landschaftsqualität",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/15-1-a",
+          "status": "complete"
+        },{
+          "id": "15-2-a",
+          "title": "Eutrophierung der Ökosysteme",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/15-2-a",
           "status": "complete"
         }]
     }
@@ -470,13 +470,6 @@
       "id": "17",
       "title": "Strengthen the means of implementation and revitalize the Global Partnership for Sustainable Development",
       "indicators": [{
-          "id": "17-2-a",
-          "title": "Anzahl der Studierenden und Forschenden aus Entwicklungsländern sowie LDCs pro Jahr",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/17-2-a",
-          "status": "complete"
-        },{
           "id": "17-3-a",
           "title": "Einfuhren aus am wenigsten entwickelten Ländern",
           "description": "",
@@ -489,6 +482,13 @@
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/17-1-a",
+          "status": "complete"
+        },{
+          "id": "17-2-a",
+          "title": "Anzahl der Studierenden und Forschenden aus Entwicklungsländern sowie LDCs pro Jahr",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/17-2-a",
           "status": "complete"
         }]
     }
