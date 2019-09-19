@@ -30,9 +30,9 @@
           {% assign goal_indicators = site.data.meta | where: 'sdg_goal', goal_number | sort: 'indicator_sort_order' | group_by: 'target_id' %}
             {% for group in goal_indicators %}
               {% for indicator in group.items %}
-                
+
                 <h2> {{ indicator.indicator }} </h2>
-                <p> {{ meta.history_years_1 }}
+                <p> {{ indicator.history_years_1 }}
               {% endfor %}
             {% endfor %}
 
