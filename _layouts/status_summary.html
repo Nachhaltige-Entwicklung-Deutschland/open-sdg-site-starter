@@ -45,31 +45,15 @@
                       </tr>
                       <tr>
                         <th> Year </th>
-                        {% for j (1...4) %}
-                          {% if j == 1 %}
-                            {% assign year = "history_year_" | append: "a_" | append: i %}
-                          {% elsif j == 2 %}
-                            {% assign year = "history_year_" | append: "b_" | append: i %}
-                          {% elsif j == 3 %}
-                            {% assign year = "history_year_" | append: "c_" | append: i %}
-                          {% elsif j == 4 %}
-                            {% assign year = "history_year_" | append: "d_" | append: i %}
-                          {% endif %}
+                        {% for j in (a,b,c,d) %}
+                          {% assign year = "history_year_" | append: j | append: "_" | append: i %}
                           <td> {{ year }} </td>
                         {% endfor %}
                       </tr>
                       <tr>
                         <th> Status </th>
-                        {% for j (1...4) %}
-                          {% if j == 1 %}
-                            {% assign status = "history_status_year_" | append: "a_" | append: i %}
-                          {% elsif j == 2 %}
-                            {% assign status = "history_status_year_" | append: "b_" | append: i %}
-                          {% elsif j == 3 %}
-                            {% assign status = "history_status_year_" | append: "c_" | append: i %}
-                          {% elsif j == 4 %}
-                            {% assign status = "history_status_year_" | append: "d_" | append: i %}
-                          {% endif %}
+                        {% for j in (a,b,c,d) %}
+                          {% assign status = "history_status_year_" | append: j | append: "_" | append: i %}
                           <td> {{ status }} </td>
                         {% endfor %}
                       </tr>
