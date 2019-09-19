@@ -31,9 +31,12 @@
             {% for group in goal_indicators %}
               {% for indicator in group.items %}
                 {% for i in (1..2) %}
-                  {% if indicator.history_active_ | append: i == true %}
-                    <h2> {{ indicator.history_indicator_ | append: i }} </h2>
-                    <p> {{ indicator.history_years_ | append: i }}
+                  {% assign hty_active = "history_active_" | append: i %}
+                  {% assign hty_indicator = "history_indicator_" | append: i %}
+                  {% assign hty_years = "history_years_" | append: i %}
+                  {% if indicator[hty_active] == true %}
+                    <h2> {{ indicator[hty_indicator] }} </h2>
+                    <p> {{ indicator[hty_years] }}
                   {% endif %}
                 {% endfor %}
               {% endfor %}
