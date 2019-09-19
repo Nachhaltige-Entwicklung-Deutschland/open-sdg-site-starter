@@ -48,7 +48,7 @@
         {% elsif indicator_metadata.name contains "_d_" %}
           {% assign year_d = meta[indicator_metadata.name] | t | markdownify %}
           <tr>
-            <th scope="row">{{ t.data.Year }} </th>
+            <th scope="row">{{ metadata_label }} </th>
             <td>
               {{ year_a }}
             </td>
