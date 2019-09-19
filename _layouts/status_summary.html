@@ -37,24 +37,24 @@
                     <table class="table table-hover">
                       <tr>
                         <th> Indicator </th>
-                        <td> {{ indicator[hty_indicator] }} </td>
+                        <td colspan="4"> {{ indicator[hty_indicator] }} </td>
                       </tr>
                       <tr>
                         <th> Goal </th>
-                        <td> Lorem Ipsum </td>
+                        <td colspan="4"> Lorem Ipsum </td>
                       </tr>
                       <tr>
                         <th> Year </th>
                         {% for j in (a,b,c,d) %}
                           {% assign year = "history_year_" | append: j | append: "_" | append: i %}
-                          <td> {{ year }} </td>
+                          <td> {{ indicator[year] }} </td>
                         {% endfor %}
                       </tr>
                       <tr>
                         <th> Status </th>
                         {% for j in (a,b,c,d) %}
                           {% assign status = "history_status_year_" | append: j | append: "_" | append: i %}
-                          <td> {{ status }} </td>
+                          <td> {{ indicator[status] }} </td>
                         {% endfor %}
                       </tr>
                     </table>
