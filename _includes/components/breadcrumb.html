@@ -29,20 +29,16 @@
         {% assign next_goal = page.sdg_goal | plus: 1 %}
       {% endif %}
 
-        <li class="pull-right">
-          <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ next_goal }}" title="next goal">
-            <span style="font-size:20px">>
-            </span>
-          </a>
-        </li>
-        <li class="pull-right">
-          <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ previous_goal }}" title="previous goal">
-            <span style="font-size:20px"><
-            </span>
-          </a>
-        </li>
-
-
+      <li class="pull-right">
+        <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ next_goal }}" title="next goal">
+          Test
+        </a>
+      </li>
+      <li class="pull-right">
+        <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ previous_goal }}" title="previous goal">
+          Test
+        </a>
+      </li>
   {% endif %}
 
 </ol>
