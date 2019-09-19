@@ -3,13 +3,13 @@
   {% if goal_uri %}
       <li><a href="{{ goal_uri }}" title="{{ goal_title }}">{{ t.general.goal }} {{ goal_number }}</a></li>
       <li class="active">{{ t.general.indicator }} {{ meta.indicator_display }}</li>
-      <li id = "liRight">
+      <li class="pull-right">
         <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.next }}" title="next indicator">
           <span style="font-size:20px">>
           </span>
         </a>
       </li>
-      <li id = "liRight">
+      <li class="pull-right">
         <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.previous }}" title="previous indicator">
           <span style="font-size:20px"><
           </span>
@@ -29,13 +29,13 @@
         {% assign next_goal = page.sdg_goal | plus: 1 %}
       {% endif %}
 
-        <li id = "liRight">
+        <li class="pull-right">
           <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ next_goal }}" title="next goal">
             <span style="font-size:20px">>
             </span>
           </a>
         </li>
-        <li id = "liRight">
+        <li class="pull-right">
           <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ previous_goal }}" title="previous goal">
             <span style="font-size:20px"><
             </span>
