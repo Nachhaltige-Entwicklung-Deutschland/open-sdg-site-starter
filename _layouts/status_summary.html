@@ -40,8 +40,9 @@
                         <td colspan="4"> {{ indicator[hty_indicator] }} </td>
                       </tr>
                       <tr>
-                        <th> Goal </th>
-                        <td colspan="4"> Lorem Ipsum </td>
+                        <th> Goal! </th>
+                        {% assign target = "history_target_" | append: i %}
+                        <td colspan="4"> {{ indicator[target]}} </td>
                       </tr>
                       <tr>
                         <th> Year </th>
