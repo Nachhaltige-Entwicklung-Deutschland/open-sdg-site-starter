@@ -47,13 +47,17 @@
                         <th> Year </th>
                         {% for j in (1..4) %}
                           {% if j == 1 %}
-                            <td> {{ indicator["history_year_a_1"] }} </td>
+                            {% assign year_a = "history_year_a_" | append: i %}
+                            <td> {{ indicator[year_a] }} </td>
                           {% elsif j == 2 %}
-                            <td> {{ indicator["history_year_b_1"] }} </td>
+                            {% assign year_b = "history_year_b_" | append: i %}
+                            <td> {{ indicator[year_b] }} </td>
                           {% elsif j == 3 %}
-                            <td> {{ indicator["history_year_c_1"] }} </td>
+                            {% assign year_c = "history_year_c_" | append: i %}
+                            <td> {{ indicator[year_c] }} </td>
                           {% elsif j == 4 %}
-                            <td> {{ indicator["history_year_d_1"] }} </td>
+                            {% assign year_d = "history_year_d_" | append: i %}
+                            <td> {{ indicator[year_d] }} </td>
                           {% endif %}
                         {% endfor %}
                       </tr>
@@ -61,13 +65,17 @@
                         <th> Status </th>
                         {% for j in (1..4) %}
                           {% if j == 1 %}
-                            <td> {{ indicator["history_status_year_a_1"] }} </td>
+                            {% assign status_a = "history_status_year_a_" | append: i %}
+                            <td> {{ indicator[status_a] }} </td>
                           {% elsif j == 2 %}
-                            <td> {{ indicator["history_status_year_b_1"] }} </td>
+                            {% assign status_b = "history_status_year_b_" | append: i %}
+                            <td> {{ indicator[status_b] }} </td>
                           {% elsif j == 3 %}
-                            <td> {{ indicator["history_status_year_c_1"] }} </td>
+                            {% assign status_c = "history_status_year_c_" | append: i %}
+                            <td> {{ indicator[status_c] }} </td>
                           {% elsif j == 4 %}
-                              <td> {{ indicator["history_status_year_d_1"] }} </td>
+                            {% assign status_d = "history_status_year_d_" | append: i %}
+                            <td> {{ indicator[status_d] }} </td>
                           {% endif %}
                         {% endfor %}
                       </tr>
