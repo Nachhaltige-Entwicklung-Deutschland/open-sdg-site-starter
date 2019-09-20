@@ -52,7 +52,7 @@
                         {% assign letters = "a,b,c,d" | split: ',' %}
                         {% for j in letters %}
                           {% assign year = "history_year_" | append: j | append: "_" | append: i %}
-                          <td> {{ indicator[year] }} </td>
+                          <td align="center"> {{ indicator[year] }} </td>
                         {% endfor %}
                       </tr>
                       <tr>
@@ -60,7 +60,7 @@
                         {% assign letters = "a,b,c,d" | split: ',' %}
                         {% for j in letters %}
                           {% assign status = "history_status_year_" | append: j | append: "_" | append: i %}
-                          <td> {{ indicator[status] }} </td>
+                          <td align="center"> {{ indicator[status] }} </td>
                         {% endfor %}
                       </tr>
                     </table>
