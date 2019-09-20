@@ -42,14 +42,16 @@
                       <col width="241">
                       <col width="241">
                       <col width="241">
+                      <col width="241">
+                      <col width="241">
                       <tr>
                         <th> {{ t.summary.indicator }} </th>
-                        <th colspan="6"> <a href=" {{ indicator_link }} ">{{ indicator[hty_indicator] }}</a> </th>
+                        <th colspan="8"> <a href=" {{ indicator_link }} ">{{ indicator[hty_indicator] }}</a> </th>
                       </tr>
                       <tr>
                         <th> {{ t.summary.target }} </th>
                         {% assign target = "history_target_" | append: i %}
-                        <td colspan="6"> {{ indicator[target]}} </td>
+                        <td colspan="8"> {{ indicator[target]}} </td>
                       </tr>
                       <tr>
                         <th> {{ t.summary.year }} </th>
