@@ -65,7 +65,8 @@
                         {% endfor %}
                         {% endcomment %}
 
-                        {% for j in ["a","b","c","d"] %}
+                        {% assign letters = "a,b,c,d" | split: ',' %}
+                        {% for j in letters %}
                           <td> {{ j }} </td>
                         {% endfor %}
 
