@@ -42,7 +42,7 @@
                       <col width="241">
                       <col width="241">
                       <col width="241">
-                      <col width="241">
+                      
                       <tr>
                         <th> {{ t.summary.indicator }} </th>
                         <th colspan="8"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/{{ idc_sort_order }}/ ">{{ indicator[hty_indicator] }}</a> </th>
@@ -54,7 +54,7 @@
                       </tr>
                       <tr>
                         <th> {{ t.summary.year }} </th>
-                        {% assign letters = "a,b,c,d,e,f" | split: ',' %}
+                        {% assign letters = "a,b,c,d,e,f,g,h" | split: ',' %}
                         {% for j in letters %}
                           {% assign year = "history_year_" | append: j | append: "_" | append: i %}
                           <td align="center"> {{ indicator[year] }} </td>
@@ -62,7 +62,7 @@
                       </tr>
                       <tr>
                         <th> {{ t.summary.status }} </th>
-                        {% assign letters = "a,b,c,d,e,f" | split: ',' %}
+                        {% assign letters = "a,b,c,d,e,f,g,h" | split: ',' %}
                         {% for j in letters %}
                           {% assign status = "history_status_year_" | append: j | append: "_" | append: i %}
                           <td align="center"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ ">{{ indicator[status] }}</a> </td>
