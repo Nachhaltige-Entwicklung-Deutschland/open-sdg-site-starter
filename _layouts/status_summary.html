@@ -45,7 +45,8 @@
                       </tr>
                       <tr>
                         <th> Year </th>
-                        {% for j in ("a","b","c","d") %}
+                        {% assign letters = ["a","b","c","d"] %}
+                        {% for j in letters %}
                           {% assign year = "history_year_" | append: j | append: "_" | append: i %}
                           <td> test </td>
                         {% endfor %}
