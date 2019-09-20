@@ -15,7 +15,7 @@
     <div class="goal">
         <div class="col-xs-4 col-md-3 col-lg-2">
           <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ goal_number }}/">
-            <img src="{{ site.goal_image_base }}/{{ current_language }}/{{ goal_number }}.png" alt="{{ goal_short }} - {{ t.general.goal }} {{ goal_number }}" width="200" height="200" />
+            <img src="{{ site.goal_image_base }}/{{ current_language }}/{{ goal_number }}.png" alt="{{ goal_short }} - {{ t.general.goal }} {{ goal_number }}" width="180" height="180" />
           </a>
         </div>
 
@@ -35,7 +35,7 @@
                   {% assign indicator_link = "{{ site.baseurl }}{{ baseurl_folder }}/" | append: indicator[indicator_sort_order] | append: "/" %}
                   {% if indicator[hty_active] == true %}
                     <table class="table table-hover">
-                      <col width="500">
+                      <col width="400">
                       <col width="241">
                       <col width="241">
                       <col width="241">
