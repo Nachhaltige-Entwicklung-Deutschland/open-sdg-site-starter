@@ -41,28 +41,34 @@
                       </tr>
                       <tr>
                         <th> Goal </th>
-                        <td colspan="4"> Lorem IPSUM </td>
+                        <td colspan="4"> Lorem Ipsum </td>
                       </tr>
                       <tr>
                         <th> Year </th>
                         {% for j in (1..4) %}
                           {% if j == 1 %}
-                            {% assign year = "history_year_" | append: "_a" | append: i %}
+                            <td> {{ indicator["history_year_a_1"] }} </td>
                           {% elsif j == 2 %}
-                            {% assign year = "history_year_" | append: "_b" | append: i %}
+                            <td> {{ indicator["history_year_b_1"] }} </td>
                           {% elsif j == 3 %}
-                            {% assign year = "history_year_" | append: "_c" | append: i %}
+                            <td> {{ indicator["history_year_c_1"] }} </td>
                           {% elsif j == 4 %}
-                            {% assign year = "history_year_" | append: "_d" | append: i %}
+                            <td> {{ indicator["history_year_d_1"] }} </td>
                           {% endif %}
-                          <td> {{ indicator["history_year_a_1"] }} </td>
                         {% endfor %}
                       </tr>
                       <tr>
                         <th> Status </th>
-                        {% for j in ("a","b","c","d") %}
-                          {% assign status = "history_status_year_" | append: j | append: "_" | append: i %}
-                          <td> test </td>
+                        {% for j in (1..4) %}
+                          {% if j == 1 %}
+                            <td> {{ indicator["history_status_year_a_1"] }} </td>
+                          {% elsif j == 2 %}
+                            <td> {{ indicator["history_status_year_b_1"] }} </td>
+                          {% elsif j == 3 %}
+                            <td> {{ indicator["history_status_year_c_1"] }} </td>
+                          {% elsif j == 4 %}
+                              <td> {{ indicator["history_status_year_d_1"] }} </td>
+                          {% endif %}
                         {% endfor %}
                       </tr>
                     </table>
