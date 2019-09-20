@@ -46,7 +46,7 @@
                       <tr>
                         <th> Year </th>
                         {% assign letters = ["a","b","c","d"] %}
-                        {% for j in letters %}
+                        {% for j in (1..4) %}
                           {% assign year = "history_year_" | append: j | append: "_" | append: i %}
                           <td> test </td>
                         {% endfor %}
@@ -55,7 +55,7 @@
                         <th> Status </th>
                         {% for j in ("a","b","c","d") %}
                           {% assign status = "history_status_year_" | append: j | append: "_" | append: i %}
-                          <td> {{ indicator[status] }} </td>
+                          <td> test </td>
                         {% endfor %}
                       </tr>
                     </table>
