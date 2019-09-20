@@ -32,7 +32,6 @@
                   {% assign hty_active = "history_active_" | append: i %}
                   {% assign hty_indicator = "history_indicator_" | append: i %}
                   {% assign idc_sort_order = indicator[indicator_sort_order] %}
-                  {% assign indicator_link = {{ site.baseurl }}{{ baseurl_folder }}/{{ idc_sort_order }}  %}
                   {% if indicator[hty_active] == true %}
                     <table class="table table-hover">
                       <col width="400">
@@ -45,8 +44,8 @@
                       <col width="241">
                       <col width="241">
                       <tr>
-                        <th> {{ t.summary.indicator }} </th>
-                        <th colspan="8"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/{{ idc_sort_order }} ">{{ indicator[hty_indicator] }}</a> </th>
+                        <th> {{ idc_sort_order }} </th>
+                        <th colspan="8"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/{{ idc_sort_order }}/ ">{{ indicator[hty_indicator] }}</a> </th>
                       </tr>
                       <tr>
                         <th> {{ t.summary.target }} </th>
