@@ -45,6 +45,7 @@
                       </tr>
                       <tr>
                         <th> Year </th>
+                        {% comment %}
                         {% for j in (1..4) %}
                           {% if j == 1 %}
                             {% assign year_a = "history_year_a_" | append: i %}
@@ -59,6 +60,10 @@
                             {% assign year_d = "history_year_d_" | append: i %}
                             <td> {{ indicator[year_d] }} </td>
                           {% endif %}
+                        {% endfor %}
+                        {% endcomment}
+                        {% for j in (1..4) %}
+                          <td> {{ j }} </td>
                         {% endfor %}
                       </tr>
                       <tr>
