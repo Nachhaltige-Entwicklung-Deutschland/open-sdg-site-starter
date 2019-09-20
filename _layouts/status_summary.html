@@ -45,10 +45,17 @@
                       </tr>
                       <tr>
                         <th> Year </th>
-                        {% assign letters = ["a","b","c","d"] %}
                         {% for j in (1..4) %}
-                          {% assign year = "history_year_" | append: j | append: "_" | append: i %}
-                          <td> test </td>
+                          {% if j == 1 %}
+                            {% assign year = "history_year_" | append: "_a" | append: i %}
+                          {% elsif j == 2 %}
+                            {% assign year = "history_year_" | append: "_b" | append: i %}
+                          {% elsif j == 3 %}
+                            {% assign year = "history_year_" | append: "_c" | append: i %}
+                          {% elsif j == 4 %}
+                            {% assign year = "history_year_" | append: "_d" | append: i %}
+                          {% endif %}
+                          <td> {{ indicator[year] }} </td>
                         {% endfor %}
                       </tr>
                       <tr>
