@@ -45,6 +45,7 @@
                       </tr>
                       <tr>
                         <th> Year </th>
+
                         {% comment %}
                         {% for j in (1..4) %}
                           {% if j == 1 %}
@@ -61,10 +62,12 @@
                             <td> {{ indicator[year_d] }} </td>
                           {% endif %}
                         {% endfor %}
-                        {% endcomment}
+                        {% endcomment %}
+
                         {% for j in (1..4) %}
                           <td> {{ j }} </td>
                         {% endfor %}
+
                       </tr>
                       <tr>
                         <th> Status </th>
