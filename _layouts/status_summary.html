@@ -40,7 +40,7 @@
                         <td colspan="4"> {{ indicator[hty_indicator] }} </td>
                       </tr>
                       <tr>
-                        <th> Goal! </th>
+                        <th> Goal? </th>
                         {% assign target = "history_target_" | append: i %}
                         <td colspan="4"> {{ indicator[target]}} </td>
                       </tr>
@@ -65,7 +65,7 @@
                         {% endfor %}
                         {% endcomment %}
 
-                        {% for j in ("a","b","c","d") %}
+                        {% for j in (["a","b","c","d"]) %}
                           <td> {{ j }} </td>
                         {% endfor %}
 
