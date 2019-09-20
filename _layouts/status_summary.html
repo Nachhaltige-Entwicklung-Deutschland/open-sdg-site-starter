@@ -53,7 +53,7 @@
                       </tr>
                       <tr>
                         <th> {{ t.summary.year }} </th>
-                        {% assign letters = "a,b,c,d" | split: ',' %}
+                        {% assign letters = "a,b,c,d,e,f" | split: ',' %}
                         {% for j in letters %}
                           {% assign year = "history_year_" | append: j | append: "_" | append: i %}
                           <td align="center"> {{ indicator[year] }} </td>
@@ -61,7 +61,7 @@
                       </tr>
                       <tr>
                         <th> {{ t.summary.status }} </th>
-                        {% assign letters = "a,b,c,d" | split: ',' %}
+                        {% assign letters = "a,b,c,d,e,f" | split: ',' %}
                         {% for j in letters %}
                           {% assign status = "history_status_year_" | append: j | append: "_" | append: i %}
                           <td align="center"> {{ indicator[status] }} </td>
