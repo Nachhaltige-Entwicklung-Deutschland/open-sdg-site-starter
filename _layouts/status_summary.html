@@ -31,16 +31,18 @@
                 {% for i in (1..2) %}
                   {% assign hty_active = "history_active_" | append: i %}
                   {% assign hty_indicator = "history_indicator_" | append: i %}
+                  {% assign idc_sort_order = }
+                  {% assign indicator_link = "{{ site.baseurl }}{{ baseurl_folder }}/" | append: indicator[indicator_sort_order] %}
                   {% if indicator[hty_active] == true %}
                     <table class="table table-hover">
                       <col width="20%">
-                      <col width="20%">
-                      <col width="20%">
-                      <col width="20%">
-                      <col width="20%">
+                      <col width="10%">
+                      <col width="10%">
+                      <col width="10%">
+                      <col width="10%">
                       <tr>
                         <th> {{ t.summary.indicator }} </th>
-                        <th colspan="4"> {{ indicator[hty_indicator] }} </th>
+                        <th colspan="4"> <a href=" {{ indicator_link }} ">{{ indicator[hty_indicator] }}</a> </th>
                       </tr>
                       <tr>
                         <th> {{ t.summary.target }} </th>
@@ -63,6 +65,7 @@
                           <td align="center"> {{ indicator[status] }} </td>
                         {% endfor %}
                       </tr>
+                      <tr></tr>
                     </table>
 
                   {% endif %}
