@@ -41,7 +41,7 @@
                       </tr>
                       <tr>
                         <th> Goal </th>
-                        <td colspan="4"> Lorem Ipsum </td>
+                        <td colspan="4"> Lorem IpsuM </td>
                       </tr>
                       <tr>
                         <th> Year </th>
@@ -71,7 +71,7 @@
                             {% assign status_b = "history_status_year_b_" | append: i %}
                             <td> {{ indicator[status_b] }} </td>
                           {% elsif j == 3 %}
-                            {% assign status_c = "history_status_year_c_" | append: i %}
+                            {% assign status_c = "history_status_year_" | append: "c_" | append: i %}
                             <td> {{ indicator[status_c] }} </td>
                           {% elsif j == 4 %}
                             {% assign status_d = "history_status_year_d_" | append: i %}
