@@ -65,7 +65,7 @@
                         {% assign letters = "a,b,c,d,e,f" | split: ',' %}
                         {% for j in letters %}
                           {% assign status = "history_status_year_" | append: j | append: "_" | append: i %}
-                          <td align="center"> {{ indicator[status] }} </td>
+                          <td align="center"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ ">{{ indicator[status] }}</a> </td>
                         {% endfor %}
                       </tr>
                       <tr> <td colspan="8"> &nbsp; </td> </tr>
