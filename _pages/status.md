@@ -1,5 +1,5 @@
 ---
-title: Übersicht zum Status der Indikatoren
+title: Wettersymbole
 permalink: /status/
 layout: page
 ---
