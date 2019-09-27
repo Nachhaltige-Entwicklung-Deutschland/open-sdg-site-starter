@@ -66,8 +66,8 @@
                             {% assign add = add | minus: 1 %}
                           {% endif %}
                         {% endfor %}
-                        {% for k in (0..{{ add }}) %}
-                          <td align="center"> {{ add }} </td>
+                        {% for k in (0..add) %}
+                          <td align="center"> k </td>
                         {% endfor %}
                       </tr>
                       <tr>
