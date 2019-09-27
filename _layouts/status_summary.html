@@ -56,7 +56,7 @@
                         <td colspan="9"> {{ indicator[target]}} </td>
                       </tr>
                       <tr>
-                        <th> {{ t.summary.year }} </th>
+                        <th> {{ t.summary.year }} x </th>
                         {% assign letters = "i,h,g,f,e,d,c,b,a" | split: ',' %}
                         {% assign add = letter.size %}
                         {% for j in letters %}
@@ -67,7 +67,7 @@
                           {% endif %}
                         {% endfor %}
                         {% for k in (0..{{ add }}) %}
-                          <td align="center"> x </td>
+                          <td align="center"> {{ add }} </td>
                         {% endfor %}
                       </tr>
                       <tr>
