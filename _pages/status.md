@@ -10,7 +10,7 @@ In den meisten Fällen soll ein Indikator einen konkreten absoluten oder relativ
 
 <img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/Sonne.png" alt="Sonne" /> &nbsp;  Bei Fortsetzung der Entwicklung beträgt die Abweichung vom Zielwert weniger als 5 % der Differenz zwischen Zielwert und aktuellem Wert;
 
-<img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/Leicht bewölt.png" alt="Bedeckt" /> &nbsp;  Bei Fortsetzung der Entwicklung würde das Ziel voraussichtlich um mindestens 5 %, aber maximal um 20 % der Differenz zwischen Zielwert und aktuellem Wert verfehlt;
+<img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/Leicht bewölkt.png" alt="Leicht bewölkt" /> &nbsp;  Bei Fortsetzung der Entwicklung würde das Ziel voraussichtlich um mindestens 5 %, aber maximal um 20 % der Differenz zwischen Zielwert und aktuellem Wert verfehlt;
 
 <img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/Wolke.png" alt="Wolke" /> &nbsp;  Der Indikator entwickelt sich zwar in die gewünschte Richtung auf das Ziel zu, bei Fortsetzung der Entwicklung würde das Ziel im Zieljahr aber um mehr als 20 % verfehlt;
 
