@@ -59,7 +59,7 @@
                         {% assign letters = "i,h,g,f,e,d,c,b,a" | split: ',' %}
                         {% for j in letters %}
                           {% assign year = "history_year_" | append: j | append: "_" | append: i %}
-                          {% if not indicator[year] != '' %}
+                          {% if indicator[year] != '' %}
                             <td align="center"> {{ indicator[year] }} </td>
                           {% endif %}
                         {% endfor %}
@@ -68,7 +68,7 @@
                         <th> {{ t.summary.status }} </th>
                         {% for j in letters %}
                           {% assign status = "history_status_year_" | append: j | append: "_" | append: i %}
-                          {% if not indicator[status] != '' %}
+                          {% if indicator[status] != '' %}
                             <td align="center"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ ">{{ indicator[status] }}</a> </td>
                           {% endif %}
                         {% endfor %}
