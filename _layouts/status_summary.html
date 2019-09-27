@@ -69,7 +69,7 @@
                         {% for j in letters %}
                           {% assign status = "history_status_year_" | append: j | append: "_" | append: i %}
                           {% if indicator[status] != '' %}
-                            <td align="center"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ indicator[status] }}.png" alt="{{ indicator[status] }}"/></a> </td>
+                            <td align="center"> <a href="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/status/"><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ indicator[status] }}.png" alt="{{ indicator[status] }}" /></a></td>
                           {% endif %}
                         {% endfor %}
                       </tr>
