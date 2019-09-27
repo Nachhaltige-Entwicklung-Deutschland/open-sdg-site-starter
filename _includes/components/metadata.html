@@ -49,13 +49,23 @@
           {% assign year_c = meta[indicator_metadata.name] | t | markdownify %}
         {% elsif indicator_metadata.name contains "_d_" %}
           {% assign year_d = meta[indicator_metadata.name] | t | markdownify %}
-          <tr>
-            <th scope="row">{{ metadata_label }} </th>
-            <td align="center">{{ year_d }}</td>
-            <td align="center">{{ year_c }}</td>
-            <td align="center">{{ year_b }}</td>
-            <td align="center">{{ year_a }}</td>
-          </tr>
+            {% if indicator_metadata.name contains "_status" %}
+              <tr>
+                <th scope="row">{{ metadata_label }} </th>
+                  <td align="center"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ ">{{ year_d }}</a></td>
+                  <td align="center"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ ">{{ year_c }}</a></td>
+                  <td align="center"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ ">{{ year_b }}</a></td>
+                  <td align="center"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ ">{{ year_a }}</a></td>
+              </tr>
+            {% else %}
+              <tr>
+                <th scope="row">{{ metadata_label }} </th>
+                  <td align="center">{{ year_d }}</td>
+                  <td align="center">{{ year_c }}</td>
+                  <td align="center">{{ year_b }}</td>
+                  <td align="center">{{ year_a }}</td>
+              </tr>
+            {% endif %}
         {% endif %}
 
 
