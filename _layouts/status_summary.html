@@ -42,30 +42,35 @@
                       <col width="241">
                       <col width="241">
                       <col width="241">
+                      <col width="241">
+                      <col width="241">
 
                       <tr>
                         <th> {{ t.summary.indicator }} </th>
-                        <th colspan="8"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/{{ idc_sort_order }}/ ">{{ indicator[hty_indicator] }}</a> </th>
+                        <th colspan="9"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/{{ idc_sort_order }}/ ">{{ indicator[hty_indicator] }}</a> </th>
                       </tr>
                       <tr>
                         <th> {{ t.summary.target }} </th>
                         {% assign target = "history_target_" | append: i %}
-                        <td colspan="8"> {{ indicator[target]}} </td>
+                        <td colspan="9"> {{ indicator[target]}} </td>
                       </tr>
                       <tr>
                         <th> {{ t.summary.year }} </th>
-                        {% assign letters = "a,b,c,d,e,f,g,h" | split: ',' %}
+                        {% assign letters = "i,h,g,f,e,d,c,b,a" | split: ',' %}
                         {% for j in letters %}
                           {% assign year = "history_year_" | append: j | append: "_" | append: i %}
-                          <td align="center"> {{ indicator[year] }} </td>
+                          {% if not indicator[year] != '' %}
+                            <td align="center"> {{ indicator[year] }} </td>
+                          {% endif %}
                         {% endfor %}
                       </tr>
                       <tr>
                         <th> {{ t.summary.status }} </th>
-                        {% assign letters = "a,b,c,d,e,f,g,h" | split: ',' %}
                         {% for j in letters %}
                           {% assign status = "history_status_year_" | append: j | append: "_" | append: i %}
-                          <td align="center"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ ">{{ indicator[status] }}</a> </td>
+                          {% if not indicator[status] != '' %}
+                            <td align="center"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ ">{{ indicator[status] }}</a> </td>
+                          {% endif %}
                         {% endfor %}
                       </tr>
                       <tr> <td colspan="8"> &nbsp; </td> </tr>
