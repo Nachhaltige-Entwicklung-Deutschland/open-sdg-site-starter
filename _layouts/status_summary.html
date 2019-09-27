@@ -56,7 +56,7 @@
                         <td colspan="9"> {{ indicator[target]}} </td>
                       </tr>
                       <tr>
-                        <th> {{ t.summary.year }} x </th>
+                        <th> {{ t.summary.year }} </th>
                         {% assign letters = "i,h,g,f,e,d,c,b,a" | split: ',' %}
                         {% assign add = letter.size %}
                         {% for j in letters %}
@@ -71,7 +71,7 @@
                         {% endfor %}
                       </tr>
                       <tr>
-                        <th> {{ t.summary.status }} </th>
+                        <th> {{ t.summary.status }} {{ add }} </th>
                         {% for j in letters %}
                           {% assign status = "history_status_year_" | append: j | append: "_" | append: i %}
                           {% if indicator[status] %}
