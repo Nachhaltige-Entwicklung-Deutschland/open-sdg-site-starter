@@ -1702,7 +1702,7 @@ var indicatorView = function (model, options) {
           scaleBreaks:{
             customBreaks: [{
               startValue: 0,
-              endvalue: 2,
+              endValue: 2,
               color: "orange"
             }]
           }
