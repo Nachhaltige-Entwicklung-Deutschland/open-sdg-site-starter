@@ -1698,16 +1698,6 @@ var indicatorView = function (model, options) {
           }]
         },
 
-        axisY: {
-          scaleBreaks: {
-            customBreaks: [{
-              startValue: 0,
-              endValue: 2,
-              color: "orange"
-            }]
-          }
-        },
-
         legendCallback: function(chart) {
             var text = ['<ul id="legend">'];
 
@@ -1731,11 +1721,22 @@ var indicatorView = function (model, options) {
         plugins: {
           scaler: {}
         }
+      },
+
+    axisY: {
+      scaleBreaks: {
+        customBreaks: [{
+          startValue: 0,
+          endValue: 2,
+          color: "orange"
+        }]
       }
+    }
+
     };
     chartConfig = opensdg.chartConfigAlter(chartConfig);
 
-    this._chartInstance = new CanvasJS.Chart($(this._rootElement).find('canvas'), chartConfig);
+    this._chartInstance = new Chart($(this._rootElement).find('canvas'), chartConfig);
 
     Chart.pluginService.register({
       afterDraw: function(chart) {
