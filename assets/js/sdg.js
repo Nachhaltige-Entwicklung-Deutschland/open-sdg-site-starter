@@ -1735,7 +1735,7 @@ var indicatorView = function (model, options) {
     };
     chartConfig = opensdg.chartConfigAlter(chartConfig);
 
-    this._chartInstance = new Chart($(this._rootElement).find('canvas'), chartConfig);
+    this._chartInstance = new CanvasJS.Chart($(this._rootElement).find('canvas'), chartConfig);
 
     Chart.pluginService.register({
       afterDraw: function(chart) {
