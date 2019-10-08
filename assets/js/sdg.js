@@ -1665,7 +1665,6 @@ var indicatorView = function (model, options) {
   };
 
 
-
   this.createPlot = function (chartInfo) {
 
     var that = this;
@@ -1676,7 +1675,7 @@ var indicatorView = function (model, options) {
       options: {
         responsive: true,
         maintainAspectRatio: false,
-        pointStyle: 'cross'
+        pointStyle: 'cross',
         spanGaps: true,
         scrollX: true,
         scrollCollapse: true,
