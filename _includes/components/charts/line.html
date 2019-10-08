@@ -25,3 +25,17 @@ being used, see `createPlot()` in `indicatorView.js`.
     }
   </script>
 {% endif %}
+
+<script>
+  opensdg.chartConfigAlter = function(config) {
+    var overrides = {
+      data: {
+        pointStyle: 'star'
+      }
+    }
+        // Add these overrides onto the normal config, and return it.
+    $.extend(true, config, overrides);
+    return config;
+  }
+</script>
+{% endif %}
