@@ -25,25 +25,3 @@ being used, see `createPlot()` in `indicatorView.js`.
     }
   </script>
 {% endif %}
-
-
-{% if meta.graph_break_start and meta.graph_break_stop %}
-  <script>
-    opensdg.chartConfigAlter = function(config) {
-      var overrides = {
-        axisY: {
-          scaleBreaks: {
-            customBreaks: [{
-              startValue: 0,
-              endValue: 10,
-              color: "orange"
-            }]
-          }
-        }
-      }
-      // Add these overrides onto the normal config, and return it.
-      $.extend(true, config, overrides);
-      return config;
-    }
-  </script>
-{% endif %}
