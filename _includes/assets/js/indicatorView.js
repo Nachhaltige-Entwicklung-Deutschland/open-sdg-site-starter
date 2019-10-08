@@ -360,7 +360,7 @@ var indicatorView = function (model, options) {
       options: {
         responsive: true,
         maintainAspectRatio: false,
-        pointStyle: 'cross'
+        pointStyle: 'cross',
         spanGaps: true,
         scrollX: true,
         scrollCollapse: true,
