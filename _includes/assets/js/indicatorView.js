@@ -365,7 +365,7 @@ var indicatorView = function (model, options) {
             color: "orange"
           }]
         }
-      }
+      },
       options: {
         responsive: true,
         maintainAspectRatio: false,
