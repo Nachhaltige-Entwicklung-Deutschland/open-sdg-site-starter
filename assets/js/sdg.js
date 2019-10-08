@@ -1701,12 +1701,12 @@ var indicatorView = function (model, options) {
             scaleBreaks:{
               customBreaks: [{
                 startValue: 0,
-                endvalue: 10,
+                endvalue: 2,
                 color: "orange"
               }]
             }
           }
-          
+
         },
         legendCallback: function(chart) {
             var text = ['<ul id="legend">'];
