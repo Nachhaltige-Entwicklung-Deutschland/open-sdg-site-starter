@@ -1,0 +1,49 @@
+{% comment %}
+Because the "line" visualization is basic, nothing special needs to be done here,
+apart from providing the canvas tag. For details on the Chart.js configuration
+being used, see `createPlot()` in `indicatorView.js`.
+{% endcomment %}
+<canvas></canvas>
+{% if meta.graph_min_value and meta.graph_max_value %}
+  <script>
+    opensdg.chartConfigAlter = function(config) {
+      var overrides = {
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                min: {{ meta.graph_min_value }},
+                max: {{ meta.graph_max_value }}
+              }
+            }]
+          }
+        }
+      }
+      // Add these overrides onto the normal config, and return it.
+      $.extend(true, config, overrides);
+      return config;
+    }
+  </script>
+{% endif %}
+
+
+{% if meta.graph_break_start and meta.graph_break_stop %}
+  <script>
+    opensdg.chartConfigAlter = function(config) {
+      var overrides = {
+        axisY: {
+          scaleBreaks: {
+            customBreaks: [{
+              startValue: 0,
+              endValue: 10,
+              color: "orange"
+            }]
+          }
+        }
+      }
+      // Add these overrides onto the normal config, and return it.
+      $.extend(true, config, overrides);
+      return config;
+    }
+  </script>
+{% endif %}
