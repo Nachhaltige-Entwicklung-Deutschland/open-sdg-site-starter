@@ -1673,18 +1673,10 @@ var indicatorView = function (model, options) {
     var chartConfig = {
       type: this._model.graphType,
       data: chartInfo,
-      axisY: {
-        scaleBreaks: {
-          customBreaks: [{
-            startValue: 0,
-            endValue: 2,
-            color: "orange"
-          }]
-        }
-      },
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        pointStyle: 'cross'
         spanGaps: true,
         scrollX: true,
         scrollCollapse: true,
