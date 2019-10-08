@@ -379,19 +379,18 @@ var indicatorView = function (model, options) {
               display: this._model.selectedUnit ? translations.t(this._model.selectedUnit) : this._model.measurementUnit,
               labelString: this._model.selectedUnit ? translations.t(this._model.selectedUnit) : this._model.measurementUnit
             }
-          }],
+          }]
         },
 
         axisY: {
-          scaleBreaks:{
+          scaleBreaks: {
             customBreaks: [{
               startValue: 0,
               endValue: 2,
               color: "orange"
             }]
           }
-        },
-
+        }
 
         legendCallback: function(chart) {
             var text = ['<ul id="legend">'];
