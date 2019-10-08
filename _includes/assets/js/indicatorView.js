@@ -390,7 +390,7 @@ var indicatorView = function (model, options) {
               color: "orange"
             }]
           }
-        }
+        },
 
         legendCallback: function(chart) {
             var text = ['<ul id="legend">'];
