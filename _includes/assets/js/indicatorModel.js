@@ -472,7 +472,7 @@ var indicatorModel = function (options) {
             borderColor: '#' + getColor(datasetIndex),
             backgroundColor: '#' + getColor(datasetIndex),
             pointStyle: function(combinationDescription){
-              if (combinationDescription.indexOf('Zeitreihe') != -1){
+              if (combinationDescription.indexOf('imeseries') != -1){
                 return 'cross';
               } else if (combinationDescription.indexOf('Ziel') != -1){
                 return 'triangle';
