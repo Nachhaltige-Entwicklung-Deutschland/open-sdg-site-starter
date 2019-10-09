@@ -176,7 +176,7 @@ var indicatorModel = function (options) {
       pointHoverBorderWidth: 1,
       tension: 0,
       spanGaps: false,
-      pointRotation: 180
+      rotation: 180
     };
 
     that.footerFields = {};
@@ -455,7 +455,7 @@ var indicatorModel = function (options) {
           return 'cross';
         }
         else {
-          return 'triangle';
+          return 'circle';
         }
       },
 
@@ -479,7 +479,7 @@ var indicatorModel = function (options) {
             borderColor: '#' + getColor(datasetIndex),
             backgroundColor: '#' + getColor(datasetIndex),
             pointStyle: getPointStyle(combinationDescription),
-            pointRotation: 180,
+            rotation: 180,
             pointBorderColor: '#' + getColor(datasetIndex),
             borderDash: getBorderDash(datasetIndex),
             data: _.map(that.years, function (year) {
