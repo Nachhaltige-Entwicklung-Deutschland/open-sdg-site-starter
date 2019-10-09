@@ -468,7 +468,7 @@ var indicatorModel = function (options) {
         //   }) : undefined,
         var fieldIndex,
           ds = _.extend({
-            label: that.data[datasetIndex]['Display'] ? that.data[datasetIndex]['Display'] : that.country, //combinationDescription ? combinationDescription : that.country,
+            label: String(datasetIndex), //combinationDescription ? combinationDescription : that.country,
             borderColor: '#' + getColor(datasetIndex),
             backgroundColor: '#' + getColor(datasetIndex),
             pointStyle: function(combinationDescription){
