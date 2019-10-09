@@ -472,12 +472,12 @@ var indicatorModel = function (options) {
             borderColor: '#' + getColor(datasetIndex),
             backgroundColor: '#' + getColor(datasetIndex),
             pointStyle: function(combinationDescription){
-              if (combinationDescription.indexOf('imeseries') != -1){
-                return 'cross';
-              } else if (combinationDescription.indexOf('Ziel') != -1){
+              if (combinationDescription.indexOf('ie') != -1){
+                return 'circle';
+              } else if (combinationDescription.indexOf('ar') != -1){
                 return 'triangle';
               } else {
-                return 'circle';
+                return 'cross';
               }
             },//getPointStyle(),
             pointBorderColor: '#' + getColor(datasetIndex),
