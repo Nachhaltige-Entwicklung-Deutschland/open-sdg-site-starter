@@ -472,7 +472,7 @@ var indicatorModel = function (options) {
             borderColor: '#' + getColor(datasetIndex),
             backgroundColor: '#' + getColor(datasetIndex),
             pointStyle: function(combinationDescription){
-              if (combinationDescription.indexOf('ie') != -1){
+              if (combinationDescription.indexOf('y') != -1){
                 return 'circle';
               } else if (combinationDescription.indexOf('ar') != -1){
                 return 'triangle';
