@@ -441,14 +441,15 @@ var indicatorModel = function (options) {
       },
 
       getPointStyle = function(){
-        // offset if there is no headline data:
-        if(that.displays.length > 0) {
-          return 'triangle';
-        }
-
-        else {
-          return 'circle';
-        }
+        if(combinationDescription.indexOf('Zeitreihe') === -1 {
+          if(combinationDescription.indexOf('Ziel') === -1 {
+            return 'circle';
+          } else {
+            return 'triangle';
+          }
+        } else {
+          return 'cross'
+        }        
       },
 
 
