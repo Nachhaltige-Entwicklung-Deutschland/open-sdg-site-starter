@@ -729,7 +729,7 @@ var indicatorDataStore = function(dataUrl) {
       that.hasDisplays = true;
       //that.displays = extractUnique('Display');
       that.displays = _.filter(that.data, function(dataItem) {
-        return dataItem.Display;
+        return dataItem.GeoCode;
       });
     }
     //--------------------------------------------------
