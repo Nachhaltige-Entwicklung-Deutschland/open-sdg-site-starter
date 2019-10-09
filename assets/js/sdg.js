@@ -1122,7 +1122,7 @@ var indicatorDataStore = function(dataUrl) {
         var image = document.getElementById('C:/Users/admin/Desktop/down');
         var fieldIndex,
           ds = _.extend({
-            label: combinationDescription ? combinationDescription : that.country,
+            label: combinationDescription ? combination[key] : that.country,
             borderColor: '#' + getColor(datasetIndex),
             backgroundColor: '#' + getColor(datasetIndex),
             pointStyle: getPointStyle(combinationDescription),
