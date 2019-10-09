@@ -54,6 +54,9 @@ var indicatorModel = function (options) {
   this.geoData = [];
   this.geoCodeRegEx = options.geoCodeRegEx;
   this.showMap = options.showMap;
+  //------------------------
+  this.displays = [];
+  //---------------------
 
   // initialise the field information, unique fields and unique values for each field:
   (function initialise() {
@@ -65,7 +68,6 @@ var indicatorModel = function (options) {
     };
 
     that.years = extractUnique('Year');
-    that.display = extractUnique('Display');
 
     if(that.data[0].hasOwnProperty('GeoCode')) {
       that.hasGeoData = true;
@@ -75,6 +77,11 @@ var indicatorModel = function (options) {
         return dataItem.GeoCode;
       });
     }
+    //--------------------------------------------------
+    if (that.data[0].hasOwnProperty('Display')) {
+      that.displays = extractUnique('Display');
+    }
+    //--------------------------------------------------
 
     if(that.data[0].hasOwnProperty('Units')) {
       that.units = extractUnique('Units');
