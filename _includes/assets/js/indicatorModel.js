@@ -439,7 +439,7 @@ var indicatorModel = function (options) {
 
         return datasetIndex === 0 ? headlineColor : colors[datasetIndex];
       },
-
+      /*
       getPointStyle = function(){
         if(combinationDescription.indexOf('timeseries') != -1) {
           return 'cross';
@@ -450,7 +450,7 @@ var indicatorModel = function (options) {
           return 'circle';
         }
       },
-
+      */
 
       getBorderDash = function(datasetIndex) {
         // offset if there is no headline data:
@@ -471,7 +471,15 @@ var indicatorModel = function (options) {
             label: combinationDescription ? combinationDescription : that.country,
             borderColor: '#' + getColor(datasetIndex),
             backgroundColor: '#' + getColor(datasetIndex),
-            pointStyle: getPointStyle(),
+            pointStyle: function(combinationDescription){
+              if (combinationDescription.indexOf('Zeitreihe') != -1){
+                return 'cross';
+              } else if (combinationDescription.indexOf('Ziel') != -1){
+                return 'triangle';
+              } else {
+                return 'circle';
+              }
+            },//getPointStyle(),
             pointBorderColor: '#' + getColor(datasetIndex),
             borderDash: getBorderDash(datasetIndex),
             data: _.map(that.years, function (year) {
