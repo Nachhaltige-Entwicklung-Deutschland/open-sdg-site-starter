@@ -356,7 +356,6 @@ var indicatorView = function (model, options) {
     var chartConfig = {
       type: this._model.graphType,
       data: chartInfo,
-      pointStyle: 'cross',
       options: {
         responsive: true,
         maintainAspectRatio: false,
