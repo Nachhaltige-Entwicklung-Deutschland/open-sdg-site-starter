@@ -432,6 +432,7 @@ var indicatorModel = function (options) {
 
         return datasetIndex === 0 ? headlineColor : colors[datasetIndex];
       },
+
       getPointStyle = function(datasetIndex){
         // offset if there is no headline data:
         if(!that.hasHeadline) {
@@ -441,7 +442,7 @@ var indicatorModel = function (options) {
         if(datasetIndex === 0) {
           return headlinePointstyle;
         } else {
-          if(datasetIndex > colors.length) {
+          if(datasetIndex > pointStyles.length) {
             return pointStyles[datasetIndex - 1 - pointStyles.length];
           } else {
             return pointStyles[datasetIndex - 1];
@@ -466,8 +467,6 @@ var indicatorModel = function (options) {
         //     return f === field;
         //   }) : undefined,
         var fieldIndex,
-        var ps = undefined,
-
           ds = _.extend({
             label: combinationDescription ? combinationDescription : that.country,
             borderColor: '#' + getColor(datasetIndex),
