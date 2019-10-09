@@ -440,22 +440,15 @@ var indicatorModel = function (options) {
         return datasetIndex === 0 ? headlineColor : colors[datasetIndex];
       },
 
-      getPointStyle = function(datasetIndex){
+      getPointStyle = function(){
         // offset if there is no headline data:
-        if(!that.hasHeadline) {
-          datasetIndex += 1;
+        if('b) target' in that.displays) {
+          return 'triangle';
         }
 
-        if(datasetIndex === 0) {
-          return headlinePointstyle;
-        } else {
-          if(datasetIndex > pointStyles.length) {
-            return pointStyles[datasetIndex - 1 - pointStyles.length];
-          } else {
-            return pointStyles[datasetIndex - 1];
-          }
+        else {
+          return 'circle';
         }
-        return datasetIndex === 0 ? headlinePointstyle : pointStyles[datasetIndex];
       },
 
 
