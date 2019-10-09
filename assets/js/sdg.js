@@ -701,6 +701,7 @@ var indicatorDataStore = function(dataUrl) {
   this.geoCodeRegEx = options.geoCodeRegEx;
   this.showMap = options.showMap;
   //------------------------
+  this.hasDisplays = false;
   this.displays = [];
   //---------------------
 
@@ -725,7 +726,11 @@ var indicatorDataStore = function(dataUrl) {
     }
     //--------------------------------------------------
     if (that.data[0].hasOwnProperty('Display')) {
-      that.displays = extractUnique('Display');
+      that.hasDisplays = true;
+      //that.displays = extractUnique('Display');
+      that.displays = _.filter(that.data, function(dataItem) {
+        return dataItem.displays;
+      });
     }
     //--------------------------------------------------
 
@@ -1114,7 +1119,7 @@ var indicatorDataStore = function(dataUrl) {
         //   }) : undefined,
         var fieldIndex,
           ds = _.extend({
-            label: that.data[datasetIndex]['Display'] ? that.data[datasetIndex]['Display'] : that.country, //combinationDescription ? combinationDescription : that.country,
+            label: that.displays ? that.displays : that.country, //combinationDescription ? combinationDescription : that.country,
             borderColor: '#' + getColor(datasetIndex),
             backgroundColor: '#' + getColor(datasetIndex),
             pointStyle: function(combinationDescription){
