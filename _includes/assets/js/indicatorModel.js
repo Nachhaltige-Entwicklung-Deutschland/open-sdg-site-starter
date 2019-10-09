@@ -243,8 +243,8 @@ var indicatorModel = function (options) {
   }
   //SDG goal colors
   //['e5243b', 'e5b735', '4c9f38', 'c5192d', 'ff3a21', '26bde2', 'fcc30b', 'a21942', 'fd6925', 'dd1367'];
-  var headlinePointstyle: 'circle'
-  var pointStyles = ['circle', 'cross', 'crossRot', 'dash', 'line', 'rect', 'rectRounded', 'rectRot', 'star', 'triangle']
+  var headlinePointstyle: 'circle';
+  var pointStyles = ['circle', 'cross', 'crossRot', 'dash', 'line', 'rect', 'rectRounded', 'rectRot', 'star', 'triangle'];
 
   // allow headline + (2 x others)
   var maxDatasetCount = 2 * colors.length;
