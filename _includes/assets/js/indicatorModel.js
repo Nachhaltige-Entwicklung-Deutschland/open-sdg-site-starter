@@ -473,7 +473,7 @@ var indicatorModel = function (options) {
         // var fieldIndex = field ? _.findIndex(that.selectedFields, function (f) {
         //     return f === field;
         //   }) : undefined,
-        var image = document.getElementById('C:\Users\admin\Desktop\down');
+        var image = document.getElementById('C:/Users/admin/Desktop/down');
         var fieldIndex,
           ds = _.extend({
             label: combinationDescription ? combinationDescription : that.country,
