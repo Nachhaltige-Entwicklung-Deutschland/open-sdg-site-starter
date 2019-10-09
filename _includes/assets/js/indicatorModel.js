@@ -441,10 +441,10 @@ var indicatorModel = function (options) {
       },
 
       getPointStyle = function(){
-        if(combinationDescription.indexOf('Zeitreihe') != -1) {
+        if(combinationDescription.indexOf('timeseries') != -1) {
           return 'cross';
         }
-        else if(combinationDescription.indexOf('Ziel') != -1) {
+        else if(combinationDescription.indexOf('target') != -1) {
           return 'triangle';
         } else {
           return 'circle';
