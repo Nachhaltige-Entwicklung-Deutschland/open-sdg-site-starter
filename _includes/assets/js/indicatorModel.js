@@ -408,18 +408,11 @@ var indicatorModel = function (options) {
       datasetIndex = 0,
       getCombinationDescription = function(combination) {
         return _.map(Object.keys(combination), function(key) {
-          //return translations.t(combination[key]);
-          return key + ' ' + combination[key];
+          return translations.t(combination[key]);
+          //return key + ' ' + combination[key];
         }).join(', ');
       },
 
-      //---------------------------------------
-      getDisplay = function (combination) {
-        return _.map(Object.keys(combination), function(key) {
-          return combination[key];
-        }).join(', ');
-      },
-      //----------------------------------------
 
       getColor = function(datasetIndex) {
 
@@ -585,11 +578,7 @@ var indicatorModel = function (options) {
         // but some combinations may not have any data:
         filteredDatasets.push({
           data: filtered,
-          combinationDescription: getCombinationDescription(combination),
-          //-----------------
-          display: getDisplay(combination)
-          //-----------------
-
+          combinationDescription: getCombinationDescription(combination)
         });
       }
     });
