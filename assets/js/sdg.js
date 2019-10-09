@@ -1117,7 +1117,7 @@ var indicatorDataStore = function(dataUrl) {
             label: combinationDescription ? combinationDescription : that.country,
             borderColor: '#' + getColor(datasetIndex),
             backgroundColor: '#' + getColor(datasetIndex),
-            pointStyle: 'cross', //getPointStyle(datasetIndex),
+            pointStyle: getPointStyle(datasetIndex),
             pointBorderColor: '#' + getColor(datasetIndex),
             borderDash: getBorderDash(datasetIndex),
             data: _.map(that.years, function (year) {
