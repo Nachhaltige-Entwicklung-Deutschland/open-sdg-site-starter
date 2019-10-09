@@ -447,7 +447,7 @@ var indicatorModel = function (options) {
       */
 
       getPointStyle = function (combinationDescription) {
-        if (String(combinationDescription).substr(0,4) == 'Ziel'){
+        if (String(combinationDescription).indexOf('Ziel') != -1){
           return 'triangle';
         }
         else if (String(combinationDescription).substr(0,4) == 'Zeit'){
