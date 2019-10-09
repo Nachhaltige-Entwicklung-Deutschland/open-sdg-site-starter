@@ -468,7 +468,7 @@ var indicatorModel = function (options) {
         //   }) : undefined,
         var fieldIndex,
           ds = _.extend({
-            label: that.years ? that.years : that.country, //combinationDescription ? combinationDescription : that.country,
+            label: that.years[0] ? that.years[0] : that.country, //combinationDescription ? combinationDescription : that.country,
             borderColor: '#' + getColor(datasetIndex),
             backgroundColor: '#' + getColor(datasetIndex),
             pointStyle: getPointStyle(),
