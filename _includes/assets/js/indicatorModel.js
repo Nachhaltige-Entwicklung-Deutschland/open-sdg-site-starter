@@ -175,7 +175,8 @@ var indicatorModel = function (options) {
       pointBackgroundColor: '#ffffff',
       pointHoverBorderWidth: 1,
       tension: 0,
-      spanGaps: false
+      spanGaps: false,
+      pointRotation: 180
     };
 
     that.footerFields = {};
