@@ -420,6 +420,15 @@ var indicatorModel = function (options) {
           return key + ' ' + combination[key];
         }).join(', ');
       },
+
+      //---------------------------------------
+      getDisplay = function (combination) {
+        return _.map(Object.keys(combination), function(key) {
+          return combination[key];
+        }).join(', ');
+      },
+      //----------------------------------------
+
       getColor = function(datasetIndex) {
 
         // offset if there is no headline data:
@@ -480,7 +489,7 @@ var indicatorModel = function (options) {
         //   }) : undefined,
         var fieldIndex,
           ds = _.extend({
-            label: combinationDescription ? combinationDescription : that.country,
+            label: display ? display : that.country,
             borderColor: '#' + getColor(datasetIndex),
             backgroundColor: '#' + getColor(datasetIndex),
             pointStyle: getPointStyle(combinationDescription),
@@ -584,7 +593,11 @@ var indicatorModel = function (options) {
         // but some combinations may not have any data:
         filteredDatasets.push({
           data: filtered,
-          combinationDescription: getCombinationDescription(combination)
+          combinationDescription: getCombinationDescription(combination),
+          //-----------------
+          display: getDisplay(combination)
+          //-----------------
+
         });
       }
     });
