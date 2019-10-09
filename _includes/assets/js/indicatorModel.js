@@ -447,14 +447,14 @@ var indicatorModel = function (options) {
       */
 
       getPointStyle = function (combinationDescription) {
-        if ((String(combinationDescription).indexOf('Ziel (Minimum)') != -1){// || (String(combinationDescription).indexOf('Target (Minimum)') != -1)){
+        if (String(combinationDescription).substr(0,4) == 'Ziel'){
           return 'triangle';
         }
-        else if ((String(combinationDescription).indexOf('Ziel (Maximum)') != -1){// || (String(combinationDescription).indexOf('Target (Maximum)') != -1)){
+        else if (String(combinationDescription).substr(0,4) == 'Zeit'){
           return 'cross';
         }
         else {
-          return 'circle';
+          return 'dash';
         }
       },
 
