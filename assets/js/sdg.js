@@ -1102,7 +1102,7 @@ var indicatorDataStore = function(dataUrl) {
         if (combinationDescription.substr(0,4) == 'Ziele'){
           return 'triangle';
         }
-        else if (combinationDescription.substr(0,4) == 'Zeitr')){
+        else if (combinationDescription.substr(0,4) == 'Zeitr'){
           return 'cross';
         }
         else {
