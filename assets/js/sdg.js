@@ -822,7 +822,7 @@ var indicatorDataStore = function(dataUrl) {
       pointHoverBorderWidth: 1,
       tension: 0,
       spanGaps: false,
-      pointRotation: 180
+      rotation: 180
     };
 
     that.footerFields = {};
@@ -1101,7 +1101,7 @@ var indicatorDataStore = function(dataUrl) {
           return 'cross';
         }
         else {
-          return 'triangle';
+          return 'circle';
         }
       },
 
@@ -1125,7 +1125,7 @@ var indicatorDataStore = function(dataUrl) {
             borderColor: '#' + getColor(datasetIndex),
             backgroundColor: '#' + getColor(datasetIndex),
             pointStyle: getPointStyle(combinationDescription),
-            pointRotation: 180,
+            rotation: 180,
             pointBorderColor: '#' + getColor(datasetIndex),
             borderDash: getBorderDash(datasetIndex),
             data: _.map(that.years, function (year) {
