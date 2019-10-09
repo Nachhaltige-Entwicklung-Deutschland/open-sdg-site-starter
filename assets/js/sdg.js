@@ -701,7 +701,6 @@ var indicatorDataStore = function(dataUrl) {
   this.geoCodeRegEx = options.geoCodeRegEx;
   this.showMap = options.showMap;
   //------------------------
-  this.hasDisplays = false;
   this.displays = [];
   //---------------------
 
@@ -726,11 +725,7 @@ var indicatorDataStore = function(dataUrl) {
     }
     //--------------------------------------------------
     if (that.data[0].hasOwnProperty('Display')) {
-      that.hasDisplays = true;
-      //that.displays = extractUnique('Display');
-      that.displays = _.filter(that.data, function(dataItem) {
-        return dataItem.GeoCode;
-      });
+      that.displays = extractUnique('Display');
     }
     //--------------------------------------------------
 
@@ -1090,18 +1085,18 @@ var indicatorDataStore = function(dataUrl) {
 
         return datasetIndex === 0 ? headlineColor : colors[datasetIndex];
       },
-      /*
+
       getPointStyle = function(){
-        if(combinationDescription.indexOf('timeseries') != -1) {
-          return 'cross';
-        }
-        else if(combinationDescription.indexOf('target') != -1) {
+        // offset if there is no headline data:
+        if(that.displays.length > 0) {
           return 'triangle';
-        } else {
+        }
+
+        else {
           return 'circle';
         }
       },
-      */
+
 
       getBorderDash = function(datasetIndex) {
         // offset if there is no headline data:
@@ -1119,18 +1114,10 @@ var indicatorDataStore = function(dataUrl) {
         //   }) : undefined,
         var fieldIndex,
           ds = _.extend({
-            label: that.displays[0] ? that.displays[0] : that.country, //combinationDescription ? combinationDescription : that.country,
+            label: combinationDescription ? combinationDescription : that.country,
             borderColor: '#' + getColor(datasetIndex),
             backgroundColor: '#' + getColor(datasetIndex),
-            pointStyle: function(combinationDescription){
-              if (combinationDescription.indexOf('y') != -1){
-                return 'circle';
-              } else if (combinationDescription.indexOf('ar') != -1){
-                return 'triangle';
-              } else {
-                return 'cross';
-              }
-            },//getPointStyle(),
+            pointStyle: getPointStyle(),
             pointBorderColor: '#' + getColor(datasetIndex),
             borderDash: getBorderDash(datasetIndex),
             data: _.map(that.years, function (year) {
