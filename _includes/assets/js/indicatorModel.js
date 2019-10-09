@@ -453,10 +453,10 @@ var indicatorModel = function (options) {
       */
 
       getPointStyle = function (combinationDescription) {
-        if (combinationDescription.substr(0,4) == 'Ziele'){
+        if (String(combinationDescription).substr(0,4) == 'Ziele'){
           return 'triangle';
         }
-        else if (combinationDescription.substr(0,4) == 'Zeitr'){
+        else if (String(combinationDescription).substr(0,4) == 'Zeitr'){
           return 'cross';
         }
         else {
