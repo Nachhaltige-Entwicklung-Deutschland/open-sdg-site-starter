@@ -1087,14 +1087,13 @@ var indicatorDataStore = function(dataUrl) {
       },
 
       getPointStyle = function(){
-        if(combinationDescription.indexOf('Zeitreihe') === -1) {
-          if(combinationDescription.indexOf('Ziel') === -1) {
-            return 'circle';
-          } else {
-            return 'triangle';
-          }
-        } else {
+        if(combinationDescription.indexOf('Zeitreihe') != -1) {
           return 'cross';
+        }
+        else if(combinationDescription.indexOf('Ziel') != -1) {
+          return 'triangle';
+        } else {
+          return 'circle';
         }
       },
 
