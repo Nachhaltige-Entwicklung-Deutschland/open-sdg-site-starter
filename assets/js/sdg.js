@@ -1120,7 +1120,7 @@ var indicatorDataStore = function(dataUrl) {
         //   }) : undefined,
         var fieldIndex,
           ds = _.extend({
-            label: combinationDescription ? display : that.country,
+            label: combinationDescription ? combinationDescription : that.country,
             borderColor: '#' + getColor(datasetIndex),
             backgroundColor: '#' + getColor(datasetIndex),
             pointStyle: getPointStyle(combinationDescription),
