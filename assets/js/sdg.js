@@ -700,9 +700,6 @@ var indicatorDataStore = function(dataUrl) {
   this.geoData = [];
   this.geoCodeRegEx = options.geoCodeRegEx;
   this.showMap = options.showMap;
-  //------------------------
-  this.displays = [];
-  //---------------------
 
   // initialise the field information, unique fields and unique values for each field:
   (function initialise() {
@@ -723,11 +720,6 @@ var indicatorDataStore = function(dataUrl) {
         return dataItem.GeoCode;
       });
     }
-    //--------------------------------------------------
-    if (that.data[0].hasOwnProperty('Display')) {
-      that.displays = extractUnique('Display');
-    }
-    //--------------------------------------------------
 
     if(that.data[0].hasOwnProperty('Units')) {
       that.units = extractUnique('Units');
@@ -1135,7 +1127,7 @@ var indicatorDataStore = function(dataUrl) {
         //   }) : undefined,
         var fieldIndex,
           ds = _.extend({
-            label: combinationDescription ? combinationDescription : that.country,
+            label: combinationDescription ? display : that.country,
             borderColor: '#' + getColor(datasetIndex),
             backgroundColor: '#' + getColor(datasetIndex),
             pointStyle: getPointStyle(combinationDescription),
