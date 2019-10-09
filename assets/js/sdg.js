@@ -1085,7 +1085,7 @@ var indicatorDataStore = function(dataUrl) {
 
         return datasetIndex === 0 ? headlineColor : colors[datasetIndex];
       },
-
+      /*
       getPointStyle = function(){
         // offset if there is no headline data:
         if(that.displays.length > 0) {
@@ -1096,7 +1096,19 @@ var indicatorDataStore = function(dataUrl) {
           return 'circle';
         }
       },
+      */
 
+      getPointStyle = function (combinationDescription) {
+        if (combinationDescription.substr(0,4) == 'Ziele'){
+          return 'triangle';
+        }
+        else if (combinationDescription.substr(0,4) == 'Zeitr')){
+          return 'cross';
+        }
+        else {
+          return 'dash';
+        }
+      },
 
       getBorderDash = function(datasetIndex) {
         // offset if there is no headline data:
@@ -1114,10 +1126,10 @@ var indicatorDataStore = function(dataUrl) {
         //   }) : undefined,
         var fieldIndex,
           ds = _.extend({
-            label: that.years[0] ? String(that.years[0]) : that.country, //combinationDescription ? combinationDescription : that.country,
+            label: combinationDescription ? combinationDescription : that.country,
             borderColor: '#' + getColor(datasetIndex),
             backgroundColor: '#' + getColor(datasetIndex),
-            pointStyle: getPointStyle(),
+            pointStyle: getPointStyle(combinationDescription),
             pointBorderColor: '#' + getColor(datasetIndex),
             borderDash: getBorderDash(datasetIndex),
             data: _.map(that.years, function (year) {
