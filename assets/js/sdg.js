@@ -1088,7 +1088,7 @@ var indicatorDataStore = function(dataUrl) {
 
       getPointStyle = function(){
         // offset if there is no headline data:
-        if('b) target' in that.displays) {
+        if(!that.displays) {
           return 'triangle';
         }
 
