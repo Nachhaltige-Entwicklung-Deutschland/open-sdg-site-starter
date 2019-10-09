@@ -1079,23 +1079,23 @@ var indicatorDataStore = function(dataUrl) {
         return datasetIndex === 0 ? headlineColor : colors[datasetIndex];
       },
 
-      getPointStyle = function(datasetIndex){
+      //getPointStyle = function(datasetIndex){
         // offset if there is no headline data:
-        if(!that.hasHeadline) {
-          datasetIndex += 1;
-        }
+        //if(!that.hasHeadline) {
+          //datasetIndex += 1;
+        //}
 
-        if(datasetIndex === 0) {
-          return headlinePointstyle;
-        } else {
-          if(datasetIndex > pointStyles.length) {
-            return pointStyles[datasetIndex - 1 - pointStyles.length];
-          } else {
-            return pointStyles[datasetIndex - 1];
-          }
-        }
-        return datasetIndex === 0 ? headlinePointstyle : pointStyles[datasetIndex];
-      },
+        //if(datasetIndex === 0) {
+          //return headlinePointstyle;
+        //} else {
+          //if(datasetIndex > pointStyles.length) {
+            //return pointStyles[datasetIndex - 1 - pointStyles.length];
+          //} else {
+            //return pointStyles[datasetIndex - 1];
+          //}
+        //}
+        //return datasetIndex === 0 ? headlinePointstyle : pointStyles[datasetIndex];
+      //},
 
 
       getBorderDash = function(datasetIndex) {
