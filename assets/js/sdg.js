@@ -1100,7 +1100,7 @@ var indicatorDataStore = function(dataUrl) {
           return 'cross';
         }
         else {
-          return 'dash';
+          return 'triangle';
         }
       },
 
