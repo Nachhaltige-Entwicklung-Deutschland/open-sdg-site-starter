@@ -243,7 +243,8 @@ var indicatorModel = function (options) {
   }
   //SDG goal colors
   //['e5243b', 'e5b735', '4c9f38', 'c5192d', 'ff3a21', '26bde2', 'fcc30b', 'a21942', 'fd6925', 'dd1367'];
-
+  var headlinePointstyle: 'circle'
+  var pointStyles = ['circle', 'cross', 'crossRot', 'dash', 'line', 'rect', 'rectRounded', 'rectRot', 'star', 'triangle']
 
   // allow headline + (2 x others)
   var maxDatasetCount = 2 * colors.length;
@@ -431,8 +432,26 @@ var indicatorModel = function (options) {
 
         return datasetIndex === 0 ? headlineColor : colors[datasetIndex];
       },
-      getBorderDash = function(datasetIndex) {
+      getPointStyle = function(datasetIndex){
+        // offset if there is no headline data:
+        if(!that.hasHeadline) {
+          datasetIndex += 1;
+        }
 
+        if(datasetIndex === 0) {
+          return headlinePointstyle;
+        } else {
+          if(datasetIndex > colors.length) {
+            return pointStyles[datasetIndex - 1 - pointStyles.length];
+          } else {
+            return pointStyles[datasetIndex - 1];
+          }
+        }
+        return datasetIndex === 0 ? headlinePointstyle : pointStyles[datasetIndex];
+      },
+
+
+      getBorderDash = function(datasetIndex) {
         // offset if there is no headline data:
         if(!this.hasHeadline) {
           datasetIndex += 1;
@@ -448,16 +467,12 @@ var indicatorModel = function (options) {
         //   }) : undefined,
         var fieldIndex,
         var ps = undefined,
-        if (that.display === 'b) target'){
-          ps = 'star';
-        } else {
-          ps = 'circle';
-        }
+
           ds = _.extend({
             label: combinationDescription ? combinationDescription : that.country,
             borderColor: '#' + getColor(datasetIndex),
             backgroundColor: '#' + getColor(datasetIndex),
-            pointStyle: ps,
+            pointStyle: getPointStyle(datasetIndex),
             pointBorderColor: '#' + getColor(datasetIndex),
             borderDash: getBorderDash(datasetIndex),
             data: _.map(that.years, function (year) {
