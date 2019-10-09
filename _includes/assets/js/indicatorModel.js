@@ -454,7 +454,7 @@ var indicatorModel = function (options) {
           return 'cross';
         }
         else {
-          return 'dash';
+          return 'triangle';
         }
       },
 
