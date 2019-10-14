@@ -262,6 +262,15 @@ opensdg.autotrack = function(preset, category, action, label) {
       // Add tile imagery.
       L.tileLayer(this.options.tileURL, this.options.tileOptions).addTo(this.map);
 
+      //-------------------------------------------
+      this.info = L.control('Hallo');
+      this.info.addTo(this.map);
+
+
+
+
+
+
       // Because after this point, "this" rarely works.
       var plugin = this;
 
