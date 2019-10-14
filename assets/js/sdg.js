@@ -2413,14 +2413,14 @@ $(function() {
     },
 
     onAdd: function() {
-      var plugin = this.plugin;
-      var name1 = plugin.getData(selection.feature.properties.name);
-      var controlTpl = '{name1}' +
+      //var plugin = this.plugin;
+      //var name1 = plugin.getData(selection.feature.properties.name);
+      var controlTpl = '' +
         '<ul id="selection-list"></ul>' +
-        '<div class="legend-swatches">' +
+        '<div class="legend-swatches">' + //bar
           '{legendSwatches}' +
         '</div>' +
-        '<div class="legend-values">' +
+        '<div class="legend-values">' + //values
           '<span class="legend-value left">{lowValue}</span>' +
           '<span class="arrow left"></span>' +
           '<span class="legend-value right">{highValue}</span>' +
@@ -2448,7 +2448,7 @@ $(function() {
       var selectionTpl = '' +
         '<li class="{valueStatus}">' +
           '<span class="selection-name">{name}</span>' +
-          '<span class="selection-value" style="left: {percentage}%;">{value}</span>' +
+          //'<span class="selection-value" style="left: {percentage}%;">{value}</span>' +
           '<span class="selection-bar" style="width: {percentage}%;"></span>' +
           '<i class="selection-close fa fa-remove"></i>' +
         '</li>';
