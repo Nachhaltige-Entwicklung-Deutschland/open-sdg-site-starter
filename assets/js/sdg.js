@@ -116,7 +116,7 @@ opensdg.autotrack = function(preset, category, action, label) {
     this.timeSeries = _.uniq(_.pluck(this.geoData, 'timeseries'));
     this.timeSeriesName = translations.t(this.timeSeries[0]);
     this.unit = _.uniq(_.pluck(this.geoData, 'Unit'));
-    this.unitName = translations.t(this.unit[0]);
+    this.unitName = this.unit[0];
     //---------------------------------------------------
 
 
