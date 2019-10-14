@@ -263,16 +263,21 @@ opensdg.autotrack = function(preset, category, action, label) {
       L.tileLayer(this.options.tileURL, this.options.tileOptions).addTo(this.map);
 
       //-------------------------------------------
-      this.info = L.control();
-      this.info = function (map){
-        this._div = L.DomUtil.create('div','info');
-        this.update();
-        return this._div;
-      };
-      this.info.update = function (props) {
-        this._div.innerHTML = 'Hallo';
-      };
-      this.info.addTo(this.map);
+      L.Control.textbox = L.Control.extend({
+        onAdd: function(map) {
+
+		    var text = L.DomUtil.create('div');
+		    text.id = "info_text";
+		    text.innerHTML = "<strong>text here</strong>"
+		    return text;
+		    },
+
+		    onRemove: function(map) {
+          // Nothing to do here
+		    }
+	    });
+	    L.control.textbox = function(opts) { return new L.Control.textbox(opts);}
+	    L.control.textbox({ position: 'bottomleft' }).addTo(map);
 
 
 
