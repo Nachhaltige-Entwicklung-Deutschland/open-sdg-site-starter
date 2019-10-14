@@ -270,7 +270,7 @@ opensdg.autotrack = function(preset, category, action, label) {
 		        text.id = "main-content";
 		        text.innerHTML = "<strong>text here</strong>"
 		        return text;
-        };
+        },
 
 		    onRemove: function(map) {
           // Nothing to do here
