@@ -2447,12 +2447,19 @@ $(function() {
         });
       }).join('');
       var div = L.DomUtil.create('div', 'selection-legend');
+      var headline
+      if (this.plugin.ageName){
+        headline = this.plugin.timeSeriesName + ', ' + this.plugin.ageName + ' (' + this.plugin.unitName + ')';
+      } else {
+        headline = this.plugin.timeSeriesName + ' (' + this.plugin.unitName + ')';
+      }
+
       div.innerHTML = L.Util.template(controlTpl, {
         lowValue: this.plugin.valueRange[0],
         highValue: this.plugin.valueRange[1],
         legendSwatches: swatches,
-        title: this.plugin.timeSeriesName + ' (' + this.plugin.unitName + ')',
-        
+        title: headline,
+
       });
       return div;
     },
