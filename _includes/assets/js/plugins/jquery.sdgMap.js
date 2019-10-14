@@ -82,10 +82,12 @@
     this.currentYear = this.years[0];
 
     //----------------------------------------------
-    this.timeSeries = _.uniq(_.pluck(this.geoData, 'timeseries'));
+    this.timeSeries = _.pluck(this.geoData, 'timeseries');
     this.timeSeriesName = translations.t(this.timeSeries[0]);
-    this.unit = _.uniq(_.pluck(this.geoData, 'Units'));
+    this.unit = _.pluck(this.geoData, 'Units');
     this.unitName = translations.t(this.unit[0]);
+    this.age = _.pluck(this.geoData, 'age');
+    this.ageName = translations.t(this.age[0]);
     //---------------------------------------------------
 
 
