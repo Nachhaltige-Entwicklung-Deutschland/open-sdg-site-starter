@@ -57,9 +57,7 @@
         highValue: this.plugin.valueRange[1],
         legendSwatches: swatches,
         title: this.plugin.timeSeriesName + ' (' + this.plugin.unitName + ')',
-        if (this.plugin.ageName) {
-          titel += this.plugin.ageName
-        },
+        
       });
       return div;
     },
