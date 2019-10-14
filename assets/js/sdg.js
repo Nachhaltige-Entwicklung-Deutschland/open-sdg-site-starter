@@ -257,7 +257,7 @@ opensdg.autotrack = function(preset, category, action, label) {
       this.map.addControl(new L.Control.Fullscreen());
 
       // Add scale.
-      this.map.addControl(L.control.scale({position: 'bottomleft'}));
+      this.map.addControl(L.control.scale({position: 'bottomright'}));
 
       // Add tile imagery.
       L.tileLayer(this.options.tileURL, this.options.tileOptions).addTo(this.map);
@@ -266,11 +266,11 @@ opensdg.autotrack = function(preset, category, action, label) {
       L.Control.textbox = L.Control.extend({
         onAdd: function(map) {
 
-		    var text = L.DomUtil.create('div');
-		    text.id = "info_text";
-		    text.innerHTML = "<strong>text here</strong>"
-		    return text;
-		    },
+		        var text = L.DomUtil.create('div');
+		        text.id = "main-content";
+		        text.innerHTML = "<strong>text here</strong>"
+		        return text;
+        };
 
 		    onRemove: function(map) {
           // Nothing to do here
