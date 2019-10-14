@@ -232,7 +232,15 @@
       L.tileLayer(this.options.tileURL, this.options.tileOptions).addTo(this.map);
 
       //-------------------------------------------
-      this.info = L.control('Hallo');
+      this.info = L.control();
+      this.info = function (map){
+        this._div = L.DomUtil.create('div','info');
+        this.update();
+        return this._div;
+      };
+      this.info.update = function (props) {
+        this._div.innerHTML = 'Hallo';
+      };
       this.info.addTo(this.map);
 
 
