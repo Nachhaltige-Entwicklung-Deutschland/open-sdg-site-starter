@@ -32,9 +32,9 @@
     onAdd: function() {
       var controlTpl = 'Hallo' +
         '<ul id="selection-list"></ul>' +
-        '<div class="legend-swatches">' +
-          '{legendSwatches}' +
-        '</div>' +
+        //'<div class="legend-swatches">' +
+          //'{legendSwatches}' +
+        //'</div>' +
         '<div class="legend-values">' +
           '<span class="legend-value left">{lowValue}</span>' +
           '<span class="arrow left"></span>' +
