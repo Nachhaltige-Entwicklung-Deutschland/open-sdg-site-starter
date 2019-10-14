@@ -30,6 +30,7 @@
     },
 
     onAdd: function() {
+      var plugin = this.plugin;
       var name1 = plugin.getData(selection.feature.properties.name);
       var controlTpl = '{name1}' +
         '<ul id="selection-list"></ul>' +
