@@ -226,7 +226,7 @@
       this.map.addControl(new L.Control.Fullscreen());
 
       // Add scale.
-      this.map.addControl(L.control.scale({position: 'bottomright'}));
+      this.map.addControl(L.control.scale({position: 'bottomleft'}));
 
       // Add tile imagery.
       L.tileLayer(this.options.tileURL, this.options.tileOptions).addTo(this.map);
