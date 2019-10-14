@@ -2449,7 +2449,7 @@ $(function() {
       var div = L.DomUtil.create('div', 'selection-legend');
       var headline
       if (this.plugin.ageName){
-        headline = this.plugin.timeSeriesName + ', ' + this.plugin.ageName + ' (' + this.plugin.unitName + ')';
+        headline = this.plugin.timeSeriesName + ', ' + this.plugin.ageName + ', (' + this.plugin.unitName + ')';
       } else {
         headline = this.plugin.timeSeriesName + ' (' + this.plugin.unitName + ')';
       }
