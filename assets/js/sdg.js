@@ -115,6 +115,8 @@ opensdg.autotrack = function(preset, category, action, label) {
     //----------------------------------------------
     this.timeSeries = _.uniq(_.pluck(this.geoData, 'timeseries'));
     this.timeSeriesName = translations.t(this.timeSeries[0]);
+    this.unit = _.uniq(_.pluck(this.geoData, 'Unit'));
+    this.unitName = translations.t(this.unit[0]);
     //---------------------------------------------------
 
 
@@ -265,7 +267,7 @@ opensdg.autotrack = function(preset, category, action, label) {
       this.map.addControl(new L.Control.Fullscreen());
 
       // Add scale.
-      this.map.addControl(L.control.scale({position: 'bottomleft'}));
+      this.map.addControl(L.control.scale({position: 'bottomright'}));
 
       // Add tile imagery.
       L.tileLayer(this.options.tileURL, this.options.tileOptions).addTo(this.map);
@@ -2423,7 +2425,7 @@ $(function() {
     onAdd: function() {
       //var plugin = this.plugin;
       //var name1 = plugin.getData(selection.feature.properties.name);
-      var controlTpl = '{title}' +
+      var controlTpl = '<h2>{title}</h2>' +
         '<ul id="selection-list"></ul>' +
         '<div class="legend-swatches">' + //bar
           '{legendSwatches}' +
@@ -2447,7 +2449,7 @@ $(function() {
         lowValue: this.plugin.valueRange[0],
         highValue: this.plugin.valueRange[1],
         legendSwatches: swatches,
-        title: this.plugin.timeSeriesName,
+        title: this.plugin.timeSeriesName + ' (' + this.plugin.unit + ')'
       });
       return div;
     },
