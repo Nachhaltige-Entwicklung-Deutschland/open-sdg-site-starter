@@ -84,6 +84,8 @@
     //----------------------------------------------
     this.timeSeries = _.uniq(_.pluck(this.geoData, 'timeseries'));
     this.timeSeriesName = translations.t(this.timeSeries[0]);
+    this.unit = _.uniq(_.pluck(this.geoData, 'Unit'));
+    this.unitName = translations.t(this.unit[0]);
     //---------------------------------------------------
 
 
@@ -234,7 +236,7 @@
       this.map.addControl(new L.Control.Fullscreen());
 
       // Add scale.
-      this.map.addControl(L.control.scale({position: 'bottomleft'}));
+      this.map.addControl(L.control.scale({position: 'bottomright'}));
 
       // Add tile imagery.
       L.tileLayer(this.options.tileURL, this.options.tileOptions).addTo(this.map);
