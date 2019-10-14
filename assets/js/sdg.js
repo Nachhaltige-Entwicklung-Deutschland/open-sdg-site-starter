@@ -112,6 +112,14 @@ opensdg.autotrack = function(preset, category, action, label) {
     this.years = _.uniq(_.pluck(this.geoData, 'Year')).sort();
     this.currentYear = this.years[0];
 
+    //----------------------------------------------
+    this.timeSeries = _.uniq(_.pluck(this.geoData, 'timeseries')).sort();
+    this.timeSeriesName = this.timeSeries[0];
+    //---------------------------------------------------
+
+
+
+
     this.init();
   }
 
@@ -2415,7 +2423,7 @@ $(function() {
     onAdd: function() {
       //var plugin = this.plugin;
       //var name1 = plugin.getData(selection.feature.properties.name);
-      var controlTpl = '' +
+      var controlTpl = '{title}' +
         '<ul id="selection-list"></ul>' +
         '<div class="legend-swatches">' + //bar
           '{legendSwatches}' +
@@ -2439,6 +2447,7 @@ $(function() {
         lowValue: this.plugin.valueRange[0],
         highValue: this.plugin.valueRange[1],
         legendSwatches: swatches,
+        title: this.plugin.timeSeriesName,
       });
       return div;
     },
