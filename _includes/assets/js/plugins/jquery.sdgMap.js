@@ -228,18 +228,6 @@
       // Add scale.
       this.map.addControl(L.control.scale({position: 'bottomleft'}));
 
-      this.info = control({position: 'bottomright'});
-      this.info.onAdd = function (map) {
-        this._div = L.DomUtil.create('div','info');
-        this.update();
-        return this._div;
-      };
-      this.info.update = function (props) {
-        this._divinnerHTML = 'Hallo Welt'
-      };
-      this.info.addTo(map);
-
-
       // Add tile imagery.
       //L.tileLayer(this.options.tileURL, this.options.tileOptions).addTo(this.map);
 
