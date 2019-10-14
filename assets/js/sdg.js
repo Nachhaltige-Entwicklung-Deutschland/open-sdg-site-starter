@@ -113,7 +113,7 @@ opensdg.autotrack = function(preset, category, action, label) {
     this.currentYear = this.years[0];
 
     //----------------------------------------------
-    this.timeSeries = _.uniq(_.pluck(this.geoData, 'timeseries')).sort();
+    this.timeSeries = _.uniq(_.pluck(this.geoData, 'timeseries'));
     this.timeSeriesName = this.timeSeries[0];
     //---------------------------------------------------
 
