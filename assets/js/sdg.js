@@ -262,22 +262,6 @@ opensdg.autotrack = function(preset, category, action, label) {
       // Add tile imagery.
       L.tileLayer(this.options.tileURL, this.options.tileOptions).addTo(this.map);
 
-      //-------------------------------------------
-      L.Control.textbox = L.Control.extend({
-        onAdd: function(map) {
-
-		        var text = L.DomUtil.create('div');
-		        text.id = "main-content";
-		        text.innerHTML = "<strong>text here</strong>"
-		        return text;
-        },
-
-		    onRemove: function(map) {
-          // Nothing to do here
-		    }
-	    });
-	    L.control.textbox = function(opts) { return new L.Control.textbox(opts);}
-	    L.control.textbox({ position: 'bottomleft' }).addTo(map);
 
 
 
@@ -2429,7 +2413,7 @@ $(function() {
     },
 
     onAdd: function() {
-      var controlTpl = '' +
+      var controlTpl = 'Hallo' +
         '<ul id="selection-list"></ul>' +
         '<div class="legend-swatches">' +
           '{legendSwatches}' +
@@ -2506,7 +2490,6 @@ $(function() {
     return new L.Control.SelectionLegend(plugin);
   };
 }());
-
 /*
  * Leaflet year Slider.
  *
