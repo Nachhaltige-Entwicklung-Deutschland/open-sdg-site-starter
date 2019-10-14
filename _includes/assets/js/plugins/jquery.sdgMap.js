@@ -81,6 +81,14 @@
     this.years = _.uniq(_.pluck(this.geoData, 'Year')).sort();
     this.currentYear = this.years[0];
 
+    //----------------------------------------------
+    this.timeSeries = _.uniq(_.pluck(this.geoData, 'timeseries')).sort();
+    this.timeSeriesName = this.timeSeries[0];
+    //---------------------------------------------------
+
+
+
+
     this.init();
   }
 

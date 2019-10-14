@@ -32,7 +32,7 @@
     onAdd: function() {
       //var plugin = this.plugin;
       //var name1 = plugin.getData(selection.feature.properties.name);
-      var controlTpl = '' +
+      var controlTpl = '{title}' +
         '<ul id="selection-list"></ul>' +
         '<div class="legend-swatches">' + //bar
           '{legendSwatches}' +
@@ -56,6 +56,7 @@
         lowValue: this.plugin.valueRange[0],
         highValue: this.plugin.valueRange[1],
         legendSwatches: swatches,
+        title: this.plugin.timeSeriesName,
       });
       return div;
     },
