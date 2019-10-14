@@ -2415,15 +2415,15 @@ $(function() {
     onAdd: function() {
       var controlTpl = 'Hallo' +
         '<ul id="selection-list"></ul>' +
-        //'<div class="legend-swatches">' +
-          //'{legendSwatches}' +
-        //'</div>' +
-        '<div class="legend-values">' +
-          '<span class="legend-value left">{lowValue}</span>' +
-          '<span class="arrow left"></span>' +
-          '<span class="legend-value right">{highValue}</span>' +
-          '<span class="arrow right"></span>' +
-        '</div>';
+        '<div class="legend-swatches">' +
+          '{legendSwatches}' +
+        '</div>'; //+
+        //'<div class="legend-values">' +
+          //'<span class="legend-value left">{lowValue}</span>' +
+          //'<span class="arrow left"></span>' +
+          //'<span class="legend-value right">{highValue}</span>' +
+          //'<span class="arrow right"></span>' +
+        //'</div>';
       var swatchTpl = '<span class="legend-swatch" style="width:{width}%; background:{color};"></span>';
       var swatchWidth = 100 / this.plugin.options.colorRange.length;
       var swatches = this.plugin.options.colorRange.map(function(swatchColor) {
