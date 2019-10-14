@@ -83,7 +83,7 @@
 
     //----------------------------------------------
     this.timeSeries = _.uniq(_.pluck(this.geoData, 'timeseries'));
-    this.timeSeriesName = this.timeSeries[0];
+    this.timeSeriesName = translations.t(this.timeSeries[0]);
     //---------------------------------------------------
 
 
