@@ -144,3 +144,78 @@ create_goals:
 
 create_indicators:
   layout: indicator
+
+
+# Mapping
+map_options:
+
+  #tileURL: https://api.mapbox.com/styles/v1/mobosse/cjzo8dsnt0bz71cohx8l8etpg/tiles/256/{z}/{x}/{y}?&access_token={accessToken}
+  tileURL: https://api.mapbox.com/styles/v1/mobosse/cjzmrn62k0ek11cmgea7a1i1h/tiles/256/{z}/{x}/{y}?&access_token={accessToken}
+  tileOptions:
+    id: mapbox.light
+    accessToken: pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjanplNTNhMmQwMTFjM21wNHEzazRlejhwIn0.ecHE5G83cklfW5AXYjI_0A
+    attribution: <a href="https://www.mapbox.com">Mapbox</a> | <a href="https://www.bkg.bund.de">&copy; GeoBasis-De / BKG 2019</a>
+
+  # Control the choropleth color range. See https://gka.github.io/chroma.js/#chroma-brewer
+  #Goal 5:
+  #colorRange: ['#FFD9D5','#FFC8C1','#FFB6AD','#FFA499','#FF9385','#FF8171','#FF6F5D','#FF5D49','#FF4C35','#FF3A21']
+  #Goal 8:
+  colorRange: ["#F6E8EC", "#EED3DB", "#E5BFCA", "#DDAAB9", "#D495A8", "#CC8197", "#C46C86", "#BB5775", "#B34264", "#AA2E53", "#A21942"]
+
+  # Set the color for boundaries that have no data.
+  noValueColor:  '#f0f0f0'
+  # For documentation on the style options below, see here:
+  # https://leafletjs.com/reference-1.4.0.html#path-option
+  # Set the default style for boundaries in the map:
+  #styleNormal:
+    #weight: 1
+    #opacity: 1
+    #color: #888
+    #fillOpacity: 0.7
+  # Set the style for boundaries that have been selected/highlighted:
+  #styleHighlighted:
+    #weight: 1
+    #opacity: 1
+    #color: #111
+    #fillOpacity: 0.7
+  # Set the style for top-level boundaries that are displaying in other layers.
+  # Note: This is only applicable when using the "nested zoom" feature (see below).
+  #styleStatic:
+    #weight: 2
+    #opacity: 1
+    #fillOpacity: 0
+    #color: #172d44
+    #dashArray: 5,5
+map_layers:
+  #Country
+  #- min_zoom: 5
+    #max_zoom: 10
+    #serviceUrl: https://geoportal1-ons.opendata.arcgis.com/datasets/c362832ce5d14728a6fb2b079525be0b_4.geojson
+    #nameProperty: ctry17nm
+    #idProperty: ctry17cd
+    #staticBorders: true
+    # link: https://hub.arcgis.com/datasets/c362832ce5d14728a6fb2b079525be0b_4/data
+  #Region
+  - min_zoom: 0
+    max_zoom: 20
+    #serviceUrl: https://opendata.arcgis.com/datasets/33a15b8fd5624dd4800cc33ab5bad761_0.geojson
+    serviceUrl: https://g205sdgs.github.io/sdg-indicators/assets/maps/Ländergrenzen_ohne_Seegrenzen.geojson
+    nameProperty: GEN
+    idProperty: AGS #OBJECTID
+    staticBorders: true
+    # link: https://hub.arcgis.com/datasets/4fcca2a47fed4bfaa1793015a18537ac_4
+  #Local Authority
+  #- min_zoom: 6
+    #max_zoom: 10
+    #serviceUrl: https://geoportal1-ons.opendata.arcgis.com/datasets/686603e943f948acaa13fb5d2b0f1275_4.geojson
+    #nameProperty: lad16nm
+    #idProperty: lad16cd
+    #staticBorders: false
+    # link: https://hub.arcgis.com/datasets/686603e943f948acaa13fb5d2b0f1275_4
+  #County
+  #- min_zoom: 8
+    #max_zoom: 9
+    #serviceUrl: https://geoportal1-ons.opendata.arcgis.com/datasets/b7507e654334481e8e0787f42c9028c1_3.geojson
+    #nameProperty: cty18nm
+    #idProperty: cty18cd
+# link: https://hub.arcgis.com/datasets/b7507e654334481e8e0787f42c9028c1_3
