@@ -115,7 +115,7 @@ var indicatorView = function (model, options) {
 
     if(args.hasGeoData && args.showMap) {
       view_obj._mapView = new mapView();
-      view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx);
+      view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, 1);
     }
   });
 

@@ -2,14 +2,14 @@ var mapView = function () {
 
   "use strict";
 
-  this.initialise = function(geoData, geoCodeRegEx) {
+  this.initialise = function(geoData, geoCodeRegEx, tgt) {
     $('.map').show();
     $('#map').sdgMap({
       geoData: geoData,
       geoCodeRegEx: geoCodeRegEx,
       mapOptions: {{ site.map_options | jsonify }},
       mapLayers: {{ site.map_layers | jsonify }},
-      tgt: 2,
+      tgt: tgt,
     });
   };
 };
