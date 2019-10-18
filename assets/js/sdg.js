@@ -2425,7 +2425,7 @@ $(function() {
     },
 
     onAdd: function() {
-      var controlTpl = '<h5 class="selection-name">{title}</h5>' +//--------------------
+      var controlTpl = '<span id="mapHead">{title}</span>' +//--------------------
         '<ul id="selection-list"></ul>' +
         '<div class="legend-swatches">' + //bar
           '{legendSwatches}' +
