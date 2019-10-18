@@ -89,8 +89,8 @@ opensdg.autotrack = function(preset, category, action, label) {
     this.mapLayers = [];
     this.geoData = options.geoData;
     this.geoCodeRegEx = options.geoCodeRegEx;
+    this.tgt = options.tgt;
 
-    
 
     // Require at least one geoLayer.
     if (!options.mapLayers.length) {
@@ -107,9 +107,9 @@ opensdg.autotrack = function(preset, category, action, label) {
     this._name = 'sdgMap';
 
     this.valueRange = [_.min(_.pluck(this.geoData, 'Value')), _.max(_.pluck(this.geoData, 'Value'))];
-    this.colorScale = chroma.scale(this.options.colorRange[0])
+    this.colorScale = chroma.scale(this.options.colorRange[this.tgt])
       .domain(this.valueRange)
-      .classes(this.options.colorRange[0].length);
+      .classes(this.options.colorRange[this.tgt].length);
 
     this.years = _.uniq(_.pluck(this.geoData, 'Year')).sort();
     this.currentYear = this.years[0];
@@ -1417,6 +1417,7 @@ var mapView = function () {
       geoCodeRegEx: geoCodeRegEx,
       mapOptions: {"tileURL":"https://api.mapbox.com/styles/v1/mobosse/cjzmrn62k0ek11cmgea7a1i1h/tiles/256/{z}/{x}/{y}?&access_token={accessToken}","tileOptions":{"id":"mapbox.light","accessToken":"pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjanplNTNhMmQwMTFjM21wNHEzazRlejhwIn0.ecHE5G83cklfW5AXYjI_0A","attribution":"<a href=\"https://www.mapbox.com\">Mapbox</a> | <a href=\"https://www.bkg.bund.de\">&copy; GeoBasis-De / BKG 2019</a>"},"colorRange":[["#F6E8EC","#EED3DB","#E5BFCA","#DDAAB9","#D495A8","#CC8197","#C46C86","#BB5775","#B34264","#AA2E53","#A21942"],["#FFD9D5","#FFC8C1","#FFB6AD","#FFA499","#FF9385","#FF8171","#FF6F5D","#FF5D49","#FF4C35","#FF3A21"],["#DD1367","#DF1F6F","#E02B76","#E2367E","#E44285","#E64E8D","#E75A95","#E9669C","#EB71A4","#EC7DAB","#EE89B3","#F095BB","#F1A1C2","#F3ACCA","#F5B8D1","#F7C4D9","#F8D0E1","#FADCE8","#FCE7F0","#FDF3F7","#FFFFFF"]],"noValueColor":"#f0f0f0"},
       mapLayers: [{"min_zoom":0,"max_zoom":20,"serviceUrl":"https://g205sdgs.github.io/sdg-indicators/assets/maps/Ländergrenzen_ohne_Seegrenzen.geojson","nameProperty":"GEN","idProperty":"AGS","staticBorders":true}],
+      tgt: 2,
     });
   };
 };
@@ -1771,6 +1772,7 @@ var indicatorView = function (model, options) {
   };
 
 
+
   this.createPlot = function (chartInfo) {
 
     var that = this;
@@ -1802,7 +1804,6 @@ var indicatorView = function (model, options) {
             }
           }]
         },
-
         legendCallback: function(chart) {
             var text = ['<ul id="legend">'];
 
