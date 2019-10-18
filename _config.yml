@@ -160,7 +160,7 @@ map_options:
   #Goal 5:
   #colorRange: ['#FFD9D5','#FFC8C1','#FFB6AD','#FFA499','#FF9385','#FF8171','#FF6F5D','#FF5D49','#FF4C35','#FF3A21']
   #Goal 8:
-  colorRange: [["#F6E8EC", "#EED3DB", "#E5BFCA", "#DDAAB9", "#D495A8", "#CC8197", "#C46C86", "#BB5775", "#B34264", "#AA2E53", "#A21942"],['#FFD9D5','#FFC8C1','#FFB6AD','#FFA499','#FF9385','#FF8171','#FF6F5D','#FF5D49','#FF4C35','#FF3A21']]
+  colorRange: [["#F6E8EC", "#EED3DB", "#E5BFCA", "#DDAAB9", "#D495A8", "#CC8197", "#C46C86", "#BB5775", "#B34264", "#AA2E53", "#A21942"],['#FFD9D5','#FFC8C1','#FFB6AD','#FFA499','#FF9385','#FF8171','#FF6F5D','#FF5D49','#FF4C35','#FF3A21'],["#DD1367", "#DF1F6F", "#E02B76", "#E2367E", "#E44285", "#E64E8D", "#E75A95", "#E9669C", "#EB71A4", "#EC7DAB", "#EE89B3", "#F095BB", "#F1A1C2", "#F3ACCA", "#F5B8D1", "#F7C4D9", "#F8D0E1", "#FADCE8", "#FCE7F0", "#FDF3F7", "#FFFFFF"]]
 
   # Set the color for boundaries that have no data.
   noValueColor:  '#f0f0f0'
