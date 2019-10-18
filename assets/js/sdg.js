@@ -1410,14 +1410,14 @@ var mapView = function () {
 
   "use strict";
 
-  this.initialise = function(geoData, geoCodeRegEx) {
+  this.initialise = function(geoData, geoCodeRegEx, tgt) {
     $('.map').show();
     $('#map').sdgMap({
       geoData: geoData,
       geoCodeRegEx: geoCodeRegEx,
       mapOptions: {"tileURL":"https://api.mapbox.com/styles/v1/mobosse/cjzmrn62k0ek11cmgea7a1i1h/tiles/256/{z}/{x}/{y}?&access_token={accessToken}","tileOptions":{"id":"mapbox.light","accessToken":"pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjanplNTNhMmQwMTFjM21wNHEzazRlejhwIn0.ecHE5G83cklfW5AXYjI_0A","attribution":"<a href=\"https://www.mapbox.com\">Mapbox</a> | <a href=\"https://www.bkg.bund.de\">&copy; GeoBasis-De / BKG 2019</a>"},"colorRange":[["#F6E8EC","#EED3DB","#E5BFCA","#DDAAB9","#D495A8","#CC8197","#C46C86","#BB5775","#B34264","#AA2E53","#A21942"],["#FFD9D5","#FFC8C1","#FFB6AD","#FFA499","#FF9385","#FF8171","#FF6F5D","#FF5D49","#FF4C35","#FF3A21"],["#DD1367","#DF1F6F","#E02B76","#E2367E","#E44285","#E64E8D","#E75A95","#E9669C","#EB71A4","#EC7DAB","#EE89B3","#F095BB","#F1A1C2","#F3ACCA","#F5B8D1","#F7C4D9","#F8D0E1","#FADCE8","#FCE7F0","#FDF3F7","#FFFFFF"]],"noValueColor":"#f0f0f0"},
       mapLayers: [{"min_zoom":0,"max_zoom":20,"serviceUrl":"https://g205sdgs.github.io/sdg-indicators/assets/maps/Ländergrenzen_ohne_Seegrenzen.geojson","nameProperty":"GEN","idProperty":"AGS","staticBorders":true}],
-      tgt: 2,
+      tgt: tgt,
     });
   };
 };
@@ -1538,7 +1538,7 @@ var indicatorView = function (model, options) {
 
     if(args.hasGeoData && args.showMap) {
       view_obj._mapView = new mapView();
-      view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx);
+      view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, 1);
     }
   });
 
