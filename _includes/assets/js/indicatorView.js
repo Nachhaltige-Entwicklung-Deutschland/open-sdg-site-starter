@@ -120,7 +120,7 @@ var indicatorView = function (model, options) {
     else if (chartInfo.indicatorId.includes('_2-')){
       var tgt = 1;
     }
-    else (chartInfo.indicatorId.includes('_2-')){
+    else {
       var tgt = 2;
     };
 
