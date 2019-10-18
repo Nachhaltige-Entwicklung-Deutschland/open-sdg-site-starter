@@ -42,8 +42,8 @@
           '<span class="arrow right"></span>' +
         '</div>';
       var swatchTpl = '<span class="legend-swatch" style="width:{width}%; background:{color};"></span>';
-      var swatchWidth = 100 / this.plugin.options.colorRange[2].length;
-      var swatches = this.plugin.options.colorRange[2].map(function(swatchColor) {
+      var swatchWidth = 100 / this.plugin.options.colorRange[this.plugin.goalNr].length;
+      var swatches = this.plugin.options.colorRange[this.plugin.goalNr].map(function(swatchColor) {
         return L.Util.template(swatchTpl, {
           width: swatchWidth,
           color: swatchColor,

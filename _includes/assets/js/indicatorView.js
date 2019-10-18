@@ -115,19 +115,19 @@ var indicatorView = function (model, options) {
 
     //--------------------------------
     if (args.indicatorId.includes('_1-')){
-      var tgt = 2;
+      var goalNr = 2;
     }
     else if (args.indicatorId.includes('_2-')){
-      var tgt = 1;
+      var goalNr = 1;
     }
     else if (args.indicatorId.includes('_3')) {
-      var tgt = 0;
+      var goalNr = 1;
     };
 
 
     if(args.hasGeoData && args.showMap) {
       view_obj._mapView = new mapView();
-      view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, tgt);
+      view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr);
     }
   });
 

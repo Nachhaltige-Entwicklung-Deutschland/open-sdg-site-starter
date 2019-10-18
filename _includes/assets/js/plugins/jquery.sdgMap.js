@@ -58,7 +58,7 @@
     this.mapLayers = [];
     this.geoData = options.geoData;
     this.geoCodeRegEx = options.geoCodeRegEx;
-    this.tgt = options.tgt;
+    this.goalNr = options.goal;
 
 
     // Require at least one geoLayer.
@@ -76,9 +76,9 @@
     this._name = 'sdgMap';
 
     this.valueRange = [_.min(_.pluck(this.geoData, 'Value')), _.max(_.pluck(this.geoData, 'Value'))];
-    this.colorScale = chroma.scale(this.options.colorRange[this.tgt])
+    this.colorScale = chroma.scale(this.options.colorRange[this.goalNr])
       .domain(this.valueRange)
-      .classes(this.options.colorRange[this.tgt].length);
+      .classes(this.options.colorRange[this.goalNr].length);
 
     this.years = _.uniq(_.pluck(this.geoData, 'Year')).sort();
     this.currentYear = this.years[0];
