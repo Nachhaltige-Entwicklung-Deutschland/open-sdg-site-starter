@@ -110,7 +110,7 @@ var indicatorView = function (model, options) {
     }
   });
 
-  this._model.onSeriesComplete.attach(function(sender, args) {
+  this._model.onSeriesComplete.attach(function(sender, args, chartInfo) {
     view_obj.initialiseSeries(args);
 
     //--------------------------------
@@ -122,7 +122,7 @@ var indicatorView = function (model, options) {
     }
     else (chartInfo.indicatorId.includes('_2-')){
       var tgt = 2;
-    }
+    };
 
 
     if(args.hasGeoData && args.showMap) {
