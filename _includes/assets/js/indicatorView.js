@@ -349,6 +349,7 @@ var indicatorView = function (model, options) {
   };
 
 
+
   this.createPlot = function (chartInfo) {
 
     var that = this;
@@ -380,7 +381,6 @@ var indicatorView = function (model, options) {
             }
           }]
         },
-
         legendCallback: function(chart) {
             var text = ['<ul id="legend">'];
 
