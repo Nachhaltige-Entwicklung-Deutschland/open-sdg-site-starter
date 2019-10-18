@@ -74,7 +74,7 @@
     this._name = 'sdgMap';
 
     this.valueRange = [_.min(_.pluck(this.geoData, 'Value')), _.max(_.pluck(this.geoData, 'Value'))];
-    this.colorScale = chroma.scale(this.options.colorRange.B)
+    this.colorScale = chroma.scale(this.options.colorRange)
       .domain(this.valueRange)
       .classes(this.options.colorRange.length);
 
