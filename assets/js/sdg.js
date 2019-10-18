@@ -105,7 +105,7 @@ opensdg.autotrack = function(preset, category, action, label) {
     this._name = 'sdgMap';
 
     this.valueRange = [_.min(_.pluck(this.geoData, 'Value')), _.max(_.pluck(this.geoData, 'Value'))];
-    this.colorScale = chroma.scale(this.options.colorRange[0])
+    this.colorScale = chroma.scale(this.options.colorRange[1])
       .domain(this.valueRange)
       .classes(this.options.colorRange.length);
 
