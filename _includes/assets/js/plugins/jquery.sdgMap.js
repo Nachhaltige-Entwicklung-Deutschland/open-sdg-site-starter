@@ -59,60 +59,7 @@
     this.geoData = options.geoData;
     this.geoCodeRegEx = options.geoCodeRegEx;
 
-    //------------------------------------------------------------------------
-    this.indcatorId = options.indicatorId;
-    if (this.indicatorId.includes('_1-')){
-      var tgt = 0;
-    }
-    else if(this.indicatorId.includes('_2-')){
-      var tgt = 1;
-    }
-    else if(this.indicatorId.includes('_3-')){
-      var tgt = 2;
-    }
-    else if(this.indicatorId.includes('_4-')){
-      var tgt = 3;
-    }
-    else if(this.indicatorId.includes('_5-')){
-      var tgt = 4;
-    }
-    else if(this.indicatorId.includes('_6-')){
-      var tgt = 5;
-    }
-    else if(this.indicatorId.includes('_7-')){
-      var tgt = 6;
-    }
-    else if(this.indicatorId.includes('_8-')){
-      var tgt = 7;
-    }
-    else if(this.indicatorId.includes('_9-')){
-      var tgt = 8;
-    }
-    else if(this.indicatorId.includes('_10-')){
-      var tgt = 9;
-    }
-    else if(this.indicatorId.includes('_11-')){
-      var tgt = 10;
-    }
-    else if(this.indicatorId.includes('_12-')){
-      var tgt = 11;
-    }
-    else if(this.indicatorId.includes('_13-')){
-      var tgt = 12;
-    }
-    else if(this.indicatorId.includes('_14-')){
-      var tgt = 13;
-    }
-    else if(this.indicatorId.includes('_15-')){
-      var tgt = 14;
-    }
-    else if(this.indicatorId.includes('_16-')){
-      var tgt = 15;
-    }
-    else if(this.indicatorId.includes('_17-')){
-      var tgt = 16;
-    };
-    //----------------------------------------------------------------------------
+    
 
     // Require at least one geoLayer.
     if (!options.mapLayers.length) {
