@@ -129,9 +129,9 @@
     this._name = 'sdgMap';
 
     this.valueRange = [_.min(_.pluck(this.geoData, 'Value')), _.max(_.pluck(this.geoData, 'Value'))];
-    this.colorScale = chroma.scale(this.options.colorRange[parseInt(this.indicatorId[tgt])])
+    this.colorScale = chroma.scale(this.options.colorRange[parseInt(this.indicatorId[0])])
       .domain(this.valueRange)
-      .classes(this.options.colorRange[tgt].length);
+      .classes(this.options.colorRange[0].length);
 
     this.years = _.uniq(_.pluck(this.geoData, 'Year')).sort();
     this.currentYear = this.years[0];
