@@ -1320,7 +1320,9 @@ var indicatorDataStore = function(dataUrl) {
         hasGeoData: this.hasGeoData,
         geoData: this.geoData,
         geoCodeRegEx: this.geoCodeRegEx,
-        showMap: this.showMap
+        showMap: this.showMap,
+
+        indicatorId: this.indicatorId
       });
 
 
@@ -1533,14 +1535,14 @@ var indicatorView = function (model, options) {
     }
   });
 
-  this._model.onSeriesComplete.attach(function(sender, args, chartInfo) {
+  this._model.onSeriesComplete.attach(function(sender, args) {
     view_obj.initialiseSeries(args);
 
     //--------------------------------
-    if (chartInfo.indicatorId.includes('_1-')){
+    if (args.indicatorId.includes('_1-')){
       var tgt = 0;
     }
-    else if (chartInfo.indicatorId.includes('_2-')){
+    else if (args.indicatorId.includes('_2-')){
       var tgt = 1;
     }
     else {
