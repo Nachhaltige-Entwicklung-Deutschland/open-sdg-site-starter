@@ -1540,13 +1540,13 @@ var indicatorView = function (model, options) {
 
     //--------------------------------
     if (args.indicatorId.includes('_1-')){
-      var tgt = 0;
+      var tgt = 2;
     }
     else if (args.indicatorId.includes('_2-')){
       var tgt = 1;
     }
-    else {
-      var tgt = 2;
+    else if (args.indicatorId.includes('_3')) {
+      var tgt = 0;
     };
 
 
