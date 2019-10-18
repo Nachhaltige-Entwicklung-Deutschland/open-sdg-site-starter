@@ -160,9 +160,7 @@ map_options:
   #Goal 5:
   #colorRange: ['#FFD9D5','#FFC8C1','#FFB6AD','#FFA499','#FF9385','#FF8171','#FF6F5D','#FF5D49','#FF4C35','#FF3A21']
   #Goal 8:
-  colorRange:
-    A: ["#F6E8EC", "#EED3DB", "#E5BFCA", "#DDAAB9", "#D495A8", "#CC8197", "#C46C86", "#BB5775", "#B34264", "#AA2E53", "#A21942"]
-    B: ['#FFD9D5','#FFC8C1','#FFB6AD','#FFA499','#FF9385','#FF8171','#FF6F5D','#FF5D49','#FF4C35','#FF3A21']
+  colorRange: ['#FFD9D5','#FFC8C1','#FFB6AD','#FFA499','#FF9385','#FF8171','#FF6F5D','#FF5D49','#FF4C35','#FF3A21']
 
   # Set the color for boundaries that have no data.
   noValueColor:  '#f0f0f0'
