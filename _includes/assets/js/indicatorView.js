@@ -114,15 +114,23 @@ var indicatorView = function (model, options) {
     view_obj.initialiseSeries(args);
 
     //--------------------------------
-    if (args.indicatorId.includes('_1-')){
-      var goalNr = 2;
-    }
-    else if (args.indicatorId.includes('_2-')){
-      var goalNr = 1;
-    }
-    else if (args.indicatorId.includes('_3')) {
-      var goalNr = 1;
-    };
+    if (args.indicatorId.includes('_1-')){var goalNr = 0;}
+    else if (args.indicatorId.includes('_2-')) {var goalNr = 1;}
+    else if (args.indicatorId.includes('_3-')) {var goalNr = 2;}
+    else if (args.indicatorId.includes('_4-')) {var goalNr = 3;}
+    else if (args.indicatorId.includes('_5-')) {var goalNr = 4;}
+    else if (args.indicatorId.includes('_6-')) {var goalNr = 5;}
+    else if (args.indicatorId.includes('_7-')) {var goalNr = 6;}
+    else if (args.indicatorId.includes('_8-')) {var goalNr = 7;}
+    else if (args.indicatorId.includes('_9-')) {var goalNr = 8;}
+    else if (args.indicatorId.includes('_10-')) {var goalNr = 9;}
+    else if (args.indicatorId.includes('_11-')) {var goalNr = 10;}
+    else if (args.indicatorId.includes('_12-')) {var goalNr = 11;}
+    else if (args.indicatorId.includes('_13-')) {var goalNr = 12;}
+    else if (args.indicatorId.includes('_14-')) {var goalNr = 13;}
+    else if (args.indicatorId.includes('_15-')) {var goalNr = 14;}
+    else if (args.indicatorId.includes('_16-')) {var goalNr = 15;}
+    else if (args.indicatorId.includes('_17-')) {var goalNr = 16;}
 
 
     if(args.hasGeoData && args.showMap) {
