@@ -2451,7 +2451,7 @@ $(function() {
       if (this.plugin.ageName){
         headline = this.plugin.timeSeriesName + ', <br>' + this.plugin.ageName + ', <br>' + this.plugin.unitName;
       } else {
-        headline = this.plugin.timeSeriesName + ' (' + this.plugin.unitName + ')';
+        headline = this.plugin.timeSeriesName + ' <br>' + this.plugin.unitName;
       }
       //-----------------------------------------------------------------------
 
