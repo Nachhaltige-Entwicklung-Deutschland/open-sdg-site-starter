@@ -1536,9 +1536,21 @@ var indicatorView = function (model, options) {
   this._model.onSeriesComplete.attach(function(sender, args) {
     view_obj.initialiseSeries(args);
 
+    //--------------------------------
+    if (chartInfo.indicatorId.includes('_1-')){
+      var tgt = 0;
+    }
+    else if (chartInfo.indicatorId.includes('_2-')){
+      var tgt = 1;
+    }
+    else (chartInfo.indicatorId.includes('_2-')){
+      var tgt = 2;
+    }
+
+
     if(args.hasGeoData && args.showMap) {
       view_obj._mapView = new mapView();
-      view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, 1);
+      view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, tgt);
     }
   });
 
