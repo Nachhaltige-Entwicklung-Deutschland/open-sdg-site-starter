@@ -654,7 +654,9 @@ var indicatorModel = function (options) {
         hasGeoData: this.hasGeoData,
         geoData: this.geoData,
         geoCodeRegEx: this.geoCodeRegEx,
-        showMap: this.showMap
+        showMap: this.showMap,
+
+        indicatorId: this.indicatorId
       });
 
 
