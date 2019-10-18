@@ -30,9 +30,7 @@
     },
 
     onAdd: function() {
-      //var plugin = this.plugin;
-      //var name1 = plugin.getData(selection.feature.properties.name);
-      var controlTpl = '<h5>{title}</h5>' +
+      var controlTpl = '<h5>{title}</h5>' +//--------------------
         '<ul id="selection-list"></ul>' +
         '<div class="legend-swatches">' + //bar
           '{legendSwatches}' +
@@ -52,19 +50,23 @@
         });
       }).join('');
       var div = L.DomUtil.create('div', 'selection-legend');
+
+      //-----------------------------------------------------------------------
       var headline
       if (this.plugin.ageName){
-        headline = this.plugin.timeSeriesName + ', ' + this.plugin.ageName + ', (' + this.plugin.unitName + ')';
+        headline = this.plugin.timeSeriesName + ', <br>' + this.plugin.ageName + ', <br>' + this.plugin.unitName;
       } else {
         headline = this.plugin.timeSeriesName + ' (' + this.plugin.unitName + ')';
       }
+      //-----------------------------------------------------------------------
 
       div.innerHTML = L.Util.template(controlTpl, {
         lowValue: this.plugin.valueRange[0],
         highValue: this.plugin.valueRange[1],
         legendSwatches: swatches,
+        //---
         title: headline,
-
+        //---
       });
       return div;
     },
