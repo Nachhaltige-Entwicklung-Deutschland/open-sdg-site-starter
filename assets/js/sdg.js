@@ -89,7 +89,7 @@ opensdg.autotrack = function(preset, category, action, label) {
     this.mapLayers = [];
     this.geoData = options.geoData;
     this.geoCodeRegEx = options.geoCodeRegEx;
-    this.tgt = options.tgt;
+    this.goalNr = options.goal;
 
 
     // Require at least one geoLayer.
@@ -107,9 +107,9 @@ opensdg.autotrack = function(preset, category, action, label) {
     this._name = 'sdgMap';
 
     this.valueRange = [_.min(_.pluck(this.geoData, 'Value')), _.max(_.pluck(this.geoData, 'Value'))];
-    this.colorScale = chroma.scale(this.options.colorRange[this.tgt])
+    this.colorScale = chroma.scale(this.options.colorRange[this.goalNr])
       .domain(this.valueRange)
-      .classes(this.options.colorRange[this.tgt].length);
+      .classes(this.options.colorRange[this.goalNr].length);
 
     this.years = _.uniq(_.pluck(this.geoData, 'Year')).sort();
     this.currentYear = this.years[0];
@@ -1412,14 +1412,14 @@ var mapView = function () {
 
   "use strict";
 
-  this.initialise = function(geoData, geoCodeRegEx, tgt) {
+  this.initialise = function(geoData, geoCodeRegEx, goal) {
     $('.map').show();
     $('#map').sdgMap({
       geoData: geoData,
       geoCodeRegEx: geoCodeRegEx,
       mapOptions: {"tileURL":"https://api.mapbox.com/styles/v1/mobosse/cjzmrn62k0ek11cmgea7a1i1h/tiles/256/{z}/{x}/{y}?&access_token={accessToken}","tileOptions":{"id":"mapbox.light","accessToken":"pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjanplNTNhMmQwMTFjM21wNHEzazRlejhwIn0.ecHE5G83cklfW5AXYjI_0A","attribution":"<a href=\"https://www.mapbox.com\">Mapbox</a> | <a href=\"https://www.bkg.bund.de\">&copy; GeoBasis-De / BKG 2019</a>"},"colorRange":[["#F6E8EC","#EED3DB","#E5BFCA","#DDAAB9","#D495A8","#CC8197","#C46C86","#BB5775","#B34264","#AA2E53","#A21942"],["#FFD9D5","#FFC8C1","#FFB6AD","#FFA499","#FF9385","#FF8171","#FF6F5D","#FF5D49","#FF4C35","#FF3A21"],["#DD1367","#DF1F6F","#E02B76","#E2367E","#E44285","#E64E8D","#E75A95","#E9669C","#EB71A4","#EC7DAB","#EE89B3","#F095BB","#F1A1C2","#F3ACCA","#F5B8D1","#F7C4D9","#F8D0E1","#FADCE8","#FCE7F0","#FDF3F7","#FFFFFF"]],"noValueColor":"#f0f0f0"},
       mapLayers: [{"min_zoom":0,"max_zoom":20,"serviceUrl":"https://g205sdgs.github.io/sdg-indicators/assets/maps/Ländergrenzen_ohne_Seegrenzen.geojson","nameProperty":"GEN","idProperty":"AGS","staticBorders":true}],
-      tgt: tgt,
+      goal: goal,
     });
   };
 };
@@ -1540,19 +1540,19 @@ var indicatorView = function (model, options) {
 
     //--------------------------------
     if (args.indicatorId.includes('_1-')){
-      var tgt = 2;
+      var goalNr = 2;
     }
     else if (args.indicatorId.includes('_2-')){
-      var tgt = 1;
+      var goalNr = 1;
     }
     else if (args.indicatorId.includes('_3')) {
-      var tgt = 0;
+      var goalNr = 1;
     };
 
 
     if(args.hasGeoData && args.showMap) {
       view_obj._mapView = new mapView();
-      view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, tgt);
+      view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr);
     }
   });
 
@@ -2454,8 +2454,8 @@ $(function() {
           '<span class="arrow right"></span>' +
         '</div>';
       var swatchTpl = '<span class="legend-swatch" style="width:{width}%; background:{color};"></span>';
-      var swatchWidth = 100 / this.plugin.options.colorRange[2].length;
-      var swatches = this.plugin.options.colorRange[2].map(function(swatchColor) {
+      var swatchWidth = 100 / this.plugin.options.colorRange[this.plugin.goalNr].length;
+      var swatches = this.plugin.options.colorRange[this.plugin.goalNr].map(function(swatchColor) {
         return L.Util.template(swatchTpl, {
           width: swatchWidth,
           color: swatchColor,
