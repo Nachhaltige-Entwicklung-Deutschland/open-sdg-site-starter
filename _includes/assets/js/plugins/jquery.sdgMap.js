@@ -59,6 +59,8 @@
     this.geoData = options.geoData;
     this.geoCodeRegEx = options.geoCodeRegEx;
 
+    this.indcatorId = options.indicatorId;
+
     // Require at least one geoLayer.
     if (!options.mapLayers.length) {
       console.log('Map disabled, no mapLayers in options.');
@@ -74,9 +76,9 @@
     this._name = 'sdgMap';
 
     this.valueRange = [_.min(_.pluck(this.geoData, 'Value')), _.max(_.pluck(this.geoData, 'Value'))];
-    this.colorScale = chroma.scale(this.options.colorRange[2])
+    this.colorScale = chroma.scale(this.options.colorRange[parseInt(this.indicatorId)])
       .domain(this.valueRange)
-      .classes(this.options.colorRange[2].length);
+      .classes(this.options.colorRange[parseInt(this.indicatorId)].length);
 
     this.years = _.uniq(_.pluck(this.geoData, 'Year')).sort();
     this.currentYear = this.years[0];
