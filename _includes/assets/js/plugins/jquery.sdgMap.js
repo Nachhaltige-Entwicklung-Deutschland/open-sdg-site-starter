@@ -60,7 +60,6 @@
     this.geoCodeRegEx = options.geoCodeRegEx;
     this.goalNr = options.goal;
 
-
     // Require at least one geoLayer.
     if (!options.mapLayers.length) {
       console.log('Map disabled, no mapLayers in options.');
@@ -91,9 +90,6 @@
     this.age = _.pluck(this.geoData, 'age');
     this.ageName = translations.t(this.age[0]);
     //---------------------------------------------------
-
-
-
 
     this.init();
   }
@@ -261,6 +257,9 @@
           plugin.currentYear = new Date(e.time).getFullYear();
           plugin.updateColors();
           plugin.selectionLegend.update();
+          //-----
+          plugin.highlightFeature(e.layer)
+          //----
         }
       }));
 
