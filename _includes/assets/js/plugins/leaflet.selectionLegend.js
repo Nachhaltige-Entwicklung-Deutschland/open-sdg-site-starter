@@ -64,9 +64,11 @@
         lowValue: this.plugin.valueRange[0],
         highValue: this.plugin.valueRange[1],
         legendSwatches: swatches,
+
         //---
         title: headline,
         //---
+
       });
       return div;
     },
