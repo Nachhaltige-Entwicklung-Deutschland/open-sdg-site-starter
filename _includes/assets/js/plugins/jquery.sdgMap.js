@@ -241,12 +241,6 @@
       // Add tile imagery.
       L.tileLayer(this.options.tileURL, this.options.tileOptions).addTo(this.map);
 
-
-
-
-
-
-
       // Because after this point, "this" rarely works.
       var plugin = this;
 
@@ -258,7 +252,7 @@
           plugin.updateColors();
           plugin.selectionLegend.update();
           //-----
-          plugin.highlightFeature(e.layer)
+          plugin.highlightFeature(e.layer);
           //----
         }
       }));
