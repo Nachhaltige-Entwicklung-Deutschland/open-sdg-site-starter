@@ -282,9 +282,6 @@ opensdg.autotrack = function(preset, category, action, label) {
           plugin.currentYear = new Date(e.time).getFullYear();
           plugin.updateColors();
           plugin.selectionLegend.update();
-          //-----
-          plugin.highlightFeature(e.layer);
-          //----
         }
       }));
 
