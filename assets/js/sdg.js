@@ -91,7 +91,6 @@ opensdg.autotrack = function(preset, category, action, label) {
     this.geoCodeRegEx = options.geoCodeRegEx;
     this.goalNr = options.goal;
 
-
     // Require at least one geoLayer.
     if (!options.mapLayers.length) {
       console.log('Map disabled, no mapLayers in options.');
@@ -122,9 +121,6 @@ opensdg.autotrack = function(preset, category, action, label) {
     this.age = _.pluck(this.geoData, 'age');
     this.ageName = translations.t(this.age[0]);
     //---------------------------------------------------
-
-
-
 
     this.init();
   }
@@ -276,12 +272,6 @@ opensdg.autotrack = function(preset, category, action, label) {
       // Add tile imagery.
       L.tileLayer(this.options.tileURL, this.options.tileOptions).addTo(this.map);
 
-
-
-
-
-
-
       // Because after this point, "this" rarely works.
       var plugin = this;
 
@@ -292,6 +282,9 @@ opensdg.autotrack = function(preset, category, action, label) {
           plugin.currentYear = new Date(e.time).getFullYear();
           plugin.updateColors();
           plugin.selectionLegend.update();
+          //-----
+          plugin.highlightFeature(e.layer);
+          //----
         }
       }));
 
@@ -2450,7 +2443,7 @@ $(function() {
     },
 
     onAdd: function() {
-      var controlTpl = '<span id="mapHead">{title}</span>' +//--------------------
+      var controlTpl = '<span id="mapHead">{title}</span>' +//<<<----------------
         '<ul id="selection-list"></ul>' +
         '<div class="legend-swatches">' + //bar
           '{legendSwatches}' +
