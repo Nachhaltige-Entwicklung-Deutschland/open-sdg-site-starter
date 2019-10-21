@@ -154,7 +154,7 @@ map_options:
   tileOptions:
     id: mapbox.light
     accessToken: pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjanplNTNhMmQwMTFjM21wNHEzazRlejhwIn0.ecHE5G83cklfW5AXYjI_0A
-    attribution: <a href="https://www.mapbox.com">Mapbox</a> | <a href="https://www.bkg.bund.de">&copy; GeoBasis-De / BKG 2019</a> | <a href="https://www.destatis.de/DE/Home/_inhalt.html">6copy; Statistisches Bundesamt (Destatis), 2019</a>
+    attribution: <a href="https://www.mapbox.com">Mapbox</a> | <a href="https://www.bkg.bund.de">&copy; GeoBasis-De / BKG 2019</a> | <a href="https://www.destatis.de/DE/Home/_inhalt.html">&copy; Statistisches Bundesamt (Destatis), 2019</a>
 
   # Control the choropleth color range. See https://gka.github.io/chroma.js/#chroma-brewer
   #Goal 5:
