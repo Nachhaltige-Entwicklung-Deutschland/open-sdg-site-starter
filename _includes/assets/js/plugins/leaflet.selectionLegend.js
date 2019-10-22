@@ -31,10 +31,10 @@
 
     onAdd: function() {
       var controlTpl = '<span id="mapHead">{title}</span>' +//<<<----------------
-        //'<ul id="selection-list"></ul>' +
-        //'<div class="legend-swatches">' + //bar
-          //'{legendSwatches}' +
-        //'</div>' +
+        '<ul id="selection-list"></ul>' +
+        '<div class="legend-swatches">' + //bar
+          '{legendSwatches}' +
+        '</div>' +
         '<div class="legend-values">' + //values
           '<span class="legend-value left">{lowValue}</span>' +
           '<span class="arrow left"></span>' +
