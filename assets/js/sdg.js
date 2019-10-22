@@ -229,7 +229,7 @@ opensdg.autotrack = function(preset, category, action, label) {
 
     updateTooltip: function() {
       for (var i = 0; i < this.mapLayers.length; i++) {
-        this.highlightFeature(this.mapLayers[i])
+        this.highlightFeature(this.mapLayers[i]);
     },
 
 
@@ -290,7 +290,7 @@ opensdg.autotrack = function(preset, category, action, label) {
           plugin.updateColors();
           plugin.selectionLegend.update();
 
-          plugin.updateTooltip();
+          //plugin.updateTooltip();
 
         }
       }));
@@ -356,7 +356,7 @@ opensdg.autotrack = function(preset, category, action, label) {
         }
         plugin.updateColors();
 
-        plugin.updateTooltip();
+        //plugin.updateTooltip();
 
 
         // Now that we have layers, we can add the search feature.
