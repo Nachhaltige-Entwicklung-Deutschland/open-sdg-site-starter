@@ -226,6 +226,13 @@ opensdg.autotrack = function(preset, category, action, label) {
       });
     },
 
+
+    updateTooltip: function() {
+      for (var i = 0; i < this.mapLayers.length; i++) {
+        highlightFeature(this.mapLayers[i])
+    }
+
+
     // Get the data from a feature's properties, according to the current year.
     getData: function(props) {
       if (props[this.currentYear]) {
@@ -282,6 +289,9 @@ opensdg.autotrack = function(preset, category, action, label) {
           plugin.currentYear = new Date(e.time).getFullYear();
           plugin.updateColors();
           plugin.selectionLegend.update();
+
+          plugin.updateTooltip();
+
         }
       }));
 
@@ -345,6 +355,9 @@ opensdg.autotrack = function(preset, category, action, label) {
           plugin.dynamicLayers.addLayer(layer);
         }
         plugin.updateColors();
+
+        plugin.updateTooltip();
+
 
         // Now that we have layers, we can add the search feature.
         plugin.searchControl = new L.Control.Search({
