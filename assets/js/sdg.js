@@ -229,7 +229,9 @@ opensdg.autotrack = function(preset, category, action, label) {
 
     updateTooltip: function() {
       for (var i = 0; i < this.mapLayers.length; i++) {
-        this.highlightFeature(this.mapLayers[i]);
+        return{
+          latestTt: plugin.highlightFeature(this.mapLayers[i]),
+        }
     },
 
 
