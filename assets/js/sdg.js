@@ -831,8 +831,7 @@ var indicatorDataStore = function(dataUrl) {
       pointBackgroundColor: '#ffffff',
       pointHoverBorderWidth: 1,
       tension: 0,
-      spanGaps: false,
-      rotation: 180
+      spanGaps: false
     };
 
     that.footerFields = {};
@@ -1070,7 +1069,6 @@ var indicatorDataStore = function(dataUrl) {
         }).join(', ');
       },
 
-
       getColor = function(datasetIndex) {
 
         // offset if there is no headline data:
@@ -1090,28 +1088,16 @@ var indicatorDataStore = function(dataUrl) {
 
         return datasetIndex === 0 ? headlineColor : colors[datasetIndex];
       },
-      /*
-      getPointStyle = function(){
-        // offset if there is no headline data:
-        if(that.displays.length > 0) {
-          return 'triangle';
-        }
-
-        else {
-          return 'circle';
-        }
-      },
-      */
 
       getPointStyle = function (combinationDescription) {
         if (String(combinationDescription).substr(0,4) == 'Ziel'){
           return 'triangle';
         }
         else if (String(combinationDescription).substr(0,4) == 'Zeit'){
-          return 'image';
+          return 'circle';
         }
         else {
-          return 'circle';
+          return 'star';
         }
       },
 
@@ -1129,7 +1115,6 @@ var indicatorDataStore = function(dataUrl) {
         // var fieldIndex = field ? _.findIndex(that.selectedFields, function (f) {
         //     return f === field;
         //   }) : undefined,
-        var image = document.getElementById('C:/Users/admin/Desktop/down');
         var fieldIndex,
           ds = _.extend({
             label: combinationDescription ? combinationDescription : that.country,
@@ -2441,10 +2426,10 @@ $(function() {
 
     onAdd: function() {
       var controlTpl = '<span id="mapHead">{title}</span>' +//<<<----------------
-        '<ul id="selection-list"></ul>' +
-        '<div class="legend-swatches">' + //bar
-          '{legendSwatches}' +
-        '</div>' +
+        //'<ul id="selection-list"></ul>' +
+        //'<div class="legend-swatches">' + //bar
+          //'{legendSwatches}' +
+        //'</div>' +
         '<div class="legend-values">' + //values
           '<span class="legend-value left">{lowValue}</span>' +
           '<span class="arrow left"></span>' +
