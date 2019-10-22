@@ -175,8 +175,7 @@ var indicatorModel = function (options) {
       pointBackgroundColor: '#ffffff',
       pointHoverBorderWidth: 1,
       tension: 0,
-      spanGaps: false,
-      rotation: 180
+      spanGaps: false
     };
 
     that.footerFields = {};
@@ -414,7 +413,6 @@ var indicatorModel = function (options) {
         }).join(', ');
       },
 
-
       getColor = function(datasetIndex) {
 
         // offset if there is no headline data:
@@ -434,28 +432,16 @@ var indicatorModel = function (options) {
 
         return datasetIndex === 0 ? headlineColor : colors[datasetIndex];
       },
-      /*
-      getPointStyle = function(){
-        // offset if there is no headline data:
-        if(that.displays.length > 0) {
-          return 'triangle';
-        }
-
-        else {
-          return 'circle';
-        }
-      },
-      */
 
       getPointStyle = function (combinationDescription) {
         if (String(combinationDescription).substr(0,4) == 'Ziel'){
           return 'triangle';
         }
         else if (String(combinationDescription).substr(0,4) == 'Zeit'){
-          return 'image';
+          return 'circle';
         }
         else {
-          return 'circle';
+          return 'star';
         }
       },
 
@@ -473,7 +459,6 @@ var indicatorModel = function (options) {
         // var fieldIndex = field ? _.findIndex(that.selectedFields, function (f) {
         //     return f === field;
         //   }) : undefined,
-        var image = document.getElementById('C:/Users/admin/Desktop/down');
         var fieldIndex,
           ds = _.extend({
             label: combinationDescription ? combinationDescription : that.country,
