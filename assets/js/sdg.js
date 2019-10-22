@@ -229,8 +229,8 @@ opensdg.autotrack = function(preset, category, action, label) {
 
     updateTooltip: function() {
       for (var i = 0; i < this.mapLayers.length; i++) {
-        highlightFeature(this.mapLayers[i])
-    }
+        this.highlightFeature(this.mapLayers[i])
+    },
 
 
     // Get the data from a feature's properties, according to the current year.
