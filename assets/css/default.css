@@ -863,7 +863,7 @@ h5 + .btn-download {
     text-align: center;
     margin-top: -32px; }
     #main-content #legend li {
-      font-size: 30px;
+      font-size: 13px;
       list-style-type: none;
       display: inline-block;
       color: #666;
@@ -876,7 +876,8 @@ h5 + .btn-download {
         text-decoration: line-through; }
     #main-content #legend .swatch {
       display: inline-block;
-      width: 45px;
+      labels-usePointStyle: true;
+      width: 85px;
       height: 15px;
       margin-right: 3px; }
       #main-content #legend .swatch.dashed {
