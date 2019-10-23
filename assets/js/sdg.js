@@ -1092,7 +1092,7 @@ var indicatorDataStore = function(dataUrl) {
 
       getPointStyle = function (combinationDescription) {
         if (String(combinationDescription).substr(0,4) == 'Ziel'){
-          return 'triangle';
+          return 'rect';
         }
         else if (String(combinationDescription).substr(0,4) == 'Zeit'){
           return 'circle';
