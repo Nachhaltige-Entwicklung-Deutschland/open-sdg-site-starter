@@ -875,9 +875,8 @@ h5 + .btn-download {
       #main-content #legend li.notshown {
         text-decoration: line-through; }
     #main-content #legend .swatch {
-      display: inline-block;
-      labels-usePointStyle: true;
-      width: 85px;
+      display: 'flex';
+      width: 45px;
       height: 15px;
       margin-right: 3px; }
       #main-content #legend .swatch.dashed {
