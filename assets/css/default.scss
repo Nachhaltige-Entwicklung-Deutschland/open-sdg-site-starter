@@ -1037,11 +1037,8 @@ h5 + .btn-download {
       }
     }
     .swatch {
-      display: inline-block;
-      labels: {
-        usePointStyle: true;
-      };
-      width: 85px;
+      display: 'flex'; //inline-block;
+      width: 45px;
       height: 15px;
       margin-right: 3px;
 
