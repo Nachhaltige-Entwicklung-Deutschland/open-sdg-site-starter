@@ -1122,6 +1122,7 @@ var indicatorDataStore = function(dataUrl) {
             borderColor: '#' + getColor(datasetIndex),
             backgroundColor: '#' + getColor(datasetIndex),
             pointStyle: getPointStyle(combinationDescription),
+            radius: 8,
             rotation: 180,
             pointBorderColor: '#' + getColor(datasetIndex),
             borderDash: getBorderDash(datasetIndex),
