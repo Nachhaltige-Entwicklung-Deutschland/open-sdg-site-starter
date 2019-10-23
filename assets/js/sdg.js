@@ -1426,7 +1426,7 @@ var indicatorView = function (model, options) {
       }
     });
 
-    $(view_obj._legendElement).on('click', 'li', function(e) {
+    $(view_obj._legendElement).on('click', 'ri', function(e) {
       $(this).toggleClass('notshown');
 
       var ci = view_obj._chartInstance,
