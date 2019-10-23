@@ -68,36 +68,3 @@ header {
   margin-left: 0;
   margin-right: 0;
   font-weight: bold; }
-
-#legend {
-  padding-left: 0;
-  text-align: center;
-  margin-top: -32px; }
-  #legend li {
-    font-size: 30px;
-    list-style-type: none;
-    display: inline-block;
-    color: #666;
-    line-height: 18px;
-    cursor: pointer;
-    padding: 5px; }
-    #legend li:hover {
-      background: #eee; }
-    #legend li.notshown {
-      text-decoration: line-through; }
-  #legend .swatch {
-    display: inline-block;
-    width: 45px;
-    height: 15px;
-    margin-right: 3px; }
-    #legend .swatch.dashed {
-      background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAABCAYAAADn9T9+AAAAFklEQVQImWP8////fwY0wMjIyIguBgCaAgQCms5tJwAAAABJRU5ErkJggg==");
-      background-repeat: repeat;
-      background-position: -5px 0; }
-  #legend span {
-    vertical-align: middle;
-    line-height: 18px; }
-  #legend:after {
-    content: "";
-    display: table;
-    clear: both; }
