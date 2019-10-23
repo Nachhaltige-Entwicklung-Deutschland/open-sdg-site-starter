@@ -132,7 +132,6 @@ var indicatorView = function (model, options) {
     else if (args.indicatorId.includes('_16-')) {var goalNr = 15;}
     else if (args.indicatorId.includes('_17-')) {var goalNr = 16;}
 
-
     if(args.hasGeoData && args.showMap) {
       view_obj._mapView = new mapView();
       view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr);
