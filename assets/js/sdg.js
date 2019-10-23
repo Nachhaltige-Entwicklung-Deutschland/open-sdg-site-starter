@@ -1817,7 +1817,7 @@ var indicatorView = function (model, options) {
             return text.join('');
         },
         legend: {
-          display: false
+          display: true
         },
         title: {
           display: false
