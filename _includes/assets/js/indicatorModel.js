@@ -434,10 +434,10 @@ var indicatorModel = function (options) {
       },
 
       getPointStyle = function (combinationDescription) {
-        if (String(combinationDescription).substr(0,4) == 'Ziel'){
+        if (String(combinationDescription).substr(0,4) == 'Ziel') || (String(combinationDescription).substr(0,6) == 'Target'){
           return 'rect';
         }
-        else if (String(combinationDescription).substr(0,4) == 'Zeit'){
+        else if (String(combinationDescription).substr(0,4) == 'Zeit') || (String(combinationDescription).substr(0,4) == 'Time'){
           return 'circle';
         }
         else {
