@@ -1020,7 +1020,7 @@ h5 + .btn-download {
     text-align: center;
     margin-top: -32px;
     li {
-      font-size: 30px;
+      font-size: 13px;
       list-style-type: none;
       display: inline-block;
       color: #666;
@@ -1038,7 +1038,10 @@ h5 + .btn-download {
     }
     .swatch {
       display: inline-block;
-      width: 45px;
+      labels: {
+        usePointStyle: true;
+      };
+      width: 85px;
       height: 15px;
       margin-right: 3px;
 
