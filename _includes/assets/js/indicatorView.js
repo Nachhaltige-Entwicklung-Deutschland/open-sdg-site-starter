@@ -364,7 +364,7 @@ var indicatorView = function (model, options) {
 
     view_obj._chartInstance.update(1000, true);
 
-    $(this._legendElement).html(view_obj._chartInstance.generateLegend());
+    //$(this._legendElement).html(view_obj._chartInstance.generateLegend());
   };
 
 
@@ -414,7 +414,7 @@ var indicatorView = function (model, options) {
             return text.join('');
         },
         legend: {
-          display: false,
+          display: true,
           labels: {
             usePointStyle: true,
           },
@@ -495,7 +495,7 @@ var indicatorView = function (model, options) {
       });
     });
 
-    $(this._legendElement).html(view_obj._chartInstance.generateLegend());
+    //$(this._legendElement).html(view_obj._chartInstance.generateLegend());
   };
 
   this.toCsv = function (tableData) {
