@@ -1820,6 +1820,7 @@ var indicatorView = function (model, options) {
           position: 'bottom',
           labels: {
             usePointStyle: true,
+            boxWidth: 6,
           },
         },
         title: {
@@ -1832,8 +1833,6 @@ var indicatorView = function (model, options) {
     };
     chartConfig = opensdg.chartConfigAlter(chartConfig);
 
-
-    Chart.defaults.global.legend.labels.usePointStyle = true;
 
     this._chartInstance = new Chart($(this._rootElement).find('canvas'), chartConfig);
 
