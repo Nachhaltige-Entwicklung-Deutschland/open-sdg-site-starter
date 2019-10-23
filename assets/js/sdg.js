@@ -1816,7 +1816,7 @@ var indicatorView = function (model, options) {
             return text.join('');
         },
         legend: {
-          display: true,
+          display: false,
           labels: {
             usePointStyle: true,
           },
@@ -1897,7 +1897,7 @@ var indicatorView = function (model, options) {
       });
     });
 
-    //$(this._legendElement).html(view_obj._chartInstance.generateLegend());
+    $(this._legendElement).html(view_obj._chartInstance.generateLegend());
   };
 
   this.toCsv = function (tableData) {
