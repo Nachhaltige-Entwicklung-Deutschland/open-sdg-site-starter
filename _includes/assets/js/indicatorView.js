@@ -400,20 +400,20 @@ var indicatorView = function (model, options) {
             }
           }]
         },
-        //legendCallback: function(chart) {
-            //var text = ['<ul id="legend">'];
+        legendCallback: function(chart) {
+            var text = ['<ul id="legend">'];
 
-            //_.each(chart.data.datasets, function(dataset, datasetIndex) {
-              //text.push('<li data-datasetindex="' + datasetIndex + '">');
-              //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
-              //text.push('</span>');
-              //text.push(translations.t(dataset.label));
-              //text.push('</li>');
-            //});
+            _.each(chart.data.datasets, function(dataset, datasetIndex) {
+              text.push('<li data-datasetindex="' + datasetIndex + '">');
+              text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
+              text.push('</span>');
+              text.push(translations.t(dataset.label));
+              text.push('</li>');
+            });
 
-            //text.push('</ul>');
-            //return text.join('');
-        //},
+            text.push('</ul>');
+            return text.join('');
+        },
         legend: {
           display: true,
           labels: {
@@ -496,7 +496,7 @@ var indicatorView = function (model, options) {
       });
     });
 
-    $(this._legendElement).html(view_obj._chartInstance.generateLegend());
+    //$(this._legendElement).html(view_obj._chartInstance.generateLegend());
   };
 
   this.toCsv = function (tableData) {
