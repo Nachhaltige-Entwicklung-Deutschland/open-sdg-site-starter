@@ -1818,7 +1818,9 @@ var indicatorView = function (model, options) {
         },
         legend: {
           display: true,
-          usePointStyle: true
+          labels: {
+            usePointStyle: true
+          },
         },
         title: {
           display: false
