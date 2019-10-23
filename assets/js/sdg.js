@@ -1769,7 +1769,7 @@ var indicatorView = function (model, options) {
   };
 
 
-
+  Chart.defaults.global.legend.labels.usePointStyle = true;
   this.createPlot = function (chartInfo) {
 
     var that = this;
