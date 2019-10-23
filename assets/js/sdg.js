@@ -1091,10 +1091,10 @@ var indicatorDataStore = function(dataUrl) {
       },
 
       getPointStyle = function (combinationDescription) {
-        if (String(combinationDescription).substr(0,4) == 'Ziel') || (String(combinationDescription).substr(0,6) == 'Target'){
+        if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
           return 'rect';
         }
-        else if (String(combinationDescription).substr(0,4) == 'Zeit') || (String(combinationDescription).substr(0,4) == 'Time'){
+        else if (String(combinationDescription).substr(0,4) == 'Zeit' || String(combinationDescription).substr(0,4) == 'Time'){
           return 'circle';
         }
         else {
