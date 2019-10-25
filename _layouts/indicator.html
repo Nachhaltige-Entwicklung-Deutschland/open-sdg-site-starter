@@ -145,6 +145,10 @@
           </li>
 
           <li role="presentation" class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#content" aria-controls="content" role="tab" {% include autotrack.html preset="tab_meta_content" category="Tab change" action="Change metadata view" label="Change to Content tab" %}>{{ t.indicator.contentAndProgress }}</a>
+          </li>
+
+          <li role="presentation" class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#globalmetadata" aria-controls="globalmetadata" role="tab" {% include autotrack.html preset="tab_meta_global" category="Tab change" action="Change metadata view" label="Change to Global Metadata tab" %}>{{ t.indicator.history }}</a>
           </li>
 
@@ -177,7 +181,7 @@
             </div>
           </div>
 
-          <div role="tabpanel" class="tab-pane" id="globalmetadata">
+          <div role="tabpanel" class="tab-pane" id="content">
             <div>
               <article>
                 <p>{{ t.indicator.history_blurb }}</p>
