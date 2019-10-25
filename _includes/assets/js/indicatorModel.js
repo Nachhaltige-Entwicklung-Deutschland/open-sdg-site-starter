@@ -503,7 +503,7 @@ var indicatorModel = function (options) {
 
               label: combinationDescription ? combinationDescription : that.country,
               borderColor: '#' + getColor(tsrIndex),
-              backgroundColor: '#' + getColor(tsrIndex),
+              //backgroundColor: '#' + getColor(tsrIndex),
               pointStyle: getPointStyle(combinationDescription),
               radius: 8,
               rotation: 180,
