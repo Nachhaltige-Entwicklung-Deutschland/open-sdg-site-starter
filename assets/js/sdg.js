@@ -1152,16 +1152,19 @@ var indicatorDataStore = function(dataUrl) {
         }
 
         else{
+          var tmpIndex = nameList.indexOf(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length));
+          var tsrIndex = indexList[tmpIndex]
+
           var fieldIndex,
             ds = _.extend({
 
               label: combinationDescription ? combinationDescription : that.country,
-              borderColor: '#000000',//' + getColor(datasetIndex),
-              backgroundColor: '#000000',// + getColor(datasetIndex),
+              borderColor: '#' + getColor(tsrIndex),
+              backgroundColor: '#' + getColor(tsrIndex),
               pointStyle: getPointStyle(combinationDescription),
               radius: 8,
               rotation: 180,
-              pointBorderColor: '#000000',//' + getColor(datasetIndex),
+              pointBorderColor: '#' + getColor(tsrIndex),
               borderDash: getBorderDash(datasetIndex),
               data: _.map(that.years, function (year) {
                 var found = _.findWhere(data, {
