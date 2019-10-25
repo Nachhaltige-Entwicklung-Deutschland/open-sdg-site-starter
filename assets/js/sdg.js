@@ -1156,12 +1156,12 @@ var indicatorDataStore = function(dataUrl) {
             ds = _.extend({
 
               label: combinationDescription ? combinationDescription : that.country,
-              borderColor: '#ffffff',//' + getColor(datasetIndex),
-              backgroundColor: '#ffffff',// + getColor(datasetIndex),
+              borderColor: '#000000',//' + getColor(datasetIndex),
+              backgroundColor: '#000000',// + getColor(datasetIndex),
               pointStyle: getPointStyle(combinationDescription),
               radius: 8,
               rotation: 180,
-              pointBorderColor: '#ffffff',//' + getColor(datasetIndex),
+              pointBorderColor: '#000000',//' + getColor(datasetIndex),
               borderDash: getBorderDash(datasetIndex),
               data: _.map(that.years, function (year) {
                 var found = _.findWhere(data, {
