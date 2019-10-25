@@ -1063,6 +1063,14 @@ var indicatorDataStore = function(dataUrl) {
       seriesData = [],
       headlineTable = undefined,
       datasetIndex = 0,
+
+      //-----------------
+      nameList = []
+      indexList = []
+      //----------------
+
+
+
       getCombinationDescription = function(combination) {
         return _.map(Object.keys(combination), function(key) {
           return translations.t(combination[key]);
@@ -1123,7 +1131,7 @@ var indicatorDataStore = function(dataUrl) {
             //var colorCheck =
             //---------------------
 
-            label: combinationDescription ? combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length) : that.country,
+            label: combinationDescription ? nameList[0] : that.country,
             borderColor: '#' + getColor(datasetIndex),
             backgroundColor: '#' + getColor(datasetIndex),
             pointStyle: getPointStyle(combinationDescription),
@@ -1139,6 +1147,10 @@ var indicatorDataStore = function(dataUrl) {
             }),
             borderWidth: combinationDescription ? 2 : 4
           }, that.datasetObject);
+
+        if (!nameList.includes(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length))){
+          nameList.push(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length))
+        }
         datasetIndex++;
         return ds;
       };
