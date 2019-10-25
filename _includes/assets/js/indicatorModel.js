@@ -474,7 +474,7 @@ var indicatorModel = function (options) {
             //var colorCheck =
             //---------------------
 
-            label: combinationDescription ? nameList[0] : that.country,
+            label: combinationDescription ? combinationDescription : that.country,
             borderColor: '#' + getColor(datasetIndex),
             backgroundColor: '#' + getColor(datasetIndex),
             pointStyle: getPointStyle(combinationDescription),
@@ -493,6 +493,7 @@ var indicatorModel = function (options) {
 
         if (!nameList.includes(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length))){
           nameList.push(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length))
+          indexList.push(index)
         }
         datasetIndex++;
         return ds;
