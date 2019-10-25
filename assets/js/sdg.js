@@ -1144,6 +1144,7 @@ var indicatorDataStore = function(dataUrl) {
                 });
                 return found ? found.Value : null;
               }),
+              type: 'line',
               borderWidth: combinationDescription ? 2 : 4
             }, that.datasetObject);
         }
