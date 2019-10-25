@@ -461,7 +461,12 @@ var indicatorModel = function (options) {
         //   }) : undefined,
         var fieldIndex,
           ds = _.extend({
-            label: combinationDescription ? combinationDescription : that.country,
+
+            //---------------------
+            //var colorCheck =
+            //---------------------
+
+            label: combinationDescription ? combinationDescription.split(',') : that.country,
             borderColor: '#' + getColor(datasetIndex),
             backgroundColor: '#' + getColor(datasetIndex),
             pointStyle: getPointStyle(combinationDescription),
