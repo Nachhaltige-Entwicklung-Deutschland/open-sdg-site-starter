@@ -1137,8 +1137,7 @@ var indicatorDataStore = function(dataUrl) {
               borderColor: '#' + getColor(datasetIndex),
               backgroundColor: '#' + getColor(datasetIndex),
               pointStyle: getPointStyle(combinationDescription),
-              radius: 8,
-              rotation: 180,
+              radius: 6,
               pointBorderColor: '#' + getColor(datasetIndex),
               borderDash: getBorderDash(datasetIndex),
               data: _.map(that.years, function (year) {
@@ -1159,12 +1158,11 @@ var indicatorDataStore = function(dataUrl) {
             ds = _.extend({
 
               label: combinationDescription ? combinationDescription : that.country,
-              //borderColor: '#' + getColor(tsrIndex),
+              borderColor: '#' + getColor(tsrIndex),
               backgroundColor: '#' + getColor(tsrIndex),
               pointStyle: getPointStyle(combinationDescription),
-              radius: 8,
-              rotation: 180,
-              pointBorderColor: '#' + getColor(tsrIndex),
+              radius: 6,
+              //pointBorderColor: '#' + getColor(tsrIndex),
               borderDash: getBorderDash(datasetIndex),
               data: _.map(that.years, function (year) {
                 var found = _.findWhere(data, {
