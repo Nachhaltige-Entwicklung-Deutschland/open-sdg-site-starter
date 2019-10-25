@@ -404,12 +404,9 @@ var indicatorView = function (model, options) {
 
             _.each(chart.data.datasets, function(dataset, datasetIndex) {
               text.push('<li data-datasetindex="' + datasetIndex + '">');
-              if (dataset.label[0:4] == 'Ziel') {
-                text.push('<span class="swatchTgt' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
-              }
-              else {
-                text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
-              }
+              
+              text.push('<span class="swatchTgt' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
+
               text.push('</span>');
               text.push(translations.t(dataset.label));
               text.push('</li>');
