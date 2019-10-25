@@ -1125,12 +1125,11 @@ var indicatorDataStore = function(dataUrl) {
         //     return f === field;
         //   }) : undefined,
 
-        
+
         //--------------------
         if (!nameList.includes(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length))){
           nameList.push(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length));
           indexList.push(datasetIndex);
-
 
           var fieldIndex,
             ds = _.extend({
