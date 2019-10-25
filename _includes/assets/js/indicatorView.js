@@ -408,7 +408,7 @@ var indicatorView = function (model, options) {
                 text.push('<span class="swatchTgt' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
               }
               else{
-                text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
+                text.push('<span class="swatchTsr' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
               }
 
               text.push('</span>');
