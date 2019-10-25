@@ -1123,7 +1123,7 @@ var indicatorDataStore = function(dataUrl) {
             //var colorCheck =
             //---------------------
 
-            label: combinationDescription ? combinationDescription.split(' ') : that.country,
+            label: combinationDescription ? combinationDescription.substring(15, combinationDescription.length) : that.country,
             borderColor: '#' + getColor(datasetIndex),
             backgroundColor: '#' + getColor(datasetIndex),
             pointStyle: getPointStyle(combinationDescription),
