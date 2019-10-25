@@ -1131,7 +1131,7 @@ var indicatorDataStore = function(dataUrl) {
             //var colorCheck =
             //---------------------
 
-            label: combinationDescription ? nameList[0] : that.country,
+            label: combinationDescription ? nameList : that.country,
             borderColor: '#' + getColor(datasetIndex),
             backgroundColor: '#' + getColor(datasetIndex),
             pointStyle: getPointStyle(combinationDescription),
