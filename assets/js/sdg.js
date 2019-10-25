@@ -1131,7 +1131,7 @@ var indicatorDataStore = function(dataUrl) {
             //var colorCheck =
             //---------------------
 
-            label: combinationDescription ? combinationDescription : that.country,
+            label: combinationDescription ? nameList[0] : that.country,
             borderColor: '#' + getColor(datasetIndex),
             backgroundColor: '#' + getColor(datasetIndex),
             pointStyle: getPointStyle(combinationDescription),
@@ -1147,11 +1147,12 @@ var indicatorDataStore = function(dataUrl) {
             }),
             borderWidth: combinationDescription ? 2 : 4
           }, that.datasetObject);
-
+        //--------------------
         if (!nameList.includes(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length))){
           nameList.push(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length));
           indexList.push(datasetIndex);
         }
+        //----------------------------------
         datasetIndex++;
         return ds;
       };
