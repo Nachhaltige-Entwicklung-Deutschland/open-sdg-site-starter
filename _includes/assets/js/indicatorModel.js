@@ -445,11 +445,8 @@ var indicatorModel = function (options) {
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
           return 'rect';
         }
-        else if (String(combinationDescription).substr(0,4) == 'Zeit' || String(combinationDescription).substr(0,4) == 'Time'){
-          return 'circle';
-        }
         else {
-          return 'star';
+          return 'circle';
         }
       },
 
@@ -470,7 +467,7 @@ var indicatorModel = function (options) {
 
 
         //--------------------
-        if (!nameList.includes(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length))){
+        if (!nameList.includes(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length)) || (!combinationDescription.substring(0, 4)=='Ziel' && !combinationDescription.substring(0, 4)=='Zeit') {
           nameList.push(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length));
           indexList.push(datasetIndex);
 
