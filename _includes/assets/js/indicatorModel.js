@@ -487,6 +487,7 @@ var indicatorModel = function (options) {
                 });
                 return found ? found.Value : null;
               }),
+              type: 'line',
               borderWidth: combinationDescription ? 2 : 4
             }, that.datasetObject);
         }
