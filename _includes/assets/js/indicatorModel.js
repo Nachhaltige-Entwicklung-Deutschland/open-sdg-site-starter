@@ -466,7 +466,7 @@ var indicatorModel = function (options) {
             //var colorCheck =
             //---------------------
 
-            label: combinationDescription ? combinationDescription.substring(combinationDescription.indexOff(','), combinationDescription.length) : that.country,
+            label: combinationDescription ? combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length) : that.country,
             borderColor: '#' + getColor(datasetIndex),
             backgroundColor: '#' + getColor(datasetIndex),
             pointStyle: getPointStyle(combinationDescription),
