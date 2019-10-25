@@ -1124,35 +1124,55 @@ var indicatorDataStore = function(dataUrl) {
         // var fieldIndex = field ? _.findIndex(that.selectedFields, function (f) {
         //     return f === field;
         //   }) : undefined,
-        var fieldIndex,
-          ds = _.extend({
-
-            //---------------------
-            //var colorCheck =
-            //---------------------
-
-            label: combinationDescription ? combinationDescription : that.country,
-            borderColor: '#' + getColor(datasetIndex),
-            backgroundColor: '#' + getColor(datasetIndex),
-            pointStyle: getPointStyle(combinationDescription),
-            radius: 8,
-            rotation: 180,
-            pointBorderColor: '#' + getColor(datasetIndex),
-            borderDash: getBorderDash(datasetIndex),
-            data: _.map(that.years, function (year) {
-              var found = _.findWhere(data, {
-                Year: year
-              });
-              return found ? found.Value : null;
-            }),
-            borderWidth: combinationDescription ? 2 : 4
-          }, that.datasetObject);
         //--------------------
         if (!nameList.includes(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length))){
           nameList.push(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length));
           indexList.push(datasetIndex);
-        }
         //----------------------------------
+
+          var fieldIndex,
+            ds = _.extend({
+
+              label: combinationDescription ? combinationDescription : that.country,
+              borderColor: '#' + getColor(datasetIndex),
+              backgroundColor: '#' + getColor(datasetIndex),
+              pointStyle: getPointStyle(combinationDescription),
+              radius: 8,
+              rotation: 180,
+              pointBorderColor: '#' + getColor(datasetIndex),
+              borderDash: getBorderDash(datasetIndex),
+              data: _.map(that.years, function (year) {
+                var found = _.findWhere(data, {
+                  Year: year
+                });
+                return found ? found.Value : null;
+              }),
+              borderWidth: combinationDescription ? 2 : 4
+            }, that.datasetObject);
+        }
+
+        else{
+          var fieldIndex,
+            ds = _.extend({
+
+              label: combinationDescription ? combinationDescription : that.country,
+              borderColor: '#ffffff',//' + getColor(datasetIndex),
+              backgroundColor: '#ffffff',// + getColor(datasetIndex),
+              pointStyle: getPointStyle(combinationDescription),
+              radius: 8,
+              rotation: 180,
+              pointBorderColor: '#ffffff',//' + getColor(datasetIndex),
+              borderDash: getBorderDash(datasetIndex),
+              data: _.map(that.years, function (year) {
+                var found = _.findWhere(data, {
+                  Year: year
+                });
+                return found ? found.Value : null;
+              }),
+              borderWidth: combinationDescription ? 2 : 4
+            }, that.datasetObject);
+        }
+
         datasetIndex++;
         return ds;
       };
