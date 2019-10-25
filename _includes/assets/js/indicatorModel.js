@@ -493,7 +493,7 @@ var indicatorModel = function (options) {
 
         if (!nameList.includes(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length))){
           nameList.push(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length));
-          indexList.push(index);
+          indexList.push(datasetIndex);
         }
         datasetIndex++;
         return ds;
