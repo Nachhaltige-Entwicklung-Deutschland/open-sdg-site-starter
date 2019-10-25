@@ -876,10 +876,10 @@ h5 + .btn-download {
         text-decoration: line-through; }
     #main-content #legend .swatch {
       display: inline-block;
-      width: 45px;
+      width: 15px;
       height: 15px;
       margin-right: 3px;
-      border-radius: 25px; }
+      border-radius: 7.5px; }
       #main-content #legend .swatch.dashed {
         background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAABCAYAAADn9T9+AAAAFklEQVQImWP8////fwY0wMjIyIguBgCaAgQCms5tJwAAAABJRU5ErkJggg==");
         background-repeat: repeat;

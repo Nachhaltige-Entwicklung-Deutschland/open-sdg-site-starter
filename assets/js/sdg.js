@@ -1816,12 +1816,12 @@ var indicatorView = function (model, options) {
             return text.join('');
         },
         legend: {
-          display: true,
-          position: 'bottom',
-          labels: {
-            usePointStyle: true,
-            boxWidth: 6,
-          },
+          display: false,
+          //position: 'bottom',
+          //labels: {
+            //usePointStyle: true,
+            //boxWidth: 6,
+          //},
         },
         title: {
           display: false
