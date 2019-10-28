@@ -141,7 +141,7 @@
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
           <li role="presentation" class="nav-item active">
-            <a class="nav-link" data-toggle="tab" href="#metadata" aria-controls="metadata" role="tab" {% include autotrack.html preset="tab_meta_national" category="Tab change" action="Change metadata view" label="Change to Metadata tab" %}>{{ t.indicator.metadata }}</a>
+            <a class="nav-link" data-toggle="tab" href="#metadata" aria-controls="metadata" role="tab" {% include autotrack.html preset="tab_meta_national" category="Tab change" action="Change metadata view" label="Change to Metadata tab" %}>{{ t.indicator.details }}</a>
           </li>
 
           <li role="presentation" class="nav-item">
@@ -183,7 +183,7 @@
 
           <div role="tabpanel" class="tab-pane" id="content">
             <div>
-              <article>                
+              <article>
                 {% include components/content.html %}
               </article>
             </div>
