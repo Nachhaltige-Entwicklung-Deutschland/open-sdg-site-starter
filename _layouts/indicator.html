@@ -183,10 +183,8 @@
 
           <div role="tabpanel" class="tab-pane" id="content">
             <div>
-              <article>
-                {% assign content = meta[content_and_progress] | t %}
-                <p>{{ content }}</p>
-                <!--{% include components/content.html %}-->
+              <article>                
+                {% include components/content.html %}
               </article>
             </div>
           </div>
