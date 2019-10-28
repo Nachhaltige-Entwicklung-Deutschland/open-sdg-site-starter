@@ -38,7 +38,7 @@
             {% endif %}
           </td>
         {% else %} <!-- case: content -->
-          <a> {{ meta[indicator_metadata.name] | t | markdownify }} </a>
+          <p> {{ meta[indicator_metadata.name] | t | markdownify }} </p>
         {% endif %}
       </tr>
       {% endunless %}
