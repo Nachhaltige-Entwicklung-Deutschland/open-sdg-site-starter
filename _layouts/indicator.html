@@ -184,7 +184,9 @@
           <div role="tabpanel" class="tab-pane" id="content">
             <div>
               <article>
-                {% include components/content.html %}
+                {% assign content = meta[content_and_progress] | t %}
+                <p>{{ content }}</p>
+                <!--{% include components/content.html %}-->
               </article>
             </div>
           </div>
