@@ -44,7 +44,6 @@
       {% endunless %}
 
 
-
       {% if indicator_metadata.name contains "_year" %}
         {% if indicator_metadata.name contains "_a_" %}
           {% assign year_a = meta[indicator_metadata.name] | t | markdownify %}
