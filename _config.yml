@@ -199,8 +199,8 @@ map_options:
     #dashArray: 5,5
 map_layers:
  #Country
-  - min_zoom: 5
-    max_zoom: 10
+  - min_zoom: 0
+    max_zoom: 20
     #serviceUrl: https://g205sdgs.github.io/sdg-indicators/assets/maps/Ländergrenzen_ohne_Seegrenzen.geojson
     #nameProperty: GEN
     #idProperty: AGS
@@ -209,8 +209,8 @@ map_layers:
     idProperty: CNTR_CODE
     staticBorders: true
   #Bundesland
-  - min_zoom: 6
-    max_zoom: 10
+  - min_zoom: 7
+    max_zoom: 20
     serviceUrl: https://g205sdgs.github.io/sdg-indicators/assets/maps/NUTS_RG_01M_2016_4326_LEVL_1.geojson
     nameProperty: NUTS_NAME
     idProperty: NUTS_ID
