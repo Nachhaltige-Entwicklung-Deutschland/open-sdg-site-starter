@@ -215,10 +215,5 @@ map_layers:
     nameProperty: NUTS_NAME
     idProperty: NUTS_ID
     staticBorders: false
-  #County
-  #- min_zoom: 8
-    #max_zoom: 9
-    #serviceUrl: https://geoportal1-ons.opendata.arcgis.com/datasets/b7507e654334481e8e0787f42c9028c1_3.geojson
-    #nameProperty: cty18nm
-    #idProperty: cty18cd
+
 # link: https://hub.arcgis.com/datasets/b7507e654334481e8e0787f42c9028c1_3
