@@ -200,7 +200,7 @@ map_options:
 map_layers:
  #Country
   - min_zoom: 0
-    max_zoom: 20
+    max_zoom: 6
     #serviceUrl: https://g205sdgs.github.io/sdg-indicators/assets/maps/Ländergrenzen_ohne_Seegrenzen.geojson
     #nameProperty: GEN
     #idProperty: AGS
