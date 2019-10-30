@@ -198,28 +198,18 @@ map_options:
     #color: #172d44
     #dashArray: 5,5
 map_layers:
-  #Country
-  #- min_zoom: 5
-    #max_zoom: 10
-    #serviceUrl: https://geoportal1-ons.opendata.arcgis.com/datasets/c362832ce5d14728a6fb2b079525be0b_4.geojson
-    #nameProperty: ctry17nm
-    #idProperty: ctry17cd
-    #staticBorders: true
-    # link: https://hub.arcgis.com/datasets/c362832ce5d14728a6fb2b079525be0b_4/data
-  #Region
-  - min_zoom: 30
-    max_zoom: 40
+ #Country
+  - min_zoom: 5
+    max_zoom: 10
     #serviceUrl: https://g205sdgs.github.io/sdg-indicators/assets/maps/Ländergrenzen_ohne_Seegrenzen.geojson
     #nameProperty: GEN
     #idProperty: AGS
-
     serviceUrl: https://g205sdgs.github.io/sdg-indicators/assets/maps/NUTS_RG_01M_2016_4326_LEVL_0.geojson
     nameProperty: NUTS_NAME
     idProperty: CNTR_CODE
-
     staticBorders: true
     # link: https://hub.arcgis.com/datasets/4fcca2a47fed4bfaa1793015a18537ac_4
-  #Local Authority
+  #Bundesland
   #- min_zoom: 6
     #max_zoom: 10
     #serviceUrl: https://geoportal1-ons.opendata.arcgis.com/datasets/686603e943f948acaa13fb5d2b0f1275_4.geojson
