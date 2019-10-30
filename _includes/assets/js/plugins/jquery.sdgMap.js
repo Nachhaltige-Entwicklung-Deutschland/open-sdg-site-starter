@@ -16,7 +16,7 @@
     },
     // Zoom limits.
     minZoom: 5,
-    maxZoom: 10,
+    maxZoom: 20,
     // Visual/choropleth considerations.
     colorRange: chroma.brewer.BuGn,
     noValueColor: '#f0f0f0',
