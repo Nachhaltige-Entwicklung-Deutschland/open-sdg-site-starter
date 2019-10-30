@@ -207,7 +207,7 @@ map_layers:
     #staticBorders: true
     # link: https://hub.arcgis.com/datasets/c362832ce5d14728a6fb2b079525be0b_4/data
   #Region
-  - min_zoom: 0
+  - min_zoom: 30
     max_zoom: 40
     #serviceUrl: https://g205sdgs.github.io/sdg-indicators/assets/maps/Ländergrenzen_ohne_Seegrenzen.geojson
     #nameProperty: GEN
