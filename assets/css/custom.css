@@ -107,3 +107,10 @@ header {
     content: "";
     display: table;
     clear: both; }
+
+.header_img {
+  display: block;
+  width: 75%;
+  max-width: 25px; }
+  .header_img img {
+    width: 100%; }
