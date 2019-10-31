@@ -108,10 +108,10 @@ header {
     display: table;
     clear: both; }
 
-.header_img {
+#header_img {
   display: block;
   width: 25px; }
-  .header_img img {
+  #header_img img {
     width: 100%; }
-  .header_img .hover {
+  #header_img .hover {
     background: !important; }
