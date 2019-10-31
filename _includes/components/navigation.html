@@ -1,20 +1,20 @@
 
 
 {% if goal_uri %}
-  <button type="button" class="btn btn-xs" href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.previous }}" title="previous indicator" style="color:black">
+  <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.previous }}" class="btn" role="button" title="previous indicator" style="color:black">
     {{ t.general.indicator }} {{ meta.previous | replace: "-", "." }}
-  </button>
+  </a>
 
   {% if meta.sdg_indicator %}
-    <button type="button" class="btn btn-xs" href="https://g205sdgs.github.io/sdg-indicators{{ meta.sdg_indicator }}" style="color:black">
+    <a href="https://g205sdgs.github.io/sdg-indicators{{ meta.sdg_indicator }}" class="btn btn-info" role="button" style="color:black">
       {{ t.general.indicator_link_sdg }} {{ meta.sdg_indicator | replace: "/", "" | replace: "-", "."}}
-    </button>
+    </a>
   {% endif %}
 
 
-  <button type="button" class="btn btn-xs" href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.next }}" title="next indicator" style="color:black">
+  <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.next }}" class="btn btn-info" role="button" title="next indicator" style="color:black">
     {{ t.general.indicator }} {{ meta.next | replace: "-", "." }}
-  </button>
+  </a>
 
 
 {% else %}
@@ -29,16 +29,16 @@
     {% assign next_goal = page.sdg_goal | plus: 1 %}
   {% endif %}
 
-  <button type="button" class="btn btn-xs" href="{{ site.baseurl }}{{ baseurl_folder }}/{{ previous_goal }}" title="previous goal" style="color:black">
+  <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ previous_goal }}" class="btn btn-info" role="button" title="previous goal" style="color:black">
     {{ t.general.goal }} {{ previous_goal }}
-  </button>
+  </a>
 
-  <button type="button" class="btn btn-xs" href="https://g205sdgs.github.io/sdg-indicators/{{ goal_number }}" style="color:black">
+  <a href="https://g205sdgs.github.io/sdg-indicators/{{ goal_number }}" class="btn btn-info" role="button" style="color:black">
     {{ t.general.target_link_sdg }} {{ goal_number }}
-  </button>
+  </a>
 
-  <button type="button" class="btn btn-xs" href="{{ site.baseurl }}{{ baseurl_folder }}/{{ next_goal }}" title="next goal" style="color:black">
+  <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ next_goal }}" class="btn btn-info" role="button" title="next goal" style="color:black">
     {{ t.general.goal }} {{ next_goal }}
-  </button>
+  </a>
 
 {% endif %}
