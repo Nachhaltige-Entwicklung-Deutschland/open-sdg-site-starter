@@ -152,12 +152,8 @@ header {
 
 .header_img {
   display: block;
-  //width: 75%;
   width: 25px;
-  img {
-    width: 100%;
-  }
-  &:hover {
+  .hover {
     background: !important;
   }
 }
