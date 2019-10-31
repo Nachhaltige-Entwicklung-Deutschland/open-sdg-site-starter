@@ -43,15 +43,18 @@
           </li>
           {%- endfor -%}
         {%- endif -%}
-        {%- if site.languages.size > 1 -%}
 
-        <!--
+
         <li>
           <a class="header_img" href="https://g205sdgs.github.io/sdg-indicators/" id="menu">
             LinkToSdg <!-- <img src="https://g205sdgs.github.io/sdg-indicators/public/SDG Wheel_Transparent.png" title="Link zu den SDG Indikatoren" alt="link SDG" />   -->
           <!-- </a>
         </li>
-        -->
+
+
+
+
+        {%- if site.languages.size > 1 -%}
 
         <li>
           {% include components/language-toggle.html %}
