@@ -110,6 +110,7 @@ header {
 
 .header_img {
   display: block;
+  float: right;
   width: 25px; }
   .header_img img {
     width: 100%; }
