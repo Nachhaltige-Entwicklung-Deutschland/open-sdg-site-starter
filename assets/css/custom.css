@@ -112,6 +112,7 @@ header {
   display: block;
   float: right;
   width: 25px;
-  padding-right: 5px; }
+  padding-right: 5px;
+  padding-top: 10px; }
   .header_img img {
     width: 100%; }
