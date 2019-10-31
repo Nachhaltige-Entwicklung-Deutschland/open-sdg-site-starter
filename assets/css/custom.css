@@ -108,8 +108,8 @@ header {
     display: table;
     clear: both; }
 
-#header_img {
+.header_img {
   display: block;
   width: 25px; }
-  #header_img img {
+  .header_img img {
     width: 100%; }
