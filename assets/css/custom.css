@@ -124,5 +124,6 @@ header {
   .breadcrumb > .active {
     display: inline;
     color: black; }
-  .breadcrumb .center {
-    text-align: center; }
+
+.center {
+  text-align: center; }
