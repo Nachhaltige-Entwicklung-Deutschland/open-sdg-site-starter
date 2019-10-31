@@ -111,5 +111,7 @@ header {
 .header_img {
   display: block;
   width: 25px; }
+  .header_img img {
+    width: 100%; }
   .header_img .hover {
     background: !important; }
