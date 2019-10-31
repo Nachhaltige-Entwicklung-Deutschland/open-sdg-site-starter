@@ -100,7 +100,7 @@ menu:
     translation_key: menu.guidance
   - path: /status
     translation_key: menu.status
-  - path: /sdg
+  - path: /
     translation_key: <img src="https://g205sdgs.github.io/sdg-indicators/public/SDG Wheel_Transparent.png" title="Link zu den SDG Indikatoren" alt="link SDG" />
 
 # Configure the text (or "translation key") to be used on the
