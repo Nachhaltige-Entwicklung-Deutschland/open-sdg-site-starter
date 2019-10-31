@@ -6,7 +6,7 @@
       <li class="active">{{ t.general.indicator }} {{ meta.indicator_display }}</li>
       <!-- -->
 
-      {% if page.indicator in sdgdns %}
+      {% if sdgdns contains page.indicator %}
         <li class="pull-center">
           <a href="https://g205sdgs.github.io/sdg-indicators/{{ goal_number }}/">
             {{ t.general.target_link_sdg }} {{ goal_number }} {{ page.permalink }}
