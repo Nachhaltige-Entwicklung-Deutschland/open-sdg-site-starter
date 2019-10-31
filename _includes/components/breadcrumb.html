@@ -7,10 +7,10 @@
       <li class="active">{{ t.general.indicator }} {{ meta.indicator_display }}</li>
       <!-- -->
 
-      {% if sdgdns contains meta.indicator %}
+      {% if meta.sdg_indicator %}
         <li class="btn">
-          <a href="https://g205sdgs.github.io/sdg-indicators {{ meta.permalink }}">
-            xx{{ t.general.indicator_link_sdg }}
+          <a href="https://g205sdgs.github.io/sdg-indicators {{ meta.sdg_indicator }}">
+            xx{{ t.general.indicator_link_sdg }} {{ meta.sdg_indicator | replace "/", "" | replace "-", "."}}
           </a>
         </li>
       {% endif %}
