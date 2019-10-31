@@ -34,15 +34,15 @@
     {% assign next_goal = page.sdg_goal | plus: 1 %}
   {% endif %}
 
-  <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ previous_goal }}" class="btn-blockbtn-s" role="button" title="previous goal" style="color:black">
+  <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ previous_goal }}" class="btn btn-block btn-s" role="button" title="previous goal" style="color:black">
     {{ t.general.goal }} {{ previous_goal }}
   </a>
 
-  <a href="https://g205sdgs.github.io/sdg-indicators/{{ goal_number }}" class="btn-blockbtn-s" role="button" style="color:black">
+  <a href="https://g205sdgs.github.io/sdg-indicators/{{ goal_number }}" class="btn btn-block btn-s" role="button" style="color:black">
     {{ t.general.target_link_sdg }} {{ goal_number }}
   </a>
 
-  <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ next_goal }}" class="btn-blockbtn-s" role="button" title="next goal" style="color:black">
+  <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ next_goal }}" class="btn btn-block btn-s" role="button" title="next goal" style="color:black">
     {{ t.general.goal }} {{ next_goal }}
   </a>
 
