@@ -1,3 +1,10 @@
+---
+sdg_dns:
+  - "2.2.a"
+  - "3.1.ab"
+  - "3.1.bc"
+---
+
 <ol class="breadcrumb">
   {% assign sdgdns = "2.1.a", "3.1.ab", "3.1.cd" %}
   <li><a href="{{ site.baseurl }}{{ baseurl_folder }}/">{{ t.general.home }}</a></li>
@@ -6,7 +13,7 @@
       <li class="active">{{ t.general.indicator }} {{ meta.indicator_display }}</li>
       <!-- -->
 
-      {% if sdgdns contains meta.indicator %}
+      {% if page.sdg_dns contains meta.indicator %}
         <li class="center">
           <a href="https://g205sdgs.github.io/sdg-indicators/{{ goal_number }} {{ page.permalink }}">
             {{ t.general.target_link_sdg }} {{ goal_number }}
