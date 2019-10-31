@@ -148,3 +148,13 @@ header {
     clear: both;
   }
 }
+
+
+.header_img {
+  display: block;
+  width: 75%;
+  max-width: 25px;
+  img {
+    width: 100%;
+  }
+}
