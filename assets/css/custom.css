@@ -116,3 +116,13 @@ header {
   padding-top: 12px; }
   .header_img img {
     width: 100%; }
+
+.breadcrumb {
+  margin-bottom: 15px; }
+  .breadcrumb a {
+    color: #285f8f; }
+  .breadcrumb > .active {
+    display: inline;
+    color: black; }
+  .breadcrumb .center {
+    text-align: center; }
