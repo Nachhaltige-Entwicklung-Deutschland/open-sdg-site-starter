@@ -1,19 +1,13 @@
----
-sdg_dns:
-  - "2.2.a"
-  - "3.1.ab"
-  - "3.1.bc"
----
 
 <ol class="breadcrumb">
-  {% assign sdgdns = "2.1.a", "3.1.ab", "3.1.cd" %}
+  {% assign sdgdns = "2.1.a|3.1.ab|3.1.cd" | split: "|" %}
   <li><a href="{{ site.baseurl }}{{ baseurl_folder }}/">{{ t.general.home }}</a></li>
   {% if goal_uri %}
       <li><a href="{{ goal_uri }}" title="{{ goal_title }}">{{ t.general.goal }} {{ goal_number }}</a></li>
       <li class="active">{{ t.general.indicator }} {{ meta.indicator_display }}</li>
       <!-- -->
 
-      {% if page.sdg_dns contains meta.indicator %}
+      {% if sdgdns contains meta.indicator %}
         <li class="center">
           <a href="https://g205sdgs.github.io/sdg-indicators/{{ goal_number }} {{ page.permalink }}">
             {{ t.general.target_link_sdg }} {{ goal_number }}
