@@ -128,15 +128,37 @@ header {
 .center {
   text-align: center; }
 
-.inline {
+.tooltip {
+  position: relative;
   display: inline-block;
-  position: relative; }
+  border-bottom: 1px dotted black; }
 
-#btn-left {
-  left: 0; }
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60%;
+  opacity: 0;
+  transition: opacity 0.3s; }
 
-#btn-center {
-  left: 50%; }
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent; }
 
-#btn-right {
-  right: 20; }
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1; }
