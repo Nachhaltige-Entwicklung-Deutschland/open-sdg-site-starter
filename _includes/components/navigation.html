@@ -1,8 +1,6 @@
-<div class="container h-100">
-  <div class="position-relative h-100">
 
 {% if goal_uri %}
-  <div class="position-absolute top-left">
+  <div class="inline">
     <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.previous }}" class="btn" role="button">
       Previous Indicator
     </a>
@@ -10,14 +8,14 @@
 
 
   {% if meta.sdg_indicator %}
-    <div class="position-absolute top-center">
+    <div class="inline">
       <a href="https://g205sdgs.github.io/sdg-indicators{{ meta.sdg_indicator }}" class="btn" role="button">
         {{ t.general.indicator_link_sdg }} {{ meta.sdg_indicator | replace: "/", "" | replace: "-", "."}}
       </a>
     </div>
   {% endif %}
 
-  <div class="position-absolute top-right">
+  <div class="inline">
     <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.next }}" class="btn" role="button">
       Next Indicator
     </a>
@@ -48,5 +46,3 @@
   </a>
 
 {% endif %}
-</div>
-</div>
