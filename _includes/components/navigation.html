@@ -2,15 +2,15 @@
 {% if goal_uri %}
 
   <div class="btn-group btn-group-justified">
-    <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.previous }}" class="btn btn-block" role="button">
+    <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.previous }}" class="btn btn-default btn-block" role="button">
       {{ t.general.prev_indicator }}
     </a>
     {% if meta.sdg_indicator %}
-      <a href="https://g205sdgs.github.io/sdg-indicators{{ meta.sdg_indicator }}" class="btn btn-block" role="button">
+      <a href="https://g205sdgs.github.io/sdg-indicators{{ meta.sdg_indicator }}" class="btn btn-default btn-block" role="button">
         {{ t.general.indicator_link_sdg }} {{ meta.sdg_indicator | replace: "/", "" | replace: "-", "."}}
       </a>
     {% endif %}
-    <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.next }}" class="btn btn-block" role="button">
+    <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.next }}" class="btn btn-default btn-block" role="button">
       {{ t.general.next_indicator }}
     </a>
   </div>

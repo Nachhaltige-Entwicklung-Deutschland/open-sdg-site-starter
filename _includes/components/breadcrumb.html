@@ -4,7 +4,7 @@
   {% if goal_uri %}
       <li><a href="{{ goal_uri }}" title="{{ goal_title }}">{{ t.general.goal }} {{ goal_number }}</a></li>
       <li class="active">{{ t.general.indicator }} {{ meta.indicator_display }}</li>
-      <!-- -->
+      <!--
 
       {% if meta.sdg_indicator %}
         <li class="btn">
@@ -25,11 +25,11 @@
           {{ t.general.indicator }} {{ meta.previous | replace: "-", "." }}
         </a>
       </li>
-      <!-- -->
+      -->
 
   {% else %}
       <li class="active">{{ t.general.goal }} {{ goal_number }}</li>
-      <!-- -->
+      <!--
       <li class="center">
         <a href="https://g205sdgs.github.io/sdg-indicators/{{ goal_number }}">
           {{ t.general.target_link_sdg }} {{ goal_number }}
@@ -57,7 +57,7 @@
           {{ t.general.goal }} {{ previous_goal }}
         </a>
       </li>
-      <!-- -->
+      -->
 
   {% endif %}
 
