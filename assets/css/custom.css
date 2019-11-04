@@ -128,11 +128,12 @@ header {
 .center {
   text-align: center; }
 
+/* Tooltip container */
 .tooltip {
   position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black; }
+  display: inline-block; }
 
+/* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 120px;
@@ -141,14 +142,17 @@ header {
   text-align: center;
   padding: 5px 0;
   border-radius: 6px;
+  /* Position the Tooltip Text */
   position: absolute;
   z-index: 1;
   bottom: 125%;
   left: 50%;
   margin-left: -60%;
+  /*Fade in tooltip */
   opacity: 0;
   transition: opacity 0.3s; }
 
+/* Tooltip arrow */
 .tooltip .tooltiptext::after {
   content: "";
   position: absolute;
