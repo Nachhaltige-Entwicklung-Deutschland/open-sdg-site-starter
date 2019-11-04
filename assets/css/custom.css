@@ -133,10 +133,12 @@ header {
   position: relative; }
 
 #btn-left {
-  left: 0; }
+  left: 0;
+  padding-left: 0; }
 
 #btn-center {
   left: 50%; }
 
 #btn-right {
-  right: 0; }
+  right: 0;
+  padding-right: 0; }
