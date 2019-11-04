@@ -170,3 +170,6 @@ header {
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1; }
+
+.G1-background {
+  background-color: #E5243B; }
