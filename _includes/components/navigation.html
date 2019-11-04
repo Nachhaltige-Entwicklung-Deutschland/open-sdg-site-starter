@@ -7,7 +7,7 @@
     </a>
     {% if meta.sdg_indicator %}
       <a href="https://g205sdgs.github.io/sdg-indicators{{ meta.sdg_indicator }}" class="btn btn-primary btn-block" role="button">
-        {{ t.general.indicator_link_sdg }} {{ meta.sdg_indicator | replace: "/", "" | replace: "-", "."}}y
+        {{ t.general.indicator_link_sdg }} {{ meta.sdg_indicator | replace: "/", "" | replace: "-", "."}}
       </a>
     {% endif %}
     <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.next }}" class="btn btn-primary btn-block" role="button">
@@ -49,16 +49,16 @@
   {% endif %}
 
   <div class="btn-group btn-group-justified">
-    <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.previous }}" class="btn btn-primary btn-block" role="button">
-      {{ t.general.prev_indicator }}
+    <a href="{{{ site.baseurl }}{{ baseurl_folder }}/{{ previous_goal }}" class="btn btn-primary btn-block" role="button">
+      {{ t.general.prev_goal }}
     </a>
 
     <a href="https://g205sdgs.github.io/sdg-indicators/{{ goal_number }}" class="btn btn-primary btn-block" title="Hello Worlds" role="button">
       {{ t.general.target_link_sdg }} {{ goal_number }}
     </a>
 
-    <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.next }}" class="btn btn-primary btn-block" role="button">
-      {{ t.general.next_indicator }}
+    <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ next_goal }}" class="btn btn-primary btn-block" role="button">
+      {{ t.general.next_goal }}
     </a>
   </div>
 {% endif %}
