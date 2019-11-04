@@ -179,9 +179,10 @@ header {
 
 /* Tooltip container */
 .tooltip {
-  position: relative;
+  position: absolute;
   display: inline-block;
   //border-bottom: 1px dotted black;
+
 }
 
 /* Tooltip text */
