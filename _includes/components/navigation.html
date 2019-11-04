@@ -7,7 +7,7 @@
     </a>
     {% if meta.sdg_indicator %}
       <a href="https://g205sdgs.github.io/sdg-indicators{{ meta.sdg_indicator }}" class="btn btn-primary btn-block" role="button">
-        {{ t.general.indicator_link_sdg }} {{ meta.sdg_indicator | replace: "/", "" | replace: "-", "."}}x
+        {{ t.general.indicator_link_sdg }} {{ meta.sdg_indicator | replace: "/", "" | replace: "-", "."}}y
       </a>
     {% endif %}
     <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.next }}" class="btn btn-primary btn-block" role="button">
@@ -53,7 +53,7 @@
       {{ t.general.prev_indicator }}
     </a>
 
-    <a href="https://g205sdgs.github.io/sdg-indicators/{{ goal_number }}" data-toggle="tooltip" title="Hello Worlds" class="btn btn-primary btn-block" role="button">
+    <a href="https://g205sdgs.github.io/sdg-indicators/{{ goal_number }}" class="btn btn-primary btn-block" data-toggle="tooltip" title="Hello Worlds" role="button">
       {{ t.general.target_link_sdg }} {{ goal_number }}
     </a>
 
