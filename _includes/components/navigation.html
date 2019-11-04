@@ -1,5 +1,20 @@
 
 {% if goal_uri %}
+
+  <div class="btn-group btn-group-justified">
+    <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.previous }}" class="btn btn-primary btn-block" role="button">
+      Previous Indicator
+    </a>
+    {% if meta.sdg_indicator %}
+      <a href="https://g205sdgs.github.io/sdg-indicators{{ meta.sdg_indicator }}" class="btn btn-primary btn-block" role="button">
+        {{ t.general.indicator_link_sdg }} {{ meta.sdg_indicator | replace: "/", "" | replace: "-", "."}}
+      </a>
+    {% endif %}
+    <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.next }}" class="btn btn-primary btn-block" role="button">
+      Next Indicator
+    </a>
+
+  <!--
   <div class="col-xs-3 col-md-3 col-lg-4">
     <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.previous }}" class="btn btn-primary btn-block" role="button">
       Previous Indicator1
@@ -19,7 +34,7 @@
       Next Indicator
     </a>
   </div>
-
+-->
 {% else %}
   {% if page.sdg_goal == '1' %}
     {% assign next_goal = '2' %}
