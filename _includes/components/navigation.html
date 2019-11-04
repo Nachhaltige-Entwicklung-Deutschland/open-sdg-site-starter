@@ -2,15 +2,15 @@
 {% if goal_uri %}
 
   <div class="btn-group btn-group-justified">
-    <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.previous }}" class="btn btn-default btn-block" role="button">
+    <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.previous }}" class="btn btn-primary btn-block" role="button">
       {{ t.general.prev_indicator }}
     </a>
     {% if meta.sdg_indicator %}
-      <a href="https://g205sdgs.github.io/sdg-indicators{{ meta.sdg_indicator }}" class="btn btn-default btn-block" role="button">
+      <a href="https://g205sdgs.github.io/sdg-indicators{{ meta.sdg_indicator }}" class="btn btn-primary btn-block" role="button">
         {{ t.general.indicator_link_sdg }} {{ meta.sdg_indicator | replace: "/", "" | replace: "-", "."}}
       </a>
     {% endif %}
-    <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.next }}" class="btn btn-default btn-block" role="button">
+    <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.next }}" class="btn btn-primary btn-block" role="button">
       {{ t.general.next_indicator }}
     </a>
   </div>
@@ -48,26 +48,17 @@
     {% assign next_goal = page.sdg_goal | plus: 1 %}
   {% endif %}
 
+  <div class="btn-group btn-group-justified">
+    <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.previous }}" class="btn btn-primary btn-block" role="button">
+      {{ t.general.prev_indicator }}
+    </a>
 
-  <div class="col-xs-3 col-md-3 col-lg-4">
-    <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ previous_goal }}" class="btn btn-primary" role="button" title="previous goal">
-      PrevGoal
+    <a href="https://g205sdgs.github.io/sdg-indicators/{{ goal_number }}" class="btn btn-primary btn-block" role="button">
+      {{ t.general.target_link_sdg }} {{ goal_number }}
+    </a>
+
+    <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.next }}" class="btn btn-primary btn-block" role="button">
+      {{ t.general.next_indicator }}
     </a>
   </div>
-  <div class="col-xs-6 col-md-6 col-lg-4">
-    <a href="https://g205sdgs.github.io/sdg-indicators/{{ goal_number }}" class="btn btn-primary" role="button">
-      SdgGoal
-    </a>
-  </div>
-  <div class="col-xs-3 col-md-3 col-lg-4">
-    <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ next_goal }}" class="btn btn-primary" role="button" title="next goal">
-      NextGoal
-    </a>
-  </div>
-
-
-
-
-
-
 {% endif %}
