@@ -1,6 +1,6 @@
 
 {% if goal_uri %}
-
+  <!--
   <div class="btn-group btn-group-justified">
     <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.previous }}" class="btn btn-primary btn-block" role="button">
       {{ t.general.prev_indicator }}
@@ -16,18 +16,21 @@
       {{ t.general.next_indicator }}
     </a>
   </div>
-
+  -->
 
   <div class="tooltip">Hover over me
     <span class="tooltiptext">Tooltip Text</span>
   </div>
 
 
-  <!--
+
   <div class="col-xs-3 col-md-3 col-lg-4">
+    <button class="btn btn-primary" title="this is a button" data-toggle="tooltip">Button1</button>
+    <!--
     <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.previous }}" class="btn btn-primary btn-block" role="button">
       Previous Indicator1
     </a>
+    -->
   </div>
 
   <div class="col-xs-6 col-md-6 col-lg-4">
@@ -43,7 +46,7 @@
       Next Indicator
     </a>
   </div>
--->
+
 {% else %}
   {% if page.sdg_goal == '1' %}
     {% assign next_goal = '2' %}
@@ -69,4 +72,15 @@
       {{ t.general.next_goal }}
     </a>
   </div>
+
+
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function () {
+
+  });
+</script>
+
+
+
 {% endif %}
