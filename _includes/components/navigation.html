@@ -67,17 +67,17 @@
   {% endif %}
 
   <div class="col-xs-3 col-md-3 col-lg-4">
-    <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ previous_goal }}" class="btn btn-primary btn-block G{{ meta.sdg_goal }}-background" role="button">
+    <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ previous_goal }}" class="btn btn-primary btn-block G{{ goal_number }}-background" role="button">
       {{ t.general.prev_goal }}
     </a>
   </div>
   <div class="col-xs-3 col-md-3 col-lg-4">
-    <a href="https://g205sdgs.github.io/sdg-indicators/{{ goal_number }}" class="btn btn-primary btn-block G{{ meta.sdg_goal }}-background" title="{{ t.general.link_sdg_goal }}" role="button">
+    <a href="https://g205sdgs.github.io/sdg-indicators/{{ goal_number }}" class="btn btn-primary btn-block G{{ goal_number }}-background" title="{{ t.general.link_sdg_goal }}" role="button">
       {{ t.general.target_link_sdg }} {{ goal_number }}
     </a>
   </div>
   <div class="col-xs-3 col-md-3 col-lg-4">
-    <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ next_goal }}" class="btn btn-primary btn-block G{{ meta.sdg_goal }}-background" role="button">
+    <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ next_goal }}" class="btn btn-primary btn-block G{{ goal_number }}-background" role="button">
       {{ t.general.next_goal }}
     </a>
   </div>
