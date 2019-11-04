@@ -2,7 +2,7 @@
 
 {% if goal_uri %}
   <div class=top-left>
-    <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.previous }}" class="btn btn-s" role="button" title= "{{ t.general.indicator }} {{ meta.previous | replace: '-', '.' }}" style="color:black">
+    <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.previous }}" class="btn" role="button">
       Previous Indicator
     </a>
   </div>
@@ -10,15 +10,15 @@
 
   {% if meta.sdg_indicator %}
     <div class=top-center>
-      <a href="https://g205sdgs.github.io/sdg-indicators{{ meta.sdg_indicator }}" class="btn btn-s" role="button" style="color:black">
+      <a href="https://g205sdgs.github.io/sdg-indicators{{ meta.sdg_indicator }}" class="btn" role="button">
         {{ t.general.indicator_link_sdg }} {{ meta.sdg_indicator | replace: "/", "" | replace: "-", "."}}
       </a>
     </div>
   {% endif %}
 
   <div class=top-right>
-    <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.next }}" class="btn btn-s" role="button" title="next indicator" style="color:black">
-      {{ t.general.indicator }} {{ meta.next | replace: "-", "." }}
+    <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.next }}" class="btn" role="button">
+      Next Indicator
     </a>
   </div>
 
