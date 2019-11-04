@@ -174,3 +174,8 @@ header {
 .G3-background {
   background-color: #4C9F38;
   border-color: transparent; }
+
+.G3-background:hover {
+  background-color: #2E5F22;
+  color: #FFF;
+  border-color: transparent; }
