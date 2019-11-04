@@ -17,9 +17,11 @@
     </a>
   </div>
 
-        <div class="tooltip">Hover over me
-          <span class="tooltiptext">Tooltip Text</span>
-        </div>
+
+  <div class="tooltip">Hover over me
+    <span class="tooltiptext">Tooltip Text</span>
+  </div>
+
 
   <!--
   <div class="col-xs-3 col-md-3 col-lg-4">
@@ -55,7 +57,7 @@
   {% endif %}
 
   <div class="btn-group btn-group-justified">
-    <a href="{{{ site.baseurl }}{{ baseurl_folder }}/{{ previous_goal }}" class="btn btn-primary btn-block" role="button">
+    <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.previous }}" class="btn btn-primary btn-block" role="button">
       {{ t.general.prev_goal }}
     </a>
 
@@ -63,7 +65,7 @@
       {{ t.general.target_link_sdg }} {{ goal_number }}
     </a>
 
-    <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ next_goal }}" class="btn btn-primary btn-block" role="button">
+    <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.next }}" class="btn btn-primary btn-block" role="button">
       {{ t.general.next_goal }}
     </a>
   </div>
