@@ -181,3 +181,15 @@ header {
   display: inline-block;
   position: relative;
 }
+#btn-left {
+  position: absolute;
+  left: 0;
+}
+#btn-center {
+  position: absolute;
+  left: 50%;
+}
+#btn-left {
+  position: absolute;
+  right: 0;
+}
