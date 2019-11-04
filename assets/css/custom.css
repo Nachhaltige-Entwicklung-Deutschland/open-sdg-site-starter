@@ -132,7 +132,7 @@ header {
 .tooltip {
   position: absolute;
   display: inline-block;
-  left: 0;
+  left: 50%;
   bottom: 0;
   opacity: 100; }
 
