@@ -1,7 +1,7 @@
 
 
 {% if goal_uri %}
-  <div align=left>
+  <div class=top-left>
     <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.previous }}" class="btn btn-s" role="button" title= "{{ t.general.indicator }} {{ meta.previous | replace: '-', '.' }}" style="color:black">
       Previous Indicator
     </a>
@@ -9,14 +9,14 @@
 
 
   {% if meta.sdg_indicator %}
-    <div align=center>
+    <div class=top-center>
       <a href="https://g205sdgs.github.io/sdg-indicators{{ meta.sdg_indicator }}" class="btn btn-s" role="button" style="color:black">
         {{ t.general.indicator_link_sdg }} {{ meta.sdg_indicator | replace: "/", "" | replace: "-", "."}}
       </a>
     </div>
   {% endif %}
 
-  <div align=right>
+  <div class=top-right>
     <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.next }}" class="btn btn-s" role="button" title="next indicator" style="color:black">
       {{ t.general.indicator }} {{ meta.next | replace: "-", "." }}
     </a>
@@ -34,15 +34,15 @@
     {% assign next_goal = page.sdg_goal | plus: 1 %}
   {% endif %}
 
-  <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ previous_goal }}" class="btn btn-sm btn-block" role="button" title="previous goal" style="color:black">
+  <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ previous_goal }}" class="btn btn-sm" role="button" title="previous goal" style="color:black">
     {{ t.general.goal }} {{ previous_goal }}
   </a>
 
-  <a href="https://g205sdgs.github.io/sdg-indicators/{{ goal_number }}" class="btn btn-sm btn-block" role="button" style="color:black">
+  <a href="https://g205sdgs.github.io/sdg-indicators/{{ goal_number }}" class="btn btn-sm" role="button" style="color:black">
     {{ t.general.target_link_sdg }} {{ goal_number }}
   </a>
 
-  <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ next_goal }}" class="btn btn-sm btn-block" role="button" title="next goal" style="color:black">
+  <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ next_goal }}" class="btn btn-sm" role="button" title="next goal" style="color:black">
     {{ t.general.goal }} {{ next_goal }}
   </a>
 
