@@ -133,7 +133,8 @@ header {
   position: absolute;
   display: inline-block;
   left: 0;
-  bottom: 0; }
+  bottom: 0;
+  opacity: 100; }
 
 /* Tooltip text */
 .tooltip .tooltiptext {
