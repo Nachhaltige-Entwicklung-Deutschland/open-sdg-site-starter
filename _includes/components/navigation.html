@@ -1,6 +1,6 @@
 
 {% if goal_uri %}
-  <!--
+  
   <div class="btn-group btn-group-justified">
     <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.previous }}" class="btn btn-primary btn-block" role="button">
       {{ t.general.prev_indicator }}
@@ -16,22 +16,16 @@
       {{ t.general.next_indicator }}
     </a>
   </div>
-  -->
 
+<!--
   <div class="tooltip">Hover over me
     <span class="tooltiptext">Tooltip Text</span>
   </div>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
   <div class="col-xs-3 col-md-3 col-lg-4">
-    <button type="button" class="btn btn-primary" data-toggle="tooltip" title="Top shoes" style="margin:20px;">
-      Shoes
-    </button>    <!--
     <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.previous }}" class="btn btn-primary btn-block" role="button">
       Previous Indicator1
     </a>
-    -->
   </div>
 
   <div class="col-xs-6 col-md-6 col-lg-4">
@@ -47,7 +41,7 @@
       Next Indicator
     </a>
   </div>
-
+-->
 {% else %}
   {% if page.sdg_goal == '1' %}
     {% assign next_goal = '2' %}
@@ -73,30 +67,5 @@
       {{ t.general.next_goal }}
     </a>
   </div>
-
-
-  <!-- jQuery library -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-
-  <!-- Popper -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-
-  <!-- Latest compiled and minified Bootstrap JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-  <!-- Initialize Bootstrap functionality -->
-  <script>
-  // Initialize tooltip component
-  $(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-  })
-
-  // Initialize popover component
-  $(function () {
-    $('[data-toggle="popover"]').popover()
-  })
-  </script>
-
-
 
 {% endif %}
