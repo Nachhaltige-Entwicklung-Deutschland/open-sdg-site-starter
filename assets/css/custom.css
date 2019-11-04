@@ -131,7 +131,9 @@ header {
 /* Tooltip container */
 .tooltip {
   position: absolute;
-  display: inline-block; }
+  display: inline-block;
+  left: 0;
+  bottom: 0; }
 
 /* Tooltip text */
 .tooltip .tooltiptext {
