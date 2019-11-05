@@ -421,11 +421,6 @@ var indicatorView = function (model, options) {
         },
         legend: {
           display: false,
-          //position: 'bottom',
-          //labels: {
-            //usePointStyle: true,
-            //boxWidth: 6,
-          //},
         },
         title: {
           display: false
