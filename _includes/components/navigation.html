@@ -20,31 +20,31 @@
 
   {% if meta.sdg_indicator %}
     <div class="col-xs-3 col-md-3 col-lg-4">
-      <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.previous }}" class="btn btn-primary btn-block G{{ meta.sdg_goal }}-background" role="button">
+      <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.previous }}" class="btn btn-primary btn-block G{{ meta.sdg_goal }}-background mb-5" role="button">
         {{ t.general.prev_indicator }}
       </a>
     </div>
 
     <div class="col-xs-6 col-md-6 col-lg-4">
-      <a href="https://g205sdgs.github.io/sdg-indicators{{ meta.sdg_indicator }}" class="btn btn-primary btn-block G{{ meta.sdg_goal }}-background" title="{{ t.general.link_sdg_indicator }}" role="button">
+      <a href="https://g205sdgs.github.io/sdg-indicators{{ meta.sdg_indicator }}" class="btn btn-primary btn-block G{{ meta.sdg_goal }}-background mb-5" title="{{ t.general.link_sdg_indicator }}" role="button">
         {{ t.general.indicator_link_sdg }} {{ meta.sdg_indicator | replace: "/", "" | replace: "-", "."}}
       </a>
     </div>
 
     <div class="col-xs-3 col-md-3 col-lg-4">
-      <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.next }}" class="btn btn-primary btn-block G{{ meta.sdg_goal }}-background" role="button">
+      <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.next }}" class="btn btn-primary btn-block G{{ meta.sdg_goal }}-background mb-5" role="button">
         {{ t.general.next_indicator }}
       </a>
     </div>
   {% else  %}
     <div class="col-xs-6 col-md-6 col-lg-6">
-      <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.previous }}" class="btn btn-primary btn-block G{{ meta.sdg_goal }}-background" role="button">
+      <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.previous }}" class="btn btn-primary btn-block G{{ meta.sdg_goal }}-background mb-5" role="button">
         {{ t.general.prev_indicator }}
       </a>
     </div>
 
     <div class="col-xs-6 col-md-6 col-lg-6">
-      <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.next }}" class="btn btn-primary btn-block G{{ meta.sdg_goal }}-background" role="button">
+      <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.next }}" class="btn btn-primary btn-block G{{ meta.sdg_goal }}-background mb-5" role="button">
         {{ t.general.next_indicator }}
       </a>
     </div>
