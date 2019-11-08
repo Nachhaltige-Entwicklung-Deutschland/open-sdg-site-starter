@@ -110,7 +110,6 @@ languages:
     - de
     - en
 
-
 # This makes sure that all pages have a language.
 defaults:
   -
