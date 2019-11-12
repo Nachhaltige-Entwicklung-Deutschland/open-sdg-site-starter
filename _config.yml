@@ -197,7 +197,6 @@ map_options:
     #color: #172d44
     #dashArray: 5,5
 map_layers:
-
  #Country
   #- min_zoom: 0
     #max_zoom: 5
@@ -211,7 +210,7 @@ map_layers:
   #Bundesland
   - min_zoom: 6
     max_zoom: 10
-    serviceUrl: https://g205sdgs.github.io/sdg-indicators/assets/maps/NUTS_RG_01M_2016_4326_LEVL_1.geojson
+    serviceUrl: https://g205sdgs.github.io/sdg-indicators/assets/maps/NUTS_RG_01M_2016_3857_LEVL_1.geojson
     nameProperty: NUTS_NAME
     idProperty: NUTS_ID
     staticBorders: false
