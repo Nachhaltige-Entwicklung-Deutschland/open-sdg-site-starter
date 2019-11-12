@@ -197,16 +197,17 @@ map_options:
     #color: #172d44
     #dashArray: 5,5
 map_layers:
+
  #Country
-  - min_zoom: 0
-    max_zoom: 5
+  #- min_zoom: 0
+    #max_zoom: 5
     #serviceUrl: https://g205sdgs.github.io/sdg-indicators/assets/maps/Ländergrenzen_ohne_Seegrenzen.geojson
     #nameProperty: GEN
     #idProperty: AGS
-    serviceUrl: https://g205sdgs.github.io/sdg-indicators/assets/maps/NUTS_RG_01M_2016_4326_LEVL_0.geojson
-    nameProperty: NUTS_NAME
-    idProperty: CNTR_CODE
-    staticBorders: true
+    #serviceUrl: https://g205sdgs.github.io/sdg-indicators/assets/maps/NUTS_RG_01M_2016_4326_LEVL_0.geojson
+    #nameProperty: NUTS_NAME
+    #idProperty: CNTR_CODE
+    #staticBorders: true
   #Bundesland
   - min_zoom: 6
     max_zoom: 10
