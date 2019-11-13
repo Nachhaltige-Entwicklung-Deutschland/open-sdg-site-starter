@@ -365,3 +365,36 @@ header {
   background-color: #143A55;
   border-color: transparent;
   margin-bottom: 5px;}
+
+
+
+
+//edit disclaimer color
+#disclaimer {
+  background: #ffbf00;
+
+  .phase-tag {
+    background: #005ea5;
+    color: white;
+    text-transform: uppercase;
+    padding: 2px 5px 0;
+  }
+  .alert {
+    color: #3D3D3D;
+    margin-bottom: 0;
+    padding: 10px;
+    a {
+      color: #3D3D3D;
+    }
+  }
+  .alert-danger {
+    border: none;
+    margin-bottom: 0;
+    a {
+      text-decoration: underline;
+    }
+    @media only screen and (max-width: 680px) {
+      font-size: 0.75em;
+    }
+  }
+}
