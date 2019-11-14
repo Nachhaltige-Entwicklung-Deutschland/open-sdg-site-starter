@@ -59,7 +59,6 @@
 
   {% assign uniqSources = sources_list | uniq | join: ", " %}
 
-
   <div class="row" id="indicatorData" data-indicatorid='{{dataset_name}}' data-id="{{meta.indicator | slugify }}" data-country="{{ meta.national_geographical_coverage | t }}"
   data-charttitle="{{ meta.graph_title | t }}" data-measurementunit="{{ meta.computation_units | t }}" data-datasource="{{ uniqSources }}"
   data-geographicalarea="{{ meta.national_geographical_coverage | t }}" data-footnote="{{ meta.data_footnote | t }}" data-showdata="{{ show_data }}" data-graphtype="{{ meta.graph_type }}"
@@ -77,7 +76,6 @@
         </div>
       </div>
       <div id="units"></div>
-      <!--<div id="units"></div>-->
     </div>
     <div id="indicator-main" class="col-md-9">
     {% else %}
