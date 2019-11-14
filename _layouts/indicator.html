@@ -35,17 +35,17 @@
 
   <div class="row" id="page-content-row">
     <div class="col-xs-12">
-      <!--{% include components/data-notice.html %}-->
+      {% include components/data-notice.html %}
       {% include components/indicator-content.html %}
     </div>
   </div>
-
+  <!--
   <div class="row">
     <div class="col-xs-12">
       <h2>{{ meta.graph_title | t }}</h2>
     </div>
   </div>
-
+  -->
   {% assign sources_list = '' | split: ',' %}
   {% for i in (1..12) %}
     {% assign src_active = "source_active_" | append: i %}
