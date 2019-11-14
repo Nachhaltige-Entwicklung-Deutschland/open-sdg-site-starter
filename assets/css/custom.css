@@ -342,7 +342,7 @@ header {
   margin-bottom: 5px; }
 
 #disclaimer {
-  background: #ffbf00; }
+  background: #BF0C16; }
   #disclaimer .phase-tag {
     background: #005ea5;
     color: white;
@@ -357,7 +357,7 @@ header {
   #disclaimer .alert-danger {
     border: none;
     margin-bottom: 0;
-    background: #ffbf00; }
+    background: #BF0C16; }
     #disclaimer .alert-danger a {
       text-decoration: underline; }
     @media only screen and (max-width: 680px) {
