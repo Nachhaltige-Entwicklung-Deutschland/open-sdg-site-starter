@@ -466,7 +466,7 @@ var indicatorModel = function (options) {
         //   }) : undefined,
 
         //--------------------
-        if (!nameList.includes(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length)) || (combinationDescription.substring(0, 4) != 'Ziel' && !combinationDescription.substring(0, 4) != 'Zeit')) {
+        if ((!nameList.includes(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length)) || (combinationDescription.substring(0, 4) != 'Ziel' && !combinationDescription.substring(0, 4) != 'Zeit')) && combinationDescription.indexOf(',') != -1)  {
           nameList.push(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length));
           indexList.push(datasetIndex);
 
