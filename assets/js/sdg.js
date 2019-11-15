@@ -118,7 +118,7 @@ opensdg.autotrack = function(preset, category, action, label) {
     //this.timeSeries = _.pluck(this.geoData, 'timeseries');
     //this.timeSeriesName = translations.t(this.timeSeries[0]);
     // Since the csv-files do not contain the titles of time series any more:
-    this.timeSeriesName = translations.t(this.title)
+    this.timeSeriesName = this.title //translations.t(this.title)
     this.unit = _.pluck(this.geoData, 'Units');
     this.unitName = translations.t(this.unit[0]);
     this.age = _.pluck(this.geoData, 'age');
@@ -716,7 +716,7 @@ var indicatorDataStore = function(dataUrl) {
   this.showMap = options.showMap;
 
   //----------
-  this.title = options.graph_title;
+  this.title = "Test Nr. 4.2"//options.graph_title;
   //----------
 
   // initialise the field information, unique fields and unique values for each field:
