@@ -1123,7 +1123,7 @@ var indicatorDataStore = function(dataUrl) {
         //   }) : undefined,
 
         //--------------------
-        if (!nameList.includes(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length)) || combinationDescription.indexOf(',') == -1 || (combinationDescription.substring(0, 4) != 'Ziel' && !combinationDescription.substring(0, 4) != 'Zeit')) {
+        if (!nameList.includes(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length)) || (combinationDescription.substring(0, 4) != 'Ziel' && !combinationDescription.substring(0, 4) != 'Zeit')) {
           nameList.push(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length));
           indexList.push(datasetIndex);
 
@@ -1148,7 +1148,30 @@ var indicatorDataStore = function(dataUrl) {
             }, that.datasetObject);
         }
 
-        else{
+        // case: No disaggregation but Target and timeseries
+        else if (combinationDescription.indexOf(',') == 1-) {
+          var fieldIndex,
+            ds = _.extend({
+
+              label: combinationDescription ? combinationDescription : that.country,
+              borderColor: '#' + getColor(0),
+              backgroundColor: '#' + getColor(0),
+              pointStyle: getPointStyle(combinationDescription),
+              radius: 6,
+              //pointBorderColor: '#' + getColor(tsrIndex),
+              borderDash: getBorderDash(datasetIndex),
+              data: _.map(that.years, function (year) {
+                var found = _.findWhere(data, {
+                  Year: year
+                });
+                return found ? found.Value : null;
+              }),
+              borderWidth: combinationDescription ? 2 : 4
+            }, that.datasetObject);
+        }
+
+        // Target or Time series whose counterpart already passed (and therefor are on nameList)
+        else {
           var tmpIndex = nameList.indexOf(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length));
           var tsrIndex = indexList[tmpIndex]
 
