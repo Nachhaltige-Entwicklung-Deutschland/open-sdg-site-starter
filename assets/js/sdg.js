@@ -1123,7 +1123,7 @@ var indicatorDataStore = function(dataUrl) {
         //   }) : undefined,
 
         //--------------------
-        if (!nameList.includes(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length)) || (combinationDescription.substring(0, 4) != 'Ziel' && !combinationDescription.substring(0, 4) != 'Zeit')) {
+        if (!nameList.includes(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length)) || combinationDescription.substring(combinationDescription.indexOf(',')) == -1 || (combinationDescription.substring(0, 4) != 'Ziel' && !combinationDescription.substring(0, 4) != 'Zeit')) {
           nameList.push(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length));
           indexList.push(datasetIndex);
 
