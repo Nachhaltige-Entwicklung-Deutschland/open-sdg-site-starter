@@ -492,7 +492,7 @@ var indicatorModel = function (options) {
         }
 
         // case: No disaggregation but Target and timeseries
-        else if (combinationDescription.indexOf(',') == 1-) {
+        else if (combinationDescription.indexOf(',') == -1) {
           var fieldIndex,
             ds = _.extend({
 
