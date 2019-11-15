@@ -10,7 +10,7 @@ var mapView = function () {
       mapOptions: {{ site.map_options | jsonify }},
       mapLayers: {{ site.map_layers | jsonify }},
       goal: goal,
-      title: title
+      title: "Test Nr.2" //title
     });
   };
 };
