@@ -134,7 +134,7 @@ var indicatorView = function (model, options) {
 
     if(args.hasGeoData && args.showMap) {
       view_obj._mapView = new mapView();
-      view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr, "Test Nr.3");//args.title);
+      view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr, args.title);
     }
   });
 

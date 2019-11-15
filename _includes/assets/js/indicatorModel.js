@@ -711,7 +711,7 @@ var indicatorModel = function (options) {
         showMap: this.showMap,
 
         indicatorId: this.indicatorId,
-        title: this.title
+        title: "Test Nr.4.1",
       });
 
 
