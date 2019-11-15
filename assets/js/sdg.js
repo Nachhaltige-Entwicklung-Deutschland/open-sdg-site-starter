@@ -716,7 +716,7 @@ var indicatorDataStore = function(dataUrl) {
   this.showMap = options.showMap;
 
   //----------
-  this.title = "Test Nr. 4.2";//options.graph_title;
+  this.title = options.chartTitle;//"Test Nr. 4.2";//options.graph_title;
   //----------
 
   // initialise the field information, unique fields and unique values for each field:
