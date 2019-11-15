@@ -1371,7 +1371,7 @@ var indicatorDataStore = function(dataUrl) {
         showMap: this.showMap,
 
         indicatorId: this.indicatorId,
-        title: this.title
+        title: "Test Nr.4.1",
       });
 
 
@@ -1609,7 +1609,7 @@ var indicatorView = function (model, options) {
 
     if(args.hasGeoData && args.showMap) {
       view_obj._mapView = new mapView();
-      view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr, "Test Nr.3");//args.title);
+      view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr, args.title);
     }
   });
 
