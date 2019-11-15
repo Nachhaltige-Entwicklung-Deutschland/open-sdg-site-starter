@@ -55,6 +55,10 @@ var indicatorModel = function (options) {
   this.geoCodeRegEx = options.geoCodeRegEx;
   this.showMap = options.showMap;
 
+  //----------
+  this.title = options.graph_title;
+  //----------
+
   // initialise the field information, unique fields and unique values for each field:
   (function initialise() {
 
@@ -706,7 +710,8 @@ var indicatorModel = function (options) {
         geoCodeRegEx: this.geoCodeRegEx,
         showMap: this.showMap,
 
-        indicatorId: this.indicatorId
+        indicatorId: this.indicatorId,
+        title: this.title
       });
 
 
