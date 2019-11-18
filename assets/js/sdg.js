@@ -118,10 +118,7 @@ opensdg.autotrack = function(preset, category, action, label) {
     //this.timeSeries = _.pluck(this.geoData, 'timeseries');
     //this.timeSeriesName = translations.t(this.timeSeries[0]);
     // Since the csv-files do not contain the titles of time series any more:
-    this.title = this.title //translations.t(this.title)
-
-    this.timeSeries = _.pluck(this.geoData, 'title');
-    this.timeSeriesName = translations.t(this.timeSeries[0]);
+    this.timeSeriesName = this.title //translations.t(this.title)
     this.unit = _.pluck(this.geoData, 'Units');
     this.unitName = translations.t(this.unit[0]);
     this.age = _.pluck(this.geoData, 'age');
@@ -2578,6 +2575,7 @@ $(function() {
       var div = L.DomUtil.create('div', 'selection-legend');
 
       //-----------------------------------------------------------------------
+      /*
       var headline = this.plugin.title
       if (this.plugin.timeSeriesName){
         headline += (this.plugin.timeSeriesName + ', <br>';
@@ -2589,14 +2587,14 @@ $(function() {
       headline += this.plugin.unitName;
 
 
-      /*
+      */
       var headline
       if (this.plugin.ageName){
         headline = this.plugin.timeSeriesName + ', <br>' + this.plugin.ageName + ', <br>' + this.plugin.unitName;
       } else {
         headline = this.plugin.timeSeriesName + ', <br>' + this.plugin.unitName;
       }
-      */
+
       //-----------------------------------------------------------------------
 
       div.innerHTML = L.Util.template(controlTpl, {
