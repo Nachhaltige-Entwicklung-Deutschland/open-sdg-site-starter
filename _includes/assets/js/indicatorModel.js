@@ -466,6 +466,59 @@ var indicatorModel = function (options) {
         //   }) : undefined,
 
         //--------------------
+        var categ = combinationDescription.substring(0, 4)
+        if (categ == 'Ziel' || categ == 'Zeit') {
+          if (combinationDescription.indexOf(',') != -1){
+            if  nameList.includes(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length)) {//
+              var tempIndex = nameList.indexOf(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length));
+              var datasetIndexMod = indexList[tmpIndex];
+            }
+            else {
+              nameList.push(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length));
+              indexList.push(datasetIndex);
+              var datasetIndexMod = datasetIndex
+            }
+
+          }
+          else {
+            var datasetIndexMod = 0
+          }
+        }
+        else {
+          var datasetIndexMod = datasetIndex
+        }
+
+
+
+
+        var fieldIndex,
+          ds = _.extend({
+
+            label: combinationDescription ? combinationDescription : that.country,
+            borderColor: '#' + getColor(datasetIndexMod),
+            backgroundColor: '#' + getColor(datasetIndexMod),
+            pointStyle: getPointStyle(combinationDescription),
+            radius: 6,
+            pointBorderColor: '#' + getColor(datasetIndex),
+            borderDash: getBorderDash(datasetIndex),
+            data: _.map(that.years, function (year) {
+              var found = _.findWhere(data, {
+                Year: year
+              });
+              return found ? found.Value : null;
+            }),
+            type: 'line',
+            borderWidth: combinationDescription ? 2 : 4
+          }, that.datasetObject);
+
+
+
+
+
+
+
+
+        /*
         // combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length) --> returns legend entry without the part before the first comma (most: Target or Time series)
         if ((!nameList.includes(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length)) || (combinationDescription.substring(0, 4) != 'Ziel' && !combinationDescription.substring(0, 4) != 'Zeit')) && combinationDescription.indexOf(',') != -1)  {
           nameList.push(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length));
@@ -538,6 +591,7 @@ var indicatorModel = function (options) {
               borderWidth: combinationDescription ? 2 : 4
             }, that.datasetObject);
         }
+        */
         //----------------------------------
 
 
