@@ -211,7 +211,7 @@ var indicatorModel = function (options) {
     var colors = ['fcc30b', '977506', 'fddb6c', '322702', 'fef3ce', 'c99c08', 'fccf3b', '644e04', 'fde79d'];
   }
   else if(this.indicatorId.includes('_8-')){
-    var colors = ['a21942', '610f27', 'c7758d', 'a21942', 'ecd1d9', '811434', 'b44667', '400a1a', 'd9a3b3'];
+    var colors = ['a21942', '610f27', 'c7758d', '610F28', 'ecd1d9', '811434', 'b44667', '400a1a', 'd9a3b3'];
   }
   else if(this.indicatorId.includes('_9-')){
     var colors = ['fd6925', '973f16', 'fda57c', '321507', 'fee1d3', 'ca541d', 'fd8750', '652a0e', 'fec3a7'];
