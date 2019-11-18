@@ -56,9 +56,9 @@
 
 
       var headline = this.plugin.title
-      if (this.plugin.timeSeriesName){
-        headline += ', <br>' + this.plugin.timeSeriesName;
-      }
+      //if (this.plugin.timeSeriesName){
+        //headline += ', <br>' + this.plugin.timeSeriesName;
+      //}
       if (this.plugin.ageName){
         headline += ', <br>' + this.plugin.ageName;
       }
