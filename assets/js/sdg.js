@@ -1158,7 +1158,7 @@ var indicatorDataStore = function(dataUrl) {
             backgroundColor: '#' + getColor(datasetIndexMod),
             pointStyle: getPointStyle(combinationDescription),
             radius: 6,
-            pointBorderColor: '#' + getColor(datasetIndex),
+            pointBorderColor: '#' + getColor(datasetIndexMod),
             borderDash: getBorderDash(datasetIndex),
             data: _.map(that.years, function (year) {
               var found = _.findWhere(data, {
