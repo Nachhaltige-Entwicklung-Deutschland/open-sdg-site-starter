@@ -1153,7 +1153,7 @@ var indicatorDataStore = function(dataUrl) {
         }
 
         // case: No disaggregation but Target and timeseries
-        else if (combinationDescription.indexOf(',') == -1) {
+        else if (combinationDescription.indexOf(',') == -1 && (combinationDescription.substring(0, 4) == 'Ziel' || !combinationDescription.substring(0, 4) != 'Zeit')) {
           var fieldIndex,
             ds = _.extend({
 
