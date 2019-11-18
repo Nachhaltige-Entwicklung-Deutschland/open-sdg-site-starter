@@ -84,9 +84,10 @@
     this.currentYear = this.years[0];
 
     //----------------------------------------------
-    //this.timeSeries = _.pluck(this.geoData, 'timeseries');
-    //this.timeSeriesName = translations.t(this.timeSeries[0]);
+    this.timeSeries = _.pluck(this.geoData, 'timeseries');
+    this.timeSeriesName = translations.t(this.timeSeries[0]);
     // Since the csv-files do not contain the titles of time series any more:
+
     this.title = this.title //translations.t(this.title)
     this.unit = _.pluck(this.geoData, 'Units');
     this.unitName = translations.t(this.unit[0]);
