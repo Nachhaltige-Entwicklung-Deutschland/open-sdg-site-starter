@@ -62,7 +62,7 @@
       if (this.plugin.ageName){
         headline += ', <br>' + this.plugin.ageName;
       }
-      headline += ', <br>2.5' + this.plugin.unitName;
+      headline += ', <br>' + this.plugin.unitName;
 
 
       //-----------------------------------------------------------------------
