@@ -481,7 +481,7 @@ var indicatorModel = function (options) {
               // Ziel oder Zeitreihe - Mit Disaggregationen - Pendant ist schon aufgerufen worden
               // --> finde den Index des Pendants
               var tempIndex = nameList.indexOf(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length));
-              var datasetIndexMod = indexList[tmpIndex];
+              var datasetIndexMod = indexList[tempIndex];
             }
           }
           else {
