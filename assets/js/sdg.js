@@ -2500,25 +2500,18 @@ $(function() {
       var div = L.DomUtil.create('div', 'selection-legend');
 
       //-----------------------------------------------------------------------
-      /*
+
+
+
       var headline = this.plugin.title
       if (this.plugin.timeSeriesName){
-        headline += (this.plugin.timeSeriesName + ', <br>';
+        headline += ', <br>' + this.plugin.timeSeriesName;
       }
       if (this.plugin.ageName){
-        headline += this.plugin.ageName + ', <br>';
+        headline += ', <br>' + this.plugin.ageName;
       }
+      headline += ', <br>2.3' + this.plugin.unitName;
 
-      headline += this.plugin.unitName;
-      */
-
-
-      var headline = this.plugin.title
-      if (this.plugin.ageName){
-        headline += ', <br>' + this.plugin.ageName + ', <br>' + this.plugin.unitName;
-      } else {
-        headline += ', <br>' + this.plugin.unitName;
-      }
 
       //-----------------------------------------------------------------------
 
