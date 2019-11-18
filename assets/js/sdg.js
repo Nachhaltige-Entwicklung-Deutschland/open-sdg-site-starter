@@ -2580,13 +2580,13 @@ $(function() {
       //-----------------------------------------------------------------------
       var headline = this.plugin.title
       if (this.plugin.timeSeriesName){
-        headline += (this.plugin.timeSeriesName + ', <br>'
+        headline += (this.plugin.timeSeriesName + ', <br>';
       }
       if (this.plugin.ageName){
-        headline += this.plugin.ageName + ', <br>'
+        headline += this.plugin.ageName + ', <br>';
       }
 
-      headline += this.plugin.unitName
+      headline += this.plugin.unitName;
 
 
       /*
@@ -2594,7 +2594,7 @@ $(function() {
       if (this.plugin.ageName){
         headline = this.plugin.timeSeriesName + ', <br>' + this.plugin.ageName + ', <br>' + this.plugin.unitName;
       } else {
-        headline = this.plugin.timeSeriesName + ' <br>' + this.plugin.unitName;
+        headline = this.plugin.timeSeriesName + ', <br>' + this.plugin.unitName;
       }
       */
       //-----------------------------------------------------------------------
