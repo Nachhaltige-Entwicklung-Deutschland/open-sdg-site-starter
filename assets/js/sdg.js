@@ -1176,8 +1176,7 @@ var indicatorDataStore = function(dataUrl) {
             borderWidth: combinationDescription ? 2 : 4
           }, that.datasetObject);
 
-
-        */
+        /*
         // combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length) --> returns legend entry without the part before the first comma (most: Target or Time series)
         if ((!nameList.includes(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length)) || (combinationDescription.substring(0, 4) != 'Ziel' && !combinationDescription.substring(0, 4) != 'Zeit')) && combinationDescription.indexOf(',') != -1)  {
           nameList.push(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length));
