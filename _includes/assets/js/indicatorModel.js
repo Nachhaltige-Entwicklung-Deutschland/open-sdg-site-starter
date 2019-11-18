@@ -469,14 +469,15 @@ var indicatorModel = function (options) {
         var categ = combinationDescription.substring(0, 4)
         if (categ == 'Ziel' || categ == 'Zeit') {
           if (combinationDescription.indexOf(',') != -1){
-            if (nameList.includes(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length))) {
-              var tempIndex = nameList.indexOf(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length));
-              var datasetIndexMod = indexList[tmpIndex];
-            }
-            else {
+            if (!nameList.includes(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length))) {
               nameList.push(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length));
               indexList.push(datasetIndex);
               var datasetIndexMod = datasetIndex
+
+            }
+            else {
+              var tempIndex = nameList.indexOf(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length));
+              var datasetIndexMod = indexList[tmpIndex];
             }
           }
           else {
@@ -486,9 +487,6 @@ var indicatorModel = function (options) {
         else {
           var datasetIndexMod = datasetIndex
         }
-
-
-
 
         var fieldIndex,
           ds = _.extend({
@@ -509,6 +507,8 @@ var indicatorModel = function (options) {
             type: 'line',
             borderWidth: combinationDescription ? 2 : 4
           }, that.datasetObject);
+
+          
         /*
         // combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length) --> returns legend entry without the part before the first comma (most: Target or Time series)
         if ((!nameList.includes(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length)) || (combinationDescription.substring(0, 4) != 'Ziel' && !combinationDescription.substring(0, 4) != 'Zeit')) && combinationDescription.indexOf(',') != -1)  {
