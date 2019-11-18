@@ -1126,26 +1126,34 @@ var indicatorDataStore = function(dataUrl) {
         //   }) : undefined,
 
         //--------------------
+
         var categ = combinationDescription.substring(0, 4)
         if (categ == 'Ziel' || categ == 'Zeit') {
           if (combinationDescription.indexOf(',') != -1){
             if (!nameList.includes(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length))) {
+              // Ziel oder Zeitreihe - Mit Disaggregationen - Pendant ist noch nicht aufgerufen worden
+              // Schreibe den Index auf die Liste, damit dieser beim Aufruf des Pendants gefunden werden kann
               nameList.push(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length));
               indexList.push(datasetIndex);
-              var datasetIndexMod = datasetIndex
-
+              var datasetIndexMod = datasetIndex;
             }
             else {
+              // Ziel oder Zeitreihe - Mit Disaggregationen - Pendant ist schon aufgerufen worden
+              // --> finde den Index des Pendants
               var tempIndex = nameList.indexOf(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length));
               var datasetIndexMod = indexList[tmpIndex];
             }
           }
           else {
-            var datasetIndexMod = 0
+            // Ziel oder Zeitreihe - Keine weiteren Disaggregationen
+            // Nimm die erste farbe aus der Liste
+            var datasetIndexMod = 0;
           }
         }
         else {
-          var datasetIndexMod = datasetIndex
+          // Keine Ziel-/Zeitreihen-Unterteilung
+          // Nimm den normalen Indexwert
+          var datasetIndexMod = datasetIndex;
         }
 
         var fieldIndex,
@@ -1168,8 +1176,8 @@ var indicatorDataStore = function(dataUrl) {
             borderWidth: combinationDescription ? 2 : 4
           }, that.datasetObject);
 
-          
-        /*
+
+        */
         // combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length) --> returns legend entry without the part before the first comma (most: Target or Time series)
         if ((!nameList.includes(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length)) || (combinationDescription.substring(0, 4) != 'Ziel' && !combinationDescription.substring(0, 4) != 'Zeit')) && combinationDescription.indexOf(',') != -1)  {
           nameList.push(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length));
