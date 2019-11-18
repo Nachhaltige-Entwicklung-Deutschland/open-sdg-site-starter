@@ -59,8 +59,17 @@
       if (this.plugin.timeSeriesName){
         headline += ', <br>' + this.plugin.timeSeriesName;
       }
+      if (this.plugin.sexName){
+        headline += ', <br>' + this.plugin.sexName;
+      }
       if (this.plugin.ageName){
         headline += ', <br>' + this.plugin.ageName;
+      }
+      if (this.plugin.typificationName){
+        headline += ', <br>' + this.plugin.typificationName;
+      }
+      if (this.plugin.criminalOffenceName){
+        headline += ', <br>' + this.plugin.criminalOffenceName;
       }
       headline += ', <br>' + this.plugin.unitName;
 

@@ -86,11 +86,17 @@
     //----------------------------------------------
     this.title = translations.t(this.title)
     this.timeSeries = _.pluck(this.geoData, 'title');
-    this.timeSeriesName = translations.t(this.timeSeries[0]);
+    this.timeSeriesName = translations.t(this.timeSeries[-1]);
+    this.sex = _.pluck(this.geoData, 'sex');
+    this.sexName = translations.t(this.sex[-1]);
     this.age = _.pluck(this.geoData, 'age');
-    this.ageName = translations.t(this.age[0]);
+    this.ageName = translations.t(this.age[-1]);
+    this.typification = _.pluck(this.geoData, 'typification');
+    this.typificationName = translations.t(this.typification[-1]);
+    this.criminalOffence = _.pluck(this.geoData, 'criminal offence');
+    this.criminalOffenceName = translations.t(this.criminalOffence[-1]);
     this.unit = _.pluck(this.geoData, 'Units');
-    this.unitName = translations.t(this.unit[0]);
+    this.unitName = translations.t(this.unit[-1]);
     //---------------------------------------------------
 
     this.init();
