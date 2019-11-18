@@ -115,7 +115,7 @@ opensdg.autotrack = function(preset, category, action, label) {
     this.currentYear = this.years[0];
 
     //----------------------------------------------
-    this.timeSeries = _.pluck(this.geoData, 'timeseries');
+    this.timeSeries = _.pluck(this.geoData, 'title');
     this.timeSeriesName = translations.t(this.timeSeries[0]);
     // Since the csv-files do not contain the titles of time series any more:
 
