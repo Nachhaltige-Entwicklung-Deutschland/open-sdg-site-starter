@@ -115,15 +115,13 @@ opensdg.autotrack = function(preset, category, action, label) {
     this.currentYear = this.years[0];
 
     //----------------------------------------------
+    this.title = translations.t(this.title)
     this.timeSeries = _.pluck(this.geoData, 'title');
     this.timeSeriesName = translations.t(this.timeSeries[0]);
-    // Since the csv-files do not contain the titles of time series any more:
-
-    this.title = this.title //translations.t(this.title)
-    this.unit = _.pluck(this.geoData, 'Units');
-    this.unitName = translations.t(this.unit[0]);
     this.age = _.pluck(this.geoData, 'age');
     this.ageName = translations.t(this.age[0]);
+    this.unit = _.pluck(this.geoData, 'Units');
+    this.unitName = translations.t(this.unit[0]);
     //---------------------------------------------------
 
     this.init();
@@ -2511,7 +2509,7 @@ $(function() {
       if (this.plugin.ageName){
         headline += ', <br>' + this.plugin.ageName;
       }
-      headline += ', <br>2.5' + this.plugin.unitName;
+      headline += ', <br>' + this.plugin.unitName;
 
 
       //-----------------------------------------------------------------------
