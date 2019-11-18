@@ -93,7 +93,7 @@
     this.ageName = translations.t(this.age[this.age.length -1]);
     this.typification = _.pluck(this.geoData, 'typification');
     this.typificationName = translations.t(this.typification[this.typification.length -1]);
-    this.criminalOffence = _.pluck(this.geoData, 'criminal offence');
+    this.criminalOffence = _.pluck(this.geoData, 'criminal offences');
     this.criminalOffenceName = translations.t(this.criminalOffence[this.criminalOffence.length -1]);
     this.unit = _.pluck(this.geoData, 'Units');
     this.unitName = translations.t(this.unit[this.unit.length -1]);
