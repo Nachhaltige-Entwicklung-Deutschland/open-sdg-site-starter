@@ -2510,14 +2510,14 @@ $(function() {
       }
 
       headline += this.plugin.unitName;
-
-
       */
-      var headline
+
+
+      var headline = this.plugin.title
       if (this.plugin.ageName){
-        headline = this.plugin.title + ', <br>' + this.plugin.ageName + ', <br>' + this.plugin.unitName;
+        headline += ', <br>' + this.plugin.ageName + ', <br>' + this.plugin.unitName;
       } else {
-        headline = this.plugin.title + ', <br>' + this.plugin.unitName;
+        headline += ', <br>' + this.plugin.unitName;
       }
 
       //-----------------------------------------------------------------------
