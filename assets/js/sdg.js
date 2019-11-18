@@ -118,7 +118,7 @@ opensdg.autotrack = function(preset, category, action, label) {
     //this.timeSeries = _.pluck(this.geoData, 'timeseries');
     //this.timeSeriesName = translations.t(this.timeSeries[0]);
     // Since the csv-files do not contain the titles of time series any more:
-    this.timeSeriesName = this.title //translations.t(this.title)
+    this.title = this.title //translations.t(this.title)
     this.unit = _.pluck(this.geoData, 'Units');
     this.unitName = translations.t(this.unit[0]);
     this.age = _.pluck(this.geoData, 'age');
@@ -1175,81 +1175,6 @@ var indicatorDataStore = function(dataUrl) {
             type: 'line',
             borderWidth: combinationDescription ? 2 : 4
           }, that.datasetObject);
-
-        /*
-        // combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length) --> returns legend entry without the part before the first comma (most: Target or Time series)
-        if ((!nameList.includes(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length)) || (combinationDescription.substring(0, 4) != 'Ziel' && !combinationDescription.substring(0, 4) != 'Zeit')) && combinationDescription.indexOf(',') != -1)  {
-          nameList.push(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length));
-          indexList.push(datasetIndex);
-
-          var fieldIndex,
-            ds = _.extend({
-
-              label: combinationDescription ? combinationDescription : that.country,
-              borderColor: '#' + getColor(datasetIndex),
-              backgroundColor: '#' + getColor(datasetIndex),
-              pointStyle: getPointStyle(combinationDescription),
-              radius: 6,
-              pointBorderColor: '#' + getColor(datasetIndex),
-              borderDash: getBorderDash(datasetIndex),
-              data: _.map(that.years, function (year) {
-                var found = _.findWhere(data, {
-                  Year: year
-                });
-                return found ? found.Value : null;
-              }),
-              type: 'line',
-              borderWidth: combinationDescription ? 2 : 4
-            }, that.datasetObject);
-        }
-
-        // case: No disaggregation but Target and timeseries
-        else if (combinationDescription.indexOf(',') == -1 && (combinationDescription.substring(0, 4) == 'Ziel' || combinationDescription.substring(0, 4) == 'Zeit')) {
-          var fieldIndex,
-            ds = _.extend({
-
-              label: combinationDescription ? combinationDescription : that.country,
-              borderColor: '#' + getColor(0),
-              backgroundColor: '#' + getColor(0),
-              pointStyle: getPointStyle(combinationDescription),
-              radius: 6,
-              //pointBorderColor: '#' + getColor(tsrIndex),
-              borderDash: getBorderDash(datasetIndex),
-              data: _.map(that.years, function (year) {
-                var found = _.findWhere(data, {
-                  Year: year
-                });
-                return found ? found.Value : null;
-              }),
-              borderWidth: combinationDescription ? 2 : 4
-            }, that.datasetObject);
-        }
-
-        // Target or Time series whose counterpart already passed (and therefor are on nameList)
-        else {
-          var tmpIndex = nameList.indexOf(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length));
-          var tsrIndex = indexList[tmpIndex]
-
-          var fieldIndex,
-            ds = _.extend({
-
-              label: combinationDescription ? combinationDescription : that.country,
-              borderColor: '#' + getColor(tsrIndex),
-              backgroundColor: '#' + getColor(tsrIndex),
-              pointStyle: getPointStyle(combinationDescription),
-              radius: 6,
-              //pointBorderColor: '#' + getColor(tsrIndex),
-              borderDash: getBorderDash(datasetIndex),
-              data: _.map(that.years, function (year) {
-                var found = _.findWhere(data, {
-                  Year: year
-                });
-                return found ? found.Value : null;
-              }),
-              borderWidth: combinationDescription ? 2 : 4
-            }, that.datasetObject);
-        }
-        */
         //----------------------------------
 
 
@@ -2590,9 +2515,9 @@ $(function() {
       */
       var headline
       if (this.plugin.ageName){
-        headline = this.plugin.timeSeriesName + ', <br>' + this.plugin.ageName + ', <br>' + this.plugin.unitName;
+        headline = this.plugin.title + ', <br>' + this.plugin.ageName + ', <br>' + this.plugin.unitName;
       } else {
-        headline = this.plugin.timeSeriesName + ', <br>' + this.plugin.unitName;
+        headline = this.plugin.title + ', <br>' + this.plugin.unitName;
       }
 
       //-----------------------------------------------------------------------
