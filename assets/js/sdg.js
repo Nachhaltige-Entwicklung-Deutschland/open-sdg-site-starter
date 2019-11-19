@@ -339,7 +339,7 @@ opensdg.autotrack = function(preset, category, action, label) {
 
 
 
-      document.getElementById ("command").addEventListener ("click", handleCommand, false);
+      //document.getElementById ("command").addEventListener ("click", handleCommand, false);
 
 
 
