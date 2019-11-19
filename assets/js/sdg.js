@@ -315,14 +315,15 @@ opensdg.autotrack = function(preset, category, action, label) {
       var expressions = ['Männer', 'Frauen']
       // create the control
       for (var exp in expressions) {
-        var command = L.control({position: 'bottomright'});
-        command.onAdd = function (map) {
-            var div = L.DomUtil.create('div', 'command');
-            div.innerHTML = '<form><input id="command" type="checkbox"/> '+expressions[exp]+'</form>';
-            return div;
-        };
-        command.addTo(this.map);
-        //document.getElementById ("command").addEventListener ("click", handleCommand(expressions[exp]), false);
+        if  (expressions[exp] != 'function(val) { return this.indexOf(val) != -1; }')
+          var command = L.control({position: 'bottomright'});
+          command.onAdd = function (map) {
+              var div = L.DomUtil.create('div', 'command');
+              div.innerHTML = '<form><input id="command" type="checkbox"/> '+expressions[exp]+'</form>';
+              return div;
+          };
+          command.addTo(this.map);
+          //document.getElementById ("command").addEventListener ("click", handleCommand(expressions[exp]), false);
       }
 
 
