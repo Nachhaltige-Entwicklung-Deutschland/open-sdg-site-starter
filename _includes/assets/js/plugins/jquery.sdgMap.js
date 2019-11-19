@@ -287,10 +287,9 @@
         var command = L.control({position: 'bottomright'});
         command.onAdd = function (map) {
             var div = L.DomUtil.create('div', 'command');
-            div.innerHTML = '<form><input id="command" type="checkbox"/> '+exp+'</form>';
+            div.innerHTML = '<form><input id="command" type="checkbox"/> '+expressions[exp]+'</form>';
             return div;
         };
-
         command.addTo(this.map);
       }
       /*
