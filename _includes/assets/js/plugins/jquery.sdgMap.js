@@ -278,11 +278,19 @@
 
       //----------------------------
 
-      ///*
+
       // add the event handler
       function handleCommand(title) {
          alert("Clicked, title = " + this.title + ' active = '+ this.checked);
       }
+
+      function selectOnlyThis(id) {
+        for (var i = 0; i<2; i++) {
+          document.getElementById("command" + i).checked = false;
+        }
+        document.getElementById(id).checked = true;
+      }
+
       var expressions = ['Männer', 'Frauen']
       // create the control
       for (var i = 0; i<2; i++) {
@@ -296,7 +304,7 @@
         //document.getElementById ("command").addEventListener ("click", handleCommand(expressions[exp]), false);
       }
 
-      */
+
 
       //----------------------------
 
