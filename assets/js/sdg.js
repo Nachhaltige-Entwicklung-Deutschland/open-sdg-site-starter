@@ -309,7 +309,7 @@ opensdg.autotrack = function(preset, category, action, label) {
 
       //----------------------------
       // create the control
-      var command = L.control({position: 'right'});
+      var command = L.control({position: 'topright'});
 
       command.onAdd = function (map) {
           var div = L.DomUtil.create('div', 'command');
