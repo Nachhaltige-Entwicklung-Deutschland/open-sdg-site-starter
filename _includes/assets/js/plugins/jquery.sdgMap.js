@@ -279,22 +279,19 @@
       //----------------------------
       // create the control
       var command1 = L.control({position: 'right'});
-
       command1.onAdd = function (map) {
           var div = L.DomUtil.create('div', 'command');
-          div.innerHTML = '<form><input id="command" type="checkbox"/>Männer</form>';
+          div.innerHTML = '<form><input id="command1" type="checkbox"/>Männer</form>';
           return div;
       };
-
       command1.addTo(this.map);
 
       var command2 = L.control({position: 'right'});
       command2.onAdd = function (map) {
           var div = L.DomUtil.create('div', 'command');
-          div.innerHTML = '<form><input id="command" type="checkbox"/>Frauen</form>';
+          div.innerHTML = '<form><input id="command2" type="checkbox"/>Frauen</form>';
           return div;
       };
-
       command2.addTo(this.map);
 
 
@@ -303,7 +300,7 @@
          alert("Clicked, checked = " + this.checked);
       }
 
-      document.getElementById ("command").addEventListener ("click", handleCommand, false);
+      document.getElementById ("command1").addEventListener ("click", handleCommand, false);
 
 
 
