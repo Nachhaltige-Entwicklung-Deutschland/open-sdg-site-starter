@@ -306,6 +306,38 @@ opensdg.autotrack = function(preset, category, action, label) {
       // Add the download button.
       this.map.addControl(L.Control.downloadGeoJson(plugin));
 
+
+      //----------------------------
+      // create the control
+      var command = L.control({position: 'topright'});
+
+      command.onAdd = function (map) {
+          var div = L.DomUtil.create('div', 'command');
+
+          div.innerHTML = '<form><input id="command" type="checkbox"/>command</form>';
+          return div;
+      };
+
+      command.addTo(this.map);
+
+
+      // add the event handler
+      function handleCommand() {
+         alert("Clicked, checked = " + this.checked);
+      }
+
+      document.getElementById ("command").addEventListener ("click", handleCommand, false);
+
+
+
+
+
+
+      //----------------------------
+
+
+
+
       // At this point we need to load the GeoJSON layer/s.
       var geoURLs = this.mapLayers.map(function(item) {
         return $.getJSON(item.serviceUrl);
