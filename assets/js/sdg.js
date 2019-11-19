@@ -308,6 +308,8 @@ opensdg.autotrack = function(preset, category, action, label) {
 
 
       //----------------------------
+
+      ///*
       // add the event handler
       function handleCommand(title) {
          alert("Clicked, title = " + this.title + ' active = '+ this.checked);
@@ -319,14 +321,14 @@ opensdg.autotrack = function(preset, category, action, label) {
           var command = L.control({position: 'bottomright'});
           command.onAdd = function (map) {
               var div = L.DomUtil.create('div', 'command');
-              div.innerHTML = '<form><input id="command" type="checkbox"/> '+expressions[exp]+'</form>';
+              div.innerHTML = '<form><input id="command" type="radio"/> '+expressions[exp]+'</form>';
               return div;
           };
           command.addTo(this.map);
           //document.getElementById ("command").addEventListener ("click", handleCommand(expressions[exp]), false);
       }
 
-
+      */
 
       //----------------------------
 
