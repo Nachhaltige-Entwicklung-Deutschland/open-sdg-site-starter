@@ -308,7 +308,7 @@
 
 
 
-      document.getElementById ("command").addEventListener ("click", handleCommand, false);
+      //document.getElementById ("command").addEventListener ("click", handleCommand, false);
 
 
 
