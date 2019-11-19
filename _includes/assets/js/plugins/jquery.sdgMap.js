@@ -115,7 +115,7 @@
 
         // First add the time series data.
         var records = _.where(geoData, { GeoCode: geocode });
-        if (typeof records.sex != 'undefined' ){
+        if ( Array.isArray(records.sex) ){
           records = _.where(records, { sex: 'female' });
         };
         records.forEach(function(record) {
