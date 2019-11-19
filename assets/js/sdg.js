@@ -148,7 +148,7 @@ opensdg.autotrack = function(preset, category, action, label) {
         var records = _.where(geoData, { GeoCode: geocode });
         records.forEach(function(record) {
           // Add the Year data into the properties.
-          feature.properties[record.sex] = record.Value;
+          feature.properties[record.Year] = record.Value;
         });
 
 
