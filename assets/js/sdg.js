@@ -328,7 +328,7 @@ opensdg.autotrack = function(preset, category, action, label) {
         var command = L.control({position: 'bottomright'});
         command.onAdd = function (map) {
             var div = L.DomUtil.create('div', 'command');
-            div.innerHTML = '<form><input id="command'+i+'" type="checkbox" onclick="selectOnlyThis(this.id)" /> '+expressions[exp]+'</form>';
+            div.innerHTML = '<form><input id="command'+i+'" type="checkbox" onclick="selectOnlyThis(this.id)" /> '+expressions[i]+'</form>';
             return div;
         };
         command.addTo(this.map);
