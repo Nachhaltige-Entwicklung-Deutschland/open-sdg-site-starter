@@ -151,7 +151,7 @@ opensdg.autotrack = function(preset, category, action, label) {
           feature.properties[record.Year] = record.Value;
         });
 
-
+        var expressions = ['male', 'femals']
         // Next normalize the geocode and name.
         feature.properties.name = translations.t(name);
         feature.properties.geocode = geocode;
@@ -317,7 +317,7 @@ opensdg.autotrack = function(preset, category, action, label) {
 
 
 
-      var expressions = ['Männer', 'Frauen']
+      //var expressions = ['Männer', 'Frauen']
       // create the control
       for (var i = 0; i<2; i++) {
         var command = L.control({position: 'bottomright'});
