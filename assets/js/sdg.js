@@ -129,7 +129,8 @@ opensdg.autotrack = function(preset, category, action, label) {
     this.unit = _.pluck(this.geoData, 'Units');
     this.unitName = translations.t(this.unit[this.unit.length -1]);
     //---------------------------------------------------
-
+    this.mapDisaggs = _.pluck(this.geoData, 'sex')
+    this.uniqMapDisaggs = [...new Set(this.mapDisaggs)];
 
     this.init();
   }
@@ -317,13 +318,13 @@ opensdg.autotrack = function(preset, category, action, label) {
 
 
 
-      //var expressions = ['Männer', 'Frauen']
+      var expressions = ['Männer', 'Frauen']
       // create the control
       for (var i = 0; i<2; i++) {
         var command = L.control({position: 'bottomright'});
         command.onAdd = function (map) {
             var div = L.DomUtil.create('div', 'command');
-            div.innerHTML = '<form><input id="command'+i+'" type="checkbox" /> '+expressions[i]+'</form>';
+            div.innerHTML = '<form><input id="command'+i+'" type="checkbox" /> '+this.uniqMapDisaggs[i]+'</form>';
             return div;
         };
         command.addTo(this.map);
