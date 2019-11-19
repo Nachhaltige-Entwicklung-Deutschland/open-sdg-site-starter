@@ -311,7 +311,7 @@ opensdg.autotrack = function(preset, category, action, label) {
       // create the control
       var command1 = L.control({position: 'right'});
       command1.onAdd = function (map) {
-          var div = L.DomUtil.create('div', 'command');
+          var div = L.DomUtil.create('div', 'command1');
           div.innerHTML = '<form><input id="command1" type="checkbox"/>Männer</form>';
           return div;
       };
@@ -319,7 +319,7 @@ opensdg.autotrack = function(preset, category, action, label) {
 
       var command2 = L.control({position: 'right'});
       command2.onAdd = function (map) {
-          var div = L.DomUtil.create('div', 'command');
+          var div = L.DomUtil.create('div', 'command2');
           div.innerHTML = '<form><input id="command2" type="checkbox"/>Frauen</form>';
           return div;
       };
