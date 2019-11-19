@@ -291,28 +291,8 @@
             return div;
         };
         command.addTo(this.map);
-        document.getElementById ("command").addEventListener ("click", handleCommand(expressions[exp]), false);
+        //document.getElementById ("command").addEventListener ("click", handleCommand(expressions[exp]), false);
       }
-      /*
-      var command = L.control({position: 'bottomright'});
-
-      command.onAdd = function (map) {
-          var div = L.DomUtil.create('div', 'command');
-          var text = 'Männer'
-          div.innerHTML = '<form><input id="command" type="checkbox"/> '+text+'</form>';
-          return div;
-      };
-
-      command.addTo(this.map);
-      */
-
-
-
-
-      //document.getElementById ("command").addEventListener ("click", handleCommand, false);
-
-
-
 
 
 
