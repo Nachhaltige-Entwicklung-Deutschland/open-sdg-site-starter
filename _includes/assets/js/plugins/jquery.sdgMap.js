@@ -117,7 +117,7 @@
         var records = _.where(geoData, { GeoCode: geocode });
         if (records.sex){
           records = _.where(records, { sex: 'female' });
-        }
+        };
         records.forEach(function(record) {
           // Add the Year data into the properties.
           feature.properties[record.Year] = record.Value;
