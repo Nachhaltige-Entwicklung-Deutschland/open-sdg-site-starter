@@ -146,7 +146,7 @@ opensdg.autotrack = function(preset, category, action, label) {
 
         // First add the time series data.
         var records = _.where(geoData, { GeoCode: geocode });
-        if (records.sex){
+        if (records.sex[0]){
           records = _.where(records, { sex: 'female' });
         };
         records.forEach(function(record) {
