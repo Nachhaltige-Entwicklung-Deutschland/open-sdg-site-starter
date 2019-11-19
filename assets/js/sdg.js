@@ -312,18 +312,30 @@ opensdg.autotrack = function(preset, category, action, label) {
       function handleCommand() {
          alert("Clicked, checked = " + this.checked);
       }
-      //var expressions = 
+      var expressions = ['Männer', 'Frauen']
       // create the control
+      for (var exp in expressions) {
+        var command = L.control({position: 'bottomright'});
+        command.onAdd = function (map) {
+            var div = L.DomUtil.create('div', 'command');
+            div.innerHTML = '<form><input id="command" type="checkbox"/> '+exp+'</form>';
+            return div;
+        };
+
+        command.addTo(this.map);
+      }
+      /*
       var command = L.control({position: 'bottomright'});
 
       command.onAdd = function (map) {
           var div = L.DomUtil.create('div', 'command');
           var text = 'Männer'
-          div.innerHTML = '<form><input id="command" type="checkbox"/>'+text+'</form>';
+          div.innerHTML = '<form><input id="command" type="checkbox"/> '+text+'</form>';
           return div;
       };
 
       command.addTo(this.map);
+      */
 
 
 
