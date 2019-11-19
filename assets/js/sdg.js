@@ -308,8 +308,13 @@ opensdg.autotrack = function(preset, category, action, label) {
 
 
       //----------------------------
+      // add the event handler
+      function handleCommand() {
+         alert("Clicked, checked = " + this.checked);
+      }
+      //var expressions = 
       // create the control
-      var command = L.control({position: 'middleright'});
+      var command = L.control({position: 'bottomright'});
 
       command.onAdd = function (map) {
           var div = L.DomUtil.create('div', 'command');
@@ -321,10 +326,7 @@ opensdg.autotrack = function(preset, category, action, label) {
       command.addTo(this.map);
 
 
-      // add the event handler
-      function handleCommand() {
-         alert("Clicked, checked = " + this.checked);
-      }
+
 
       document.getElementById ("command").addEventListener ("click", handleCommand, false);
 
