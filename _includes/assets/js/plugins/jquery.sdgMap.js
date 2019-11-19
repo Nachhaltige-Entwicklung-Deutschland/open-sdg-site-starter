@@ -111,12 +111,19 @@
       geoJson.features.forEach(function(feature) {
         var geocode = feature.properties[idProperty];
         var name = feature.properties[nameProperty];
+
+
         // First add the time series data.
         var records = _.where(geoData, { GeoCode: geocode });
         records.forEach(function(record) {
           // Add the Year data into the properties.
-          feature.properties[record.Year] = record.Value;
+          //feature.properties[record.Year] = record.Value;
+          feature.properties.time = record.Year;
+          feature.properties.density = record.Value;
+
         });
+
+
         // Next normalize the geocode and name.
         feature.properties.name = translations.t(name);
         feature.properties.geocode = geocode;
