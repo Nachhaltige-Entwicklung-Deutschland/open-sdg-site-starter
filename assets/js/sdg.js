@@ -310,7 +310,7 @@ opensdg.autotrack = function(preset, category, action, label) {
       //----------------------------
       // add the event handler
       function handleCommand(title) {
-         alert("Clicked, title = " + title + ' active = '+ this.checked);
+         alert("Clicked, title = " + this.title + ' active = '+ this.checked);
       }
       var expressions = ['Männer', 'Frauen']
       // create the control
