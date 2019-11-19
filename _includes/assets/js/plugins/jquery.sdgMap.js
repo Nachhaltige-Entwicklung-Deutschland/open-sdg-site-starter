@@ -114,8 +114,7 @@
 
 
         // First add the time series data.
-        var records1 = _.where(geoData, { GeoCode: geocode });
-        var records = _.where(records1, { sex: 'female' });
+        var records = _.where(geoData, { GeoCode: geocode, sex: 'female' });      
         records.forEach(function(record) {
           // Add the Year data into the properties.
           feature.properties[record.Year] = record.Value;
