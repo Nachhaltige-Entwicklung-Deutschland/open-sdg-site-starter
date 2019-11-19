@@ -309,8 +309,8 @@ opensdg.autotrack = function(preset, category, action, label) {
 
       //----------------------------
       // add the event handler
-      function handleCommand() {
-         alert("Clicked, checked = " + this.checked);
+      function handleCommand(title) {
+         alert("Clicked, title = " + title + ' active = '+ this.checked);
       }
       var expressions = ['Männer', 'Frauen']
       // create the control
@@ -322,6 +322,7 @@ opensdg.autotrack = function(preset, category, action, label) {
             return div;
         };
         command.addTo(this.map);
+        document.getElementById ("command").addEventListener ("click", handleCommand(expressions[exp]), false);
       }
       /*
       var command = L.control({position: 'bottomright'});
