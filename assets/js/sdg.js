@@ -314,7 +314,7 @@ opensdg.autotrack = function(preset, category, action, label) {
       }
       var expressions = ['Männer', 'Frauen']
       // create the control
-      for (var exp in expressions-1) {
+      for (var exp in expressions) {
         var command = L.control({position: 'bottomright'});
         command.onAdd = function (map) {
             var div = L.DomUtil.create('div', 'command');
