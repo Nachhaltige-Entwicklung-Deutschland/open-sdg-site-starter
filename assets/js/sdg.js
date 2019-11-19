@@ -309,16 +309,24 @@ opensdg.autotrack = function(preset, category, action, label) {
 
       //----------------------------
       // create the control
-      var command = L.control({position: 'topright'});
+      var command1 = L.control({position: 'right'});
 
-      command.onAdd = function (map) {
+      command1.onAdd = function (map) {
           var div = L.DomUtil.create('div', 'command');
-
-          div.innerHTML = '<form><input id="command" type="checkbox"/>command</form>';
+          div.innerHTML = '<form><input id="command" type="checkbox"/>Männer</form>';
           return div;
       };
 
-      command.addTo(this.map);
+      command1.addTo(this.map);
+
+      var command2 = L.control({position: 'right'});
+      command2.onAdd = function (map) {
+          var div = L.DomUtil.create('div', 'command');
+          div.innerHTML = '<form><input id="command" type="checkbox"/>Frauen</form>';
+          return div;
+      };
+
+      command2.addTo(this.map);
 
 
       // add the event handler
