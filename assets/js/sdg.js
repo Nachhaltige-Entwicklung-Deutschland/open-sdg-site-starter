@@ -309,12 +309,12 @@ opensdg.autotrack = function(preset, category, action, label) {
 
       //----------------------------
       // create the control
-      var command = L.control({position: 'topright'});
+      var command = L.control({position: 'middleright'});
 
       command.onAdd = function (map) {
           var div = L.DomUtil.create('div', 'command');
-
-          div.innerHTML = '<form><input id="command" type="checkbox"/>Männer</form>';
+          var text = 'Männer'
+          div.innerHTML = '<form><input id="command" type="checkbox"/>'+text+'</form>';
           return div;
       };
 
