@@ -174,7 +174,7 @@ opensdg.autotrack = function(preset, category, action, label) {
           var category = 'sex';
         }
       };
-      return category;
+      return 'sex';
     },
 
 
