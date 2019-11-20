@@ -139,7 +139,7 @@
 
     findDisagg: function(){
       var expressions = _.pluck(this.geoData, 'sex');
-      eq = new Set(expressions).toJSON()
+      eq = new Set(expressions).toJSON();
       return eq;
     },
 
