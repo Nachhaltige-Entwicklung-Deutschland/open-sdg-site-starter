@@ -170,8 +170,8 @@ opensdg.autotrack = function(preset, category, action, label) {
     findDisagg: function(geoJsons){
       var expressions = ['female', 'male'];
       var expression = 'female';
-      var category = 'sex';
-      /*
+      
+
       for (var i = 0; i<2; i++) {
         var command = L.control({position: 'bottomright'});
         command.onAdd = function (map) {
@@ -181,7 +181,7 @@ opensdg.autotrack = function(preset, category, action, label) {
         };
         command.addTo(this.map);
         //document.getElementById ("command").addEventListener ("click", handleCommand(disaggs[i]), false);
-      */
+
       return expression;
     },
     /*
