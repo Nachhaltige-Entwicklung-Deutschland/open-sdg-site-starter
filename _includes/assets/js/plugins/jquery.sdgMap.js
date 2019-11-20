@@ -318,8 +318,8 @@
         command.addTo(this.map);
         //document.getElementById ("command").addEventListener ("click", handleCommand(disaggs[i]), false);
       };
-      var expression = document.querySelector('input[name = "disagg"]:checked').value;
-      document.writeln("You entered " + gender + " for your gender<br>");
+      var expression = $('input[name="disagg"]:checked').val();
+      //document.writeln("You entered " + gender + " for your gender<br>");
       //------------------------------------------------------------------------------------------------------------------------
 
 
