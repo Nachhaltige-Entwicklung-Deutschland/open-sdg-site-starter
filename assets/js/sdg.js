@@ -176,6 +176,7 @@ opensdg.autotrack = function(preset, category, action, label) {
     makeBtns: function(){
       var disaggs = plugin.findDisagg();
 
+      /*
       for (var i = 0; i<2; i++) {
         var command = L.control({position: 'bottomright'});
         command.onAdd = function (map) {
@@ -186,6 +187,7 @@ opensdg.autotrack = function(preset, category, action, label) {
         command.addTo(this.map);
         //document.getElementById ("command").addEventListener ("click", handleCommand(disaggs[i]), false);
       };
+      */
     },
 
 
