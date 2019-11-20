@@ -331,13 +331,17 @@
       };
       this.expression = $('input[name="disagg"]:checked').val();
 
-      $('#inline_content input[name="disagg"]').click(function(){
-        alert('You clicked radio!');
-        if($('input:radio[name="disagg"]:checked').val() == "famale"){
-          alert($('input:radio[name="disagg"]:checked').val());
-        //$('#select-table > .roomNumber').attr('enabled',false);
+
+      $("form input:radio").change(function () {
+        if ($(this).val() == "female") {
+          alert('You clicked female!');
+        } else {
+          alert('You clicked male!');
         }
-      });
+        });
+
+
+      
       //------------------------------------------------------------------------------------------------------------------------
 
 
