@@ -331,13 +331,13 @@
       };
       this.expression = $('input[name="disagg"]:checked').val();
 
-      $("#inline_content input[name='type']").click(function(){
+      $('#inline_content input[name="disagg"]').click(function(){
         alert('You clicked radio!');
-        if($('input:radio[name=type]:checked').val() == "walk_in"){
-          alert($('input:radio[name=type]:checked').val());
+        if($('input:radio[name="disagg"]:checked').val() == "walk_in"){
+          alert($('input:radio[name="disagg"]:checked').val());
         //$('#select-table > .roomNumber').attr('enabled',false);
-    }
-});
+        }
+      });
       //------------------------------------------------------------------------------------------------------------------------
 
 
