@@ -307,12 +307,12 @@
 
 
       //------------------------------------------------------------------------------------------------------------------------
-      var exp = plugin.findDisagg() //exp = ['female','male'];
+      var exp = plugin.findDisagg();
       for (var i = 0; i<2; i++) {
         var command = L.control({position: 'bottomright'});
         command.onAdd = function (map) {
             var div = L.DomUtil.create('div', 'command');
-            div.innerHTML = '<form><input id="command'+i+'" type="checkbox" /> '+exp[i]+'</form>';
+            div.innerHTML = '<form><input id="command'+i+'" type="radio" name="disagg"/> '+exp[i]+'</form>';
             return div;
         };
         command.addTo(this.map);
