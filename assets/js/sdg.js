@@ -166,8 +166,14 @@ opensdg.autotrack = function(preset, category, action, label) {
       var categories = ['title','sex','age','typification','criminal offences'];
       for (var i; i<categories.length; i++){
         var tmpExp = _.pluck(this.geoData, categories[i]);
+        tmpUnique = [ ...new Set(tmpExp) ];
+        if (tmpUnique.length>1){
+          var category = caseategories[i];
+        }
+        else {
+          var category = 'age';
+        }
       };
-      var category = 'sex';
       return category;
     },
 
@@ -356,7 +362,7 @@ opensdg.autotrack = function(preset, category, action, label) {
         var command = L.control({position: 'bottomright'});
         command.onAdd = function (map) {
             var div = L.DomUtil.create('div', 'command');
-            if (i == 1){
+            if (i == 0){
               div.innerHTML = '<input id="command'+i+'" type="radio" name="disagg" value="'+exp[i]+'" checked> '+exp[i]+'<br>';
             }
             else{
