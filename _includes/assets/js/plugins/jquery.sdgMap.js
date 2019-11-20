@@ -141,11 +141,10 @@
       var expression = 'female';
       return expressions;
     },
-
+    /*
     makeBtns: function(){
-      var disaggs = plugin.findDisagg();
+      var disaggs = plugin.findDisagg()
 
-      /*
       for (var i = 0; i<2; i++) {
         var command = L.control({position: 'bottomright'});
         command.onAdd = function (map) {
@@ -154,19 +153,18 @@
             return div;
         };
         command.addTo(this.map);
-        //document.getElementById ("command").addEventListener ("click", handleCommand(disaggs[i]), false);
+        document.getElementById ("command").addEventListener ("click", handleCommand(disaggs[i]), false);
       };
-      */
     },
 
 
     // add the event handler
     function handleCommand(disagg) {
        //alert("Clicked, title = " + this.title + ' active = '+ this.checked);
-       window.disagg = disagg;
+       window.disagg = disagg
     },
 
-
+    */
     //---------------------------
 
     // Zoom to a feature.
@@ -353,7 +351,6 @@
           var cat = plugin.findCat();
           var exp = plugin.findDisagg();
           var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, cat, exp);
-          plugin.makeBtns();
 
           var layer = L.geoJson(geoJson, {
             style: plugin.options.styleNormal,
