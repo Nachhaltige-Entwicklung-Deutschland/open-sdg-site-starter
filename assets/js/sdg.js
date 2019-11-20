@@ -167,16 +167,15 @@ opensdg.autotrack = function(preset, category, action, label) {
       return category;
     },
 
-    findDisagg: function(geoJsons){
+    findDisagg: function(){
       var expressions = ['female', 'male'];
       var expression = 'female';
-
-
-
       return expressions;
     },
-    /*
-    makeBtns: function(disaggs){
+
+    makeBtns: function(){
+      var disaggs = plugin.findDisagg()
+
       for (var i = 0; i<2; i++) {
         var command = L.control({position: 'bottomright'});
         command.onAdd = function (map) {
@@ -195,7 +194,7 @@ opensdg.autotrack = function(preset, category, action, label) {
        window.disagg = disagg
     },
 
-    */
+
     //---------------------------
 
     // Zoom to a feature.
@@ -380,8 +379,9 @@ opensdg.autotrack = function(preset, category, action, label) {
           var nameProperty = plugin.mapLayers[i].nameProperty;
 
           var cat = plugin.findCat();
-          var exp = plugin.findDisagg(geoJsons);
+          var exp = plugin.findDisagg();
           var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, cat, exp);
+          plugin.makeBtns();
 
           var layer = L.geoJson(geoJson, {
             style: plugin.options.styleNormal,
