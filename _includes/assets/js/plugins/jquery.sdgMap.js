@@ -375,7 +375,7 @@
           //----------------------------------------------------------------------------------------------------------------------
           var cat = plugin.findCat();
           var exp = plugin.findDisagg();
-          var expression = plugin.expression;
+          var expression = plugin.getExpression();
 
           var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, cat, expression);
           //----------------------------------------------------------------------------------------------------------------------
