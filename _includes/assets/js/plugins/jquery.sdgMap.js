@@ -144,7 +144,7 @@
     getExpression: function(){
       var expression = 'male';
       return expression;
-    }
+    },
 
 
     /*
