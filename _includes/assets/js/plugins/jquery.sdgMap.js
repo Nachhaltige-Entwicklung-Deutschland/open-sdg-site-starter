@@ -133,8 +133,8 @@
     findCat: function(){
 
       var category = 'sex';
-      return category
-    }
+      return category;
+    },
 
     findDisagg: function(geoJson){
       var expressions = ['female', 'male'];
