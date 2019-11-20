@@ -166,10 +166,12 @@ opensdg.autotrack = function(preset, category, action, label) {
       return category;
     },
 
+
+
     findDisagg: function(){
       var expressions = _.pluck(this.geoData, 'sex');
-
-      return expressions;
+      eq = new Set(expressions).toJSON()
+      return eq;
     },
 
     getExpression: function(){
