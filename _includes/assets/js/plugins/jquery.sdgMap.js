@@ -140,9 +140,6 @@
       var expression = 'female';
       return expressions;
     },
-    getExpression: function(){
-      var expression = $('input[name="disagg"]:checked').val();
-    },
     /*
     makeBtns: function(){
       var disaggs = plugin.findDisagg()
@@ -371,7 +368,7 @@
           //----------------------------------------------------------------------------------------------------------------------
           var cat = plugin.findCat();
           var exp = plugin.findDisagg();
-          //var expression = plugin.getExpression();
+          var expression = plugin.expression;
 
           var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, cat, plugin.expression);
           //----------------------------------------------------------------------------------------------------------------------
