@@ -162,7 +162,6 @@ opensdg.autotrack = function(preset, category, action, label) {
 
     //---------------------------
     findCat: function(){
-
       var category = 'sex';
       return category;
     },
@@ -352,7 +351,7 @@ opensdg.autotrack = function(preset, category, action, label) {
         command.addTo(this.map);
         //document.getElementById ("command").addEventListener ("click", handleCommand(disaggs[i]), false);
       };
-      var expression = 'male' //$('input[name="disagg"]:checked').val();
+      window.expression = 'male' //$('input[name="disagg"]:checked').val();
       //------------------------------------------------------------------------------------------------------------------------
 
 
@@ -405,7 +404,7 @@ opensdg.autotrack = function(preset, category, action, label) {
           var exp = plugin.findDisagg();
           //var expression = plugin.getExpression();
 
-          var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, cat, expression);
+          var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, cat, window.expression);
           //----------------------------------------------------------------------------------------------------------------------
 
           var layer = L.geoJson(geoJson, {
