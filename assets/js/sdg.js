@@ -161,11 +161,16 @@ opensdg.autotrack = function(preset, category, action, label) {
     },
 
     //---------------------------
+    findCat: function(){
+
+      var category = 'sex';
+      return category
+    }
 
     findDisagg: function(geoJson){
-      var expressions = ['female', 'male']
-      var expression = 'female'
-      var category = 'sex'
+      var expressions = ['female', 'male'];
+      var expression = 'female';
+      var category = 'sex';
       /*
       for (var i = 0; i<2; i++) {
         var command = L.control({position: 'bottomright'});
