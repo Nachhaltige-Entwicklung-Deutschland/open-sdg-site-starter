@@ -369,7 +369,7 @@
           plugin.dynamicLayers.addLayer(layer);
         }
 
-        
+        var exp = plugin.findDisagg();
         for (var i = 0; i<2; i++) {
           var command = L.control({position: 'bottomright'});
           command.onAdd = function (map) {
