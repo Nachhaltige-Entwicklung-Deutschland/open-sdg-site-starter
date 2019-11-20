@@ -169,10 +169,10 @@ opensdg.autotrack = function(preset, category, action, label) {
     findDisagg: function(){
       var allExpressions = _.pluck(this.geoData, 'sex');
       if (allExpressions){
-        var expression = allExpressions
+        var expression = allExpressions;
       }
       else{
-        var expressions = ['A','B']
+        var expressions = ['A','B'];
       }
 
       return expressions;
@@ -353,13 +353,19 @@ opensdg.autotrack = function(preset, category, action, label) {
       var exp = plugin.findDisagg();
       for (var i = 0; i<exp.length; i++) {
         var command = L.control({position: 'bottomright'});
+        if (exp[i]=='undefined'){
+          var label = total
+        }
+        else{
+          var label = exp[i]
+        }
         command.onAdd = function (map) {
             var div = L.DomUtil.create('div', 'command');
             if (i == 0){
-              div.innerHTML = '<input id="command'+i+'" type="radio" name="disagg" value="'+exp[i]+'" checked> '+exp[i]+'<br>';
+              div.innerHTML = '<input id="command'+i+'" type="radio" name="disagg" value="'+label+'" checked> '+label+'<br>';
             }
             else{
-              div.innerHTML = '<input id="command'+i+'" type="radio" name="disagg" value="'+exp[i]+'"> '+exp[i]+'<br>';
+              div.innerHTML = '<input id="command'+i+'" type="radio" name="disagg" value="'+label+'"> '+label+'<br>';
             }
             return div;
         };
