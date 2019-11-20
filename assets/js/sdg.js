@@ -171,6 +171,13 @@ opensdg.autotrack = function(preset, category, action, label) {
       var expression = 'female';
       return expressions;
     },
+
+    getExpression: function(){
+      var expression = 'male';
+      return expression;
+    }
+
+
     /*
     makeBtns: function(){
       var disaggs = plugin.findDisagg()
@@ -399,7 +406,7 @@ opensdg.autotrack = function(preset, category, action, label) {
           //----------------------------------------------------------------------------------------------------------------------
           var cat = plugin.findCat();
           var exp = plugin.findDisagg();
-          var expression = $('input[name="disagg"]:checked').val();
+          var expression = plugin.expression;
 
           var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, cat, expression);
           //----------------------------------------------------------------------------------------------------------------------
