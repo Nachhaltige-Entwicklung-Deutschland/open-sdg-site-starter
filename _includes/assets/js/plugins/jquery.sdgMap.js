@@ -133,9 +133,20 @@
 
     findDisagg: function(geoJson){
       var expressions = ['female', 'male']
+      var expression = 'female'
       var category = 'sex'
-
-      return category, expressions[0];
+      /*
+      for (var i = 0; i<2; i++) {
+        var command = L.control({position: 'bottomright'});
+        command.onAdd = function (map) {
+            var div = L.DomUtil.create('div', 'command');
+            div.innerHTML = '<form><input id="command'+i+'" type="checkbox" /> '+expressions[i]+'</form>';
+            return div;
+        };
+        command.addTo(this.map);
+        //document.getElementById ("command").addEventListener ("click", handleCommand(disaggs[i]), false);
+      */
+      return category, expression;
     },
     /*
     makeBtns: function(disaggs){
