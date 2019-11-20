@@ -175,7 +175,7 @@ opensdg.autotrack = function(preset, category, action, label) {
     getExpression: function(){
       var expression = 'male';
       return expression;
-    }
+    },
 
 
     /*
