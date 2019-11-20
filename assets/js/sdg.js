@@ -167,7 +167,7 @@ opensdg.autotrack = function(preset, category, action, label) {
       return category;
     },
 
-    findDisagg: function(){
+    findDisagg: function(geoJsons){
       var expressions = ['female', 'male'];
       var expression = 'female';
       var category = 'sex';
@@ -389,7 +389,7 @@ opensdg.autotrack = function(preset, category, action, label) {
           var nameProperty = plugin.mapLayers[i].nameProperty;
 
           var cat = plugin.findCat();
-          var exp = 'female' //findDisagg(geoJsons);
+          var exp = plugin.findDisagg(geoJsons);
           var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, cat, exp);
 
           var layer = L.geoJson(geoJson, {
