@@ -319,6 +319,7 @@
         //document.getElementById ("command").addEventListener ("click", handleCommand(disaggs[i]), false);
       };
       var expression = document.querySelector('input[name = "disagg"]:checked').value;
+      document.writeln("You entered " + gender + " for your gender<br>");
       //------------------------------------------------------------------------------------------------------------------------
 
 
