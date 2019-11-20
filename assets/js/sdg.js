@@ -173,7 +173,7 @@ opensdg.autotrack = function(preset, category, action, label) {
         else{
           var category = 'sex';
         }
-      }
+      };
       return category;
     },
 
