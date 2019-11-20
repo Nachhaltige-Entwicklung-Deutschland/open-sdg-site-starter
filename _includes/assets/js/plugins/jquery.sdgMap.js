@@ -105,7 +105,7 @@
   Plugin.prototype = {
 
     // Add time series to GeoJSON data and normalize the name and geocode.
-    prepareGeoJson: function(geoJson, idProperty, nameProperty) {
+    prepareGeoJson: function(geoJson, idProperty, nameProperty, exp) {
       var geoData = this.geoData;
       geoJson.features.forEach(function(feature) {
         var geocode = feature.properties[idProperty];
@@ -113,7 +113,7 @@
 
 
         // First add the time series data.
-        var records = _.where(geoData, { GeoCode: geocode, sex: 'female' });
+        var records = _.where(geoData, { GeoCode: geocode, sex: exp });
         records.forEach(function(record) {
           // Add the Year data into the properties.
           feature.properties[record.Year] = record.Value;
@@ -342,7 +342,7 @@
 
           var cat = 'sex';
           var exp = 'female';
-          var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty);
+          var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, exp);
 
           var layer = L.geoJson(geoJson, {
             style: plugin.options.styleNormal,
