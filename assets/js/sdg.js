@@ -167,9 +167,14 @@ opensdg.autotrack = function(preset, category, action, label) {
     },
 
     findDisagg: function(){
-      var expressions = _.pluck(this.geoData, 'sex');
-      //var expressions = ['female', 'male'];
-      var expression = 'female';
+      var allExpressions = _.pluck(this.geoData, 'sex');
+      if (allExpressions){
+        var expression = allExpressions
+      }
+      else{
+        var expressions = ['A','B']
+      }
+
       return expressions;
     },
 
@@ -346,7 +351,7 @@ opensdg.autotrack = function(preset, category, action, label) {
 
       //------------------------------------------------------------------------------------------------------------------------
       var exp = plugin.findDisagg();
-      for (var i = 0; i<2; i++) {
+      for (var i = 0; i<exp.length; i++) {
         var command = L.control({position: 'bottomright'});
         command.onAdd = function (map) {
             var div = L.DomUtil.create('div', 'command');
