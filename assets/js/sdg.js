@@ -361,6 +361,14 @@ opensdg.autotrack = function(preset, category, action, label) {
         //document.getElementById ("command").addEventListener ("click", handleCommand(disaggs[i]), false);
       };
       this.expression = $('input[name="disagg"]:checked').val();
+
+      $("#inline_content input[name='type']").click(function(){
+        alert('You clicked radio!');
+        if($('input:radio[name=type]:checked').val() == "walk_in"){
+          alert($('input:radio[name=type]:checked').val());
+        //$('#select-table > .roomNumber').attr('enabled',false);
+    }
+});
       //------------------------------------------------------------------------------------------------------------------------
 
 
