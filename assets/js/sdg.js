@@ -168,12 +168,13 @@ opensdg.autotrack = function(preset, category, action, label) {
         var tempEx = _.pluck(this.geoData, categories[i] );
         var unique = [ ...new Set(tempEx) ];
         if (unique.length >1){
-          return categories[i];
+          var category = categories[i];
         }
         else{
-          return 'sex';
+          var category = 'sex';
         }
       }
+      return category;
     },
 
 
