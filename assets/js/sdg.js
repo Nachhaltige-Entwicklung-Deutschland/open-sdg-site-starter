@@ -173,7 +173,7 @@ opensdg.autotrack = function(preset, category, action, label) {
     },
 
     getExpression: function(){
-      var expression = 'male';
+      var expression = $('input[name="disagg"]:checked').val();
       return expression;
     },
 
