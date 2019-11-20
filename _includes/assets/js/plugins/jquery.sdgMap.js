@@ -142,7 +142,7 @@
     },
 
     getExpression: function(){
-      var expression = 'male';
+      var expression = $('input[name="disagg"]:checked').val();
       return expression;
     },
 
