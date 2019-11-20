@@ -128,29 +128,15 @@ opensdg.autotrack = function(preset, category, action, label) {
     this.criminalOffenceName = translations.t(this.criminalOffence[this.criminalOffence.length -1]);
     this.unit = _.pluck(this.geoData, 'Units');
     this.unitName = translations.t(this.unit[this.unit.length -1]);
-    //---------------------------------------------------
-    this.mapDisaggs = _.pluck(this.geoData, 'sex')
-
-
-    function removeDups(names) {
-      let unique = {};
-      names.forEach(function(i) {
-        if(!unique[i]) {
-          unique[i] = true;
-        }
-      });
-      return Object.keys(unique);
-    }
-
+    //--------------------------------------------------
     this.init();
   }
 
-  this.uniqMapDisaggs = removeDups(this.mapDisaggs)
 
   Plugin.prototype = {
 
     // Add time series to GeoJSON data and normalize the name and geocode.
-    prepareGeoJson: function(geoJson, idProperty, nameProperty, categorie, exression) {
+    prepareGeoJson: function(geoJson, idProperty, nameProperty) {
       var geoData = this.geoData;
       geoJson.features.forEach(function(feature) {
         var geocode = feature.properties[idProperty];
@@ -387,7 +373,7 @@ opensdg.autotrack = function(preset, category, action, label) {
 
           var cat = 'sex';
           var exp = 'female';
-          var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, cat, exp);
+          var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty);
 
           var layer = L.geoJson(geoJson, {
             style: plugin.options.styleNormal,
