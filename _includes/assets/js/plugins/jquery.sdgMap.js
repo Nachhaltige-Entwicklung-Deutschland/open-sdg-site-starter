@@ -136,7 +136,8 @@
     },
 
     findDisagg: function(){
-      var expressions = ['female', 'male'];
+      var expressions = _.pluck(this.geoData, 'sex');
+      //var expressions = ['female', 'male'];
       var expression = 'female';
       return expressions;
     },
@@ -330,18 +331,6 @@
         //document.getElementById ("command").addEventListener ("click", handleCommand(disaggs[i]), false);
       };
       this.expression = $('input[name="disagg"]:checked').val();
-
-
-      $("form input:radio").change(function () {
-        if ($(this).val() == "female") {
-          alert('You clicked female!');
-        } else {
-          alert('You clicked male!');
-        }
-        });
-
-
-
       //------------------------------------------------------------------------------------------------------------------------
 
 
