@@ -181,8 +181,8 @@ opensdg.autotrack = function(preset, category, action, label) {
     //Find all expressions of the given categorie in all lines that have geoData
     findDisagg: function(){
       var expressions = _.pluck(this.geoData, plugin.findCat());
-      eq = [ ...new Set(expressions) ];
-      return eq;
+      var unique = [ ...new Set(expressions) ];
+      return unique;
     },
 
     // Get the coosen expression from the radio buttons
