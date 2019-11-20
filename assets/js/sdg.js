@@ -130,10 +130,22 @@ opensdg.autotrack = function(preset, category, action, label) {
     this.unitName = translations.t(this.unit[this.unit.length -1]);
     //---------------------------------------------------
     this.mapDisaggs = _.pluck(this.geoData, 'sex')
-    this.uniqMapDisaggs = [...new Set(this.mapDisaggs)];
+
+
+    function removeDups(names) {
+      let unique = {};
+      names.forEach(function(i) {
+        if(!unique[i]) {
+          unique[i] = true;
+        }
+      });
+      return Object.keys(unique);
+    }
 
     this.init();
   }
+
+  this.uniqMapDisaggs = removeDups(this.mapDisaggs)
 
   Plugin.prototype = {
 
