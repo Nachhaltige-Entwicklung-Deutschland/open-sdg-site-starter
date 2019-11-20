@@ -370,7 +370,7 @@
           var exp = plugin.findDisagg();
           var expression = plugin.expression;
 
-          var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, cat, plugin.expression);
+          var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, cat, expression);
           //----------------------------------------------------------------------------------------------------------------------
 
           var layer = L.geoJson(geoJson, {
