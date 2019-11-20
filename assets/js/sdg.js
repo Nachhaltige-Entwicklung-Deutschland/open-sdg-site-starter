@@ -184,7 +184,7 @@ opensdg.autotrack = function(preset, category, action, label) {
             return div;
         };
         command.addTo(this.map);
-        document.getElementById ("command").addEventListener ("click", handleCommand(disaggs[i]), false);
+        //document.getElementById ("command").addEventListener ("click", handleCommand(disaggs[i]), false);
       };
     },
 
