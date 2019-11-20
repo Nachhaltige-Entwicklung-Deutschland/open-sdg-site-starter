@@ -132,29 +132,18 @@
     //---------------------------
     //Find those disaggregation-categories that have more then one expression in all lines that have geoData
     findCat: function(){
-      var categories = ['title', 'sex', 'age', 'typification', 'criminal offences'];
-      for (var i = 0; i<categories.length; i++){
-        var tempEx = _.pluck(this.geoData, categories[i] );
-        var unique = [ ...new Set(tempEx) ];
-        if (unique.length >1){
-          var category = categories[i];
-        }
-        else{
-          var category = 'sex';
-        }
-      };
-      return 'sex';
+      var category = 'sex';
+      return category;
     },
 
 
-    //Find all expressions of the given categorie in all lines that have geoData
+
     findDisagg: function(){
-      var expressions = _.pluck(this.geoData, plugin.findCat());
-      var unique = [ ...new Set(expressions) ];
-      return unique;
+      var expressions = _.pluck(this.geoData, 'sex');
+      eq = [ ...new Set(expressions) ];
+      return eq;
     },
 
-    // Get the coosen expression from the radio buttons
     getExpression: function(){
       var expression = $('input[name="disagg"]:checked').val();
       return expression;
@@ -185,7 +174,7 @@
     },
 
     */
-    //-------------------------------------------------------------------------------------------------------
+    //---------------------------
 
     // Zoom to a feature.
     zoomToFeature: function(layer) {
