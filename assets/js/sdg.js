@@ -163,6 +163,7 @@ opensdg.autotrack = function(preset, category, action, label) {
     //---------------------------
     //Find those disaggregation-categories that have more then one expression in all lines that have geoData
     findCat: function(){
+      var categories = ['title','sex','age','typification','criminal offences'];
       var category = 'sex';
       return category;
     },
