@@ -136,7 +136,7 @@ opensdg.autotrack = function(preset, category, action, label) {
   Plugin.prototype = {
 
     // Add time series to GeoJSON data and normalize the name and geocode.
-    prepareGeoJson: function(geoJson, idProperty, nameProperty, exp) {
+    prepareGeoJson: function(geoJson, idProperty, nameProperty, cat, exp) {
       var geoData = this.geoData;
       geoJson.features.forEach(function(feature) {
         var geocode = feature.properties[idProperty];
@@ -144,7 +144,7 @@ opensdg.autotrack = function(preset, category, action, label) {
 
 
         // First add the time series data.
-        var records = _.where(geoData, { GeoCode: geocode, sex: exp });
+        var records = _.where(geoData, { GeoCode: geocode, [cat]: exp });
         records.forEach(function(record) {
           // Add the Year data into the properties.
           feature.properties[record.Year] = record.Value;
@@ -158,6 +158,35 @@ opensdg.autotrack = function(preset, category, action, label) {
       });
       return geoJson;
     },
+
+    //---------------------------
+    /*
+    findDisagg: function(geoJson){
+      var disaggs = ['female', 'male']
+      return disaggs;
+    },
+
+    makeBtns: function(disaggs){
+      for (var i = 0; i<2; i++) {
+        var command = L.control({position: 'bottomright'});
+        command.onAdd = function (map) {
+            var div = L.DomUtil.create('div', 'command');
+            div.innerHTML = '<form><input id="command'+i+'" type="checkbox" /> '+disaggs[i]+'</form>';
+            return div;
+        };
+        command.addTo(this.map);
+        document.getElementById ("command").addEventListener ("click", handleCommand(disaggs[i]), false);
+    },
+
+
+    // add the event handler
+    function handleCommand(disagg) {
+       //alert("Clicked, title = " + this.title + ' active = '+ this.checked);
+       window.disagg = disagg
+    },
+
+    */
+    //---------------------------
 
     // Zoom to a feature.
     zoomToFeature: function(layer) {
@@ -303,37 +332,6 @@ opensdg.autotrack = function(preset, category, action, label) {
 
       // Add the download button.
       this.map.addControl(L.Control.downloadGeoJson(plugin));
-
-
-      //----------------------------
-
-
-      // add the event handler
-      function handleCommand(title) {
-         alert("Clicked, title = " + this.title + ' active = '+ this.checked);
-      }
-
-
-
-      var expressions = ['Männer', 'Frauen']
-      // create the control
-      for (var i = 0; i<2; i++) {
-        var command = L.control({position: 'bottomright'});
-        command.onAdd = function (map) {
-            var div = L.DomUtil.create('div', 'command');
-            div.innerHTML = '<form><input id="command'+i+'" type="checkbox" /> '+expressions[i]+'</form>';
-            return div;
-        };
-        command.addTo(this.map);
-        //document.getElementById ("command").addEventListener ("click", handleCommand(expressions[exp]), false);
-      }
-
-
-
-      //----------------------------
-
-
-
 
       // At this point we need to load the GeoJSON layer/s.
       var geoURLs = this.mapLayers.map(function(item) {
