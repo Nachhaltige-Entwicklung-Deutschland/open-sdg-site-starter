@@ -161,6 +161,7 @@ opensdg.autotrack = function(preset, category, action, label) {
     },
 
     //---------------------------
+    //Find those disaggregation-categories that have more then one expression in all lines that have geoData
     findCat: function(){
       var category = 'sex';
       return category;
@@ -170,7 +171,7 @@ opensdg.autotrack = function(preset, category, action, label) {
 
     findDisagg: function(){
       var expressions = _.pluck(this.geoData, 'sex');
-      eq = new Set(expressions).toJSON();
+      eq = [ ...new Set(expressions) ];
       return eq;
     },
 
