@@ -348,7 +348,7 @@ opensdg.autotrack = function(preset, category, action, label) {
         command.addTo(this.map);
         //document.getElementById ("command").addEventListener ("click", handleCommand(disaggs[i]), false);
       };
-      var expression = 'male' //$('input[name="disagg"]:checked').val();
+      this.expression = 'male' //$('input[name="disagg"]:checked').val();
       //------------------------------------------------------------------------------------------------------------------------
 
 
