@@ -163,18 +163,28 @@ opensdg.autotrack = function(preset, category, action, label) {
     //---------------------------
     //Find those disaggregation-categories that have more then one expression in all lines that have geoData
     findCat: function(){
-      var category = 'sex';
-      return category;
+      var categories = ['title', 'sex', 'age', 'typification', 'criminal offences'];
+      for (var i = 0; i<categories.length; i++){
+        var tempEx = _.pluck(this.geoData, categories[i] );
+        var unique = [ ...new Set(tempEx) ];
+        if (unique.length >1){
+          return categories[i];
+        }
+        else{
+          return 'sex';
+        }
+      }
     },
 
 
-
+    //Find all expressions of the given categorie in all lines that have geoData
     findDisagg: function(){
-      var expressions = _.pluck(this.geoData, 'sex');
+      var expressions = _.pluck(this.geoData, plugin.findCat());
       eq = [ ...new Set(expressions) ];
       return eq;
     },
 
+    // Get the coosen expression from the radio buttons
     getExpression: function(){
       var expression = $('input[name="disagg"]:checked').val();
       return expression;
@@ -205,7 +215,7 @@ opensdg.autotrack = function(preset, category, action, label) {
     },
 
     */
-    //---------------------------
+    //-------------------------------------------------------------------------------------------------------
 
     // Zoom to a feature.
     zoomToFeature: function(layer) {
