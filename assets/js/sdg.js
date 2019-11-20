@@ -388,7 +388,7 @@ opensdg.autotrack = function(preset, category, action, label) {
           var idProperty = plugin.mapLayers[i].idProperty;
           var nameProperty = plugin.mapLayers[i].nameProperty;
 
-          var cat = 'sex'//findCat();
+          var cat = findCat();
           var exp = 'female' //findDisagg(geoJsons);
           var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, cat, exp);
 
