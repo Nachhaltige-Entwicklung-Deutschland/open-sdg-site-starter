@@ -133,6 +133,9 @@
     //Find those disaggregation-categories that have more then one expression in all lines that have geoData
     findCat: function(){
       var categories = ['title','sex','age','typification','criminal offences'];
+      for (var i; i<categories.length; i++){
+        var tmpExp = _.pluck(this.geoData, categories[i]);
+      };
       var category = 'sex';
       return category;
     },
@@ -322,7 +325,7 @@
         var command = L.control({position: 'bottomright'});
         command.onAdd = function (map) {
             var div = L.DomUtil.create('div', 'command');
-            if (i == 0){
+            if (i == 1){
               div.innerHTML = '<input id="command'+i+'" type="radio" name="disagg" value="'+exp[i]+'" checked> '+exp[i]+'<br>';
             }
             else{
