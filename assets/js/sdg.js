@@ -182,7 +182,7 @@ opensdg.autotrack = function(preset, category, action, label) {
         command.addTo(this.map);
         //document.getElementById ("command").addEventListener ("click", handleCommand(disaggs[i]), false);
       */
-      return category, expression;
+      return expression;
     },
     /*
     makeBtns: function(disaggs){
@@ -389,7 +389,7 @@ opensdg.autotrack = function(preset, category, action, label) {
           var nameProperty = plugin.mapLayers[i].nameProperty;
 
 
-          var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, findDisagg(geoJsons));
+          var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, findCat(), findDisagg(geoJsons));
 
           var layer = L.geoJson(geoJson, {
             style: plugin.options.styleNormal,
