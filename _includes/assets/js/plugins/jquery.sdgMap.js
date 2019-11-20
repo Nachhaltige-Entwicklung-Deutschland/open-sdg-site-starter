@@ -113,7 +113,7 @@
 
 
         // First add the time series data.
-        var records = _.where(geoData, { GeoCode: geocode, [cat]: exp[0] });
+        var records = _.where(geoData, { GeoCode: geocode, [cat]: exp });
         //var records = _.where(geoData, { GeoCode: geocode, cat: exp });
         records.forEach(function(record) {
           // Add the Year data into the properties.
