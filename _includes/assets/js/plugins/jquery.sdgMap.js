@@ -357,8 +357,8 @@
           var idProperty = plugin.mapLayers[i].idProperty;
           var nameProperty = plugin.mapLayers[i].nameProperty;
 
-          var cat = findCat()
-          var exp = findDisagg(geoJsons)
+          var cat = findCat();
+          var exp = findDisagg(geoJsons);
           var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, cat, exp);
 
           var layer = L.geoJson(geoJson, {
