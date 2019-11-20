@@ -358,7 +358,7 @@
           var nameProperty = plugin.mapLayers[i].nameProperty;
 
           var cat = 'sex'//findCat();
-          var exp = findDisagg(geoJsons);
+          var exp = 'female' //findDisagg(geoJsons);
           var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, cat, exp);
 
           var layer = L.geoJson(geoJson, {
