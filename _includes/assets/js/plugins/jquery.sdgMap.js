@@ -141,7 +141,7 @@
       var expression = 'female';
       return expressions;
     },
-    /*
+
     makeBtns: function(){
       var disaggs = plugin.findDisagg()
 
@@ -157,7 +157,7 @@
       };
     },
 
-
+    /*
     // add the event handler
     function handleCommand(disagg) {
        //alert("Clicked, title = " + this.title + ' active = '+ this.checked);
