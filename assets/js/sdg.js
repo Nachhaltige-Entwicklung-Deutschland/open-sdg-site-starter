@@ -145,7 +145,7 @@ opensdg.autotrack = function(preset, category, action, label) {
     this.init();
   }
 
-  this.uniqMapDisaggs = removeDups(this.mapDisaggs)
+  this.uniqMapDisaggs = ['male', 'female'] //removeDups(this.mapDisaggs)
 
   Plugin.prototype = {
 
