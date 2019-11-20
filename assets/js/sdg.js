@@ -377,7 +377,7 @@ opensdg.autotrack = function(preset, category, action, label) {
 
           var cat = 'sex';
           var exp = 'female';
-          var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, exp);
+          var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, cat, exp);
 
           var layer = L.geoJson(geoJson, {
             style: plugin.options.styleNormal,
