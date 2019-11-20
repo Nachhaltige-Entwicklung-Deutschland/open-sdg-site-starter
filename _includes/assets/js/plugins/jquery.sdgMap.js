@@ -333,7 +333,7 @@
 
       $('#inline_content input[name="disagg"]').click(function(){
         alert('You clicked radio!');
-        if($('input:radio[name="disagg"]:checked').val() == "walk_in"){
+        if($('input:radio[name="disagg"]:checked').val() == "famale"){
           alert($('input:radio[name="disagg"]:checked').val());
         //$('#select-table > .roomNumber').attr('enabled',false);
         }
