@@ -180,7 +180,7 @@ opensdg.autotrack = function(preset, category, action, label) {
 
 
     findDisagg: function(){
-      var expressions = _.pluck(this.geoData, 'sex');
+      var expressions = _.pluck(this.geoData, plugin.findCat());
       eq = [ ...new Set(expressions) ];
       return eq;
     },
