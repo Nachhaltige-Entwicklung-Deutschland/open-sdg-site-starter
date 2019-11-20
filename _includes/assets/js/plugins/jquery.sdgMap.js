@@ -324,7 +324,7 @@
         command.addTo(this.map);
         //document.getElementById ("command").addEventListener ("click", handleCommand(disaggs[i]), false);
       };
-       var expression = $('input[name="disagg"]:checked').val();
+      this.expression = $('input[name="disagg"]:checked').val();
       //------------------------------------------------------------------------------------------------------------------------
 
 
