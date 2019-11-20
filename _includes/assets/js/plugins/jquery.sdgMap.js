@@ -114,7 +114,7 @@
 
         // First add the time series data.
         if (cat === 'sex'){
-          var records = _.where(geoData, { GeoCode: geocode, cat: exp });
+          var records = _.where(geoData, { GeoCode: geocode, [cat]: exp });
         }
         else {
           var records = _.where(geoData, { GeoCode: geocode });
