@@ -290,7 +290,7 @@
         var command = L.control({position: 'bottomright'});
         command.onAdd = function (map) {
             var div = L.DomUtil.create('div', 'command');
-            div.innerHTML = '<form><input id="command'+i+'" type="checkbox" /> '+uniqMapDisaggs[i]+'</form>';
+            div.innerHTML = '<form><input id="command'+i+'" type="checkbox" /> '+expressions[i]+'</form>';
             return div;
         };
         command.addTo(this.map);
