@@ -381,6 +381,7 @@ opensdg.autotrack = function(preset, category, action, label) {
 
           var cat = plugin.findCat();
           var exp = plugin.findDisagg();
+          plugin.makeBtns();
           var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, cat, exp);
 
           var layer = L.geoJson(geoJson, {
