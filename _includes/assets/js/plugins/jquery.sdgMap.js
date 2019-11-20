@@ -321,7 +321,7 @@
         command.addTo(this.map);
         //document.getElementById ("command").addEventListener ("click", handleCommand(disaggs[i]), false);
       };
-      //var expression = $('input[name="disagg"]:checked').val();
+      var expression = 'male' //$('input[name="disagg"]:checked').val();
       //------------------------------------------------------------------------------------------------------------------------
 
 
@@ -372,7 +372,7 @@
           //----------------------------------------------------------------------------------------------------------------------
           var cat = plugin.findCat();
           var exp = plugin.findDisagg();
-          var expression = plugin.getExpression();
+          //var expression = plugin.getExpression();
 
           var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, cat, expression);
           //----------------------------------------------------------------------------------------------------------------------
