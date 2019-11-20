@@ -113,7 +113,7 @@
 
 
         // First add the time series data.
-        var records = _.where(geoData, { GeoCode: geocode, [cat]: exp });
+        var records = _.where(geoData, { GeoCode: geocode, [cat]: exp[0] });
         //var records = _.where(geoData, { GeoCode: geocode, cat: exp });
         records.forEach(function(record) {
           // Add the Year data into the properties.
@@ -139,19 +139,10 @@
     findDisagg: function(geoJsons){
       var expressions = ['female', 'male'];
       var expression = 'female';
-      
 
-      for (var i = 0; i<2; i++) {
-        var command = L.control({position: 'bottomright'});
-        command.onAdd = function (map) {
-            var div = L.DomUtil.create('div', 'command');
-            div.innerHTML = '<form><input id="command'+i+'" type="checkbox" /> '+expressions[i]+'</form>';
-            return div;
-        };
-        command.addTo(this.map);
-        //document.getElementById ("command").addEventListener ("click", handleCommand(disaggs[i]), false);
 
-      return expression;
+
+      return expressions;
     },
     /*
     makeBtns: function(disaggs){
