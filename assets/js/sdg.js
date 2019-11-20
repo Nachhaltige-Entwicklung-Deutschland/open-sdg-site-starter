@@ -145,12 +145,12 @@ opensdg.autotrack = function(preset, category, action, label) {
     this.init();
   }
 
-  this.uniqMapDisaggs = ['male', 'female'] //removeDups(this.mapDisaggs)
+  this.uniqMapDisaggs = removeDups(this.mapDisaggs)
 
   Plugin.prototype = {
 
     // Add time series to GeoJSON data and normalize the name and geocode.
-    prepareGeoJson: function(geoJson, idProperty, nameProperty) {
+    prepareGeoJson: function(geoJson, idProperty, nameProperty, categorie, exression) {
       var geoData = this.geoData;
       geoJson.features.forEach(function(feature) {
         var geocode = feature.properties[idProperty];
@@ -158,13 +158,12 @@ opensdg.autotrack = function(preset, category, action, label) {
 
 
         // First add the time series data.
-        var records = _.where(geoData, { GeoCode: geocode });
+        var records = _.where(geoData, { GeoCode: geocode, categorie: expression });
         records.forEach(function(record) {
           // Add the Year data into the properties.
           feature.properties[record.Year] = record.Value;
         });
 
-        var expressions = ['male', 'femals']
         // Next normalize the geocode and name.
         feature.properties.name = translations.t(name);
         feature.properties.geocode = geocode;
@@ -336,7 +335,7 @@ opensdg.autotrack = function(preset, category, action, label) {
         var command = L.control({position: 'bottomright'});
         command.onAdd = function (map) {
             var div = L.DomUtil.create('div', 'command');
-            div.innerHTML = '<form><input id="command'+i+'" type="checkbox" /> '+this.uniqMapDisaggs[i]+'</form>';
+            div.innerHTML = '<form><input id="command'+i+'" type="checkbox" /> '+uniqMapDisaggs[i]+'</form>';
             return div;
         };
         command.addTo(this.map);
@@ -385,7 +384,10 @@ opensdg.autotrack = function(preset, category, action, label) {
           // Now go on to add the geoJson again as choropleth dynamic regions.
           var idProperty = plugin.mapLayers[i].idProperty;
           var nameProperty = plugin.mapLayers[i].nameProperty;
-          var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty);
+
+          var cat = 'sex';
+          var exp = 'female';
+          var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, cat, exp);
 
           var layer = L.geoJson(geoJson, {
             style: plugin.options.styleNormal,
