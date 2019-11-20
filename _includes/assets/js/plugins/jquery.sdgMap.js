@@ -142,7 +142,7 @@
         else{
           var category = 'sex';
         }
-      }
+      };
       return category;
     },
 
