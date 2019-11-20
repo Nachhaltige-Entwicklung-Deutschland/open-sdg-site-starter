@@ -350,7 +350,7 @@
 
           var cat = plugin.findCat();
           var exp = plugin.findDisagg();
-
+          /*
           for (var i = 0; i<2; i++) {
             var command = L.control({position: 'bottomright'});
             command.onAdd = function (map) {
@@ -361,7 +361,7 @@
             command.addTo(this.map);
             //document.getElementById ("command").addEventListener ("click", handleCommand(disaggs[i]), false);
           };
-
+          */
 
           var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, cat, exp);
 
