@@ -113,12 +113,7 @@
 
 
         // First add the time series data.
-        if (cat === 'sex'){
-          var records = _.where(geoData, { GeoCode: geocode, [cat]: exp });
-        }
-        else {
-          var records = _.where(geoData, { GeoCode: geocode });
-        }
+        var records = _.where(geoData, { GeoCode: geocode, [cat]: exp });
         //var records = _.where(geoData, { GeoCode: geocode, cat: exp });
         records.forEach(function(record) {
           // Add the Year data into the properties.
@@ -135,12 +130,14 @@
     },
 
     //---------------------------
-    /*
-    findDisagg: function(geoJson){
-      var disaggs = ['female', 'male']
-      return disaggs;
-    },
 
+    findDisagg: function(geoJson){
+      var expressions = ['female', 'male']
+      var category = 'sex'
+
+      return category, expressions;
+    },
+    /*
     makeBtns: function(disaggs){
       for (var i = 0; i<2; i++) {
         var command = L.control({position: 'bottomright'});
@@ -344,9 +341,8 @@
           var idProperty = plugin.mapLayers[i].idProperty;
           var nameProperty = plugin.mapLayers[i].nameProperty;
 
-          var cat = 'sex';
-          var exp = 'female';
-          var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, cat, exp);
+
+          var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, findDisagg(geoJsons));
 
           var layer = L.geoJson(geoJson, {
             style: plugin.options.styleNormal,
