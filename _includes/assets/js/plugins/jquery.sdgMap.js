@@ -153,7 +153,7 @@
             return div;
         };
         command.addTo(this.map);
-        document.getElementById ("command").addEventListener ("click", handleCommand(disaggs[i]), false);
+        //document.getElementById ("command").addEventListener ("click", handleCommand(disaggs[i]), false);
       };
     },
 
@@ -161,7 +161,7 @@
     // add the event handler
     function handleCommand(disagg) {
        //alert("Clicked, title = " + this.title + ' active = '+ this.checked);
-       window.disagg = disagg
+       window.disagg = disagg;
     },
 
 
