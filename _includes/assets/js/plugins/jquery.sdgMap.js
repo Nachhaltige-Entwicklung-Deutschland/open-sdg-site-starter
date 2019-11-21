@@ -283,14 +283,12 @@
 
     // Initialize the map itself.
     init: function() {
-      console.log("Hallo init");
-
       // Create the map.
       this.map = L.map(this.element, {
         minZoom: this.options.minZoom,
         maxZoom: this.options.maxZoom,
         zoomControl: false,
-      });
+      }).setView([51.9, -10.26],10);
       this.map.setView([0, 0], 0);
       this.dynamicLayers = new ZoomShowHide();
       this.dynamicLayers.addTo(this.map);
