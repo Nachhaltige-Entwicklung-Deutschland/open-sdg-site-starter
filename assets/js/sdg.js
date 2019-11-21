@@ -166,7 +166,7 @@ opensdg.autotrack = function(preset, category, action, label) {
       var categories = ['title','sex','age','typification','criminal offences'];
       var category = 'title';
       for (var i; i<categories.length; i++){
-        if (plugin.findDisagg(categories[i]).length>1){
+        if (this.findDisagg(categories[i]).length>1){
           var category = caseategories[i];
         }
       };
