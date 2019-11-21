@@ -289,7 +289,7 @@
         maxZoom: this.options.maxZoom,
         zoomControl: false,
       });
-      this.map.setView([51.9, -10.26],10);
+      this.map.setView([51.9, 10.26],0);
       this.dynamicLayers = new ZoomShowHide();
       this.dynamicLayers.addTo(this.map);
       this.staticLayers = new ZoomShowHide();
