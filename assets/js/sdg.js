@@ -171,7 +171,7 @@ opensdg.autotrack = function(preset, category, action, label) {
           var category = caseategories[i];
         }
       };
-      
+
       return category;
     },
 
@@ -360,7 +360,7 @@ opensdg.autotrack = function(preset, category, action, label) {
         var command = L.control({position: 'bottomright'});
         command.onAdd = function (map) {
             var div = L.DomUtil.create('div', 'command');
-            if (i == 0){
+            if (i == 1){
               div.innerHTML = '<input id="command'+i+'" type="radio" name="disagg" value="'+exp[i]+'" checked> '+exp[i]+'<br>';
             }
             else{
