@@ -377,11 +377,12 @@ opensdg.autotrack = function(preset, category, action, label) {
         };
         command.addTo(this.map);
       };
-      plugin.startExp = $('input[name="disagg"]:checked').val();
+
       this.expression = exp[$('input[name="disagg"]:checked').val()]
 
       $('input[type="radio"]').on('click change', function(e) {
         console.log(e.type, plugin.startExp);
+        plugin.startExp = $('input[name="disagg"]:checked').val();
         //alert('You clicked radio!');
         plugin.map.remove();
         plugin.init();
