@@ -372,7 +372,7 @@ opensdg.autotrack = function(preset, category, action, label) {
             return div;
         };
         command.addTo(this.map);
-        document.getElementById ("command"+toString(i)).addEventListener ("click", handleCommand(exp[i]), false);
+        //document.getElementById ("command"+toString(i)).addEventListener ("click", handleCommand(exp[i]), false);
       };
       this.expression = $('input[name="disagg"]:checked').val();
 
@@ -380,6 +380,7 @@ opensdg.autotrack = function(preset, category, action, label) {
       // add the event handler
       function handleCommand(disagg) {
          alert("Clicked, title = " + disagg );
+      },
 
 
       //------------------------------------------------------------------------------------------------------------------------
