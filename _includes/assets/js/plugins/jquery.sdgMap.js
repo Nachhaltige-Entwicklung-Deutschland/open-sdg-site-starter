@@ -280,6 +280,7 @@
 
     // Initialize the map itself.
     init: function() {
+      console.log("init");
 
       // Create the map.
       this.map = L.map(this.element, {
