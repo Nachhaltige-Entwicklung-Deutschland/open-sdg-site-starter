@@ -351,7 +351,7 @@ opensdg.autotrack = function(preset, category, action, label) {
       }));
 
 
-      //------------------------------------------------------------------------------------------------------------------------
+      //Add the radio buttons------------------------------------------------------------------------------------------------------------------------
       var exp = plugin.findDisagg(plugin.findCat());
       for (var i = 0; i<exp.length; i++) {
         if (!exp[i]){
@@ -363,7 +363,7 @@ opensdg.autotrack = function(preset, category, action, label) {
         var command = L.control({position: 'bottomright'});
         command.onAdd = function (map) {
             var div = L.DomUtil.create('div', 'command');
-            if (i == 1){
+            if (i == 0){
               div.innerHTML = '<label><input id="command'+toString(i)+'" type="radio" name="disagg" value="'+label+'" checked> '+translations.t(label)+'</label><br>';
             }
             else{
@@ -374,148 +374,10 @@ opensdg.autotrack = function(preset, category, action, label) {
         command.addTo(this.map);
       };
       this.expression = $('input[name="disagg"]:checked').val();
-
-      /*
-      $('#inline_content input[name="disagg"]').click(function(){
-          alert('You clicked radio!');
-      });
-      */
       $('input[type="radio"]').on('click change', function(e) {
         console.log(e.type);
         alert('You clicked radio!');
         //------------------------------------------------------------------
-        function() {
-
-          // Apparently "arguments" can either be an array of responses, or if
-          // there was only one response, the response itself. This behavior is
-          // odd and should be investigated. In the meantime, a workaround is a
-          // blunt check to see if it is a single response.
-          var geoJsons = arguments;
-          // In a response, the second element is a string (like 'success') so
-          // check for that here to identify whether it is a response.
-          if (arguments.length > 1 && typeof arguments[1] === 'string') {
-            // If so, put it into an array, to match the behavior when there are
-            // multiple responses.
-            geoJsons = [geoJsons];
-          }
-
-          for (var i = 0; i < geoJsons.length; i++) {
-            // First add the geoJson as static (non-interactive) borders.
-            if (plugin.mapLayers[i].staticBorders) {
-              var staticLayer = L.geoJson(geoJsons[i][0], {
-                style: plugin.options.styleStatic,
-                interactive: false,
-              });
-              // Static layers should start appear when zooming past their dynamic
-              // layer, and stay visible after that.
-              staticLayer.min_zoom = plugin.mapLayers[i].max_zoom + 1;
-              staticLayer.max_zoom = plugin.options.maxZoom;
-              plugin.staticLayers.addLayer(staticLayer);
-            }
-            // Now go on to add the geoJson again as choropleth dynamic regions.
-            var idProperty = plugin.mapLayers[i].idProperty;
-            var nameProperty = plugin.mapLayers[i].nameProperty;
-
-            //----------------------------------------------------------------------------------------------------------------------
-            var cat = plugin.findCat();
-            var expression = plugin.expression;
-
-            var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, cat, expression);
-            //----------------------------------------------------------------------------------------------------------------------
-
-            var layer = L.geoJson(geoJson, {
-              style: plugin.options.styleNormal,
-              onEachFeature: onEachFeature,
-            });
-            // Set the "boundaries" for when this layer should be zoomed out of.
-            layer.min_zoom = plugin.mapLayers[i].min_zoom;
-            layer.max_zoom = plugin.mapLayers[i].max_zoom;
-            // Listen for when this layer gets zoomed in or out of.
-            layer.on('remove', zoomOutHandler);
-            layer.on('add', zoomInHandler);
-            // Save the GeoJSON object for direct access (download) later.
-            layer.geoJsonObject = geoJson;
-            // Add the layer to the ZoomShowHide group.
-            plugin.dynamicLayers.addLayer(layer);
-          }
-
-
-
-
-
-          plugin.updateColors();
-
-          // Now that we have layers, we can add the search feature.
-          plugin.searchControl = new L.Control.Search({
-            layer: plugin.getAllLayers(),
-            propertyName: 'name',
-            marker: false,
-            moveToLocation: function(latlng) {
-              plugin.zoomToFeature(latlng.layer);
-              if (!plugin.selectionLegend.isSelected(latlng.layer)) {
-                plugin.highlightFeature(latlng.layer);
-                plugin.selectionLegend.addSelection(latlng.layer);
-              }
-            },
-            autoCollapse: true,
-          });
-          plugin.map.addControl(plugin.searchControl);
-          // The search plugin messes up zoomShowHide, so we have to reset that
-          // with this hacky method. Is there a better way?
-          var zoom = plugin.map.getZoom();
-          plugin.map.setZoom(plugin.options.maxZoom);
-          plugin.map.setZoom(zoom);
-
-          // The list of handlers to apply to each feature on a GeoJson layer.
-          function onEachFeature(feature, layer) {
-            layer.on('click', clickHandler);
-            layer.on('mouseover', mouseoverHandler);
-            layer.on('mouseout', mouseoutHandler);
-          }
-          // Event handler for click/touch.
-          function clickHandler(e) {
-            var layer = e.target;
-            if (plugin.selectionLegend.isSelected(layer)) {
-              plugin.selectionLegend.removeSelection(layer);
-              plugin.unhighlightFeature(layer);
-            }
-            else {
-              plugin.selectionLegend.addSelection(layer);
-              plugin.highlightFeature(layer);
-              plugin.zoomToFeature(layer);
-            }
-          }
-          // Event handler for mouseover.
-          function mouseoverHandler(e) {
-            var layer = e.target;
-            if (!plugin.selectionLegend.isSelected(layer)) {
-              plugin.highlightFeature(layer);
-            }
-          }
-          // Event handler for mouseout.
-          function mouseoutHandler(e) {
-            var layer = e.target;
-            if (!plugin.selectionLegend.isSelected(layer)) {
-              plugin.unhighlightFeature(layer);
-            }
-          }
-          // Event handler for when a geoJson layer is zoomed out of.
-          function zoomOutHandler(e) {
-            var geoJsonLayer = e.target;
-            // For desktop, we have to make sure that no features remain
-            // highlighted, as they might have been highlighted on mouseover.
-            geoJsonLayer.eachLayer(function(layer) {
-              if (!plugin.selectionLegend.isSelected(layer)) {
-                plugin.unhighlightFeature(layer);
-              }
-            });
-            plugin.updateStaticLayers();
-          }
-          // Event handler for when a geoJson layer is zoomed into.
-          function zoomInHandler(e) {
-            plugin.updateStaticLayers();
-          }
-        };
       });
       //------------------------------------------------------------------------------------------------------------------------
 
