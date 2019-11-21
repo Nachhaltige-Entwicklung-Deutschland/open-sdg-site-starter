@@ -134,13 +134,13 @@
     findCat: function(){
       var categories = ['title','sex','age','typification','criminal offences'];
       var category = 'sex';
-      /*
+
       for (var i; i<categories.length; i++){
         if (this.findDisagg(categories[i]).length>1){
           var category = caseategories[i];
         }
       };
-      */
+      
       return category;
     },
 
