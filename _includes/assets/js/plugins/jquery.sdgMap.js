@@ -137,7 +137,7 @@
 
       for (var i = 0; i<categories.length; i++){
         if (this.findDisagg(categories[i]).length>1){
-          var category = caseategories[i];
+          var category = categories[i];
         }
       };
 
