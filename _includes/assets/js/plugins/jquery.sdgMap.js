@@ -349,6 +349,7 @@
       // add the event handler
       function handleCommand(disagg) {
          alert("Clicked, title = " + disagg );
+      },
 
 
       //------------------------------------------------------------------------------------------------------------------------
