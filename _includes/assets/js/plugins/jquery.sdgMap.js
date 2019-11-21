@@ -333,10 +333,10 @@
         command.onAdd = function (map) {
             var div = L.DomUtil.create('div', 'command');
             if (i == 0){
-              div.innerHTML = '<input id="command'+toString(i)+'" type="radio" name="disagg" value="'+label+'" onclick="handleClick(this);" checked> <label for="'+label+'">'+translations.t(label)+'</label><br>';
+              div.innerHTML = '<input id="command'+toString(i)+'" type="radio" name="disagg" value="'+label+'" checked> <label for="'+label+'">'+translations.t(label)+'</label><br>';
             }
             else{
-              div.innerHTML = '<input id="command'+toString(i)+'" type="radio" name="disagg" value="'+label+'" onclick="handleClick(this);" > <label for="'+label+'">'+translations.t(label)+'</label><br>';
+              div.innerHTML = '<input id="command'+toString(i)+'" type="radio" name="disagg" value="'+label+'"  > <label for="'+label+'">'+translations.t(label)+'</label><br>';
             }
             return div;
         };
@@ -347,12 +347,19 @@
 
 
       // add the event handler
-
+      /*
       function handleClick(disagg) {
          alert("Clicked, title = " + disagg.value );
       },
+      */
 
-
+      $("#inline_content input[name='disagg']").click(function(){
+          alert('You clicked radio!');
+          if($('input:radio[name=disagg]:checked').val() == "female"){
+              alert($('input:radio[name=disagg]:checked').val());
+              //$('#select-table > .roomNumber').attr('enabled',false);
+          }
+      });
       //------------------------------------------------------------------------------------------------------------------------
 
 
