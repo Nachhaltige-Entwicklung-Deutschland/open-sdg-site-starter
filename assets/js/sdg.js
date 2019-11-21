@@ -354,7 +354,7 @@ opensdg.autotrack = function(preset, category, action, label) {
       //------------------------------------------------------------------------------------------------------------------------
       var exp = plugin.findDisagg(plugin.findCat());
       for (var i = 0; i<exp.length; i++) {
-        if (exp[i] == 'undefined'){
+        if (exp[i] === 'undefined'){
           var label = 'total';
         }
         else{
