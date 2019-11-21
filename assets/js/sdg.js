@@ -367,7 +367,7 @@ opensdg.autotrack = function(preset, category, action, label) {
               div.innerHTML = '<label><input id="command'+toString(i)+'" type="radio" name="disagg" value="'+label+'" checked> '+translations.t(label)+'</label><br>';
             }
             else{
-              div.innerHTML = '<label><input id="command'+toString(i)+'" type="radio" name="disagg" value="'+label+'">'+translations.t(label)+'</label><br>';
+              div.innerHTML = '<label><input id="command'+toString(i)+'" type="radio" name="disagg" value="'+label+'"> '+translations.t(label)+'</label><br>';
             }
             return div;
         };
@@ -382,6 +382,7 @@ opensdg.autotrack = function(preset, category, action, label) {
       */
       $('input[type="radio"]').on('click change', function(e) {
         console.log(e.type);
+        alert('You clicked radio!'); 
       });
       //------------------------------------------------------------------------------------------------------------------------
 
