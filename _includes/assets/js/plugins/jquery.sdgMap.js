@@ -341,7 +341,7 @@
             return div;
         };
         command.addTo(this.map);
-        document.getElementById ("command"+toString(i)).addEventListener ("click", handleCommand(exp[i]), false);
+        //document.getElementById ("command"+toString(i)).addEventListener ("click", handleCommand(exp[i]), false);
       };
       this.expression = $('input[name="disagg"]:checked').val();
 
