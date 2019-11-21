@@ -129,6 +129,9 @@ opensdg.autotrack = function(preset, category, action, label) {
     this.unit = _.pluck(this.geoData, 'Units');
     this.unitName = translations.t(this.unit[this.unit.length -1]);
     //--------------------------------------------------
+    this.startExp = 0;
+
+
     this.init();
   }
 
@@ -364,7 +367,7 @@ opensdg.autotrack = function(preset, category, action, label) {
         var command = L.control({position: 'bottomright'});
         command.onAdd = function (map) {
             var div = L.DomUtil.create('div', 'command');
-            if (i == 0){
+            if (i == this.startExp){
               div.innerHTML = '<label><input id="command'+toString(i)+'" type="radio" name="disagg" value="'+label+'" checked> '+translations.t(label)+'</label><br>';
             }
             else{
@@ -376,8 +379,8 @@ opensdg.autotrack = function(preset, category, action, label) {
       };
       this.expression = $('input[name="disagg"]:checked').val();
       $('input[type="radio"]').on('click change', function(e) {
-        console.log(e.type, e.value);
-        alert('You clicked radio!');
+        console.log(e.type);
+        //alert('You clicked radio!');
         plugin.map.remove();
         plugin.init();
         //------------------------------------------------------------------
