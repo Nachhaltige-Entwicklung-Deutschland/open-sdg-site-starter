@@ -378,7 +378,7 @@ opensdg.autotrack = function(preset, category, action, label) {
       $('input[type="radio"]').on('click change', function(e) {
         console.log(e.type);
         alert('You clicked radio!');
-        plugin.init();
+        init();
         //------------------------------------------------------------------
       });
       //------------------------------------------------------------------------------------------------------------------------
