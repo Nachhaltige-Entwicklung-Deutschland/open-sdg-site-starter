@@ -350,7 +350,7 @@
       this.expression = exp[$('input[name="disagg"]:checked').val()]
 
       $('input[type="radio"]').on('click change', function(e) {
-        console.log(e.type);
+        console.log(e.type, plugin.startExp);
         //alert('You clicked radio!');
         plugin.map.remove();
         plugin.init();
