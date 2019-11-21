@@ -135,7 +135,7 @@
       var categories = ['title','sex','age','typification','criminal offences'];
       var category = 'age';
 
-      for (var i; i<categories.length; i++){
+      for (var i = 0; i<categories.length; i++){
         if (this.findDisagg(categories[i]).length>1){
           var category = caseategories[i];
         }
