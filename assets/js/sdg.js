@@ -311,7 +311,7 @@ opensdg.autotrack = function(preset, category, action, label) {
 
     // Initialize the map itself.
     init: function() {
-      console.log("init");
+      console.log("Hallo init");
 
       // Create the map.
       this.map = L.map(this.element, {
@@ -378,7 +378,8 @@ opensdg.autotrack = function(preset, category, action, label) {
       $('input[type="radio"]').on('click change', function(e) {
         console.log(e.type);
         alert('You clicked radio!');
-        init();
+        this.map.remove();
+        plugin.init();
         //------------------------------------------------------------------
       });
       //------------------------------------------------------------------------------------------------------------------------
