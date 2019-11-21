@@ -353,7 +353,7 @@
       },
       */
 
-      $("#inline_content input[name='disagg']").click(function(){
+      $('#inline_content input[name="disagg"]').click(function(){
           alert('You clicked radio!');
           if($('input:radio[name=disagg]:checked').val() == "female"){
               alert($('input:radio[name=disagg]:checked').val());
