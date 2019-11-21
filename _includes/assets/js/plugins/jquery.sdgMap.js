@@ -133,7 +133,7 @@
     //Find those disaggregation-categories that have more then one expression in all lines that have geoData
     findCat: function(){
       var categories = ['title','sex','age','typification','criminal offences'];
-      var category = 'sex';
+      var category = 'age';
 
       for (var i; i<categories.length; i++){
         if (this.findDisagg(categories[i]).length>1){
