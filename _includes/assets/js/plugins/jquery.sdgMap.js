@@ -135,9 +135,7 @@
       var categories = ['title','sex','age','typification','criminal offences'];
       var category = 'title';
       for (var i; i<categories.length; i++){
-        var tmpExp = _.pluck(this.geoData, categories[i]);
-        var tmpUnique = [ ...new Set(tmpExp) ];
-        if (tmpUnique.length>1){
+        if (plugin.findDisagg(categories[i]).length>1){
           var category = caseategories[i];
         }
       };
@@ -146,8 +144,8 @@
 
 
 
-    findDisagg: function(){
-      var expressions = _.pluck(this.geoData, plugin.findCat());
+    findDisagg: function(category){
+      var expressions = _.pluck(this.geoData, category);
       eq = [ ...new Set(expressions) ];
       return eq;
     },
@@ -324,7 +322,7 @@
 
 
       //------------------------------------------------------------------------------------------------------------------------
-      var exp = plugin.findDisagg();
+      var exp = plugin.findDisagg(findCat());
       for (var i = 0; i<exp.length; i++) {
         var command = L.control({position: 'bottomright'});
         command.onAdd = function (map) {
@@ -390,7 +388,7 @@
 
           //----------------------------------------------------------------------------------------------------------------------
           var cat = plugin.findCat();
-          var exp = plugin.findDisagg();
+          var exp = plugin.findDisagg(cat);
           //var expression = plugin.getExpression();
           var expression = plugin.expression;
 
