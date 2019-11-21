@@ -333,23 +333,23 @@
         command.onAdd = function (map) {
             var div = L.DomUtil.create('div', 'command');
             if (i == 0){
-              div.innerHTML = '<input id="command'+toString(i)+'" type="radio" name="disagg" value="'+label+'" checked> <label for="'+label+'">'+translations.t(label)+'</label><br>';
+              div.innerHTML = '<input id="command'+toString(i)+'" type="radio" name="disagg" value="'+label+'" onclick="handleClick(this);" checked> <label for="'+label+'">'+translations.t(label)+'</label><br>';
             }
             else{
-              div.innerHTML = '<input id="command'+toString(i)+'" type="radio" name="disagg" value="'+label+'"> <label for="'+label+'">'+translations.t(label)+'</label><br>';
+              div.innerHTML = '<input id="command'+toString(i)+'" type="radio" name="disagg" value="'+label+'" onclick="handleClick(this);" > <label for="'+label+'">'+translations.t(label)+'</label><br>';
             }
             return div;
         };
         command.addTo(this.map);
-        document.getElementById ("command"+toString(i)).addEventListener ("click", handleCommand(exp[i]), false);
+        //document.getElementById ("command"+toString(i)).addEventListener ("click", handleCommand(exp[i]), false);
       };
       this.expression = $('input[name="disagg"]:checked').val();
 
 
       // add the event handler
 
-      handleCommand function(disagg) {
-         alert("Clicked, title = " + disagg );
+      function handleClick(disagg) {
+         alert("Clicked, title = " + disagg.value );
       },
 
 
