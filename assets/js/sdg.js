@@ -363,11 +363,11 @@ opensdg.autotrack = function(preset, category, action, label) {
         var command = L.control({position: 'bottomright'});
         command.onAdd = function (map) {
             var div = L.DomUtil.create('div', 'command');
-            if (i == 0){
-              div.innerHTML = '<input id="command'+toString(i)+'" type="radio" name="disagg" value="'+label+'" checked> <label for="'+label+'">'+translations.t(label)+'</label><br>';
+            if (i == 1){
+              div.innerHTML = '<label><input id="command'+toString(i)+'" type="radio" name="disagg" value="'+label+'" checked> '+translations.t(label)+'</label><br>';
             }
             else{
-              div.innerHTML = '<input id="command'+toString(i)+'" type="radio" name="disagg" value="'+label+'"  > <label for="'+label+'">'+translations.t(label)+'</label><br>';
+              div.innerHTML = '<label><input id="command'+toString(i)+'" type="radio" name="disagg" value="'+label+'"  >'+translations.t(label)+'</label><br>';
             }
             return div;
         };
