@@ -353,7 +353,6 @@ opensdg.autotrack = function(preset, category, action, label) {
 
       //------------------------------------------------------------------------------------------------------------------------
       var exp = plugin.findDisagg(plugin.findCat());
-      div.innerHTML = '<form><fieldset>'
       for (var i = 0; i<exp.length; i++) {
         if (!exp[i]){
           var label = 'total';
@@ -372,11 +371,16 @@ opensdg.autotrack = function(preset, category, action, label) {
             }
             return div;
         };
-        div.innerHTML = '</fieldset></form>'
         command.addTo(this.map);
-        //document.getElementById ("command").addEventListener ("click", handleCommand(disaggs[i]), false);
+        document.getElementById ("command"+i).addEventListener ("click", handleCommand(exp[i]), false);
       };
       this.expression = $('input[name="disagg"]:checked').val();
+
+
+      // add the event handler
+      function handleCommand(disagg) {
+         alert("Clicked, title = " + disagg );
+
 
       //------------------------------------------------------------------------------------------------------------------------
 
