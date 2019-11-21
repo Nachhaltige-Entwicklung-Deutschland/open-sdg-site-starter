@@ -355,10 +355,6 @@
 
       $('#inline_content input[name=disagg]').click(function(){
           alert('You clicked radio!');
-          if($('input:radio[name=disagg]:checked').val() == "female"){
-              alert($('input:radio[name=disagg]:checked').val());
-              //$('#select-table > .roomNumber').attr('enabled',false);
-          }
       });
       //------------------------------------------------------------------------------------------------------------------------
 
