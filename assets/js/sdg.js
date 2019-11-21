@@ -367,7 +367,7 @@ opensdg.autotrack = function(preset, category, action, label) {
         var command = L.control({position: 'bottomright'});
         command.onAdd = function (map) {
             var div = L.DomUtil.create('div', 'command');
-            if (i == this.startExp){
+            if (i == plugin.startExp){
               div.innerHTML = '<label><input id="command'+toString(i)+'" type="radio" name="disagg" value="'+label+'" checked> '+translations.t(label)+'</label><br>';
             }
             else{
