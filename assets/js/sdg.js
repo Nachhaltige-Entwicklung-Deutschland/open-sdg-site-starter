@@ -355,7 +355,7 @@ opensdg.autotrack = function(preset, category, action, label) {
 
 
       //------------------------------------------------------------------------------------------------------------------------
-      var exp = plugin.findDisagg(findCat());
+      var exp = plugin.findDisagg(plugin.findCat());
       for (var i = 0; i<exp.length; i++) {
         var command = L.control({position: 'bottomright'});
         command.onAdd = function (map) {
