@@ -136,7 +136,7 @@
       var category = 'title';
       for (var i; i<categories.length; i++){
         var tmpExp = _.pluck(this.geoData, categories[i]);
-        tmpUnique = [ ...new Set(tmpExp) ];
+        var tmpUnique = [ ...new Set(tmpExp) ];
         if (tmpUnique.length>1){
           var category = caseategories[i];
         }
