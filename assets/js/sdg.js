@@ -353,28 +353,30 @@ opensdg.autotrack = function(preset, category, action, label) {
 
       //------------------------------------------------------------------------------------------------------------------------
       var exp = plugin.findDisagg(plugin.findCat());
-      for (var i = 0; i<exp.length; i++) {
-        if (!exp[i]){
-          var label = 'total';
-        }
-        else{
-          var label = exp[i];
-        }
-        var command = L.control({position: 'bottomright'});
-        command.onAdd = function (map) {
-            var div = L.DomUtil.create('div', 'command');
-            if (i == 1){
-              div.innerHTML = '<input id="command'+i+'" type="radio" name="disagg" value="'+label+'" checked> <label for="'+label+'">'+label+'</label><br>';
-            }
-            else{
-              div.innerHTML = '<input id="command'+i+'" type="radio" name="disagg" value="'+label+'"> <label for="'+label+'">'+label+'</label><br>';
-            }
-            return div;
+      if (exp.length>1){
+        for (var i = 0; i<exp.length; i++) {
+          if (!exp[i]){
+            var label = 'total';
+          }
+          else{
+            var label = exp[i];
+          }
+          var command = L.control({position: 'bottomright'});
+          command.onAdd = function (map) {
+              var div = L.DomUtil.create('div', 'command');
+              if (i == 1){
+                div.innerHTML = '<input id="command'+i+'" type="radio" name="disagg" value="'+label+'" checked> <label for="'+label+'">'+label+'</label><br>';
+              }
+              else{
+                div.innerHTML = '<input id="command'+i+'" type="radio" name="disagg" value="'+label+'"> <label for="'+label+'">'+label+'</label><br>';
+              }
+              return div;
+          };
+          command.addTo(this.map);
+          //document.getElementById ("command").addEventListener ("click", handleCommand(disaggs[i]), false);
         };
-        command.addTo(this.map);
-        //document.getElementById ("command").addEventListener ("click", handleCommand(disaggs[i]), false);
-      };
-      this.expression = $('input[name="disagg"]:checked').val();
+        this.expression = $('input[name="disagg"]:checked').val();
+      },
       //------------------------------------------------------------------------------------------------------------------------
 
 
