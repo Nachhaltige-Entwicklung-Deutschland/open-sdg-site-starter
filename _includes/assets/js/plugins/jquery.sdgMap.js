@@ -341,19 +341,11 @@
             return div;
         };
         command.addTo(this.map);
-        //document.getElementById ("command"+toString(i)).addEventListener ("click", handleCommand(exp[i]), false);
       };
       this.expression = $('input[name="disagg"]:checked').val();
 
 
-      // add the event handler
-      /*
-      function handleClick(disagg) {
-         alert("Clicked, title = " + disagg.value );
-      },
-      */
-
-      $('#inline_content input[name=disagg]').click(function(){
+      $('#inline_content input[name="disagg"]').click(function(){
           alert('You clicked radio!');
       });
       //------------------------------------------------------------------------------------------------------------------------
