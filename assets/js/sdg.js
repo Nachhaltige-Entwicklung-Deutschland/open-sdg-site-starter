@@ -354,14 +354,20 @@ opensdg.autotrack = function(preset, category, action, label) {
       //------------------------------------------------------------------------------------------------------------------------
       var exp = plugin.findDisagg(plugin.findCat());
       for (var i = 0; i<exp.length; i++) {
+        if (exp[i] == 'undefined'){
+          var label = 'total';
+        }
+        else{
+          var label = exp[i];
+        }
         var command = L.control({position: 'bottomright'});
         command.onAdd = function (map) {
             var div = L.DomUtil.create('div', 'command');
             if (i == 1){
-              div.innerHTML = '<input id="command'+i+'" type="radio" name="disagg" value="'+exp[i]+'" checked> <label for="'+exp[i]+'">'+exp[i]+'</label><br>';
+              div.innerHTML = '<input id="command'+i+'" type="radio" name="disagg" value="'+label+'" checked> <label for="'+label+'">'+label+'</label><br>';
             }
             else{
-              div.innerHTML = '<input id="command'+i+'" type="radio" name="disagg" value="'+exp[i]+'"> <label for="'+exp[i]+'">'+exp[i]+'</label><br>';
+              div.innerHTML = '<input id="command'+i+'" type="radio" name="disagg" value="'+label+'"> <label for="'+label+'">'+label+'</label><br>';
             }
             return div;
         };
