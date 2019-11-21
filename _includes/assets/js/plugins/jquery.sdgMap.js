@@ -322,7 +322,7 @@
 
       //------------------------------------------------------------------------------------------------------------------------
       var exp = plugin.findDisagg(plugin.findCat());
-      if (exp.length>1){
+      if (exp){
         for (var i = 0; i<exp.length; i++) {
           if (!exp[i]){
             var label = 'total';
