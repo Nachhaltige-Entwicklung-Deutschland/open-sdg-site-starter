@@ -515,7 +515,7 @@ opensdg.autotrack = function(preset, category, action, label) {
           function zoomInHandler(e) {
             plugin.updateStaticLayers();
           }
-        }
+        };
       });
       //------------------------------------------------------------------------------------------------------------------------
 
