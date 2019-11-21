@@ -363,7 +363,9 @@
       var geoURLs = this.mapLayers.map(function(item) {
         return $.getJSON(item.serviceUrl);
       });
-      $.when.apply($, geoURLs).done(function() {
+      $.when.apply($, geoURLs).done(plugin.load());
+
+      load: function() {
 
         // Apparently "arguments" can either be an array of responses, or if
         // there was only one response, the response itself. This behavior is
@@ -494,7 +496,7 @@
         function zoomInHandler(e) {
           plugin.updateStaticLayers();
         }
-      });
+      };
 
       // Perform some last-minute tasks when the user clicks on the "Map" tab.
       $('.map .nav-link').click(function() {
