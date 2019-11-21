@@ -345,7 +345,7 @@
       };
       this.expression = $('input[name="disagg"]:checked').val();
       $('input[type="radio"]').on('click change', function(e) {
-        console.log(e.type);
+        console.log(e.type, e.value);
         alert('You clicked radio!');
         plugin.map.remove();
         plugin.init();
