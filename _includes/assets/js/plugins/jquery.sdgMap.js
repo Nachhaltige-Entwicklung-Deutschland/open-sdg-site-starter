@@ -346,7 +346,8 @@
         };
         command.addTo(this.map);
       };
-      this.expression = $('input[name="disagg"]:checked').val();
+      this.startExp = $('input[name="disagg"]:checked').val();
+      this.expression = exp[$('input[name="disagg"]:checked').val();]
 
       $('input[type="radio"]').on('click change', function(e) {
         console.log(e.type);
