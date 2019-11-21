@@ -351,7 +351,10 @@
       */
       $('input[type="radio"]').on('click change', function(e) {
         console.log(e.type);
-        alert('You clicked radio!'); 
+        alert('You clicked radio!');
+        var geoURLs = this.mapLayers.map(function(item) {
+          return $.getJSON(item.serviceUrl);
+        });
       });
       //------------------------------------------------------------------------------------------------------------------------
 
