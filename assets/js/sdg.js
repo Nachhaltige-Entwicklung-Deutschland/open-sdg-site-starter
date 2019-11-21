@@ -361,7 +361,7 @@ opensdg.autotrack = function(preset, category, action, label) {
               div.innerHTML = '<input id="command'+i+'" type="radio" name="disagg" value="'+exp[i]+'" checked> <label for="'+exp[i]+'">'+exp[i]+'</label><br>';
             }
             else{
-              div.innerHTML = '<input id="command'+i+'" type="radio" name="disagg" value="'+exp[i]+'"> '+exp[i]+'<br>';
+              div.innerHTML = '<input id="command'+i+'" type="radio" name="disagg" value="'+exp[i]+'"> <label for="'+exp[i]+'">'+exp[i]+'</label><br>';
             }
             return div;
         };
@@ -418,7 +418,7 @@ opensdg.autotrack = function(preset, category, action, label) {
 
           //----------------------------------------------------------------------------------------------------------------------
           var cat = plugin.findCat();
-          var exp = plugin.findDisagg(cat);
+          //var exp = plugin.findDisagg(cat);
           //var expression = plugin.getExpression();
           var expression = plugin.expression;
 
