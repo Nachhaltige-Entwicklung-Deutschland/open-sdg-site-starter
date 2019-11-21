@@ -166,9 +166,7 @@ opensdg.autotrack = function(preset, category, action, label) {
       var categories = ['title','sex','age','typification','criminal offences'];
       var category = 'title';
       for (var i; i<categories.length; i++){
-        var tmpExp = _.pluck(this.geoData, categories[i]);
-        var tmpUnique = [ ...new Set(tmpExp) ];
-        if (tmpUnique.length>1){
+        if (plugin.findDisagg(categories[i]).length>1){
           var category = caseategories[i];
         }
       };
@@ -177,8 +175,8 @@ opensdg.autotrack = function(preset, category, action, label) {
 
 
 
-    findDisagg: function(){
-      var expressions = _.pluck(this.geoData, plugin.findCat());
+    findDisagg: function(category){
+      var expressions = _.pluck(this.geoData, category);
       eq = [ ...new Set(expressions) ];
       return eq;
     },
@@ -355,7 +353,7 @@ opensdg.autotrack = function(preset, category, action, label) {
 
 
       //------------------------------------------------------------------------------------------------------------------------
-      var exp = plugin.findDisagg();
+      var exp = plugin.findDisagg(findCat());
       for (var i = 0; i<exp.length; i++) {
         var command = L.control({position: 'bottomright'});
         command.onAdd = function (map) {
@@ -421,7 +419,7 @@ opensdg.autotrack = function(preset, category, action, label) {
 
           //----------------------------------------------------------------------------------------------------------------------
           var cat = plugin.findCat();
-          var exp = plugin.findDisagg();
+          var exp = plugin.findDisagg(cat);
           //var expression = plugin.getExpression();
           var expression = plugin.expression;
 
