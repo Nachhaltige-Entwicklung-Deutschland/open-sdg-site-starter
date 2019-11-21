@@ -368,16 +368,17 @@ opensdg.autotrack = function(preset, category, action, label) {
         command.onAdd = function (map) {
             var div = L.DomUtil.create('div', 'command');
             if (i == plugin.startExp){
-              div.innerHTML = '<label><input id="command'+toString(i)+'" type="radio" name="disagg" value="'+label+'" checked> '+translations.t(label)+'</label><br>';
+              div.innerHTML = '<label><input id="command'+toString(i)+'" type="radio" name="disagg" value="'+i+'" checked> '+translations.t(label)+'</label><br>';
             }
             else{
-              div.innerHTML = '<label><input id="command'+toString(i)+'" type="radio" name="disagg" value="'+label+'"> '+translations.t(label)+'</label><br>';
+              div.innerHTML = '<label><input id="command'+toString(i)+'" type="radio" name="disagg" value="'+i+'"> '+translations.t(label)+'</label><br>';
             }
             return div;
         };
         command.addTo(this.map);
       };
       this.expression = $('input[name="disagg"]:checked').val();
+
       $('input[type="radio"]').on('click change', function(e) {
         console.log(e.type);
         //alert('You clicked radio!');
