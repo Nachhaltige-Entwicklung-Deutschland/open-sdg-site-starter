@@ -170,15 +170,15 @@ opensdg.autotrack = function(preset, category, action, label) {
           var category = caseategories[i];
         }
       };
-      return category;
+      return 'sex';
     },
 
 
 
     findDisagg: function(category){
       var expressions = _.pluck(this.geoData, category);
-      eq = [ ...new Set(expressions) ];
-      return eq;
+      unique = [ ...new Set(expressions) ];
+      return unique;
     },
 
     getExpression: function(){
