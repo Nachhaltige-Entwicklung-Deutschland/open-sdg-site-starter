@@ -347,7 +347,7 @@
       $('input[type="radio"]').on('click change', function(e) {
         console.log(e.type);
         alert('You clicked radio!');
-        this.map.remove();
+        plugin.map.remove();
         plugin.init();
         //------------------------------------------------------------------
       });
