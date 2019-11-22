@@ -364,9 +364,7 @@ opensdg.autotrack = function(preset, category, action, label) {
 
         //action, when click:
         $('input[type="radio"]').on('click change', function(e) {
-          console.log(e.type, plugin.startExp);
-          //change var startExp to position in array exp
-          plugin.startExp = $('input[name="disagg"]:checked').val();
+
           if (cat == 'sex'){
             this.sexName = this.expression;
           }
@@ -376,6 +374,11 @@ opensdg.autotrack = function(preset, category, action, label) {
           else if (cat == 'age'){
             this.ageName = this.expression;
           }
+
+          console.log(e.type, plugin.startExp, this.sexName);
+          //change var startExp to position in array exp
+          plugin.startExp = $('input[name="disagg"]:checked').val();
+
           //alert('You clicked radio!');
           //reload the map with different startExp
           plugin.map.remove();
