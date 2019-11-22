@@ -109,19 +109,7 @@
 
   Plugin.prototype = {
 
-    //Find those disaggregation-categories that have more then one expression in all lines that have geoData
-    findCat: function(){
-      var categories = ['title','sex','age'];
-      var category = '';
 
-      for (var i = 0; i<categories.length; i++){
-        if (this.findDisagg(categories[i]).length>1){ //if more then one expression for this categorie exists...
-          var category = categories[i];
-          this.hasMapDisaggs = true;
-        }
-      };
-      return category;
-    },
 
     // Add time series to GeoJSON data and normalize the name and geocode.
     prepareGeoJson: function(geoJson, idProperty, nameProperty, cat, exp) { //--------------------------------added cat & exp
@@ -155,7 +143,19 @@
     },
 
     //---------------------------
+    //Find those disaggregation-categories that have more then one expression in all lines that have geoData
+    findCat: function(){
+      var categories = ['title','sex','age'];
+      var category = '';
 
+      for (var i = 0; i<categories.length; i++){
+        if (this.findDisagg(categories[i]).length>1){ //if more then one expression for this categorie exists...
+          var category = categories[i];
+          this.hasMapDisaggs = true;
+        }
+      };
+      return category;
+    },
 
     // Get the found category and return an array with the corresponding expressions
     findDisagg: function(category){
@@ -299,44 +299,49 @@
 
 
       //Add the radio buttons------------------------------------------------------------------------------------------------------------------------
-      var exp = plugin.findDisagg(plugin.findCat());
-      for (var i = 0; i<exp.length; i++) {
-        if (!exp[i]){
-          var label = 'total';
-        }
-        else{
-          var label = exp[i];
-        }
-        var command = L.control({position: 'bottomright'});
-        command.onAdd = function (map) {
-            var div = L.DomUtil.create('div', 'command');
-            //set the Button on position 'startExp' to status checked
-            if (i == plugin.startExp){
-              div.innerHTML = '<label><input id="command'+toString(i)+'" type="radio" name="disagg" value="'+i+'" checked> '+translations.t(label)+'</label><br>';
-            }
-            else{
-              div.innerHTML = '<label><input id="command'+toString(i)+'" type="radio" name="disagg" value="'+i+'"> '+translations.t(label)+'</label><br>';
-            }
-            return div;
+      var cat = plugin.findcat();
+      if (cat != ''){
+        var exp = plugin.findDisagg(cat);
+        for (var i = 0; i<exp.length; i++) {
+          if (!exp[i]){
+            var label = 'total';
+          }
+          else{
+            var label = exp[i];
+          }
+          var command = L.control({position: 'bottomright'});
+          command.onAdd = function (map) {
+              var div = L.DomUtil.create('div', 'command');
+              //set the Button on position 'startExp' to status checked
+              if (i == plugin.startExp){
+                div.innerHTML = '<label><input id="command'+toString(i)+'" type="radio" name="disagg" value="'+i+'" checked> '+translations.t(label)+'</label><br>';
+              }
+              else{
+                div.innerHTML = '<label><input id="command'+toString(i)+'" type="radio" name="disagg" value="'+i+'"> '+translations.t(label)+'</label><br>';
+              }
+              return div;
+          };
+          command.addTo(this.map);
         };
-        command.addTo(this.map);
+
+        //set var expression to the array(exp) value at position of checked button
+        this.expression = exp[$('input[name="disagg"]:checked').val()];
+        this.reloadCounter ++;
+
+
+
+
+        //action, when click:
+        $('input[type="radio"]').on('click change', function(e) {
+          console.log(e.type, plugin.startExp);
+          //change var startExp to position in array exp
+          plugin.startExp = $('input[name="disagg"]:checked').val();
+          //alert('You clicked radio!');
+          //reload the map with different startExp
+          plugin.map.remove();
+          plugin.init();
+        });
       };
-
-      //set var expression to the array(exp) value at position of checked button
-      this.expression = exp[$('input[name="disagg"]:checked').val()];
-      this.reloadCounter ++;
-
-
-      //action, when click:
-      $('input[type="radio"]').on('click change', function(e) {
-        console.log(e.type, plugin.startExp);
-        //change var startExp to position in array exp
-        plugin.startExp = $('input[name="disagg"]:checked').val();
-        //alert('You clicked radio!');
-        //reload the map with different startExp
-        plugin.map.remove();
-        plugin.init();
-      });
       //------------------------------------------------------------------------------------------------------------------------
 
 
