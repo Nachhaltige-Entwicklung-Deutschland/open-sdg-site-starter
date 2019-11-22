@@ -119,7 +119,7 @@
 
         //-----------------------------------------------------------------------
         // First add the time series data.
-        if (plugin.findCat() == ''){
+        if (this.findCat() == ''){
           var records = _.where(geoData, { GeoCode: geocode});
         }
         else{
