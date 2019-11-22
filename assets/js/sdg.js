@@ -150,7 +150,7 @@ opensdg.autotrack = function(preset, category, action, label) {
 
         //-----------------------------------------------------------------------
         // First add the time series data.
-        if (this.findCat() == ''){
+        if (findCat() == ''){
           var records = _.where(geoData, { GeoCode: geocode});
         }
         else{
