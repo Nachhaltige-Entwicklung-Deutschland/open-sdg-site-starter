@@ -366,16 +366,16 @@ opensdg.autotrack = function(preset, category, action, label) {
         $('input[type="radio"]').on('click change', function(e) {
 
           if (cat == 'sex'){
-            this.sexName = this.expression;
+            this.sexName = plugin.expression;
           }
           else if (cat == 'title'){
-            this.timeSeries = this.expression;
+            this.timeSeries = plugin.expression;
           }
           else if (cat == 'age'){
-            this.ageName = this.expression;
+            this.ageName = plugin.expression;
           }
 
-          console.log(e.type, plugin.startExp, plugin.expression);
+          console.log(e.type, plugin.startExp, this.sexName);
           //change var startExp to position in array exp
           plugin.startExp = $('input[name="disagg"]:checked').val();
 
