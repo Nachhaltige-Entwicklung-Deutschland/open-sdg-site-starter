@@ -332,7 +332,7 @@
 
 
         //action, when click:
-        $('input[type="radio"]').on('click change', function(e) {
+        $('input[type="radio"]').on('change', function(e) {
 
           if (cat == 'sex'){
             this.sexName = this.expression;
