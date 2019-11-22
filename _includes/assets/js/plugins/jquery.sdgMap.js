@@ -153,6 +153,11 @@
       return unique;
     },
 
+    getExpression: function(){
+      var expression = $('input[name="disagg"]:checked').val();
+      return expression;
+    },
+
     //---------------------------
 
     // Zoom to a feature.
@@ -305,7 +310,6 @@
         var command = L.control({position: 'bottomright'});
         command.onAdd = function (map) {
             var div = L.DomUtil.create('div', 'command');
-            //set the Button on position 'startExp' to status checked
             if (i == plugin.startExp){
               div.innerHTML = '<label><input id="command'+toString(i)+'" type="radio" name="disagg" value="'+i+'" checked> '+translations.t(label)+'</label><br>';
             }
@@ -317,20 +321,19 @@
         command.addTo(this.map);
       };
 
-      //set var expression to the array(exp) value at position of checked button
       this.expression = exp[$('input[name="disagg"]:checked').val()]
 
-      //action, when click:
       $('input[type="radio"]').on('click change', function(e) {
         console.log(e.type, plugin.startExp);
-        //change var startExp to position in array exp
         plugin.startExp = $('input[name="disagg"]:checked').val();
         //alert('You clicked radio!');
-        //reload the map with different startExp
         plugin.map.remove();
         plugin.init();
+        //-------------------------------------------------------------------
       });
       //------------------------------------------------------------------------------------------------------------------------
+
+
 
       // Add the selection legend.
       this.selectionLegend = L.Control.selectionLegend(plugin);
