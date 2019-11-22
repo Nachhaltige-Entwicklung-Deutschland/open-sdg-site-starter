@@ -124,7 +124,7 @@
         }
         else{
           var records = _.where(geoData, { GeoCode: geocode, [cat]: exp });
-        },
+        }
         //-----------------------------------------------------------------------
         //var records = _.where(geoData, { GeoCode: geocode, cat: exp });
         records.forEach(function(record) {
@@ -139,7 +139,7 @@
         delete feature.properties[nameProperty];
       });
       return geoJson;
-    }
+    },
 
     //---------------------------
     //Find those disaggregation-categories that have more then one expression in all lines that have geoData
