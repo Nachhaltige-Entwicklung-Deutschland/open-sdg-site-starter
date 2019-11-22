@@ -16,13 +16,6 @@
       "id": "2",
       "title": "End hunger, achieve food security and improved nutrition and promote sustainable agriculture",
       "indicators": [{
-          "id": "2-1-a",
-          "title": "Stickstoffüberschuss der Landwirtschaft",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/2-1-a",
-          "status": "complete"
-        },{
           "id": "2-1-b",
           "title": "Ökologischer Landbau",
           "description": "",
@@ -36,6 +29,13 @@
           "keywords": "",
           "href": "/open-sdg-site-starter/en/2-2-a",
           "status": "complete"
+        },{
+          "id": "2-1-a",
+          "title": "Stickstoffüberschuss der Landwirtschaft",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/2-1-a",
+          "status": "complete"
         }]
     }
   },{
@@ -43,6 +43,13 @@
       "id": "3",
       "title": "Ensure healthy lives and promote well-being for all at all ages",
       "indicators": [{
+          "id": "3-2-a",
+          "title": "Emissionen von Luftschadstoffen",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/3-2-a",
+          "status": "complete"
+        },{
           "id": "3-1-ab",
           "title": "Vorzeitige Sterblichkeit (weiblich)",
           "description": "",
@@ -50,18 +57,11 @@
           "href": "/open-sdg-site-starter/en/3-1-ab",
           "status": "complete"
         },{
-          "id": "3-2-b",
-          "title": "Anteil der Bevölkerung mit erhöhter PM10-Feinstaubexposition",
+          "id": "3-1-e",
+          "title": "Adipositasquote von Jugendlichen",
           "description": "",
           "keywords": "",
-          "href": "/open-sdg-site-starter/en/3-2-b",
-          "status": "complete"
-        },{
-          "id": "3-2-a",
-          "title": "Emissionen von Luftschadstoffen",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/3-2-a",
+          "href": "/open-sdg-site-starter/en/3-1-e",
           "status": "complete"
         },{
           "id": "3-1-f",
@@ -71,18 +71,18 @@
           "href": "/open-sdg-site-starter/en/3-1-f",
           "status": "complete"
         },{
+          "id": "3-2-b",
+          "title": "Anteil der Bevölkerung mit erhöhter PM10-Feinstaubexposition",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/3-2-b",
+          "status": "complete"
+        },{
           "id": "3-1-cd",
           "title": "Raucherquote von Jugendlichen und Erwachsenen",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/3-1-cd",
-          "status": "complete"
-        },{
-          "id": "3-1-e",
-          "title": "Adipositasquote von Jugendlichen",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/3-1-e",
           "status": "complete"
         }]
     }
@@ -172,13 +172,6 @@
       "id": "7",
       "title": "Ensure access to affordable, reliable, sustainable and modern energy for all",
       "indicators": [{
-          "id": "7-2-b",
-          "title": "Anteil des Stroms aus erneuerbaren Energiequellen am Bruttostromverbrauch",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/7-2-b",
-          "status": "complete"
-        },{
           "id": "7-1-ab",
           "title": "Endenergieproduktivität und Primärenergieverbrauch",
           "description": "",
@@ -192,6 +185,13 @@
           "keywords": "",
           "href": "/open-sdg-site-starter/en/7-2-a",
           "status": "complete"
+        },{
+          "id": "7-2-b",
+          "title": "Anteil des Stroms aus erneuerbaren Energiequellen am Bruttostromverbrauch",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/7-2-b",
+          "status": "complete"
         }]
     }
   },{
@@ -199,25 +199,25 @@
       "id": "8",
       "title": "Promote sustained, inclusive and sustainable economic growth, full and productive employment and decent work for all",
       "indicators": [{
-          "id": "8-4-a",
-          "title": "Bruttoinlandsprodukt je Einwohner",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/8-4-a",
-          "status": "complete"
-        },{
-          "id": "8-3-a",
-          "title": "Verhältnis der Bruttoanlageinvestitionen zum BIP",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/8-3-a",
-          "status": "complete"
-        },{
           "id": "8-5-ab",
           "title": "Erwerbstätigenquote",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/8-5-ab",
+          "status": "complete"
+        },{
+          "id": "8-6-a",
+          "title": "Anzahl der Mitglieder des Textilbündnisses",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/8-6-a",
+          "status": "complete"
+        },{
+          "id": "8-4-a",
+          "title": "Bruttoinlandsprodukt je Einwohner",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/8-4-a",
           "status": "complete"
         },{
           "id": "8-1-a",
@@ -234,18 +234,18 @@
           "href": "/open-sdg-site-starter/en/8-2-c",
           "status": "complete"
         },{
-          "id": "8-6-a",
-          "title": "Anzahl der Mitglieder des Textilbündnisses",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/8-6-a",
-          "status": "complete"
-        },{
           "id": "8-2-ab",
           "title": "Staatsdefizit und strukturelles Defizit",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/8-2-ab",
+          "status": "complete"
+        },{
+          "id": "8-3-a",
+          "title": "Verhältnis der Bruttoanlageinvestitionen zum BIP",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/8-3-a",
           "status": "complete"
         }]
     }
@@ -287,32 +287,11 @@
       "id": "11",
       "title": "Make cities and human settlements inclusive, safe, resilient and sustainable",
       "indicators": [{
-          "id": "11-1-c",
-          "title": "Siedlungsdichte",
+          "id": "11-2-c",
+          "title": "Erreichbarkeit von Mittel- und Oberzentren mit öffentlichen Verkehrsmitteln",
           "description": "",
           "keywords": "",
-          "href": "/open-sdg-site-starter/en/11-1-c",
-          "status": "complete"
-        },{
-          "id": "11-1-a",
-          "title": "Anstieg der Siedlungs- und Verkehrsfläche",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/11-1-a",
-          "status": "complete"
-        },{
-          "id": "11-2-b",
-          "title": "Endenergieverbrauch im Personenverkehr",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/11-2-b",
-          "status": "complete"
-        },{
-          "id": "11-2-a",
-          "title": "Endenergieverbrauch im Güterverkehr",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/11-2-a",
+          "href": "/open-sdg-site-starter/en/11-2-c",
           "status": "complete"
         },{
           "id": "11-1-b",
@@ -329,11 +308,32 @@
           "href": "/open-sdg-site-starter/en/11-3-a",
           "status": "complete"
         },{
-          "id": "11-2-c",
-          "title": "Erreichbarkeit von Mittel- und Oberzentren mit öffentlichen Verkehrsmitteln",
+          "id": "11-2-a",
+          "title": "Endenergieverbrauch im Güterverkehr",
           "description": "",
           "keywords": "",
-          "href": "/open-sdg-site-starter/en/11-2-c",
+          "href": "/open-sdg-site-starter/en/11-2-a",
+          "status": "complete"
+        },{
+          "id": "11-1-c",
+          "title": "Siedlungsdichte",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/11-1-c",
+          "status": "complete"
+        },{
+          "id": "11-2-b",
+          "title": "Endenergieverbrauch im Personenverkehr",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/11-2-b",
+          "status": "complete"
+        },{
+          "id": "11-1-a",
+          "title": "Anstieg der Siedlungs- und Verkehrsfläche",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/11-1-a",
           "status": "complete"
         }]
     }
@@ -342,13 +342,6 @@
       "id": "12",
       "title": "Ensure sustainable consumption and production patterns",
       "indicators": [{
-          "id": "12-1-b",
-          "title": "Energieverbrauch und CO2-Emissionen des Konsum",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/12-1-b",
-          "status": "complete"
-        },{
           "id": "12-2-a",
           "title": "Umweltmanagement EMAS",
           "description": "",
@@ -369,6 +362,13 @@
           "keywords": "",
           "href": "/open-sdg-site-starter/en/12-3-ab",
           "status": "complete"
+        },{
+          "id": "12-1-b",
+          "title": "Energieverbrauch und CO2-Emissionen des Konsum",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/12-1-b",
+          "status": "complete"
         }]
     }
   },{
@@ -376,18 +376,18 @@
       "id": "13",
       "title": "Take urgent action to combat climate change and its impacts",
       "indicators": [{
-          "id": "13-1-a",
-          "title": "Treibhausgasemissionen",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/13-1-a",
-          "status": "complete"
-        },{
           "id": "13-1-b",
           "title": "Internationale Klimafinanzierung zur Reduktion von Treibhausgasen und zur Anpassung an den Klimawandel",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/13-1-b",
+          "status": "complete"
+        },{
+          "id": "13-1-a",
+          "title": "Treibhausgasemissionen",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/13-1-a",
           "status": "complete"
         }]
     }
@@ -416,6 +416,13 @@
       "id": "15",
       "title": "Protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, and halt and reverse land degradation and halt biodiversity loss",
       "indicators": [{
+          "id": "15-1-a",
+          "title": "Artenvielfalt und Landschaftsqualität",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/15-1-a",
+          "status": "complete"
+        },{
           "id": "15-3-a",
           "title": "Erhalt bzw. Wiederaufbau von Wäldern in Entwicklungsländern unter dem REDD+-Regelwerk",
           "description": "",
@@ -429,13 +436,6 @@
           "keywords": "",
           "href": "/open-sdg-site-starter/en/15-2-a",
           "status": "complete"
-        },{
-          "id": "15-1-a",
-          "title": "Artenvielfalt und Landschaftsqualität",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/15-1-a",
-          "status": "complete"
         }]
     }
   },{
@@ -443,13 +443,6 @@
       "id": "16",
       "title": "Promote peaceful and inclusive societies for sustainable development, provide access to justice for all and build effective, accountable and inclusive institutions at all levels",
       "indicators": [{
-          "id": "16-3-ab",
-          "title": "Corruption Perception Index in Deutschland sowie in den Partnerländern der deutschen Entwicklungszusammenarbeit",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/16-3-ab",
-          "status": "complete"
-        },{
           "id": "16-2-a",
           "title": "Anzahl der in betroffenen Weltregionen durchgeführten Projekte zur Sicherung, Registrierung und Zerstörung von Kleinwaffen und leichten Waffen durch Deutschland",
           "description": "",
@@ -462,6 +455,13 @@
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/16-1-a",
+          "status": "complete"
+        },{
+          "id": "16-3-ab",
+          "title": "Corruption Perception Index in Deutschland sowie in den Partnerländern der deutschen Entwicklungszusammenarbeit",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/16-3-ab",
           "status": "complete"
         }]
     }

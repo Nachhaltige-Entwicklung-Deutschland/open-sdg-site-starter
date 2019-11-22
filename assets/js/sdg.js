@@ -166,53 +166,24 @@ opensdg.autotrack = function(preset, category, action, label) {
     //---------------------------
     //Find those disaggregation-categories that have more then one expression in all lines that have geoData
     findCat: function(){
-      var categories = ['title','sex','age','typification','criminal offences'];
+      var categories = ['title','sex','age'];
       var category = '';
 
       for (var i = 0; i<categories.length; i++){
-        if (this.findDisagg(categories[i]).length>1){
+        if (this.findDisagg(categories[i]).length>1){ //if more then one expression for this categorie exists...
           var category = categories[i];
         }
       };
       return category;
     },
 
+    // Get the found category and return an array with the corresponding expressions
     findDisagg: function(category){
       var expressions = _.pluck(this.geoData, category);
       unique = [ ...new Set(expressions) ];
       return unique;
     },
 
-    getExpression: function(){
-      var expression = $('input[name="disagg"]:checked').val();
-      return expression;
-    },
-
-
-    /*
-    makeBtns: function(){
-      var disaggs = plugin.findDisagg()
-
-      for (var i = 0; i<2; i++) {
-        var command = L.control({position: 'bottomright'});
-        command.onAdd = function (map) {
-            var div = L.DomUtil.create('div', 'command');
-            div.innerHTML = '<form><input id="command'+i+'" type="checkbox" /> '+disaggs[i]+'</form>';
-            return div;
-        };
-        command.addTo(this.map);
-        //document.getElementById ("command").addEventListener ("click", handleCommand(disaggs[i]), false);
-      };
-    },
-
-
-    // add the event handler
-    function handleCommand(disagg) {
-       //alert("Clicked, title = " + this.title + ' active = '+ this.checked);
-       window.disagg = disagg
-    },
-
-    */
     //---------------------------
 
     // Zoom to a feature.
@@ -365,6 +336,7 @@ opensdg.autotrack = function(preset, category, action, label) {
         var command = L.control({position: 'bottomright'});
         command.onAdd = function (map) {
             var div = L.DomUtil.create('div', 'command');
+            //set the Button on position 'startExp' to status checked
             if (i == plugin.startExp){
               div.innerHTML = '<label><input id="command'+toString(i)+'" type="radio" name="disagg" value="'+i+'" checked> '+translations.t(label)+'</label><br>';
             }
@@ -376,19 +348,20 @@ opensdg.autotrack = function(preset, category, action, label) {
         command.addTo(this.map);
       };
 
+      //set var expression to the array(exp) value at position of checked button
       this.expression = exp[$('input[name="disagg"]:checked').val()]
 
+      //action, when click:
       $('input[type="radio"]').on('click change', function(e) {
         console.log(e.type, plugin.startExp);
+        //change var startExp to position in array exp
         plugin.startExp = $('input[name="disagg"]:checked').val();
         //alert('You clicked radio!');
+        //reload the map with different startExp
         plugin.map.remove();
         plugin.init();
-        //-------------------------------------------------------------------
       });
       //------------------------------------------------------------------------------------------------------------------------
-
-
 
       // Add the selection legend.
       this.selectionLegend = L.Control.selectionLegend(plugin);
