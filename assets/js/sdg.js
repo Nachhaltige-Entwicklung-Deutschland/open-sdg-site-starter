@@ -372,7 +372,7 @@ opensdg.autotrack = function(preset, category, action, label) {
           plugin.map.remove();
           plugin.init();
         });
-      };
+      }
       //------------------------------------------------------------------------------------------------------------------------
 
 
