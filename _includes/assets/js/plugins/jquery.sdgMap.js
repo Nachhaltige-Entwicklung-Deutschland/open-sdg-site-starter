@@ -326,7 +326,7 @@
       //set var expression to the array(exp) value at position of checked button
       this.expression = exp[$('input[name="disagg"]:checked').val()];
       this.reloadCounter ++;
-      
+
 
       //action, when click:
       $('input[type="radio"]').on('click change', function(e) {
@@ -415,20 +415,23 @@
         plugin.updateColors();
 
         // Now that we have layers, we can add the search feature.
-        plugin.searchControl = new L.Control.Search({
-          layer: plugin.getAllLayers(),
-          propertyName: 'name',
-          marker: false,
-          moveToLocation: function(latlng) {
-            plugin.zoomToFeature(latlng.layer);
-            if (!plugin.selectionLegend.isSelected(latlng.layer)) {
-              plugin.highlightFeature(latlng.layer);
-              plugin.selectionLegend.addSelection(latlng.layer);
-            }
-          },
-          autoCollapse: true,
-        });
-        plugin.map.addControl(plugin.searchControl);
+        if (plugin.reloadCounter == 0){
+          plugin.searchControl = new L.Control.Search({
+            layer: plugin.getAllLayers(),
+            propertyName: 'name',
+            marker: false,
+            moveToLocation: function(latlng) {
+              plugin.zoomToFeature(latlng.layer);
+              if (!plugin.selectionLegend.isSelected(latlng.layer)) {
+                plugin.highlightFeature(latlng.layer);
+                plugin.selectionLegend.addSelection(latlng.layer);
+              }
+            },
+            autoCollapse: true,
+          });
+          plugin.map.addControl(plugin.searchControl);
+        }
+
         // The search plugin messes up zoomShowHide, so we have to reset that
         // with this hacky method. Is there a better way?
         var zoom = plugin.map.getZoom();
