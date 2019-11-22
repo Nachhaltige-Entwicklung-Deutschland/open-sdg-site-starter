@@ -460,9 +460,9 @@ opensdg.autotrack = function(preset, category, action, label) {
             },
             autoCollapse: true,
           });
-          plugin.map.addControl(plugin.searchControl);
-        }
 
+        }
+        plugin.map.addControl(plugin.searchControl);
         // The search plugin messes up zoomShowHide, so we have to reset that
         // with this hacky method. Is there a better way?
         var zoom = plugin.map.getZoom();
