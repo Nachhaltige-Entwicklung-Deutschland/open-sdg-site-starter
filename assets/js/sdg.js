@@ -375,7 +375,7 @@ opensdg.autotrack = function(preset, category, action, label) {
             this.ageName = this.expression;
           }
 
-          console.log(e.type, plugin.startExp, this.sexName);
+          console.log(e.type, plugin.startExp, this.expression);
           //change var startExp to position in array exp
           plugin.startExp = $('input[name="disagg"]:checked').val();
 
