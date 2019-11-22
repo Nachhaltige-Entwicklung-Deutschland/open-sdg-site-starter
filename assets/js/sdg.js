@@ -2708,7 +2708,7 @@ $(function() {
     // Player options.
     playerOptions: {
       transitionTime: 1000,
-      loop: false,
+      loop: true,
       startOver: true
     },
   };
