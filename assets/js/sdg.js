@@ -355,20 +355,20 @@ opensdg.autotrack = function(preset, category, action, label) {
           command.addTo(this.map);
         };
 
-        //set var expression to the array(exp) value at position of checked button
+        //set var "expression" to the array(exp) value at position of checked button
         this.expression = exp[$('input[name="disagg"]:checked').val()];
+        //count up the reloadCounter to avoid multiple builds of the search buttnon
         this.reloadCounter ++;
+        //adjust the values for the selectionLegend
         if (cat == 'sex'){
-          plugin.sexName = plugin.expression;
+          plugin.sexName = translations.t(plugin.expression);
         }
         else if (cat == 'title'){
-          plugin.timeSeries = plugin.expression;
+          plugin.timeSeries = translations.t(plugin.expression);
         }
         else if (cat == 'age'){
-          plugin.ageName = plugin.expression;
+          plugin.ageName = translations.t(plugin.expression);
         }
-
-
 
         //action, when click:
         $('input[type="radio"]').on('click change', function(e) {
@@ -385,8 +385,6 @@ opensdg.autotrack = function(preset, category, action, label) {
       }
       //------------------------------------------------------------------------------------------------------------------------
 
-
-
       // Add the year slider.
       this.map.addControl(L.Control.yearSlider({
         years: this.years,
@@ -397,10 +395,6 @@ opensdg.autotrack = function(preset, category, action, label) {
 
         }
       }));
-
-
-
-
 
       // Add the selection legend.
       this.selectionLegend = L.Control.selectionLegend(plugin);
