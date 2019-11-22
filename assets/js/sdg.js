@@ -446,7 +446,7 @@ opensdg.autotrack = function(preset, category, action, label) {
         plugin.updateColors();
 
         // Now that we have layers, we can add the search feature.
-        if (plugin.reloadCounter == 0){
+        if (plugin.reloadCounter == 1){
           plugin.searchControl = new L.Control.Search({
             layer: plugin.getAllLayers(),
             propertyName: 'name',
