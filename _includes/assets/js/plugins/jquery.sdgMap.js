@@ -344,7 +344,7 @@
             this.ageName = this.expression;
           }
 
-          console.log(e.type, plugin.startExp, this.expression);
+          console.log(e.type, plugin.startExp, plugin.expression);
           //change var startExp to position in array exp
           plugin.startExp = $('input[name="disagg"]:checked').val();
 
