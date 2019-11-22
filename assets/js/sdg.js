@@ -130,6 +130,7 @@ opensdg.autotrack = function(preset, category, action, label) {
     this.unitName = translations.t(this.unit[this.unit.length -1]);
     //--------------------------------------------------
     this.startExp = 0;
+    this.reloadCounter = 0; // to avoid multiple search buttons
 
 
     this.init();
@@ -341,6 +342,7 @@ opensdg.autotrack = function(preset, category, action, label) {
         var command = L.control({position: 'bottomright'});
         command.onAdd = function (map) {
             var div = L.DomUtil.create('div', 'command');
+            //set the Button on position 'startExp' to status checked
             if (i == plugin.startExp){
               div.innerHTML = '<label><input id="command'+toString(i)+'" type="radio" name="disagg" value="'+i+'" checked> '+translations.t(label)+'</label><br>';
             }
@@ -352,15 +354,20 @@ opensdg.autotrack = function(preset, category, action, label) {
         command.addTo(this.map);
       };
 
-      this.expression = exp[$('input[name="disagg"]:checked').val()]
+      //set var expression to the array(exp) value at position of checked button
+      this.expression = exp[$('input[name="disagg"]:checked').val()];
+      this.reloadCounter ++;
+      
 
+      //action, when click:
       $('input[type="radio"]').on('click change', function(e) {
         console.log(e.type, plugin.startExp);
+        //change var startExp to position in array exp
         plugin.startExp = $('input[name="disagg"]:checked').val();
         //alert('You clicked radio!');
+        //reload the map with different startExp
         plugin.map.remove();
         plugin.init();
-        //-------------------------------------------------------------------
       });
       //------------------------------------------------------------------------------------------------------------------------
 
