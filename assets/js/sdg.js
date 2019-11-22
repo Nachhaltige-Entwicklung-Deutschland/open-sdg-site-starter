@@ -128,10 +128,10 @@ opensdg.autotrack = function(preset, category, action, label) {
     this.criminalOffenceName = translations.t(this.criminalOffence[this.criminalOffence.length -1]);
     this.unit = _.pluck(this.geoData, 'Units');
     this.unitName = translations.t(this.unit[this.unit.length -1]);
-    //--------------------------------------------------
+
     this.startExp = 0;
     this.reloadCounter = 0; // to avoid multiple search buttons
-
+    //---------------------------------------------------
 
     this.init();
   }
@@ -148,9 +148,15 @@ opensdg.autotrack = function(preset, category, action, label) {
         var geocode = feature.properties[idProperty];
         var name = feature.properties[nameProperty];
 
-
+        //-----------------------------------------------------------------------
         // First add the time series data.
-        var records = _.where(geoData, { GeoCode: geocode, [cat]: exp });
+        if (this.findCat() == ''){
+          var records = _.where(geoData, { GeoCode: geocode});
+        }
+        else{
+          var records = _.where(geoData, { GeoCode: geocode, [cat]: exp });
+        }
+        //-----------------------------------------------------------------------
         //var records = _.where(geoData, { GeoCode: geocode, cat: exp });
         records.forEach(function(record) {
           // Add the Year data into the properties.
@@ -185,15 +191,6 @@ opensdg.autotrack = function(preset, category, action, label) {
       var expressions = _.pluck(this.geoData, category);
       unique = [ ...new Set(expressions) ];
       return unique;
-    },
-
-    pass: function (geoJson, idProperty, nameProperty, cat, exp){
-      if (this.findCat() == ''){
-        return (geoJson, idProperty, nameProperty);
-      }
-      else {
-        return (geoJson, idProperty, nameProperty, cat, exp);
-      }
     },
 
     getExpression: function(){
@@ -435,7 +432,7 @@ opensdg.autotrack = function(preset, category, action, label) {
           var cat = plugin.findCat();
           var expression = plugin.expression;
 
-          var geoJson = plugin.prepareGeoJson(plugin.pass(geoJsons[i][0], idProperty, nameProperty, cat, expression));
+          var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, cat, expression);
           //----------------------------------------------------------------------------------------------------------------------
 
           var layer = L.geoJson(geoJson, {
