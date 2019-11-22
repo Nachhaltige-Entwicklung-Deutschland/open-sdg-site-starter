@@ -163,6 +163,7 @@ opensdg.autotrack = function(preset, category, action, label) {
 
         //-----------------------------------------------------------------------
         // First add the time series data.
+        var x = this.findCat();
         if (!this.hasMapDisaggs){
           var records = _.where(geoData, { GeoCode: geocode});
         }
