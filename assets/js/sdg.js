@@ -318,17 +318,6 @@ opensdg.autotrack = function(preset, category, action, label) {
       // Because after this point, "this" rarely works.
       var plugin = this;
 
-      // Add the year slider.
-      this.map.addControl(L.Control.yearSlider({
-        years: this.years,
-        yearChangeCallback: function(e) {
-          plugin.currentYear = new Date(e.time).getFullYear();
-          plugin.updateColors();
-          plugin.selectionLegend.update();
-
-        }
-      }));
-
 
       //Add the radio buttons------------------------------------------------------------------------------------------------------------------------
       var exp = plugin.findDisagg(plugin.findCat());
@@ -370,6 +359,21 @@ opensdg.autotrack = function(preset, category, action, label) {
         plugin.init();
       });
       //------------------------------------------------------------------------------------------------------------------------
+
+
+
+      // Add the year slider.
+      this.map.addControl(L.Control.yearSlider({
+        years: this.years,
+        yearChangeCallback: function(e) {
+          plugin.currentYear = new Date(e.time).getFullYear();
+          plugin.updateColors();
+          plugin.selectionLegend.update();
+
+        }
+      }));
+
+
 
 
 
