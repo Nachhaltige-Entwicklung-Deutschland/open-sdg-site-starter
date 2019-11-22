@@ -108,8 +108,10 @@
 
   Plugin.prototype = {
 
+
+
     // Add time series to GeoJSON data and normalize the name and geocode.
-    prepareGeoJson: function(geoJson, idProperty, nameProperty, cat, exp) {
+    prepareGeoJson: function(geoJson, idProperty, nameProperty, cat, exp) { //--------------------------------added cat & exp
       var geoData = this.geoData;
       geoJson.features.forEach(function(feature) {
         var geocode = feature.properties[idProperty];
@@ -152,6 +154,15 @@
       var expressions = _.pluck(this.geoData, category);
       unique = [ ...new Set(expressions) ];
       return unique;
+    },
+
+    pass: function (geoJson, idProperty, nameProperty, cat, exp){
+      if (this.findCat() == ''){
+        return (geoJson, idProperty, nameProperty);
+      }
+      else {
+        return (geoJson, idProperty, nameProperty, cat, exp);
+      }
     },
 
     getExpression: function(){
@@ -393,7 +404,7 @@
           var cat = plugin.findCat();
           var expression = plugin.expression;
 
-          var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, cat, expression);
+          var geoJson = plugin.prepareGeoJson(plugin.pass(geoJsons[i][0], idProperty, nameProperty, cat, expression));
           //----------------------------------------------------------------------------------------------------------------------
 
           var layer = L.geoJson(geoJson, {
