@@ -132,8 +132,7 @@
 
         //-----------------------------------------------------------------------
         // First add the time series data.
-        var x = plugin.findCat();
-        if (!this.hasMapDisaggs){
+        if (cat == ''){
           var records = _.where(geoData, { GeoCode: geocode});
         }
         else{
