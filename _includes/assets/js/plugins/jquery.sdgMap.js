@@ -336,6 +336,15 @@
           console.log(e.type, plugin.startExp);
           //change var startExp to position in array exp
           plugin.startExp = $('input[name="disagg"]:checked').val();
+          if (cat == 'sex'){
+            plugin.sexName = this.expression;
+          }
+          else if (cat == 'title'){
+            plugin.timeSeries = this.expression;
+          }
+          else if (cat == 'age'){
+            plugin.ageName = this.expression;
+          }
           //alert('You clicked radio!');
           //reload the map with different startExp
           plugin.map.remove();
