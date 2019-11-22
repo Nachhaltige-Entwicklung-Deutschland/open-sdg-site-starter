@@ -140,7 +140,19 @@ opensdg.autotrack = function(preset, category, action, label) {
 
   Plugin.prototype = {
 
+    //Find those disaggregation-categories that have more then one expression in all lines that have geoData
+    findCat: function(){
+      var categories = ['title','sex','age'];
+      var category = '';
 
+      for (var i = 0; i<categories.length; i++){
+        if (this.findDisagg(categories[i]).length>1){ //if more then one expression for this categorie exists...
+          var category = categories[i];
+          this.hasMapDisaggs = true;
+        }
+      };
+      return category;
+    },
 
     // Add time series to GeoJSON data and normalize the name and geocode.
     prepareGeoJson: function(geoJson, idProperty, nameProperty, cat, exp) { //--------------------------------added cat & exp
@@ -174,19 +186,7 @@ opensdg.autotrack = function(preset, category, action, label) {
     },
 
     //---------------------------
-    //Find those disaggregation-categories that have more then one expression in all lines that have geoData
-    findCat: function(){
-      var categories = ['title','sex','age'];
-      var category = '';
 
-      for (var i = 0; i<categories.length; i++){
-        if (this.findDisagg(categories[i]).length>1){ //if more then one expression for this categorie exists...
-          var category = categories[i];
-          this.hasMapDisaggs = true;
-        }
-      };
-      return category;
-    },
 
     // Get the found category and return an array with the corresponding expressions
     findDisagg: function(category){
