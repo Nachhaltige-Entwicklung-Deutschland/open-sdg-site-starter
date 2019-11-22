@@ -330,7 +330,7 @@ opensdg.autotrack = function(preset, category, action, label) {
 
 
       //Add the radio buttons------------------------------------------------------------------------------------------------------------------------
-      var cat = plugin.findcat();
+      var cat = plugin.findCat();
       if (cat != ''){
         var exp = plugin.findDisagg(cat);
         for (var i = 0; i<exp.length; i++) {
