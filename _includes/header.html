@@ -44,30 +44,29 @@
             </li>
           {% endunless %}
           {%- endfor -%}
-
-
-
-
-
-
         {%- endif -%}
 
-        <select>
-          {%- if site.menu -%}
-            {%- assign current_path_no_slash = page.url | remove: '/' -%}
-            {%- for item in site.menu -%}
-            {%- assign item_path_no_slash = item.path | remove: '/' -%}
-            {% if item.path contains "status" %}
-              <li class="nav-link {% if current_path_no_slash == item_path_no_slash %}active{% endif %}">
-                <option value="Test1"><a href="{{ site.baseurl }}{{ baseurl_folder }}{{ item.path }}">{{ item.translation_key | t }}</a></option>
-              </li>
-            {% endif %}
-            {%- endfor -%}
-          {%- endif -%}
-
-
-        </select>
-
+        <li>
+          <a class="language-toggle-button">
+            <i class="fa fa-globe"></i>
+            <span class="language-toggle-text">Wetter</span>
+            <i class="language-toggle fa fa-chevron-down"></i>
+            <i class="language-toggle fa fa-chevron-up" style="display:none;"></i>
+          </a>
+          <ul class="language-options language-toggle">
+            {%- if site.menu -%}
+              {%- assign current_path_no_slash = page.url | remove: '/' -%}
+              {%- for item in site.menu -%}
+                {%- assign item_path_no_slash = item.path | remove: '/' -%}
+                {% if item.path contains "status" %}
+                  <li class="nav-link {% if current_path_no_slash == item_path_no_slash %}active{% endif %}">
+                    <a href="{{ site.baseurl }}{{ baseurl_folder }}{{ item.path }}">{{ item.translation_key | t }}</a>
+                  </li>
+                {% endif %}
+              {%- endfor -%}
+            {%- endif -%}
+          </ul>
+        </li>
 
         {%- if site.languages.size > 1 -%}
         <li>
