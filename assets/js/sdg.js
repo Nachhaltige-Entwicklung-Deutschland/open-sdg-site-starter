@@ -195,11 +195,6 @@ opensdg.autotrack = function(preset, category, action, label) {
       return unique;
     },
 
-    getExpression: function(){
-      var expression = $('input[name="disagg"]:checked').val();
-      return expression;
-    },
-
     //---------------------------
 
     // Zoom to a feature.
@@ -334,12 +329,7 @@ opensdg.autotrack = function(preset, category, action, label) {
       if (cat != ''){
         var exp = plugin.findDisagg(cat);
         for (var i = 0; i<exp.length; i++) {
-          if (!exp[i]){
-            var label = 'total';
-          }
-          else{
-            var label = exp[i];
-          }
+          var label = exp[i];
           var command = L.control({position: 'bottomright'});
           command.onAdd = function (map) {
               var div = L.DomUtil.create('div', 'command');
