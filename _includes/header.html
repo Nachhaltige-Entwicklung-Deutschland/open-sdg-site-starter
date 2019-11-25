@@ -33,7 +33,7 @@
         <li><span data-target="search">{{ t.search.search }}</span></li>
       </ul>
 
-      <ul class="nav navbar-nav menu-target contrast-switcher" id="menu">
+      <div class="nav navbar-nav menu-target contrast-switcher" id="menu">
         {%- if site.menu -%}
           {%- assign current_path_no_slash = page.url | remove: '/' -%}
           {%- for item in site.menu -%}
@@ -46,7 +46,9 @@
           {%- endfor -%}
 
           <div class=dropdown">
-            <button class="dropbtn">Wetter</button>
+            <button class="dropbtn">Wetter
+              <i class="fa fa-caret-down"></i>
+            </button>
             <div class="dropdown-content">
               <a href="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/3-1-ab/">Test</a>
               {%- for item in site.menu -%}
@@ -66,7 +68,7 @@
           {% include components/language-toggle.html %}
         </li>
         {%- endif -%}
-      </ul>
+      </div>
 
       {% include search.html %}
 
