@@ -92,13 +92,13 @@ menu:
   # Use these to customise the main navigation.
   - path: /
     translation_key: general.goals
-  - path: /status_summary
+  - path: /x_status_summary
     translation_key: menu.status_summary
   - path: /about/
     translation_key: menu.about
   - path: /guidance
     translation_key: menu.guidance
-  - path: /status
+  - path: /x_status
     translation_key: menu.status
 
 # Configure the text (or "translation key") to be used on the

@@ -38,9 +38,15 @@
           {%- assign current_path_no_slash = page.url | remove: '/' -%}
           {%- for item in site.menu -%}
           {%- assign item_path_no_slash = item.path | remove: '/' -%}
-          <li class="nav-link {% if current_path_no_slash == item_path_no_slash %}active{% endif %}">
-            <a href="{{ site.baseurl }}{{ baseurl_folder }}{{ item.path }}">{{ item.translation_key | t }}</a>
-          </li>
+          {% if item.path contains "x_" %}
+            <li class="nav-link {% if current_path_no_slash == item_path_no_slash %}active{% endif %}">
+              <a href="{{ site.baseurl }}{{ baseurl_folder }}{{ item.path }}">{{ item.translation_key | t }}</a>
+            </li>
+          {% else %}
+            <li class="nav-link {% if current_path_no_slash == item_path_no_slash %}active{% endif %}">
+              <a href="{{ site.baseurl }}{{ baseurl_folder }}{{ item.path }}">{{ item.translation_key | t }}</a>
+            </li>
+          {% endif %}
           {%- endfor -%}
         {%- endif -%}
         {%- if site.languages.size > 1 -%}
@@ -52,7 +58,7 @@
 
       {% include search.html %}
 
-      <a class="header_img" href="https://g205sdgs.github.io/sdg-indicators/" id="menu" data-toggle="tooltip" title="hooray!">
+      <a class="header_img" href="https://g205sdgs.github.io/sdg-indicators/" id="menu">
         <img src="https://g205sdgs.github.io/sdg-indicators/public/SDG Wheel_Transparent.png" title="{{ t.general.link_sdg }}" alt="Link SDG" />
       </a>
 
