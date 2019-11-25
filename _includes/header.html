@@ -11,6 +11,24 @@
       <img src="{{ site.baseurl }}/assets/img/dns_logo.png" alt="{{ t.general.dns }} - {{ t.header.tag_line }}" />
     </a>
 
+    <div class="topnav" id="myTopnav">
+  <a href="#home" class="active">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <div class="dropdown">
+    <button class="dropbtn">Dropdown
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div>
+  <a href="#about">About</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<!--
   <div class='hidden visible-xs float-right'>
     <ul id='accessibility-nav' class='contrast-switcher'></ul>
     {%- if site.languages.size > 1 -%}
@@ -48,8 +66,7 @@
 
         <li class="nav-link">
           <a class="language-toggle-button" onclick="$(this).next('.language-toggle').toggle(); return false;">
-            <!--<i class="fa fa-globe"></i>-->
-            <!--<li class="nav-link {% if current_path_no_slash == item_path_no_slash %}active{% endif %}">Titel</li>-->
+            <!--<i class="fa fa-globe"></i>--
             <span class="language-toggle-text">{{ t.menu.tatus_title }}</span>
             <i class="language-toggle fa fa-chevron-down"></i>
             <i class="language-toggle fa fa-chevron-up" style="display:none;"></i>
@@ -84,6 +101,18 @@
       </a>
 
     </nav>
+    -->
   </div>
 
 </header>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
