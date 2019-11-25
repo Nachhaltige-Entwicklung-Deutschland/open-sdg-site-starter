@@ -406,24 +406,18 @@ header {
 
 
 //Stuff for dropdown menu
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-.dropdown .dropbtn {
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
   font-size: 16px;
   border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
+  cursor: pointer;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
 .dropdown-content {
@@ -436,18 +430,18 @@ header {
 }
 
 .dropdown-content a {
-  float: none;
   color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-  text-align: left;
 }
 
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
+.dropdown-content a:hover {background-color: #f1f1f1}
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
 }
