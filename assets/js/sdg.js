@@ -151,9 +151,11 @@ opensdg.autotrack = function(preset, category, action, label) {
 
         //-----------------------------------------------------------------------
         // First add the time series data.
+        //Normal version, if there is no Disaggregation-cathegory with more than one expression.
         if (cat == ''){
           var records = _.where(geoData, { GeoCode: geocode});
         }
+        //If there is a Disaggregation-cathegory with more than one expression:
         else{
           var records = _.where(geoData, { GeoCode: geocode, [cat]: exp });
         }
@@ -180,7 +182,7 @@ opensdg.autotrack = function(preset, category, action, label) {
       var category = '';
 
       for (var i = 0; i<categories.length; i++){
-        if (this.findDisagg(categories[i]).length>1){ //if more then one expression for this categorie exists...
+        if (this.findDisagg(categories[i]).length>1){ //if more than one expression for this categorie exists...
           var category = categories[i];
           this.hasMapDisaggs = true;
         }
@@ -325,6 +327,7 @@ opensdg.autotrack = function(preset, category, action, label) {
 
 
       //Add the radio buttons------------------------------------------------------------------------------------------------------------------------
+      //Create a Button for every expression and add it to the map
       var cat = plugin.findCat();
       if (cat != ''){
         var exp = plugin.findDisagg(cat);
@@ -363,11 +366,14 @@ opensdg.autotrack = function(preset, category, action, label) {
         //action, when click:
         $('input[type="radio"]').on('click change', function(e) {
 
-          console.log(e.type, plugin.startExp, plugin.sexName);
-          //change var startExp to position in array exp
+          //console.log(e.type, plugin.startExp, plugin.sexName);
+
+
+          //set startExp to the intiger of the Position of selectet Expression
           plugin.startExp = $('input[name="disagg"]:checked').val();
 
           //alert('You clicked radio!');
+          
           //reload the map with different startExp
           plugin.map.remove();
           plugin.init();
@@ -453,13 +459,14 @@ opensdg.autotrack = function(preset, category, action, label) {
         }
 
 
-
-
-
         plugin.updateColors();
 
         // Now that we have layers, we can add the search feature.
+        //-------------------------------------------------------------------
+        //A reload due to Radio-button change creates a second search-Button.
+        //Therefor we need to ask if it is the first load here:
         if (plugin.reloadCounter == 1){
+          //----------------------------------------------------------------
           plugin.searchControl = new L.Control.Search({
             layer: plugin.getAllLayers(),
             propertyName: 'name',
@@ -474,7 +481,7 @@ opensdg.autotrack = function(preset, category, action, label) {
             autoCollapse: true,
           });
 
-        }
+        }//---------------------------------
         plugin.map.addControl(plugin.searchControl);
         // The search plugin messes up zoomShowHide, so we have to reset that
         // with this hacky method. Is there a better way?
