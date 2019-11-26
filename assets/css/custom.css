@@ -364,3 +364,6 @@ header {
     @media only screen and (max-width: 680px) {
       #disclaimer .alert-danger {
         font-size: 0.75em; } }
+
+.sc {
+  font-family: Alegreya Sans SC; }
