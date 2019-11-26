@@ -1942,6 +1942,9 @@ var indicatorView = function (model, options) {
       type: this._model.graphType,
       data: chartInfo,
       options: {
+        if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
+          showLines: false,
+        },
         showLines: false,
         responsive: true,
         maintainAspectRatio: false,
