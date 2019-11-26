@@ -1937,14 +1937,14 @@ var indicatorView = function (model, options) {
   this.createPlot = function (chartInfo) {
 
     var that = this;
-    if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
-      var showLine= false;
-    },
+  //  if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
+    //  var showLine= false;
+  //  },
     var chartConfig = {
       type: this._model.graphType,
       data: chartInfo,
-      options: {      
-        showLines: showLine,
+      options: {
+        //showLines: showLine, //----------------------------------------------------------------------------------------------
         responsive: true,
         maintainAspectRatio: false,
         spanGaps: true,
