@@ -1942,6 +1942,7 @@ var indicatorView = function (model, options) {
       type: this._model.graphType,
       data: chartInfo,
       options: {
+        showLines: false,
         responsive: true,
         maintainAspectRatio: false,
         spanGaps: true,
