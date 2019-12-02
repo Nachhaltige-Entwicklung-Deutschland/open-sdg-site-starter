@@ -45,7 +45,7 @@ jobs:
           command: bash scripts/test/html_proofer_prod.sh
       - add_ssh_keys:
           fingerprints:
-            - "fd:36:64:96:38:8a:d8:7c:b9:22:6a:e1:a5:88:24:61"
+            - "ec:42:31:b1:27:aa:df:aa:3c:7a:d8:1f:cc:55:e6:77"
       - run:
           name: Deploy to Github
           command: bash scripts/deploy/circleci/deploy_prod.sh
@@ -89,10 +89,10 @@ workflows:
                 - gh-pages
   deploy:
     jobs:
-      #- deploy_prod:
-      #    filters:
-      #      branches:
-      #        only: master
+      - deploy_prod:
+          filters:
+            branches:
+              only: master
       - deploy_staging:
           filters:
             branches:
