@@ -21,7 +21,7 @@
   {% if meta.sdg_indicator %}
     <div class="col-xs-3 col-md-3 col-lg-4">
       <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.previous }}" class="btn btn-primary btn-block G{{ meta.sdg_goal }}-background" role="button">
-        {{ t.general.prev_indicator }}
+        &Lt; {{ t.general.prev_indicator }}
       </a>
     </div>
 
@@ -33,19 +33,19 @@
 
     <div class="col-xs-3 col-md-3 col-lg-4">
       <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.next }}" class="btn btn-primary btn-block G{{ meta.sdg_goal }}-background" role="button">
-        {{ t.general.next_indicator }}
+        {{ t.general.next_indicator }} &Gt;
       </a>
     </div>
   {% else  %}
     <div class="col-xs-6 col-md-6 col-lg-6">
       <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.previous }}" class="btn btn-primary btn-block G{{ meta.sdg_goal }}-background" role="button">
-        {{ t.general.prev_indicator }}
+        &Lt; {{ t.general.prev_indicator }}
       </a>
     </div>
 
     <div class="col-xs-6 col-md-6 col-lg-6">
       <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.next }}" class="btn btn-primary btn-block G{{ meta.sdg_goal }}-background" role="button">
-        {{ t.general.next_indicator }}
+        {{ t.general.next_indicator }} &Gt;
       </a>
     </div>
   {% endif %}
@@ -64,7 +64,7 @@
 
   <div class="col-xs-3 col-md-3 col-lg-4">
     <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ previous_goal }}" class="btn btn-primary btn-block G{{ goal_number }}-background" role="button">
-      {{ t.general.prev_goal }}
+      &Lt; {{ t.general.prev_goal }}
     </a>
   </div>
   <div class="col-xs-3 col-md-3 col-lg-4">
@@ -74,7 +74,7 @@
   </div>
   <div class="col-xs-3 col-md-3 col-lg-4">
     <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ next_goal }}" class="btn btn-primary btn-block G{{ goal_number }}-background" role="button">
-      {{ t.general.next_goal }}
+      {{ t.general.next_goal }} &Gt;
     </a>
   </div>
 
