@@ -364,3 +364,7 @@ header {
     @media only screen and (max-width: 680px) {
       #disclaimer .alert-danger {
         font-size: 0.75em; } }
+
+@media screen and (max-width: 300px) {
+  .button-text {
+    display: none; } }
