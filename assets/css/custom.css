@@ -412,3 +412,6 @@ header {
   color: black; }
   .contrast-high .status-toggle-mobile .status-options a:hover, .contrast-high ul.navbar-nav .status-options a:hover {
     color: black; }
+
+.link_btn {
+  padding-top: 50px; }
