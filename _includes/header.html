@@ -18,9 +18,13 @@
       {% include components/language-toggle.html %}
     </div>
     {%- endif -%}
-    <a class="header_img" href="https://g205sdgs.github.io/sdg-indicators/" id="menu">
+    //---------------------------------------------------
+    <li class="link_btn">
+      <a class="header_img" href="https://g205sdgs.github.io/sdg-indicators/" id="menu">
         <img src="https://g205sdgs.github.io/sdg-indicators/public/SDG Wheel_Transparent.png" title="{{ t.general.link_sdg }}" alt="Link SDG" style="width:24px;height:24px;"/>
-    </a>
+      </a>
+    </li>
+    //---------------------------------------------------
   </div>
 
     <nav class="navbar navbar-default" id="main-nav">
@@ -80,11 +84,13 @@
           {% include components/language-toggle.html %}
         </li>
         {%- endif -%}
+        //---------------------------------------------------
         <li class="link_btn">
           <a class="header_img" href="https://g205sdgs.github.io/sdg-indicators/" id="menu">
             <img src="https://g205sdgs.github.io/sdg-indicators/public/SDG Wheel_Transparent.png" title="{{ t.general.link_sdg }}" alt="Link SDG" style="width:24px;height:24px;"/>
           </a>
         </li>
+        //---------------------------------------------------
       </ul>
 
       {% include search.html %}
