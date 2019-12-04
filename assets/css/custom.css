@@ -364,3 +364,50 @@ header {
     @media only screen and (max-width: 680px) {
       #disclaimer .alert-danger {
         font-size: 0.75em; } }
+
+.status-options {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  left: 12px;
+  color: #222;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0px 0px 2px 0px #a6a6a6;
+  padding: .2em 1em .2em .2em;
+  text-shadow: #f5f5f5 0 1px 0; }
+  .status-options li {
+    padding: 5px;
+    padding-left: 0; }
+
+.status-toggle-button {
+  cursor: pointer; }
+
+.navbar ul.navbar-nav li a.status-toggle-button {
+  display: none; }
+  @media only screen and (min-width: 768px) {
+    .navbar ul.navbar-nav li a.status-toggle-button {
+      display: block; } }
+
+.status-toggle-mobile {
+  position: relative;
+  padding-top: 20px;
+  padding-right: 10px;
+  float: right; }
+  .status-toggle-mobile .status-options {
+    left: -36px; }
+    .status-toggle-mobile .status-options li {
+      padding-left: 5px; }
+  .status-toggle-mobile a {
+    text-transform: uppercase; }
+    .status-toggle-mobile a .status-toggle-text {
+      display: none; }
+    .status-toggle-mobile a .status-toggle {
+      display: none !important; }
+    .status-toggle-mobile a .fa-globe {
+      font-size: 2em; }
+
+.contrast-high .status-toggle-mobile .status-options a, .contrast-high ul.navbar-nav .status-options a {
+  color: black; }
+  .contrast-high .status-toggle-mobile .status-options a:hover, .contrast-high ul.navbar-nav .status-options a:hover {
+    color: black; }
