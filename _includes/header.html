@@ -55,11 +55,6 @@
               </li>
             {% endif %}
           {%- endfor -%}
-          <li class="nav-link">
-            <a class="header_img" href="https://g205sdgs.github.io/sdg-indicators/" id="menu">
-              <img src="https://g205sdgs.github.io/sdg-indicators/public/SDG Wheel_Transparent.png" title="{{ t.general.link_sdg }}" alt="Link SDG" style="width:24px;height:24px;"/>
-            </a>
-          </li>
         {%- endif -%}
 
         <li class="nav-link visible-sm visible-md visible-lg">
@@ -82,6 +77,12 @@
               {%- endfor -%}
             {%- endif -%}
           </ul>
+        </li>
+        
+        <li class="nav-link">
+          <a class="header_img" href="https://g205sdgs.github.io/sdg-indicators/" id="menu">
+            <img src="https://g205sdgs.github.io/sdg-indicators/public/SDG Wheel_Transparent.png" title="{{ t.general.link_sdg }}" alt="Link SDG" style="width:24px;height:24px;"/>
+          </a>
         </li>
 
         {%- if site.languages.size > 1 -%}
