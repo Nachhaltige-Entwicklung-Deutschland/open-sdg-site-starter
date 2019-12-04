@@ -1973,7 +1973,7 @@ var indicatorView = function (model, options) {
 
             _.each(chart.data.datasets, function(dataset, datasetIndex) {
               text.push('<li data-datasetindex="' + datasetIndex + '">');
-              //--------------------------------------------------------------------------------------------------------------------------------------------------
+              //-make shure targets don´t get dashed--------------------------------------------------------------------------------------------------------------
               if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
                 text.push('<span class="swatchTgt' + '" style="background-color: ' + dataset.backgroundColor + '">');
               }
@@ -1990,15 +1990,17 @@ var indicatorView = function (model, options) {
             return text.join('');
         },
 
-        showLines: function(chart) {
-          var showLine= false;
-          _.each(chart.data.datasets, function(dataset, datasetIndex) {
-            if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
-              showline = false;
-            }
-          });
-          return showline;
-        },
+        showLines: false,
+
+        //showLines: function(chart) {
+          //var showLine= false;
+          //_.each(chart.data.datasets, function(dataset, datasetIndex) {
+            //if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
+              //showline = false;
+            //}
+          //});
+          //return showline;
+        //},
 
 
         legend: {
