@@ -18,13 +18,6 @@
       {% include components/language-toggle.html %}
     </div>
     {%- endif -%}
-    <!-----------------------------------------------------------
-    <li class="link_btn">
-      <a class="header_img" href="https://g205sdgs.github.io/sdg-indicators/" id="menu">
-        <img src="https://g205sdgs.github.io/sdg-indicators/public/SDG Wheel_Transparent.png" title="{{ t.general.link_sdg }}" alt="Link SDG" style="width:24px;height:24px;"/>
-      </a>
-    </li>
-    <!----------------------------------------------------------->
   </div>
 
     <nav class="navbar navbar-default" id="main-nav">
@@ -87,17 +80,11 @@
 
         <li class="nav-link">
           <a href="https://g205sdgs.github.io/sdg-indicators/">
-            <img src="https://g205sdgs.github.io/sdg-indicators/public/SDG Wheel_Transparent.png" title="{{ t.general.link_sdg }}" alt="Link SDG" style="width:24px;height:24px;"/>
+            <img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/SDG Wheel_Transparent.png" title="{{ t.general.link_sdg }}" alt="Link SDG" style="width:24px;height:24px;"/>
+            <span class="hidden-sm hidden-md hidden-lg">SDG-NRP</span>
           </a>
         </li>
-        
-        <!-----------------------------------------------------------
-        <li class="link_btn">
-          <a class="header_img" href="https://g205sdgs.github.io/sdg-indicators/" id="menu">
-            <img src="https://g205sdgs.github.io/sdg-indicators/public/SDG Wheel_Transparent.png" title="{{ t.general.link_sdg }}" alt="Link SDG" style="width:24px;height:24px;"/>
-          </a>
-        </li>
-        <!----------------------------------------------------------->
+
       </ul>
 
       {% include search.html %}
