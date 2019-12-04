@@ -43,10 +43,10 @@
                 <a href="{{ site.baseurl }}{{ baseurl_folder }}{{ item.path }}">{{ item.translation_key | t }}</a>
               </li>
             {% endunless %}
+            <li class="nav-link {% if current_path_no_slash == item_path_no_slash %}active{% endif %} hidden-md hidden-lg">
+              <a href="{{ site.baseurl }}{{ baseurl_folder }}{{ item.path }}">Status - {{ item.translation_key | t }}</a>
+            </li>
           {%- endfor -%}
-          <li class="nav-link {% if current_path_no_slash == item_path_no_slash %}active{% endif %} hidden-md hidden-lg">
-            <a href="https://fontawesome.com/v4.7.0/icons/">XXX</a>
-          </li>
         {%- endif -%}
 
         <li class="nav-link visible-md-block visible-lg-block">
