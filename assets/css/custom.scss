@@ -434,7 +434,6 @@ header {
   padding-top: 20px;
   padding-right: 10px;
   float: right;
-  background: #f5f5f5;
   .status-options {
     left: -36px;
     li {
@@ -448,6 +447,7 @@ header {
     }
     .status-toggle {
       display: none !important;
+      background: #000;
     }
     .fa-globe {
       font-size: 2em;
