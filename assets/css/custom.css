@@ -385,7 +385,7 @@ header {
 
 .navbar ul.navbar-nav li a.status-toggle-button {
   display: none; }
-  @media only screen and (min-width: 1000px) {
+  @media only screen and (min-width: 400px) {
     .navbar ul.navbar-nav li a.status-toggle-button {
       display: block; } }
 
