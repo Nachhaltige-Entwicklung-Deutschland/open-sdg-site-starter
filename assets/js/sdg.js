@@ -1990,17 +1990,15 @@ var indicatorView = function (model, options) {
             return text.join('');
         },
 
-        showLines: false,
-
-        //showLines: function(chart) {
-          //var showLine= false;
-          //_.each(chart.data.datasets, function(dataset, datasetIndex) {
-            //if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
-              //showline = false;
-            //}
-          //});
-          //return showline;
-        //},
+        function(chart) {
+          var showLine= true;
+          _.each(chart.data.datasets, function(dataset, datasetIndex) {
+            if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
+              showline = false;
+            }
+          });
+          return ("showLines:" showline);
+        },
 
 
         legend: {
