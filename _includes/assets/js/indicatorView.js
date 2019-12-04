@@ -371,14 +371,10 @@ var indicatorView = function (model, options) {
   this.createPlot = function (chartInfo) {
 
     var that = this;
-  //  if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
-    //  var showLine= false;
-  //  },
     var chartConfig = {
       type: this._model.graphType,
       data: chartInfo,
       options: {
-        //showLines: showLine, //----------------------------------------------------------------------------------------------
         responsive: true,
         maintainAspectRatio: false,
         spanGaps: true,
@@ -424,15 +420,16 @@ var indicatorView = function (model, options) {
             return text.join('');
         },
 
-        function(chart) {
-          var showLine= true;
-          _.each(chart.data.datasets, function(dataset, datasetIndex) {
-            if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
-              showline = false;
-            }
-          });
-          return ("showLines:" showline);
-        },
+
+        //showLines: function(chart) {
+          //var showLine= false;
+          //_.each(chart.data.datasets, function(dataset, datasetIndex) {
+            //if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
+              //showline = false;
+            //}
+          //});
+          //return showline;
+        true},
 
 
         legend: {
