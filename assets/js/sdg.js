@@ -1991,7 +1991,7 @@ var indicatorView = function (model, options) {
         },
 
         showLines: function(chart) {
-          var showLine= true;
+          var showLine= false;
           _.each(chart.data.datasets, function(dataset, datasetIndex) {
             if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
               showline = false;
