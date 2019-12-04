@@ -44,9 +44,12 @@
               </li>
             {% endunless %}
           {%- endfor -%}
+          <li class="nav-link {% if current_path_no_slash == item_path_no_slash %}active{% endif %} hidden-md hidden-lg">
+            <a href="https://fontawesome.com/v4.7.0/icons/">XXX</a>
+          </li>
         {%- endif -%}
 
-        <li class="nav-link">
+        <li class="nav-link hidden-sm hidden-md hidden-lg">
           <a class="status-toggle-button" onclick="$(this).next('.status-toggle').toggle(); return false;">
             <!--<i class="fa fa-globe"></i>-->
             <span class="status-toggle-text">{{ t.menu.status_title }}</span>
