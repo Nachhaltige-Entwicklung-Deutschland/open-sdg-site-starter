@@ -423,6 +423,18 @@ var indicatorView = function (model, options) {
             text.push('</ul>');
             return text.join('');
         },
+
+        showLines: function(chart) {
+          var showLine= true;
+          _.each(chart.data.datasets, function(dataset, datasetIndex) {
+            if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
+              showline = false;
+            }
+          });
+          return showline;
+        },
+
+
         legend: {
           display: false,
         },
