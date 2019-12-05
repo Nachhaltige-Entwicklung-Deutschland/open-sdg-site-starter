@@ -2033,7 +2033,7 @@ var indicatorView = function (model, options) {
 
 
     this._chartInstance = new Chart($(this._rootElement).find('canvas'), chartConfig);
-    this._chartInstance.defaults.line.showLines = false;
+    Chart.defaults.line.showLines = false;
     Chart.pluginService.register({
       afterDraw: function(chart) {
         var $canvas = $(that._rootElement).find('canvas'),
