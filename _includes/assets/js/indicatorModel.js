@@ -455,7 +455,7 @@ var indicatorModel = function (options) {
           return false;
         }
         else {
-          return true;
+          return false;
         }
       },
       //----------------------------------------------------------------------------------------------------------------------
