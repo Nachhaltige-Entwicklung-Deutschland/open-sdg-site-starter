@@ -479,10 +479,10 @@ var indicatorModel = function (options) {
       //----------------------------------------------------------------------------------------------------------------------
       getOrder = function(combinationDescription, datasetIndex){
         if (getChartStyle(combinationDescription) == 'bar') {
-          return 1;
+          return 2;
         }
         else {
-          return 2;
+          return 1;
         }
 
       },
