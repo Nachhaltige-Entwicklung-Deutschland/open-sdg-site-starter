@@ -1235,7 +1235,7 @@ var indicatorDataStore = function(dataUrl) {
       },
 
       getChartStyle = function (combinationDescription) {
-        if (String(combinationDescription).substr(0,27) == 'Zeitreihe, 0- bis 2-Jährige'){
+        if (String(combinationDescription) == 'Zeitreihe, Berechnete jährliche Werte'){
           return 'bar';
         }
         else {
