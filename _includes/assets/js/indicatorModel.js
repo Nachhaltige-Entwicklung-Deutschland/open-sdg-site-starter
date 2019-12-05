@@ -479,7 +479,7 @@ var indicatorModel = function (options) {
       //----------------------------------------------------------------------------------------------------------------------
       getOrder = function(combinationDescription, datasetIndex){
         if (barCharts.includes(String(combinationDescription))) {
-          return datasetIndex+1;
+          return 2;
         }
         else {
           return 1;
