@@ -1243,7 +1243,9 @@ var indicatorDataStore = function(dataUrl) {
                   translations.t('b) target (max)')+", "+translations.t('air pollutants overall'),
                   translations.t('a) time series')+", "+translations.t('funding balance (share of gross domestic product (at current prices) in %)'),
                   translations.t('a) time series')+", "+translations.t('structural funding balance (share of gross domestic product (at current prices) in %)'),
-                  ]
+                  translations.t('a) time series')+", "+translations.t('proportion of msy examined in all managed stocks'),
+                  translations.t('a) time series')+", "+translations.t('index overall'),
+                  translations.t('b) target (min)')+", "+translations.t('index overall')]
       getChartStyle = function (combinationDescription) {
         if (barCharts.includes(String(combinationDescription))) {
           return 'bar';
@@ -1255,10 +1257,10 @@ var indicatorDataStore = function(dataUrl) {
       //----------------------------------------------------------------------------------------------------------------------
       getOrder = function(combinationDescription, datasetIndex){
         if (barCharts.includes(String(combinationDescription))) {
-          return 1;
+          return datasetIndex+1;
         }
         else {
-          return datasetIndex+1;
+          return 1;
         }
 
       },
