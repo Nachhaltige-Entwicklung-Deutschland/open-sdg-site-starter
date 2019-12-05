@@ -350,7 +350,7 @@ var indicatorView = function (model, options) {
       //if (chartInfo.datasets[set].label.substr(0,4)=='Ziel'){
         //cartInfo.datasets[set].push("showLines: false")
       //}
-      console.log (set, chartInfo.datasets);
+      console.log (set, translations.t('a) time series')+", "+translations.t('calculated annual values'));
     };
     //----------------------------------------------------------------------------------------------------------------
 
