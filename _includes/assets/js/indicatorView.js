@@ -346,7 +346,7 @@ var indicatorView = function (model, options) {
   this.updatePlot = function(chartInfo) {
     view_obj._chartInstance.data.datasets = chartInfo.datasets;
     for (var set = 0; set<chartInfo.datasets.length; set++){
-      console.log (set);
+      console.log (set, chartInfo.datasets);
     };
 
     if(chartInfo.selectedUnit) {
