@@ -455,7 +455,7 @@ var indicatorModel = function (options) {
           return false;
         }
         else {
-          return false;
+          return true;
         }
       },
       //----------------------------------------------------------------------------------------------------------------------
@@ -477,7 +477,7 @@ var indicatorModel = function (options) {
         //--------------------
 
         var categ = combinationDescription.substring(0, 4)
-        if (categ == 'Ziel' || categ == 'Zeit') {
+        if (categ == 'Ziel' || categ == 'Zeit' || categ == 'Targ' || categ == 'Time') {
           if (combinationDescription.indexOf(',') != -1){
             if (!nameList.includes(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length))) {
               // Ziel oder Zeitreihe - Mit Disaggregationen - Pendant ist noch nicht aufgerufen worden
