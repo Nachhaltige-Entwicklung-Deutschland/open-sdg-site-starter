@@ -1238,7 +1238,9 @@ var indicatorDataStore = function(dataUrl) {
       },
       //---------------------------------------------------------------------------------------------------------------------------------------------------------------
       //--Mixed charts -----------------------------------------------------------------------------------------------------------------------------------------------
-      barCharts = [translations.t('a) time series')+", "+translations.t('calculated annual values')]
+      barCharts = [translations.t('a) time series')+", "+translations.t('calculated annual values'),
+                    translations.t('a) time series')+", "+translations.t('air pollutants overall'),
+                    translations.t('b) target (max)')+", "+translations.t('air pollutants overall')]
       getChartStyle = function (combinationDescription) {
         if (barCharts.includes(String(combinationDescription))) {
           return 'bar';
