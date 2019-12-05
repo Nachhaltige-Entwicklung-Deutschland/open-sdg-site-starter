@@ -452,7 +452,7 @@ var indicatorModel = function (options) {
       //---------------------------------------------------------------------------------------------------------------------
       getLineStyle = function (combinationDescription) {
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
-          return false;
+          return true;
         }
         else{
           return true;

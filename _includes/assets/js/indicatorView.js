@@ -344,6 +344,11 @@ var indicatorView = function (model, options) {
   };
 
   this.updatePlot = function(chartInfo) {
+    // No Line for Targets--------------------------------------------------------------------------------------------
+
+    console.log (set, chartInfo.datasets);
+
+    //----------------------------------------------------------------------------------------------------------------
 
     view_obj._chartInstance.data.datasets = chartInfo.datasets;
 
