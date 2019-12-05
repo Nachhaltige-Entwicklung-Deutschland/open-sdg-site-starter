@@ -452,7 +452,7 @@ var indicatorModel = function (options) {
       //---------------------------------------------------------------------------------------------------------------------
       getLineStyle = function (combinationDescription, datasetIndexMod) {
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
-          return rgba(0, 0, 0, 0.0);
+          return 'rgba(0, 0, 0, 0.0)';
         }
         else{
           return '#' + getColor(datasetIndexMod);
