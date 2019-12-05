@@ -1255,15 +1255,6 @@ var indicatorDataStore = function(dataUrl) {
         }
       },
       //----------------------------------------------------------------------------------------------------------------------
-      getOrder = function(combinationDescription, datasetIndex){
-        if (getChartStyle(combinationDescription) == 'bar') {
-          return 2;
-        }
-        else {
-          return 1;
-        }
-
-      },
 
       getBorderDash = function(datasetIndex) {
         // offset if there is no headline data:
@@ -1328,11 +1319,9 @@ var indicatorDataStore = function(dataUrl) {
               return found ? found.Value : null;
             }),
             type: getChartStyle(combinationDescription),
-            order: getOrder(combinationDescription, datasetIndex),
             borderWidth: combinationDescription ? 2 : 4
           }, that.datasetObject);
         //----------------------------------
-
 
         datasetIndex++;
         return ds;
