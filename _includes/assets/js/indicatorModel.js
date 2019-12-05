@@ -461,7 +461,7 @@ var indicatorModel = function (options) {
       //---------------------------------------------------------------------------------------------------------------------------------------------------------------
       //--Mixed charts -----------------------------------------------------------------------------------------------------------------------------------------------
       getChartStyle = function (combinationDescription) {
-        if (String(combinationDescription) == translations.t('a) time series,calculated annual values')) {
+        if (String(combinationDescription) == translations.t('a) time series')+","+translations.t('calculated annual values')) {
           return 'bar';
         }
         else {
