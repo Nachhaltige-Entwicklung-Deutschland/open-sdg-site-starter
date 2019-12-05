@@ -1300,7 +1300,7 @@ var indicatorDataStore = function(dataUrl) {
               });
               return found ? found.Value : null;
             }),
-            type: 'line',
+            type: 'bar',
             borderWidth: combinationDescription ? 2 : 4
           }, that.datasetObject);
         //----------------------------------
