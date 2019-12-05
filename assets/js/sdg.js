@@ -1239,7 +1239,7 @@ var indicatorDataStore = function(dataUrl) {
       //---------------------------------------------------------------------------------------------------------------------------------------------------------------
       //--Mixed charts -----------------------------------------------------------------------------------------------------------------------------------------------
       getChartStyle = function (combinationDescription) {
-        if (String(combinationDescription) == translations.t('a) time series')+","+translations.t('calculated annual values')) {
+        if (String(combinationDescription) == translations.t('a) time series')+", "+translations.t('calculated annual values')) {
           return 'bar';
         }
         else {
@@ -1935,7 +1935,7 @@ var indicatorView = function (model, options) {
       //if (chartInfo.datasets[set].label.substr(0,4)=='Ziel'){
         //cartInfo.datasets[set].push("showLines: false")
       //}
-      console.log (set, chartInfo.datasets);
+      console.log (set, translations.t('a) time series')+", "+translations.t('calculated annual values'));
     };
     //----------------------------------------------------------------------------------------------------------------
 
