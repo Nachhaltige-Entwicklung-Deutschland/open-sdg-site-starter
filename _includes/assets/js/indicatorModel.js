@@ -450,12 +450,12 @@ var indicatorModel = function (options) {
         }
       },
       //---------------------------------------------------------------------------------------------------------------------
-      getLineStyle = function (combinationDescription) {
+      getLineStyle = function (combinationDescription, datasetIndexMod) {
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
-          return true;
+          return ;
         }
         else{
-          return false;
+          return '#' + getColor(datasetIndexMod);
         }
       },
 
@@ -519,9 +519,9 @@ var indicatorModel = function (options) {
 
             label: combinationDescription ? combinationDescription : that.country,
             borderColor: '#' + getColor(datasetIndexMod),
-            backgroundColor: '#' + getColor(datasetIndexMod),
+            backgroundColor: getLineStyle(combinationDescription, datasetIndexMod),
             pointStyle: getPointStyle(combinationDescription),
-            showLine: getLineStyle(combinationDescription),//-------------------------------------------------------
+            //showLine: getLineStyle(combinationDescription),//-------------------------------------------------------
             radius: 6,
             pointBorderColor: '#' + getColor(datasetIndexMod),
             borderDash: getBorderDash(datasetIndex),
