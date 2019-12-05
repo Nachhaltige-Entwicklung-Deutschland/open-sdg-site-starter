@@ -1256,11 +1256,11 @@ var indicatorDataStore = function(dataUrl) {
       },
       //----------------------------------------------------------------------------------------------------------------------
       getOrder = function(combinationDescription, datasetIndex){
-        if (barCharts.includes(String(combinationDescription))) {
-          return 2;
+        if (getChartStyle(combinationDescription) == 'bar') {
+          return 1;
         }
         else {
-          return 1;
+          return 2;
         }
 
       },
