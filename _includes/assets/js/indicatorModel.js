@@ -459,7 +459,7 @@ var indicatorModel = function (options) {
         }
       },
 
-      getLineStyle = function (combinationDescription) {
+      getChartStyle = function (combinationDescription) {
         if (String(combinationDescription).substr(0,27) == 'Zeitreihe, 0- bis 2-Jährige'){
           return 'bar';
         }
@@ -531,7 +531,7 @@ var indicatorModel = function (options) {
               });
               return found ? found.Value : null;
             }),
-            type: that.graphType,
+            type: getChartStyle(combinationDescription),
             borderWidth: combinationDescription ? 2 : 4
           }, that.datasetObject);
         //----------------------------------
