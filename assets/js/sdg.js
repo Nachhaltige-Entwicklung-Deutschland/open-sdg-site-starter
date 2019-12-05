@@ -1248,6 +1248,16 @@ var indicatorDataStore = function(dataUrl) {
         }
       },
       //----------------------------------------------------------------------------------------------------------------------
+      gerOrder = function(combinationDescription, datasetIndex){
+        if (barCharts.includes(String(combinationDescription))) {
+          return 0;
+        }
+        else {
+          return datasetIndex;
+        }
+
+      },
+
       getBorderDash = function(datasetIndex) {
         // offset if there is no headline data:
         if(!this.hasHeadline) {
@@ -1311,6 +1321,7 @@ var indicatorDataStore = function(dataUrl) {
               return found ? found.Value : null;
             }),
             type: getChartStyle(combinationDescription),
+            order: getOrder(combinationDescription, datasetIndex),
             borderWidth: combinationDescription ? 2 : 4
           }, that.datasetObject);
         //----------------------------------
