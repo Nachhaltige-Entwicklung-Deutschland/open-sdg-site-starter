@@ -345,6 +345,7 @@ var indicatorView = function (model, options) {
 
   this.updatePlot = function(chartInfo) {
     view_obj._chartInstance.data.datasets = chartInfo.datasets;
+    console.log (chartInfo);
 
     if(chartInfo.selectedUnit) {
       view_obj._chartInstance.options.scales.yAxes[0].scaleLabel.labelString = translations.t(chartInfo.selectedUnit);
@@ -369,6 +370,7 @@ var indicatorView = function (model, options) {
 
 
   this.createPlot = function (chartInfo) {
+    //for set in chartInfo.datasets
     console.log (chartInfo);
     var that = this;
     var chartConfig = {
@@ -420,18 +422,6 @@ var indicatorView = function (model, options) {
             text.push('</ul>');
             return text.join('');
         },
-
-
-        //showLines: function(chart) {
-          //var showLine= false;
-          //_.each(chart.data.datasets, function(dataset, datasetIndex) {
-            //if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
-              //showline = false;
-            //}
-          //});
-          //return showline;
-        //true},
-
 
         legend: {
           display: false,
