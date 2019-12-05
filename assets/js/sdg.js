@@ -1227,7 +1227,7 @@ var indicatorDataStore = function(dataUrl) {
           return 'circle';
         }
       },
-      //---------------------------------------------------------------------------------------------------------------------
+      //-Since showLines does not work we set the opacity to 0.0 if it is a target--------------------------------------------------------------------------------------------------
       getLineStyle = function (combinationDescription, datasetIndexMod) {
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
           return 'rgba(0, 0, 0, 0.0)';
@@ -1236,9 +1236,10 @@ var indicatorDataStore = function(dataUrl) {
           return '#' + getColor(datasetIndexMod);
         }
       },
-
+      //---------------------------------------------------------------------------------------------------------------------------------------------------------------
+      //--Mixed charts -----------------------------------------------------------------------------------------------------------------------------------------------
       getChartStyle = function (combinationDescription) {
-        if (String(combinationDescription) == 'Zeitreihe, Berechnete jährliche Werte'){
+        if (String(combinationDescription) == translations.t('a) time series,calculated annual values')) {
           return 'bar';
         }
         else {
@@ -1299,7 +1300,6 @@ var indicatorDataStore = function(dataUrl) {
             borderColor: getLineStyle(combinationDescription, datasetIndexMod),
             backgroundColor: '#' + getColor(datasetIndexMod),
             pointStyle: getPointStyle(combinationDescription),
-            //showLine: getLineStyle(combinationDescription),//-------------------------------------------------------
             radius: 6,
             pointBorderColor: '#' + getColor(datasetIndexMod),
             borderDash: getBorderDash(datasetIndex),
