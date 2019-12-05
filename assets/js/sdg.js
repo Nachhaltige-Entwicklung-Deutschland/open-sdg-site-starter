@@ -1935,7 +1935,7 @@ var indicatorView = function (model, options) {
 
 
   this.createPlot = function (chartInfo) {
-    console.log (chartInfo);
+    console.log (chartInfo.datasets);
     var that = this;
     var chartConfig = {
       type: this._model.graphType,
