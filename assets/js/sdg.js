@@ -1230,7 +1230,7 @@ var indicatorDataStore = function(dataUrl) {
       //---------------------------------------------------------------------------------------------------------------------
       getLineStyle = function (combinationDescription) {
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
-          return false;
+          return true;
         }
         else{
           return true;
@@ -1929,6 +1929,11 @@ var indicatorView = function (model, options) {
   };
 
   this.updatePlot = function(chartInfo) {
+    // No Line for Targets--------------------------------------------------------------------------------------------
+
+    console.log (set, chartInfo.datasets);
+
+    //----------------------------------------------------------------------------------------------------------------
 
     view_obj._chartInstance.data.datasets = chartInfo.datasets;
 
