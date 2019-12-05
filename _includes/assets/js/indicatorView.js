@@ -347,11 +347,12 @@ var indicatorView = function (model, options) {
     // No Line for Targets--------------------------------------------------------------------------------------------
     for (var set = 0; set<chartInfo.datasets.length; set++){
 
-      if (chartInfo.datasets[set].label.subst(0,4)=='Ziel'){
+      if (chartInfo.datasets[set].label.substr(0,4)=='Ziel'){
         cartInfo.datasets[set].push("showLines: false")
       }
       console.log (set, chartInfo.datasets);
     };
+    //----------------------------------------------------------------------------------------------------------------
 
     view_obj._chartInstance.data.datasets = chartInfo.datasets;
 
