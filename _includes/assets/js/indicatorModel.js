@@ -460,8 +460,9 @@ var indicatorModel = function (options) {
       },
       //---------------------------------------------------------------------------------------------------------------------------------------------------------------
       //--Mixed charts -----------------------------------------------------------------------------------------------------------------------------------------------
+      barCharts = [translations.t('a) time series')+", "+translations.t('calculated annual values')]
       getChartStyle = function (combinationDescription) {
-        if (String(combinationDescription) == translations.t('a) time series')+", "+translations.t('calculated annual values')) {
+        if (barCharts.includes(String(combinationDescription))) {
           return 'bar';
         }
         else {

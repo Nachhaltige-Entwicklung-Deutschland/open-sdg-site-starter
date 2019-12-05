@@ -344,16 +344,7 @@ var indicatorView = function (model, options) {
   };
 
   this.updatePlot = function(chartInfo) {
-    // No Line for Targets--------------------------------------------------------------------------------------------
-    for (var set = 0; set<chartInfo.datasets.length; set++){
-
-      //if (chartInfo.datasets[set].label.substr(0,4)=='Ziel'){
-        //cartInfo.datasets[set].push("showLines: false")
-      //}
-      console.log (set, translations.t('a) time series')+", "+translations.t('calculated annual values'));
-    };
-    //----------------------------------------------------------------------------------------------------------------
-
+    
     view_obj._chartInstance.data.datasets = chartInfo.datasets;
 
 
