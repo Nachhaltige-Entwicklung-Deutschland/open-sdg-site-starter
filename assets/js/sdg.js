@@ -1228,12 +1228,12 @@ var indicatorDataStore = function(dataUrl) {
         }
       },
       //---------------------------------------------------------------------------------------------------------------------
-      getLineStyle = function (combinationDescription) {
+      getLineStyle = function (combinationDescription, datasetIndexMod) {
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
-          return true;
+          return ;
         }
         else{
-          return false;
+          return '#' + getColor(datasetIndexMod);
         }
       },
 
@@ -1297,9 +1297,9 @@ var indicatorDataStore = function(dataUrl) {
 
             label: combinationDescription ? combinationDescription : that.country,
             borderColor: '#' + getColor(datasetIndexMod),
-            backgroundColor: '#' + getColor(datasetIndexMod),
+            backgroundColor: getLineStyle(combinationDescription, datasetIndexMod),
             pointStyle: getPointStyle(combinationDescription),
-            showLine: getLineStyle(combinationDescription),//-------------------------------------------------------
+            //showLine: getLineStyle(combinationDescription),//-------------------------------------------------------
             radius: 6,
             pointBorderColor: '#' + getColor(datasetIndexMod),
             borderDash: getBorderDash(datasetIndex),
@@ -2033,7 +2033,6 @@ var indicatorView = function (model, options) {
 
 
     this._chartInstance = new Chart($(this._rootElement).find('canvas'), chartConfig);
-    Chart.defaults.line.showLines = false;
     Chart.pluginService.register({
       afterDraw: function(chart) {
         var $canvas = $(that._rootElement).find('canvas'),
