@@ -449,7 +449,16 @@ var indicatorModel = function (options) {
           return 'circle';
         }
       },
-
+      //---------------------------------------------------------------------------------------------------------------------
+      getLineStyle = function (combinationDescription) {
+        if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
+          return false;
+        }
+        else {
+          return true;
+        }
+      },
+      //----------------------------------------------------------------------------------------------------------------------
       getBorderDash = function(datasetIndex) {
         // offset if there is no headline data:
         if(!this.hasHeadline) {
@@ -503,6 +512,7 @@ var indicatorModel = function (options) {
             borderColor: '#' + getColor(datasetIndexMod),
             backgroundColor: '#' + getColor(datasetIndexMod),
             pointStyle: getPointStyle(combinationDescription),
+            showLines: getLineStyle(combinationDescription),//-------------------------------------------------------
             radius: 6,
             pointBorderColor: '#' + getColor(datasetIndexMod),
             borderDash: getBorderDash(datasetIndex),
