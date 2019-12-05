@@ -522,7 +522,7 @@ var indicatorModel = function (options) {
               });
               return found ? found.Value : null;
             }),
-            type: this.graphType,
+            type: that.graphType,
             borderWidth: combinationDescription ? 2 : 4
           }, that.datasetObject);
         //----------------------------------
