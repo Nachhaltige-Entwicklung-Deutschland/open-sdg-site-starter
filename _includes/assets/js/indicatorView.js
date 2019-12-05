@@ -344,10 +344,17 @@ var indicatorView = function (model, options) {
   };
 
   this.updatePlot = function(chartInfo) {
-    view_obj._chartInstance.data.datasets = chartInfo.datasets;
+    // No Line for Targets--------------------------------------------------------------------------------------------
     for (var set = 0; set<chartInfo.datasets.length; set++){
       console.log (set, chartInfo.datasets[set].label);
+      if (chartInfo.datasets[set].label){
+        cartInfo.datasets[set].push(showLines: false)
+      }
     };
+
+    view_obj._chartInstance.data.datasets = chartInfo.datasets;
+
+
 
     if(chartInfo.selectedUnit) {
       view_obj._chartInstance.options.scales.yAxes[0].scaleLabel.labelString = translations.t(chartInfo.selectedUnit);
@@ -381,7 +388,6 @@ var indicatorView = function (model, options) {
     var chartConfig = {
       type: this._model.graphType,
       data: chartInfo,
-        showLines: false,
       options: {
         responsive: true,
         maintainAspectRatio: false,
