@@ -374,6 +374,7 @@ var indicatorView = function (model, options) {
     var chartConfig = {
       type: this._model.graphType,
       data: chartInfo,
+        showLines: false,
       options: {
         responsive: true,
         maintainAspectRatio: false,
