@@ -1233,7 +1233,7 @@ var indicatorDataStore = function(dataUrl) {
           return true;
         }
         else{
-          return true;
+          return false;
         }
       },
 
