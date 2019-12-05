@@ -429,7 +429,7 @@ var indicatorView = function (model, options) {
             //}
           //});
           //return showline;
-        true},
+        //true},
 
 
         legend: {
