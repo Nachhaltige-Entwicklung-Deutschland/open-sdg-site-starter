@@ -1227,7 +1227,16 @@ var indicatorDataStore = function(dataUrl) {
           return 'circle';
         }
       },
-
+      //---------------------------------------------------------------------------------------------------------------------
+      getLineStyle = function (combinationDescription) {
+        if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
+          return false;
+        }
+        else {
+          return true;
+        }
+      },
+      //----------------------------------------------------------------------------------------------------------------------
       getBorderDash = function(datasetIndex) {
         // offset if there is no headline data:
         if(!this.hasHeadline) {
@@ -1281,6 +1290,7 @@ var indicatorDataStore = function(dataUrl) {
             borderColor: '#' + getColor(datasetIndexMod),
             backgroundColor: '#' + getColor(datasetIndexMod),
             pointStyle: getPointStyle(combinationDescription),
+            showLines: getLineStyle(combinationDescription),//-------------------------------------------------------
             radius: 6,
             pointBorderColor: '#' + getColor(datasetIndexMod),
             borderDash: getBorderDash(datasetIndex),
@@ -1913,9 +1923,9 @@ var indicatorView = function (model, options) {
     // No Line for Targets--------------------------------------------------------------------------------------------
     for (var set = 0; set<chartInfo.datasets.length; set++){
 
-      if (chartInfo.datasets[set].label.substr(0,4)=='Ziel'){
-        cartInfo.datasets[set].push("showLines: false")
-      }
+      //if (chartInfo.datasets[set].label.substr(0,4)=='Ziel'){
+        //cartInfo.datasets[set].push("showLines: false")
+      //}
       console.log (set, chartInfo.datasets);
     };
     //----------------------------------------------------------------------------------------------------------------
