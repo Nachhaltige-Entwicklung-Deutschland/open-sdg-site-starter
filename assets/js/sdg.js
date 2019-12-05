@@ -1232,9 +1232,6 @@ var indicatorDataStore = function(dataUrl) {
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
           return false;
         }
-        else {
-          return true;
-        }
       },
 
       getChartStyle = function (combinationDescription) {
