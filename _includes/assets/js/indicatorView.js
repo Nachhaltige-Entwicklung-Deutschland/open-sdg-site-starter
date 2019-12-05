@@ -374,7 +374,7 @@ var indicatorView = function (model, options) {
   this.createPlot = function (chartInfo) {
 
     for (var set = 0; set<chartInfo.datasets.length; set++){
-      console.log (chartInfo.datasets[set].label);
+      console.log ("X-",set);
     };
     //console.log (chartInfo);
     var that = this;
