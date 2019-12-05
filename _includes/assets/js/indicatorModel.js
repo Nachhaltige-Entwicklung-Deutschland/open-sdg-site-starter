@@ -512,7 +512,7 @@ var indicatorModel = function (options) {
             borderColor: '#' + getColor(datasetIndexMod),
             backgroundColor: '#' + getColor(datasetIndexMod),
             pointStyle: getPointStyle(combinationDescription),
-            showLines: getLineStyle(combinationDescription),//-------------------------------------------------------
+            showLine: getLineStyle(combinationDescription),//-------------------------------------------------------
             radius: 6,
             pointBorderColor: '#' + getColor(datasetIndexMod),
             borderDash: getBorderDash(datasetIndex),
