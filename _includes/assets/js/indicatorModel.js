@@ -452,10 +452,19 @@ var indicatorModel = function (options) {
       //---------------------------------------------------------------------------------------------------------------------
       getLineStyle = function (combinationDescription) {
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
-          return true;
+          return false;
         }
         else {
-          return false;
+          return true;
+        }
+      },
+
+      getLineStyle = function (combinationDescription) {
+        if (String(combinationDescription).substr(0,27) == 'Zeitreihe, 0- bis 2-Jährige'){
+          return 'bar';
+        }
+        else {
+          return 'line';
         }
       },
       //----------------------------------------------------------------------------------------------------------------------
