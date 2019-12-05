@@ -1912,10 +1912,11 @@ var indicatorView = function (model, options) {
   this.updatePlot = function(chartInfo) {
     // No Line for Targets--------------------------------------------------------------------------------------------
     for (var set = 0; set<chartInfo.datasets.length; set++){
-      console.log (set, chartInfo.datasets[set].label);
+
       if (chartInfo.datasets[set].label.subst(0,4)=='Ziel'){
-        cartInfo.datasets[set].push(showLines: false)
+        cartInfo.datasets[set].push("showLines: false")
       }
+      console.log (set, chartInfo.datasets);
     };
 
     view_obj._chartInstance.data.datasets = chartInfo.datasets;
@@ -1946,9 +1947,6 @@ var indicatorView = function (model, options) {
 
   this.createPlot = function (chartInfo) {
 
-    for (var set = 0; set<chartInfo.datasets.length; set++){
-      console.log ("X-",set);
-    };
     //console.log (chartInfo);
     var that = this;
     var chartConfig = {
