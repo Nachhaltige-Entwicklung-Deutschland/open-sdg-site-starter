@@ -1250,7 +1250,7 @@ var indicatorDataStore = function(dataUrl) {
         }
       },
       //----------------------------------------------------------------------------------------------------------------------
-      gerOrder = function(combinationDescription, datasetIndex){
+      getOrder = function(combinationDescription, datasetIndex){
         if (barCharts.includes(String(combinationDescription))) {
           return 0;
         }
