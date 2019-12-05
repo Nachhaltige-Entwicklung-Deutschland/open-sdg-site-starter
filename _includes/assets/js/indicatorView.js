@@ -345,7 +345,7 @@ var indicatorView = function (model, options) {
 
   this.updatePlot = function(chartInfo) {
     view_obj._chartInstance.data.datasets = chartInfo.datasets;
-    console.log (chartInfo);
+    console.log (chartInfo.datasets[0].label);
 
     if(chartInfo.selectedUnit) {
       view_obj._chartInstance.options.scales.yAxes[0].scaleLabel.labelString = translations.t(chartInfo.selectedUnit);
@@ -372,7 +372,7 @@ var indicatorView = function (model, options) {
   this.createPlot = function (chartInfo) {
 
     for (var set = 0; set<chartInfo.datasets.length; set++){
-      console.log (chartInfo.datasets[set].label)
+      console.log (chartInfo.datasets[set].label);
     };
     //console.log (chartInfo);
     var that = this;
