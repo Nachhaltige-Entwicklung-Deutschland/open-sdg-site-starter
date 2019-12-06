@@ -288,6 +288,20 @@
       // Add scale.
       this.map.addControl(L.control.scale({position: 'bottomright'}));
 
+
+      // mapbox logo.
+      var logo = L.control({position: 'bottomleft'});
+      logo.onAdd = function(map){
+        var div = L.DomUtil.create('div', 'myclass');
+        div.innerHTML = "<img src='https://g205sdgs.github.io/sdg-indicators/public/mapbox-logo-white.png'/>";
+        return div;
+      }
+      logo.addTo(map);
+
+
+
+
+
       // Add tile imagery.
       L.tileLayer(this.options.tileURL, this.options.tileOptions).addTo(this.map);
 
@@ -342,7 +356,7 @@
           plugin.startExp = $('input[name="disagg"]:checked').val();
 
           //alert('You clicked radio!');
-          
+
           //reload the map with different startExp
           plugin.map.remove();
           plugin.init();
