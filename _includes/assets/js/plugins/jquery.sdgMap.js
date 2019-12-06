@@ -289,19 +289,6 @@
       this.map.addControl(L.control.scale({position: 'bottomright'}));
 
 
-      // mapbox logo.
-      var logo = L.control({position: 'bottomleft'});
-      logo.onAdd = function (map) {
-        var div = L.DomUtil.create('div', 'logo');
-        div.innerHTML = '<a href:"https://mapbox.com"> <img src="https://g205sdgs.github.io/sdg-indicators/public/mapbox-logo-white.png"/> </a>'
-        return div;
-      };
-      logo.addTo(this.map);
-
-
-
-
-
       // Add tile imagery.
       L.tileLayer(this.options.tileURL, this.options.tileOptions).addTo(this.map);
 
@@ -374,6 +361,15 @@
 
         }
       }));
+
+      // mapbox logo.
+      var logo = L.control({position: 'bottomleft'});
+      logo.onAdd = function (map) {
+        var div = L.DomUtil.create('div', 'logo');
+        div.innerHTML = '<a href:"https://mapbox.com"> <img src="https://g205sdgs.github.io/sdg-indicators/public/mapbox-logo-white.png"/> </a>'
+        return div;
+      };
+      logo.addTo(this.map);
 
       // Add the selection legend.
       this.selectionLegend = L.Control.selectionLegend(plugin);
