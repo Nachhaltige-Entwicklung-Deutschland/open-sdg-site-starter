@@ -73,6 +73,7 @@ header {
 #legend {
   padding-left: 0;
   text-align: left;
+  margin-left: 0;
   margin-top: -32px; }
   #legend li {
     font-size: 13px;
