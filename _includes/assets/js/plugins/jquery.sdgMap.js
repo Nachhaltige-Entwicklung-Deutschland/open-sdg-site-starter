@@ -291,9 +291,9 @@
 
       // mapbox logo.
       var logo = L.control({position: 'bottomleft'});
-      command.onAdd = function (map) {
+      logo.onAdd = function (map) {
         var div = L.DomUtil.create('div', 'logo');
-        div.innerHTML = '<a href:"https://www.mapbox.com"> <img src="https://g205sdgs.github.io/sdg-indicators/public/mapbox-logo-white.png"/> </a>'
+        div.innerHTML = '<a href:"https://mapbox.com"> <img src="https://g205sdgs.github.io/sdg-indicators/public/mapbox-logo-white.png"/> </a>'
         return div;
       };
       logo.addTo(this.map);
