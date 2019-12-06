@@ -291,12 +291,12 @@
 
       // mapbox logo.
       var logo = L.control({position: 'bottomleft'});
-      logo.onAdd = function(map){
-        var div = L.DomUtil.create('div', 'myclass');
-        div.innerHTML = "<img src='https://g205sdgs.github.io/sdg-indicators/public/mapbox-logo-white.png'/>";
+      command.onAdd = function (map) {
+        var div = L.DomUtil.create('div', 'logo');
+        div.innerHTML = '<a href:"https://www.mapbox.com"> <img src="https://g205sdgs.github.io/sdg-indicators/public/mapbox-logo-white.png"/> </a>'
         return div;
-      }
-      logo.addTo(map);
+      };
+      logo.addTo(this.map);
 
 
 
