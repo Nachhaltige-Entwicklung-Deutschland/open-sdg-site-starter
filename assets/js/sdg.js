@@ -393,7 +393,7 @@ opensdg.autotrack = function(preset, category, action, label) {
         }
       }));
 
-      // mapbox logo.
+      // mapbox logo-------------------------------------------------------------------
       var logo = L.control({position: 'bottomleft'});
       logo.onAdd = function (map) {
         var div = L.DomUtil.create('div', 'logo');
@@ -401,6 +401,7 @@ opensdg.autotrack = function(preset, category, action, label) {
         return div;
       };
       logo.addTo(this.map);
+      //----------------------------------------------------------------------
 
       // Add the selection legend.
       this.selectionLegend = L.Control.selectionLegend(plugin);
@@ -475,7 +476,7 @@ opensdg.autotrack = function(preset, category, action, label) {
         //-------------------------------------------------------------------
         //A reload due to Radio-button change creates a second search-Button.
         //Therefor we need to ask if it is the first load here:
-        if (plugin.reloadCounter == 0){
+        //if (plugin.reloadCounter == 0){
           //----------------------------------------------------------------
           plugin.searchControl = new L.Control.Search({
             layer: plugin.getAllLayers(),
@@ -490,9 +491,9 @@ opensdg.autotrack = function(preset, category, action, label) {
             },
             autoCollapse: true,
           });
+          plugin.map.addControl(plugin.searchControl);
+        //}//---------------------------------
 
-        }//---------------------------------
-        plugin.map.addControl(plugin.searchControl);
         // The search plugin messes up zoomShowHide, so we have to reset that
         // with this hacky method. Is there a better way?
         var zoom = plugin.map.getZoom();
