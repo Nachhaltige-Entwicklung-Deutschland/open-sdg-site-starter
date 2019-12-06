@@ -440,7 +440,7 @@ var indicatorModel = function (options) {
 
         return datasetIndex === 0 ? headlineColor : colors[datasetIndex];
       },
-
+      //------------------------------------------------------------------------------------------------------------------------
       getPointStyle = function (combinationDescription) {
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
           return 'rect';
@@ -449,6 +449,8 @@ var indicatorModel = function (options) {
           return 'circle';
         }
       },
+      //-------------------------------------------------------------------------------------------------------------------------
+
       //-Since showLines does not work we set the opacity to 0.0 if it is a target--------------------------------------------------------------------------------------------------
       getLineStyle = function (combinationDescription, datasetIndexMod) {
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
@@ -459,6 +461,7 @@ var indicatorModel = function (options) {
         }
       },
       //---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
       //--Mixed charts -----------------------------------------------------------------------------------------------------------------------------------------------
       barCharts = [translations.t('a) time series')+", "+translations.t('calculated annual values'),
                   translations.t('a) time series')+", "+translations.t('air pollutants overall'),
