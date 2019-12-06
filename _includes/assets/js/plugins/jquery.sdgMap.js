@@ -320,7 +320,7 @@
 
         //set var "expression" to the array(exp) value at position of checked button
         this.expression = exp[$('input[name="disagg"]:checked').val()];
-        //count up the reloadCounter to avoid multiple builds of the search buttnon
+        //count up the reloadCounter to avoid multiple builds of the search buttons
         this.reloadCounter ++;
         //adjust the values for the selectionLegend
         if (cat == 'sex'){
@@ -444,7 +444,7 @@
         //-------------------------------------------------------------------
         //A reload due to Radio-button change creates a second search-Button.
         //Therefor we need to ask if it is the first load here:
-        if (plugin.reloadCounter == 1){
+        if (plugin.reloadCounter == 0){
           //----------------------------------------------------------------
           plugin.searchControl = new L.Control.Search({
             layer: plugin.getAllLayers(),
