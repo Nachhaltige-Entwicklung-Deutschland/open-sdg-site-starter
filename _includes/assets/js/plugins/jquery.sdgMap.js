@@ -118,7 +118,7 @@
         var geocode = feature.properties[idProperty];
         var name = feature.properties[nameProperty];
 
-        //-----------------------------------------------------------------------
+        //----Legend with Disagg---------------------------------------
         // First add the time series data.
         //Normal version, if there is no Disaggregation-cathegory with more than one expression.
         if (cat == ''){
@@ -144,7 +144,7 @@
       return geoJson;
     },
 
-    //---------------------------
+    //---Legend with Disagg---------------
     //Find those disaggregation-categories that have more then one expression in all lines that have geoData
     findCat: function(){
       var categories = ['title','sex','age'];

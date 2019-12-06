@@ -52,9 +52,6 @@
       var div = L.DomUtil.create('div', 'selection-legend');
 
       //-----------------------------------------------------------------------
-
-
-
       var headline = this.plugin.title
       if (this.plugin.timeSeriesName){
         headline += ', <br>' + this.plugin.timeSeriesName;
@@ -72,8 +69,6 @@
         headline += ', <br>' + this.plugin.criminalOffenceName;
       }
       headline += ', <br>' + this.plugin.unitName;
-
-
       //-----------------------------------------------------------------------
 
       div.innerHTML = L.Util.template(controlTpl, {
