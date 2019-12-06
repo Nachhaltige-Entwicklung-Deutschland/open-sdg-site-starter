@@ -149,7 +149,7 @@ opensdg.autotrack = function(preset, category, action, label) {
         var geocode = feature.properties[idProperty];
         var name = feature.properties[nameProperty];
 
-        //-----------------------------------------------------------------------
+        //----Legend with Disagg---------------------------------------
         // First add the time series data.
         //Normal version, if there is no Disaggregation-cathegory with more than one expression.
         if (cat == ''){
@@ -175,7 +175,7 @@ opensdg.autotrack = function(preset, category, action, label) {
       return geoJson;
     },
 
-    //---------------------------
+    //---Legend with Disagg---------------
     //Find those disaggregation-categories that have more then one expression in all lines that have geoData
     findCat: function(){
       var categories = ['title','sex','age'];
@@ -1500,9 +1500,10 @@ var indicatorDataStore = function(dataUrl) {
         geoData: this.geoData,
         geoCodeRegEx: this.geoCodeRegEx,
         showMap: this.showMap,
-
+        //------------------------------------------------
         indicatorId: this.indicatorId,
         title: this.chartTitle,
+        //------------------------------------------------
       });
 
 
@@ -2671,9 +2672,6 @@ $(function() {
       var div = L.DomUtil.create('div', 'selection-legend');
 
       //-----------------------------------------------------------------------
-
-
-
       var headline = this.plugin.title
       if (this.plugin.timeSeriesName){
         headline += ', <br>' + this.plugin.timeSeriesName;
@@ -2691,8 +2689,6 @@ $(function() {
         headline += ', <br>' + this.plugin.criminalOffenceName;
       }
       headline += ', <br>' + this.plugin.unitName;
-
-
       //-----------------------------------------------------------------------
 
       div.innerHTML = L.Util.template(controlTpl, {
