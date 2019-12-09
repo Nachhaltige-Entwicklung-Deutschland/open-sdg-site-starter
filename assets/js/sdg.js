@@ -89,8 +89,12 @@ opensdg.autotrack = function(preset, category, action, label) {
     this.mapLayers = [];
     this.geoData = options.geoData;
     this.geoCodeRegEx = options.geoCodeRegEx;
+    //---#1 GoalDependendMapColor---start--------------------------------------
     this.goalNr = options.goal;
+    //---#1 GoalDependendMapColor---stop---------------------------------------
+    //---#2.1 caseNoTimeSeriesInCsv---start------------------------------------
     this.title = options.title;
+    //---#2.1 caseNoTimeSeriesInCsv---stop-------------------------------------
 
     // Require at least one geoLayer.
     if (!options.mapLayers.length) {
@@ -107,17 +111,28 @@ opensdg.autotrack = function(preset, category, action, label) {
     this._name = 'sdgMap';
 
     this.valueRange = [_.min(_.pluck(this.geoData, 'Value')), _.max(_.pluck(this.geoData, 'Value'))];
+    //---#1 GoalDependendMapColor---start--------------------------------------
+    //this.colorScale = chroma.scale()
     this.colorScale = chroma.scale(this.options.colorRange[this.goalNr])
+    //---#1 GoalDependendMapColor---stop---------------------------------------
       .domain(this.valueRange)
+      //---#1 GoalDependendMapColor---start--------------------------------------
+      //.classes(9);
       .classes(this.options.colorRange[this.goalNr].length);
+      //---#1 GoalDependendMapColor---stop-------------------------------------
 
     this.years = _.uniq(_.pluck(this.geoData, 'Year')).sort();
     this.currentYear = this.years[0];
 
-    //----------------------------------------------
+    //---#2.1 caseNoTimeSeriesInCsv---start------------------------------------
     this.title = translations.t(this.title)
-    this.timeSeries = _.pluck(this.geoData, 'title');
+    //---#2.1 caseNoTimeSeriesInCsv---stop------------------------------------
+    //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
+    this.timeSeries = _.pluck(this.geoData, 'timeseries');
     this.timeSeriesName = translations.t(this.timeSeries[this.timeSeries.length -1]);
+    this.unit = _.pluck(this.geoData, 'Units');
+    this.unitName = translations.t(this.unit[this.unit.length -1]);
+    //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
     this.sex = _.pluck(this.geoData, 'sex');
     this.sexName = translations.t(this.sex[this.sex.length -1]);
     this.age = _.pluck(this.geoData, 'age');
@@ -126,8 +141,6 @@ opensdg.autotrack = function(preset, category, action, label) {
     this.typificationName = translations.t(this.typification[this.typification.length -1]);
     this.criminalOffence = _.pluck(this.geoData, 'criminal offences');
     this.criminalOffenceName = translations.t(this.criminalOffence[this.criminalOffence.length -1]);
-    this.unit = _.pluck(this.geoData, 'Units');
-    this.unitName = translations.t(this.unit[this.unit.length -1]);
 
     this.startExp = 0;
     this.reloadCounter = 0; // to avoid multiple search buttons
@@ -394,7 +407,7 @@ opensdg.autotrack = function(preset, category, action, label) {
         }
       }));
 
-      // mapbox logo-------------------------------------------------------------------
+      //---#7 addMapboxWordmark---start-----------------------------------------------------------------------------------------
       var logo = L.control({position: 'bottomleft'});
       logo.onAdd = function (map) {
         var div = L.DomUtil.create('div', 'logo');
@@ -402,7 +415,7 @@ opensdg.autotrack = function(preset, category, action, label) {
         return div;
       };
       logo.addTo(this.map);
-      //----------------------------------------------------------------------
+      //---#7 addMapboxWordmark---stop-----------------------------------------------------------------------------------------
 
       // Add the selection legend.
       this.selectionLegend = L.Control.selectionLegend(plugin);
@@ -1504,8 +1517,11 @@ var indicatorDataStore = function(dataUrl) {
         showMap: this.showMap,
         //------------------------------------------------
         indicatorId: this.indicatorId,
-        title: this.chartTitle,
         //------------------------------------------------
+
+        //---#2.1 caseNoTimeSeriesInCsv---start-----------------------------------
+        title: this.chartTitle,
+        //---#2.1 caseNoTimeSeriesInCsv---stop------------------------------------
       });
 
 
@@ -1594,15 +1610,22 @@ indicatorModel.prototype = {
 var mapView = function () {
 
   "use strict";
-
+  //---#2.1 caseNoTimeSeriesInCsv---start------------------------------------
+  //---#1 GoalDependendMapColor---start--------------------------------------
+  //this.initialise = function(geoData, geoCodeRegEx) {
+  //this.initialise = function(geoData, geoCodeRegEx, goal) {
+  //---#1 GoalDependendMapColor---stop---------------------------------------
   this.initialise = function(geoData, geoCodeRegEx, goal, title) {
+  //---#2.1 caseNoTimeSeriesInCsv---stop-------------------------------------
     $('.map').show();
     $('#map').sdgMap({
       geoData: geoData,
       geoCodeRegEx: geoCodeRegEx,
       mapOptions: {"tileURL":"https://api.mapbox.com/styles/v1/mobosse/cjzmrn62k0ek11cmgea7a1i1h/tiles/256/{z}/{x}/{y}?&access_token={accessToken}","tileOptions":{"id":"mapbox.light","accessToken":"pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjanplNTNhMmQwMTFjM21wNHEzazRlejhwIn0.ecHE5G83cklfW5AXYjI_0A","attribution":"<a href=\"https://www.mapbox.com\">Mapbox</a> | <a href=\"https://www.openstreetmap.org/copyright\">&copy; OpenStreetMap</a> | <a href=\"https://www.bkg.bund.de\">&copy; GeoBasis-De / BKG 2019</a> | <a href=\"https://www.destatis.de/DE/Home/_inhalt.html\">&copy; Statistisches Bundesamt (Destatis), 2019</a> | <a href=\"https://www.mapbox.com/map-feedback/\"><b>Impove this map</b>"},"colorRange":[["#FCE9EB","#F7BDC4","#F2929D","#ED6676","#E83A4F","#E5243B","#B71D2F","#891623","#5C0E18","#2E070C"],["#FCF8EB","#F7E9C2","#F2DB9A","#EDCD72","#E8BE49","#E5B735","#CEA530","#A08025","#735C1B","#453710"],["#EDF5EB","#C9E2C3","#A6CF9C","#82BC74","#5EA94C","#4C9F38","#3D7F2D","#2E5F22","#1E4016","#0F200B"],["#F9E8EA","#EEBAC0","#E28C96","#D65E6C","#CB3042","#C5192D","#9E1424","#760F1B","#4F0A12","#270509"],["#FFEBE9","#FFC4BC","#FF9D90","#FF7564","#FF4E37","#FF3A21","#CC2E1A","#992314","#66170D","#330C07"],["#E9F8FB","#BEEBF6","#93DEF0","#67D1EA","#3CC4E5","#26BDE2","#1E97B5","#177188","#0F4C5A","#08262D"],["#FFF9E7","#FEEDB6","#FEE185","#FDD554","#FCC923","#FCC30B","#CA9C09","#977507","#654E04","#322702"],["#F6E8EC","#E3BAC6","#D18CA1","#BE5E7B","#AB3055","#A21942","#821435","#610F28","#410A1A","#20050D"],["#FFF0E9","#FED2BE","#FEB492","#FE9666","#FD783B","#FD6925","#CA541E","#983F16","#652A0F","#331507"],["#FCE7F0","#F5B8D1","#EE89B3","#E75A95","#E02B76","#DD1367","#B10F52","#850B3E","#580829","#2C0415"],["#FFF5E6","#FEE2B3","#FECE80","#FEBA4D","#FDA71A","#FD9D00","#CA7E00","#985E00","#653F00","#331F00"],["#FAF5EA","#EFE0C0","#E4CC96","#D9B86C","#CEA342","#C9992D","#A17A24","#795C1B","#503D12","#281F09"],["#ECF2EC","#C5D8C7","#9FBFA2","#79A57C","#528B57","#3F7E44","#326536","#264C29","#19321B","#0D190E"],["#E7F5FB","#B6E0F4","#85CBEC","#54B6E4","#23A1DD","#0A97D9","#0879AE","#065B82","#043C57","#021E2B"],["#EEF9EA","#CCECBF","#ABE095","#89D36B","#67C640","#56C02B","#459A22","#34731A","#224D11","#112609"],["#E6F0F5","#B3D2E2","#80B4CE","#4D95BA","#1A77A7","#00689D","#00537E","#003E5E","#002A3F","#00151F"],["#E8EDF0","#BAC8D2","#8CA4B5","#5E7F97","#305A79","#19486A","#143A55","#0F2B40","#0A1D2A","#050E15"]],"noValueColor":"#f0f0f0"},
       mapLayers: [{"min_zoom":5,"max_zoom":15,"serviceUrl":"https://g205sdgs.github.io/sdg-indicators/assets/maps/Ländergrenzen_ohne_Seegrenzen.geojson","nameProperty":"GEN","idProperty":"AGS","staticBorders":false}],
+      //---#1 GoalDependendMapColor---start--------------------------------------
       goal: goal,
+      //---#1 GoalDependendMapColor---stop---------------------------------------
       title: title
     });
   };
@@ -1722,7 +1745,7 @@ var indicatorView = function (model, options) {
   this._model.onSeriesComplete.attach(function(sender, args) {
     view_obj.initialiseSeries(args);
 
-    //--------------------------------
+    //---#1 GoalDependendMapColor---start--------------------------
     if (args.indicatorId.includes('_1-')){var goalNr = 0;}
     else if (args.indicatorId.includes('_2-')) {var goalNr = 1;}
     else if (args.indicatorId.includes('_3-')) {var goalNr = 2;}
@@ -1740,10 +1763,16 @@ var indicatorView = function (model, options) {
     else if (args.indicatorId.includes('_15-')) {var goalNr = 14;}
     else if (args.indicatorId.includes('_16-')) {var goalNr = 15;}
     else if (args.indicatorId.includes('_17-')) {var goalNr = 16;}
-
+    //---#1 GoalDependendMapColor---stop---------------------------
     if(args.hasGeoData && args.showMap) {
       view_obj._mapView = new mapView();
+      //---#2 TimeSeriesNameDisplayedInMaps---start------------------
+      //---#1 GoalDependendMapColor---start--------------------------
+      //view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx);
+      //view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr);
+      //---#1 GoalDependendMapColor---stop---------------------------
       view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr, args.title);
+      //---#2 TimeSeriesNameDisplayedInMaps---stop------------------
     }
   });
 
@@ -2652,7 +2681,10 @@ $(function() {
     },
 
     onAdd: function() {
-      var controlTpl = '<span id="mapHead">{title}</span>' +//<<<----------------
+      //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
+      //var controlTpl = '' +
+      var controlTpl = '<span id="mapHead">{title}</span>' +
+      //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
         '<ul id="selection-list"></ul>' +
         '<div class="legend-swatches">' + //bar
           '{legendSwatches}' +
@@ -2664,8 +2696,12 @@ $(function() {
           '<span class="arrow right"></span>' +
         '</div>';
       var swatchTpl = '<span class="legend-swatch" style="width:{width}%; background:{color};"></span>';
+      //---#1 GoalDependendMapColor---start---------------------------------------------------------------------------------------------------------------
+      //var swatchWidth = 100 / this.plugin.options.colorRange.length;
       var swatchWidth = 100 / this.plugin.options.colorRange[this.plugin.goalNr].length;
+      //var swatches = this.plugin.options.colorRange.map(function(swatchColor) {
       var swatches = this.plugin.options.colorRange[this.plugin.goalNr].map(function(swatchColor) {
+      //---#1 GoalDependendMapColor---stop----------------------------------------------------------------------------------------------------------------
         return L.Util.template(swatchTpl, {
           width: swatchWidth,
           color: swatchColor,
@@ -2673,7 +2709,7 @@ $(function() {
       }).join('');
       var div = L.DomUtil.create('div', 'selection-legend');
 
-      //-----------------------------------------------------------------------
+      //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
       var headline = this.plugin.title
       if (this.plugin.timeSeriesName){
         headline += ', <br>' + this.plugin.timeSeriesName;
@@ -2691,16 +2727,16 @@ $(function() {
         headline += ', <br>' + this.plugin.criminalOffenceName;
       }
       headline += ', <br>' + this.plugin.unitName;
-      //-----------------------------------------------------------------------
+      //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
 
       div.innerHTML = L.Util.template(controlTpl, {
         lowValue: this.plugin.valueRange[0],
         highValue: this.plugin.valueRange[1],
         legendSwatches: swatches,
 
-        //---
+        //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
         title: headline,
-        //---
+        //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
 
       });
       return div;
