@@ -113,7 +113,7 @@ var indicatorView = function (model, options) {
   this._model.onSeriesComplete.attach(function(sender, args) {
     view_obj.initialiseSeries(args);
 
-    //--------------------------------
+    //---#1 GoalDependendMapColor---start--------------------------
     if (args.indicatorId.includes('_1-')){var goalNr = 0;}
     else if (args.indicatorId.includes('_2-')) {var goalNr = 1;}
     else if (args.indicatorId.includes('_3-')) {var goalNr = 2;}
@@ -131,10 +131,16 @@ var indicatorView = function (model, options) {
     else if (args.indicatorId.includes('_15-')) {var goalNr = 14;}
     else if (args.indicatorId.includes('_16-')) {var goalNr = 15;}
     else if (args.indicatorId.includes('_17-')) {var goalNr = 16;}
-
+    //---#1 GoalDependendMapColor---stop---------------------------
     if(args.hasGeoData && args.showMap) {
       view_obj._mapView = new mapView();
+      //---#2 TimeSeriesNameDisplayedInMaps---start------------------
+      //---#1 GoalDependendMapColor---start--------------------------
+      //view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx);
+      //view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr);
+      //---#1 GoalDependendMapColor---stop---------------------------
       view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr, args.title);
+      //---#2 TimeSeriesNameDisplayedInMaps---stop------------------
     }
   });
 

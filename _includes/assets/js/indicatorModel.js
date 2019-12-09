@@ -714,8 +714,11 @@ var indicatorModel = function (options) {
         showMap: this.showMap,
         //------------------------------------------------
         indicatorId: this.indicatorId,
-        title: this.chartTitle,
         //------------------------------------------------
+
+        //---#2.1 caseNoTimeSeriesInCsv---start-----------------------------------
+        title: this.chartTitle,
+        //---#2.1 caseNoTimeSeriesInCsv---stop------------------------------------
       });
 
 

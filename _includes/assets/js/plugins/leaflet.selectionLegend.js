@@ -30,7 +30,10 @@
     },
 
     onAdd: function() {
-      var controlTpl = '<span id="mapHead">{title}</span>' +//<<<----------------
+      //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
+      //var controlTpl = '' +
+      var controlTpl = '<span id="mapHead">{title}</span>' +
+      //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
         '<ul id="selection-list"></ul>' +
         '<div class="legend-swatches">' + //bar
           '{legendSwatches}' +
@@ -42,8 +45,12 @@
           '<span class="arrow right"></span>' +
         '</div>';
       var swatchTpl = '<span class="legend-swatch" style="width:{width}%; background:{color};"></span>';
+      //---#1 GoalDependendMapColor---start---------------------------------------------------------------------------------------------------------------
+      //var swatchWidth = 100 / this.plugin.options.colorRange.length;
       var swatchWidth = 100 / this.plugin.options.colorRange[this.plugin.goalNr].length;
+      //var swatches = this.plugin.options.colorRange.map(function(swatchColor) {
       var swatches = this.plugin.options.colorRange[this.plugin.goalNr].map(function(swatchColor) {
+      //---#1 GoalDependendMapColor---stop----------------------------------------------------------------------------------------------------------------
         return L.Util.template(swatchTpl, {
           width: swatchWidth,
           color: swatchColor,
@@ -51,7 +58,7 @@
       }).join('');
       var div = L.DomUtil.create('div', 'selection-legend');
 
-      //-----------------------------------------------------------------------
+      //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
       var headline = this.plugin.title
       if (this.plugin.timeSeriesName){
         headline += ', <br>' + this.plugin.timeSeriesName;
@@ -69,16 +76,16 @@
         headline += ', <br>' + this.plugin.criminalOffenceName;
       }
       headline += ', <br>' + this.plugin.unitName;
-      //-----------------------------------------------------------------------
+      //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
 
       div.innerHTML = L.Util.template(controlTpl, {
         lowValue: this.plugin.valueRange[0],
         highValue: this.plugin.valueRange[1],
         legendSwatches: swatches,
 
-        //---
+        //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
         title: headline,
-        //---
+        //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
 
       });
       return div;

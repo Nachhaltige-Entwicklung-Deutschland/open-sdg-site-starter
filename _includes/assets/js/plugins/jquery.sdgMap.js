@@ -58,8 +58,12 @@
     this.mapLayers = [];
     this.geoData = options.geoData;
     this.geoCodeRegEx = options.geoCodeRegEx;
+    //---#1 GoalDependendMapColor---start--------------------------------------
     this.goalNr = options.goal;
+    //---#1 GoalDependendMapColor---stop---------------------------------------
+    //---#2.1 caseNoTimeSeriesInCsv---start------------------------------------
     this.title = options.title;
+    //---#2.1 caseNoTimeSeriesInCsv---stop-------------------------------------
 
     // Require at least one geoLayer.
     if (!options.mapLayers.length) {
@@ -76,17 +80,28 @@
     this._name = 'sdgMap';
 
     this.valueRange = [_.min(_.pluck(this.geoData, 'Value')), _.max(_.pluck(this.geoData, 'Value'))];
+    //---#1 GoalDependendMapColor---start--------------------------------------
+    //this.colorScale = chroma.scale()
     this.colorScale = chroma.scale(this.options.colorRange[this.goalNr])
+    //---#1 GoalDependendMapColor---stop---------------------------------------
       .domain(this.valueRange)
+      //---#1 GoalDependendMapColor---start--------------------------------------
+      //.classes(9);
       .classes(this.options.colorRange[this.goalNr].length);
+      //---#1 GoalDependendMapColor---stop-------------------------------------
 
     this.years = _.uniq(_.pluck(this.geoData, 'Year')).sort();
     this.currentYear = this.years[0];
 
-    //----------------------------------------------
+    //---#2.1 caseNoTimeSeriesInCsv---start------------------------------------
     this.title = translations.t(this.title)
-    this.timeSeries = _.pluck(this.geoData, 'title');
+    //---#2.1 caseNoTimeSeriesInCsv---stop------------------------------------
+    //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
+    this.timeSeries = _.pluck(this.geoData, 'timeseries');
     this.timeSeriesName = translations.t(this.timeSeries[this.timeSeries.length -1]);
+    this.unit = _.pluck(this.geoData, 'Units');
+    this.unitName = translations.t(this.unit[this.unit.length -1]);
+    //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
     this.sex = _.pluck(this.geoData, 'sex');
     this.sexName = translations.t(this.sex[this.sex.length -1]);
     this.age = _.pluck(this.geoData, 'age');
@@ -95,8 +110,6 @@
     this.typificationName = translations.t(this.typification[this.typification.length -1]);
     this.criminalOffence = _.pluck(this.geoData, 'criminal offences');
     this.criminalOffenceName = translations.t(this.criminalOffence[this.criminalOffence.length -1]);
-    this.unit = _.pluck(this.geoData, 'Units');
-    this.unitName = translations.t(this.unit[this.unit.length -1]);
 
     this.startExp = 0;
     this.reloadCounter = 0; // to avoid multiple search buttons
@@ -363,7 +376,7 @@
         }
       }));
 
-      // mapbox logo-------------------------------------------------------------------
+      //---#7 addMapboxWordmark---start-----------------------------------------------------------------------------------------
       var logo = L.control({position: 'bottomleft'});
       logo.onAdd = function (map) {
         var div = L.DomUtil.create('div', 'logo');
@@ -371,7 +384,7 @@
         return div;
       };
       logo.addTo(this.map);
-      //----------------------------------------------------------------------
+      //---#7 addMapboxWordmark---stop-----------------------------------------------------------------------------------------
 
       // Add the selection legend.
       this.selectionLegend = L.Control.selectionLegend(plugin);
