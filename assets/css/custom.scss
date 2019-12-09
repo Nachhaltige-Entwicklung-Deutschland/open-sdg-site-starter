@@ -86,6 +86,7 @@ header {
     float: none;
 }
 
+//---#2 TimeSeriesNameDisplayedInMaps---start-------------------------------------------------------------->
 #mapHead {
   display: block;
   font-size: 1.0em;
@@ -97,6 +98,8 @@ header {
   margin-right: 0;
   font-weight: bold;
 }
+//---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
+
 #legend {
   padding-left: 0;
   text-align: left;
@@ -230,7 +233,7 @@ header {
 
 
 
-//buttons
+//---#8 addNavigationButtons---start--------------------------------------
 .G1-background {
   background-color: #E5243B;
   border-color: transparent;
@@ -367,6 +370,7 @@ header {
   background-color: #143A55;
   border-color: transparent;
   margin-bottom: 5px;}
+//---#8 addNavigationButtons---stop---------------------------------------
 
 
 //edit disclaimer color
