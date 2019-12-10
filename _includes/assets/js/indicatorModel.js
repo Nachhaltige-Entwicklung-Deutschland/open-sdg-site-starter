@@ -501,7 +501,7 @@ var indicatorModel = function (options) {
         var categ = combinationDescription.substring(0, 4)
         if (categ == 'Ziel' || categ == 'Zeit' || categ == 'Targ' || categ == 'Time') {
           if (combinationDescription.indexOf(',') != -1){
-            if (!nameList.includes(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length))) {
+            if (!nameList.indexOf(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length)) != -1) {
               // Ziel oder Zeitreihe - Mit Disaggregationen - Pendant ist noch nicht aufgerufen worden
               // Schreibe den Index auf die Liste, damit dieser beim Aufruf des Pendants gefunden werden kann
               nameList.push(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length));
