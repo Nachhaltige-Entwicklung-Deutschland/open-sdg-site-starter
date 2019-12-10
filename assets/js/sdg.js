@@ -216,6 +216,7 @@ opensdg.autotrack = function(preset, category, action, label) {
       };
       return unique;
     },
+    console.log(unique)
     //---#6 enableMapsForDisagData---stop------------------------------------------------------------------
 
     // Zoom to a feature.
@@ -466,8 +467,8 @@ opensdg.autotrack = function(preset, category, action, label) {
           var nameProperty = plugin.mapLayers[i].nameProperty;
           //---#6 enableMapsForDisagData---start-----------------------------------------------------------------
           //var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty);
-          //var cat = plugin.findCat();
-          //var expression = plugin.expression;
+          var cat = plugin.findCat();
+          var expression = plugin.expression;
           var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, '', '');//cat, expression);
           //---#6 enableMapsForDisagData---stop------------------------------------------------------------------
 
