@@ -184,7 +184,8 @@
           unique.push(expressions[i]);
         }
       };
-      console.log("uniQue: ",unique.length,unique);
+
+      console.log("uniQue: ",expressions, unique.length,unique);
       return unique;
     },
 
