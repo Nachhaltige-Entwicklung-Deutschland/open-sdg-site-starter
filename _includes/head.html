@@ -16,8 +16,8 @@
         <!-- Title and meta description
         ================================================== -->
 
+        <!---#15 setCorrectTitle---start-------------------->
         <title>
-          <!---#15 setCorrectTitle---start-------------------->
           {% if page.indicator %}
             {{ t.general.indicator | escape }} {{ meta.indicator }} - {{ t.general.goal | escape }} {{ goal_number }}
           {% elsif goal_number %}
@@ -25,8 +25,8 @@
           {% else %}
             {{ t.general.title_dns | escape }}
           {% endif %}
-          <!---#15 setCorrectTitle---stop--------------------->
         </title>
+        <!---#15 setCorrectTitle---stop--------------------->
 
         {% if page.indicator %}
           <meta name="description" content= "{{ t.general.meta_indicator | escape }} {{ meta.indicator }} - {{ meta.indicator | get_indicator_name }}" >
