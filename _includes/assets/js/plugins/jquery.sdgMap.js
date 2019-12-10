@@ -110,11 +110,11 @@
     this.typificationName = translations.t(this.typification[this.typification.length -1]);
     this.criminalOffence = _.pluck(this.geoData, 'criminal offences');
     this.criminalOffenceName = translations.t(this.criminalOffence[this.criminalOffence.length -1]);
-    /*//---#6 enableMapsForDisagData---start-----------------------------------------------------------------
+    //---#6 enableMapsForDisagData---start-----------------------------------------------------------------
     this.startExp = 0;
     this.reloadCounter = 0; // to avoid multiple search buttons
     this.hasMapDisaggs = false;
-    *///---#6 enableMapsForDisagData---stop------------------------------------------------------------------
+    //---#6 enableMapsForDisagData---stop------------------------------------------------------------------
 
     this.init();
   }
