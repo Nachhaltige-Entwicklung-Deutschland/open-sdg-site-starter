@@ -208,7 +208,12 @@ opensdg.autotrack = function(preset, category, action, label) {
     // Get the found category and return an array with the corresponding expressions
     findDisagg: function(category){
       var expressions = _.pluck(this.geoData, category);
-      unique = [ ...new Set(expressions) ];
+      //unique = [ ...new Set(expressions) ];
+      for (var i = 0; i<expressions.length; i++){
+        if (unique.indexOf(expressions[i]) != -1){
+          unique.push(expressions[i])
+        }
+      };
       return unique;
     },
     //---#6 enableMapsForDisagData---stop------------------------------------------------------------------
