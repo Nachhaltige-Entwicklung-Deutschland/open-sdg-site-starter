@@ -1209,10 +1209,10 @@ var indicatorDataStore = function(dataUrl) {
       headlineTable = undefined,
       datasetIndex = 0,
 
-      //-----------------
+      //---#4 sameColorForTargetAndTimeSeries---start-----------------
       nameList = []
       indexList = []
-      //----------------
+      //---#4 sameColorForTargetAndTimeSeries---stop------------------
 
 
 
@@ -1253,7 +1253,8 @@ var indicatorDataStore = function(dataUrl) {
       },
       //---#11 setTargetPointstyle---stop-----------------------------------------------------------------------------------------------
 
-      //-Since showLines does not work we set the opacity to 0.0 if it is a target--------------------------------------------------------------------------------------------------
+      //---#13 noLineForTargets---start-------------------------------------------------------------------------------------------------
+      //-Since showLines does not work we set the opacity to 0.0 if it is a target------------------------------------------------------
       getLineStyle = function (combinationDescription, datasetIndexMod) {
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
           return 'rgba(0, 0, 0, 0.0)';
@@ -1262,9 +1263,9 @@ var indicatorDataStore = function(dataUrl) {
           return '#' + getColor(datasetIndexMod);
         }
       },
-      //---------------------------------------------------------------------------------------------------------------------------------------------------------------
+      //---#13 noLineForTargets---stop--------------------------------------------------------------------------------------------------
 
-      //--Mixed charts -----------------------------------------------------------------------------------------------------------------------------------------------
+      //--#14 mixedCharts---start-------------------------------------------------------------------------------------------------------
       barCharts = [translations.t('a) time series')+", "+translations.t('calculated annual values'),
                   translations.t('a) time series')+", "+translations.t('air pollutants overall'),
                   translations.t('b) target (max)')+", "+translations.t('air pollutants overall'),
@@ -1281,7 +1282,7 @@ var indicatorDataStore = function(dataUrl) {
           return 'line';
         }
       },
-      //----------------------------------------------------------------------------------------------------------------------
+      //--#14 mixedCharts---stop--------------------------------------------------------------------------------------------------------
 
       getBorderDash = function(datasetIndex) {
         // offset if there is no headline data:
@@ -1333,7 +1334,10 @@ var indicatorDataStore = function(dataUrl) {
           ds = _.extend({
 
             label: combinationDescription ? combinationDescription : that.country,
+            //---#13 noLineForTargets---start-------------------------------
+            //borderColor: '#' + getColor(datasetIndex),
             borderColor: getLineStyle(combinationDescription, datasetIndexMod),
+            //---#13 noLineForTargets---stop--------------------------------
             //---#4 sameColorForTargetAndTimeSeries---start-----------------
             //backgroundColor: '#' + getColor(datasetIndex),
             backgroundColor: '#' + getColor(datasetIndexMod),
@@ -1350,10 +1354,11 @@ var indicatorDataStore = function(dataUrl) {
               });
               return found ? found.Value : null;
             }),
+            //--#14 mixedCharts---start------------------------------------------------
             type: getChartStyle(combinationDescription),
+            //--#14 mixedCharts---stop-------------------------------------------------
             borderWidth: combinationDescription ? 2 : 4
           }, that.datasetObject);
-        //----------------------------------
 
         datasetIndex++;
         return ds;
