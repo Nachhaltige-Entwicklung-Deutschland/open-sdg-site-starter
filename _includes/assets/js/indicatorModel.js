@@ -440,7 +440,7 @@ var indicatorModel = function (options) {
 
         return datasetIndex === 0 ? headlineColor : colors[datasetIndex];
       },
-      //------------------------------------------------------------------------------------------------------------------------
+      //---#11 setTargetPointstyle---start-----------------------------------------------------------------------------------------------
       getPointStyle = function (combinationDescription) {
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
           return 'rect';
@@ -449,7 +449,7 @@ var indicatorModel = function (options) {
           return 'circle';
         }
       },
-      //-------------------------------------------------------------------------------------------------------------------------
+      //---#11 setTargetPointstyle---stop-----------------------------------------------------------------------------------------------
 
       //-Since showLines does not work we set the opacity to 0.0 if it is a target--------------------------------------------------------------------------------------------------
       getLineStyle = function (combinationDescription, datasetIndexMod) {
@@ -496,8 +496,7 @@ var indicatorModel = function (options) {
         //     return f === field;
         //   }) : undefined,
 
-        //--------------------
-
+        //---#4 sameColorForTargetAndTimeSeries---start-----------------
         var categ = combinationDescription.substring(0, 4)
         if (categ == 'Ziel' || categ == 'Zeit' || categ == 'Targ' || categ == 'Time') {
           if (combinationDescription.indexOf(',') != -1){
@@ -526,14 +525,20 @@ var indicatorModel = function (options) {
           // Nimm den normalen Indexwert
           var datasetIndexMod = datasetIndex;
         }
+        //---#4 sameColorForTargetAndTimeSeries---stop------------------
 
         var fieldIndex,
           ds = _.extend({
 
             label: combinationDescription ? combinationDescription : that.country,
             borderColor: getLineStyle(combinationDescription, datasetIndexMod),
+            //---#4 sameColorForTargetAndTimeSeries---start-----------------
+            //backgroundColor: '#' + getColor(datasetIndex),
             backgroundColor: '#' + getColor(datasetIndexMod),
+            //---#4 sameColorForTargetAndTimeSeries---stop------------------
+            //---#11 setTargetPointstyle---start---------------------------------------
             pointStyle: getPointStyle(combinationDescription),
+            //---#11 setTargetPointstyle---stop----------------------------------------
             radius: 6,
             pointBorderColor: '#' + getColor(datasetIndexMod),
             borderDash: getBorderDash(datasetIndex),

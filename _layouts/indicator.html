@@ -93,13 +93,22 @@
           <ul class="nav nav-tabs data-view" role="tablist">
 
             <li role="presentation" class="nav-item active">
+              <!---#12 addIconsForTabs---start------------------------------------------->
+              <!--<a class="nav-link" data-toggle="tab" href="#chartview" aria-controls="chartview" role="tab" {% include autotrack.html preset="tab_data_chart" category="Tab change" action="Change data view" label="Change to Chart tab" %}>{{ t.indicator.chart }}</a>-->
               <a class="nav-link" data-toggle="tab" href="#chartview" aria-controls="chartview" role="tab" {% include autotrack.html preset="tab_data_chart" category="Tab change" action="Change data view" label="Change to Chart tab" %}> <i class="fa fa-line-chart" aria-hidden="true"></i> <span class="hidden-sm hidden-xs">{{ t.indicator.chart }}</span> </a>
+              <!---#12 addIconsForTabs---stop-------------------------------------------->
             </li>
             <li role="presentation" class="nav-item">
+              <!---#12 addIconsForTabs---start------------------------------------------->
+              <!--<a class="nav-link" data-toggle="tab" href="#tableview" aria-controls="tableview" role="tab" {% include autotrack.html preset="tab_data_table" category="Tab change" action="Change data view" label="Change to Table tab" %}>{{ t.indicator.table }}</a>-->
               <a class="nav-link" data-toggle="tab" href="#tableview" aria-controls="tableview" role="tab" {% include autotrack.html preset="tab_data_table" category="Tab change" action="Change data view" label="Change to Table tab" %}> <i class="fa fa-table" aria-hidden="true"></i> <span class="hidden-sm hidden-xs">{{ t.indicator.table }}</span> </a>
+              <!---#12 addIconsForTabs---stop-------------------------------------------->
             </li>
             <li role="presentation" class="nav-item map" style="display:none">
+              <!---#12 addIconsForTabs---start------------------------------------------->
+              <!--<a data-no-disagg="true" class="nav-link" data-toggle="tab" href="#mapview" aria-controls="mapview" role="tab" {% include autotrack.html preset="tab_data_map" category="Tab change" action="Change data view" label="Change to Map tab" %}>{{ t.indicator.map }}</a>-->
               <a data-no-disagg="true" class="nav-link" data-toggle="tab" href="#mapview" aria-controls="mapview" role="tab" {% include autotrack.html preset="tab_data_map" category="Tab change" action="Change data view" label="Change to Map tab" %}><i class="fa fa-map" aria-hidden="true"></i> <span class="hidden-sm hidden-xs">{{ t.indicator.map }}</span></a>
+              <!---#12 addIconsForTabs---stop-------------------------------------------->
             </li>
             {%- if meta.embedded_feature_url -%}
             <li role="presentation" class="nav-item embedded-map">
@@ -145,11 +154,11 @@
           <li role="presentation" class="nav-item active">
             <a class="nav-link" data-toggle="tab" href="#metadata" aria-controls="metadata" role="tab" {% include autotrack.html preset="tab_meta_national" category="Tab change" action="Change metadata view" label="Change to Metadata tab" %}>{{ t.indicator.details }}</a>
           </li>
-
+          <!---#5 addContentAndProgress---start------------------------------------------------------------------------------------------------------------------------------------->
           <li role="presentation" class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#content" aria-controls="content" role="tab" {% include autotrack.html preset="tab_meta_content" category="Tab change" action="Change metadata view" label="Change to Content tab" %}>{{ t.indicator.contentAndProgress }}</a>
           </li>
-
+          <!---#5 addContentAndProgress---stop-------------------------------------------------------------------------------------------------------------------------------------->
           <li role="presentation" class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#globalmetadata" aria-controls="globalmetadata" role="tab" {% include autotrack.html preset="tab_meta_global" category="Tab change" action="Change metadata view" label="Change to Global Metadata tab" %}>{{ t.indicator.history }}</a>
           </li>
@@ -182,7 +191,7 @@
               </article>
             </div>
           </div>
-
+          <!---#5 addContentAndProgress---start------------------------------------------------------------------------------------------------------------------------------------->
           <div role="tabpanel" class="tab-pane" id="content">
             <div>
               <article>
@@ -190,7 +199,7 @@
               </article>
             </div>
           </div>
-
+          <!---#5 addContentAndProgress---stop-------------------------------------------------------------------------------------------------------------------------------------->
 
           <div role="tabpanel" class="tab-pane" id="globalmetadata">
             <!-- Global Metadata -->

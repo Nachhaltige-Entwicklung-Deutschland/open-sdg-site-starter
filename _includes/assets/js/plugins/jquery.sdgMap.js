@@ -110,11 +110,11 @@
     this.typificationName = translations.t(this.typification[this.typification.length -1]);
     this.criminalOffence = _.pluck(this.geoData, 'criminal offences');
     this.criminalOffenceName = translations.t(this.criminalOffence[this.criminalOffence.length -1]);
-
+    //---#6 enableMapsForDisagData---start-----------------------------------------------------------------
     this.startExp = 0;
     this.reloadCounter = 0; // to avoid multiple search buttons
     this.hasMapDisaggs = false;
-    //---------------------------------------------------
+    //---#6 enableMapsForDisagData---stop------------------------------------------------------------------
 
     this.init();
   }
@@ -123,16 +123,19 @@
   Plugin.prototype = {
 
 
-
+    //---#6 enableMapsForDisagData---start-----------------------------------------------------------------
     // Add time series to GeoJSON data and normalize the name and geocode.
-    prepareGeoJson: function(geoJson, idProperty, nameProperty, cat, exp) { //--------------------------------added cat & exp
+    //prepareGeoJson: function(geoJson, idProperty, nameProperty) {
+    prepareGeoJson: function(geoJson, idProperty, nameProperty, cat, exp) {
+    //---#6 enableMapsForDisagData---stop------------------------------------------------------------------
       var geoData = this.geoData;
       geoJson.features.forEach(function(feature) {
         var geocode = feature.properties[idProperty];
         var name = feature.properties[nameProperty];
 
-        //----Legend with Disagg---------------------------------------
         // First add the time series data.
+        //---#6 enableMapsForDisagData---start-----------------------------------------------------------------
+        //var records = _.where(geoData, { GeoCode: geocode });
         //Normal version, if there is no Disaggregation-cathegory with more than one expression.
         if (cat == ''){
           var records = _.where(geoData, { GeoCode: geocode});
@@ -141,8 +144,7 @@
         else{
           var records = _.where(geoData, { GeoCode: geocode, [cat]: exp });
         }
-        //-----------------------------------------------------------------------
-        //var records = _.where(geoData, { GeoCode: geocode, cat: exp });
+        //---#6 enableMapsForDisagData---stop------------------------------------------------------------------
         records.forEach(function(record) {
           // Add the Year data into the properties.
           feature.properties[record.Year] = record.Value;
@@ -157,7 +159,7 @@
       return geoJson;
     },
 
-    //---Legend with Disagg---------------
+    //---#6 enableMapsForDisagData---start-----------------------------------------------------------------
     //Find those disaggregation-categories that have more then one expression in all lines that have geoData
     findCat: function(){
       var categories = ['title','sex','age'];
@@ -178,8 +180,7 @@
       unique = [ ...new Set(expressions) ];
       return unique;
     },
-
-    //---------------------------
+    //---#6 enableMapsForDisagData---stop------------------------------------------------------------------
 
     // Zoom to a feature.
     zoomToFeature: function(layer) {
@@ -308,8 +309,8 @@
       // Because after this point, "this" rarely works.
       var plugin = this;
 
-
-      //Add the radio buttons------------------------------------------------------------------------------------------------------------------------
+      //---#6 enableMapsForDisagData---start-----------------------------------------------------------------
+      //Add the radio buttons
       //count up the reloadCounter to avoid multiple builds of the search buttons
       this.reloadCounter ++;
       //Create a Button for every expression and add it to the map
@@ -352,7 +353,6 @@
 
           //console.log(e.type, plugin.startExp, plugin.sexName);
 
-
           //set startExp to the intiger of the Position of selectet Expression
           plugin.startExp = $('input[name="disagg"]:checked').val();
 
@@ -363,7 +363,7 @@
           plugin.init();
         });
       }
-      //------------------------------------------------------------------------------------------------------------------------
+      //---#6 enableMapsForDisagData---stop------------------------------------------------------------------
 
       // Add the year slider.
       this.map.addControl(L.Control.yearSlider({
@@ -428,13 +428,12 @@
           // Now go on to add the geoJson again as choropleth dynamic regions.
           var idProperty = plugin.mapLayers[i].idProperty;
           var nameProperty = plugin.mapLayers[i].nameProperty;
-
-          //----------------------------------------------------------------------------------------------------------------------
+          //---#6 enableMapsForDisagData---start-----------------------------------------------------------------
+          //var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty);
           var cat = plugin.findCat();
           var expression = plugin.expression;
-
           var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, cat, expression);
-          //----------------------------------------------------------------------------------------------------------------------
+          //---#6 enableMapsForDisagData---stop------------------------------------------------------------------
 
           var layer = L.geoJson(geoJson, {
             style: plugin.options.styleNormal,
@@ -456,11 +455,11 @@
         plugin.updateColors();
 
         // Now that we have layers, we can add the search feature.
-        //-------------------------------------------------------------------
+        //---#6 enableMapsForDisagData---start-----------------------------------------------------------------
         //A reload due to Radio-button change creates a second search-Button.
         //Therefor we need to ask if it is the first load here:
         if (plugin.reloadCounter == 1){
-          //----------------------------------------------------------------
+        //---#6 enableMapsForDisagData---stop------------------------------------------------------------------
           plugin.searchControl = new L.Control.Search({
             layer: plugin.getAllLayers(),
             propertyName: 'name',
@@ -475,7 +474,7 @@
             autoCollapse: true,
           });
 
-        }//---------------------------------
+        }//---#6 enableMapsForDisagData---start/stop-----------------------------------------------------------------
         plugin.map.addControl(plugin.searchControl);
         // The search plugin messes up zoomShowHide, so we have to reset that
         // with this hacky method. Is there a better way?
