@@ -20,7 +20,7 @@
         <title>
           {% if page.indicator %}
             {{ t.general.indicator | escape }} {{ meta.indicator }} - {{ t.general.goal | escape }} {{ goal_number }}
-          {% elsif goal_number %}
+          {% elsif page.goal %}
             {{ t.general.goal | escape }} {{ goal_number }} - {{ goal_short | escape }}
           {% else %}
             {{ t.general.title_dns | escape }}
