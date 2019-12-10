@@ -177,14 +177,14 @@
     // Get the found category and return an array with the corresponding expressions
     findDisagg: function(category){
       var expressions = _.pluck(this.geoData, category);
-      //unique = [ ...new Set(expressions) ];
+      //unique = [ ...new Set(expressions) ];//<------------------------does not work in internet explorer
+      var unique = [];
       for (var i = 0; i<expressions.length; i++){
-        var unique = [];
         if (unique.indexOf(expressions[i]) != -1){
           unique.push(expressions[i])
         }
       };
-      console.log(unique);
+      console.log("uniQue: ",unique);
       return unique;
     },
 
