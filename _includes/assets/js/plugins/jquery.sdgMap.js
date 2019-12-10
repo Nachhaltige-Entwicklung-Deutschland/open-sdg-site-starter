@@ -140,11 +140,11 @@
         if (cat == ''){
           var records = _.where(geoData, { GeoCode: geocode});
         }
-        //If there is a Disaggregation-cathegory with more than one expression:
+        /*//If there is a Disaggregation-cathegory with more than one expression:
         else{
           var records = _.where(geoData, { GeoCode: geocode, [cat]: exp });
         }
-        //---#6 enableMapsForDisagData---stop------------------------------------------------------------------
+        *///---#6 enableMapsForDisagData---stop------------------------------------------------------------------
         records.forEach(function(record) {
           // Add the Year data into the properties.
           feature.properties[record.Year] = record.Value;
