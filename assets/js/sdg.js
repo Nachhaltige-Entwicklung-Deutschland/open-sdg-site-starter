@@ -173,7 +173,7 @@ opensdg.autotrack = function(preset, category, action, label) {
         }
         //If there is a Disaggregation-cathegory with more than one expression:
         else{
-          var records = _.where(geoData, { GeoCode: geocode});//, [cat]: exp });
+          var records = _.where(geoData, { GeoCode: geocode, [cat]: exp });
         }
         //---#6 enableMapsForDisagData---stop------------------------------------------------------------------
         records.forEach(function(record) {
