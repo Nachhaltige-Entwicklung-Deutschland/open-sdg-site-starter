@@ -216,7 +216,7 @@ opensdg.autotrack = function(preset, category, action, label) {
       };
       return unique;
     },
-    console.log(unique)
+    
     //---#6 enableMapsForDisagData---stop------------------------------------------------------------------
 
     // Zoom to a feature.
