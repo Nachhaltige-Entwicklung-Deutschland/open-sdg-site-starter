@@ -21,7 +21,12 @@
           {% if page.indicator %}
             {{ t.general.indicator | escape }} {{ meta.indicator }} - {{ t.general.goal | escape }} {{ goal_number }}
           {% elsif page.sdg_goal %}
-            {{ t.general.goal | escape }} {{ goal_number }} - {{ goal_short | escape }}
+
+            {% assign target_id = page.sdg_goal  %}
+            {% assign target_id_key = target_id | append: '-title' %}
+            {% assign target_title = t.dns_goals[target_id_key]  %}
+
+            {{ t.general.goal | escape }} {{ page.sdg_goal }} - {{ target_title }}
           {% else %}
             {{ t.general.title_dns | escape }}
           {% endif %}
