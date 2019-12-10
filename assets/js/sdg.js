@@ -1242,7 +1242,7 @@ var indicatorDataStore = function(dataUrl) {
 
         return datasetIndex === 0 ? headlineColor : colors[datasetIndex];
       },
-      //---#11 setTargetPointstyle---start-----------------------------------------------------------------------------------------------
+      /*//---#11 setTargetPointstyle---start-----------------------------------------------------------------------------------------------
       getPointStyle = function (combinationDescription) {
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
           return 'rect';
@@ -1251,7 +1251,7 @@ var indicatorDataStore = function(dataUrl) {
           return 'circle';
         }
       },
-      //---#11 setTargetPointstyle---stop-----------------------------------------------------------------------------------------------
+      *///---#11 setTargetPointstyle---stop-----------------------------------------------------------------------------------------------
 
       /*//---#13 noLineForTargets---start-------------------------------------------------------------------------------------------------
       //-Since showLines does not work we set the opacity to 0.0 if it is a target------------------------------------------------------
@@ -1342,9 +1342,9 @@ var indicatorDataStore = function(dataUrl) {
             //backgroundColor: '#' + getColor(datasetIndex),
             backgroundColor: '#' + getColor(datasetIndexMod),
             //---#4 sameColorForTargetAndTimeSeries---stop------------------
-            //---#11 setTargetPointstyle---start---------------------------------------
+            /*//---#11 setTargetPointstyle---start---------------------------------------
             pointStyle: getPointStyle(combinationDescription),
-            //---#11 setTargetPointstyle---stop----------------------------------------
+            *///---#11 setTargetPointstyle---stop----------------------------------------
             radius: 6,
             pointBorderColor: '#' + getColor(datasetIndexMod),
             borderDash: getBorderDash(datasetIndex),
