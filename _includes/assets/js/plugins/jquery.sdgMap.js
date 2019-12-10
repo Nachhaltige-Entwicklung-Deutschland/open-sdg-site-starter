@@ -364,7 +364,7 @@
           plugin.sexName = translations.t(plugin.expression);
         }
         else if (cat == 'title'){
-          plugin.timeSeries = translations.t(plugin.expression);
+          plugin.timeSeriesName = translations.t(plugin.expression);
         }
         else if (cat == 'age'){
           plugin.ageName = translations.t(plugin.expression);
