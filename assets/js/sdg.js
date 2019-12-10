@@ -171,10 +171,23 @@ opensdg.autotrack = function(preset, category, action, label) {
         if (cat == ''){
           var records = _.where(geoData, { GeoCode: geocode});
         }
+
         //If there is a Disaggregation-cathegory with more than one expression:
+        /*the following part does not work in internet explorer:
         else{
           var records = _.where(geoData, { GeoCode: geocode, [cat]: exp });
         }
+        */
+        else if(cat == 'title'){
+          var records = _.where(geoData, { GeoCode: geocode, title: exp });
+        }
+        else if(cat == 'sex'){
+          var records = _.where(geoData, { GeoCode: geocode, sex: exp });
+        }
+        else if(cat == 'age'){
+          var records = _.where(geoData, { GeoCode: geocode, age: exp });
+        }
+
         //---#6 enableMapsForDisagData---stop------------------------------------------------------------------
         records.forEach(function(record) {
           // Add the Year data into the properties.
