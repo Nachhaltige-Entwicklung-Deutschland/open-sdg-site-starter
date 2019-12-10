@@ -190,7 +190,7 @@ opensdg.autotrack = function(preset, category, action, label) {
       return geoJson;
     },
 
-    //---#6 enableMapsForDisagData---start-----------------------------------------------------------------
+    /*//---#6 enableMapsForDisagData---start-----------------------------------------------------------------
     //Find those disaggregation-categories that have more then one expression in all lines that have geoData
     findCat: function(){
       var categories = ['title','sex','age'];
@@ -211,7 +211,7 @@ opensdg.autotrack = function(preset, category, action, label) {
       unique = [ ...new Set(expressions) ];
       return unique;
     },
-    //---#6 enableMapsForDisagData---stop------------------------------------------------------------------
+    *///---#6 enableMapsForDisagData---stop------------------------------------------------------------------
 
     // Zoom to a feature.
     zoomToFeature: function(layer) {
