@@ -180,7 +180,7 @@
       //unique = [ ...new Set(expressions) ];//<------------------------does not work in internet explorer
       var unique = [];
       for (var i = 0; i<expressions.length; i++){
-        if (unique.indexOf(expressions[i]) != -1){
+        if (unique.indexOf(expressions[i]) == -1){
           unique.push(expressions[i]);
         }
       };
