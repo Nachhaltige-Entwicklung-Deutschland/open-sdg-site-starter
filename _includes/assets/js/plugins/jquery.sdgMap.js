@@ -185,7 +185,7 @@
       };
       return unique;
     },
-    console.log(unique)
+    
     //---#6 enableMapsForDisagData---stop------------------------------------------------------------------
 
     // Zoom to a feature.
