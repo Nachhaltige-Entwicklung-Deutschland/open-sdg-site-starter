@@ -349,7 +349,7 @@ opensdg.autotrack = function(preset, category, action, label) {
       // Because after this point, "this" rarely works.
       var plugin = this;
 
-      /*//---#6 enableMapsForDisagData---start-----------------------------------------------------------------
+      //---#6 enableMapsForDisagData---start-----------------------------------------------------------------
       //Add the radio buttons
       //count up the reloadCounter to avoid multiple builds of the search buttons
       this.reloadCounter ++;
@@ -403,7 +403,7 @@ opensdg.autotrack = function(preset, category, action, label) {
           plugin.init();
         });
       }
-      *///---#6 enableMapsForDisagData---stop------------------------------------------------------------------
+      //---#6 enableMapsForDisagData---stop------------------------------------------------------------------
 
       // Add the year slider.
       this.map.addControl(L.Control.yearSlider({
