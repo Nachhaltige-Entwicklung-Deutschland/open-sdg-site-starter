@@ -440,7 +440,7 @@ var indicatorModel = function (options) {
 
         return datasetIndex === 0 ? headlineColor : colors[datasetIndex];
       },
-      /*//---#11 setTargetPointstyle---start-----------------------------------------------------------------------------------------------
+      //---#11 setTargetPointstyle---start-----------------------------------------------------------------------------------------------
       getPointStyle = function (combinationDescription) {
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
           return 'rect';
@@ -449,9 +449,9 @@ var indicatorModel = function (options) {
           return 'circle';
         }
       },
-      *///---#11 setTargetPointstyle---stop-----------------------------------------------------------------------------------------------
+      //---#11 setTargetPointstyle---stop-----------------------------------------------------------------------------------------------
 
-      /*//---#13 noLineForTargets---start-------------------------------------------------------------------------------------------------
+      //---#13 noLineForTargets---start-------------------------------------------------------------------------------------------------
       //-Since showLines does not work we set the opacity to 0.0 if it is a target------------------------------------------------------
       getLineStyle = function (combinationDescription, datasetIndexMod) {
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
@@ -462,7 +462,7 @@ var indicatorModel = function (options) {
         }
       },
       //---#13 noLineForTargets---stop--------------------------------------------------------------------------------------------------
-      */
+
       //--#14 mixedCharts---start-------------------------------------------------------------------------------------------------------
       barCharts = [translations.t('a) time series')+", "+translations.t('calculated annual values'),
                   translations.t('a) time series')+", "+translations.t('air pollutants overall'),
@@ -533,16 +533,16 @@ var indicatorModel = function (options) {
 
             label: combinationDescription ? combinationDescription : that.country,
             //---#13 noLineForTargets---start-------------------------------
-            borderColor: '#' + getColor(datasetIndex),
-            //borderColor: getLineStyle(combinationDescription, datasetIndexMod),
+            //borderColor: '#' + getColor(datasetIndex),
+            borderColor: getLineStyle(combinationDescription, datasetIndexMod),
             //---#13 noLineForTargets---stop--------------------------------
             //---#4 sameColorForTargetAndTimeSeries---start-----------------
             //backgroundColor: '#' + getColor(datasetIndex),
             backgroundColor: '#' + getColor(datasetIndexMod),
             //---#4 sameColorForTargetAndTimeSeries---stop------------------
-            /*//---#11 setTargetPointstyle---start---------------------------------------
+            //---#11 setTargetPointstyle---start---------------------------------------
             pointStyle: getPointStyle(combinationDescription),
-            *///---#11 setTargetPointstyle---stop----------------------------------------
+            //---#11 setTargetPointstyle---stop----------------------------------------
             radius: 6,
             pointBorderColor: '#' + getColor(datasetIndexMod),
             borderDash: getBorderDash(datasetIndex),
