@@ -140,11 +140,11 @@
         if (cat == ''){
           var records = _.where(geoData, { GeoCode: geocode});
         }
-        /*//If there is a Disaggregation-cathegory with more than one expression:
+        //If there is a Disaggregation-cathegory with more than one expression:
         else{
-          var records = _.where(geoData, { GeoCode: geocode, [cat]: exp });
+          var records = _.where(geoData, { GeoCode: geocode});//, [cat]: exp });
         }
-        *///---#6 enableMapsForDisagData---stop------------------------------------------------------------------
+        //---#6 enableMapsForDisagData---stop------------------------------------------------------------------
         records.forEach(function(record) {
           // Add the Year data into the properties.
           feature.properties[record.Year] = record.Value;
@@ -185,7 +185,7 @@
       };
       return unique;
     },
-    
+
     //---#6 enableMapsForDisagData---stop------------------------------------------------------------------
 
     // Zoom to a feature.
@@ -438,7 +438,7 @@
           //var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty);
           var cat = plugin.findCat();
           var expression = plugin.expression;
-          var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, '', '');//cat, expression);
+          var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, cat, expression);//cat, expression);
           //---#6 enableMapsForDisagData---stop------------------------------------------------------------------
 
           var layer = L.geoJson(geoJson, {
