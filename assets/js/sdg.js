@@ -212,10 +212,10 @@ opensdg.autotrack = function(preset, category, action, label) {
       var unique = [];
       for (var i = 0; i<expressions.length; i++){
         if (unique.indexOf(expressions[i]) != -1){
-          unique.push(expressions[i])
+          unique.push(expressions[i]);
         }
       };
-      console.log("uniQue: ",unique);
+      console.log("uniQue: ",unique.length,unique);
       return unique;
     },
 
