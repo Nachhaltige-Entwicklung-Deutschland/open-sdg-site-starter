@@ -340,7 +340,7 @@ opensdg.autotrack = function(preset, category, action, label) {
       // Because after this point, "this" rarely works.
       var plugin = this;
 
-      //---#6 enableMapsForDisagData---start-----------------------------------------------------------------
+      /*//---#6 enableMapsForDisagData---start-----------------------------------------------------------------
       //Add the radio buttons
       //count up the reloadCounter to avoid multiple builds of the search buttons
       this.reloadCounter ++;
@@ -394,7 +394,7 @@ opensdg.autotrack = function(preset, category, action, label) {
           plugin.init();
         });
       }
-      //---#6 enableMapsForDisagData---stop------------------------------------------------------------------
+      *///---#6 enableMapsForDisagData---stop------------------------------------------------------------------
 
       // Add the year slider.
       this.map.addControl(L.Control.yearSlider({
@@ -461,8 +461,8 @@ opensdg.autotrack = function(preset, category, action, label) {
           var nameProperty = plugin.mapLayers[i].nameProperty;
           //---#6 enableMapsForDisagData---start-----------------------------------------------------------------
           //var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty);
-          var cat = plugin.findCat();
-          var expression = plugin.expression;
+          var cat = ''//plugin.findCat();
+          var expression = ''//plugin.expression;
           var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, cat, expression);
           //---#6 enableMapsForDisagData---stop------------------------------------------------------------------
 
