@@ -430,9 +430,9 @@
           var nameProperty = plugin.mapLayers[i].nameProperty;
           //---#6 enableMapsForDisagData---start-----------------------------------------------------------------
           //var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty);
-          var cat = ''//plugin.findCat();
-          var expression = ''//plugin.expression;
-          var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, cat, expression);
+          //var cat = plugin.findCat();
+          //var expression = plugin.expression;
+          var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, '', '');//cat, expression);
           //---#6 enableMapsForDisagData---stop------------------------------------------------------------------
 
           var layer = L.geoJson(geoJson, {
