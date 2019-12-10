@@ -489,7 +489,7 @@ opensdg.autotrack = function(preset, category, action, label) {
         //---#6 enableMapsForDisagData---start-----------------------------------------------------------------
         //A reload due to Radio-button change creates a second search-Button.
         //Therefor we need to ask if it is the first load here:
-        if (plugin.reloadCounter == 1){
+        //if (plugin.reloadCounter == 1){
         //---#6 enableMapsForDisagData---stop------------------------------------------------------------------
           plugin.searchControl = new L.Control.Search({
             layer: plugin.getAllLayers(),
@@ -505,7 +505,7 @@ opensdg.autotrack = function(preset, category, action, label) {
             autoCollapse: true,
           });
 
-        }//---#6 enableMapsForDisagData---start/stop-----------------------------------------------------------------
+        //}//---#6 enableMapsForDisagData---start/stop-----------------------------------------------------------------
         plugin.map.addControl(plugin.searchControl);
         // The search plugin messes up zoomShowHide, so we have to reset that
         // with this hacky method. Is there a better way?
