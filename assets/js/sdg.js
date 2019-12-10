@@ -214,6 +214,7 @@ opensdg.autotrack = function(preset, category, action, label) {
           unique.push(expressions[i])
         }
       };
+      console.log(unique);
       return unique;
     },
 
