@@ -507,21 +507,11 @@ header {
 .detailsStatus {
   width: 80%;
   float: right;
-  
+
 }
 
-.tableresp {
-    width: 100%;
-    overflow: auto;
-}
-.tableresp::-webkit-scrollbar{
-	-webkit-appearance: none;
-	width: 14px;
-	height: 14px;
-}
-
-.tableresp::-webkit-scrollbar-thumb{
-	border-radius: 8px;
-	border: 3px solid #fff;
-	background-color: rgba(0, 0, 0, .3);
+.responsiveWeather{
+  width: 100%;
+  max-width: 60px;
+  height: auto;
 }
