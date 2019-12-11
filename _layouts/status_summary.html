@@ -8,22 +8,19 @@
   <h1>{{ t.summary.status_summary }}</h1>
 
   {%- for goalreport in site.data.reporting.goals -%}
-
     {%- assign goal_number = goalreport.goal -%}
     {%- assign goal_short_key = goal_number | append: '-short' -%}
     {%- assign goal_short = t.global_goals[goal_short_key] -%}
-
-    <div class="statusGoal">
-        <div class="col-xs-4 col-md-3 col-lg-2">
+    <div class="goal">
+        <div class="frame">
           <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ goal_number }}/">
             <img src="{{ site.goal_image_base }}/{{ current_language }}/{{ goal_number }}.png" alt="{{ goal_short }} - {{ t.general.goal }} {{ goal_number }}" width="180" height="180" />
           </a>
         </div>
-
-        <div class="col-xs-8 col-md-9 col-lg-10">
-
+        <div cclass="details">
           <h3 class="status-goal">
             <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ goal_number }}/">{{ goal_short }}</a>
+
           </h3>
 
           {% assign goal_indicators = site.data.meta | where: 'sdg_goal', goal_number | sort: 'indicator_sort_order' | group_by: 'target_id' %}
@@ -34,7 +31,7 @@
                   {% assign hty_indicator = "history_indicator_" | append: i %}
                   {% assign idc_sort_order = indicator["indicator_sort_order"] %}
                   {% if indicator[hty_active] == true %}
-                    <table class="table table-hover">
+                    <table class="table-scrollable table-hover">
                       <col width="400">
                       <col width="241">
                       <col width="241">
