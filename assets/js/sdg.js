@@ -229,7 +229,6 @@ opensdg.autotrack = function(preset, category, action, label) {
         }
       };
 
-      console.log("uniQue: ",expressions, unique.length,unique);
       return unique;
     },
 
