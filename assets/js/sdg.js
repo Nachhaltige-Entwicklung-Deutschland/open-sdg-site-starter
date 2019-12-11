@@ -2757,7 +2757,7 @@ $(function() {
       if (this.plugin.criminalOffenceName){
         headline += ', <br>' + this.plugin.criminalOffenceName;
       }
-      headline += ', <br>' + this.plugin.unitName;
+      headline += ', <br>' + t.general.data.unit +": " + this.plugin.unitName;
       //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
 
       div.innerHTML = L.Util.template(controlTpl, {
