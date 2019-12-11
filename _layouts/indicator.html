@@ -131,7 +131,11 @@
               </div>
               <div id="mapfooter" class="table-footer-text">
                 {% if sources_list %}
-                  <p>{{ t.indicator.source }}: {{ uniqSources }}</p>
+                  {% if uniqSources | size != 1}
+                    <p>{{ t.indicator.source }}: {{ uniqSources }}</p>
+                  {% else %}
+                    <p>{{ t.indicator.sources }}: {{ uniqSources }}</p>
+                  {% endif %}
                 {% endif %}
               </div>
             </div>
