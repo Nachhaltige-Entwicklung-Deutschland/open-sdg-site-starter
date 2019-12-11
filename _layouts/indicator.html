@@ -129,6 +129,7 @@
               <div id="map">
                 <img src="{{ site.baseurl }}/assets/img/loading.gif" alt="{{ t.indicator.loading_map }}" /> <!---->
               </div>
+              <!---#16 showMapDataSources---start--------------------->
               <div id="mapfooter" class="table-footer-text">
                 {% if sources_list %}
                   {% if uniqSources | size != 1}
@@ -138,6 +139,7 @@
                   {% endif %}
                 {% endif %}
               </div>
+              <!---#16 showMapDataSources---stop---------------------->
             </div>
             {% if meta.embedded_feature_url %}
             <div role="tabpanel" class="tab-pane" id="embeddedmapview" class="embedded-map">
