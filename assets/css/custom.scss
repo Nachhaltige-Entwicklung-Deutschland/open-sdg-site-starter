@@ -516,18 +516,19 @@ header {
       margin-bottom: 3px;
     }
     line-height: 24px;
-
-    .total {
-      line-height: 24px;
-      vertical-align: middle;
-      font-size: 0.65em;
-      width: 110px;
-      text-align: center;
-      display: inline-block;
-      margin-left: 10px;
-      margin-top: -2px;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-    }
   }
+}
+
+.tableresp{
+  width: 100%;
+  overflow-x: auto;
+}
+.tableresp::-webkit-scrollbar{
+  -webkit-appearance: none;
+  width: 14px;
+}
+.tableresp::-webkit-scrollbar-thumb{
+  border-radius: 8px;
+  border: 3px solid #fff;
+  background-color: rgba(0, 0, 0, .3);
 }
