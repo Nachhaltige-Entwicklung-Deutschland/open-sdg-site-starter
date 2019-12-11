@@ -434,7 +434,7 @@ header {
 
 .detailsStatus {
   width: 80%;
-  float: left; }
+  float: right; }
   .detailsStatus h3 {
     margin-top: 10px;
     line-height: 24px; }
