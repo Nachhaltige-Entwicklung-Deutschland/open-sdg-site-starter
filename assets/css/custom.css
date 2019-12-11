@@ -433,7 +433,7 @@ header {
   min-height: 1px; }
 
 .detailsStatus {
-  width: calc(100% - 125px);
+  width: 80%;
   float: left; }
   .detailsStatus h3 {
     margin-top: 10px;
