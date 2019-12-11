@@ -31,7 +31,7 @@
                   {% assign hty_indicator = "history_indicator_" | append: i %}
                   {% assign idc_sort_order = indicator["indicator_sort_order"] %}
                   {% if indicator[hty_active] == true %}
-                    {{ t.summary.indicator }}
+                    {{ indicator[hty_indicator] }}
 
                   {% comment %}
                     <table class="table table-scrollable table-hover">
