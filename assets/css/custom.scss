@@ -500,12 +500,12 @@ header {
 
 //status summary
 .frameStatus {
-    width: 20%;//185px;
+    width: 20%;
     float: left;
     min-height: 1px;
 }
 .detailsStatus {
-  width: calc(100% - 125px);
+  width: 80%;
   float: left;
   h3 {
     margin-top: 10px;
