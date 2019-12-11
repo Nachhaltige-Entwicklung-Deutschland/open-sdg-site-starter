@@ -422,3 +422,7 @@ header {
 #logo {
   width: 245;
   height: 33; }
+
+.statusGoal {
+  width: 100%;
+  height: auto; }
