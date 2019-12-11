@@ -12,12 +12,12 @@
     {%- assign goal_short_key = goal_number | append: '-short' -%}
     {%- assign goal_short = t.global_goals[goal_short_key] -%}
     <div class="goal">
-        <div class="frame">
+        <div class="frameStatus">
           <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ goal_number }}/">
             <img src="{{ site.goal_image_base }}/{{ current_language }}/{{ goal_number }}.png" alt="{{ goal_short }} - {{ t.general.goal }} {{ goal_number }}" width="180" height="180" />
           </a>
         </div>
-        <div cclass="details">
+        <div cclass="detailsStatus">
           <h3 class="status-goal">
             <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ goal_number }}/">{{ goal_short }}</a>
 
@@ -31,6 +31,9 @@
                   {% assign hty_indicator = "history_indicator_" | append: i %}
                   {% assign idc_sort_order = indicator["indicator_sort_order"] %}
                   {% if indicator[hty_active] == true %}
+                    {{ t.summary.indicator }}
+
+                  {% comment %}
                     <table class="table table-scrollable table-hover">
                       <col width="400">
                       <col width="241">
@@ -81,7 +84,7 @@
                       </tr>
                       <tr> <td colspan="10"> &nbsp; </td> </tr>
                     </table>
-
+                  {% endcomment %}
                   {% endif %}
                 {% endfor %}
               {% endfor %}

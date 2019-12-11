@@ -498,9 +498,36 @@ header {
 }
 
 
-//table in status summary
-.table-scrollable{
-  width: 100%;
-  overflow-y: auto;
-  margin: 0 0 1em;
+//status summary
+.frameStatus {
+    width: 185px;
+    float: left;
+    min-height: 1px;
+}
+.detailsStatus {
+  width: calc(100% - 125px);
+  float: left;
+  h3 {
+    margin-top: 10px;
+    @media only screen and (max-width: 720px) {
+      margin-top: 3px;
+    }
+    @media only screen and (max-width: 520px) {
+      margin-bottom: 3px;
+    }
+    line-height: 24px;
+
+    .total {
+      line-height: 24px;
+      vertical-align: middle;
+      font-size: 0.65em;
+      width: 110px;
+      text-align: center;
+      display: inline-block;
+      margin-left: 10px;
+      margin-top: -2px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+  }
 }
