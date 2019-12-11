@@ -519,16 +519,18 @@ header {
   }
 }
 
-.tableresp{
-  width: 100%;
-  overflow-x: auto;
+.tableresp {
+    width: 100%;
+    overflow: auto;
 }
 .tableresp::-webkit-scrollbar{
-  -webkit-appearance: none;
-  width: 14px;
+	-webkit-appearance: none;
+	width: 14px;
+	height: 14px;
 }
+
 .tableresp::-webkit-scrollbar-thumb{
-  border-radius: 8px;
-  border: 3px solid #fff;
-  background-color: rgba(0, 0, 0, .3);
+	border-radius: 8px;
+	border: 3px solid #fff;
+	background-color: rgba(0, 0, 0, .3);
 }
