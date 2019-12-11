@@ -55,7 +55,7 @@ var indicatorModel = function (options) {
   this.geoCodeRegEx = options.geoCodeRegEx;
   this.showMap = options.showMap;
 
-  console.log("copy: ", this.copyright);
+  console.log("footnote: ", this.footnote, " copy: ", this.copyright);
   // initialise the field information, unique fields and unique values for each field:
   (function initialise() {
 
