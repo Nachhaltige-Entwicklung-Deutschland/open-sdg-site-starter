@@ -14,7 +14,7 @@
     <div class="goal">
         <div class="frameStatus">
           <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ goal_number }}/">
-            <img src="{{ site.goal_image_base }}/{{ current_language }}/{{ goal_number }}.png" alt="{{ goal_short }} - {{ t.general.goal }} {{ goal_number }}" width="90%" height="90%" />
+            <img src="{{ site.goal_image_base }}/{{ current_language }}/{{ goal_number }}.png" alt="{{ goal_short }} - {{ t.general.goal }} {{ goal_number }}" width="95%" height="95%" />
           </a>
         </div>
         <div cclass="detailsStatus">
@@ -31,23 +31,12 @@
                   {% assign hty_indicator = "history_indicator_" | append: i %}
                   {% assign idc_sort_order = indicator["indicator_sort_order"] %}
                   {% if indicator[hty_active] == true %}
-                    {{ indicator[hty_indicator] }}
 
-                  {% comment %}
-                    <table class="table table-scrollable table-hover">
-                      <col width="400">
-                      <col width="241">
-                      <col width="241">
-                      <col width="241">
-                      <col width="241">
-                      <col width="241">
-                      <col width="241">
-                      <col width="241">
-                      <col width="241">
-                      <col width="241">
+
+                    <table class="table table-hover" style="width: 100%">
 
                       <tr>
-                        <th> {{ t.summary.indicator }} </th>
+                        <th width="20%"> {{ t.summary.indicator }} </th>
                         <th colspan="9"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/{{ idc_sort_order }}/ ">{{ indicator[hty_indicator] }}</a> </th>
                       </tr>
                       <tr>
@@ -84,7 +73,7 @@
                       </tr>
                       <tr> <td colspan="10"> &nbsp; </td> </tr>
                     </table>
-                  {% endcomment %}
+
 
 
                   {% endif %}
