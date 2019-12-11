@@ -507,16 +507,7 @@ header {
 .detailsStatus {
   width: 80%;
   float: right;
-  h3 {
-    margin-top: 10px;
-    @media only screen and (max-width: 720px) {
-      margin-top: 3px;
-    }
-    @media only screen and (max-width: 520px) {
-      margin-bottom: 3px;
-    }
-    line-height: 24px;
-  }
+  
 }
 
 .tableresp {
