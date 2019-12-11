@@ -100,7 +100,7 @@
     this.timeSeries = _.pluck(this.geoData, 'timeseries');
     this.timeSeriesName = translations.t(this.timeSeries[this.timeSeries.length -1]);
     this.unit = _.pluck(this.geoData, 'Units');
-    this.unitName = translations.t(this.unit[this.unit.length -1]);
+    this.unitName = translations.t('unit') + ": " + translations.t(this.unit[this.unit.length -1]);
     //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
     this.sex = _.pluck(this.geoData, 'sex');
     this.sexName = translations.t(this.sex[this.sex.length -1]);
@@ -109,7 +109,7 @@
     this.typification = _.pluck(this.geoData, 'typification');
     this.typificationName = translations.t(this.typification[this.typification.length -1]);
     this.criminalOffence = _.pluck(this.geoData, 'criminal offences');
-    this.criminalOffenceName = translations.t('unit') + ": " + translations.t(this.criminalOffence[this.criminalOffence.length -1]);
+    this.criminalOffenceName = translations.t(this.criminalOffence[this.criminalOffence.length -1]);
     //---#6 enableMapsForDisagData---start-----------------------------------------------------------------
     this.startExp = 0;
     this.reloadCounter = 0; // to avoid multiple search buttons
