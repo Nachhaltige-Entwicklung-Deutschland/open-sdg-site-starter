@@ -471,4 +471,5 @@ header {
   display: inline; }
 
 .my-header span {
-  float: left; }
+  float: left;
+  font-size: 0.6em; }
