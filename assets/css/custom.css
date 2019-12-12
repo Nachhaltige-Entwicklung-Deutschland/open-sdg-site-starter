@@ -445,9 +445,15 @@ header {
 .responsiveYear {
   font-size: 0.8vw; }
 
+@media screen and (max-width: 75em) {
+  .responsiveYear {
+    font-size: 1.0vw; } }
 @media screen and (max-width: 50em) {
   .responsiveYear {
     font-size: 1.2vw; } }
+@media screen and (max-width: 25em) {
+  .responsiveYear {
+    font-size: 1.4vw; } }
 @media screen and (max-width: 50em) {
   .tableresp {
     border-collapse: collapse; } }
