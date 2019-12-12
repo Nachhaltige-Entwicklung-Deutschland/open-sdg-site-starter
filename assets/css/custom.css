@@ -442,21 +442,15 @@ header {
   min-width: 15px;
   height: auto; }
 
-.responsiveYear {
+.responsiveText {
   font-size: 1.0em; }
 
 @media screen and (max-width: 75em) {
-  .responsiveYear {
+  .responsiveText {
     font-size: 0.8em; } }
 @media screen and (max-width: 50em) {
-  .responsiveYear {
+  .responsiveText {
     font-size: 0.6em; } }
-@media screen and (max-width: 25em) {
-  .responsiveYear {
-    font-size: 0.4em; } }
 @media screen and (max-width: 50em) {
   .tableresp {
     border-collapse: collapse; } }
-@media screen and (max-width: 50em) {
-  .tableText {
-    word-wrap: break-word; } }
