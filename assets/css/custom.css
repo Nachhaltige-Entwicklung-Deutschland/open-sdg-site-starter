@@ -444,3 +444,7 @@ header {
 
 .responsiveYear {
   font-size: 0.8vw; }
+
+@media screen and (min-width: 50em) {
+  .responsiveYear {
+    font-size: 1.2vw; } }
