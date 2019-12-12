@@ -1051,7 +1051,7 @@ var indicatorDataStore = function(dataUrl) {
   else if(this.indicatorId.indexOf('_13-') != -1){
     var colors = ['3f7e44', '254b28', '8bb18e', '0c190d', 'd8e5d9', '326436', '659769', '19321b', 'b2cbb4'];
   }
-  else if(this.indicatorId.indexOf('_14-')){
+  else if(this.indicatorId.indexOf('_14-') != -1){
     var colors = ['0a97d9', '065a82', '6cc0e8', '021e2b', 'ceeaf7', '0878ad', '3aabe0', '043c56', '9dd5ef'];
   }
   else if(this.indicatorId.indexOf('_15-') != -1){
