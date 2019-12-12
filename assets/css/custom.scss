@@ -561,11 +561,10 @@ header {
 }
 //---status summary---stop------------------------
 
-.my-header h3 {
+.my-header {
   display: inline-block;
 }
-.my-header span {
+.my-header-note {
   display: inline-block;
-  float: left;
   font-size: 0.6em;
 }
