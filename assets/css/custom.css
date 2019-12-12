@@ -467,3 +467,8 @@ header {
 @media screen and (max-width: 50em) {
   .tableresp {
     border-collapse: collapse; } }
+.my-header h3 {
+  display: inline; }
+
+.my-header span {
+  float: right; }
