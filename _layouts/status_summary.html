@@ -76,14 +76,14 @@
                         {% for j in letters %}
                           {% assign status = "history_status_year_" | append: j | append: "_" | append: i %}
                           {% if indicator[status] %}
-                          
+
                             {% if indicator[status] == 'Nebel' %}
                               {% assign status_title = t.status['nebel'] %}
-                            {% else if indicator[status] == 'Sonne'}
+                            {% elsif indicator[status] == 'Sonne'}
                               {% assign status_title = t.status['sonne'] %}
-                            {% else if indicator[status] == 'Leicht bewölkt'}
+                            {% elsif indicator[status] == 'Leicht bewölkt'}
                               {% assign status_title = t.status['leicht bewölkt'] %}
-                            {% else if indicator[status] == 'Blitz'}
+                            {% elsif indicator[status] == 'Blitz'}
                               {% assign status_title = t.status['blitz'] %}
                             {% endif %}
 
