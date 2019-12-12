@@ -448,3 +448,6 @@ header {
 @media screen and (max-width: 50em) {
   .responsiveYear {
     font-size: 1.2vw; } }
+@media screen and (max-width: 50em) {
+  .tableresp {
+    border-collapse: collapse; } }
