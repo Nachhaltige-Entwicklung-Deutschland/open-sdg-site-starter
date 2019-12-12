@@ -78,9 +78,6 @@
                         {% for j in letters %}
                           {% assign status = "history_status_year_" | append: j | append: "_" | append: i %}
                           {% if indicator[status] %}
-                            {% if goal_number == 1 %}
-                            console.log(j, {{ indicator[status] }})
-                            {% endif %}
 
                             {% if indicator[status] == 'Nebel' %}
                               {% assign status_title = t.status['nebel'] %}
@@ -91,6 +88,11 @@
                             {% else %}
                               {% assign status_title = t.status['blitz'] %}
                             {% endif %}
+
+                            {% if goal_number == 1 %}
+                              {{ indicator[status] }}, {{ status_title }}
+                            {% endif %}
+
 
                             {% if j == 'i' or j == 'h' or j == 'g' or j == 'f' or j == 'e' %}
                               <td width="10%" align="center" class="hidden-xs"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ indicator[status] }}.png" alt="{{ indicator[status] }}" class="responsiveWeather hidden-xs" title="{{ status_title }}"/></a> </td>
