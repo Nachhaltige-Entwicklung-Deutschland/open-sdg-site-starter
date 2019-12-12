@@ -435,10 +435,6 @@ header {
 @media screen and (max-width: 25em) {
   .frameStatus {
     display: none; } }
-.detailsStatus {
-  width: 80%;
-  float: right; }
-
 .tableresp {
   width: 80%;
   align: right;
