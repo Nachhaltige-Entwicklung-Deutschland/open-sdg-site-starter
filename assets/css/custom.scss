@@ -517,35 +517,23 @@ header {
   height: auto;
 }
 
-.responsiveYear{
+.responsiveText{
   font-size: 1.0em;//0.8vw;
 }
 
 @media screen and (max-width: 75em) {
-  .responsiveYear {
+  .responsiveText {
     font-size: 0.8em;//1.0vw;
   }
 }
 @media screen and (max-width: 50em) {
-  .responsiveYear {
+  .responsiveText {
     font-size: 0.6em;//1.2vw;
-  }
-}
-@media screen and (max-width: 25em) {
-  .responsiveYear {
-    font-size: 0.4em;//2.0vw;
   }
 }
 
 @media screen and (max-width: 50em) {
   .tableresp{
     border-collapse: collapse;
-  }
-}
-
-
-@media screen and (max-width: 50em) {
-  .tableText{
-    word-wrap: break-word;
   }
 }
