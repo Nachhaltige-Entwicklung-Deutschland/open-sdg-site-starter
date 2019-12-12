@@ -508,12 +508,22 @@ header {
   width: 80%;
   float: right;
 }
-@media screen and (max-width: 75em) {
-  .detailsStatus {
+
+.tableresp {
+  width: 80%;
+  align: right;
+  float: right;
+}
+
+@media screen and (max-width: 25em) {
+  .tableresp {
     width: 100%;
+    align: left;
     float: left;
   }
 }
+
+
 
 .responsiveWeather{
   width: 100%;
@@ -521,6 +531,8 @@ header {
   min-width: 15px;
   height: auto;
 }
+
+
 
 .responsiveText{
   font-size: 1.0em;//0.8vw;
