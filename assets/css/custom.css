@@ -453,7 +453,7 @@ header {
     font-size: 1.2vw; } }
 @media screen and (max-width: 25em) {
   .responsiveYear {
-    font-size: 1.4vw; } }
+    font-size: 2.0vw; } }
 @media screen and (max-width: 50em) {
   .tableresp {
     border-collapse: collapse; } }
