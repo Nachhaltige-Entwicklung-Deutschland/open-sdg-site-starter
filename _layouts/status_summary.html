@@ -50,7 +50,7 @@
                         {% for j in letters %}
                           {% assign year = "history_year_" | append: j | append: "_" | append: i %}
                           {% if indicator[year] %}
-                            <td width="10%" align="center"> {{ indicator[year] }} </td>
+                            <td width="10%" align="center"> <p style="font-size:5vw;">{{ indicator[year] }}</p> </td>
                             {% assign add = add | minus: 1 %}
                           {% endif %}
                         {% endfor %}
