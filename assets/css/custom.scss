@@ -542,3 +542,10 @@ header {
     border-collapse: collapse;
   }
 }
+
+
+@media screen and (max-width: 50em) {
+  .tableText{
+    word-wrap: break-word;
+  }
+}
