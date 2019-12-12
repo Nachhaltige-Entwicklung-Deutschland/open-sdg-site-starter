@@ -507,7 +507,12 @@ header {
 .detailsStatus {
   width: 80%;
   float: right;
-
+}
+@media screen and (max-width: 75em) {
+  .detailsStatus {
+    width: 100%;
+    float: left;
+  }
 }
 
 .responsiveWeather{

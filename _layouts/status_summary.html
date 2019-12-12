@@ -36,15 +36,15 @@
 
                       <tr>
                         <th width="10%"> <div class=responsiveText>{{ t.summary.indicator }}</div> </th>
-                        <th colspan="9"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/{{ idc_sort_order }}/ ">{{ indicator[hty_indicator] }}</a> </th>
+                        <th colspan="9"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/{{ idc_sort_order }}/ "><div class=responsiveText>{{ indicator[hty_indicator] }}</div></a> </th>
                       </tr>
                       <tr>
                         <th> <div class=responsiveText>{{ t.summary.target }} </div></th>
                         {% assign target = "history_target_" | append: i %}
-                        <td colspan="9"> {{ indicator[target]}} </td>
+                        <td colspan="9"> <div class=responsiveText>{{ indicator[target]}}</div> </td>
                       </tr>
                       <tr>
-                        <th> {{ t.summary.year }} </th>
+                        <th> <div class=responsiveText>{{ t.summary.year }}</div> </th>
                         {% assign letters = "i,h,g,f,e,d,c,b,a" | split: ',' %}
                         {% assign add = letters.size %}
                         {% for j in letters %}
@@ -64,7 +64,7 @@
                         {% endfor %}
                       </tr>
                       <tr>
-                        <th> {{ t.summary.status }} </th>
+                        <th> <div class=responsiveText>{{ t.summary.status }}</div> </th>
                         {% for j in letters %}
                           {% assign status = "history_status_year_" | append: j | append: "_" | append: i %}
                           {% if indicator[status] %}
