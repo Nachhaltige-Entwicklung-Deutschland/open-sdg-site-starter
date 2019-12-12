@@ -2,7 +2,6 @@
 {% include head.html %}
 {% include header.html %}
 
-
 <div id="main-content" class="container reportingstatus">
 
   <h1>{{ t.summary.status_summary }}</h1>
@@ -80,7 +79,7 @@
                             {% if j == 'i' or j == 'h' or j == 'g' or j == 'f' or j == 'e' %}
                               <td width="10%" align="center" class="hidden-xs"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ indicator[status] }}.png" alt="{{ indicator[status] }}" class="responsiveWeather hidden-xs" title="{{ indicator[status] }}"/></a> </td>
                             {% else %}
-                              <td width="10%" align="center"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ indicator[status] }}.png" alt="{{ indicator[status] }}" class="responsiveWeather" title="{{ indicator[status] }}"/></a> </td>
+                              <td width="10%" align="center"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ indicator[status] }}.png" alt="{{ indicator[status] }}" class="responsiveWeather" title="t.status[{{ indicator[status] }}]"/></a> </td>
                             {% endif %}
                           {% endif %}
                         {% endfor %}

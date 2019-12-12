@@ -560,3 +560,10 @@ header {
   }
 }
 //---status summary---stop------------------------
+
+.my-header h3 { 
+  display: inline;
+}
+.my-header span {
+  float: right;
+}
