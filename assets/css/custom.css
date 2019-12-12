@@ -467,10 +467,9 @@ header {
 @media screen and (max-width: 50em) {
   .tableresp {
     border-collapse: collapse; } }
-.my-header h3 {
+.my-header {
   display: inline-block; }
 
-.my-header span {
+.my-header-note {
   display: inline-block;
-  float: left;
   font-size: 0.6em; }
