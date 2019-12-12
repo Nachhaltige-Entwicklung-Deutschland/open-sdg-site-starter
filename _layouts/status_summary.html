@@ -51,7 +51,7 @@
                           {% assign year = "history_year_" | append: j | append: "_" | append: i %}
                           {% if indicator[year] %}
                             {% if j == 'i' or j == 'h' or j == 'g' or j == 'f' or j == 'e' %}
-                              <td width="10%" align="center"> <p><span class="responsiveYear hidden-xs">{{ indicator[year] }}</span></p> </td>
+                              <td width="10%" align="center" class="hidden-xs"> <p><span class="responsiveYear hidden-xs">{{ indicator[year] }}</span></p> </td>
                             {% else %}
                               <td width="10%" align="center"> <p><span class="responsiveYear">{{ indicator[year] }}</span></p> </td>
                             {% endif %}
@@ -69,7 +69,7 @@
                           {% assign status = "history_status_year_" | append: j | append: "_" | append: i %}
                           {% if indicator[status] %}
                             {% if j == 'i' or j == 'h' or j == 'g' or j == 'f' or j == 'e' %}
-                              <td width="10%" align="center"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ indicator[status] }}.png" alt="{{ indicator[status] }}" class="responsiveWeather hidden-xs" title="{{ indicator[status] }}"/></a> </td>
+                              <td width="10%" align="center" class="hidden-xs"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ indicator[status] }}.png" alt="{{ indicator[status] }}" class="responsiveWeather hidden-xs" title="{{ indicator[status] }}"/></a> </td>
                             {% else %}
                               <td width="10%" align="center"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ indicator[status] }}.png" alt="{{ indicator[status] }}" class="responsiveWeather" title="{{ indicator[status] }}"/></a> </td>
                             {% endif %}
