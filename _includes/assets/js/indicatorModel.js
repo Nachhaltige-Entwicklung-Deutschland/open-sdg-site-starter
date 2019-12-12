@@ -244,7 +244,7 @@ var indicatorModel = function (options) {
   //['e5243b', 'e5b735', '4c9f38', 'c5192d', 'ff3a21', '26bde2', 'fcc30b', 'a21942', 'fd6925', 'dd1367'];
   var headlinePointstyle = 'circle';
   var pointStyles = ['circle', 'triangle', 'cross', 'crossRot', 'dash', 'line', 'rect', 'rectRounded', 'rectRot', 'star', 'triangle'];
-  console.log('XxX',this.indicatorId)
+  console.log('XxX',this.indicatorId,this.indicatorId.indexOf('_15-'))
   // allow headline + (2 x others)
   var maxDatasetCount = 2 * colors.length;
 
