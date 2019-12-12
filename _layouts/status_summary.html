@@ -78,6 +78,9 @@
                         {% for j in letters %}
                           {% assign status = "history_status_year_" | append: j | append: "_" | append: i %}
                           {% if indicator[status] %}
+                            {% if goal_number == 1 %}
+                            console.log(j, {{ indicator[status] }})
+                            {% endif %}
 
                             {% if indicator[status] == 'Nebel' %}
                               {% assign status_title = t.status['nebel'] %}
