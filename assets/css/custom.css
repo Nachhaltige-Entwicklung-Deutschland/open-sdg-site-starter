@@ -468,7 +468,7 @@ header {
   .tableresp {
     border-collapse: collapse; } }
 .my-header h3 {
-  display: inline; }
+  display: inline-block; }
 
 .my-header span {
   float: left;
