@@ -12,7 +12,7 @@
     {%- assign goal_short_key = goal_number | append: '-short' -%}
     {%- assign goal_short = t.global_goals[goal_short_key] -%}
     <div class="goal">
-        <div class="frameStatus hidden-xs">
+        <div class="frameStatus">
           <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ goal_number }}/">
             <img src="{{ site.goal_image_base }}/{{ current_language }}/{{ goal_number }}.png" alt="{{ goal_short }} - {{ t.general.goal }} {{ goal_number }}" width="95%" min-height="60px"/>
           </a>
