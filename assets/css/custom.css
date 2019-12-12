@@ -439,5 +439,8 @@ header {
 .responsiveWeather {
   width: 100%;
   max-width: 60px;
-  min-width: 20px;
+  min-width: 15px;
   height: auto; }
+
+.responsiveYear {
+  font-size: 0.8vw; }
