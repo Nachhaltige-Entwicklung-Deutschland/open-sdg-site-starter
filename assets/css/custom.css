@@ -432,6 +432,9 @@ header {
   float: left;
   min-height: 1px; }
 
+@media screen and (max-width: 25em) {
+  .frameStatus {
+    display: none; } }
 .detailsStatus {
   width: 80%;
   float: right; }
