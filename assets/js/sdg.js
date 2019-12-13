@@ -1329,24 +1329,28 @@ var indicatorDataStore = function(dataUrl) {
               nameList.push(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length));
               indexList.push(datasetIndex);
               var datasetIndexMod = datasetIndex;
+              console.log("first case");
             }
             else {
               // Ziel oder Zeitreihe - Mit Disaggregationen - Pendant ist schon aufgerufen worden
               // --> finde den Index des Pendants
               var tempIndex = nameList.indexOf(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length));
               var datasetIndexMod = indexList[tempIndex];
+              console.log("second case");
             }
           }
           else {
             // Ziel oder Zeitreihe - Keine weiteren Disaggregationen
             // Nimm die erste farbe aus der Liste
             var datasetIndexMod = 0;
+            console.log("third case");
           }
         }
         else {
           // Keine Ziel-/Zeitreihen-Unterteilung
           // Nimm den normalen Indexwert
           var datasetIndexMod = datasetIndex;
+          console.log("fourth case");
         }
         //---#4 sameColorForTargetAndTimeSeries---stop------------------
         console.log(combinationDescription, datasetIndexMod, nameList, indexList);
