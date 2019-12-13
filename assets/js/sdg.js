@@ -1329,7 +1329,7 @@ var indicatorDataStore = function(dataUrl) {
               nameList.push(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length));
               indexList.push(datasetIndex);
               var datasetIndexMod = datasetIndex;
-              console.log("first case");
+              console.log("first case", nameList.indexOf(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length)));
             }
             else {
               // Ziel oder Zeitreihe - Mit Disaggregationen - Pendant ist schon aufgerufen worden
