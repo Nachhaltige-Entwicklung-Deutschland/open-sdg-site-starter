@@ -526,7 +526,7 @@ var indicatorModel = function (options) {
           var datasetIndexMod = datasetIndex;
         }
         //---#4 sameColorForTargetAndTimeSeries---stop------------------
-        console.log(combinationDescription, datasetIndexMod);
+        console.log(combinationDescription, datasetIndexMod, nameList, indexList);
         var fieldIndex,
           ds = _.extend({
 
