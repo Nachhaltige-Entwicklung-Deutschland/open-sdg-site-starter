@@ -1352,7 +1352,7 @@ var indicatorDataStore = function(dataUrl) {
         console.log(combinationDescription, datasetIndexMod);
         var fieldIndex,
           ds = _.extend({
-            console.log(combinationDescription, datasetIndexMod);
+
             label: combinationDescription ? combinationDescription : that.country,
             //---#13 noLineForTargets---start-------------------------------
             //borderColor: '#' + getColor(datasetIndex),
