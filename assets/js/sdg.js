@@ -2082,13 +2082,13 @@ var indicatorView = function (model, options) {
             var text = ['<ul id="legend">'];
             var temp = [];
             _.each(chart.data.datasets, function(dataset, datasetIndex) {
-              temp.push({label: dataset.label, borderdash: dataset.borderDash, backgroundColor: dataset.backgroundColor});
+              temp.push({label: dataset.label, borderdash: dataset.borderDash, backgroundColor: dataset.backgroundColor, datasetIndex: dataset.datasetIndex});
             });
             var sorted = temp.sort(function(a, b) {
               return (a.backgroundColor > b.backgroundColor) - (a.backgroundColor < b.backgroundColor);
             });
 
-            _.each(sorted, function(label, borderDash, backgroundColor){
+            _.each(sorted, function(label, borderDash, backgroundColor, datasetIndex){
               text.push('<li data-datasetindex="' + datasetIndex + '">');
               //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
               //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
