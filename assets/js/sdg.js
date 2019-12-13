@@ -1330,31 +1330,26 @@ var indicatorDataStore = function(dataUrl) {
               nameList.push(sub);
               indexList.push(datasetIndex);
               var datasetIndexMod = datasetIndex;
-              console.log("first case", nameList.indexOf(sub));
             }
             else {
               // Ziel oder Zeitreihe - Mit Disaggregationen - Pendant ist schon aufgerufen worden
               // --> finde den Index des Pendants
               var tempIndex = nameList.indexOf(sub);
               var datasetIndexMod = indexList[tempIndex];
-              console.log("second case");
             }
           }
           else {
             // Ziel oder Zeitreihe - Keine weiteren Disaggregationen
             // Nimm die erste farbe aus der Liste
             var datasetIndexMod = 0;
-            console.log("third case");
           }
         }
         else {
           // Keine Ziel-/Zeitreihen-Unterteilung
           // Nimm den normalen Indexwert
           var datasetIndexMod = datasetIndex;
-          console.log("fourth case");
         }
         //---#4 sameColorForTargetAndTimeSeries---stop------------------
-        console.log(combinationDescription, datasetIndexMod, nameList, indexList);
         var fieldIndex,
           ds = _.extend({
 
@@ -2085,28 +2080,21 @@ var indicatorView = function (model, options) {
         },
         legendCallback: function(chart) {
             var text = ['<ul id="legend">'];
-
-            _.each(chart.data.datasets, function(dataset, datasetIndex) {
-              var firstFour = dataset.label.substr(0,4);
-              var firstSets = ['Ziel', 'Targ'];
-              if (firstSets.indexOf(firstFour) != -1){
-                text.push('<li data-datasetindex="' + datasetIndex + '">');
+            var datasetMod = _.sortBy(chart.data.datasets, function(x){ return num.label.substring(-5, -1);})
+            _.each(datasetMod, function(dataset, datasetIndex) {
+              text.push('<li data-datasetindex="' + datasetIndex + '">');
+              //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
+              //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
+              if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
                 text.push('<span class="swatchTgt' + '" style="background-color: ' + dataset.backgroundColor + '">');
-                text.push('</span>');
-                text.push(translations.t(dataset.label));
-                text.push('</li>');
               }
-            });
-            _.each(chart.data.datasets, function(dataset, datasetIndex) {
-              var firstFour = dataset.label.substr(0,4);
-              var firstSets = ['Ziel', 'Targ'];
-              if (firstSets.indexOf(firstFour) == -1){
-                text.push('<li data-datasetindex="' + datasetIndex + '">');
+              else{
                 text.push('<span class="swatchTsr' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
-                text.push('</span>');
-                text.push(translations.t(dataset.label));
-                text.push('</li>');
               }
+              //---#3 targetDifferentInLegend---stop-----------------------------------------------------------------------------------------------------------------------------
+              text.push('</span>');
+              text.push(translations.t(dataset.label));
+              text.push('</li>');
             });
 
             text.push('</ul>');
