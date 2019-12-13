@@ -526,10 +526,10 @@ var indicatorModel = function (options) {
           var datasetIndexMod = datasetIndex;
         }
         //---#4 sameColorForTargetAndTimeSeries---stop------------------
-
+        console.log(combinationDescription, datasetIndexMod);
         var fieldIndex,
           ds = _.extend({
-
+            console.log(combinationDescription, datasetIndexMod);
             label: combinationDescription ? combinationDescription : that.country,
             //---#13 noLineForTargets---start-------------------------------
             //borderColor: '#' + getColor(datasetIndex),
