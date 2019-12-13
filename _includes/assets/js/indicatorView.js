@@ -420,8 +420,8 @@ var indicatorView = function (model, options) {
         legendCallback: function(chart) {
             var text = ['<ul id="legend">'];
 
-            _.each(chart.data.datasets, function(dataset, datasetIndex) {
-              text.push('<li data-datasetindex="' + datasetIndex + '">');
+            _.each(chart.data.datasets, function(dataset, datasetIndexMod) {
+              text.push('<li data-datasetindex="' + datasetIndexMod + '">');
               //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
               //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
               if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
