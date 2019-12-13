@@ -421,7 +421,7 @@ var indicatorView = function (model, options) {
             var text = ['<ul id="legend">'];
 
             _.each(chart.data.datasets, function(dataset, datasetIndex) {
-              var firtsFour = dataset.label.substr(0,4);
+              var firstFour = dataset.label.substr(0,4);
               var firstSets = ['Ziel', 'Targ', 'Zeit', 'Time'];
               if (firstSets.indexOf(firstFour) != -1){
                 text.push('<li data-datasetindex="' + datasetIndex + '">');
@@ -437,7 +437,7 @@ var indicatorView = function (model, options) {
               }
             });
             _.each(chart.data.datasets, function(dataset, datasetIndex) {
-              var firtsFour = dataset.label.substr(0,4);
+              var firstFour = dataset.label.substr(0,4);
               var firstSets = ['Ziel', 'Targ', 'Zeit', 'Time'];
               if (firstSets.indexOf(firstFour) == -1){
                 text.push('<li data-datasetindex="' + datasetIndex + '">');
@@ -447,7 +447,7 @@ var indicatorView = function (model, options) {
                 text.push('</li>');
               }
             });
-            
+
             text.push('</ul>');
             return text.join('');
         },
