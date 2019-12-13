@@ -2086,22 +2086,31 @@ var indicatorView = function (model, options) {
         legendCallback: function(chart) {
             var text = ['<ul id="legend">'];
 
-            _.each(chart.data.datasets, function(dataset, datasetIndexMod) {
-              text.push('<li data-datasetindex="' + datasetIndexMod + '">');
+            _.each(chart.data.datasets, function(dataset, datasetIndex) {
               //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
               //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
-              if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
-                text.push('<span class="swatchTgt' + '" style="background-color: ' + dataset.backgroundColor + '">');
+              //---first the targets and corresponding time series--------
+              var firstFour = dataset.label.substr(0,4);
+              if (firstFour == 'Ziel' || firstFour == 'Targ'|| firstFour == 'Zeit'|| firstFour == 'Time'){
+                text.push('<li data-datasetindex="' + datasetIndex + '">');
+                if (firstFour == 'Ziel' || firstFour == 'Target'){
+                  text.push('<span class="swatchTgt' + '" style="background-color: ' + dataset.backgroundColor + '">');
+                }
+                else{
+                  text.push('<span class="swatchTsr' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
+                }
+                text.push('</span>');
+                text.push(translations.t(dataset.label));
+                text.push('</li>');
               }
               else{
+                text.push('<li data-datasetindex="' + datasetIndex + '">');
                 text.push('<span class="swatchTsr' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
+                text.push('</span>');
+                text.push(translations.t(dataset.label));
+                text.push('</li>');
               }
               //---#3 targetDifferentInLegend---stop-----------------------------------------------------------------------------------------------------------------------------
-              text.push('</span>');
-              text.push(translations.t(dataset.label));
-              text.push('</li>');
-            });
-
             text.push('</ul>');
             return text.join('');
         },
