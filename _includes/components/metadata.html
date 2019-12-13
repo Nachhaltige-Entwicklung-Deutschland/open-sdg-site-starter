@@ -49,23 +49,29 @@
         {% if indicator_metadata.name contains "_a_" %}
           {% assign year_a = meta[indicator_metadata.name] %}
         {% elsif indicator_metadata.name contains "_b_" %}
-          {% assign year_b = meta[indicator_metadata.name] | t | markdownify %}
+          {% assign year_b = meta[indicator_metadata.name] %}
         {% elsif indicator_metadata.name contains "_c_" %}
-          {% assign year_c = meta[indicator_metadata.name] | t | markdownify %}
+          {% assign year_c = meta[indicator_metadata.name] %}
         {% elsif indicator_metadata.name contains "_d_" %}
-          {% assign year_d = meta[indicator_metadata.name] | t | markdownify %}
+          {% assign year_d = meta[indicator_metadata.name] %}
 
-        {% assign status_downcase = year_a | downcase %}
-        {% assign title = t.status[status_downcase] %}
+        {% assign status_a_downcase = year_a | downcase %}
+        {% assign title_a = t.status[status_a_downcase] %}
+        {% assign status_b_downcase = year_b | downcase %}
+        {% assign title_b = t.status[status_b_downcase] %}
+        {% assign status_c_downcase = year_c | downcase %}
+        {% assign title_c = t.status[status_c_downcase] %}
+        {% assign status_d_downcase = year_d | downcase %}
+        {% assign title_d = t.status[status_d_downcase] %}
 
             {% if indicator_metadata.name contains "_status" %}
               <tr>
                 <th scope="row">{{ metadata_label }} </th>
                   {% if year_d and year_a %}
-                  <td align="center"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ year_d }}.png" alt="Status" class="responsiveWeather" title="{{ year_d }}"/></a></td>
-                  <td align="center"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ year_d }}.png" alt="Status" class="responsiveWeather" title="{{ year_c }}"/></a></td>
-                  <td align="center"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ year_b }}.png" alt="Status" class="responsiveWeather" title="{{ title  }}"/></a></td>
-                  <td align="center"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ year_a }}.png" alt="Status" class="responsiveWeather" title="{{ year_a }}"/></a></td>
+                  <td align="center"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ year_d }}.png" alt="Status" class="responsiveWeather" title="{{ title_d }}"/></a></td>
+                  <td align="center"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ year_c }}.png" alt="Status" class="responsiveWeather" title="{{ title_c }}"/></a></td>
+                  <td align="center"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ year_b }}.png" alt="Status" class="responsiveWeather" title="{{ title_b  }}"/></a></td>
+                  <td align="center"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ year_a }}.png" alt="Status" class="responsiveWeather" title="{{ title_a }}"/></a></td>
                   {% endif %}
               </tr>
             {% else %}
