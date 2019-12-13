@@ -85,6 +85,8 @@
                               {% assign status_title = t.status['sonne'] %}
                             {% elsif indicator[status] == 'Leicht bewölkt' %}
                               {% assign status_title = t.status['leicht bewölkt'] %}
+                            {% elsif indicator[status] == 'Wolke' %}
+                              {% assign status_title = t.status['wolke'] %}
                             {% elsif indicator[status] == 'Blitz' %}
                               {% assign status_title = t.status['blitz'] %}
                             {% endif %}
