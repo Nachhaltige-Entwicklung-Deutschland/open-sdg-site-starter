@@ -2089,6 +2089,7 @@ var indicatorView = function (model, options) {
             });
 
             _.each(sorted, function(label, borderDash, backgroundColor, datasetIndex){
+              console.log(label, borderDash, backgroundColor, datasetIndex)
               text.push('<li data-datasetindex="' + datasetIndex + '">');
               //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
               //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
