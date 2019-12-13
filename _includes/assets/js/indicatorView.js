@@ -422,15 +422,10 @@ var indicatorView = function (model, options) {
 
             _.each(chart.data.datasets, function(dataset, datasetIndex) {
               var firstFour = dataset.label.substr(0,4);
-              var firstSets = ['Ziel', 'Targ', 'Zeit', 'Time'];
+              var firstSets = ['Ziel', 'Targ'];
               if (firstSets.indexOf(firstFour) != -1){
                 text.push('<li data-datasetindex="' + datasetIndex + '">');
-                if (firstFour == 'Ziel' || firstFour == 'Target'){
-                  text.push('<span class="swatchTgt' + '" style="background-color: ' + dataset.backgroundColor + '">');
-                }
-                else{
-                  text.push('<span class="swatchTsr' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
-                }
+                text.push('<span class="swatchTgt' + '" style="background-color: ' + dataset.backgroundColor + '">');
                 text.push('</span>');
                 text.push(translations.t(dataset.label));
                 text.push('</li>');
@@ -438,7 +433,7 @@ var indicatorView = function (model, options) {
             });
             _.each(chart.data.datasets, function(dataset, datasetIndex) {
               var firstFour = dataset.label.substr(0,4);
-              var firstSets = ['Ziel', 'Targ', 'Zeit', 'Time'];
+              var firstSets = ['Ziel', 'Targ'];
               if (firstSets.indexOf(firstFour) == -1){
                 text.push('<li data-datasetindex="' + datasetIndex + '">');
                 text.push('<span class="swatchTsr' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
