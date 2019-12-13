@@ -500,18 +500,19 @@ var indicatorModel = function (options) {
         var categ = combinationDescription.substring(0, 4)
         if (categ == 'Ziel' || categ == 'Zeit' || categ == 'Targ' || categ == 'Time') {
           if (combinationDescription.indexOf(',') != -1){
-            if (!nameList.indexOf(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length)) != -1) {
+            var sub = combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length)
+            if (nameList.indexOf(sub) == -1) {
               // Ziel oder Zeitreihe - Mit Disaggregationen - Pendant ist noch nicht aufgerufen worden
               // Schreibe den Index auf die Liste, damit dieser beim Aufruf des Pendants gefunden werden kann
-              nameList.push(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length));
+              nameList.push(sub);
               indexList.push(datasetIndex);
               var datasetIndexMod = datasetIndex;
-              console.log("first case", nameList.indexOf(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length)));
+              console.log("first case", nameList.indexOf(sub));
             }
             else {
               // Ziel oder Zeitreihe - Mit Disaggregationen - Pendant ist schon aufgerufen worden
               // --> finde den Index des Pendants
-              var tempIndex = nameList.indexOf(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length));
+              var tempIndex = nameList.indexOf(sub);
               var datasetIndexMod = indexList[tempIndex];
               console.log("second case");
             }
