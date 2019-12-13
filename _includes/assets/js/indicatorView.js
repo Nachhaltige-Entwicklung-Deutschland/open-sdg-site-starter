@@ -425,7 +425,7 @@ var indicatorView = function (model, options) {
               var firstSets = ['Ziel', 'Targ', 'Zeit', 'Time'];
               if (firstSets.indexOf(firstFour) != -1){
                 text.push('<li data-datasetindex="' + datasetIndex + '">');
-                if (firtsFour == 'Ziel' || firtsFour == 'Target'){
+                if (firstFour == 'Ziel' || firstFour == 'Target'){
                   text.push('<span class="swatchTgt' + '" style="background-color: ' + dataset.backgroundColor + '">');
                 }
                 else{
