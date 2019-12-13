@@ -419,7 +419,7 @@ var indicatorView = function (model, options) {
         },
         legendCallback: function(chart) {
             var text = ['<ul id="legend">'];
-            var datasetMod = _.sortBy(chart.data.datasets, function(x){ return x.label.substr(-5, -1);});
+            var datasetMod = _.sortBy(chart.data.datasets, chart.data.datasets.backgroundColor);
             console.log(chart.data.datasets, datasetMod)
             _.each(datasetMod, function(dataset, datasetIndex) {
               text.push('<li data-datasetindex="' + datasetIndex + '">');
