@@ -419,21 +419,27 @@ var indicatorView = function (model, options) {
         },
         legendCallback: function(chart) {
             var text = ['<ul id="legend">'];
-            var datasetMod = _.sortBy(chart.data.datasets, chart.data.datasets.backgroundColor);
-            console.log(chart.data.datasets, datasetMod)
-            _.each(datasetMod, function(dataset, datasetIndex) {
+            var temp = [];
+            _.each(chart.data.datasets, function(dataset, datasetIndex) {
+              temp.push({label: dataset.label, borderdash: dataset.borderDash, backgroundColor: dataset.backgroundColor});
+            });
+            var sorted = temp.sort(function(a, b) {
+              return (a.backgroundColor > b.backgroundColor) - (a.backgroundColor < b.backgroundColor);
+            });
+
+            _.each(sorted, function(label, borderDash, backgroundColor)){
               text.push('<li data-datasetindex="' + datasetIndex + '">');
               //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
               //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
-              if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
-                text.push('<span class="swatchTgt' + '" style="background-color: ' + dataset.backgroundColor + '">');
+              if (label.substr(0,4) == 'Ziel' || label.substr(0,6) == 'Target'){
+                text.push('<span class="swatchTgt' + '" style="background-color: ' + backgroundColor + '">');
               }
               else{
-                text.push('<span class="swatchTsr' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
+                text.push('<span class="swatchTsr' + (borderDash ? ' dashed' : '') + '" style="background-color: ' + backgroundColor + '">');
               }
               //---#3 targetDifferentInLegend---stop-----------------------------------------------------------------------------------------------------------------------------
               text.push('</span>');
-              text.push(translations.t(dataset.label));
+              text.push(translations.t(label));
               text.push('</li>');
             });
 
