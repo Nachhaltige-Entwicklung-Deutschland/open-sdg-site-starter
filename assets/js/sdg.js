@@ -2080,7 +2080,7 @@ var indicatorView = function (model, options) {
         },
         legendCallback: function(chart) {
             var text = ['<ul id="legend">'];
-            text.push('<span margin="left">');
+            text.push('<span>');
 
             //---sort the dataset by string or substring
             var temp = [];
@@ -2110,15 +2110,18 @@ var indicatorView = function (model, options) {
               else{
                 var subLabel = set.label;
               }
+              subLabel = subLabel.replace("2,5", "2.5").replace("Gebäude-, Frei- & Betriebsfläche","Gebäude- Frei- & Betriebsfläche");
+
 
               console.log(subLabel, last)
-              if (subLabel.substr(0, subLabel.lastIndexOf(',')) != last && subLabel.indexOf('<sub>2,5</sub>') == -1){
-                text.push('</span><hr><span margin="left">');
+              if (subLabel.substr(0, subLabel.lastIndexOf(',')) != last){
+                text.push('</span><hr><span>');
               }
+              last = subLabel.substr(0, subLabel.lastIndexOf(','));
 
               text.push('<li data-datasetindex="' + set.datasetIndex + '">');
 
-              last = subLabel.substr(0, subLabel.lastIndexOf(','));
+
               //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
               //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
               if (set.label.substr(0,4) == 'Ziel' || set.label.substr(0,6) == 'Target'){
