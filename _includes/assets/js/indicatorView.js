@@ -451,7 +451,7 @@ var indicatorView = function (model, options) {
               }
 
               console.log(subLabel, last)
-              if (subLabel.substr(0, subLabel.lastIndexOf(',')) != last){
+              if (subLabel.substr(0, subLabel.lastIndexOf(',')) != last && !subLabel.contains('PM<sub>2,5</sub>')){
                 text.push('</span><hr><span margin="left">');
               }
 
