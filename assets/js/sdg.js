@@ -2082,10 +2082,12 @@ var indicatorView = function (model, options) {
             var text = ['<ul id="legend">'];
             var temp = [];
             _.each(chart.data.datasets, function(dataset, datasetIndex) {
-              temp.push({label: dataset.label, borderdash: dataset.borderDash, backgroundColor: dataset.backgroundColor, datasetIndex: dataset.datasetIndex});
+              temp.push({label: dataset.label, borderdash: dataset.borderDash, backgroundColor: dataset.backgroundColor, datasetIndex: datasetIndex});
             });
             var sorted = temp.sort(function(a, b) {
-              return (a.backgroundColor > b.backgroundColor) - (a.backgroundColor < b.backgroundColor);
+              var subA = a.label.substr(a.label.indexOf(',',a.label.length))
+              var subB = b.label.substr(b.label.indexOf(',',b.label.length))
+              return (subA > subB) - (subA < subB);
             });
 
             _.each(sorted, function(set){
