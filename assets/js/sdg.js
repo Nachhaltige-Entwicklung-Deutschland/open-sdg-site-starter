@@ -2105,7 +2105,7 @@ var indicatorView = function (model, options) {
               }
               //---#3 targetDifferentInLegend---stop-----------------------------------------------------------------------------------------------------------------------------
               text.push('</span>');
-              if (subLabel.substr(subLabel.lastIndexOf(','), subLabel.length) != last{
+              if (subLabel.substr(subLabel.lastIndexOf(','), subLabel.length) != last){
                 text.push('<hr>');
               }
               last = subLabel.substr(subLabel.lastIndexOf(','), subLabel.length);
