@@ -356,7 +356,7 @@ var indicatorView = function (model, options) {
       //if (chartInfo.datasets[set].label.substr(0,4)=='Ziel'){
         //cartInfo.datasets[set].push("showLines: false")
       //}
-      console.log (set, chartInfo.datasets);
+      //console.log (set, chartInfo.datasets);
     };
     //----------------------------------------------------------------------------------------------------------------
 
@@ -455,7 +455,6 @@ var indicatorView = function (model, options) {
                 subLabel = subLabel.replace(replace[i]['old'], replace[i]['new']);
               };
 
-              console.log(subLabel, last)
               if (subLabel.substr(0, subLabel.lastIndexOf(',')) != last){
                 text.push('</span><hr><span>');
               }
