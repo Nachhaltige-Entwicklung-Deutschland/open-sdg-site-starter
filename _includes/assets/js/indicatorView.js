@@ -441,6 +441,7 @@ var indicatorView = function (model, options) {
 
             var last = '';
             _.each(sorted, function(set){
+
               // define the name without possible 'target' or 'timeseries'
               if (set.label.substr(0,4) == 'Ziel' || set.label.substr(0,6) == 'Target' || set.label.substr(0,4) == 'Zeit' || set.label.substr(0,2) == 'Time'){
                 var subLabel = set.label.substr(set.label.indexOf(','), set.label.length);
@@ -449,7 +450,7 @@ var indicatorView = function (model, options) {
                 var subLabel = set.label;
               }
 
-
+              console.log(subLabel)
               if (subLabel.substr(0, subLabel.lastIndexOf(',')) != last){
                 text.push('</span><hr><span margin="left">');
               }
