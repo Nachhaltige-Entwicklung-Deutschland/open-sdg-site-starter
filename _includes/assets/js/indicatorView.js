@@ -477,7 +477,7 @@ var indicatorView = function (model, options) {
               text.push(translations.t(set.label));
               text.push('</li>');
             });
-            text.push('</span>');
+            text.push('</span><hr>');
             text.push('</ul>');
             return text.join('');
         },
