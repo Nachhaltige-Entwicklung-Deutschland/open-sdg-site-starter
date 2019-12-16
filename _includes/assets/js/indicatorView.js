@@ -462,6 +462,10 @@ var indicatorView = function (model, options) {
 
               text.push('<li data-datasetindex="' + set.datasetIndex + '">');
 
+              for (var i == 0; i<subLabel.count(','); i++){
+                text.push('<span>---</span>')
+              };
+
 
               //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
               //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
