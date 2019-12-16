@@ -2080,7 +2080,7 @@ var indicatorView = function (model, options) {
         },
         legendCallback: function(chart) {
             var text = ['<ul id="legend">'];
-            text.push('<span>');
+            text.push('<span align="left">');
 
             var temp = [];
             _.each(chart.data.datasets, function(dataset, datasetIndex) {
@@ -2096,7 +2096,7 @@ var indicatorView = function (model, options) {
             _.each(sorted, function(set){
               var subLabel = set.label.substr(set.label.indexOf(','), set.label.length);
               if (subLabel.substr(subLabel.lastIndexOf(','), subLabel.length) != last && subLabel.lastIndexOf(',') != -1){
-                text.push('</span><hr><span>');
+                text.push('</span><hr><span align="left">');
               }
 
               text.push('<li data-datasetindex="' + set.datasetIndex + '">');
