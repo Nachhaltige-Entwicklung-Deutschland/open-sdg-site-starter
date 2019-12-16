@@ -2017,7 +2017,7 @@ var indicatorView = function (model, options) {
       //if (chartInfo.datasets[set].label.substr(0,4)=='Ziel'){
         //cartInfo.datasets[set].push("showLines: false")
       //}
-      console.log (set, chartInfo.datasets);
+      //console.log (set, chartInfo.datasets);
     };
     //----------------------------------------------------------------------------------------------------------------
 
@@ -2116,7 +2116,6 @@ var indicatorView = function (model, options) {
                 subLabel = subLabel.replace(replace[i]['old'], replace[i]['new']);
               };
 
-              console.log(subLabel, last)
               if (subLabel.substr(0, subLabel.lastIndexOf(',')) != last){
                 text.push('</span><hr><span>');
               }
@@ -2477,7 +2476,7 @@ var indicatorSearch = function(inputElement, indicatorDataStore) {
       }
     }
   };
-  console.log(indicatorDataStore)
+
   this.inputElement.keyup(function(e) {
     var searchValue = that.inputElement.val();
     if(e.keyCode === 13 && searchValue.length) {
@@ -2511,7 +2510,7 @@ var indicatorSearch = function(inputElement, indicatorDataStore) {
     this.indicatorDataStore.getData().then(function(data) {
 
       that.processData(data);
-
+      console.log(indicatorData)
       var searchResults = _.filter(that.indicatorData, function(indicator) {
         return indicator.title.toLowerCase().indexOf(searchString.toLowerCase()) != -1 ||
           indicator.description.toLowerCase().indexOf(searchString.toLowerCase()) != -1 ||
