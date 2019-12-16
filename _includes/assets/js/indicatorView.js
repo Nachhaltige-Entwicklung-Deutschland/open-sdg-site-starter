@@ -419,7 +419,7 @@ var indicatorView = function (model, options) {
         },
         legendCallback: function(chart) {
             var text = ['<ul id="legend">'];
-            text.push('<li>');
+            text.push('<li id="legend">');
 
             //---sort the dataset by string or substring
             var temp = [];
@@ -457,7 +457,7 @@ var indicatorView = function (model, options) {
 
               console.log(subLabel, last)
               if (subLabel.substr(0, subLabel.lastIndexOf(',')) != last){
-                text.push('</li><hr><li>');
+                text.push('</li><hr><li id="legend">');
               }
               last = subLabel.substr(0, subLabel.lastIndexOf(','));
 
