@@ -15,7 +15,7 @@ var indicatorSearch = function(inputElement, indicatorDataStore) {
       }
     }
   };
-
+  console.log(indicatorDataStore)
   this.inputElement.keyup(function(e) {
     var searchValue = that.inputElement.val();
     if(e.keyCode === 13 && searchValue.length) {
