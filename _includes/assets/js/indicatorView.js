@@ -433,7 +433,7 @@ var indicatorView = function (model, options) {
             _.each(sorted, function(set){
               text.push('<li data-datasetindex="' + set.datasetIndex + '">');
               var subLabel = set.label.substr(set.label.indexOf(','), set.label.length);
-              if (subLabel.lastIndexOf(',')!=-1 and subLabel.substr(subLabel.lastIndexOf(','), subLabel.length) != last){
+              if ((subLabel.lastIndexOf(',') != -1) and (subLabel.substr(subLabel.lastIndexOf(','), subLabel.length) != last)) {
                 text.push('<hr>');
               }
               last = subLabel.substr(subLabel.lastIndexOf(','), subLabel.length);
