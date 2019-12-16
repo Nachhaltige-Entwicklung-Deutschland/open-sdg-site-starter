@@ -461,7 +461,7 @@ var indicatorView = function (model, options) {
               }
               last = subLabel.substr(0, subLabel.lastIndexOf(','));
 
-              text.push('<li data-datasetindex="' + set.datasetIndex + '">');
+              text.push('<li data-datasetindex="' + set.datasetIndex + '" style="text-align: left; padding-left: 0px">');
 
 
               //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
