@@ -2085,8 +2085,8 @@ var indicatorView = function (model, options) {
               temp.push({label: dataset.label, borderdash: dataset.borderDash, backgroundColor: dataset.backgroundColor, datasetIndex: datasetIndex});
             });
             var sorted = temp.sort(function(a, b) {
-              var subA = a.label.substr(a.label.indexOf(',',a.label.length))
-              var subB = b.label.substr(b.label.indexOf(',',b.label.length))
+              var subA = a.label.substr(a.label.indexOf(','), a.label.length);
+              var subB = b.label.substr(b.label.indexOf(','), b.label.length);
               return (subA > subB) - (subA < subB);
             });
             console.log("S:", sorted)
