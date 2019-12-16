@@ -428,7 +428,7 @@ var indicatorView = function (model, options) {
               var subB = b.label.substr(b.label.indexOf(',',b.label.length))
               return (subA > subB) - (subA < subB);
             });
-
+            console.log("S:", sorted)
             _.each(sorted, function(set){
               console.log(set.label, set)
               text.push('<li data-datasetindex="' + set.datasetIndex + '">');
