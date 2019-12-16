@@ -2095,7 +2095,7 @@ var indicatorView = function (model, options) {
               text.push('<li data-datasetindex="' + set.datasetIndex + '">');
               var subLabel = set.label.substr(set.label.indexOf(','), set.label.length);
               if (subLabel.substr(subLabel.lastIndexOf(','), subLabel.length) != last && subLabel.lastIndexOf(',') != -1){
-                text.push('<hr>');
+                text.push('<br><hr>');
               }
               last = subLabel.substr(subLabel.lastIndexOf(','), subLabel.length);
               //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
