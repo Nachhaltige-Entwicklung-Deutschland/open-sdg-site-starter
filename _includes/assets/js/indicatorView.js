@@ -460,10 +460,10 @@ var indicatorView = function (model, options) {
               }
               last = subLabel.substr(0, subLabel.lastIndexOf(','));
 
-              text.push('<li data-datasetindex="' + set.datasetIndex + '">');
+              text.push('<li data-datasetindex=" ' + set.datasetIndex + '" style:"dispaly: block">');
 
               for (var i == 0; i<subLabel.count(','); i++){
-                text.push('<span>---</span>')
+                text.push('<span>---</span>');
               };
 
 
