@@ -2094,7 +2094,10 @@ var indicatorView = function (model, options) {
             _.each(sorted, function(set){
               text.push('<li data-datasetindex="' + set.datasetIndex + '">');
               var subLabel = set.label.substr(set.label.indexOf(','), set.label.length);
-
+              if (subLabel.substr(subLabel.lastIndexOf(','), subLabel.length) != last){
+                text.push('<hr>');
+              }
+              last = subLabel.substr(subLabel.lastIndexOf(','), subLabel.length);
               //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
               //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
               if (set.label.substr(0,4) == 'Ziel' || set.label.substr(0,6) == 'Target'){
@@ -2105,10 +2108,6 @@ var indicatorView = function (model, options) {
               }
               //---#3 targetDifferentInLegend---stop-----------------------------------------------------------------------------------------------------------------------------
               text.push('</span>');
-              if (subLabel.substr(subLabel.lastIndexOf(','), subLabel.length) != last){
-                text.push('<hr>');
-              }
-              last = subLabel.substr(subLabel.lastIndexOf(','), subLabel.length);
               text.push(translations.t(set.label));
               text.push('</li>');
             });
