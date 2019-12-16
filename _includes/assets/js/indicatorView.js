@@ -419,7 +419,7 @@ var indicatorView = function (model, options) {
         },
         legendCallback: function(chart) {
             var text = ['<ul id="legend">'];
-            text.push('<span>');
+            text.push('<span style="text-align: left; padding-left: 0px">');
 
             //---sort the dataset by string or substring
             var temp = [];
@@ -457,11 +457,11 @@ var indicatorView = function (model, options) {
 
               console.log(subLabel, last)
               if (subLabel.substr(0, subLabel.lastIndexOf(',')) != last){
-                text.push('</span><hr><span>');
+                text.push('</span><hr><span style="text-align: left; padding-left: 0px">');
               }
               last = subLabel.substr(0, subLabel.lastIndexOf(','));
 
-              text.push('<li data-datasetindex="' + set.datasetIndex + '" style="text-align: left; padding-left: 0px">');
+              text.push('<li data-datasetindex="' + set.datasetIndex + '">');
 
 
               //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
