@@ -434,7 +434,7 @@ var indicatorView = function (model, options) {
             var last = '';
             _.each(sorted, function(set){
               var subLabel = set.label.substr(set.label.indexOf(','), set.label.length);
-              if (subLabel.substr(subLabel.lastIndexOf(','), subLabel.length) != last && subLabel.lastIndexOf(',') != -1){
+              if (subLabel.substr(0, subLabel.lastIndexOf(',')) == last && subLabel.lastIndexOf(',') != -1){
                 text.push('</span><hr><span align="left">');
               }
 
