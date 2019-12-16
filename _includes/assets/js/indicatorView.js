@@ -442,8 +442,9 @@ var indicatorView = function (model, options) {
               }
               //---#3 targetDifferentInLegend---stop-----------------------------------------------------------------------------------------------------------------------------
               text.push('</span>');
-              text.push(translations.t(set.label),'<br>');
+              text.push(translations.t(set.label));
               text.push('</li>');
+              text.push('<hr>');
             });
 
             text.push('</ul>');
