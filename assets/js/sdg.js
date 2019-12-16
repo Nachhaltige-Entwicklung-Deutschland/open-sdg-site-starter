@@ -2080,7 +2080,7 @@ var indicatorView = function (model, options) {
         },
         legendCallback: function(chart) {
             var text = ['<ul id="legend">'];
-            text.push('<span>');
+            text.push('<li>');
 
             //---sort the dataset by string or substring
             var temp = [];
@@ -2112,13 +2112,13 @@ var indicatorView = function (model, options) {
               }
               var replace = [{old: '2,5', new: '2.5'},
                             {old: 'Gebäude-, Frei- & Betriebsfläche', new: 'Gebäude- Frei- & Betriebsfläche'}];
-              for (var i=0; i<replace.length, i++){
+              for (var i=0; i<replace.length; i++){
                 subLabel = subLabel.replace(replace[i]['old'], replace[i]['new']);
               };
 
               console.log(subLabel, last)
               if (subLabel.substr(0, subLabel.lastIndexOf(',')) != last){
-                text.push('</span><hr><span>');
+                text.push('</li><hr><li>');
               }
               last = subLabel.substr(0, subLabel.lastIndexOf(','));
 
@@ -2138,7 +2138,7 @@ var indicatorView = function (model, options) {
               text.push(translations.t(set.label));
               text.push('</li>');
             });
-            text.push('</span>');
+            text.push('</li>');
             text.push('</ul>');
             return text.join('');
         },
