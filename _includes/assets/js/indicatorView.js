@@ -427,16 +427,16 @@ var indicatorView = function (model, options) {
               return (a.backgroundColor > b.backgroundColor) - (a.backgroundColor < b.backgroundColor);
             });
 
-            _.each(sorted, function(label, borderDash, backgroundColor, datasetIndex){
-              console.log(label.label)
-              text.push('<li data-datasetindex="' + datasetIndex + '">');
+            _.each(sorted, function(set){
+              console.log(set.label)
+              text.push('<li data-datasetindex="' + set.datasetIndex + '">');
               //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
               //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
-              if (label.substr(0,4) == 'Ziel' || label.substr(0,6) == 'Target'){
-                text.push('<span class="swatchTgt' + '" style="background-color: ' + backgroundColor + '">');
+              if (set.label.substr(0,4) == 'Ziel' || set.label.substr(0,6) == 'Target'){
+                text.push('<span class="swatchTgt' + '" style="background-color: ' + set.backgroundColor + '">');
               }
               else{
-                text.push('<span class="swatchTsr' + (borderDash ? ' dashed' : '') + '" style="background-color: ' + backgroundColor + '">');
+                text.push('<span class="swatchTsr' + (set.borderDash ? ' dashed' : '') + '" style="background-color: ' + set.backgroundColor + '">');
               }
               //---#3 targetDifferentInLegend---stop-----------------------------------------------------------------------------------------------------------------------------
               text.push('</span>');
