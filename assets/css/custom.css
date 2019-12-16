@@ -70,36 +70,6 @@ header {
   margin-right: 0;
   font-weight: bold; }
 
-.legend {
-  display: block;
-  padding-left: 0;
-  text-align: left;
-  margin-left: 0;
-  margin-top: 0px;
-  list-style-type: none;
-  line-height: 18px; }
-  .legend:hover {
-    background: #eee; }
-  .legend.notshown {
-    text-decoration: line-through; }
-
-.swatchTsr {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  margin-right: 3px;
-  border-radius: 7.5px; }
-  .swatchTsr.dashed {
-    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAABCAYAAADn9T9+AAAAFklEQVQImWP8////fwY0wMjIyIguBgCaAgQCms5tJwAAAABJRU5ErkJggg==");
-    background-repeat: repeat;
-    background-position: -5px 0; }
-
-.swatchTgt {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  margin-right: 3px; }
-
 #legend {
   display: block;
   padding-left: 0;

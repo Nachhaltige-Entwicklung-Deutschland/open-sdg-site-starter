@@ -2082,7 +2082,7 @@ var indicatorView = function (model, options) {
 
             //---#18 structureLegendEntries---start-----------------------------------------------------------------------------------------------
             var text = ['<ul class="legend">'];
-            text.push('<li id="legend">');
+            text.push('<li>');
 
             //---sort the given dataset by string or substring
             var temp = [];
@@ -2121,7 +2121,7 @@ var indicatorView = function (model, options) {
               //----------------------------------------------------------------------
 
               if (subLabel.substr(0, subLabel.lastIndexOf(',')) != last){
-                text.push('</li><hr><li id="legend">');
+                text.push('</li><hr><li>');
               }
               last = subLabel.substr(0, subLabel.lastIndexOf(','));
 
