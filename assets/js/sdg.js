@@ -2473,6 +2473,9 @@ var indicatorSearch = function(inputElement, indicatorDataStore) {
         currentIndicator.goalId = data[goalLoop].goal.id;
         currentIndicator.goalTitle = data[goalLoop].goal.title;
         that.indicatorData.push(currentIndicator);
+        if (goalLoop==1 && indicatorLoop ==1){
+          console.log("1,1:",data)
+        }
       }
     }
   };
