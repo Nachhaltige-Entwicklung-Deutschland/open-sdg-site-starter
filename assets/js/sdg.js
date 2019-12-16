@@ -2090,7 +2090,7 @@ var indicatorView = function (model, options) {
               return (subA > subB) - (subA < subB);
             });
 
-            var last = ''
+            var last = '';
             _.each(sorted, function(set){
               text.push('<li data-datasetindex="' + set.datasetIndex + '">');
               var subLabel = set.label.substr(set.label.indexOf(','), set.label.length);
@@ -2108,7 +2108,7 @@ var indicatorView = function (model, options) {
               if (subLabel.substr(subLabel.lastIndexOf(','), subLabel.length) != last{
                 text.push('<hr>');
               }
-              last = subLabel.substr(subLabel.lastIndexOf(','), subLabel.length)
+              last = subLabel.substr(subLabel.lastIndexOf(','), subLabel.length);
               text.push(translations.t(set.label));
               text.push('</li>');
             });
