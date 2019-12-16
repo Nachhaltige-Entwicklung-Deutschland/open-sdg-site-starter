@@ -419,7 +419,7 @@ var indicatorView = function (model, options) {
         },
         legendCallback: function(chart) {
             var text = ['<ul id="legend">'];
-            text.push('<span padding="left">');
+            text.push('<span margin="left">');
 
             var temp = [];
             _.each(chart.data.datasets, function(dataset, datasetIndex) {
@@ -434,8 +434,8 @@ var indicatorView = function (model, options) {
             var last = '';
             _.each(sorted, function(set){
               var subLabel = set.label.substr(set.label.indexOf(','), set.label.length);
-              if (subLabel.substr(0, subLabel.lastIndexOf(',')) != last && subLabel.lastIndexOf(',') != -1){
-                text.push('</span><hr><span padding="left">');
+              if (subLabel.substr(0, subLabel.lastIndexOf(',')) != last){
+                text.push('</span><hr><span margin="left">');
               }
 
               text.push('<li data-datasetindex="' + set.datasetIndex + '">');
