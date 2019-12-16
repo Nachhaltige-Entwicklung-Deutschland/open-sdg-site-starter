@@ -2080,7 +2080,7 @@ var indicatorView = function (model, options) {
         },
         legendCallback: function(chart) {
             var text = ['<ul id="legend">'];
-            text.push('<span align="left">');
+            text.push('<span padding="left">');
 
             var temp = [];
             _.each(chart.data.datasets, function(dataset, datasetIndex) {
@@ -2095,13 +2095,13 @@ var indicatorView = function (model, options) {
             var last = '';
             _.each(sorted, function(set){
               var subLabel = set.label.substr(set.label.indexOf(','), set.label.length);
-              if (subLabel.substr(0, subLabel.lastIndexOf(',')) == last && subLabel.lastIndexOf(',') != -1){
-                text.push('</span><hr><span align="left">');
+              if (subLabel.substr(0, subLabel.lastIndexOf(',')) != last && subLabel.lastIndexOf(',') != -1){
+                text.push('</span><hr><span padding="left">');
               }
 
               text.push('<li data-datasetindex="' + set.datasetIndex + '">');
 
-              last = subLabel.substr(subLabel.lastIndexOf(','), subLabel.length);
+              last = subLabel.substr(0, subLabel.lastIndexOf(','));
               //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
               //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
               if (set.label.substr(0,4) == 'Ziel' || set.label.substr(0,6) == 'Target'){
