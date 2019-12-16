@@ -2079,7 +2079,7 @@ var indicatorView = function (model, options) {
           }]
         },
         legendCallback: function(chart) {
-            var text = ['<ul id="legend" style="text-align: left; padding-left: 0px">'];
+            var text = ['<ul id="legend" style="text-align: left; padding-left: 0px; dispaly: block"">'];
             text.push('<span>');
 
             //---sort the dataset by string or substring
@@ -2124,7 +2124,7 @@ var indicatorView = function (model, options) {
               text.push('<li data-datasetindex=" ' + set.datasetIndex + '" style:"dispaly: block">');
 
               for (var i=0; i<subLabel.split(",").length-1; i++){
-                text.push('<span>---</span>');
+                text.push('<span>"          "</span>');
               };
 
 
