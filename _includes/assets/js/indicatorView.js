@@ -428,7 +428,7 @@ var indicatorView = function (model, options) {
             });
 
             _.each(sorted, function(set){
-              console.log(set.label)
+              console.log(set.label, set)
               text.push('<li data-datasetindex="' + set.datasetIndex + '">');
               //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
               //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
@@ -440,7 +440,7 @@ var indicatorView = function (model, options) {
               }
               //---#3 targetDifferentInLegend---stop-----------------------------------------------------------------------------------------------------------------------------
               text.push('</span>');
-              text.push(translations.t(label));
+              text.push(translations.t(set.label));
               text.push('</li>');
             });
 
