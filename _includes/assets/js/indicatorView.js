@@ -463,7 +463,7 @@ var indicatorView = function (model, options) {
               text.push('<li data-datasetindex=" ' + set.datasetIndex + '" style:"dispaly: block">');
 
               for (var i=0; i<subLabel.split(",").length-1; i++){
-                text.push('<span>"          "</span>');
+                text.push('<span>&nbsp;</span>');
               };
 
 
