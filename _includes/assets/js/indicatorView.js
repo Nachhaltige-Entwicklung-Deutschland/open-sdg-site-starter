@@ -449,8 +449,11 @@ var indicatorView = function (model, options) {
               else{
                 var subLabel = set.label;
               }
-              subLabel = subLabel.replace("2,5", "2.5").replace("Gebäude-, Frei- & Betriebsfläche","Gebäude- Frei- & Betriebsfläche");
-
+              var replace = [{old: '2,5', new: '2.5'},
+                            {old: 'Gebäude-, Frei- & Betriebsfläche', new: 'Gebäude- Frei- & Betriebsfläche'}];
+              for (var i=0; i<replace.length, i++){
+                subLabel = subLabel.replace(replace[i]['old'], replace[i]['new']);
+              };
 
               console.log(subLabel, last)
               if (subLabel.substr(0, subLabel.lastIndexOf(',')) != last){
