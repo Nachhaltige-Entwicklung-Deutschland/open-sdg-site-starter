@@ -418,10 +418,12 @@ var indicatorView = function (model, options) {
           }]
         },
         legendCallback: function(chart) {
+
+            //---#18 structureLegendEntries---start-----------------------------------------------------------------------------------------------
             var text = ['<ul class="legend">'];
             text.push('<li id="legend">');
 
-            //---sort the dataset by string or substring
+            //---sort the given dataset by string or substring
             var temp = [];
             _.each(chart.data.datasets, function(dataset, datasetIndex) {
               temp.push({label: dataset.label, borderdash: dataset.borderDash, backgroundColor: dataset.backgroundColor, datasetIndex: datasetIndex});
@@ -442,7 +444,7 @@ var indicatorView = function (model, options) {
             var last = '';
             _.each(sorted, function(set){
 
-              // define the name without possible 'target' or 'timeseries'
+              //---define the name without possible 'target' or 'timeseries'-------------
               if (set.label.substr(0,4) == 'Ziel' || set.label.substr(0,6) == 'Target' || set.label.substr(0,4) == 'Zeit' || set.label.substr(0,2) == 'Time'){
                 var subLabel = set.label.substr(set.label.indexOf(','), set.label.length);
               }
@@ -451,11 +453,12 @@ var indicatorView = function (model, options) {
               }
               var replace = [{old: '2,5', new: '2.5'},
                             {old: 'Gebäude-, Frei- & Betriebsfläche', new: 'Gebäude- Frei- & Betriebsfläche'}];
+
               for (var i=0; i<replace.length; i++){
                 subLabel = subLabel.replace(replace[i]['old'], replace[i]['new']);
               };
+              //----------------------------------------------------------------------
 
-              console.log(subLabel, last)
               if (subLabel.substr(0, subLabel.lastIndexOf(',')) != last){
                 text.push('</li><hr><li id="legend">');
               }
@@ -477,6 +480,8 @@ var indicatorView = function (model, options) {
               text.push(translations.t(set.label));
               text.push('</li>');
             });
+            //---#18 structureLegendEntries---stop------------------------------------------------------------------------------------------------
+
             text.push('</li>');
             text.push('</ul>');
             return text.join('');
