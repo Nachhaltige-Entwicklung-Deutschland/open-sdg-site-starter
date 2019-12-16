@@ -49,7 +49,7 @@ var indicatorSearch = function(inputElement, indicatorDataStore) {
     this.indicatorDataStore.getData().then(function(data) {
 
       that.processData(data);
-      console.log(indicatorData)
+      console.log(that.indicatorData);
       var searchResults = _.filter(that.indicatorData, function(indicator) {
         return indicator.title.toLowerCase().indexOf(searchString.toLowerCase()) != -1 ||
           indicator.description.toLowerCase().indexOf(searchString.toLowerCase()) != -1 ||
