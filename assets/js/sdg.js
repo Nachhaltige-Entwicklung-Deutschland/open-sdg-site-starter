@@ -2484,7 +2484,7 @@ var indicatorSearch = function(inputElement, indicatorDataStore) {
       window.location.replace(that.inputElement.data('pageurl') + searchValue);
     }
   });
-  
+
   $("#search-btn").click(function() {
     var searchValue = that.inputElement.val();
     if(searchValue.length) {
@@ -2582,7 +2582,6 @@ $(function() {
 
 
 });
-
 $(function() {
 
   var topLevelSearchLink = $('.top-level span:eq(1), .top-level button:eq(1)');
