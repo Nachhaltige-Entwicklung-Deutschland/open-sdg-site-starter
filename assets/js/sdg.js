@@ -2121,10 +2121,10 @@ var indicatorView = function (model, options) {
               }
               last = subLabel.substr(0, subLabel.lastIndexOf(','));
 
-              text.push('<li data-datasetindex="' + set.datasetIndex + '">');
+              text.push('<li data-datasetindex=" ' + set.datasetIndex + '" style:"dispaly: block">');
 
               for (var i == 0; i<subLabel.count(','); i++){
-                text.push('<span>---</span>')
+                text.push('<span>---</span>');
               };
 
 
@@ -2478,7 +2478,6 @@ var indicatorSearch = function(inputElement, indicatorDataStore) {
         currentIndicator.goalTitle = data[goalLoop].goal.title;
         that.indicatorData.push(currentIndicator);
         if (goalLoop==1 && indicatorLoop ==1){
-          console.log("1,1:",data)
         }
       }
     }
@@ -2517,7 +2516,6 @@ var indicatorSearch = function(inputElement, indicatorDataStore) {
     this.indicatorDataStore.getData().then(function(data) {
 
       that.processData(data);
-      console.log(that.indicatorData);
       var searchResults = _.filter(that.indicatorData, function(indicator) {
         return indicator.title.toLowerCase().indexOf(searchString.toLowerCase()) != -1 ||
           indicator.description.toLowerCase().indexOf(searchString.toLowerCase()) != -1 ||
