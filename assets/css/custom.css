@@ -79,7 +79,7 @@ header {
   #legend li {
     font-size: 13px;
     list-style-type: none;
-    display: inline-block;
+    display: block;
     color: #666;
     line-height: 18px;
     cursor: pointer;
