@@ -2082,23 +2082,32 @@ var indicatorView = function (model, options) {
             var text = ['<ul id="legend">'];
             text.push('<span margin="left">');
 
+            //---sort the dataset by string or substring
             var temp = [];
             _.each(chart.data.datasets, function(dataset, datasetIndex) {
               temp.push({label: dataset.label, borderdash: dataset.borderDash, backgroundColor: dataset.backgroundColor, datasetIndex: datasetIndex});
             });
             var sorted = temp.sort(function(a, b) {
-              var subA = a.label.substr(a.label.indexOf(','), a.label.length);
-              var subB = b.label.substr(b.label.indexOf(','), b.label.length);
+              if (a.label.substr(0,4) == 'Ziel' || a.label.substr(0,6) == 'Target' || a.label.substr(0,4) == 'Zeit' || a.label.substr(0,2) == 'Time'){
+                var subA = a.label.substr(a.label.indexOf(','), a.label.length);
+                var subB = b.label.substr(b.label.indexOf(','), b.label.length);
+              }
+              else{
+                var subA = a.label;
+                var subB = b.label;
+              }
               return (subA > subB) - (subA < subB);
             });
+            //-------------------------------
 
             var last = '';
             _.each(sorted, function(set){
+              // define the name without possible 'target' or 'timeseries'
               if (set.label.substr(0,4) == 'Ziel' || set.label.substr(0,6) == 'Target' || set.label.substr(0,4) == 'Zeit' || set.label.substr(0,2) == 'Time'){
                 var subLabel = set.label.substr(set.label.indexOf(','), set.label.length);
               }
               else{
-                var subLabel = set.label
+                var subLabel = set.label;
               }
 
 
