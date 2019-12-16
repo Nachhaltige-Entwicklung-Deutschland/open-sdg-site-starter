@@ -101,23 +101,17 @@ header {
 //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
 
 //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
+.legend {
+  display: block;
+  padding-left: 0;
 
+}
 #legend {
   display: block;
   padding-left: 0;
   text-align: left;
   margin-left: 0;
   margin-top: -32px;
-
-  ul {
-    font-size: 13px;
-    list-style-type: none;
-    display: block;
-    color: #666;
-    line-height: 18px;
-    cursor: pointer;
-    padding: 5px;
-  }
 
   li {
     font-size: 13px;
