@@ -2079,7 +2079,7 @@ var indicatorView = function (model, options) {
           }]
         },
         legendCallback: function(chart) {
-            var text = ['<ul id="legend">'];
+            var text = ['<ul class="legend">'];
             text.push('<li id="legend">');
 
             //---sort the dataset by string or substring
