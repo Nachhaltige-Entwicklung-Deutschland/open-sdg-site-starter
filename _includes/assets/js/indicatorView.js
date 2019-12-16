@@ -450,7 +450,7 @@ var indicatorView = function (model, options) {
                 var subLabel = set.label;
               }
 
-              console.log(subLabel)
+              console.log(subLabel, last)
               if (subLabel.substr(0, subLabel.lastIndexOf(',')) != last){
                 text.push('</span><hr><span margin="left">');
               }
