@@ -2094,7 +2094,14 @@ var indicatorView = function (model, options) {
 
             var last = '';
             _.each(sorted, function(set){
-              var subLabel = set.label.substr(set.label.indexOf(','), set.label.length);
+              if (set.label.substr(0,4) == 'Ziel' || set.label.substr(0,6) == 'Target' || set.label.substr(0,4) == 'Zeit' || set.label.substr(0,2) == 'Time'){
+                var subLabel = set.label.substr(set.label.indexOf(','), set.label.length);
+              }
+              else{
+                var subLabel = set.label
+              }
+
+
               if (subLabel.substr(0, subLabel.lastIndexOf(',')) != last){
                 text.push('</span><hr><span margin="left">');
               }
