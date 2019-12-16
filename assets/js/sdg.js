@@ -2112,7 +2112,7 @@ var indicatorView = function (model, options) {
               }
 
               console.log(subLabel, last)
-              if (subLabel.substr(0, subLabel.lastIndexOf(',')) != last && !subLabel.contains('PM<sub>2,5</sub>')){
+              if (subLabel.substr(0, subLabel.lastIndexOf(',')) != last && subLabel.indexOf('PM<sub>2,5</sub>') == -1){
                 text.push('</span><hr><span margin="left">');
               }
 
