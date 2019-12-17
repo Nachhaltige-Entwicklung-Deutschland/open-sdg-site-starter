@@ -2097,6 +2097,7 @@ var indicatorView = function (model, options) {
                 var subB = b.label;
               }
 
+              /*
               var preA = '';
               for (var i=0; i<4-subA.split(",").length; i++){
                 preA = preA.concat('A');
@@ -2108,12 +2109,14 @@ var indicatorView = function (model, options) {
                 preB = preB.concat('A');
                 }
               subB = preB.concat(subB);
+              */
+              //console.log("subA: ",subA,preA);
 
-              console.log("subA: ",subA,preA);
               return (subA > subB) - (subA < subB);
             });
+
             //^^^^ #18.1 ^^^^
-            console.log(sorted);
+            //console.log(sorted);
             _.each(sorted, function(dataset) { //#18.2 use the sorted dataset instead of the original >>> _.each(chart.data.datasets, function(dataset, datasetIndex) {
 
 
@@ -2123,7 +2126,7 @@ var indicatorView = function (model, options) {
 
 
               text.push('<li data-datasetindex="' + dataset.datasetIndex + '">'); //#18.2 >>> text.push('<li data-datasetindex="' + datasetIndex + '">');
-
+              if (dataset.datasetIndex == 3){text.push('<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>');}
               //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
               //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
               if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
