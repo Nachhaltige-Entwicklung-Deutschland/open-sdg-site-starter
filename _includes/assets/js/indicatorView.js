@@ -436,17 +436,17 @@ var indicatorView = function (model, options) {
                 var subB = b.label;
               }
 
-              var preA = ''
+              var preA = '';
               for (var i=0; i<subA.split(",").length-1; i++){
-                preA.push('A');
+                preA.concat('A');
                 }
               subA = preA.concat(subA);
 
-              var preB = ''
+              var preB = '';
               for (var i=0; i<subB.split(",").length-1; i++){
-                preB.push('A');
+                preB.concat('A');
                 }
-              subB = preA.concat(subA);
+              subB = preB.concat(subB);
 
 
               return (subA > subB) - (subA < subB);
