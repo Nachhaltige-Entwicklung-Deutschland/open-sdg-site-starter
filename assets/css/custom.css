@@ -83,7 +83,8 @@ header {
     color: #666;
     line-height: 18px;
     cursor: pointer;
-    padding: 5px; }
+    padding: 5px;
+    width: 100%; }
     #legend li:hover {
       background: #eee; }
     #legend li.notshown {
