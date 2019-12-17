@@ -2123,7 +2123,7 @@ var indicatorView = function (model, options) {
 
               var indent = '<span>';
               for (var i=0; i<dataset.label.split(',').length; i++){
-                indent = indent.concat('&nbsp;&nbsp;&nbsp;&nbsp;');
+                indent = indent.concat('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;');
               };
               indent = indent.concat('</span>');
               text.push(indent);
