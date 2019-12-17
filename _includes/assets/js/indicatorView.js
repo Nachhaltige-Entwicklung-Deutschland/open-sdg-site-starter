@@ -434,6 +434,19 @@ var indicatorView = function (model, options) {
                 var subA = a.label;
                 var subB = b.label;
               }
+
+              addPrefix: function(label){
+                var pre = '';
+                for (var i=0; i<(label.split(",").length - 1);i++) {
+                  pre.push('A');
+                };
+                return pre.concat(label);
+              };
+
+              subA = addPrefix(subA);
+              subB = addPrefix(subB);
+
+
               return (subA > subB) - (subA < subB);
             });
             //^^^^ #18.1 ^^^^
@@ -446,7 +459,7 @@ var indicatorView = function (model, options) {
 
 
 
-              text.push('<li id ="xxx" data-datasetindex="' + dataset.datasetIndex + '>'); //#18.2 >>> text.push('<li data-datasetindex="' + datasetIndex + '">');
+              text.push('<li data-datasetindex="' + dataset.datasetIndex + '>'); //#18.2 >>> text.push('<li data-datasetindex="' + datasetIndex + '">');
 
               //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
               //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
