@@ -462,7 +462,7 @@ var indicatorView = function (model, options) {
               text.push('</span>');
               text.push(translations.t(dataset.label));
               text.push('</li>');
-              text.push('</span><hr>')
+              text.push('</span>')
             });
 
             text.push('</ul>');
