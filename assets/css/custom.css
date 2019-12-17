@@ -120,17 +120,6 @@ header {
   .header_img img {
     width: 100%; }
 
-.breadcrumb {
-  margin-bottom: 15px; }
-  .breadcrumb a {
-    color: #285f8f; }
-  .breadcrumb > .active {
-    display: inline;
-    color: black; }
-
-.center {
-  text-align: center; }
-
 /* Tooltip container */
 .tooltip {
   position: absolute;

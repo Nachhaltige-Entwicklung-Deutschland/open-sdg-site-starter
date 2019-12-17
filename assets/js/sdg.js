@@ -2080,7 +2080,7 @@ var indicatorView = function (model, options) {
         },
         legendCallback: function(chart) {
             var text = ['<ul id="legend" style="text-align: left; padding-left: 0px">'];
-            text.push('<span>');
+            //text.push('<span>');
 
             //---sort the dataset by string or substring
             var temp = [];
@@ -2110,16 +2110,18 @@ var indicatorView = function (model, options) {
               else{
                 var subLabel = set.label;
               }
-
+              //-----------------------------------------------------------
+              // replace parts that contain a comma which is no separator---
               var replace = [{old: '2,5', new: '2.5'},
                             {old: 'Gebäude-, Frei- & Betriebsfläche', new: 'Gebäude- Frei- & Betriebsfläche'}];
               for (var i=0; i<replace.length; i++){
                 subLabel = subLabel.replace(replace[i]['old'], replace[i]['new']);
               };
+              //-----------------------------------------------------------
 
-              if (subLabel.substr(0, subLabel.lastIndexOf(',')) != last){
-                text.push('</span><hr><span>');
-              }
+              //if (subLabel.substr(0, subLabel.lastIndexOf(',')) != last){
+                //text.push('</span><hr><span>');
+              //}
               last = subLabel.substr(0, subLabel.lastIndexOf(','));
 
               text.push('<li data-datasetindex=" ' + set.datasetIndex + '">');
@@ -2142,7 +2144,7 @@ var indicatorView = function (model, options) {
               text.push(translations.t(set.label));
               text.push('</li>');
             });
-            text.push('</span><hr>');
+            //text.push('</span><hr>');
             text.push('</ul>');
             return text.join('');
         },
