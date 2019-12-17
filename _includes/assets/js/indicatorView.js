@@ -445,7 +445,7 @@ var indicatorView = function (model, options) {
 
 
 
-
+              text.push('span>')
               text.push('<li data-datasetindex="' + dataset.datasetIndex + '">'); //#18.2 >>> text.push('<li data-datasetindex="' + datasetIndex + '">');
 
               //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
@@ -461,6 +461,7 @@ var indicatorView = function (model, options) {
               text.push('</span>');
               text.push(translations.t(dataset.label));
               text.push('</li>');
+              text.push('</span>');
             });
 
             text.push('</ul>');
