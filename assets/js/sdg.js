@@ -2079,6 +2079,32 @@ var indicatorView = function (model, options) {
           }]
         },
         legendCallback: function(chart) {
+            var text = ['<ul id="legend">'];
+
+            _.each(chart.data.datasets, function(dataset, datasetIndex) {
+              text.push('<li data-datasetindex="' + datasetIndex + '">');
+
+              //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
+              //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
+              if (set.label.substr(0,4) == 'Ziel' || set.label.substr(0,6) == 'Target'){
+                text.push('<span class="swatchTgt' + '" style="background-color: ' + set.backgroundColor + '">');
+              }
+              else{
+                text.push('<span class="swatchTsr' + (set.borderDash ? ' dashed' : '') + '" style="background-color: ' + set.backgroundColor + '">');
+              }
+              //---#3 targetDifferentInLegend---stop-----------------------------------------------------------------------------------------------------------------------------
+
+              text.push('</span>');
+              text.push(translations.t(dataset.label));
+              text.push('</li>');
+            });
+
+            text.push('</ul>');
+            return text.join('');
+        },
+
+        /*
+        legendCallback: function(chart) {
             var text = ['<ul id="legend" style="text-align: left; padding-left: 0px">'];
             //text.push('<span>');
 
@@ -2148,7 +2174,7 @@ var indicatorView = function (model, options) {
             text.push('</ul>');
             return text.join('');
         },
-
+        */
         legend: {
           display: false,
         },
