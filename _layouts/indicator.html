@@ -133,8 +133,8 @@
               <div id="mapfooter" class="table-footer-text">
 
                 {% if sources_list %}
-                {% assign sourceSize = uniqSources | size %}
-                {{ uniqSources }} {{ sourceSize }}
+                {% assign sourceSize = sources_list | size %}
+                {{ sources_list }} {{ sourceSize }}
                   {% if sourceSize == 1}
                     <p>{{ t.indicator.source }}: {{ uniqSources }}</p>
                   {% else %}
