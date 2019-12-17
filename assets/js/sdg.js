@@ -2086,11 +2086,11 @@ var indicatorView = function (model, options) {
 
               //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
               //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
-              if (set.label.substr(0,4) == 'Ziel' || set.label.substr(0,6) == 'Target'){
-                text.push('<span class="swatchTgt' + '" style="background-color: ' + set.backgroundColor + '">');
+              if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
+                text.push('<span class="swatchTgt' + '" style="background-color: ' + dataset.backgroundColor + '">');
               }
               else{
-                text.push('<span class="swatchTsr' + (set.borderDash ? ' dashed' : '') + '" style="background-color: ' + set.backgroundColor + '">');
+                text.push('<span class="swatchTsr' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
               }
               //---#3 targetDifferentInLegend---stop-----------------------------------------------------------------------------------------------------------------------------
 
