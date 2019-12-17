@@ -458,14 +458,14 @@ var indicatorView = function (model, options) {
             //console.log(sorted);
             _.each(sorted, function(dataset) { //#18.2 use the sorted dataset instead of the original >>> _.each(chart.data.datasets, function(dataset, datasetIndex) {
 
-
-
-
-
-
-
               text.push('<li data-datasetindex="' + dataset.datasetIndex + '">'); //#18.2 >>> text.push('<li data-datasetindex="' + datasetIndex + '">');
-              if (dataset.datasetIndex == 3){text.push('<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>');}
+
+              var indent = '<span>';
+              for (var i=0; i<dataset.label.split(',').length; i++){
+                indent = indent.concat('&nbsp;&nbsp;&nbsp;&nbsp;');
+              };
+              indent = indent.concat('</span>');
+              text.push(indent);
               //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
               //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
               if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
