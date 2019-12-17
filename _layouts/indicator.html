@@ -131,8 +131,11 @@
               </div>
               <!---#16 showMapDataSources---start--------------------->
               <div id="mapfooter" class="table-footer-text">
+
                 {% if sources_list %}
-                  {% if uniqSources | size != 1}
+                {% assign sourceSize = uniqSources | size %}
+                console.log(uniqSources);
+                  {% if sourceSize == 1}
                     <p>{{ t.indicator.source }}: {{ uniqSources }}</p>
                   {% else %}
                     <p>{{ t.indicator.sources }}: {{ uniqSources }}</p>
