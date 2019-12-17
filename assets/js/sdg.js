@@ -2099,13 +2099,13 @@ var indicatorView = function (model, options) {
 
               var preA = '';
               for (var i=0; i<4-subA.split(",").length; i++){
-                preA.concat('A');
+                preA = preA.concat('A');
                 }
               subA = preA.concat(subA);
 
               var preB = '';
               for (var i=0; i<4-subB.split(",").length; i++){
-                preB.concat('A');
+                preB = preB.concat('A');
                 }
               subB = preB.concat(subB);
 
