@@ -2096,12 +2096,26 @@ var indicatorView = function (model, options) {
                 var subA = a.label;
                 var subB = b.label;
               }
+
+              var preA = ''
+              for (var i=0; i<subA.split(",").length-1; i++){
+                preA.push('A');
+                }
+              subA = preA.concat(subA);
+
+              var preB = ''
+              for (var i=0; i<subB.split(",").length-1; i++){
+                preB.push('A');
+                }
+              subB = preA.concat(subA);
+
+
               return (subA > subB) - (subA < subB);
             });
             //^^^^ #18.1 ^^^^
 
             _.each(sorted, function(dataset) { //#18.2 use the sorted dataset instead of the original >>> _.each(chart.data.datasets, function(dataset, datasetIndex) {
-              text.push('<span>')
+
 
 
 
@@ -2123,7 +2137,7 @@ var indicatorView = function (model, options) {
               text.push('</span>');
               text.push(translations.t(dataset.label));
               text.push('</li>');
-              text.push('</span>')
+
             });
 
             text.push('</ul>');
