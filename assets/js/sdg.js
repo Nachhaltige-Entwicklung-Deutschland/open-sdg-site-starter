@@ -2078,21 +2078,10 @@ var indicatorView = function (model, options) {
             }
           }]
         },
-
-        addPrefix: function(label){
-          var pre = '';
-          for (var i=0; i<(label.split(",").length - 1);i++) {
-            pre.push('A');
-          };
-          return pre.concat(label);
-        },
-        
         legendCallback: function(chart) {
             var text = ['<ul id="legend" style="text-align: left; padding-left: 0px">'];// #18.3 lengend entries on the left >>> var text = ['<ul id="legend">'];
             //---#18 structureLegendEntries---start------------------------------------
             //vvv #18.1 vvvv sort the dataset by substring if it contains "target" or "timeseries"
-
-
             var temp = [];
             _.each(chart.data.datasets, function(dataset, datasetIndex) {
               temp.push({label: dataset.label, borderdash: dataset.borderDash, backgroundColor: dataset.backgroundColor, datasetIndex: datasetIndex});
@@ -2106,13 +2095,6 @@ var indicatorView = function (model, options) {
                 var subA = a.label;
                 var subB = b.label;
               }
-
-
-
-              subA = addPrefix(subA);
-              subB = addPrefix(subB);
-
-
               return (subA > subB) - (subA < subB);
             });
             //^^^^ #18.1 ^^^^
@@ -2140,7 +2122,7 @@ var indicatorView = function (model, options) {
               text.push('</span>');
               text.push(translations.t(dataset.label));
               text.push('</li>');
-
+              
 
             });
 
