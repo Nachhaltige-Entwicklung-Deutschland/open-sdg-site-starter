@@ -437,13 +437,13 @@ var indicatorView = function (model, options) {
               }
 
               var preA = '';
-              for (var i=0; i<subA.split(",").length-1; i++){
+              for (var i=0; i<4-subA.split(",").length; i++){
                 preA.concat('A');
                 }
               subA = preA.concat(subA);
 
               var preB = '';
-              for (var i=0; i<subB.split(",").length-1; i++){
+              for (var i=0; i<4-subB.split(",").length; i++){
                 preB.concat('A');
                 }
               subB = preB.concat(subB);
