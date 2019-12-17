@@ -2088,7 +2088,8 @@ var indicatorView = function (model, options) {
               temp.push({label: dataset.label, borderdash: dataset.borderDash, backgroundColor: dataset.backgroundColor, datasetIndex: datasetIndex});
             });
             var sorted = temp.sort(function(a, b) {
-              if (a.label.substr(0,4) == 'Ziel' || a.label.substr(0,6) == 'Target' || a.label.substr(0,4) == 'Zeit' || a.label.substr(0,4) == 'Time'){
+              var sub = a.label.substr(0,4);
+              if (sub == 'Ziel' || sub == 'Targ' || sub == 'Zeit' || sub == 'Time'){
                 var subA = a.label.substr(a.label.indexOf(','), a.label.length);
                 var subB = b.label.substr(b.label.indexOf(','), b.label.length);
               }
@@ -2096,21 +2097,6 @@ var indicatorView = function (model, options) {
                 var subA = a.label;
                 var subB = b.label;
               }
-
-              /*
-              var preA = '';
-              for (var i=0; i<4-subA.split(",").length; i++){
-                preA = preA.concat('A');
-                }
-              subA = preA.concat(subA);
-
-              var preB = '';
-              for (var i=0; i<4-subB.split(",").length; i++){
-                preB = preB.concat('A');
-                }
-              subB = preB.concat(subB);
-              */
-              //console.log("subA: ",subA,preA);
 
               return (subA > subB) - (subA < subB);
             });
@@ -2121,12 +2107,24 @@ var indicatorView = function (model, options) {
 
               text.push('<li data-datasetindex="' + dataset.datasetIndex + '">'); //#18.2 >>> text.push('<li data-datasetindex="' + datasetIndex + '">');
 
+              // vvv #18.4 vvvv indent the entries by the number of commas----------
               var indent = '<span>';
-              for (var i=0; i<dataset.label.split(',').length; i++){
+
+              // replace parts that contain a comma which is no separator---
+              var label = dataset.label;
+              var replace = [{old: '2,5', new: '2.5'},
+                            {old: 'Gebäude-, Frei- & Betriebsfläche', new: 'Gebäude- Frei- & Betriebsfläche'}];
+              for (var i=0; i<replace.length; i++){
+                label = label.replace(replace[i]['old'], replace[i]['new']);
+              };
+              //-----------------------------------------------------------
+              for (var i=0; i<label.split(',').length; i++){
                 indent = indent.concat('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;');
               };
               indent = indent.concat('</span>');
               text.push(indent);
+              // ^^^^ #18.4 ^^^^----------------------------------------------------
+
               //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
               //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
               if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
@@ -2147,60 +2145,7 @@ var indicatorView = function (model, options) {
             return text.join('');
         },
 
-        /*
-        legendCallback: function(chart) {
-            var text = ['<ul id="legend" style="text-align: left; padding-left: 0px">'];
-            //text.push('<span>');
 
-            var last = '';
-            _.each(sorted, function(set){
-
-              // define the name without possible 'target' or 'timeseries'
-              if (set.label.substr(0,4) == 'Ziel' || set.label.substr(0,6) == 'Target' || set.label.substr(0,4) == 'Zeit' || set.label.substr(0,2) == 'Time'){
-                var subLabel = set.label.substr(set.label.indexOf(','), set.label.length);
-              }
-              else{
-                var subLabel = set.label;
-              }
-              //-----------------------------------------------------------
-              // replace parts that contain a comma which is no separator---
-              var replace = [{old: '2,5', new: '2.5'},
-                            {old: 'Gebäude-, Frei- & Betriebsfläche', new: 'Gebäude- Frei- & Betriebsfläche'}];
-              for (var i=0; i<replace.length; i++){
-                subLabel = subLabel.replace(replace[i]['old'], replace[i]['new']);
-              };
-              //-----------------------------------------------------------
-
-              //if (subLabel.substr(0, subLabel.lastIndexOf(',')) != last){
-                //text.push('</span><hr><span>');
-              //}
-              last = subLabel.substr(0, subLabel.lastIndexOf(','));
-
-              text.push('<li data-datasetindex=" ' + set.datasetIndex + '">');
-
-              for (var i=0; i<subLabel.split(",").length-1; i++){
-                text.push('<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>');
-              };
-
-
-              //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
-              //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
-              if (set.label.substr(0,4) == 'Ziel' || set.label.substr(0,6) == 'Target'){
-                text.push('<span class="swatchTgt' + '" style="background-color: ' + set.backgroundColor + '">');
-              }
-              else{
-                text.push('<span class="swatchTsr' + (set.borderDash ? ' dashed' : '') + '" style="background-color: ' + set.backgroundColor + '">');
-              }
-              //---#3 targetDifferentInLegend---stop-----------------------------------------------------------------------------------------------------------------------------
-              text.push('</span>');
-              text.push(translations.t(set.label));
-              text.push('</li>');
-            });
-            //text.push('</span><hr>');
-            text.push('</ul>');
-            return text.join('');
-        },
-        */
         legend: {
           display: false,
         },
