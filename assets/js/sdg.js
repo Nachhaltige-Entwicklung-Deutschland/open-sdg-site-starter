@@ -2090,12 +2090,12 @@ var indicatorView = function (model, options) {
             var sorted = temp.sort(function(a, b) {
               var sub = a.label.substr(0,4);
               if (sub == 'Ziel' || sub == 'Targ' || sub == 'Zeit' || sub == 'Time'){
-                var subA = a.label.substr(a.label.indexOf(','), a.label.length);
-                var subB = b.label.substr(b.label.indexOf(','), b.label.length);
+                var subA = a.label.substr(a.label.indexOf(','), a.label.length).replace('Insgesamt', 'AAA').replace('Total','AAA');
+                var subB = b.label.substr(b.label.indexOf(','), b.label.length).replace('Insgesamt', 'AAA').replace('Total','AAA');
               }
               else{
-                var subA = a.label;
-                var subB = b.label;
+                var subA = a.label.replace('Insgesamt', 'AAA').replace('Total','AAA');
+                var subB = b.label.replace('Insgesamt', 'AAA').replace('Total','AAA');
               }
 
               return (subA > subB) - (subA < subB);
@@ -2113,7 +2113,8 @@ var indicatorView = function (model, options) {
               // replace parts that contain a comma which is no separator---
               var label = dataset.label;
               var replace = [{old: '2,5', new: '2.5'},
-                            {old: 'Gebäude-, Frei- & Betriebsfläche', new: 'Gebäude- Frei- & Betriebsfläche'}];
+                            {old: 'Gebäude-, Frei- & Betriebsfläche', new: 'Gebäude- Frei- & Betriebsfläche'},
+                            {old: 'Konsum, Investitionen und Exporte', new: 'Konsum Investitionen und Exporte'}];
               for (var i=0; i<replace.length; i++){
                 label = label.replace(replace[i]['old'], replace[i]['new']);
               };
