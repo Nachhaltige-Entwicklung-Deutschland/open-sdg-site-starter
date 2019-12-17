@@ -2078,10 +2078,21 @@ var indicatorView = function (model, options) {
             }
           }]
         },
+
+        addPrefix: function(label){
+          var pre = '';
+          for (var i=0; i<(label.split(",").length - 1);i++) {
+            pre.push('A');
+          };
+          return pre.concat(label);
+        },
+        
         legendCallback: function(chart) {
             var text = ['<ul id="legend" style="text-align: left; padding-left: 0px">'];// #18.3 lengend entries on the left >>> var text = ['<ul id="legend">'];
             //---#18 structureLegendEntries---start------------------------------------
             //vvv #18.1 vvvv sort the dataset by substring if it contains "target" or "timeseries"
+
+
             var temp = [];
             _.each(chart.data.datasets, function(dataset, datasetIndex) {
               temp.push({label: dataset.label, borderdash: dataset.borderDash, backgroundColor: dataset.backgroundColor, datasetIndex: datasetIndex});
@@ -2096,13 +2107,7 @@ var indicatorView = function (model, options) {
                 var subB = b.label;
               }
 
-              addPrefix: function(label){
-                var pre = '';
-                for (var i=0; i<(label.split(",").length - 1);i++) {
-                  pre.push('A');
-                };
-                return pre.concat(label);
-              };
+
 
               subA = addPrefix(subA);
               subB = addPrefix(subB);
