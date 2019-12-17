@@ -426,7 +426,7 @@ var indicatorView = function (model, options) {
               temp.push({label: dataset.label, borderdash: dataset.borderDash, backgroundColor: dataset.backgroundColor, datasetIndex: datasetIndex});
             });
             var sorted = temp.sort(function(a, b) {
-              if (a.label.substr(0,4) == 'Ziel' || a.label.substr(0,6) == 'Target' || a.label.substr(0,4) == 'Zeit' || a.label.substr(0,2) == 'Time'){
+              if (a.label.substr(0,4) == 'Ziel' || a.label.substr(0,6) == 'Target' || a.label.substr(0,4) == 'Zeit' || a.label.substr(0,4) == 'Time'){
                 var subA = a.label.substr(a.label.indexOf(','), a.label.length);
                 var subB = b.label.substr(b.label.indexOf(','), b.label.length);
               }
@@ -446,7 +446,7 @@ var indicatorView = function (model, options) {
 
 
 
-              text.push('<li data-datasetindex="' + dataset.datasetIndex + '>'); //#18.2 >>> text.push('<li data-datasetindex="' + datasetIndex + '">');
+              text.push('<li data-datasetindex="' + dataset.datasetIndex + '">'); //#18.2 >>> text.push('<li data-datasetindex="' + datasetIndex + '">');
 
               //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
               //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
@@ -461,8 +461,6 @@ var indicatorView = function (model, options) {
               text.push('</span>');
               text.push(translations.t(dataset.label));
               text.push('</li>');
-              
-
             });
 
             text.push('</ul>');
