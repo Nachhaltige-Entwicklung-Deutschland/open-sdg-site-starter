@@ -447,7 +447,7 @@ var indicatorView = function (model, options) {
 
 
               text.push('<li data-datasetindex="' + dataset.datasetIndex + '>'); //#18.2 >>> text.push('<li data-datasetindex="' + datasetIndex + '">');
-              text.push('<li style="display: block">')
+              text.push('<li style="display: block">');
               //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
               //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
               if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
@@ -460,7 +460,7 @@ var indicatorView = function (model, options) {
 
               text.push('</span>');
               text.push(translations.t(dataset.label));
-              text.push('</li>')
+              text.push('</li>');
               text.push('</li>');
 
             });
