@@ -424,7 +424,7 @@ var indicatorView = function (model, options) {
             //vvv #18.1 vvvv sort the dataset by substring if it contains "target" or "timeseries"
             var temp = [];
             _.each(chart.data.datasets, function(dataset, datasetIndex) {
-              temp.push({label: dataset.label, borderdash: dataset.borderDash, backgroundColor: dataset.backgroundColor, datasetIndex: datasetIndex});
+              temp.push({label: dataset.label, borderDash: dataset.borderDash, backgroundColor: dataset.backgroundColor, datasetIndex: datasetIndex});
             });
             var sorted = temp.sort(function(a, b) {
               var sub = a.label.substr(0,4);
@@ -453,7 +453,8 @@ var indicatorView = function (model, options) {
               var label = dataset.label;
               var replace = [{old: '2,5', new: '2.5'},
                             {old: 'Gebäude-, Frei- & Betriebsfläche', new: 'Gebäude- Frei- & Betriebsfläche'},
-                            {old: 'Konsum, Investitionen und Exporte', new: 'Konsum Investitionen und Exporte'}];
+                            {old: 'Konsum, Investitionen und Exporte', new: 'Konsum Investitionen und Exporte'},
+                          {old: 'Entwicklungszusammenarbeit, deren', new: 'Entwicklungszusammenarbeit, deren'}];
               for (var i=0; i<replace.length; i++){
                 label = label.replace(replace[i]['old'], replace[i]['new']);
               };
