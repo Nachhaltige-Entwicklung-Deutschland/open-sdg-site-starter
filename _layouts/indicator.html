@@ -134,7 +134,7 @@
 
                 {% if sources_list %}
                 {% assign sourceSize = sources_list | size %}
-                  {% if sourceSize == 1}
+                  {% if sourceSize == 1 %}
                     <p>{{ t.indicator.source }}: {{ uniqSources }}</p>
                   {% else %}
                     <p>{{ t.indicator.sources }}: {{ uniqSources }}</p>
