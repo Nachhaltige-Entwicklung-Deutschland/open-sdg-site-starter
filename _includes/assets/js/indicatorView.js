@@ -419,8 +419,35 @@ var indicatorView = function (model, options) {
         },
         legendCallback: function(chart) {
             var text = ['<ul id="legend">'];
-
+            //---#18 structureLegendEntries---start------------------------------------
+            //vvv #18.1 vvvv sort the dataset by substring if it contains "target" or "timeseries"
+            var temp = [];
             _.each(chart.data.datasets, function(dataset, datasetIndex) {
+              temp.push({label: dataset.label, borderdash: dataset.borderDash, backgroundColor: dataset.backgroundColor, datasetIndex: datasetIndex});
+            });
+            var sorted = temp.sort(function(a, b) {
+              if (a.label.substr(0,4) == 'Ziel' || a.label.substr(0,6) == 'Target' || a.label.substr(0,4) == 'Zeit' || a.label.substr(0,2) == 'Time'){
+                var subA = a.label.substr(a.label.indexOf(','), a.label.length);
+                var subB = b.label.substr(b.label.indexOf(','), b.label.length);
+              }
+              else{
+                var subA = a.label;
+                var subB = b.label;
+              }
+              return (subA > subB) - (subA < subB);
+            });
+            //^^^^ #18.1 ^^^^
+
+            //vvv #18.2 vvv use the sorted dataset instead of the original
+            //_.each(chart.data.datasets, function(dataset, datasetIndex) {
+            _.each(sorted, function(dataset) {
+            //^^^ #18.2 ^^^
+
+
+
+
+
+
               text.push('<li data-datasetindex="' + datasetIndex + '">');
 
               //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
@@ -446,24 +473,6 @@ var indicatorView = function (model, options) {
         legendCallback: function(chart) {
             var text = ['<ul id="legend" style="text-align: left; padding-left: 0px">'];
             //text.push('<span>');
-
-            //---sort the dataset by string or substring
-            var temp = [];
-            _.each(chart.data.datasets, function(dataset, datasetIndex) {
-              temp.push({label: dataset.label, borderdash: dataset.borderDash, backgroundColor: dataset.backgroundColor, datasetIndex: datasetIndex});
-            });
-            var sorted = temp.sort(function(a, b) {
-              if (a.label.substr(0,4) == 'Ziel' || a.label.substr(0,6) == 'Target' || a.label.substr(0,4) == 'Zeit' || a.label.substr(0,2) == 'Time'){
-                var subA = a.label.substr(a.label.indexOf(','), a.label.length);
-                var subB = b.label.substr(b.label.indexOf(','), b.label.length);
-              }
-              else{
-                var subA = a.label;
-                var subB = b.label;
-              }
-              return (subA > subB) - (subA < subB);
-            });
-            //-------------------------------
 
             var last = '';
             _.each(sorted, function(set){
