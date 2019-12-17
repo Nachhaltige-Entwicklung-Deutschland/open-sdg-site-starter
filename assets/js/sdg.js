@@ -2109,7 +2109,7 @@ var indicatorView = function (model, options) {
                 }
               subB = preB.concat(subB);
 
-              console.log("subA: ",subA);
+              console.log("subA: ",subA,preA);
               return (subA > subB) - (subA < subB);
             });
             //^^^^ #18.1 ^^^^
