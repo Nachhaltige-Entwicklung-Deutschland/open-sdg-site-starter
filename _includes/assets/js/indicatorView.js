@@ -419,6 +419,7 @@ var indicatorView = function (model, options) {
         },
         legendCallback: function(chart) {
             var text = ['<ul id="legend" style="text-align: left; padding-left: 0px">'];// #18.3 lengend entries on the left >>> var text = ['<ul id="legend">'];
+
             //---#18 structureLegendEntries---start------------------------------------
             //vvv #18.1 vvvv sort the dataset by substring if it contains "target" or "timeseries"
             var temp = [];
@@ -439,7 +440,7 @@ var indicatorView = function (model, options) {
             //^^^^ #18.1 ^^^^
 
             _.each(sorted, function(dataset) { //#18.2 use the sorted dataset instead of the original >>> _.each(chart.data.datasets, function(dataset, datasetIndex) {
-
+              text.push('<span>')
 
 
 
@@ -461,6 +462,7 @@ var indicatorView = function (model, options) {
               text.push('</span>');
               text.push(translations.t(dataset.label));
               text.push('</li>');
+              text.push('</span><hr>')
             });
 
             text.push('</ul>');
