@@ -418,7 +418,7 @@ var indicatorView = function (model, options) {
           }]
         },
         legendCallback: function(chart) {
-            var text = ['<ul id="legend" style="text-align: left; padding-left: 0px; dispaly: block">'];
+            var text = ['<ul id="legend" style="text-align: left; padding-left: 0px">'];
             text.push('<span>');
 
             //---sort the dataset by string or substring
@@ -449,6 +449,7 @@ var indicatorView = function (model, options) {
               else{
                 var subLabel = set.label;
               }
+
               var replace = [{old: '2,5', new: '2.5'},
                             {old: 'Gebäude-, Frei- & Betriebsfläche', new: 'Gebäude- Frei- & Betriebsfläche'}];
               for (var i=0; i<replace.length; i++){
@@ -460,7 +461,7 @@ var indicatorView = function (model, options) {
               }
               last = subLabel.substr(0, subLabel.lastIndexOf(','));
 
-              text.push('<li data-datasetindex=" ' + set.datasetIndex + '" style:"dispaly: block">');
+              text.push('<li data-datasetindex=" ' + set.datasetIndex + '">');
 
               for (var i=0; i<subLabel.split(",").length-1; i++){
                 text.push('<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>');
