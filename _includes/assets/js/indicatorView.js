@@ -445,7 +445,7 @@ var indicatorView = function (model, options) {
 
 
 
-              text.push('span>')
+              text.push('<span>')
               text.push('<li data-datasetindex="' + dataset.datasetIndex + '">'); //#18.2 >>> text.push('<li data-datasetindex="' + datasetIndex + '">');
 
               //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
