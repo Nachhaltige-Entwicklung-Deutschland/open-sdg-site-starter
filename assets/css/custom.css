@@ -98,8 +98,8 @@ header {
     border: 2.5px solid; }
   #legend .swatchTgt {
     display: inline-block;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     margin-right: 18px;
     margin-left: 18px;
     border: 2.5px solid; }
@@ -115,6 +115,16 @@ header {
       margin-left: 0px;
       margin-right: 3px; }
     #legend .swatchLine.dashed {
+      background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAABCAYAAADn9T9+AAAAFklEQVQImWP8////fwY0wMjIyIguBgCaAgQCms5tJwAAAABJRU5ErkJggg==");
+      background-repeat: repeat;
+      background-position: -5px 0; }
+  #legend .swatchBar {
+    display: inline-block;
+    width: 45px;
+    height: 15px;
+    margin-top: 0px;
+    margin-right: 3px; }
+    #legend .swatchBar.dashed {
       background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAABCAYAAADn9T9+AAAAFklEQVQImWP8////fwY0wMjIyIguBgCaAgQCms5tJwAAAABJRU5ErkJggg==");
       background-repeat: repeat;
       background-position: -5px 0; }

@@ -2078,7 +2078,7 @@ var indicatorView = function (model, options) {
             }
           }]
         },
-        legendCallback: function(chart) {
+        legendCallback: function(chart, this._model.graphType) {
             var text = ['<ul id="legend" style="text-align: left; padding-left: 0px">'];// #18.3 lengend entries on the left >>> var text = ['<ul id="legend">'];
 
             //---#18 structureLegendEntries---start------------------------------------
@@ -2134,10 +2134,13 @@ var indicatorView = function (model, options) {
               if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
                 text.push('<span class="swatchTgt' + '" style="border-color: ' + dataset.backgroundColor + '"></span>');
               }
-              else{
+              else if (this._model.graphType != 'bar'){
                 text.push('<span class="swatchLine' + (dataset.borderDash ? ' dashed' : '') + ' left" style="background-color: ' + dataset.backgroundColor + '"></span>');
                 text.push('<span class="swatchTsr' + (dataset.borderDash ? ' dashed' : '') + '" style="border-color: ' + dataset.backgroundColor + '"></span>');
                 text.push('<span class="swatchLine' + (dataset.borderDash ? ' dashed' : '') + ' right" style="background-color: ' + dataset.backgroundColor + '"></span>');
+              }
+              else{
+                text.push('<span class="swatchBar' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '"></span>');
               }
               //---#3 targetDifferentInLegend---stop-----------------------------------------------------------------------------------------------------------------------------
 
