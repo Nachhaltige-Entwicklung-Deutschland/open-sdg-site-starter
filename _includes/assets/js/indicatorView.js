@@ -468,7 +468,7 @@ var indicatorView = function (model, options) {
 
               //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
               //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
-              text.push('<span class="swatchLine' + '" style="border-color: ' + dataset.backgroundColor + '">');
+              text.push('<span class="swatchLine' + '" style="border-color: ' + dataset.backgroundColor + '"></span>');
               if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
                 text.push('<span class="swatchTgt' + '" style="border-color: ' + dataset.backgroundColor + '">');
               }
