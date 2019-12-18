@@ -632,11 +632,11 @@ header {
           position: absolute;
           z-index: 2;
           &.left {
-            width: 20px;
+            min-width: 20px;
             left: 0;
           }
           &.right {
-            width: 20px;
+            min-width: 20px;
             right: 1px;
           }
           box-shadow: 1px 1px 1px 0px #666;
