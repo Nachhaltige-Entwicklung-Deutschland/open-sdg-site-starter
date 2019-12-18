@@ -689,6 +689,7 @@ header {
         }
       }
     }
+    // make selection legend responsive
     @media only screen and (max-width: 680px) {
       .selection-legend {
         width: 200px;
