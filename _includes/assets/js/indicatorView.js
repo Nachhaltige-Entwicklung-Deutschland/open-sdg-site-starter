@@ -421,13 +421,9 @@ var indicatorView = function (model, options) {
 
             //---#18 structureLegendEntries---start------------------------------------
             //vvv #18.1 vvvv sort the dataset by substring if it contains "target" or "timeseries"
-            _.each(chart.data.datasets, function(dataset) {
-              console.log(dataset.type);
-            });
-
             var temp = [];
             _.each(chart.data.datasets, function(dataset, datasetIndex) {
-              temp.push({label: dataset.label, borderDash: dataset.borderDash, backgroundColor: dataset.backgroundColor, datasetIndex: datasetIndex});
+              temp.push({label: dataset.label, borderDash: dataset.borderDash, backgroundColor: dataset.backgroundColor, datasetIndex: datasetIndex, type: dataset.type});
             });
 
             var sorted = temp.sort(function(a, b) {
@@ -476,11 +472,11 @@ var indicatorView = function (model, options) {
               if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
                 text.push('<span class="swatchTgt' + '" style="border-color: ' + dataset.backgroundColor + '"></span>');
               }
-              /*else if (this._model.graphType != 'bar'){
+              else if (dataset.type != 'bar'){
                 text.push('<span class="swatchLine' + (dataset.borderDash ? ' dashed' : '') + ' left" style="background-color: ' + dataset.backgroundColor + '"></span>');
                 text.push('<span class="swatchTsr' + (dataset.borderDash ? ' dashed' : '') + '" style="border-color: ' + dataset.backgroundColor + '"></span>');
                 text.push('<span class="swatchLine' + (dataset.borderDash ? ' dashed' : '') + ' right" style="background-color: ' + dataset.backgroundColor + '"></span>');
-              }*/
+              }
               else{
                 text.push('<span class="swatchBar' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '"></span>');
               }
