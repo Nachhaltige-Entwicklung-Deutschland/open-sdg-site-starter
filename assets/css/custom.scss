@@ -134,6 +134,7 @@ header {
     height: 15px;
     margin-right: 3px;
     border-radius: 7.5px;
+    border: 4px solid;
 
     &.dashed {
       background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAABCAYAAADn9T9+AAAAFklEQVQImWP8////fwY0wMjIyIguBgCaAgQCms5tJwAAAABJRU5ErkJggg==');
@@ -147,6 +148,7 @@ header {
     width: 15px;
     height: 15px;
     margin-right: 3px;
+    border: 4px solid;
   }
 
   span {
