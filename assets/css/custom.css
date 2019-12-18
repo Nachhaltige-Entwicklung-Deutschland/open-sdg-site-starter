@@ -480,9 +480,7 @@ header {
     padding: 0 10px; }
   @media only screen and (max-width: 680px) {
     #main-content #map .leaflet-control .timecontrol-slider {
-      display: none; }
-    #main-content #map .leaflet-control .selection-legend {
-      width: 200px; } }
+      display: none; } }
   #main-content #map .leaflet-control .download-geojson-button {
     display: block;
     cursor: pointer; }
@@ -562,3 +560,6 @@ header {
           right: 5px;
           position: absolute;
           z-index: 3; }
+  @media only screen and (max-width: 680px) {
+    #main-content #map .selection-legend {
+      width: 200px; } }
