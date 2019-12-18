@@ -521,8 +521,10 @@ header {
         z-index: 2;
         box-shadow: 1px 1px 1px 0px #666; }
         #main-content #map .selection-legend .legend-values .legend-value.left {
+          width: 20px;
           left: 0; }
         #main-content #map .selection-legend .legend-values .legend-value.right {
+          width: 20px;
           right: 1px; }
     #main-content #map .selection-legend #selection-list {
       list-style: none;
