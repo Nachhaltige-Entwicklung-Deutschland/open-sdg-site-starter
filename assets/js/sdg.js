@@ -2048,7 +2048,7 @@ var indicatorView = function (model, options) {
 
 
   this.createPlot = function (chartInfo) {
-
+    console.log(chartInfo);
     //console.log (chartInfo);
     var that = this;
     var chartConfig = {
@@ -2078,7 +2078,7 @@ var indicatorView = function (model, options) {
             }
           }]
         },
-        legendCallback: function(chart, this._model.graphType) {
+        legendCallback: function(chart) {
             var text = ['<ul id="legend" style="text-align: left; padding-left: 0px">'];// #18.3 lengend entries on the left >>> var text = ['<ul id="legend">'];
 
             //---#18 structureLegendEntries---start------------------------------------
@@ -2087,7 +2087,7 @@ var indicatorView = function (model, options) {
             _.each(chart.data.datasets, function(dataset, datasetIndex) {
               temp.push({label: dataset.label, borderDash: dataset.borderDash, backgroundColor: dataset.backgroundColor, datasetIndex: datasetIndex});
             });
-            console.log(dataset);
+
             var sorted = temp.sort(function(a, b) {
               var sub = a.label.substr(0,4);
               if (sub == 'Ziel' || sub == 'Targ' || sub == 'Zeit' || sub == 'Time'){
