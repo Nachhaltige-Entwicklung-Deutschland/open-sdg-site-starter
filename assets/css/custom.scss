@@ -584,9 +584,7 @@ header {
         .timecontrol-slider {
           display: none;
         }
-        .selection-legend{
-          width: 200px;
-        }
+
       }
       .download-geojson-button {
         display: block;
@@ -691,6 +689,11 @@ header {
         }
       }
     }
+    @media only screen and (max-width: 680px) {
+      .selection-legend {
+        width: 200px;
+      }
 
+    }
   }
 }
