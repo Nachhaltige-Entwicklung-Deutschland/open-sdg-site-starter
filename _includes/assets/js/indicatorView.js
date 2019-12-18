@@ -422,10 +422,10 @@ var indicatorView = function (model, options) {
             //---#18 structureLegendEntries---start------------------------------------
             //vvv #18.1 vvvv sort the dataset by substring if it contains "target" or "timeseries"
             var temp = [];
-            _.each(chart.data.datasets, function(dataset, datasetIndex) {
-              temp.push({label: dataset.label, borderDash: dataset.borderDash, backgroundColor: dataset.backgroundColor, datasetIndex: datasetIndex});
+            _.each(chart.data.datasets, function(dataset, datasetIndex, type) {
+              temp.push({label: dataset.label, borderDash: dataset.borderDash, backgroundColor: dataset.backgroundColor, datasetIndex: datasetIndex, type: type});
             });
-
+            console.log("t",temp);
             var sorted = temp.sort(function(a, b) {
               var sub = a.label.substr(0,4);
               if (sub == 'Ziel' || sub == 'Targ' || sub == 'Zeit' || sub == 'Time'){
