@@ -480,14 +480,16 @@ header {
     padding: 0 10px; }
   @media only screen and (max-width: 680px) {
     #main-content #map .leaflet-control .timecontrol-slider {
-      display: none; } }
+      display: none; }
+    #main-content #map .leaflet-control .selection-legend {
+      width: 200px; } }
   #main-content #map .leaflet-control .download-geojson-button {
     display: block;
     cursor: pointer; }
   #main-content #map .selection-legend {
     background-color: rgba(150, 150, 150, 0.6);
     padding: 0;
-    width: 100px; }
+    width: 300px; }
     #main-content #map .selection-legend .legend-swatches {
       height: 10px; }
       #main-content #map .selection-legend .legend-swatches .legend-swatch {
