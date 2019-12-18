@@ -584,6 +584,9 @@ header {
         .timecontrol-slider {
           display: none;
         }
+        .selection-legend{
+          width: 200px;
+        }
       }
       .download-geojson-button {
         display: block;
@@ -593,7 +596,7 @@ header {
     .selection-legend {
       background-color: rgba(150, 150, 150, 0.6);
       padding: 0;
-      width: 100px;
+      width: 300px;
       .legend-swatches {
         height: 10px;
         .legend-swatch {
@@ -688,5 +691,6 @@ header {
         }
       }
     }
+
   }
 }
