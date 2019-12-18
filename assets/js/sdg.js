@@ -2138,9 +2138,10 @@ var indicatorView = function (model, options) {
               }
               //---#3 targetDifferentInLegend---stop-----------------------------------------------------------------------------------------------------------------------------
 
+              text.push('</span>');
+
               text.push('<span class="swatchLine' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '"></span>');
 
-              text.push('</span>');
               text.push(translations.t(dataset.label));
               text.push('</li>');
 
