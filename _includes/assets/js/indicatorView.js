@@ -422,7 +422,7 @@ var indicatorView = function (model, options) {
             //---#18 structureLegendEntries---start------------------------------------
             //vvv #18.1 vvvv sort the dataset by substring if it contains "target" or "timeseries"
             _.each(chart.data.datasets, function(dataset) {
-              console.push(dataset);
+              console.log(dataset);
             });
 
             var temp = [];
