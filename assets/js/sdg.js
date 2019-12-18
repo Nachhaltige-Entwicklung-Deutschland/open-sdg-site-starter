@@ -2127,9 +2127,9 @@ var indicatorView = function (model, options) {
               text.push(indent);
               // ^^^^ #18.4 ^^^^----------------------------------------------------
 
+              text.push('<span class="swatchLine' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '"></span>');
               //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
               //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
-              text.push('<span class="swatchLine' + '" style="background-color: ' + dataset.backgroundColor + '"></span>');
               if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
                 text.push('<span class="swatchTgt' + '" style="border-color: ' + dataset.backgroundColor + '">');
               }
@@ -2137,6 +2137,8 @@ var indicatorView = function (model, options) {
                 text.push('<span class="swatchTsr' + (dataset.borderDash ? ' dashed' : '') + '" style="border-color: ' + dataset.backgroundColor + '">');
               }
               //---#3 targetDifferentInLegend---stop-----------------------------------------------------------------------------------------------------------------------------
+
+              text.push('<span class="swatchLine' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '"></span>');
 
               text.push('</span>');
               text.push(translations.t(dataset.label));
