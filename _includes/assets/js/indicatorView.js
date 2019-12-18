@@ -426,6 +426,7 @@ var indicatorView = function (model, options) {
             _.each(chart.data.datasets, function(dataset, datasetIndex) {
               temp.push({label: dataset.label, borderDash: dataset.borderDash, backgroundColor: dataset.backgroundColor, datasetIndex: datasetIndex});
             });
+            console.log(dataset);
             var sorted = temp.sort(function(a, b) {
               var sub = a.label.substr(0,4);
               if (sub == 'Ziel' || sub == 'Targ' || sub == 'Zeit' || sub == 'Time'){
@@ -441,7 +442,7 @@ var indicatorView = function (model, options) {
             });
 
             //^^^^ #18.1 ^^^^
-            console.log(sorted);
+
             _.each(sorted, function(dataset) { //#18.2 use the sorted dataset instead of the original >>> _.each(chart.data.datasets, function(dataset, datasetIndex) {
 
               text.push('<li data-datasetindex="' + dataset.datasetIndex + '">'); //#18.2 >>> text.push('<li data-datasetindex="' + datasetIndex + '">');
