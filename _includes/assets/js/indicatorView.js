@@ -388,7 +388,6 @@ var indicatorView = function (model, options) {
 
   this.createPlot = function (chartInfo) {
     console.log(chartInfo);
-    //console.log (chartInfo);
     var that = this;
     var chartConfig = {
       type: this._model.graphType,
@@ -455,7 +454,7 @@ var indicatorView = function (model, options) {
               var replace = [{old: '2,5', new: '2.5'},
                             {old: 'Gebäude-, Frei- & Betriebsfläche', new: 'Gebäude- Frei- & Betriebsfläche'},
                             {old: 'Konsum, Investitionen und Exporte', new: 'Konsum Investitionen und Exporte'},
-                          {old: 'Entwicklungszusammenarbeit, deren', new: 'Entwicklungszusammenarbeit, deren'}];
+                            {old: 'Entwicklungszusammenarbeit, deren', new: 'Entwicklungszusammenarbeit, deren'}];
               for (var i=0; i<replace.length; i++){
                 label = label.replace(replace[i]['old'], replace[i]['new']);
               };
@@ -477,10 +476,10 @@ var indicatorView = function (model, options) {
                 text.push('<span class="swatchLine' + (dataset.borderDash ? ' dashed' : '') + ' left" style="background-color: ' + dataset.backgroundColor + '"></span>');
                 text.push('<span class="swatchTsr' + (dataset.borderDash ? ' dashed' : '') + '" style="border-color: ' + dataset.backgroundColor + '"></span>');
                 text.push('<span class="swatchLine' + (dataset.borderDash ? ' dashed' : '') + ' right" style="background-color: ' + dataset.backgroundColor + '"></span>');
-              }
+              }/*
               else{
                 text.push('<span class="swatchBar' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '"></span>');
-              }
+              }*/
               //---#3 targetDifferentInLegend---stop-----------------------------------------------------------------------------------------------------------------------------
 
 
