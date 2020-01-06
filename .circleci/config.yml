@@ -45,7 +45,7 @@ jobs:
           command: bash scripts/test/html_proofer_prod.sh
       - add_ssh_keys:
           fingerprints:
-            - "ec:42:31:b1:27:aa:df:aa:3c:7a:d8:1f:cc:55:e6:77"
+            - "a0:7f:46:1c:2a:29:34:3d:65:3f:e7:1b:51:9d:67:32"
       - run:
           name: Deploy to Github
           command: bash scripts/deploy/circleci/deploy_prod.sh
