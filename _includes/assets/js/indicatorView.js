@@ -652,7 +652,7 @@ var indicatorView = function (model, options) {
 
   this.createSelectionsTable = function(chartInfo) {
     var tableUnit = chartInfo.selectedUnit? translations.t(chartInfo.selectedUnit) : '';
-    console.log(chartInfo.footerFields.Unit);
+    console.log(chartInfo.footerFields.[translations.indicator.unit_of_measurement]);
     this.createTable(chartInfo.selectionsTable, tableUnit, chartInfo.indicatorId, '#selectionsTable', true);
     this.createTableFooter('selectionTableFooter', chartInfo.footerFields, '#selectionsTable');
     this.createDownloadButton(chartInfo.selectionsTable, 'Table', chartInfo.indicatorId, '#selectionsTable');
@@ -740,7 +740,7 @@ var indicatorView = function (model, options) {
       var getHeading = function(heading, index) {
         var span = '<span class="sort" />';
         var span_heading = '<span>' + translations.t(heading) + '</span>';
-        return (!index || heading.toLowerCase() == 'units') ? span_heading + span : span + span_heading + '<br>' + tableUnit;
+        return (!index || heading.toLowerCase() == 'units') ? span_heading + span : span + span_heading + ((tableUnit == '') ? '' : ('<br>' + tableUnit));
       };
       table.headings.forEach(function (heading, index) {
         table_head += '<th' + (!index || heading.toLowerCase() == 'units' ? '': ' class="table-value"') + ' scope="col">' + getHeading(heading, index) + '</th>';
