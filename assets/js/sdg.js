@@ -2398,8 +2398,8 @@ var indicatorView = function (model, options) {
 
       var getHeading = function(heading, index) {
         var span = '<span class="sort" />';
-        var span_heading = '<span>' + translations.t(heading) + '</span>';
-        return (!index || heading.toLowerCase() == 'units') ? span_heading + span +'X': span + span_heading;
+        var span_heading = '<span>' + translations.t(heading) +' '+index + '</span>';
+        return (!index || heading.toLowerCase() == 'units') ? span_heading + span : span + span_heading;
       };
 
       table.headings.forEach(function (heading, index) {
