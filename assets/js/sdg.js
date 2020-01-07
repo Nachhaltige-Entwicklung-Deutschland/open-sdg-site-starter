@@ -2313,9 +2313,11 @@ var indicatorView = function (model, options) {
 
 
   this.createSelectionsTable = function(chartInfo) {
+    //---#19 addUnitToTableHeaderIfNeeded---start---------------------------------------------------
     var tableUnit = (chartInfo.selectedUnit && !chartInfo.footerFields[translations.indicator.unit_of_measurement]) ? translations.t(chartInfo.selectedUnit) : '';
-    console.log(chartInfo.footerFields[translations.indicator.unit_of_measurement]);
+    //this.createTable(chartInfo.selectionsTable, chartInfo.indicatorId, '#selectionsTable', true);
     this.createTable(chartInfo.selectionsTable, tableUnit, chartInfo.indicatorId, '#selectionsTable', true);
+    //---#19 addUnitToTableHeaderIfNeeded---stop----------------------------------------------------
     this.createTableFooter('selectionTableFooter', chartInfo.footerFields, '#selectionsTable');
     this.createDownloadButton(chartInfo.selectionsTable, 'Table', chartInfo.indicatorId, '#selectionsTable');
     this.createSourceButton(chartInfo.shortIndicatorId, '#selectionsTable');
@@ -2372,9 +2374,10 @@ var indicatorView = function (model, options) {
       'tabindex': 0
     }));
   }
-//-----------
+  //---#19 addUnitToTableHeaderIfNeeded---start---------------------------------------------------
+  //this.createTable = function(table, indicatorId, el) {
   this.createTable = function(table, tableUnit, indicatorId, el) {
-//-----------
+  //---#19 addUnitToTableHeaderIfNeeded---stop----------------------------------------------------
     options = options || {};
     var that = this,
     csv_path = options.csv_path,
@@ -2402,7 +2405,10 @@ var indicatorView = function (model, options) {
       var getHeading = function(heading, index) {
         var span = '<span class="sort" />';
         var span_heading = '<span>' + translations.t(heading) + '</span>';
+        //---#19 addUnitToTableHeaderIfNeeded---start---------------------------------------------------
+        //return (!index || heading.toLowerCase() == 'units') ? span_heading + span : span + span_heading;
         return (!index || heading.toLowerCase() == 'units') ? span_heading + span : span + span_heading + ((tableUnit == '') ? '' : ('<br>' + tableUnit));
+        //---#19 addUnitToTableHeaderIfNeeded---stop----------------------------------------------------
       };
       table.headings.forEach(function (heading, index) {
         table_head += '<th' + (!index || heading.toLowerCase() == 'units' ? '': ' class="table-value"') + ' scope="col">' + getHeading(heading, index) + '</th>';
