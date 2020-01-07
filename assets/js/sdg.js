@@ -2311,6 +2311,7 @@ var indicatorView = function (model, options) {
     setDataTableWidth(table);
   };
 
+
   this.createSelectionsTable = function(chartInfo) {
     var tableUnit = (chartInfo.selectedUnit && !chartInfo.footerFields[translations.indicator.unit_of_measurement]) ? translations.t(chartInfo.selectedUnit) : '';
     console.log(chartInfo.footerFields[translations.indicator.unit_of_measurement]);
