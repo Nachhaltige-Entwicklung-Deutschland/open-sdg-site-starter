@@ -2312,7 +2312,8 @@ var indicatorView = function (model, options) {
   };
 
   this.createSelectionsTable = function(chartInfo) {
-    var tableUnit = chartInfo.selectedUnit? translations.t(chartInfo.selectedUnit) : ''
+    var tableUnit = chartInfo.selectedUnit? translations.t(chartInfo.selectedUnit) : '';
+    console.log(chartInfo.footerFields);
     this.createTable(chartInfo.selectionsTable, tableUnit, chartInfo.indicatorId, '#selectionsTable', true);
     this.createTableFooter('selectionTableFooter', chartInfo.footerFields, '#selectionsTable');
     this.createDownloadButton(chartInfo.selectionsTable, 'Table', chartInfo.indicatorId, '#selectionsTable');
@@ -2402,7 +2403,6 @@ var indicatorView = function (model, options) {
         var span_heading = '<span>' + translations.t(heading) + '</span>';
         return (!index || heading.toLowerCase() == 'units') ? span_heading + span : span + span_heading + '<br>' + tableUnit;
       };
-      console.log("TH:", table);
       table.headings.forEach(function (heading, index) {
         table_head += '<th' + (!index || heading.toLowerCase() == 'units' ? '': ' class="table-value"') + ' scope="col">' + getHeading(heading, index) + '</th>';
       });
