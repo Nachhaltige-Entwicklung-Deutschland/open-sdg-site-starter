@@ -652,7 +652,7 @@ var indicatorView = function (model, options) {
 
   this.createSelectionsTable = function(chartInfo) {
     var tableUnit = chartInfo.selectedUnit? translations.t(chartInfo.selectedUnit) : '';
-    console.log(chartInfo.footerFields);
+    console.log(chartInfo.footerFields.Unit);
     this.createTable(chartInfo.selectionsTable, tableUnit, chartInfo.indicatorId, '#selectionsTable', true);
     this.createTableFooter('selectionTableFooter', chartInfo.footerFields, '#selectionsTable');
     this.createDownloadButton(chartInfo.selectionsTable, 'Table', chartInfo.indicatorId, '#selectionsTable');
