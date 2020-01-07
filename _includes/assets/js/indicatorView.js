@@ -651,7 +651,8 @@ var indicatorView = function (model, options) {
   };
 
   this.createSelectionsTable = function(chartInfo) {
-    this.createTable(chartInfo.selectionsTable, chartInfo.indicatorId, '#selectionsTable', true);
+    var tableUnit = chartInfo.selectedUnit? translations.t(chartInfo.selectedUnit) : ''
+    this.createTable(chartInfo.selectionsTable, tableUnit, chartInfo.indicatorId, '#selectionsTable', true);
     this.createTableFooter('selectionTableFooter', chartInfo.footerFields, '#selectionsTable');
     this.createDownloadButton(chartInfo.selectionsTable, 'Table', chartInfo.indicatorId, '#selectionsTable');
     this.createSourceButton(chartInfo.shortIndicatorId, '#selectionsTable');
@@ -708,9 +709,9 @@ var indicatorView = function (model, options) {
       'tabindex': 0
     }));
   }
-
-  this.createTable = function(table, indicatorId, el) {
-
+//-----------
+  this.createTable = function(table, tableUnit, indicatorId, el) {
+//-----------
     options = options || {};
     var that = this,
     csv_path = options.csv_path,
@@ -737,7 +738,7 @@ var indicatorView = function (model, options) {
 
       var getHeading = function(heading, index) {
         var span = '<span class="sort" />';
-        var span_heading = '<span>' + translations.t(heading) + '</span>';
+        var span_heading = '<span>' + translations.t(heading) +tableUnit+ '</span>';
         return (!index || heading.toLowerCase() == 'units') ? span_heading + span : span + span_heading;
       };
       console.log("TH:", table);
