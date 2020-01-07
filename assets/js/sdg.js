@@ -2048,7 +2048,7 @@ var indicatorView = function (model, options) {
 
 
   this.createPlot = function (chartInfo) {
-    
+
     var that = this;
     var chartConfig = {
       type: this._model.graphType,
@@ -2399,7 +2399,7 @@ var indicatorView = function (model, options) {
       var getHeading = function(heading, index) {
         var span = '<span class="sort" />';
         var span_heading = '<span>' + translations.t(heading) + '</span>';
-        return (!index || heading.toLowerCase() == 'units') ? span_heading + span : span + span_heading;
+        return (!index || heading.toLowerCase() == 'units') ? span_heading + span +'X': span + span_heading;
       };
 
       table.headings.forEach(function (heading, index) {
