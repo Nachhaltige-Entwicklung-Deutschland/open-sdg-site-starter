@@ -34,82 +34,43 @@ opensdg.autotrack = function(preset, category, action, label) {
  * Integrate with high-contrast switcher.
  */
 (function($, L, chroma, window, document, undefined) {
-  var d = new Date();
-  console.log("Dtae:",d.getDate())
-  if (d.getDate() > 7){
-    // Create the defaults once
-    var defaults = {
-      // Options for using tile imagery with leaflet.
-      tileURL: 'https://api.mapbox.com/styles/v1/mobosse/cjzmrn62k0ek11cmgea7a1i1h/tiles/256/{z}/{x}/{y}?&access_token={accessToken}',
-      tileOptions: {
-        id: 'mapbox.light',
-        accessToken: 'pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjazU1MGR4b3gwNWNzM2dzeGlkeWdkNmF5In0.7NmEzTzFKQVhdvc0Vvqv5w',
-        attribution: '<a href="https://www.mapbox.com/about/maps">&copy; MAPBOX</a> |<br class="visible-xs"> <a href="https://www.openstreetmap.org/copyright">&copy; OpenStreetMap</a> |<br class="visible-xs"> <a href="https://www.bkg.bund.de">&copy; GeoBasis-De / BKG 2019</a> |<br class="hidden-lg"> <a href="https://www.destatis.de/DE/Home/_inhalt.html">&copy; Statistisches Bundesamt (Destatis), 2019</a> |<br class="visible-xs"> <a href="https://www.mapbox.com/map-feedback/"><b>Impove this map</b>',
-      },
-      // Zoom limits.
-      minZoom: 5,
-      maxZoom: 15,
-      // Visual/choropleth considerations.
-      colorRange: chroma.brewer.BuGn,
-      noValueColor: '#f0f0f0',
-      styleNormal: {
-        weight: 1,
-        opacity: 1,
-        color: '#888',
-        fillOpacity: 0.7
-      },
-      styleHighlighted: {
-        weight: 1,
-        opacity: 1,
-        color: '#111',
-        fillOpacity: 0.7
-      },
-      styleStatic: {
-        weight: 2,
-        opacity: 1,
-        fillOpacity: 0,
-        color: '#172d44',
-        dashArray: '5,5',
-      },
-    };
-  }
-  else{
-    // Create the defaults once
-    var defaults = {
-      // Options for using tile imagery with leaflet.
-      tileURL: 'https://api.mapbox.com/styles/v1/mobosse/cjzmrn62k0ek11cmgea7a1i1h/tiles/256/{z}/{x}/{y}?&access_token={accessToken}',
-      tileOptions: {
-        id: 'mapbox.light',
-        accessToken: 'pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjazU1MGR4b3gwNWNzM2dzeGlkeWdkNmF5In0.7NmEzTzFKQVhdvc0Vvqv5w',
-        attribution: '<a href="https://www.mapbox.com/about/maps">&copy; MaPbOx</a> |<br class="visible-xs"> <a href="https://www.openstreetmap.org/copyright">&copy; OpenStreetMap</a> |<br class="visible-xs"> <a href="https://www.bkg.bund.de">&copy; GeoBasis-De / BKG 2019</a> |<br class="hidden-lg"> <a href="https://www.destatis.de/DE/Home/_inhalt.html">&copy; Statistisches Bundesamt (Destatis), 2019</a> |<br class="visible-xs"> <a href="https://www.mapbox.com/map-feedback/"><b>Impove this map</b>',
-      },
-      // Zoom limits.
-      minZoom: 5,
-      maxZoom: 15,
-      // Visual/choropleth considerations.
-      colorRange: chroma.brewer.BuGn,
-      noValueColor: '#f0f0f0',
-      styleNormal: {
-        weight: 1,
-        opacity: 1,
-        color: '#888',
-        fillOpacity: 0.7
-      },
-      styleHighlighted: {
-        weight: 1,
-        opacity: 1,
-        color: '#111',
-        fillOpacity: 0.7
-      },
-      styleStatic: {
-        weight: 2,
-        opacity: 1,
-        fillOpacity: 0,
-        color: '#172d44',
-        dashArray: '5,5',
-      },
-    };
-  }
+
+  // Create the defaults once
+  var defaults = {
+
+    // Options for using tile imagery with leaflet.
+    tileURL: '[replace me]',
+    tileOptions: {
+      id: '[relace me]',
+      accessToken: '[replace me]',
+      attribution: '[replace me]',
+    },
+    // Zoom limits.
+    minZoom: 5,
+    maxZoom: 15,
+    // Visual/choropleth considerations.
+    colorRange: chroma.brewer.BuGn,
+    noValueColor: '#f0f0f0',
+    styleNormal: {
+      weight: 1,
+      opacity: 1,
+      color: '#888',
+      fillOpacity: 0.7
+    },
+    styleHighlighted: {
+      weight: 1,
+      opacity: 1,
+      color: '#111',
+      fillOpacity: 0.7
+    },
+    styleStatic: {
+      weight: 2,
+      opacity: 1,
+      fillOpacity: 0,
+      color: '#172d44',
+      dashArray: '5,5',
+    },
+  };
   // Defaults for each map layer.
   var mapLayerDefaults = {
     min_zoom: 0,
@@ -125,6 +86,8 @@ opensdg.autotrack = function(preset, category, action, label) {
     this.element = element;
     this.options = $.extend(true, {}, defaults, options.mapOptions);
     console.log("Options:",this.options.tileOptions.accessToken)
+    this.options.tileOptions.accessToken = 'pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjazU1MGR4b3gwNWNzM2dzeGlkeWdkNmF5In0.7NmEzTzFKQVhdvc0Vvqv5w'
+    console.log("Options2:",this.options.tileOptions.accessToken)
     this.mapLayers = [];
     this.geoData = options.geoData;
     this.geoCodeRegEx = options.geoCodeRegEx;
