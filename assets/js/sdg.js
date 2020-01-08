@@ -124,6 +124,7 @@ opensdg.autotrack = function(preset, category, action, label) {
 
     this.element = element;
     this.options = $.extend(true, {}, defaults, options.mapOptions);
+    console.log("Options:",this.options)
     this.mapLayers = [];
     this.geoData = options.geoData;
     this.geoCodeRegEx = options.geoCodeRegEx;
