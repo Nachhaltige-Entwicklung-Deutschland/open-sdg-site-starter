@@ -28,7 +28,7 @@ jekyll_get_json:
     json: 'https://sustainabledevelopment-deutschland.github.io/sdg-data-pub/meta/schema.json'
   - data: reporting
     # Replace my-github-org and open-sdg-data-starter as needed.
-    json: 'https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/stats/reporting.json'
+    json: 'https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-data-starter/stats/reporting.json'
   - data: translations
     json: 'https://open-sdg.github.io/sdg-translations/translations-0.5.0.json'
 
