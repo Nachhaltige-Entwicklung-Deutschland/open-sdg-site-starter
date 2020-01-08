@@ -34,7 +34,7 @@ opensdg.autotrack = function(preset, category, action, label) {
  * Integrate with high-contrast switcher.
  */
 (function($, L, chroma, window, document, undefined) {
-  var d = new Date(),
+  var d = new Date();
   // Create the defaults once
   var defaults = {
 
