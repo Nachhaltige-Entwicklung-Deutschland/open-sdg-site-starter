@@ -9,8 +9,8 @@
 GH_ORG_PROD="sustainabledevelopment-deutschland"
 # These variables only control the name/email on the automated Git commits.
 # Changing this is optional.
-GH_NAME="CircleCI"
-GH_EMAIL="no-reply@example.com"
+GH_NAME="sustainabledevelopment-deutschland"
+GH_EMAIL="DNS-Indikatoren@destatis.de"
 ###################################
 
 # There is probably no need to modify anything below this point.
