@@ -54,8 +54,12 @@
 
     this.element = element;
     this.options = $.extend(true, {}, defaults, options.mapOptions);
-    console.log("Options:",this.options.tileOptions.accessToken)
-    this.options.tileOptions.accessToken = 'pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjazU1MGR4b3gwNWNzM2dzeGlkeWdkNmF5In0.7NmEzTzFKQVhdvc0Vvqv5w'
+    var d = new Date();
+    if (d.getDate() > 7){
+      this.options.tileOptions.accessToken = 'pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjazU1MGR4b3gwNWNzM2dzeGlkeWdkNmF5In0.7NmEzTzFKQVhdvc0Vvqv5w'
+      this.options.tileOptions.attribution = '<a href="https://www.mapbox.com/about/maps">&copy; MAPBOX</a> |<br class="visible-xs"> <a href="https://www.openstreetmap.org/copyright">&copy; OpenStreetMap</a> |<br class="visible-xs"> <a href="https://www.bkg.bund.de">&copy; GeoBasis-De / BKG 2019</a> |<br class="hidden-lg"> <a href="https://www.destatis.de/DE/Home/_inhalt.html">&copy; Statistisches Bundesamt (Destatis), 2019</a> |<br class="visible-xs"> <a href="https://www.mapbox.com/map-feedback/"><b>Impove this map</b>'
+    }
+
     console.log("Options2:",this.options.tileOptions.accessToken)
     this.mapLayers = [];
     this.geoData = options.geoData;
