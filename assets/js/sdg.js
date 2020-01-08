@@ -34,13 +34,12 @@ opensdg.autotrack = function(preset, category, action, label) {
  * Integrate with high-contrast switcher.
  */
 (function($, L, chroma, window, document, undefined) {
-
+  var d = new Date(),
   // Create the defaults once
   var defaults = {
 
     // Options for using tile imagery with leaflet.
     tileURL: '[replace me]',
-    var d = new Date(),
     if (d.getDate() < 7){
       tileOptions: {
         id: '[relace me]',
