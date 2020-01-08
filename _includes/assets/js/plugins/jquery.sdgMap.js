@@ -4,6 +4,7 @@
  */
 (function($, L, chroma, window, document, undefined) {
   var d = new Date();
+  console.log("Dtae:",d.getDate())
   if (d.getDate() > 7){
     // Create the defaults once
     var defaults = {
