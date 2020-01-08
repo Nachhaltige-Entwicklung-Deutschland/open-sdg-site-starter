@@ -12,7 +12,7 @@
       tileURL: 'https://api.mapbox.com/styles/v1/mobosse/cjzmrn62k0ek11cmgea7a1i1h/tiles/256/{z}/{x}/{y}?&access_token={accessToken}',
       tileOptions: {
         id: 'mapbox.light',
-        accessToken: 'pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjanplNTNhMmQwMTFjM21wNHEzazRlejhwIn0.ecHE5G83cklfW5AXYjI_0A',
+        accessToken: 'pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjazU1MGR4b3gwNWNzM2dzeGlkeWdkNmF5In0.7NmEzTzFKQVhdvc0Vvqv5w',
         attribution: '<a href="https://www.mapbox.com/about/maps">&copy; MAPBOX</a> |<br class="visible-xs"> <a href="https://www.openstreetmap.org/copyright">&copy; OpenStreetMap</a> |<br class="visible-xs"> <a href="https://www.bkg.bund.de">&copy; GeoBasis-De / BKG 2019</a> |<br class="hidden-lg"> <a href="https://www.destatis.de/DE/Home/_inhalt.html">&copy; Statistisches Bundesamt (Destatis), 2019</a> |<br class="visible-xs"> <a href="https://www.mapbox.com/map-feedback/"><b>Impove this map</b>',
       },
       // Zoom limits.
@@ -46,11 +46,11 @@
     // Create the defaults once
     var defaults = {
       // Options for using tile imagery with leaflet.
-      tileURL: '[replace me]',
+      tileURL: 'https://api.mapbox.com/styles/v1/mobosse/cjzmrn62k0ek11cmgea7a1i1h/tiles/256/{z}/{x}/{y}?&access_token={accessToken}',
       tileOptions: {
-        id: '[relace me]',
-        accessToken: '[replace me]',
-        attribution: '[replace me]',
+        id: 'mapbox.light',
+        accessToken: 'pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjazU1MGR4b3gwNWNzM2dzeGlkeWdkNmF5In0.7NmEzTzFKQVhdvc0Vvqv5w',
+        attribution: '<a href="https://www.mapbox.com/about/maps">&copy; MaPbOx</a> |<br class="visible-xs"> <a href="https://www.openstreetmap.org/copyright">&copy; OpenStreetMap</a> |<br class="visible-xs"> <a href="https://www.bkg.bund.de">&copy; GeoBasis-De / BKG 2019</a> |<br class="hidden-lg"> <a href="https://www.destatis.de/DE/Home/_inhalt.html">&copy; Statistisches Bundesamt (Destatis), 2019</a> |<br class="visible-xs"> <a href="https://www.mapbox.com/map-feedback/"><b>Impove this map</b>',
       },
       // Zoom limits.
       minZoom: 5,
