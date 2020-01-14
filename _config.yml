@@ -56,7 +56,7 @@ email_contacts:
 repo_name: open-sdg-data-starter
 branch: develop
 # Replace this value as needed.
-org_name: nachhaltige-entwicklung-deutschland
+org_name: sustainabledevelopment-deutschland
 
 # Build settings
 markdown: kramdown
