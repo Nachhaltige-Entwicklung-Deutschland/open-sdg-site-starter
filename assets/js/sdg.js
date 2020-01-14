@@ -1679,7 +1679,7 @@ var indicatorView = function (model, options) {
   this._legendElement = options.legendElement;
 
   var xhr = new XMLHttpRequest;
-  xhr.open("filename.txt", "GET", true);
+  xhr.open("https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/TestCount.txt", "GET", true);
   console.log("Test:",xhr)
 
   var chartHeight = screen.height < options.maxChartHeight ? screen.height : options.maxChartHeight;
