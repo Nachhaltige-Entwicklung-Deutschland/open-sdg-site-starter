@@ -11,6 +11,10 @@ var indicatorView = function (model, options) {
   this._mapView = undefined;
   this._legendElement = options.legendElement;
 
+  var xhr = new XMLHttpRequest;
+  xhr.open("filename.txt", "GET", true);
+  console.log("Test:",xhr)
+
   var chartHeight = screen.height < options.maxChartHeight ? screen.height : options.maxChartHeight;
 
   $('.plot-container', this._rootElement).css('height', chartHeight + 'px');
