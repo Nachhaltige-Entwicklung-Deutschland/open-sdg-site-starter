@@ -1,5 +1,12 @@
 var indicatorView = function (model, options) {
 
+  let xmlHttp = new XMLHttpRequest();
+  xmlHttp.open('GET', 'https://hitcounter.pythonanywhere.com/count', false);
+  xmlHttp.send(null);
+  count = xmlHttp.responseText;
+  console.log("count:",count);
+
+
   "use strict";
 
   var view_obj = this;
