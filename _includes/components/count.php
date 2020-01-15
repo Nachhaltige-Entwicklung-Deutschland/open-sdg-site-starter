@@ -35,5 +35,6 @@ if(file_exists($datei)){
 // Diese Funktion sorgt für die Formatierung
 // in diesem Fall für die führenden Nullen
 $zahl=sprintf("%0".$stellen."d",$zahl);
-echo $zahl;
+echo ("countPhp:");
+echo ($zahl);
 ?>
