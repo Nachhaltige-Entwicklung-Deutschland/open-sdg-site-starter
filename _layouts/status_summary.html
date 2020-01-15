@@ -79,7 +79,7 @@
                           {% assign status = "history_status_year_" | append: j | append: "_" | append: i %}
                           {% if indicator[status] %}
 
-                            {% if indicator[status] == 'Nebel' %}
+                            {% if indicator[status] == 'x' %}
                               {% assign status_title = t.status['nebel'] %}
                             {% elsif indicator[status] == 'Sonne' %}
                               {% assign status_title = t.status['sonne'] %}
