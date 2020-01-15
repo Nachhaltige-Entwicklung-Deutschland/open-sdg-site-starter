@@ -2,6 +2,14 @@
 {% include head.html %}
 {% include header.html %}
 
+<?php
+
+include("counter.php");
+echo $zahl;
+
+?>
+
+
 <div id="main-content" class="container goal-tiles" role="main">
 
     {% assign country_name = site.country.name | t %}
