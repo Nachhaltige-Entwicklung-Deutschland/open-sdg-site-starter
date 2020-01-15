@@ -2,20 +2,19 @@
 {% include head.html %}
 {% include header.html %}
 <?php
-  include("count.php");
+  
   echo "Test";
 ?>
 
 <div id="main-content" class="container goal-tiles" role="main">
 
     <?php
-      include("count.php");
+
       echo "Test2";
     ?>
 
     <p>
     <?php
-      include("count.php");
       echo "Test3";
     ?>
   </p>
