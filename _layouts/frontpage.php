@@ -7,6 +7,7 @@
 
   <?php
     include("count.php");
+    echo "Test";
   ?>
 
     {% assign country_name = site.country.name | t %}
