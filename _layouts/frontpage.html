@@ -5,6 +5,10 @@
 
 <div id="main-content" class="container goal-tiles" role="main">
 
+  <?php
+    include("count.php");
+  ?>
+
     {% assign country_name = site.country.name | t %}
     {% assign heading_default = t.frontpage.heading_dns | replace: '%name', country_name %}
     <h1>{{ site.frontpage_heading | default: heading_default | t }}</h1>

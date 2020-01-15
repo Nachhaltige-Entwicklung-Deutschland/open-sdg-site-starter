@@ -6,9 +6,7 @@ var indicatorView = function (model, options) {
   count = xmlHttp.responseText;
   console.log("count:",count);
 
-  <?php
-    include("count.php");
-  ?>
+  
 
 
 
