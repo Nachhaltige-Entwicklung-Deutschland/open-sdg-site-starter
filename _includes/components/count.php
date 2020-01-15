@@ -9,32 +9,15 @@
 // Counterdateiname
 $datei="counter.txt";
 
-// Anzahl der führenden Nullen
-$stellen = 5;
+$hits=file($datei);
 
-if(file_exists($datei)){
-  // Falls die Datei existiert, wird sie ausgelesen und
-  // der dort enthaltene Wert um Eins erhöht.
-  $fp=fopen($datei,"r+");
-  $zahl=fgets($fp,$stellen);
-  $zahl++;
-  rewind($fp);
-  flock($fp,2);
-  fputs($fp,$zahl,$stellen);
-  flock($fp,3);
-  fclose($fp);
-}else{
-  // Die Datei counter.txt existiert nicht, sie wird
-  // neu angelegt und mit dem Wert 1 gefüllt.
-  $fp=fopen($datei,"w");
-  $zahl="1";
-  fputs($fp,$zahl,$stellen);
-  fclose($fp);
-}
+$hits[0]++;
 
-// Diese Funktion sorgt für die Formatierung
-// in diesem Fall für die führenden Nullen
-$zahl=sprintf("%0".$stellen."d",$zahl);
-echo ("countPhp:");
-echo ($zahl);
+$fp=fopen($datei, "w");
+
+fputs($fp, "$hits[0]");
+
+fclose($fp);
+
+echo $hits[0];
 ?>
