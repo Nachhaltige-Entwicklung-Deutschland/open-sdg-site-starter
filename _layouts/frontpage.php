@@ -1,14 +1,24 @@
 {%- include multilingual.html -%}
 {% include head.html %}
 {% include header.html %}
-
+<?php
+  include("count.php");
+  echo "Test";
+?>
 
 <div id="main-content" class="container goal-tiles" role="main">
 
-  <?php
-    include("count.php");
-    echo "Test";
-  ?>
+    <?php
+      include("count.php");
+      echo "Test2";
+    ?>
+
+    <p>
+    <?php
+      include("count.php");
+      echo "Test3";
+    ?>
+  </p>
 
     {% assign country_name = site.country.name | t %}
     {% assign heading_default = t.frontpage.heading_dns | replace: '%name', country_name %}
