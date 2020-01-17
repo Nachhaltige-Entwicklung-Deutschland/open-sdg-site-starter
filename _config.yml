@@ -147,8 +147,9 @@ create_indicators:
 map_options:
 
   #tileURL: https://api.mapbox.com/styles/v1/mobosse/cjzmrn62k0ek11cmgea7a1i1h/tiles/256/{z}/{x}/{y}?&access_token={accessToken}
-  tileURL: https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
+  #tileURL: https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
   #tileURL: https://c.tile.openstreetmap.de/{z}/{x}/{y}.png
+  tileURL: http://a.tile.stamen.com/toner/${z}/${x}/${y}.png
 
   tileOptions:
     id: #mapbox.light
