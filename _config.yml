@@ -150,7 +150,8 @@ map_options:
   #tileURL: https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
   #tileURL: https://c.tile.openstreetmap.de/{z}/{x}/{y}.png
   #tileURL: http://a.tile.stamen.com/toner/{z}/{x}/{y}.png
-  tileURL: https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png
+  #tileURL: https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png
+  tileURL: https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png
 
   tileOptions:
     id: #mapbox.light
