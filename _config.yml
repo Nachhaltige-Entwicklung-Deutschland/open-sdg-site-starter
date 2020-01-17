@@ -145,7 +145,7 @@ create_indicators:
 
 # Mapping
 map_options:
-https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png
+
   #tileURL: https://api.mapbox.com/styles/v1/mobosse/cjzmrn62k0ek11cmgea7a1i1h/tiles/256/{z}/{x}/{y}?&access_token={accessToken}
   #tileURL: https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
   tileURL: https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png
