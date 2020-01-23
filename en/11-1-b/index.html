@@ -113,7 +113,7 @@ var translations = {
         <!---#15 setCorrectTitle---stop--------------------->
 
         
-          <meta name="description" content= "Data for Germany for SDG indicator 11.1.b - Freiraumverlust" >
+          <meta name="description" content= "Data for Germany for SDG indicator 11.1.b - Loss of open space area" >
         
 
         <meta property="og:description" content="">
@@ -141,7 +141,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20200123000726">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20200123144520">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -149,7 +149,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20200123000726"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20200123144520"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
 <body class="language-en layout-indicator">
@@ -328,7 +328,7 @@ var translations = {
             <span class="hidden-sm hidden-md hidden-lg">Goal 11: </span>Make cities and human settlements inclusive, safe, resilient and sustainable
           </a>
         </h1>
-        <h2>Indicator 11.1.b: Freiraumverlust</h2>
+        <h2>Indicator 11.1.b: Loss of open space area</h2>
       </div>
     </div>
   </div>
@@ -405,7 +405,15 @@ var translations = {
       
 
       <div id="page-content">
-  
+  <div>                           
+  <div class="my-header">                           
+    <a href="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/status/"><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/Sonne.png" alt="Sonne" />                           
+    </a>                           
+  </div>
+  <div class="my-header-note">
+    <span>(Evaluation of the year 2016 as reporting year)</span>
+  </div>                           
+</div>
 
 </div>
 
@@ -414,7 +422,7 @@ var translations = {
   <!--
   <div class="row">
     <div class="col-xs-12">
-      <h2>Veränderung der Freiraumfläche je Einwohnerin und Einwohner</h2>
+      <h2>Change in per capita open space area</h2>
     </div>
   </div>
   -->
@@ -423,9 +431,9 @@ var translations = {
 
   
 
-  <div class="row" id="indicatorData" data-indicatorid='indicator_11-1-b' data-id="11-1-b" data-country="Deutschland (Insgesamt)"
-  data-charttitle="Veränderung der Freiraumfläche je Einwohnerin und Einwohner" data-measurementunit="&copy; Statistisches Bundesamt (Destatis), 2019" data-datasource="Statistisches Bundesamt (Destatis), Bundesinstitut für Bau-, Stadt- und Raumforschung" data-copyright="&copy; Statistisches Bundesamt (Destatis), 2019"
-  data-geographicalarea="Deutschland (Insgesamt)" data-footnote="Mit der Umstellung der Datengrundlage zum Stichtag 31.12.2016 kam ein neuer Nutzungsartenkatalog zur Anwendung, sodass keine Veränderung von 2015 auf 2016 ermittelt werden kann. Zeitvergleiche sind damit nur sehr eingeschränkt möglich." data-showdata="true" data-graphtype="line"
+  <div class="row" id="indicatorData" data-indicatorid='indicator_11-1-b' data-id="11-1-b" data-country="Germany"
+  data-charttitle="Change in per capita open space area" data-measurementunit="Four-year moving average, square metres per year" data-datasource="Federal Statistical Office, Federal Institute for Research on Building, Urban Affairs and Spatial Development" data-copyright="&copy; Federal Statistical Office (Destatis), 2020"
+  data-geographicalarea="Germany" data-footnote="A new catalogue of types of use has been applied since the data basis was changed as of 31 December 2016 so that the relevant change cannot be determined. Comparability over time is therefore very limited. from 2015 to 2016" data-showdata="true" data-graphtype="line"
   data-geocoderegex="" data-showmap="true" data-startvalues="a) rural and non-rural areas|a) germany (total)">
     
     <div id="indicator-sidebar" class="col-md-3">
@@ -541,7 +549,7 @@ data-event-label="Change to Map tab"
     
     <div id="selectionsChart">
       <div id="chart-canvas">
-        <h3 class="chart-title">Veränderung der Freiraumfläche je Einwohnerin und Einwohner</h3>
+        <h3 class="chart-title">Change in per capita open space area</h3>
         <div id="chart" class="plot-container">
           
 <canvas></canvas>
@@ -572,7 +580,7 @@ data-event-label="Change to Map tab"
                 
                 
                   
-                    <p>Sources: Statistisches Bundesamt (Destatis), Bundesinstitut für Bau-, Stadt- und Raumforschung</p>
+                    <p>Sources: Federal Statistical Office, Federal Institute for Research on Building, Urban Affairs and Spatial Development</p>
                   
                 
               </div>
@@ -660,7 +668,7 @@ data-event-label="Change to Sources tab"
 
           <td colspan="4">
             
-              <p>Veränderung der Freiraumfläche je Einwohnerin und Einwohner</p>
+              <p>Change in per capita open space area</p>
 
             
           </td>
@@ -682,7 +690,7 @@ data-event-label="Change to Sources tab"
 
           <td colspan="4">
             
-              <p>Der Indikator stellt als gleitender Vierjahresdurchschnitt die jährliche Veränderung der Freiraumfläche in Quadratmetern je Einwohnerin und Einwohner dar.<sub> Text aus dem Indikatorenbericht 2018</sub></p>
+              <p>The indicator represents the annual change in the per capita open space area in square metres as a four-year moving average.<sub> Text from the Indicator Report 2018</sub></p>
 
             
           </td>
@@ -704,7 +712,7 @@ data-event-label="Change to Sources tab"
 
           <td colspan="4">
             
-              <p>Deutschland (Insgesamt)</p>
+              <p>Germany</p>
 
             
           </td>
@@ -726,7 +734,7 @@ data-event-label="Change to Sources tab"
 
           <td colspan="4">
             
-              <p>Freiraumflächen sollen für die land- und forstwirtschaftliche Nutzung, als Kultur- und Naturlandschaften sowie als Erholungsräume erhalten bleiben. Daher soll der Rückgang der Freiraumflächen je Einwohnerin und Einwohner reduziert werden. Vermindert sich der Freiraumverlust, so gibt das Hinweise auf einen Erfolg von Maßnahmen, die die Innenentwicklung stärken und so Agrar-, Wald- und Gewässerflächen für die Land- und Forstwirtschaft, den Naturschutz sowie für die Erholung der Bevölkerung schonen.<sub> Text aus dem Indikatorenbericht 2018</sub></p>
+              <p>Open space areas should be preserved for agricultural and forestry use, as cultural and natural landscapes as well as recreation areas. For this reason, the decline in the per capita open space area should be reduced. A reduction in the loss of open space area indicates the success of measures to strengthen inner-urban development and thereby conserve agricultural, wooded and water areas for agriculture and forestry, nature conservation and recreational use by the population.<sub> Text from the Indicator Report 2018</sub></p>
 
             
           </td>
@@ -794,8 +802,8 @@ data-event-label="Change to Sources tab"
               
 
               
-                <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/d8023b7ac14c8639fe0adf224593edf6a7c81613" target="_blank">
-                  2020-01-15: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
+                <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/251d8abe8b89e083622937122c8a3940d9b4b925" target="_blank">
+                  2020-01-23: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
                 </a>
               
 
@@ -951,7 +959,7 @@ data-event-label="Change to Sources tab"
       
       <tr>
          <!-- case: content -->
-          <p> <p>Als Freiraumflächen werden die Landwirtschafts-, Wald-, Abbau- und Haldenflächen sowie Wasserflächen in Form von fließenden und stehenden Gewässern bezeichnet. Es sind somit alle Flächen, die nicht zur Kategorie der Siedlungs- und Verkehrsflächen zählen. Freiraumflächen sind abzugrenzen von Freiflächen und Siedlungsfreiflächen, wie beispielsweise Friedhöfen, Gärten, Parks, Grünanlagen oder Wildgehegen, die zwar unbebaut sind, aber zur Siedlungs- und Verkehrsfläche zählen. Werden also Gärten, Parks oder Grünanlagen bebaut, wird diese Entwicklung nicht im Indikator Freiraumverlust widergespiegelt. Allerdings würde sich die Siedlungsdichte bei solch einer Entwicklung erhöhen. Insofern korrespondiert der Indikator Freiraumverlust mit den Indikatoren 11.1.a „Anstieg der Siedlungs- und Verkehrsfläche“ und 11.1.c „Siedlungsdichte“. <br /><br />Datengrundlagen des Indikators sind die Bevölkerungszahlen und die Flächenerhebung nach Art der tatsächlichen Nutzung des Statistischen Bundesamtes. Da zur Berechnung Bevölkerungsdaten auf regionaler Ebene herangezogen werden, gab es durch den Zensus 2011 einen Sprung in den Zeitreihen. Daneben kam es bedingt durch methodische Umstellungen der amtlichen Liegenschaftskataster in den Bundesländern in den vergangenen Jahren vermehrt zur Neuzuordnung von Flächen. Um diese Effekte zu glätten und den langfristigen Trend erkennbar herauszustellen, wird ein gleitender Vierjahresdurchschnitt abgebildet, der jeweils die vier zurückliegenden Jahre mittelt. <br /><br />Bei der Flächenerhebung nach Art der tatsächlichen Nutzung fand im Jahr 2016 eine methodische Veränderung der Erhebungsgrundlage statt, sodass die Vergleichbarkeit der Daten ab 2016 mit den Vorjahren eingeschränkt ist. Aus diesem Grund ist die Entwicklung des Indikators für das Jahr 2016 in der Grafik nur in gestrichelter Form abgebildet. <br /><br />Die Unterscheidung zwischen „ländlich“ und „nicht ländlich“ basiert auf einer Typisierung des Thünen-Instituts. Diese ordnet Landkreisen und kreisfreien Städten – auf Basis von räumlichen Merkmalen wie „Siedlungsdichte“, „Anteil land- und forstwirtschaftlicher Fläche“ und „Lage zu den Zentren“ – einen Grad an „Ländlichkeit“ zu. <br /><br />Im betrachteten Zeitraum verringerte sich der Freiraumverlust pro Kopf im Bundesdurchschnitt. Waren es im gleitenden Vierjahresmittel 2004 noch rund fünf Quadratmeter je Einwohnerin bzw. Einwohner und Jahr, so sind es im aktuellen Mittel 2015 nur noch etwa 2,9 Quadratmeter. <br /><br />Bei gleicher Tendenz zeigen sich zwischen ländlichen und nicht ländlichen Kreistypen deutliche Unterschiede im Umfang der Veränderung. So reduzierte sich der Freiraumverlust in ländlichen Kreistypen je Einwohnerin bzw. Einwohner und Jahr von gut sieben auf etwas über vier Quadratmeter. In den nicht ländlichen Kreistypen ging er von knapp zwei auf rund einen Quadratmeter zurück. Hierbei ist zu berücksichtigen, dass es in nicht ländlichen Kreisen und kreisfreien Städten erheblich weniger Freiräumflächen wie Wälder oder Landwirtschaftsflächen gibt als in ländlichen Räumen. Zudem verläuft die Bevölkerungsentwicklung unterschiedlich und wirkt sich entsprechend auf den Indikator aus: Während ländliche Regionen im betrachteten Zeitraum überwiegend einen Rückgang der Bevölkerung verzeichneten, stieg die Einwohnerzahl in nicht ländlichen Regionen insgesamt etwas an.<sub> Text aus dem Indikatorenbericht 2018</sub></p>
+          <p> <p>Agricultural, wooded, mining and pile areas as well as water areas in the form of flowing and standing waters are referred to as open space areas. Therefore, all areas not covered by the category of housing and transport area are included. A distinction must be made between open space areas, and open areas as well as housing open areas, such as cemeteries, gardens, parks, green spaces or wildlife preserves, which – although they are non-built-up areas – are considered part of the housing and transport area. Therefore, if buildings are erected in gardens, parks or green spaces, this development will not be reflected in this indicator. However, such a development would increase the population density. In this respect, the indicator “Loss of open space area” corresponds to indicators 11.1.a “Expansion of housing and transport area “ and 11.1.c “Density of settlements”.<br /><br />The data sources for the indicator are the population figures and the area survey by type of actual use compiled by the Federal Statistical Office. Since population data at regional level are used for the calculation, the 2011 census caused a jump in the time series. Moreover, changes in the methodology of the official land registers in the Länder have increasingly resulted in the reclassification of areas in previous years. To smooth out these effects and to establish the long-term trend, a four-year moving average is calculated, which covers the four preceding years.<br /><br />Regarding the area survey by type of actual use, a methodological change in the survey basis took place in 2016, so that the comparability of the data with previous years is limited from 2016 onwards. For this reason, the development of the indicator in 2016 is shown only as a four-year moving average.<br /><br />The distinction between “rural” and “non-rural” is based on a type classification of the Thünen Institute. This classification allocates a degree of “ruralness” to rural districts and towns not attached to an administrative district – based on spatial characteristics such as “density of settlements”, “share of agricultural and forestry area” and “location relative to the centres”.<br /><br />In the period under review, the loss of per capita open space area declined on average nationwide. Whereas the four-year moving average for 2004 was still around 5 square metres per capita and year, the current average for 2015 is only about 2.9 square metres.<br /><br />Although subject to a similar trend, considerable differences can be observed between rural and non-rural district types in terms of the scope of change. For instance, the loss of open space area per capita and year in rural district types decreased from above 7 to slightly over 4 square metres. In the non-rural district types, it fell from just under 2 to around 1 square metre. In this context, it is important to remember that non-rural districts and towns not attached to an administrative district have much less open space area such as forests or agricultural land than rural areas. In addition, demographic trends develop at differing rates and have a corresponding impact on the indicator. Whereas the majority of rural regions in the period under review reported a decline in population, the population figures in non-rural regions as a whole increased slightly.<sub> Text from the Indicator Report 2018</sub></p>
  </p>
         
       </tr>
@@ -1682,7 +1690,7 @@ data-event-label="Change to Sources tab"
 
           <td colspan="4">
             
-              <p>Statistisches Bundesamt (Destatis)</p>
+              <p>Federal Statistical Office</p>
 
             
           </td>
@@ -2005,7 +2013,7 @@ data-event-label="Change to Sources tab"
 
           <td colspan="4">
             
-              <p>Bundesinstitut für Bau-, Stadt- und Raumforschung</p>
+              <p>Federal Institute for Research on Building, Urban Affairs and Spatial Development</p>
 
             
           </td>
@@ -2254,7 +2262,7 @@ data-event-label="Change to Sources tab"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20200123000726'></script><script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20200123144520'></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
