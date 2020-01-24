@@ -444,10 +444,10 @@ var indicatorView = function (model, options) {
                 var subB = b.label.substr(b.label.indexOf(','), b.label.length).replace('Insgesamt', 'AAA').replace('Total','AAA').replace('Deutschland', 'AAA').replace('Germany','AAA');
                 //---place "Timesereies,abc" after "Timeseries" and "Target(...)"
                 if (subA.indexOf(',') != -1){
-                  subA = subA.replace(subA.substr(0,subA.indexOf(',')),'ZZZ');
+                  subA = 'ZZ'+subA;
                 }
                 if (subA.indexOf(',') != -1){
-                  subB = subB.replace(subB.substr(0,subB.indexOf(',')),'ZZZ');
+                  subB = subB= 'ZZ'+subB;
                 }
               }
               else{
