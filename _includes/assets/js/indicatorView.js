@@ -466,7 +466,10 @@ var indicatorView = function (model, options) {
                             {old: 'Gebäude-, Frei- & Betriebsfläche', new: 'Gebäude- Frei- & Betriebsfläche'},
                             {old: 'Konsum, Investitionen und Exporte', new: 'Konsum Investitionen und Exporte'},
                             {old: 'Entwicklungszusammenarbeit, deren', new: 'Entwicklungszusammenarbeit deren'},
-                            {old: 'Moving five-year average, referring to the middle year', new: 'Moving five-year average referring to the middle year'}];
+                            {old: 'Moving five-year average, referring to the middle year', new: 'Moving five-year average referring to the middle year'},
+                            {old: 'onsumption, investments', new: 'onsumption investments'},
+                            {old: 'area, c', new: 'area c'}];
+
               for (var i=0; i<replace.length; i++){
                 label = label.replace(replace[i]['old'], replace[i]['new']);
               };
