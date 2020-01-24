@@ -1673,7 +1673,7 @@ var indicatorView = function (model, options) {
   count = xmlHttp.responseText;
   console.log("count:",count);
 
-  
+
 
 
 
@@ -2132,7 +2132,8 @@ var indicatorView = function (model, options) {
               var replace = [{old: '2,5', new: '2.5'},
                             {old: 'Gebäude-, Frei- & Betriebsfläche', new: 'Gebäude- Frei- & Betriebsfläche'},
                             {old: 'Konsum, Investitionen und Exporte', new: 'Konsum Investitionen und Exporte'},
-                            {old: 'Entwicklungszusammenarbeit, deren', new: 'Entwicklungszusammenarbeit, deren'}];
+                            {old: 'Entwicklungszusammenarbeit, deren', new: 'Entwicklungszusammenarbeit deren'},
+                            {old: 'Moving five-year average, referring to the middle year', new: 'Moving five-year average referring to the middle year'}];
               for (var i=0; i<replace.length; i++){
                 label = label.replace(replace[i]['old'], replace[i]['new']);
               };

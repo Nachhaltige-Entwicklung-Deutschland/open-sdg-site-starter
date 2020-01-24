@@ -43,25 +43,11 @@
       "id": "3",
       "title": "Ensure healthy lives and promote well-being for all at all ages",
       "indicators": [{
-          "id": "3-1-f",
-          "title": "Obesity rate among adults",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/3-1-f",
-          "status": "complete"
-        },{
           "id": "3-2-b",
           "title": "Share of the population with excessive exposure to PM<sub>10</sub> in Germany",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/3-2-b",
-          "status": "complete"
-        },{
-          "id": "3-1-cd",
-          "title": "Smoking rate among adolescents and adults",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/3-1-cd",
           "status": "complete"
         },{
           "id": "3-1-e",
@@ -76,6 +62,20 @@
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/3-1-ab",
+          "status": "complete"
+        },{
+          "id": "3-1-f",
+          "title": "Obesity rate among adults",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/3-1-f",
+          "status": "complete"
+        },{
+          "id": "3-1-cd",
+          "title": "Smoking rate among adolescents and adults",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/3-1-cd",
           "status": "complete"
         },{
           "id": "3-2-a",
@@ -118,18 +118,18 @@
       "id": "5",
       "title": "Achieve gender equality and empower all women and girls",
       "indicators": [{
-          "id": "5-1-a",
-          "title": "Gender pay gap",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/5-1-a",
-          "status": "complete"
-        },{
           "id": "5-1-b",
           "title": "Women in management positions in business",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/5-1-b",
+          "status": "complete"
+        },{
+          "id": "5-1-a",
+          "title": "Gender pay gap",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/5-1-a",
           "status": "complete"
         },{
           "id": "5-1-c",
@@ -145,18 +145,18 @@
       "id": "6",
       "title": "Ensure availability and sustainable management of water and sanitation for all",
       "indicators": [{
-          "id": "6-2-a",
-          "title": "Development cooperation for drinking water and sanitation",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/6-2-a",
-          "status": "complete"
-        },{
           "id": "6-1-b",
           "title": "Nitrate in groundwater",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/6-1-b",
+          "status": "complete"
+        },{
+          "id": "6-2-a",
+          "title": "Development cooperation for drinking water and sanitation",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/6-2-a",
           "status": "complete"
         },{
           "id": "6-1-a",
@@ -172,6 +172,13 @@
       "id": "7",
       "title": "Ensure access to affordable, reliable, sustainable and modern energy for all",
       "indicators": [{
+          "id": "7-2-b",
+          "title": "Share of electricity from renewable energy sources in electricity consumption",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/7-2-b",
+          "status": "complete"
+        },{
           "id": "7-1-ab",
           "title": "Final energy productivity and primary energy consumption",
           "description": "",
@@ -185,13 +192,6 @@
           "keywords": "",
           "href": "/open-sdg-site-starter/en/7-2-a",
           "status": "complete"
-        },{
-          "id": "7-2-b",
-          "title": "Share of electricity from renewable energy sources in electricity consumption",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/7-2-b",
-          "status": "complete"
         }]
     }
   },{
@@ -204,13 +204,6 @@
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/8-2-c",
-          "status": "complete"
-        },{
-          "id": "8-4-a",
-          "title": "Gross domestic product per capita",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/8-4-a",
           "status": "complete"
         },{
           "id": "8-6-a",
@@ -227,18 +220,25 @@
           "href": "/open-sdg-site-starter/en/8-5-ab",
           "status": "complete"
         },{
-          "id": "8-3-a",
-          "title": "Gross fixed capital formation in relation to GDP",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/8-3-a",
-          "status": "complete"
-        },{
           "id": "8-2-ab",
           "title": "Government deficit, structural deficit",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/8-2-ab",
+          "status": "complete"
+        },{
+          "id": "8-4-a",
+          "title": "Gross domestic product per capita",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/8-4-a",
+          "status": "complete"
+        },{
+          "id": "8-3-a",
+          "title": "Gross fixed capital formation in relation to GDP",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/8-3-a",
           "status": "complete"
         },{
           "id": "8-1-a",
@@ -267,18 +267,18 @@
       "id": "10",
       "title": "Reduce inequality within and among countries",
       "indicators": [{
-          "id": "10-1-a",
-          "title": "Foreign school graduates",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/10-1-a",
-          "status": "complete"
-        },{
           "id": "10-2-a",
           "title": "Gini coefficient of income distribution",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/10-2-a",
+          "status": "complete"
+        },{
+          "id": "10-1-a",
+          "title": "Foreign school graduates",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/10-1-a",
           "status": "complete"
         }]
     }
@@ -287,6 +287,34 @@
       "id": "11",
       "title": "Make cities and human settlements inclusive, safe, resilient and sustainable",
       "indicators": [{
+          "id": "11-2-a",
+          "title": "Final energy consumption in goods transport",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/11-2-a",
+          "status": "complete"
+        },{
+          "id": "11-1-a",
+          "title": "Expansion of settlement and transport area",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/11-1-a",
+          "status": "complete"
+        },{
+          "id": "11-1-b",
+          "title": "Loss of open space area",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/11-1-b",
+          "status": "complete"
+        },{
+          "id": "11-2-c",
+          "title": "Accessibility of medium-sized and large cities by public transport",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/11-2-c",
+          "status": "complete"
+        },{
           "id": "11-3-a",
           "title": "Housing cost overload",
           "description": "",
@@ -299,34 +327,6 @@
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/11-2-b",
-          "status": "complete"
-        },{
-          "id": "11-1-a",
-          "title": "Expansion of settlement and transport area",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/11-1-a",
-          "status": "complete"
-        },{
-          "id": "11-2-c",
-          "title": "Accessibility of medium-sized and large cities by public transport",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/11-2-c",
-          "status": "complete"
-        },{
-          "id": "11-2-a",
-          "title": "Final energy consumption in goods transport",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/11-2-a",
-          "status": "complete"
-        },{
-          "id": "11-1-b",
-          "title": "Loss of open space area",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/11-1-b",
           "status": "complete"
         },{
           "id": "11-1-c",
@@ -342,20 +342,6 @@
       "id": "12",
       "title": "Ensure sustainable consumption and production patterns",
       "indicators": [{
-          "id": "12-3-ab",
-          "title": "Responsible procurement",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/12-3-ab",
-          "status": "complete"
-        },{
-          "id": "12-1-b",
-          "title": "Energy consumption and CO<sub>2</sub> emissions from consumption",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/12-1-b",
-          "status": "complete"
-        },{
           "id": "12-1-a",
           "title": "Market share of products certified by publicly managed eco-labelling schemes",
           "description": "",
@@ -369,6 +355,20 @@
           "keywords": "",
           "href": "/open-sdg-site-starter/en/12-2-a",
           "status": "complete"
+        },{
+          "id": "12-1-b",
+          "title": "Energy consumption and CO<sub>2</sub> emissions from consumption",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/12-1-b",
+          "status": "complete"
+        },{
+          "id": "12-3-ab",
+          "title": "Responsible procurement",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/12-3-ab",
+          "status": "complete"
         }]
     }
   },{
@@ -376,18 +376,18 @@
       "id": "13",
       "title": "Take urgent action to combat climate change and its impacts",
       "indicators": [{
-          "id": "13-1-b",
-          "title": "International climate finance for the reduction of greenhouse gases and adaptation to climate change",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/13-1-b",
-          "status": "complete"
-        },{
           "id": "13-1-a",
           "title": "Greenhouse gas emissions",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/13-1-a",
+          "status": "complete"
+        },{
+          "id": "13-1-b",
+          "title": "International climate finance for the reduction of greenhouse gases and adaptation to climate change",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/13-1-b",
           "status": "complete"
         }]
     }
@@ -416,11 +416,11 @@
       "id": "15",
       "title": "Protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, and halt and reverse land degradation and halt biodiversity loss",
       "indicators": [{
-          "id": "15-2-a",
-          "title": "Eutrophication of ecosystems",
+          "id": "15-1-a",
+          "title": "Biodiversity and landscape quality",
           "description": "",
           "keywords": "",
-          "href": "/open-sdg-site-starter/en/15-2-a",
+          "href": "/open-sdg-site-starter/en/15-1-a",
           "status": "complete"
         },{
           "id": "15-3-a",
@@ -430,11 +430,11 @@
           "href": "/open-sdg-site-starter/en/15-3-a",
           "status": "complete"
         },{
-          "id": "15-1-a",
-          "title": "Biodiversity and landscape quality",
+          "id": "15-2-a",
+          "title": "Eutrophication of ecosystems",
           "description": "",
           "keywords": "",
-          "href": "/open-sdg-site-starter/en/15-1-a",
+          "href": "/open-sdg-site-starter/en/15-2-a",
           "status": "complete"
         }]
     }
@@ -443,11 +443,11 @@
       "id": "16",
       "title": "Promote peaceful and inclusive societies for sustainable development, provide access to justice for all and build effective, accountable and inclusive institutions at all levels",
       "indicators": [{
-          "id": "16-1-a",
-          "title": "Criminal offences",
+          "id": "16-2-a",
+          "title": "Number of projects to secure, register and destroy small arms and light weapons carried out by Germany in affected regions of the world",
           "description": "",
           "keywords": "",
-          "href": "/open-sdg-site-starter/en/16-1-a",
+          "href": "/open-sdg-site-starter/en/16-2-a",
           "status": "complete"
         },{
           "id": "16-3-ab",
@@ -457,11 +457,11 @@
           "href": "/open-sdg-site-starter/en/16-3-ab",
           "status": "complete"
         },{
-          "id": "16-2-a",
-          "title": "Number of projects to secure, register and destroy small arms and light weapons carried out by Germany in affected regions of the world",
+          "id": "16-1-a",
+          "title": "Criminal offences",
           "description": "",
           "keywords": "",
-          "href": "/open-sdg-site-starter/en/16-2-a",
+          "href": "/open-sdg-site-starter/en/16-1-a",
           "status": "complete"
         }]
     }
@@ -470,18 +470,18 @@
       "id": "17",
       "title": "Strengthen the means of implementation and revitalize the Global Partnership for Sustainable Development",
       "indicators": [{
-          "id": "17-1-a",
-          "title": "Expenditure for official development assistance as a proportion of gross national income",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/en/17-1-a",
-          "status": "complete"
-        },{
           "id": "17-3-a",
           "title": "Imports from least developed countries",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/17-3-a",
+          "status": "complete"
+        },{
+          "id": "17-1-a",
+          "title": "Expenditure for official development assistance as a proportion of gross national income",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/en/17-1-a",
           "status": "complete"
         },{
           "id": "17-2-a",
