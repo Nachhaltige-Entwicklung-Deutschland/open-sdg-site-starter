@@ -2110,8 +2110,8 @@ var indicatorView = function (model, options) {
                 var subA = a.label.substr(a.label.indexOf(','), a.label.length).replace('Insgesamt', 'AAA').replace('Total','AAA').replace('Deutschland', 'AAA').replace('Germany','AAA');
                 var subB = b.label.substr(b.label.indexOf(','), b.label.length).replace('Insgesamt', 'AAA').replace('Total','AAA').replace('Deutschland', 'AAA').replace('Germany','AAA');
                 //---place "Timesereies,abc" after "Timeseries" and "Target(...)"
-                subA = subA.replace(subA.subst(0,subA.indexOf(','));'ZZZ');
-                subB = subB.replace(subB.subst(0,subB.indexOf(','));'ZZZ');
+                subA = subA.replace(subA.subst(0,subA.indexOf(',')),'ZZZ');
+                subB = subB.replace(subB.subst(0,subB.indexOf(',')),'ZZZ');
               }
               else{
                 var subA = a.label.replace('Insgesamt', 'AAA').replace('Total','AAA').replace('Deutschland', 'AAA').replace('Germany','AAA');
