@@ -442,13 +442,7 @@ var indicatorView = function (model, options) {
               if (sub == 'Ziel' || sub == 'Targ' || sub == 'Zeit' || sub == 'Time'){
                 var subA = a.label.substr(a.label.indexOf(','), a.label.length).replace('Insgesamt', 'AAA').replace('Total','AAA').replace('Deutschland', 'AAA').replace('Germany','AAA');
                 var subB = b.label.substr(b.label.indexOf(','), b.label.length).replace('Insgesamt', 'AAA').replace('Total','AAA').replace('Deutschland', 'AAA').replace('Germany','AAA');
-                //---place "Timesereies,abc" after "Timeseries" and "Target(...)"
-                if (subA.indexOf(',') != -1){
-                  subA = 'ZZ'+subA;
-                }
-                if (subA.indexOf(',') != -1){
-                  subB = subB= 'ZZ'+subB;
-                }
+                
               }
               else{
                 var subA = a.label.replace('Insgesamt', 'AAA').replace('Total','AAA').replace('Deutschland', 'AAA').replace('Germany','AAA');
@@ -459,7 +453,6 @@ var indicatorView = function (model, options) {
             });
 
             //^^^^ #18.1 ^^^^
-            console.log(sorted);
             _.each(sorted, function(dataset) { //#18.2 use the sorted dataset instead of the original >>> _.each(chart.data.datasets, function(dataset, datasetIndex) {
 
               text.push('<li data-datasetindex="' + dataset.datasetIndex + '">'); //#18.2 >>> text.push('<li data-datasetindex="' + datasetIndex + '">');
