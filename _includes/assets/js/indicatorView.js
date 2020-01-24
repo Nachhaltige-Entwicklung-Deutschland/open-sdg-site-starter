@@ -455,7 +455,7 @@ var indicatorView = function (model, options) {
             });
 
             //^^^^ #18.1 ^^^^
-
+            console.log(sorted);
             _.each(sorted, function(dataset) { //#18.2 use the sorted dataset instead of the original >>> _.each(chart.data.datasets, function(dataset, datasetIndex) {
 
               text.push('<li data-datasetindex="' + dataset.datasetIndex + '">'); //#18.2 >>> text.push('<li data-datasetindex="' + datasetIndex + '">');
