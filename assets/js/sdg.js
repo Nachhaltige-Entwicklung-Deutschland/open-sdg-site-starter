@@ -2125,6 +2125,7 @@ var indicatorView = function (model, options) {
                   subA = subA.replace(replaceForOrder[i]['old'],replaceForOrder[i]['new'])
                   subB = subB.replace(replaceForOrder[i]['old'],replaceForOrder[i]['new'])
                 }
+                console.log(a.label, "...".subA)
               }
               else{
                 var subA = a.label.replace('Insgesamt', 'AAA').replace('Total','AAA').replace('Deutschland', 'AAA').replace('Germany','AAA');
