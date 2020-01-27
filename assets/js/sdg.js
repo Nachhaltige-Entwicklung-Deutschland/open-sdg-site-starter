@@ -2109,7 +2109,7 @@ var indicatorView = function (model, options) {
               if (sub == 'Ziel' || sub == 'Targ' || sub == 'Zeit' || sub == 'Time'){
                 var subA = a.label.substr(a.label.indexOf(','), a.label.length).replace('Insgesamt', 'AAA').replace('Total','AAA').replace('Deutschland', 'AAA').replace('Germany','AAA');
                 var subB = b.label.substr(b.label.indexOf(','), b.label.length).replace('Insgesamt', 'AAA').replace('Total','AAA').replace('Deutschland', 'AAA').replace('Germany','AAA');
-                
+
               }
               else{
                 var subA = a.label.replace('Insgesamt', 'AAA').replace('Total','AAA').replace('Deutschland', 'AAA').replace('Germany','AAA');
@@ -2141,7 +2141,11 @@ var indicatorView = function (model, options) {
                 label = label.replace(replace[i]['old'], replace[i]['new']);
               };
               //-----------------------------------------------------------
-              for (var i=0; i<label.split(',').length; i++){
+              var exc = 0;
+              if (label.indexOf('Deutschland (insgesamt)') != -1 || label.indexOf('Germany (total)') != -1) {
+                exc = 1;
+              }
+              for (var i=0; i<label.split(',').length - exc; i++){
                 indent = indent.concat('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;');
               };
               indent = indent.concat('</span>');
