@@ -2103,14 +2103,16 @@ var indicatorView = function (model, options) {
             _.each(chart.data.datasets, function(dataset, datasetIndex) {
               temp.push({label: dataset.label, borderDash: dataset.borderDash, backgroundColor: dataset.backgroundColor, datasetIndex: datasetIndex, type: dataset.type});
             });
-            var replaceInsert = [{old: 'Insgesamt', new:'AAA'},
+            var replaceForOrder = [{old: 'Insgesamt', new:'AAA'},
                                   {old: 'Total', new: 'AAA'},
                                   {old: 'Deutschland', new: 'AAA'},
                                   {old: 'Germany', new: 'AAA'},
                                   {old: 'Straftaten (insgesamt)', new: 'AAA'},
                                   {old: 'Criminal offences (total)', new: 'AAA'},
                                   {old: 'Index (insgesamt)', new: 'AAA'}
-                                  {old: 'Index (overall)', new: 'AAA'}]
+                                  {old: 'Index (overall)', new: 'AAA'},
+                                  {old: 'MSY-untersuchte an allen bewirtschafteten Beständen', new: 'ZZZ'}
+                                  {old: 'Proportion of MSY examined in all managed stocks', new: 'ZZZ'}];
 
             var sorted = temp.sort(function(a, b) {
               var sub = a.label.substr(0,4);
@@ -2119,9 +2121,9 @@ var indicatorView = function (model, options) {
                 //var subB = b.label.substr(b.label.indexOf(','), b.label.length).replace('Insgesamt', 'AAA').replace('Total','AAA').replace('Deutschland', 'AAA').replace('Germany','AAA').replace('Straftaten (insgesamt)','AAA');
                 var subA = a.label.substr(a.label.indexOf(','), a.label.length)
                 var subB = b.label.substr(b.label.indexOf(','), b.label.length)
-                for (var i=0; i>replaceInsert.length; i++){
-                  subA = subA.replace(replace[i]['old'],replace[i]['new'])
-                  subB = subB.replace(replace[i]['old'],replace[i]['new'])
+                for (var i=0; i>replaceForOrder.length; i++){
+                  subA = subA.replace(replaceForOrder[i]['old'],replaceForOrder[i]['new'])
+                  subB = subB.replace(replaceForOrder[i]['old'],replaceForOrder[i]['new'])
                 }
               }
               else{
