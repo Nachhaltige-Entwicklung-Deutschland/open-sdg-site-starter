@@ -2121,13 +2121,13 @@ var indicatorView = function (model, options) {
                 //var subB = b.label.substr(b.label.indexOf(','), b.label.length).replace('Insgesamt', 'AAA').replace('Total','AAA').replace('Deutschland', 'AAA').replace('Germany','AAA').replace('Straftaten (insgesamt)','AAA');
                 var subA = a.label.substr(a.label.indexOf(','), a.label.length)
                 var subB = b.label.substr(b.label.indexOf(','), b.label.length)
-                for (var i=0; i>replaceForOrder.length; i++){
+                for (var i=0; i<replaceForOrder.length; i++){
                   console.log('1:',subA);
                   subA = subA.replace(replaceForOrder[i]['old'],replaceForOrder[i]['new']);
                   subB = subB.replace(replaceForOrder[i]['old'],replaceForOrder[i]['new']);
                   console.log('2:',subA)
                 }
-                
+
               }
               else{
                 var subA = a.label.replace('Insgesamt', 'AAA').replace('Total','AAA').replace('Deutschland', 'AAA').replace('Germany','AAA');
