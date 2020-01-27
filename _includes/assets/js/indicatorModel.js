@@ -465,7 +465,7 @@ var indicatorModel = function (options) {
       //--#14 mixedCharts---start-------------------------------------------------------------------------------------------------------
       barCharts = [translations.t('a) time series')+", "+translations.t('calculated annual values'),
                   translations.t('a) time series')+", "+translations.t('air pollutants overall'),
-                  translations.t('b) target (max)')+", "+translations.t('air pollutants overall'),
+                  //translations.t('b) target (max)')+", "+translations.t('air pollutants overall'),
                   translations.t('a) time series')+", "+translations.t('funding balance (share of gross domestic product (at current prices) in %)'),
                   translations.t('a) time series')+", "+translations.t('structural funding balance (share of gross domestic product (at current prices) in %)'),
                   translations.t('a) time series')+", "+translations.t('proportion of msy examined in all managed stocks'),

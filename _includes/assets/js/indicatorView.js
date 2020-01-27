@@ -441,7 +441,9 @@ var indicatorView = function (model, options) {
                                   {old: 'Deutschland', new: 'AAA'},
                                   {old: 'Germany', new: 'AAA'},
                                   {old: 'Straftaten (insgesamt)', new: 'AAA'},
-                                  {old: 'Criminal offences (total)', new: 'AAA'}]
+                                  {old: 'Criminal offences (total)', new: 'AAA'},
+                                  {old: 'Index (insgesamt)', new: 'AAA'}
+                                  {old: 'Index (overall)', new: 'AAA'}]
 
             var sorted = temp.sort(function(a, b) {
               var sub = a.label.substr(0,4);
