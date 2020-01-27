@@ -1294,7 +1294,7 @@ var indicatorDataStore = function(dataUrl) {
       //--#14 mixedCharts---start-------------------------------------------------------------------------------------------------------
       barCharts = [translations.t('a) time series')+", "+translations.t('calculated annual values'),
                   translations.t('a) time series')+", "+translations.t('air pollutants overall'),
-                  translations.t('b) target (max)')+", "+translations.t('air pollutants overall'),
+                  //translations.t('b) target (max)')+", "+translations.t('air pollutants overall'),
                   translations.t('a) time series')+", "+translations.t('funding balance (share of gross domestic product (at current prices) in %)'),
                   translations.t('a) time series')+", "+translations.t('structural funding balance (share of gross domestic product (at current prices) in %)'),
                   translations.t('a) time series')+", "+translations.t('proportion of msy examined in all managed stocks'),
@@ -2103,13 +2103,26 @@ var indicatorView = function (model, options) {
             _.each(chart.data.datasets, function(dataset, datasetIndex) {
               temp.push({label: dataset.label, borderDash: dataset.borderDash, backgroundColor: dataset.backgroundColor, datasetIndex: datasetIndex, type: dataset.type});
             });
+            var replaceInsert = [{old: 'Insgesamt', new:'AAA'},
+                                  {old: 'Total', new: 'AAA'},
+                                  {old: 'Deutschland', new: 'AAA'},
+                                  {old: 'Germany', new: 'AAA'},
+                                  {old: 'Straftaten (insgesamt)', new: 'AAA'},
+                                  {old: 'Criminal offences (total)', new: 'AAA'},
+                                  {old: 'Index (insgesamt)', new: 'AAA'}
+                                  {old: 'Index (overall)', new: 'AAA'}]
 
             var sorted = temp.sort(function(a, b) {
               var sub = a.label.substr(0,4);
               if (sub == 'Ziel' || sub == 'Targ' || sub == 'Zeit' || sub == 'Time'){
-                var subA = a.label.substr(a.label.indexOf(','), a.label.length).replace('Insgesamt', 'AAA').replace('Total','AAA').replace('Deutschland', 'AAA').replace('Germany','AAA');
-                var subB = b.label.substr(b.label.indexOf(','), b.label.length).replace('Insgesamt', 'AAA').replace('Total','AAA').replace('Deutschland', 'AAA').replace('Germany','AAA');
-
+                //var subA = a.label.substr(a.label.indexOf(','), a.label.length).replace('Insgesamt', 'AAA').replace('Total','AAA').replace('Deutschland', 'AAA').replace('Germany','AAA').replace('Straftaten (insgesamt)','AAA');
+                //var subB = b.label.substr(b.label.indexOf(','), b.label.length).replace('Insgesamt', 'AAA').replace('Total','AAA').replace('Deutschland', 'AAA').replace('Germany','AAA').replace('Straftaten (insgesamt)','AAA');
+                var subA = a.label.substr(a.label.indexOf(','), a.label.length)
+                var subB = b.label.substr(b.label.indexOf(','), b.label.length)
+                for (var i=0; i>replaceInsert.length; i++){
+                  subA = subA.replace(replace[i]['old'],replace[i]['new'])
+                  subB = subB.replace(replace[i]['old'],replace[i]['new'])
+                }
               }
               else{
                 var subA = a.label.replace('Insgesamt', 'AAA').replace('Total','AAA').replace('Deutschland', 'AAA').replace('Germany','AAA');
