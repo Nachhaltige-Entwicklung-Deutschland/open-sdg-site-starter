@@ -2103,16 +2103,16 @@ var indicatorView = function (model, options) {
             _.each(chart.data.datasets, function(dataset, datasetIndex) {
               temp.push({label: dataset.label, borderDash: dataset.borderDash, backgroundColor: dataset.backgroundColor, datasetIndex: datasetIndex, type: dataset.type});
             });
-            var replaceForOrder = [{old: 'Insgesamt', new:'AAA'},
-                                  {old: 'Total', new: 'AAA'},
-                                  {old: 'Deutschland', new: 'AAA'},
-                                  {old: 'Germany', new: 'AAA'},
-                                  {old: 'Straftaten (insgesamt)', new: 'AAA'},
-                                  {old: 'Criminal offences (total)', new: 'AAA'},
-                                  {old: 'Index (insgesamt)', new: 'AAA'},
-                                  {old: 'Index (overall)', new: 'AAA'},
-                                  {old: 'MSY-untersuchte an allen bewirtschafteten Beständen', new: 'ZZZ'},
-                                  {old: 'Proportion of MSY examined in all managed stocks', new: 'ZZZ'}];
+            var replaceForOrder = [{old: ', Insgesamt', new:', AAA'},
+                                  {old: ', Total', new: ', AAA'},
+                                  {old: ', Deutschland', new: ', AAA'},
+                                  {old: ', Germany', new: ', AAA'},
+                                  {old: ', Straftaten (insgesamt)', new: ', AAA'},
+                                  {old: ', Criminal offences (total)', new: ', AAA'},
+                                  {old: ', Index (insgesamt)', new: ', AAA'},
+                                  {old: ', Index (overall)', new: ', AAA'},
+                                  {old: ', MSY-untersuchte an allen bewirtschafteten Beständen', new: ', ZZZ'},
+                                  {old: ', Proportion of MSY examined in all managed stocks', new: ', ZZZ'}];
 
             var sorted = temp.sort(function(a, b) {
               var sub = a.label.substr(0,4);
