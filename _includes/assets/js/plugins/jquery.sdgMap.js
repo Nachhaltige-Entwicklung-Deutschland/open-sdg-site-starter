@@ -55,11 +55,11 @@
     this.element = element;
     this.options = $.extend(true, {}, defaults, options.mapOptions);
     //---#20 changeAccessToken---start-----------------------------------------
-    var d = new Date();
-    if (d.getDate() > 15){
-      this.options.tileOptions.accessToken = 'pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjazU1M2lma20wOXJiM25tcTc2ZHU4NjMzIn0.elmNTh89cjLmD2roD7Mcxw'
-    }
-    console.log("Options:",this.options.tileOptions.accessToken)
+    //var d = new Date();
+    //if (d.getDate() > 15){
+      //this.options.tileOptions.accessToken = 'pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjazU1M2lma20wOXJiM25tcTc2ZHU4NjMzIn0.elmNTh89cjLmD2roD7Mcxw'
+    //}
+    //console.log("Options:",this.options.tileOptions.accessToken)
     //---#20 changeAccessToken---stop------------------------------------------
     this.mapLayers = [];
     this.geoData = options.geoData;
@@ -404,13 +404,13 @@
       }));
 
       //---#7 addMapboxWordmark---start-----------------------------------------------------------------------------------------
-      var logo = L.control({position: 'bottomleft'});
-      logo.onAdd = function (map) {
-        var div = L.DomUtil.create('div', 'logo');
-        div.innerHTML = '<a href="https://mapbox.com"> <img src="https://g205sdgs.github.io/sdg-indicators/public/mapbox-logo-white.png"/ width=140 height=30> </a>'
-        return div;
-      };
-      logo.addTo(this.map);
+      //var logo = L.control({position: 'bottomleft'});
+      //logo.onAdd = function (map) {
+        //var div = L.DomUtil.create('div', 'logo');
+        //div.innerHTML = '<a href="https://mapbox.com"> <img src="https://g205sdgs.github.io/sdg-indicators/public/mapbox-logo-white.png"/ width=140 height=30> </a>'
+        //return div;
+      //};
+      //logo.addTo(this.map);
       //---#7 addMapboxWordmark---stop-----------------------------------------------------------------------------------------
 
       // Add the selection legend.

@@ -426,12 +426,29 @@ var indicatorView = function (model, options) {
             _.each(chart.data.datasets, function(dataset, datasetIndex) {
               temp.push({label: dataset.label, borderDash: dataset.borderDash, backgroundColor: dataset.backgroundColor, datasetIndex: datasetIndex, type: dataset.type});
             });
+            var replaceForOrder = [{old: 'Insgesamt', new:'AAA'},
+                                  {old: 'Total', new: 'AAA'},
+                                  {old: 'Deutschland', new: 'AAA'},
+                                  {old: 'Germany', new: 'AAA'},
+                                  {old: 'Straftaten (insgesamt)', new: 'AAA'},
+                                  {old: 'Criminal offences (total)', new: 'AAA'},
+                                  {old: 'Index (insgesamt)', new: 'AAA'},
+                                  {old: 'Index (overall)', new: 'AAA'}];
 
             var sorted = temp.sort(function(a, b) {
               var sub = a.label.substr(0,4);
               if (sub == 'Ziel' || sub == 'Targ' || sub == 'Zeit' || sub == 'Time'){
-                var subA = a.label.substr(a.label.indexOf(','), a.label.length).replace('Insgesamt', 'AAA').replace('Total','AAA').replace('Deutschland', 'AAA').replace('Germany','AAA');
-                var subB = b.label.substr(b.label.indexOf(','), b.label.length).replace('Insgesamt', 'AAA').replace('Total','AAA').replace('Deutschland', 'AAA').replace('Germany','AAA');
+                //var subA = a.label.substr(a.label.indexOf(','), a.label.length).replace('Insgesamt', 'AAA').replace('Total','AAA').replace('Deutschland', 'AAA').replace('Germany','AAA').replace('Straftaten (insgesamt)','AAA');
+                //var subB = b.label.substr(b.label.indexOf(','), b.label.length).replace('Insgesamt', 'AAA').replace('Total','AAA').replace('Deutschland', 'AAA').replace('Germany','AAA').replace('Straftaten (insgesamt)','AAA');
+                var subA = a.label.substr(a.label.indexOf(','), a.label.length)
+                var subB = b.label.substr(b.label.indexOf(','), b.label.length)
+                for (var i=0; i<replaceForOrder.length; i++){
+                  console.log('1:',subA);
+                  subA = subA.replace(replaceForOrder[i]['old'],replaceForOrder[i]['new']);
+                  subB = subB.replace(replaceForOrder[i]['old'],replaceForOrder[i]['new']);
+                  console.log('2:',subA)
+                }
+
               }
               else{
                 var subA = a.label.replace('Insgesamt', 'AAA').replace('Total','AAA').replace('Deutschland', 'AAA').replace('Germany','AAA');
@@ -442,7 +459,6 @@ var indicatorView = function (model, options) {
             });
 
             //^^^^ #18.1 ^^^^
-
             _.each(sorted, function(dataset) { //#18.2 use the sorted dataset instead of the original >>> _.each(chart.data.datasets, function(dataset, datasetIndex) {
 
               text.push('<li data-datasetindex="' + dataset.datasetIndex + '">'); //#18.2 >>> text.push('<li data-datasetindex="' + datasetIndex + '">');
@@ -455,12 +471,20 @@ var indicatorView = function (model, options) {
               var replace = [{old: '2,5', new: '2.5'},
                             {old: 'Gebäude-, Frei- & Betriebsfläche', new: 'Gebäude- Frei- & Betriebsfläche'},
                             {old: 'Konsum, Investitionen und Exporte', new: 'Konsum Investitionen und Exporte'},
-                            {old: 'Entwicklungszusammenarbeit, deren', new: 'Entwicklungszusammenarbeit, deren'}];
+                            {old: 'Entwicklungszusammenarbeit, deren', new: 'Entwicklungszusammenarbeit deren'},
+                            {old: 'Moving five-year average, referring to the middle year', new: 'Moving five-year average referring to the middle year'},
+                            {old: 'onsumption, investments', new: 'onsumption investments'},
+                            {old: 'area, c', new: 'area c'}];
+
               for (var i=0; i<replace.length; i++){
                 label = label.replace(replace[i]['old'], replace[i]['new']);
               };
               //-----------------------------------------------------------
-              for (var i=0; i<label.split(',').length; i++){
+              var exc = 0;
+              if (label.indexOf('Deutschland (insgesamt)') != -1 || label.indexOf('Germany (total)') != -1) {
+                exc = 1;
+              }
+              for (var i=0; i<label.split(',').length - exc; i++){
                 indent = indent.concat('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;');
               };
               indent = indent.concat('</span>');
