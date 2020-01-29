@@ -1293,13 +1293,13 @@ var indicatorDataStore = function(dataUrl) {
 
       //--#14 mixedCharts---start-------------------------------------------------------------------------------------------------------
       barCharts = [translations.t('a) time series')+", "+translations.t('calculated annual values'),
-                  translations.t('a) time series')+", "+translations.t('air pollutants overall'),
+                  //translations.t('a) time series')+", "+translations.t('air pollutants overall'),
                   //translations.t('b) target (max)')+", "+translations.t('air pollutants overall'),
                   translations.t('a) time series')+", "+translations.t('funding balance (share of gross domestic product (at current prices) in %)'),
                   translations.t('a) time series')+", "+translations.t('structural funding balance (share of gross domestic product (at current prices) in %)'),
                   translations.t('a) time series')+", "+translations.t('proportion of msy examined in all managed stocks'),
-                  translations.t('a) time series')+", "+translations.t('index overall'),
-                  translations.t('b) target (min)')+", "+translations.t('index overall')]
+                  //translations.t('a) time series')+", "+translations.t('index overall'),
+                  //translations.t('b) target (min)')+", "+translations.t('index overall')]
       getChartStyle = function (combinationDescription) {
         if (barCharts.indexOf(String(combinationDescription)) != -1) {
           return 'bar';
@@ -2149,7 +2149,8 @@ var indicatorView = function (model, options) {
               //-----------------------------------------------------------
               var exc = 0;
               var exceptions = ['Deutschland (insgesamt)', 'Germany (total)',
-                                'Insgesamt', 'Total'];
+                                'Insgesamt', 'Total',
+                                'Index insgesamt', 'Index overall'];
               if (exceptions.includes(label)) {
                 exc = 1;
               }
