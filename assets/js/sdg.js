@@ -1297,7 +1297,7 @@ var indicatorDataStore = function(dataUrl) {
                   //translations.t('b) target (max)')+", "+translations.t('air pollutants overall'),
                   translations.t('a) time series')+", "+translations.t('funding balance (share of gross domestic product (at current prices) in %)'),
                   translations.t('a) time series')+", "+translations.t('structural funding balance (share of gross domestic product (at current prices) in %)'),
-                  translations.t('a) time series')+", "+translations.t('proportion of msy examined in all managed stocks'),
+                  translations.t('a) time series')+", "+translations.t('proportion of msy examined in all managed stocks')]
                   //translations.t('a) time series')+", "+translations.t('index overall'),
                   //translations.t('b) target (min)')+", "+translations.t('index overall')]
       getChartStyle = function (combinationDescription) {
