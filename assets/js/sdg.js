@@ -2148,9 +2148,15 @@ var indicatorView = function (model, options) {
               };
               //-----------------------------------------------------------
               var exc = 0;
-              if (label.indexOf('Deutschland (insgesamt)') != -1 || label.indexOf('Germany (total)') != -1) {
+              var exceptions = ['Deutschland (insgesamt)', 'Germany (total)',
+                                'Insgesamt', 'Total'];
+              if (exceptions.includes(label)) {
                 exc = 1;
               }
+
+              //if (label.indexOf('Deutschland (insgesamt)') != -1 || label.indexOf('Germany (total)') != -1) {
+                //exc = 1;
+              //}
               for (var i=0; i<label.split(',').length - exc; i++){
                 indent = indent.concat('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;');
               };
