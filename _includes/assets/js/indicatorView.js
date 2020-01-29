@@ -482,7 +482,8 @@ var indicatorView = function (model, options) {
               //-----------------------------------------------------------
               var exc = 0;
               var exceptions = ['Deutschland (insgesamt)', 'Germany (total)',
-                                'Insgesamt', 'Total'];
+                                'Insgesamt', 'Total',
+                                'Index insgesamt', 'Index overall'];
               if (exceptions.includes(label)) {
                 exc = 1;
               }
