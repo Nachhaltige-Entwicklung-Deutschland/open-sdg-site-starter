@@ -731,7 +731,7 @@ var indicatorModel = function (options) {
         //---#2.1 caseNoTimeSeriesInCsv---start-----------------------------------
         title: this.chartTitle,
         measurementUnit: this.measurementUnit,
-        console.log('a) ',title, measurementUnit)
+        console.log('a) ',title, measurementUnit),
 
 
         //---#2.1 caseNoTimeSeriesInCsv---stop------------------------------------
