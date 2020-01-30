@@ -1571,7 +1571,7 @@ var indicatorDataStore = function(dataUrl) {
 
         //---#2.1 caseNoTimeSeriesInCsv---stop------------------------------------
       });
-      console.log('1.:', this.measurementunit);
+      console.log('1.:', that.measurementunit);
 
 
     } else {
