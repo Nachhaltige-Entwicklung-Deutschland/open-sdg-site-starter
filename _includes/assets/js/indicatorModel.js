@@ -735,6 +735,7 @@ var indicatorModel = function (options) {
       });
       console.log('1.:', this.measurementunit);
 
+
     } else {
       this.onSeriesSelectedChanged.notify({
         series: this.selectedFields
