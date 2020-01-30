@@ -144,7 +144,7 @@ var indicatorView = function (model, options) {
       //---#2 TimeSeriesNameDisplayedInMaps---stop------------------
     }
   });
-  console.log('b) ',rgs.title, args.measuermentUnit);
+  console.log('b) ',args.title, args.measuermentUnit);
   this._model.onSeriesSelectedChanged.attach(function(sender, args) {
     // var selector;
     // if (args.series.length === view_obj._fieldLimit) {
