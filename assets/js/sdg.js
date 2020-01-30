@@ -1682,7 +1682,7 @@ var mapView = function () {
       //---#1 GoalDependendMapColor---stop---------------------------------------
 
       //---#2.2---start
-      measuermentUnit: measurementUnit,
+      measurementUnit: measurementUnit,
       //---#2.2
 
       title: title
