@@ -100,7 +100,10 @@ opensdg.autotrack = function(preset, category, action, label) {
     //---#1 GoalDependendMapColor---stop---------------------------------------
     //---#2.1 caseNoTimeSeriesInCsv---start------------------------------------
     this.title = options.title;
+
+    //---#2.2 footerUnitInMapLegend---start------------------------------------
     this.unit1 = options.measurementUnit;
+    //---#2.2 footerUnitInMapLegend---stop-------------------------------------
 
 
     //---#2.1 caseNoTimeSeriesInCsv---stop-------------------------------------
@@ -142,7 +145,7 @@ opensdg.autotrack = function(preset, category, action, label) {
 
     if (this.unit1){
       this.unit = this.unit1;
-      
+
       this.unitName = translations.t('unit') + ": " + translations.t(this.unit);
     }
     else {
@@ -897,8 +900,6 @@ var indicatorDataStore = function(dataUrl) {
   this.geoCodeRegEx = options.geoCodeRegEx;
   this.showMap = options.showMap;
 
-  console.log('0.1:', this.measurementUnit);
-  console.log('0.2:', options.measurementUnit);
   // initialise the field information, unique fields and unique values for each field:
   (function initialise() {
 
@@ -1572,11 +1573,11 @@ var indicatorDataStore = function(dataUrl) {
 
         //---#2.1 caseNoTimeSeriesInCsv---start-----------------------------------
         title: this.chartTitle,
-        measurementUnit: this.measurementUnit,
-
-
-
         //---#2.1 caseNoTimeSeriesInCsv---stop------------------------------------
+
+        //---#2.2 footerUnitInMapLegend---start-----------------------------------
+        measurementUnit: this.measurementUnit,
+        //---#2.2 footerUnitInMapLegend---stop------------------------------------        
       });
 
 
@@ -1586,7 +1587,7 @@ var indicatorDataStore = function(dataUrl) {
         series: this.selectedFields
       });
     }
-    //console.log('a) ',title, measurementUnit);
+
     /////////////////////////////////////////////////////////////////////////////////////////////////////////
     if((options.initial || options.unitsChangeSeries) && !this.hasHeadline) {
       // if there is no initial data, select some:
@@ -1683,9 +1684,9 @@ var mapView = function () {
       goal: goal,
       //---#1 GoalDependendMapColor---stop---------------------------------------
 
-      //---#2.2---start
+      //---#2.2 footerUnitInMapLegend---start----------------------------------------------------------
       measurementUnit: measurementUnit,
-      //---#2.2
+      //---#2.2 footerUnitInMapLegend---stop-----------------------------------------------------------
 
       title: title
     });
@@ -1833,9 +1834,9 @@ var indicatorView = function (model, options) {
       //view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx);
       //view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr);
       //---#1 GoalDependendMapColor---stop---------------------------
-      view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr, args.title, args.measurementUnit); //---#2.2
+      view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr, args.title, args.measurementUnit); //---#2.2 footerUnitInMapLegend
       //---#2 TimeSeriesNameDisplayedInMaps---stop------------------
-      console.log('b) ',args.title, args.measurementUnit);
+      
     }
   });
 
