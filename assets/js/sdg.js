@@ -100,7 +100,8 @@ opensdg.autotrack = function(preset, category, action, label) {
     //---#1 GoalDependendMapColor---stop---------------------------------------
     //---#2.1 caseNoTimeSeriesInCsv---start------------------------------------
     this.title = options.title;
-    this.unit1 = options.units1;
+    this.unit1 = options.measurementUnit;
+    console.log('1.1:', this.unit1);
     //---#2.1 caseNoTimeSeriesInCsv---stop-------------------------------------
 
     // Require at least one geoLayer.
@@ -1569,11 +1570,11 @@ var indicatorDataStore = function(dataUrl) {
 
         //---#2.1 caseNoTimeSeriesInCsv---start-----------------------------------
         title: this.chartTitle,
-        units1: this.measurementUnit,
+
 
         //---#2.1 caseNoTimeSeriesInCsv---stop------------------------------------
       });
-      console.log('1.:', that.measurementUnit);
+      
 
 
     } else {
