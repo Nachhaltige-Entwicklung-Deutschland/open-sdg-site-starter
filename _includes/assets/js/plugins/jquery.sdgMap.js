@@ -70,8 +70,8 @@
     //---#2.1 caseNoTimeSeriesInCsv---start------------------------------------
     this.title = options.title;
     this.unit1 = options.measurementUnit;
-    
-    console.log('1.1:', this.unit1);
+
+
     //---#2.1 caseNoTimeSeriesInCsv---stop-------------------------------------
 
     // Require at least one geoLayer.
@@ -108,10 +108,10 @@
     //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
     this.timeSeries = _.pluck(this.geoData, 'timeseries');
     this.timeSeriesName = translations.t(this.timeSeries[this.timeSeries.length -1]);
-    console.log('2.:', this.unit1);
+
     if (this.unit1){
       this.unit = this.unit1;
-      console.log('3.:',this.unit);
+      
       this.unitName = translations.t('unit') + ": " + translations.t(this.unit);
     }
     else {
