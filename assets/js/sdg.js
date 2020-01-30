@@ -1669,7 +1669,7 @@ var mapView = function () {
   //this.initialise = function(geoData, geoCodeRegEx) {
   //this.initialise = function(geoData, geoCodeRegEx, goal) {
   //---#1 GoalDependendMapColor---stop---------------------------------------
-  this.initialise = function(geoData, geoCodeRegEx, goal, title) {
+  this.initialise = function(geoData, geoCodeRegEx, goal, title, measurementUnit) {
   //---#2.1 caseNoTimeSeriesInCsv---stop-------------------------------------
     $('.map').show();
     $('#map').sdgMap({
@@ -1680,6 +1680,11 @@ var mapView = function () {
       //---#1 GoalDependendMapColor---start--------------------------------------
       goal: goal,
       //---#1 GoalDependendMapColor---stop---------------------------------------
+
+      //---#2.2---start
+      measuermentUnit: measuermentUnit,
+      //---#2.2
+
       title: title
     });
   };
@@ -1826,7 +1831,7 @@ var indicatorView = function (model, options) {
       //view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx);
       //view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr);
       //---#1 GoalDependendMapColor---stop---------------------------
-      view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr, args.title);
+      view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr, args.title, args.measuermentUnit); //---#2.2
       //---#2 TimeSeriesNameDisplayedInMaps---stop------------------
     }
   });
