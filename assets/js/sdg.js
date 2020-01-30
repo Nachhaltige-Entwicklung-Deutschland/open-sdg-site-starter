@@ -137,7 +137,7 @@ opensdg.autotrack = function(preset, category, action, label) {
     //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
     this.timeSeries = _.pluck(this.geoData, 'timeseries');
     this.timeSeriesName = translations.t(this.timeSeries[this.timeSeries.length -1]);
-    console.log('2.:', this.unit1)
+    console.log('2.:', this.unit1);
     if (this.unit1){
       this.unit = this.unit1;
       console.log('3.:',this.unit);
