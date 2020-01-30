@@ -18,9 +18,9 @@ var mapView = function () {
       goal: goal,
       //---#1 GoalDependendMapColor---stop---------------------------------------
 
-      //---#2.2---start
+      //---#2.2 footerUnitInMapLegend---start----------------------------------------------------------
       measurementUnit: measurementUnit,
-      //---#2.2
+      //---#2.2 footerUnitInMapLegend---stop-----------------------------------------------------------
 
       title: title
     });

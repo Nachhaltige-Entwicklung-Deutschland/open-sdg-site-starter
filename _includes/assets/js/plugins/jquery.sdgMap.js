@@ -69,7 +69,10 @@
     //---#1 GoalDependendMapColor---stop---------------------------------------
     //---#2.1 caseNoTimeSeriesInCsv---start------------------------------------
     this.title = options.title;
+
+    //---#2.2 footerUnitInMapLegend---start------------------------------------
     this.unit1 = options.measurementUnit;
+    //---#2.2 footerUnitInMapLegend---stop-------------------------------------
 
 
     //---#2.1 caseNoTimeSeriesInCsv---stop-------------------------------------
@@ -111,7 +114,7 @@
 
     if (this.unit1){
       this.unit = this.unit1;
-      
+
       this.unitName = translations.t('unit') + ": " + translations.t(this.unit);
     }
     else {

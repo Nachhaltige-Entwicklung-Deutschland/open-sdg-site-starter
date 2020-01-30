@@ -55,8 +55,6 @@ var indicatorModel = function (options) {
   this.geoCodeRegEx = options.geoCodeRegEx;
   this.showMap = options.showMap;
 
-  console.log('0.1:', this.measurementUnit);
-  console.log('0.2:', options.measurementUnit);
   // initialise the field information, unique fields and unique values for each field:
   (function initialise() {
 
@@ -730,11 +728,11 @@ var indicatorModel = function (options) {
 
         //---#2.1 caseNoTimeSeriesInCsv---start-----------------------------------
         title: this.chartTitle,
-        measurementUnit: this.measurementUnit,
-
-
-
         //---#2.1 caseNoTimeSeriesInCsv---stop------------------------------------
+
+        //---#2.2 footerUnitInMapLegend---start-----------------------------------
+        measurementUnit: this.measurementUnit,
+        //---#2.2 footerUnitInMapLegend---stop------------------------------------        
       });
 
 
@@ -744,7 +742,7 @@ var indicatorModel = function (options) {
         series: this.selectedFields
       });
     }
-    //console.log('a) ',title, measurementUnit);
+
     /////////////////////////////////////////////////////////////////////////////////////////////////////////
     if((options.initial || options.unitsChangeSeries) && !this.hasHeadline) {
       // if there is no initial data, select some:
