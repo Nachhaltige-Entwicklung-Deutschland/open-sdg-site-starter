@@ -732,7 +732,7 @@ var indicatorModel = function (options) {
 
         //---#2.1 caseNoTimeSeriesInCsv---stop------------------------------------
       });
-      console.log('1.:', this.units1);
+      console.log('1.:', this.units);
 
     } else {
       this.onSeriesSelectedChanged.notify({
