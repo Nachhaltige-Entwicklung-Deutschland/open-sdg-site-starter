@@ -108,12 +108,14 @@
     this.timeSeriesName = translations.t(this.timeSeries[this.timeSeries.length -1]);
     if (this.unit1){
       this.unit = this.unit1;
+      this.unitName = translations.t('unit') + ": " + translations.t(this.unit);
     }
     else {
       this.unit = _.pluck(this.geoData, 'Units');
+      this.unitName = translations.t('unit') + ": " + translations.t(this.unit[this.unit.length -1]);
     }
 
-    this.unitName = translations.t('unit') + ": " + translations.t(this.unit[this.unit.length -1]);
+
     //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
     this.sex = _.pluck(this.geoData, 'sex');
     this.sexName = translations.t(this.sex[this.sex.length -1]);
