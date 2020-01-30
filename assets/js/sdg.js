@@ -1570,7 +1570,7 @@ var indicatorDataStore = function(dataUrl) {
 
         //---#2.1 caseNoTimeSeriesInCsv---stop------------------------------------
       });
-      //console.log('1.:', units1);
+      console.log('1.:', this.units1);
 
     } else {
       this.onSeriesSelectedChanged.notify({
