@@ -729,11 +729,11 @@ var indicatorModel = function (options) {
 
         //---#2.1 caseNoTimeSeriesInCsv---start-----------------------------------
         title: this.chartTitle,
-        units1: this.measurementUnit,
+
 
         //---#2.1 caseNoTimeSeriesInCsv---stop------------------------------------
       });
-      console.log('1.:', that.measurementUnit);
+      
 
 
     } else {

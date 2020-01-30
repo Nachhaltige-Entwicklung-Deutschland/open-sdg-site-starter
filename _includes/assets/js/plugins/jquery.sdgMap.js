@@ -69,7 +69,8 @@
     //---#1 GoalDependendMapColor---stop---------------------------------------
     //---#2.1 caseNoTimeSeriesInCsv---start------------------------------------
     this.title = options.title;
-    this.unit1 = options.units1;
+    this.unit1 = options.measurementUnit;
+    console.log('1.1:', this.unit1);
     //---#2.1 caseNoTimeSeriesInCsv---stop-------------------------------------
 
     // Require at least one geoLayer.
