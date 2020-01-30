@@ -1586,7 +1586,7 @@ var indicatorDataStore = function(dataUrl) {
         series: this.selectedFields
       });
     }
-    console.log('a) ',title, measurementUnit);
+    //console.log('a) ',title, measurementUnit);
     /////////////////////////////////////////////////////////////////////////////////////////////////////////
     if((options.initial || options.unitsChangeSeries) && !this.hasHeadline) {
       // if there is no initial data, select some:
