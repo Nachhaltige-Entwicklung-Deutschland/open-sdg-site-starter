@@ -137,8 +137,8 @@ opensdg.autotrack = function(preset, category, action, label) {
     //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
     this.timeSeries = _.pluck(this.geoData, 'timeseries');
     this.timeSeriesName = translations.t(this.timeSeries[this.timeSeries.length -1]);
-    if (this.units1){
-      this.unit = this.units1;
+    if (this.unit1){
+      this.unit = this.unit1;
       this.unitName = translations.t('unit') + ": " + translations.t(this.unit);
     }
     else {
@@ -2124,10 +2124,10 @@ var indicatorView = function (model, options) {
                 var subA = a.label.substr(a.label.indexOf(','), a.label.length)
                 var subB = b.label.substr(b.label.indexOf(','), b.label.length)
                 for (var i=0; i<replaceForOrder.length; i++){
-                  console.log('1:',subA);
+                  //console.log('1:',subA);
                   subA = subA.replace(replaceForOrder[i]['old'],replaceForOrder[i]['new']);
                   subB = subB.replace(replaceForOrder[i]['old'],replaceForOrder[i]['new']);
-                  console.log('2:',subA)
+                  //console.log('2:',subA)
                 }
 
               }
