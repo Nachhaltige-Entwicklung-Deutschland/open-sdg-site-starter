@@ -101,13 +101,15 @@
     this.currentYear = this.years[0];
 
     //---#2.1 caseNoTimeSeriesInCsv---start------------------------------------
-    this.title = translations.t(this.title)
+    this.title = translations.t(this.title);
     //---#2.1 caseNoTimeSeriesInCsv---stop------------------------------------
     //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
     this.timeSeries = _.pluck(this.geoData, 'timeseries');
     this.timeSeriesName = translations.t(this.timeSeries[this.timeSeries.length -1]);
+    console.log('2.:', this.unit1)
     if (this.unit1){
       this.unit = this.unit1;
+      console.log('3.:',this.unit);
       this.unitName = translations.t('unit') + ": " + translations.t(this.unit);
     }
     else {
