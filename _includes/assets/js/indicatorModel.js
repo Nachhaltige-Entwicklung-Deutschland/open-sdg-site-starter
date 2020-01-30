@@ -55,6 +55,7 @@ var indicatorModel = function (options) {
   this.geoCodeRegEx = options.geoCodeRegEx;
   this.showMap = options.showMap;
 
+
   // initialise the field information, unique fields and unique values for each field:
   (function initialise() {
 
@@ -732,7 +733,7 @@ var indicatorModel = function (options) {
 
         //---#2.1 caseNoTimeSeriesInCsv---stop------------------------------------
       });
-      console.log('1.:', this.units);
+      console.log('1.:', this.measurementunit);
 
     } else {
       this.onSeriesSelectedChanged.notify({
