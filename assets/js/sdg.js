@@ -101,7 +101,7 @@ opensdg.autotrack = function(preset, category, action, label) {
     //---#2.1 caseNoTimeSeriesInCsv---start------------------------------------
     this.title = options.title;
     this.unit1 = options.measurementUnit;
-    console.log('0.1:', this.title);
+    
     console.log('1.1:', this.unit1);
     //---#2.1 caseNoTimeSeriesInCsv---stop-------------------------------------
 
@@ -897,7 +897,8 @@ var indicatorDataStore = function(dataUrl) {
   this.geoCodeRegEx = options.geoCodeRegEx;
   this.showMap = options.showMap;
 
-
+  console.log('0.1:', this.measurementUnit);
+  console.log('0.2:', options.measurementUnit);
   // initialise the field information, unique fields and unique values for each field:
   (function initialise() {
 
@@ -1575,7 +1576,7 @@ var indicatorDataStore = function(dataUrl) {
 
         //---#2.1 caseNoTimeSeriesInCsv---stop------------------------------------
       });
-      
+
 
 
     } else {
