@@ -443,10 +443,10 @@ var indicatorView = function (model, options) {
                 var subA = a.label.substr(a.label.indexOf(','), a.label.length)
                 var subB = b.label.substr(b.label.indexOf(','), b.label.length)
                 for (var i=0; i<replaceForOrder.length; i++){
-                  console.log('1:',subA);
+                  //console.log('1:',subA);
                   subA = subA.replace(replaceForOrder[i]['old'],replaceForOrder[i]['new']);
                   subB = subB.replace(replaceForOrder[i]['old'],replaceForOrder[i]['new']);
-                  console.log('2:',subA)
+                  //console.log('2:',subA)
                 }
 
               }

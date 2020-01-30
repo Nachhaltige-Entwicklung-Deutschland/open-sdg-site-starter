@@ -106,8 +106,8 @@
     //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
     this.timeSeries = _.pluck(this.geoData, 'timeseries');
     this.timeSeriesName = translations.t(this.timeSeries[this.timeSeries.length -1]);
-    if (this.units1){
-      this.unit = this.units1;
+    if (this.unit1){
+      this.unit = this.unit1;
       this.unitName = translations.t('unit') + ": " + translations.t(this.unit);
     }
     else {
