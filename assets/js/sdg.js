@@ -136,7 +136,13 @@ opensdg.autotrack = function(preset, category, action, label) {
     //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
     this.timeSeries = _.pluck(this.geoData, 'timeseries');
     this.timeSeriesName = translations.t(this.timeSeries[this.timeSeries.length -1]);
-    this.unit = _.pluck(this.geoData, 'Units');
+    if (options.unit1){
+      this.unit = options.unit1;
+    }
+    else {
+      this.unit = _.pluck(this.geoData, 'Units');
+    }
+
     this.unitName = translations.t('unit') + ": " + translations.t(this.unit[this.unit.length -1]);
     //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
     this.sex = _.pluck(this.geoData, 'sex');
@@ -1557,6 +1563,7 @@ var indicatorDataStore = function(dataUrl) {
 
         //---#2.1 caseNoTimeSeriesInCsv---start-----------------------------------
         title: this.chartTitle,
+        units1: this.units,
         //---#2.1 caseNoTimeSeriesInCsv---stop------------------------------------
       });
 
