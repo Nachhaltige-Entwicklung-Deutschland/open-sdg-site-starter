@@ -69,7 +69,7 @@
     //---#1 GoalDependendMapColor---stop---------------------------------------
     //---#2.1 caseNoTimeSeriesInCsv---start------------------------------------
     this.title = options.title;
-    this.unit1 = options.unit1;
+    this.unit1 = options.units1;
     //---#2.1 caseNoTimeSeriesInCsv---stop-------------------------------------
 
     // Require at least one geoLayer.
@@ -106,8 +106,8 @@
     //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
     this.timeSeries = _.pluck(this.geoData, 'timeseries');
     this.timeSeriesName = translations.t(this.timeSeries[this.timeSeries.length -1]);
-    if (this.unit1){
-      this.unit = this.unit1;
+    if (this.units1){
+      this.unit = this.units1;
       this.unitName = translations.t('unit') + ": " + translations.t(this.unit);
     }
     else {
