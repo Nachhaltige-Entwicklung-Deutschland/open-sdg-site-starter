@@ -731,7 +731,7 @@ var indicatorModel = function (options) {
         //---#2.1 caseNoTimeSeriesInCsv---start-----------------------------------
         title: this.chartTitle,
         measurementUnit: this.measurementUnit,
-        console.log('a) ',title, measurementUnit),
+
 
 
         //---#2.1 caseNoTimeSeriesInCsv---stop------------------------------------
@@ -744,7 +744,7 @@ var indicatorModel = function (options) {
         series: this.selectedFields
       });
     }
-
+    console.log('a) ',title, measurementUnit);
     /////////////////////////////////////////////////////////////////////////////////////////////////////////
     if((options.initial || options.unitsChangeSeries) && !this.hasHeadline) {
       // if there is no initial data, select some:
