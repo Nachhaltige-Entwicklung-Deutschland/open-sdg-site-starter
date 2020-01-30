@@ -19,7 +19,7 @@
     maxZoom: 15,
     // Visual/choropleth considerations.
     colorRange: chroma.brewer.BuGn,
-    noValueColor: '#f0f0f0',
+    noValueColor: '#ffffff',
     styleNormal: {
       weight: 1,
       opacity: 1,
@@ -70,6 +70,7 @@
     //---#2.1 caseNoTimeSeriesInCsv---start------------------------------------
     this.title = options.title;
     this.unit1 = options.measurementUnit;
+    console.log('0.1:', this.title);
     console.log('1.1:', this.unit1);
     //---#2.1 caseNoTimeSeriesInCsv---stop-------------------------------------
 
