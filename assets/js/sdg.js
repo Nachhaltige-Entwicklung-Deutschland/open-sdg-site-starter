@@ -1253,11 +1253,9 @@ var indicatorDataStore = function(dataUrl) {
       datasetIndex = 0,
 
       //---#4 sameColorForTargetAndTimeSeries---start-----------------
-      nameList = []
-      indexList = []
+      nameList = [],
+      indexList = [],
       //---#4 sameColorForTargetAndTimeSeries---stop------------------
-
-
 
       getCombinationDescription = function(combination) {
         return _.map(Object.keys(combination), function(key) {
