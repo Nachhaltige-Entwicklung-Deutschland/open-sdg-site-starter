@@ -1618,6 +1618,7 @@ var indicatorDataStore = function(dataUrl) {
         // which we assume to be pipe-delimited.
         var valuesToLookFor = this.startValues.split('|');
         // Match up each field value with a field.
+        console.log('A',this.fieldItemStates)
         _.each(this.fieldItemStates, function(fieldItem) {
           _.each(fieldItem.values, function(fieldValue) {
             if (_.contains(valuesToLookFor, fieldValue.value)) {
