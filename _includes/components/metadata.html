@@ -19,7 +19,6 @@
 
     {% if indicator_metadata.field.scope == include.scope %}
       {% unless var == 'dontShow' or indicator_metadata.name contains "_url_text" or indicator_metadata.name contains "_link_text" or indicator_metadata.name contains "_year" or indicator_metadata.name == "dns_indicator_definition" or indicator_metadata.name == "national_geographical_coverage" %}
-
       <tr>
         {% if indicator_metadata.field.scope != 'content' %}
           <th scope="row">{{ metadata_label }} </th>
