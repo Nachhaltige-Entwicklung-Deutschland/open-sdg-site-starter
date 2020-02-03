@@ -392,6 +392,7 @@ var indicatorModel = function (options) {
   };
 
   this.getData = function(options) {
+    console.log('Options',options)
     // field: 'Grade'
     // values: ['A', 'B']
     var options = _.defaults(options || {}, {
@@ -471,6 +472,8 @@ var indicatorModel = function (options) {
                   //translations.t('a) time series')+", "+translations.t('proportion of msy examined in all managed stocks'),
                   //translations.t('a) time series')+", "+translations.t('index overall'),
                   //translations.t('b) target (min)')+", "+translations.t('index overall')
+                  translations.t('a) time series'),
+                  translations.t('b) target (min)')
                 ]
       getChartStyle = function (combinationDescription) {
         if (barCharts.indexOf(String(combinationDescription)) != -1) {
@@ -732,7 +735,7 @@ var indicatorModel = function (options) {
 
         //---#2.2 footerUnitInMapLegend---start-----------------------------------
         measurementUnit: this.measurementUnit,
-        //---#2.2 footerUnitInMapLegend---stop------------------------------------        
+        //---#2.2 footerUnitInMapLegend---stop------------------------------------
       });
 
 
