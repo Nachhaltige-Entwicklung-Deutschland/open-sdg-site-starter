@@ -4,11 +4,9 @@ permalink: /guidance/
 layout: page
 ---
 
-## Nationale Berichtsplattform zu den Indikatoren der Deutschen Nachhaltigkeitsstrategie
+## Berichtsplattform zu den Indikatoren der Deutschen Nachhaltigkeitsstrategie
 
-Die Nationale Berichtsplattform ist ein öffentlich zugängliches Instrument zur Verbreitung und Präsentation von Indikatoren der Nachhaltigkeitsstrategie für Deutschland.
-
-### Unsere Herangehensweise
+Die Nationale Berichtsplattform ist ein öffentlich zugängliches Instrument zur Darstellung und Verbreitung von Indikatoren der Nachhaltigkeitsstrategie für Deutschland.
 
 Die Berichtsplattform
 - wird von den nationalen statistischen Ämtern verwaltet;
