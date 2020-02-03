@@ -773,11 +773,14 @@ var indicatorModel = function (options) {
         // which we assume to be pipe-delimited.
         var valuesToLookFor = this.startValues.split('|');
         // Match up each field value with a field.
-        console.log('A',this.fieldItemStates)
+        console.log('A',this.fieldItemStates);
         _.each(this.fieldItemStates, function(fieldItem) {
+          console.log('B',fieldItem);
           _.each(fieldItem.values, function(fieldValue) {
+            console.log('C',fieldValue);
             if (_.contains(valuesToLookFor, fieldValue.value)) {
               minimumFieldSelections[fieldItem.field] = fieldValue.value;
+              console.log('D',minimumFieldSelections);
             }
           });
         });
