@@ -1237,7 +1237,7 @@ var indicatorDataStore = function(dataUrl) {
   };
 
   this.getData = function(options) {
-    console.log('Options',options)
+
     // field: 'Grade'
     // values: ['A', 'B']
     var options = _.defaults(options || {}, {
@@ -1307,7 +1307,7 @@ var indicatorDataStore = function(dataUrl) {
         }
       },
       //---#13 noLineForTargets---stop--------------------------------------------------------------------------------------------------
-
+      console.log("x:",this.indicatorId)
       //--#14 mixedCharts---start-------------------------------------------------------------------------------------------------------
       barCharts = [//translations.t('a) time series')+", "+translations.t('calculated annual values'),
                   //translations.t('a) time series')+", "+translations.t('air pollutants overall'),
