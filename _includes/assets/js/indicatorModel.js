@@ -460,7 +460,7 @@ var indicatorModel = function (options) {
         }
       },
       //---#13 noLineForTargets---stop--------------------------------------------------------------------------------------------------
-      console.log("x:",this.indicatorId),
+
       //--#14 mixedCharts---start-------------------------------------------------------------------------------------------------------
       //barCharts = [//translations.t('a) time series')+", "+translations.t('calculated annual values'),
                   //translations.t('a) time series')+", "+translations.t('air pollutants overall'),
@@ -486,7 +486,7 @@ var indicatorModel = function (options) {
       barCharts = ['indicator_5-1-c', 'indicator_11-2-c'];
 
       getChartStyle = function (indicatorId) {
-        console.log("y:",indicatorId)
+
         if (barCharts.indexOf(indicatorId) != -1) {
           return 'bar';
         }
