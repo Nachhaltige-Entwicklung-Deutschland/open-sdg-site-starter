@@ -1,23 +1,50 @@
 ---
-title: Guidance
+title: Technische Hinweise
 permalink: /guidance/
 layout: page
 ---
 
-This page shares information for people using this website and for countries or localities wishing to take a copy of it.
+## Nationale Berichtsplattform zu den Indikatoren der Deutschen Nachhaltigkeitsstrategie
 
-## The platform
+Die Nationale Berichtsplattform ist ein öffentlich zugängliches Instrument zur Verbreitung und Präsentation von Indikatoren der Nachhaltigkeitsstrategie für Deutschland.
 
-This site is built and hosted using an open-source platform with 100% free software and services. For detailed documentation on the underlying platform, including information for developers, data providers, and policy makers, see [here](https://open-sdg.readthedocs.io).
+### Unsere Herangehensweise
 
-## Using this website
+Die Berichtsplattform
+- wird von den nationalen statistischen Ämtern verwaltet;
+- enthält offizielle Statistiken und Metadaten nach bewährter Standardmethodik;
+- ist öffentlich zugänglich;
+- ermöglicht Rückmeldungen von Datennutzern;
+- wird mit Open-Source (kostenlosen) Technologien betrieben.
 
-Answers to some specific questions about the website are included in our [Frequently Asked Questions]({{ site.baseurl }}/faq/) page.
 
-The platform documentation includes information for people adding [data](https://open-sdg.readthedocs.io/en/latest/data-format/) and [metadata](https://open-sdg.readthedocs.io/en/latest/metadata-format/).
+### Quellen
 
-## Creating a copy of this website
+Das Statistische Bundesamt (Destatis) unterstützt aktiv die Entwicklung nationaler Berichtsplattformen, insbesondere als Open-Source Lösung. Vorreiter in diesem Bereich sind die USA und Großbritannien. Sie haben Plattformen entwickelt, um die Indikatoren für die SDGs (Sustainable Development Goals) der Vereinten Nationen darzustellen.
 
-Other countries or localities wishing to implement a version of this platform are welcome to do so for free.
+Eine universelle Version des von den USA, Großbritannien und dem Center for Open Data Enterprise entwickelten Codes für eine Berichtsplattform für SDGs ist verfügbar. Auf diesem basiert die Berichtsplattform für die Indikatoren der Deutschen Nachhaltigkeitsstrategie. Wir empfehlen Ihnen, sich mit den SDG-Plattformen in den USA und in Großbritannien sowie mit der entsprechenden [Open SDG-Projektdokumentation](https://open-sdg.readthedocs.io/en/latest/) vertraut zu machen. Diese enthält technische Anweisungen, wie eine Kopie der Open SDG-Plattform erstellt werden kann.
 
-The platform documentation includes [technical information and instructions for developers](https://open-sdg.readthedocs.io/en/latest/quick-start/).
+- [SDG-Berichtsplattform USA](https://sdg.data.gov/)
+
+- [SDG-Berichtsplattform GB](https://sustainabledevelopment-uk.github.io)
+
+Der Projektcode für diese Plattform ist im folgenden [GitHub Repository](https://github.com/sustainabledevelopment-deutschland/sustainabledevelopment-deutschland.github.io) öffentlich zugänglich.
+
+Wenn Sie Kommentare oder Feedback zum Open SDG-Projekt haben oder an der Open SDG-Community teilnehmen möchten, wenden Sie sich an [Open SDG GitHub](https://github.com/open-sdg/open-sdg/issues).
+
+### Genutzte Software
+
+#### Back-end IT-Anforderungen:
+- GitHub: Hosting der Website, die für die Programmierung von Projekten mit dem Git-Versionskontrollsystem entwickelt wurde.
+- Jekyll: Generator für statische Seiten, die in Ruby geschrieben wurden.
+
+#### Front-end IT-Anforderungen:
+- XHTML, CSS, JavaScript
+- Chartist: JavaScript Bibliothek
+- Bootstrap: framework CSS
+
+### Aktuelle Darstellung
+
+Aufgrund von technischen Schwierigkeiten finden sich auf der aktuellen Version der Berichtsplattform einige mangelhafte Darstellungen, auf die an dieser Stelle hingewiesen wird:
+- Ganze Zahlen werden ohne Nachkommastelle dargestellt (auch in Zeitreihen, in denen andere Zahlenwerte mit Nachkommastelle vorhanden sind).
+- Sehr lange Zeitreihenbezeichnungen werden in den Achsenbeschriftungen der Grafiken nicht in mehrere Zeilen umgebrochen und z.T. abgeschnitten.
