@@ -1417,7 +1417,7 @@ var indicatorDataStore = function(dataUrl) {
             //type: getChartStyle(combinationDescription),
             //--#14 mixedCharts---stop-------------------------------------------------
             //--#14.1 barsOnly---start------------------------------------------------
-            type: getChartStyle(this.indicatorId),
+            type: getChartStyle(that.indicatorId),
             //--#14.1 barsOnly---stop-------------------------------------------------
             borderWidth: combinationDescription ? 2 : 4
           }, that.datasetObject);
