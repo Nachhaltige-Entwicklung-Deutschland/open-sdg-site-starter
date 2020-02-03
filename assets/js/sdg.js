@@ -1309,7 +1309,7 @@ var indicatorDataStore = function(dataUrl) {
       //---#13 noLineForTargets---stop--------------------------------------------------------------------------------------------------
       console.log("x:",this.indicatorId)
       //--#14 mixedCharts---start-------------------------------------------------------------------------------------------------------
-      barCharts = [//translations.t('a) time series')+", "+translations.t('calculated annual values'),
+      //barCharts = [//translations.t('a) time series')+", "+translations.t('calculated annual values'),
                   //translations.t('a) time series')+", "+translations.t('air pollutants overall'),
                   //translations.t('b) target (max)')+", "+translations.t('air pollutants overall'),
                   //translations.t('a) time series')+", "+translations.t('funding balance (share of gross domestic product (at current prices) in %)'),
@@ -1317,18 +1317,30 @@ var indicatorDataStore = function(dataUrl) {
                   //translations.t('a) time series')+", "+translations.t('proportion of msy examined in all managed stocks'),
                   //translations.t('a) time series')+", "+translations.t('index overall'),
                   //translations.t('b) target (min)')+", "+translations.t('index overall')
-                  translations.t('a) time series'),
-                  translations.t('b) target (min)')
-                ]
-      getChartStyle = function (combinationDescription) {
-        if (barCharts.indexOf(String(combinationDescription)) != -1) {
+
+                //]
+      //getChartStyle = function (combinationDescription) {
+        //if (barCharts.indexOf(String(combinationDescription)) != -1) {
+          //return 'bar';
+        //}
+        //else {
+          //return 'line';
+        //}
+      //},
+      //--#14 mixedCharts---stop--------------------------------------------------------------------------------------------------------
+
+      //--#14.1 barsOnlx---start--------------------------------------------------------------------------------------------------------
+      barCharts = ['indicator_5-1-c', 'indicator_11-2-c'];
+
+      getChartStyle = function (indicatorId) {
+        if (barCharts.indexOf(indicatorId) != -1) {
           return 'bar';
         }
         else {
           return 'line';
         }
       },
-      //--#14 mixedCharts---stop--------------------------------------------------------------------------------------------------------
+
 
       getBorderDash = function(datasetIndex) {
         // offset if there is no headline data:
@@ -1401,8 +1413,11 @@ var indicatorDataStore = function(dataUrl) {
               return found ? found.Value : null;
             }),
             //--#14 mixedCharts---start------------------------------------------------
-            type: getChartStyle(combinationDescription),
+            //type: getChartStyle(combinationDescription),
             //--#14 mixedCharts---stop-------------------------------------------------
+            //--#14.1 barsOnly---start------------------------------------------------
+            type: getChartStyle(this.indicatorId),
+            //--#14.1 barsOnly---stop-------------------------------------------------
             borderWidth: combinationDescription ? 2 : 4
           }, that.datasetObject);
 
