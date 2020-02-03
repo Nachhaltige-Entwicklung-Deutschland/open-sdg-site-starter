@@ -1,5 +1,5 @@
 ---
-title: Über uns
+title: Über diese Plattform
 permalink: /about/
 layout: page
 ---
