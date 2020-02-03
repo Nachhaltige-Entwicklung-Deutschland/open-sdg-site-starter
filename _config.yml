@@ -93,7 +93,7 @@ menu:
   - path: /
     translation_key: general.goals
   - path: /about/
-    translation_key: menu.about
+    translation_key: menu.about_this_site
   - path: /guidance
     translation_key: menu.guidance
   - path: /status_summary
