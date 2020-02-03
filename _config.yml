@@ -92,14 +92,15 @@ menu:
   # Use these to customise the main navigation.
   - path: /
     translation_key: general.goals
-  - path: /about/
-    translation_key: menu.about_this_site
-  - path: /guidance
-    translation_key: menu.guidance
   - path: /status_summary
     translation_key: menu.status_summary
   - path: /status
     translation_key: menu.status
+  - path: /about/
+    translation_key: menu.about_this_site
+  - path: /guidance
+    translation_key: menu.guidance
+
 
 # Configure the text (or "translation key") to be used on the
 # non-global metadata tab.
