@@ -1620,16 +1620,14 @@ var indicatorDataStore = function(dataUrl) {
         // Match up each field value with a field.
         console.log('A',this.fieldItemStates);
         _.each(this.fieldItemStates, function(fieldItem) {
+          minimumFieldSelections[fieldItem.field] = [];
           console.log('B',fieldItem);
           _.each(fieldItem.values, function(fieldValue) {
             console.log('C',fieldValue);
             if (_.contains(valuesToLookFor, fieldValue.value)) {
-              if (minimumFieldSelections.length == 0 || minimumFieldSelections[fieldItem.field] == 'undefined'){
-                minimumFieldSelections[fieldItem.field] = [fieldValue.value];
-              }
-              else {
+
                 minimumFieldSelections[fieldItem.field].push(fieldValue.value);
-              }
+
 
               console.log('D',minimumFieldSelections);
             }
