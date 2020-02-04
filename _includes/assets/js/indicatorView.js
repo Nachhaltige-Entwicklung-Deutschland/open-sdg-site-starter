@@ -102,14 +102,14 @@ var indicatorView = function (model, options) {
         var fieldValue = args.minimumFieldSelections[fieldToSelect];
         //--#21 allowMultipleStartValues---start------------------------------
         //setTimeout(getClickFunction(fieldToSelect, fieldValue), 500);
-        if (_.size(args.minimumFieldSelections) > 1){
-          console.log('M: ',args.minimumFieldSelections, _.size(args.minimumFieldSelections), args.minimumFieldSelections[fieldToSelect], typeof args.minimumFieldSelections[fieldToSelect]);
+        if (typeof args.minimumFieldSelections[fieldToSelect] == 'object'){
+          console.log('M: ',args.minimumFieldSelections, args.minimumFieldSelections[fieldToSelect], typeof args.minimumFieldSelections[fieldToSelect]);
           _.each(fieldValue, function(multiValue){
             setTimeout(getClickFunction(fieldToSelect, multiValue), 500);
           });
         }
         else {
-          console.log('S: ',args.minimumFieldSelections, _.size(args.minimumFieldSelections), typeof args.minimumFieldSelections[fieldToSelect]);
+          console.log('S: ',args.minimumFieldSelections, args.minimumFieldSelections[fieldToSelect], typeof args.minimumFieldSelections[fieldToSelect]);
           setTimeout(getClickFunction(fieldToSelect, fieldValue), 500);
         }
         //--#21 allowMultipleStartValues---stop------------------------------
