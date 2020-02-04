@@ -1823,7 +1823,7 @@ var indicatorView = function (model, options) {
         //--#21 allowMultipleStartValues---start------------------------------
         //setTimeout(getClickFunction(fieldToSelect, fieldValue), 500);
         if (_.size(args.minimumFieldSelections) > 1){
-          console.log('M: ',args.minimumFieldSelections, _.size(args.minimumFieldSelections));
+          console.log('M: ',args.minimumFieldSelections, _.size(args.minimumFieldSelections), args.minimumFieldSelections[fieldToSelect], args.minimumFieldSelections[fieldToSelect][0]);
           _.each(fieldValue, function(multiValue){
             setTimeout(getClickFunction(fieldToSelect, multiValue), 500);
           });
