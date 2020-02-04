@@ -1617,23 +1617,20 @@ var indicatorDataStore = function(dataUrl) {
         // with disaggregation categories. The value, at this point, is a string
         // which we assume to be pipe-delimited.
         var valuesToLookFor = this.startValues.split('|');
-        console.log('V', valuesToLookFor);
+
         // Match up each field value with a field.
-        console.log('A',this.fieldItemStates);
+        //console.log('A',this.fieldItemStates);
         _.each(this.fieldItemStates, function(fieldItem) {
           minimumFieldSelections[fieldItem.field] = [];
-          console.log('B',fieldItem);
+          //console.log('B',fieldItem);
           _.each(fieldItem.values, function(fieldValue) {
-            console.log('C',fieldValue);
+            //console.log('C',fieldValue);
             if (_.contains(valuesToLookFor, fieldValue.value)) {
-
                 minimumFieldSelections[fieldItem.field].push(fieldValue.value);
-
-
-              console.log('D',minimumFieldSelections);
             }
           });
         });
+        console.log('D',minimumFieldSelections);
       }
       if (_.size(minimumFieldSelections) == 0) {
         // If we did not have any pre-configured start values, we calculate them.
@@ -1817,11 +1814,12 @@ var indicatorView = function (model, options) {
             .click();
         }
       }
+      console.log('A',args.minimumFieldSelections);
       for (var fieldToSelect in args.minimumFieldSelections) {
         var fieldValue = args.minimumFieldSelections[fieldToSelect];
-        console.log('E',fieldToSelect,'  ',fieldValue);
+        console.log('B',fieldToSelect,'  ',fieldValue);
         for (var fieldValueNumber in fieldValue){
-          console.log('F',fieldValueNumber);
+          console.log('C',fieldValueNumber);
           setTimeout(getClickFunction(fieldToSelect, fieldValueNumber), 500);
         }
         //setTimeout(getClickFunction(fieldToSelect, fieldValue), 500);
