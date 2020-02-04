@@ -1833,7 +1833,7 @@ var indicatorView = function (model, options) {
           setTimeout(getClickFunction(fieldToSelect, fieldValue), 500);
         }
         //--#21 allowMultipleStartValues---stop------------------------------
-        //setTimeout(getClickFunction(fieldToSelect, fieldValue), 500);
+        
       }
     }
     else {
