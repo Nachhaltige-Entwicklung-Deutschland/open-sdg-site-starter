@@ -1624,11 +1624,11 @@ var indicatorDataStore = function(dataUrl) {
           _.each(fieldItem.values, function(fieldValue) {
             console.log('C',fieldValue);
             if (_.contains(valuesToLookFor, fieldValue.value)) {
-              if (minimumFieldSelections.length == 0){
-                minimumFieldSelections[fieldItem.field] = fieldValue.value;
+              if (minimumFieldSelections.length == 0 or minimumFieldSelections[fieldItem.field] == 'undefined'){
+                minimumFieldSelections[fieldItem.field] = [fieldValue.value];
               }
               else {
-                minimumFieldSelections[fieldItem.field] += ('","' + fieldValue.value);
+                minimumFieldSelections[fieldItem.field].push(fieldValue.value);
               }
 
               console.log('D',minimumFieldSelections);
