@@ -1624,7 +1624,7 @@ var indicatorDataStore = function(dataUrl) {
           _.each(fieldItem.values, function(fieldValue) {
             console.log('C',fieldValue);
             if (_.contains(valuesToLookFor, fieldValue.value)) {
-              if (minimumFieldSelections.length == 0 or minimumFieldSelections[fieldItem.field] == 'undefined'){
+              if (minimumFieldSelections.length == 0 || minimumFieldSelections[fieldItem.field] == 'undefined'){
                 minimumFieldSelections[fieldItem.field] = [fieldValue.value];
               }
               else {
