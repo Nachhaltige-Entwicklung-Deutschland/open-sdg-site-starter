@@ -774,18 +774,21 @@ var indicatorModel = function (options) {
         var valuesToLookFor = this.startValues.split('|');
 
         // Match up each field value with a field.
-        //console.log('A',this.fieldItemStates);
         _.each(this.fieldItemStates, function(fieldItem) {
+          //--#21 allowMultipleStartValues---start-----------------------------
           minimumFieldSelections[fieldItem.field] = [];
-          //console.log('B',fieldItem);
+          //--#21 allowMultipleStartValues---stop------------------------------
           _.each(fieldItem.values, function(fieldValue) {
             //console.log('C',fieldValue);
             if (_.contains(valuesToLookFor, fieldValue.value)) {
-                minimumFieldSelections[fieldItem.field].push(fieldValue.value);
+              //--#21 allowMultipleStartValues---start-----------------------------
+              //minimumFieldSelections[fieldItem.field] = fieldValue.value;
+              minimumFieldSelections[fieldItem.field].push(fieldValue.value);
+              //--#21 allowMultipleStartValues---stop------------------------------
             }
           });
         });
-        console.log('D',minimumFieldSelections);
+
       }
       if (_.size(minimumFieldSelections) == 0) {
         // If we did not have any pre-configured start values, we calculate them.
