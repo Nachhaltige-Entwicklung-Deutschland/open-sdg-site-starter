@@ -1819,7 +1819,8 @@ var indicatorView = function (model, options) {
         var fieldValue = args.minimumFieldSelections[fieldToSelect];
         console.log('B',fieldToSelect,'  ',fieldValue);
         _.each(fieldValue, function(multiValue){
-          console.log(multiValue);
+          console.log('C',multiValue);
+          setTimeout(getClickFunction(fieldToSelect, multiValue), 500);
         });
         //for (var fieldValueNumber = 0; fieldValue.length-1; fieldValueNumber++){
           //console.log('C',fieldValue[fieldValueNumber]);
