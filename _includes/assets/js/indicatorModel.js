@@ -785,6 +785,7 @@ var indicatorModel = function (options) {
           });
         });
       }
+      
       if (_.size(minimumFieldSelections) == 0) {
         // If we did not have any pre-configured start values, we calculate them.
         // We have to decide what filters will be selected, and in some cases it
