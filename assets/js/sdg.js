@@ -1814,6 +1814,7 @@ var indicatorView = function (model, options) {
             .click();
         }
       }
+      
       console.log('A',args.minimumFieldSelections);
       for (var fieldToSelect in args.minimumFieldSelections) {
         var fieldValue = args.minimumFieldSelections[fieldToSelect];
