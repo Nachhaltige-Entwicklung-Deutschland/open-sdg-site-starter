@@ -100,6 +100,8 @@ menu:
     translation_key: menu.about_this_site
   - path: /guidance
     translation_key: menu.guidance
+  - path: /agenda
+    translation_key: menu.agenda
 
 
 # Configure the text (or "translation key") to be used on the
