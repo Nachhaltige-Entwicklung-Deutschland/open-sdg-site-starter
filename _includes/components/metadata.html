@@ -9,7 +9,8 @@
 
 
     {% if indicator_metadata.name contains "history_target_" %}
-      {% assign tableHeight = meta[indicator_metadata.name] %}
+      {% assign key =  indicator_metadata.name | append: "_height" %}
+      {% assign tableHeight = meta[key] %}
     {% endif %}
 
 
