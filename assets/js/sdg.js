@@ -1819,7 +1819,10 @@ var indicatorView = function (model, options) {
       }
       for (var fieldToSelect in args.minimumFieldSelections) {
         var fieldValue = args.minimumFieldSelections[fieldToSelect];
-        setTimeout(getClickFunction(fieldToSelect, fieldValue), 500);
+        for (var fieldValueNumber in fieldValue){
+          setTimeout(getClickFunction(fieldToSelect, fieldValueNumber), 500);
+        }
+        //setTimeout(getClickFunction(fieldToSelect, fieldValue), 500);
       }
     }
     else {
@@ -1862,7 +1865,7 @@ var indicatorView = function (model, options) {
       //---#1 GoalDependendMapColor---stop---------------------------
       view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr, args.title, args.measurementUnit); //---#2.2 footerUnitInMapLegend
       //---#2 TimeSeriesNameDisplayedInMaps---stop------------------
-      
+
     }
   });
 
