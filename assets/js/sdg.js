@@ -1619,18 +1619,21 @@ var indicatorDataStore = function(dataUrl) {
         var valuesToLookFor = this.startValues.split('|');
 
         // Match up each field value with a field.
-        //console.log('A',this.fieldItemStates);
         _.each(this.fieldItemStates, function(fieldItem) {
+          //--#21 allowMultipleStartValues---start-----------------------------
           minimumFieldSelections[fieldItem.field] = [];
-          //console.log('B',fieldItem);
+          //--#21 allowMultipleStartValues---stop------------------------------
           _.each(fieldItem.values, function(fieldValue) {
             //console.log('C',fieldValue);
             if (_.contains(valuesToLookFor, fieldValue.value)) {
-                minimumFieldSelections[fieldItem.field].push(fieldValue.value);
+              //--#21 allowMultipleStartValues---start-----------------------------
+              //minimumFieldSelections[fieldItem.field] = fieldValue.value;
+              minimumFieldSelections[fieldItem.field].push(fieldValue.value);
+              //--#21 allowMultipleStartValues---stop------------------------------
             }
           });
         });
-        console.log('D',minimumFieldSelections);
+
       }
       if (_.size(minimumFieldSelections) == 0) {
         // If we did not have any pre-configured start values, we calculate them.
@@ -1814,20 +1817,16 @@ var indicatorView = function (model, options) {
             .click();
         }
       }
-      
-      console.log('A',args.minimumFieldSelections);
+
       for (var fieldToSelect in args.minimumFieldSelections) {
         var fieldValue = args.minimumFieldSelections[fieldToSelect];
-        console.log('B',fieldToSelect,'  ',fieldValue);
+        //--#21 allowMultipleStartValues---start------------------------------
+        //setTimeout(getClickFunction(fieldToSelect, fieldValue), 500);
         _.each(fieldValue, function(multiValue){
-          console.log('C',multiValue);
           setTimeout(getClickFunction(fieldToSelect, multiValue), 500);
         });
-        //for (var fieldValueNumber = 0; fieldValue.length-1; fieldValueNumber++){
-          //console.log('C',fieldValue[fieldValueNumber]);
-          //setTimeout(getClickFunction(fieldToSelect, fieldValue[fieldValueNumber]), 500);
-        //}
-        setTimeout(getClickFunction(fieldToSelect, fieldValue), 500);
+        //--#21 allowMultipleStartValues---stop------------------------------
+        //setTimeout(getClickFunction(fieldToSelect, fieldValue), 500);
       }
     }
     else {
