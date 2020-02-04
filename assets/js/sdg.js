@@ -1624,12 +1624,19 @@ var indicatorDataStore = function(dataUrl) {
           _.each(fieldItem.values, function(fieldValue) {
             console.log('C',fieldValue);
             if (_.contains(valuesToLookFor, fieldValue.value)) {
-              minimumFieldSelections[fieldItem.field] += fieldValue.value;
+              if (minimumFieldSelections.length == 0){
+                minimumFieldSelections[fieldItem.field] = fieldValue.value;
+              }
+              else {
+                minimumFieldSelections[fieldItem.field] += ('","' + fieldValue.value);
+              }
+
               console.log('D',minimumFieldSelections);
             }
           });
         });
       }
+
       if (_.size(minimumFieldSelections) == 0) {
         // If we did not have any pre-configured start values, we calculate them.
         // We have to decide what filters will be selected, and in some cases it
