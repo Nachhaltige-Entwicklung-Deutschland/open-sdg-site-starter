@@ -1617,6 +1617,7 @@ var indicatorDataStore = function(dataUrl) {
         // with disaggregation categories. The value, at this point, is a string
         // which we assume to be pipe-delimited.
         var valuesToLookFor = this.startValues.split('|');
+        console.log('V', valuesToLookFor);
         // Match up each field value with a field.
         console.log('A',this.fieldItemStates);
         _.each(this.fieldItemStates, function(fieldItem) {
