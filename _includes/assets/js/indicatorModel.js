@@ -477,7 +477,7 @@ var indicatorModel = function (options) {
 
 
 
-      getBackground = function (combinationDescription) {
+      getBackground = function (combinationDescription, datasetIndexMod) {
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
 
           return '#ffffff';
@@ -583,7 +583,7 @@ var indicatorModel = function (options) {
             //---#4 sameColorForTargetAndTimeSeries---start-----------------
             //backgroundColor: '#' + getColor(datasetIndex),
             //backgroundColor: '#' + getColor(datasetIndexMod),
-            backgroundColor: getBackground(combinationDescription),
+            backgroundColor: getBackground(combinationDescription,datasetIndexMod),
             //---#4 sameColorForTargetAndTimeSeries---stop------------------
             //---#11 setTargetPointstyle---start---------------------------------------
             pointStyle: getPointStyle(combinationDescription),
