@@ -1298,10 +1298,10 @@ var indicatorDataStore = function(dataUrl) {
       //-Since showLines does not work we set the opacity to 0.0 if it is a target------------------------------------------------------
       getLineStyle = function (combinationDescription, datasetIndexMod) {
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
-          return 'rgba(0, 0, 0, 0.0)';
+          return false;
         }
         else{
-          return '#' + getColor(datasetIndexMod);
+          return true;
         }
       },
       //---#13 noLineForTargets---stop--------------------------------------------------------------------------------------------------
@@ -1417,9 +1417,9 @@ var indicatorDataStore = function(dataUrl) {
 
             label: combinationDescription ? combinationDescription : that.country,
             //---#13 noLineForTargets---start-------------------------------
-            borderColor: '#' + getColor(datasetIndex),
+            borderColor: '#' + getColor(datasetIndexMod),
             //borderColor: getLineStyle(combinationDescription, datasetIndexMod),
-            showLine: false,
+            showLine: getLineStyle(combinationDescription, datasetIndexMod),
             //---#13 noLineForTargets---stop--------------------------------
             //---#4 sameColorForTargetAndTimeSeries---start-----------------
             //backgroundColor: '#' + getColor(datasetIndex),
