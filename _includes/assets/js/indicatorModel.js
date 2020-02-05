@@ -496,31 +496,7 @@ var indicatorModel = function (options) {
       },
       //--#14.1 barsOnly---stop--------------------------------------------------------------------------------------------------------
 
-      //--#22 dashedBars---start-----------------------------
-      getBackground = function(datasetIndex) {
-        var color = getBackgroundColor(datasetIndex);
-        // offset if there is no headline data:
-        if(!this.hasHeadline) {
-          datasetIndex += 1;
-        }
 
-        if (datasetIndex > colors.length) {
-          color = getBackgroundPattern(color);
-        }
-        return color;
-      },
-
-      getBackgroundColor = function(datasetIndex) {
-        return '#' + getColor(datasetIndex);
-      },
-
-      getBackgroundPattern = function(color) {
-        if (window.pattern && typeof window.pattern.draw === 'function') {
-          return window.pattern.draw('diagonal', color);
-        }
-        return color;
-      },
-      //--#22 dashedBars---stop------------------------------
 
       getBorderDash = function(datasetIndex) {
         // offset if there is no headline data:
@@ -576,18 +552,10 @@ var indicatorModel = function (options) {
             //borderColor: '#' + getColor(datasetIndex),
             borderColor: getLineStyle(combinationDescription, datasetIndexMod),
             //---#13 noLineForTargets---stop--------------------------------
-
             //---#4 sameColorForTargetAndTimeSeries---start-----------------
             //backgroundColor: '#' + getColor(datasetIndex),
-            //backgroundColor: '#' + getColor(datasetIndexMod),   <--Part of #4 removed by #22
-
-            //---#22dashedBars---start-----------------------------
-            backgroundColor: getBackground(datasetIndexMod),
-            //---#22dashedBars---stop------------------------------
-
+            backgroundColor: '#' + getColor(datasetIndexMod),
             //---#4 sameColorForTargetAndTimeSeries---stop------------------
-
-
             //---#11 setTargetPointstyle---start---------------------------------------
             pointStyle: getPointStyle(combinationDescription),
             //---#11 setTargetPointstyle---stop----------------------------------------
