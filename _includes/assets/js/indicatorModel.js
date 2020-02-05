@@ -572,8 +572,9 @@ var indicatorModel = function (options) {
 
             label: combinationDescription ? combinationDescription : that.country,
             //---#13 noLineForTargets---start-------------------------------
-            //borderColor: '#' + getColor(datasetIndex),
-            borderColor: getLineStyle(combinationDescription, datasetIndexMod),
+            borderColor: '#' + getColor(datasetIndex),
+            //borderColor: getLineStyle(combinationDescription, datasetIndexMod),
+            showLine: false,
             //---#13 noLineForTargets---stop--------------------------------
             //---#4 sameColorForTargetAndTimeSeries---start-----------------
             //backgroundColor: '#' + getColor(datasetIndex),
