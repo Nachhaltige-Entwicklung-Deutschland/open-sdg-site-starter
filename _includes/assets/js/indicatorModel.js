@@ -453,10 +453,10 @@ var indicatorModel = function (options) {
       //-Since showLines does not work we set the opacity to 0.0 if it is a target------------------------------------------------------
       getLineStyle = function (combinationDescription, datasetIndexMod) {
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
-          return false,//'rgba(0, 0, 0, 0.0)';
+          return false;//'rgba(0, 0, 0, 0.0)';
         }
         else{
-          return true//'#' + getColor(datasetIndexMod);
+          return true;//'#' + getColor(datasetIndexMod);
         }
       },
       //---#13 noLineForTargets---stop--------------------------------------------------------------------------------------------------
