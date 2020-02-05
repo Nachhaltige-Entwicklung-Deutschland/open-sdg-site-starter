@@ -466,18 +466,12 @@ var indicatorModel = function (options) {
       //-Since showLines does not work we set the opacity to 0.0 if it is a target------------------------------------------------------
 
 
-      getBackgroundPattern = function(color) {
-        if (window.pattern && typeof window.pattern.draw === 'function') {
-          return window.pattern.draw('diagonal', color);
-        }
-        return color;
-      },
 
 
-      getBackground = function (combinationDescription, datasetIndexMod) {
+      getBackground = function (combinationDescription) {
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
-          clr = getBackgroundPattern('#' + getColor(datasetIndexMod));
-          return clr;
+
+          return '#ffffff';
         }
         else{
           return '#' + getColor(datasetIndexMod);
@@ -579,8 +573,8 @@ var indicatorModel = function (options) {
             //---#13 noLineForTargets---stop--------------------------------
             //---#4 sameColorForTargetAndTimeSeries---start-----------------
             //backgroundColor: '#' + getColor(datasetIndex),
-            backgroundColor: '#' + getColor(datasetIndexMod),
-            //backgroundColor: getBackground(combinationDescription, datasetIndexMod),
+            //backgroundColor: '#' + getColor(datasetIndexMod),
+            backgroundColor: getBackground(combinationDescription),
             //---#4 sameColorForTargetAndTimeSeries---stop------------------
             //---#11 setTargetPointstyle---start---------------------------------------
             pointStyle: getPointStyle(combinationDescription),
