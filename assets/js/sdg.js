@@ -1301,11 +1301,11 @@ var indicatorDataStore = function(dataUrl) {
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
           if (data.length == 1){
             console.log('a',combinationDescription)
-            return false;
+            return true;
           }
           else{
             console.log('b',combinationDescription)
-            return true;
+            return false;
           }
           //return true;//'rgba(0, 0, 0, 0.0)';
         }
@@ -2264,7 +2264,6 @@ var indicatorView = function (model, options) {
               text.push(indent);
               // ^^^^ #18.4 ^^^^----------------------------------------------------
 
-              console.log('x', dataset)
               //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
               //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
               if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
