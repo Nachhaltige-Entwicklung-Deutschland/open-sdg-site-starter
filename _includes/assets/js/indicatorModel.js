@@ -574,12 +574,12 @@ var indicatorModel = function (options) {
             //---#13 noLineForTargets---start-------------------------------
             borderColor: '#' + getColor(datasetIndexMod),
             //borderColor: getLineStyle(combinationDescription, datasetIndexMod),
-            showLine: getLineStyle(combinationDescription, datasetIndexMod),
+            //showLine: getLineStyle(combinationDescription, datasetIndexMod),
             //---#13 noLineForTargets---stop--------------------------------
             //---#4 sameColorForTargetAndTimeSeries---start-----------------
             //backgroundColor: '#' + getColor(datasetIndex),
-            //backgroundColor: '#' + getColor(datasetIndexMod),
-            backgroundColor: getBackground(combinationDescription, datasetIndexMod),
+            backgroundColor: '#' + getColor(datasetIndexMod),
+            //backgroundColor: getBackground(combinationDescription, datasetIndexMod),
             //---#4 sameColorForTargetAndTimeSeries---stop------------------
             //---#11 setTargetPointstyle---start---------------------------------------
             pointStyle: getPointStyle(combinationDescription),
