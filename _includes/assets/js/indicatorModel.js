@@ -461,6 +461,18 @@ var indicatorModel = function (options) {
       },
       //---#13 noLineForTargets---stop--------------------------------------------------------------------------------------------------
 
+      //---#22 xxx---start-------------------------------------------------------------------------------------------------
+      //-Since showLines does not work we set the opacity to 0.0 if it is a target------------------------------------------------------
+      getBackground = function (combinationDescription, datasetIndexMod) {
+        if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
+          return '#ffffff';
+        }
+        else{
+          return '#' + getColor(datasetIndexMod);
+        }
+      },
+      //---#22 xxx---stop--------------------------------------------------------------------------------------------------
+
       //--#14 mixedCharts---start-------------------------------------------------------------------------------------------------------
       //barCharts = [//translations.t('a) time series')+", "+translations.t('calculated annual values'),
                   //translations.t('a) time series')+", "+translations.t('air pollutants overall'),
@@ -554,7 +566,8 @@ var indicatorModel = function (options) {
             //---#13 noLineForTargets---stop--------------------------------
             //---#4 sameColorForTargetAndTimeSeries---start-----------------
             //backgroundColor: '#' + getColor(datasetIndex),
-            backgroundColor: '#' + getColor(datasetIndexMod),
+            //backgroundColor: '#' + getColor(datasetIndexMod),
+            backgroundColor: getBackground(combinationDescription, datasetIndexMod),
             //---#4 sameColorForTargetAndTimeSeries---stop------------------
             //---#11 setTargetPointstyle---start---------------------------------------
             pointStyle: getPointStyle(combinationDescription),
