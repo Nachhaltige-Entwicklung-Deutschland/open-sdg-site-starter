@@ -1341,31 +1341,7 @@ var indicatorDataStore = function(dataUrl) {
       },
       //--#14.1 barsOnly---stop--------------------------------------------------------------------------------------------------------
 
-      //--#22 dashedBars---start-----------------------------
-      getBackground = function(datasetIndex) {
-        var color = getBackgroundColor(datasetIndex);
-        // offset if there is no headline data:
-        if(!this.hasHeadline) {
-          datasetIndex += 1;
-        }
 
-        if (datasetIndex > colors.length) {
-          color = getBackgroundPattern(color);
-        }
-        return color;
-      },
-
-      getBackgroundColor = function(datasetIndex) {
-        return '#' + getColor(datasetIndex);
-      },
-
-      getBackgroundPattern = function(color) {
-        if (window.pattern && typeof window.pattern.draw === 'function') {
-          return window.pattern.draw('diagonal', color);
-        }
-        return color;
-      },
-      //--#22 dashedBars---stop------------------------------
 
       getBorderDash = function(datasetIndex) {
         // offset if there is no headline data:
@@ -1421,18 +1397,10 @@ var indicatorDataStore = function(dataUrl) {
             //borderColor: '#' + getColor(datasetIndex),
             borderColor: getLineStyle(combinationDescription, datasetIndexMod),
             //---#13 noLineForTargets---stop--------------------------------
-
             //---#4 sameColorForTargetAndTimeSeries---start-----------------
             //backgroundColor: '#' + getColor(datasetIndex),
-            //backgroundColor: '#' + getColor(datasetIndexMod),   <--Part of #4 removed by #22
-
-            //---#22dashedBars---start-----------------------------
-            backgroundColor: getBackground(datasetIndexMod),
-            //---#22dashedBars---stop------------------------------
-
+            backgroundColor: '#' + getColor(datasetIndexMod),
             //---#4 sameColorForTargetAndTimeSeries---stop------------------
-
-
             //---#11 setTargetPointstyle---start---------------------------------------
             pointStyle: getPointStyle(combinationDescription),
             //---#11 setTargetPointstyle---stop----------------------------------------
@@ -2193,7 +2161,7 @@ var indicatorView = function (model, options) {
             //vvv #18.1 vvvv sort the dataset by substring if it contains "target" or "timeseries"
             var temp = [];
             _.each(chart.data.datasets, function(dataset, datasetIndex) {
-              temp.push({label: dataset.label, borderDash: dataset.borderDash, backgroundColor: dataset.borderColor, datasetIndex: datasetIndex, type: dataset.type});
+              temp.push({label: dataset.label, borderDash: dataset.borderDash, backgroundColor: dataset.backgroundColor, datasetIndex: datasetIndex, type: dataset.type});
             });
             var replaceForOrder = [{old: 'Insgesamt', new:'AAA'},
                                   {old: 'Total', new: 'AAA'},
@@ -2270,18 +2238,16 @@ var indicatorView = function (model, options) {
 
               //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
               //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
-              //---#22dashedBars: in the following lines replace dataset.backgroundColor by dataset.borderColor
-
               if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
-                text.push('<span class="swatchTgt' + '" style="border-color: ' + dataset.borderColor + '"></span>');
+                text.push('<span class="swatchTgt' + '" style="border-color: ' + dataset.backgroundColor + '"></span>');
               }
               else if (dataset.type != 'bar'){
-                text.push('<span class="swatchLine' + (dataset.borderDash ? ' dashed' : '') + ' left" style="background-color: ' + dataset.borderColor + '"></span>');
-                text.push('<span class="swatchTsr' + (dataset.borderDash ? ' dashed' : '') + '" style="border-color: ' + dataset.borderColor + '"></span>');
-                text.push('<span class="swatchLine' + (dataset.borderDash ? ' dashed' : '') + ' right" style="background-color: ' + dataset.borderColor + '"></span>');
+                text.push('<span class="swatchLine' + (dataset.borderDash ? ' dashed' : '') + ' left" style="background-color: ' + dataset.backgroundColor + '"></span>');
+                text.push('<span class="swatchTsr' + (dataset.borderDash ? ' dashed' : '') + '" style="border-color: ' + dataset.backgroundColor + '"></span>');
+                text.push('<span class="swatchLine' + (dataset.borderDash ? ' dashed' : '') + ' right" style="background-color: ' + dataset.backgroundColor + '"></span>');
               }
               else{
-                text.push('<span class="swatchBar' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.borderColor + '"></span>');
+                text.push('<span class="swatchBar' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '"></span>');
               }
               //---#3 targetDifferentInLegend---stop-----------------------------------------------------------------------------------------------------------------------------
 
