@@ -453,10 +453,10 @@ var indicatorModel = function (options) {
       //-Since showLines does not work we set the opacity to 0.0 if it is a target------------------------------------------------------
       getLineStyle = function (combinationDescription, datasetIndexMod) {
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
-          return 'rgba(0, 0, 0, 0.0)';
+          return false,//'rgba(0, 0, 0, 0.0)';
         }
         else{
-          return '#' + getColor(datasetIndexMod);
+          return true//'#' + getColor(datasetIndexMod);
         }
       },
       //---#13 noLineForTargets---stop--------------------------------------------------------------------------------------------------
@@ -574,12 +574,12 @@ var indicatorModel = function (options) {
             //---#13 noLineForTargets---start-------------------------------
             borderColor: '#' + getColor(datasetIndexMod),
             //borderColor: getLineStyle(combinationDescription, datasetIndexMod),
-            //showLine: false,
+            showLine: getLineStyle(combinationDescription, datasetIndexMod),
             //---#13 noLineForTargets---stop--------------------------------
             //---#4 sameColorForTargetAndTimeSeries---start-----------------
             //backgroundColor: '#' + getColor(datasetIndex),
-            //backgroundColor: '#' + getColor(datasetIndexMod),
-            backgroundColor: getBackground(combinationDescription, datasetIndexMod),
+            backgroundColor: '#' + getColor(datasetIndexMod),
+            //backgroundColor: getBackground(combinationDescription, datasetIndexMod),
             //---#4 sameColorForTargetAndTimeSeries---stop------------------
             //---#11 setTargetPointstyle---start---------------------------------------
             pointStyle: getPointStyle(combinationDescription),
