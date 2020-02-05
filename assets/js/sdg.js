@@ -1296,9 +1296,10 @@ var indicatorDataStore = function(dataUrl) {
 
       //---#13 noLineForTargets---start-------------------------------------------------------------------------------------------------
       //-Since showLines does not work we set the opacity to 0.0 if it is a target------------------------------------------------------
-      getLineStyle = function (combinationDescription, datasetIndexMod) {
+      getLineStyle = function (combinationDescription, data) {
+        console.log('a', data, data.length)
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
-          return false;//'rgba(0, 0, 0, 0.0)';
+          return true;//'rgba(0, 0, 0, 0.0)';
         }
         else{
           return true;//'#' + getColor(datasetIndexMod);
@@ -1419,7 +1420,7 @@ var indicatorDataStore = function(dataUrl) {
             //---#13 noLineForTargets---start-------------------------------
             borderColor: '#' + getColor(datasetIndexMod),
             //borderColor: getLineStyle(combinationDescription, datasetIndexMod),
-            showLine: getLineStyle(combinationDescription, datasetIndexMod),
+            showLine: getLineStyle(combinationDescription, data),
             //---#13 noLineForTargets---stop--------------------------------
             //---#4 sameColorForTargetAndTimeSeries---start-----------------
             //backgroundColor: '#' + getColor(datasetIndex),
