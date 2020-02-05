@@ -452,7 +452,7 @@ var indicatorModel = function (options) {
       //---#13 noLineForTargets---start-------------------------------------------------------------------------------------------------
       //-Since showLines does not work we set the opacity to 0.0 if it is a target------------------------------------------------------
       getLineStyle = function (combinationDescription, datasetIndexMod, data) {
-        console.log('a', data, data.length)
+
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
           if (data.length == 1){
             console.log('a',combinationDescription)
