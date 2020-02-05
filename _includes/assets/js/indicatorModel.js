@@ -454,9 +454,18 @@ var indicatorModel = function (options) {
       getLineStyle = function (combinationDescription, data) {
         console.log('a', data, data.length)
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
-          return true;//'rgba(0, 0, 0, 0.0)';
+          if (data.length == 1){
+            console.log('a',combinationDescription)
+            return false;
+          }
+          else{
+            console.log('b',combinationDescription)
+            return true;
+          }
+          //return true;//'rgba(0, 0, 0, 0.0)';
         }
         else{
+          console.log('c',combinationDescription)
           return true;//'#' + getColor(datasetIndexMod);
         }
       },
