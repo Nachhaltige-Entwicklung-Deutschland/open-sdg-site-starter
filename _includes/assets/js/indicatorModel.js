@@ -456,11 +456,11 @@ var indicatorModel = function (options) {
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
           if (data.length == 1){
             console.log('a',combinationDescription)
-            return false;
+            return true;
           }
           else{
             console.log('b',combinationDescription)
-            return true;
+            return false;
           }
           //return true;//'rgba(0, 0, 0, 0.0)';
         }
