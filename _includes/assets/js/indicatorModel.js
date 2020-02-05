@@ -463,9 +463,20 @@ var indicatorModel = function (options) {
 
       //---#22 xxx---start-------------------------------------------------------------------------------------------------
       //-Since showLines does not work we set the opacity to 0.0 if it is a target------------------------------------------------------
+
+
+      getBackgroundPattern = function(color) {
+        if (window.pattern && typeof window.pattern.draw === 'function') {
+          return window.pattern.draw('diagonal', color);
+        }
+        return color;
+      },
+
+
       getBackground = function (combinationDescription, datasetIndexMod) {
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
-          return '#ffffff';
+          clr = getBackgroundPattern('#' + getColor(datasetIndexMod);)
+          return clr;
         }
         else{
           return '#' + getColor(datasetIndexMod);
