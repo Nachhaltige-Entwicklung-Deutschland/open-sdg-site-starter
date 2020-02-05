@@ -1320,7 +1320,7 @@ var indicatorDataStore = function(dataUrl) {
 
       getBackground = function (combinationDescription, datasetIndexMod) {
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
-          clr = getBackgroundPattern('#' + getColor(datasetIndexMod);)
+          clr = getBackgroundPattern('#' + getColor(datasetIndexMod));
           return clr;
         }
         else{
