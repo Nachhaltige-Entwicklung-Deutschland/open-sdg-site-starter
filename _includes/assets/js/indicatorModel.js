@@ -482,8 +482,8 @@ var indicatorModel = function (options) {
       //},
       //--#14 mixedCharts---stop--------------------------------------------------------------------------------------------------------
 
-      //--#14.1 barsOnlx---start--------------------------------------------------------------------------------------------------------
-      barCharts = ['indicator_5-1-c', 'indicator_11-2-c'];
+      //--#14.1 barsOnly---start--------------------------------------------------------------------------------------------------------
+      barCharts = ['indicator_5-1-c', 'indicator_11-1-b', 'indicator_11-2-c'];
 
       getChartStyle = function (indicatorId) {
 
@@ -494,7 +494,7 @@ var indicatorModel = function (options) {
           return 'line';
         }
       },
-
+      //--14.1 barsOnly---stop--------------------------------------------------------------------------------------------------------
 
       getBorderDash = function(datasetIndex) {
         // offset if there is no headline data:
