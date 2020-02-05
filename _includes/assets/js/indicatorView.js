@@ -513,7 +513,7 @@ var indicatorView = function (model, options) {
               text.push(indent);
               // ^^^^ #18.4 ^^^^----------------------------------------------------
 
-
+              console.log('x', dataset)
               //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
               //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
               if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
