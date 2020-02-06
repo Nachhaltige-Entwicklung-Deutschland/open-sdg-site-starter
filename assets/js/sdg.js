@@ -135,7 +135,7 @@ opensdg.autotrack = function(preset, category, action, label) {
 
     this.years = _.uniq(_.pluck(this.geoData, 'Year')).sort();
     this.currentYear = this.years[0];
-    console.log("jq:",options.years[-1]);
+    console.log("jq:",this.years[-1]);
     //---#2.1 caseNoTimeSeriesInCsv---start------------------------------------
     this.title = translations.t(this.title);
     //---#2.1 caseNoTimeSeriesInCsv---stop------------------------------------
@@ -447,7 +447,8 @@ opensdg.autotrack = function(preset, category, action, label) {
           plugin.updateColors();
           plugin.selectionLegend.update();
 
-        }
+        },
+        playReverseButton: true
       }));
 
       //---#7 addMapboxWordmark---start-----------------------------------------------------------------------------------------
@@ -3060,7 +3061,7 @@ $(function() {
     _getDisplayDateFormat: function(date){
       return date.getFullYear();
     }
-
+    
   });
 
   // Helper function to compose the full widget.
