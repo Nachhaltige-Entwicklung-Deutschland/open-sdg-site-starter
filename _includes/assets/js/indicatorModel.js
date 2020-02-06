@@ -510,7 +510,7 @@ var indicatorModel = function (options) {
       //--#14 mixedCharts---stop--------------------------------------------------------------------------------------------------------
 
       //--#14.1 barsOnly---start--------------------------------------------------------------------------------------------------------
-      barCharts = ['indicator_5-1-c', 'indicator_11-1-b', 'indicator_11-2-c'];
+      barCharts = ['indicator_2-2-a','indicator_5-1-c', 'indicator_11-1-b', 'indicator_11-2-c'];
 
       getChartStyle = function (indicatorId) {
 
