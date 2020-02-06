@@ -517,7 +517,7 @@ var indicatorModel = function (options) {
       //--#14 mixedCharts---stop--------------------------------------------------------------------------------------------------------
 
       //--#14.1 barsOnly---start--------------------------------------------------------------------------------------------------------
-      barCharts = ['indicator_2-2-a','indicator_3-1-e','indicator_5-1-b','indicator_5-1-c','indicator_6-2-a','indicator_8-2-c','indicator_8-3-a','indicator_8-4-a','indicator_8-6-a','indicator_11-1-b', 'indicator_11-2-c'];
+      barCharts = ['indicator_2-2-a','indicator_3-1-e','indicator_5-1-b','indicator_5-1-c','indicator_6-2-a','indicator_8-2-c','indicator_8-3-a','indicator_8-4-a','indicator_8-6-a','indicator_11-1-a','indicator_11-1-b', 'indicator_11-2-c'];
 
       getChartStyle = function (indicatorId) {
 
