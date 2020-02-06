@@ -38,7 +38,7 @@ Die Symbole und Farbwahl der 17 Ziele (Abb. 2 und Abb. 3), die hier und auf der 
 <img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/glory17.PNG" alt="Abbildung 4: Glory 17" class="responsiveImg">
 <small> Abb. 4: Die Glorreichen 17, eingesetzt auf der DNS-Berichtsplattform</small>
 </div>
-</span>
+
 <br>
 
 <h3>Bewertung der Indikatoren</h3>Bei den meisten Indikatoren veranschaulicht ein Wettersymbol –von Sonnenschein bis Gewitter– auf leicht zu erfassende Weise, inwiefern sich der Indikator auf dem angestrebten Pfad in Richtung Ziel bewegt (Abb. 5). Erläuterungen zur Definition der Symbole können [hier](https://sustainabledevelopment-deutschland/status/) gefunden werden. Wettersymbole für die letzten vier Jahre sind unter der Schaltfläche „Statusübersicht“ auf der jeweiligen Indikatorseite zu finden. Anhand der Wettersymbole lässt sich grob einschätzen, wie stabil die Entwicklung zuletzt gewesen ist. Sie ersetzen jedoch nicht die erläuternden Texte mit ihren Hintergrundinformationen.
