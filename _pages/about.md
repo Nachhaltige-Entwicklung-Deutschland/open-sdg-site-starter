@@ -21,19 +21,32 @@ Jeder Indikator der DNS wird auf einer eigenen Seite einzeln oder mit einem inha
 
 Die Symbole und Farbwahl der 17 Ziele (Abb. 2 und Abb. 3), die hier und auf der SDG-Berichtsplattform verwendet werden, stammen von den Vereinten Nationen. Auf der DNS-Plattform werden außerdem noch „Die Glorreichen 17“ verwendet (Abb. 4). Sie sind Teil der gleichnamigen Informationskampagne der Bundesregierung zu den Zielen für nachhaltige Entwicklung.
 
+<div class="col-xs-12 col-md-4 col-lg-4">
+<img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/sdgIcons.png" alt="Abbildung 2: SDG Icons" class="responsiveImg">
+<small> Abb. 2: 17 SDG-Symbole der Vereinten Nationen, eingesetzt auf der SDG-Berichtsplattform Deutschland</small>
+</div>
+<div class="col-xs-12 col-md-4 col-lg-4">
+<img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/sdgIconsInver.png" alt="Abbildung 3: SDG Icons inverted" class="responsiveImg">
+<small> Abb. 3: 17 SDG-Symbole der Vereinten Nationen, invertiert, eingesetzt auf der DNS-Berichtsplattform</small>
+</div>
+<div class="col-xs-12 col-md-4 col-lg-4">
+<img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/glory17.png" alt="Abbildung 4: Glory 17" class="responsiveImg">
+<small> Abb. 4: Die Glorreichen 17, eingesetzt auf der DNS-Berichtsplattform</small>
+</div>
+
 <h3>Bewertung der Indikatoren</h3>
 
-Bei den meisten Indikatoren veranschaulicht ein Wettersymbol –von Sonnenschein bis Gewitter– auf leicht zu erfassende Weise, inwiefern sich der Indikator auf dem angestrebten Pfad in Richtung Ziel bewegt (Abb. 4). Erläuterungen zur Definition der Symbole können [hier](https://sustainabledevelopment-deutschland/status/) gefunden werden. Wettersymbole für die letzten vier Jahre sind unter der Schaltfläche „Statusübersicht“ auf der jeweiligen Indikatorseite zu finden. Anhand der Wettersymbole lässt sich grob einschätzen, wie stabil die Entwicklung zuletzt gewesen ist. Sie ersetzen jedoch nicht die erläuternden Texte mit ihren Hintergrundinformationen.
+Bei den meisten Indikatoren veranschaulicht ein Wettersymbol –von Sonnenschein bis Gewitter– auf leicht zu erfassende Weise, inwiefern sich der Indikator auf dem angestrebten Pfad in Richtung Ziel bewegt (Abb. 5). Erläuterungen zur Definition der Symbole können [hier](https://sustainabledevelopment-deutschland/status/) gefunden werden. Wettersymbole für die letzten vier Jahre sind unter der Schaltfläche „Statusübersicht“ auf der jeweiligen Indikatorseite zu finden. Anhand der Wettersymbole lässt sich grob einschätzen, wie stabil die Entwicklung zuletzt gewesen ist. Sie ersetzen jedoch nicht die erläuternden Texte mit ihren Hintergrundinformationen.
 
 Über die Schaltfläche „Bewertung“ und „Übersicht“ ganz oben auf der DNS-Seite kommt man zur Übersicht der [gesamten zeitlichen Entwicklung der Wettersymbole aller Indikatoren]https://sustainabledevelopment-deutschland/status_summary/).
 
 <h3>Indikatorenvergleich DNS und SDG</h3>
 
-Die Indikatoren der DNS und ihre Nummerierung sind nicht identisch mit den SDG-Indikatoren der Vereinten Nationen. Wenn ein vergleichbarer Indikator der SDGs zu einem Indikator der DNS vorhanden ist, ist dies über eine Schaltfläche mit Direktlink zum Indikator auf der Berichtsplattform von Deutschland auf der jeweiligen Indikatorseite kenntlich gemacht (Abb.4).
+Die Indikatoren der DNS und ihre Nummerierung sind nicht identisch mit den SDG-Indikatoren der Vereinten Nationen. Wenn ein vergleichbarer Indikator der SDGs zu einem Indikator der DNS vorhanden ist, ist dies über eine Schaltfläche mit Direktlink zum Indikator auf der Berichtsplattform von Deutschland auf der jeweiligen Indikatorseite kenntlich gemacht (Abb.5).
 
 
-<img src="https://Nachhaltige-Entwicklung-Deutschland.github.io/open-sdg-site-starter/assets/img/about/dnsIndicatorPage.PNG" alt="Abbildung 4: Aufbau der Indikator-Seiten" class="responsiveImg">
-<small> Abb. 4: Schaltfläche zu verwandtem globalen Indikator (rot markiert) und Beispiel für Wettersymbol anhand des Indikators 6.1.a „Phosphor in Fließgewässern“ (Stand Indikatorenbericht 2018)</small>
+<img src="https://Nachhaltige-Entwicklung-Deutschland.github.io/open-sdg-site-starter/assets/img/about/dnsIndicatorPage.PNG" alt="Abbildung 5: Aufbau der Indikator-Seiten" class="responsiveImg">
+<small> Abb. 5: Schaltfläche zu verwandtem globalen Indikator (rot markiert) und Beispiel für Wettersymbol anhand des Indikators 6.1.a „Phosphor in Fließgewässern“ (Stand Indikatorenbericht 2018)</small>
 
 
 Neben dem Suchfeld oben rechts auf dieser Seite gibt es einen Direktlink zur Startseite der nationalen Berichtsplattform zu den SDG-Indikatoren der Agenda 2030 der Vereinten Nationen:
