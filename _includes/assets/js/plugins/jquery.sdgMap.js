@@ -102,7 +102,7 @@
       .classes(this.options.colorRange[this.goalNr].length);
       //---#1 GoalDependendMapColor---stop-------------------------------------
 
-    this.years = _.uniq(_.pluck(this.geoData, 'Year')).reverse();//sort();
+    this.years = _.uniq(_.pluck(this.geoData, 'Year')).sort();
     this.currentYear = this.years[0];
     console.log("jq:",options.years[-1]);
     //---#2.1 caseNoTimeSeriesInCsv---start------------------------------------
