@@ -135,7 +135,7 @@ opensdg.autotrack = function(preset, category, action, label) {
 
     this.years = _.uniq(_.pluck(this.geoData, 'Year')).sort();
     this.currentYear = this.years[-1];
-
+    console.log("jq:",options.years[-1]);
     //---#2.1 caseNoTimeSeriesInCsv---start------------------------------------
     this.title = translations.t(this.title);
     //---#2.1 caseNoTimeSeriesInCsv---stop------------------------------------
@@ -3075,7 +3075,7 @@ $(function() {
       times: options.years.join('-01-02,') + '-01-02',
       currentTime: new Date(options.years[-1] + '-01-02').getTime(),
     });
-    console.log(options.years);
+    console.log("ys:",options.years[-1]);
     // Create the player.
     options.player = new L.TimeDimension.Player(options.playerOptions, options.timeDimension);
     // Listen for time changes.
