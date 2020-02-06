@@ -133,8 +133,8 @@ opensdg.autotrack = function(preset, category, action, label) {
       .classes(this.options.colorRange[this.goalNr].length);
       //---#1 GoalDependendMapColor---stop-------------------------------------
 
-    this.years = _.uniq(_.pluck(this.geoData, 'Year')).sort();
-    this.currentYear = this.years[-1];
+    this.years = _.uniq(_.pluck(this.geoData, 'Year')).reverse();//sort();
+    this.currentYear = this.years[0];
     console.log("jq:",options.years[-1]);
     //---#2.1 caseNoTimeSeriesInCsv---start------------------------------------
     this.title = translations.t(this.title);
@@ -3073,7 +3073,7 @@ $(function() {
       // cause any problems. This converts the array of years into a comma-
       // delimited string of YYYY-MM-DD dates.
       times: options.years.join('-01-02,') + '-01-02',
-      currentTime: new Date(options.years[-1] + '-01-02').getTime(),
+      currentTime: new Date(options.years[0] + '-01-02').getTime(),
     });
     console.log("ys:",options.years[-1]);
     // Create the player.
