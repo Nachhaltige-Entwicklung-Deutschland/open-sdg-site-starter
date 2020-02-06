@@ -104,7 +104,7 @@
 
     this.years = _.uniq(_.pluck(this.geoData, 'Year')).sort();
     this.currentYear = this.years[-1];
-
+    console.log("jq:",options.years[-1]);
     //---#2.1 caseNoTimeSeriesInCsv---start------------------------------------
     this.title = translations.t(this.title);
     //---#2.1 caseNoTimeSeriesInCsv---stop------------------------------------
