@@ -1420,9 +1420,9 @@ var indicatorDataStore = function(dataUrl) {
 
             label: combinationDescription ? combinationDescription : that.country,
             //---#13 noLineForTargets---start-------------------------------
-            borderColor: '#000000',//'#' + getColor(datasetIndexMod),
+            borderColor: '#' + getColor(datasetIndexMod),
             //borderColor: getLineStyle(combinationDescription, datasetIndexMod),
-            showLine: getLineStyle(combinationDescription, datasetIndexMod, data),
+            showLine: true,//getLineStyle(combinationDescription, datasetIndexMod, data),
             //---#13 noLineForTargets---stop--------------------------------
             //---#4 sameColorForTargetAndTimeSeries---start-----------------
             //backgroundColor: '#' + getColor(datasetIndex),
