@@ -16,6 +16,7 @@ Die Plattform ist nach Zielen, Indikatorbereichen und Postulaten und den dazugeh
 <br>
 <img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/dnsTargetPage.png" alt="Abbildung 1: Aufbau der Ziel-Seiten" class="responsiveImg">
 <small> Abb. 1: Beispiel für die Gliederung der DNS anhand von Ziel 7 „Bezahlbare und Saubere Energie“ (Stand Indikatorenbericht 2018)</small>
+
 <br>
 
 
@@ -36,6 +37,7 @@ Die Symbole und Farbwahl der 17 Ziele (Abb. 2 und Abb. 3), die hier und auf der 
 <img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/glory17.PNG" alt="Abbildung 4: Glory 17" class="responsiveImg">
 <small> Abb. 4: Die Glorreichen 17, eingesetzt auf der DNS-Berichtsplattform</small>
 </div>
+
 <br>
 
 <h3>Bewertung der Indikatoren</h3>
@@ -51,6 +53,7 @@ Die Indikatoren der DNS und ihre Nummerierung sind nicht identisch mit den SDG-I
 <br>
 <img src="https://Nachhaltige-Entwicklung-Deutschland.github.io/open-sdg-site-starter/assets/img/about/dnsIndicatorPage.PNG" alt="Abbildung 5: Aufbau der Indikator-Seiten" class="responsiveImg">
 <small> Abb. 5: Schaltfläche zu verwandtem globalen Indikator (rot markiert) und Beispiel für Wettersymbol anhand des Indikators 6.1.a „Phosphor in Fließgewässern“ (Stand Indikatorenbericht 2018)</small>
+
 <br>
 
 Neben dem Suchfeld oben rechts auf dieser Seite gibt es einen Direktlink zur Startseite der nationalen Berichtsplattform zu den SDG-Indikatoren der Agenda 2030 der Vereinten Nationen:

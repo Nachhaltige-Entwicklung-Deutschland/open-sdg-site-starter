@@ -455,17 +455,17 @@ var indicatorModel = function (options) {
 
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
           if (data.length == 1){
-            console.log('a',combinationDescription)
+            console.log('a',combinationDescription, datasetIndexMod)
             return true;
           }
           else{
-            console.log('b',combinationDescription)
+            console.log('b',combinationDescription, datasetIndexMod)
             return false;
           }
           //return true;//'rgba(0, 0, 0, 0.0)';
         }
         else{
-          console.log('c',combinationDescription)
+          console.log('c',combinationDescription, datasetIndexMod)
           return true;//'#' + getColor(datasetIndexMod);
         }
       },
