@@ -42,7 +42,7 @@
       // cause any problems. This converts the array of years into a comma-
       // delimited string of YYYY-MM-DD dates.
       times: options.years.join('-01-02,') + '-01-02',
-      currentTime: new Date(options.years[-1] + '-01-02').getTime(),
+      currentTime: new Date(options.years[0] + '-01-02').getTime(),
     });
     console.log("ys:",options.years[-1]);
     // Create the player.
