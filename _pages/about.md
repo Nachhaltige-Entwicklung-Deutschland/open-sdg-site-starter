@@ -42,7 +42,7 @@ Die Symbole und Farbwahl der 17 Ziele (Abb. 2 und Abb. 3), die hier und auf der 
 
 <br>
 
-<h3>Bewertung der Indikatoren</h3>Bei den meisten Indikatoren veranschaulicht ein Wettersymbol –von Sonnenschein bis Gewitter– auf leicht zu erfassende Weise, inwiefern sich der Indikator auf dem angestrebten Pfad in Richtung Ziel bewegt (Abb. 5). Erläuterungen zur Definition der Symbole können [hier](https://sustainabledevelopment-deutschland/status/) gefunden werden. Wettersymbole für die letzten vier Jahre sind unter der Schaltfläche „Statusübersicht“ auf der jeweiligen Indikatorseite zu finden. Anhand der Wettersymbole lässt sich grob einschätzen, wie stabil die Entwicklung zuletzt gewesen ist. Sie ersetzen jedoch nicht die erläuternden Texte mit ihren Hintergrundinformationen.
+<h3 align="left">Bewertung der Indikatoren</h3>Bei den meisten Indikatoren veranschaulicht ein Wettersymbol –von Sonnenschein bis Gewitter– auf leicht zu erfassende Weise, inwiefern sich der Indikator auf dem angestrebten Pfad in Richtung Ziel bewegt (Abb. 5). Erläuterungen zur Definition der Symbole können [hier](https://sustainabledevelopment-deutschland/status/) gefunden werden. Wettersymbole für die letzten vier Jahre sind unter der Schaltfläche „Statusübersicht“ auf der jeweiligen Indikatorseite zu finden. Anhand der Wettersymbole lässt sich grob einschätzen, wie stabil die Entwicklung zuletzt gewesen ist. Sie ersetzen jedoch nicht die erläuternden Texte mit ihren Hintergrundinformationen.
 
 Über die Schaltfläche „Bewertung“ und „Übersicht“ ganz oben auf der DNS-Seite kommt man zur Übersicht der [gesamten zeitlichen Entwicklung der Wettersymbole aller [Indikatoren]https://sustainabledevelopment-deutschland/status_summary/).
 
