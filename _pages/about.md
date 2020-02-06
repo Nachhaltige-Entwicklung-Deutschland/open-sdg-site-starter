@@ -12,7 +12,7 @@ Das Statistische Bundesamt berichtet im Auftrag der Bundesregierung seit dem Jah
 
 Die Plattform ist nach Zielen, Indikatorbereichen und Postulaten und den dazugehörigen Indikatoren gegliedert (Abb.1). Alle vier Jahre wird die Strategie und ihre Indikatoren durch die Bundesregierung überprüft und bei Bedarf angepasst. Dabei können z.B. Indikatoren ersetzt werden oder neue hinzukommen.
 
-<img src="nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/dnsTargetPage.png" alt="Abbildung 1: Aufbau der Ziel-Seiten" title="Abbildung 1: Aufbau der Ziel-Seiten">
+<img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/dnsTargetPage.png" alt="Abbildung 1: Aufbau der Ziel-Seiten" title="Abbildung 1: Aufbau der Ziel-Seiten">
 
 Jeder Indikator der DNS wird auf einer eigenen Seite einzeln oder mit einem inhaltlich eng verbundenen Indikator zusammen dargestellt. Die Entwicklung des Indikators wird in einer Grafik visualisiert. Außerdem werden die Definitionen, Intentionen sowie die Entwicklung der jeweiligen Indikatoren angegeben. Diese Informationen stammen aus dem zweijährlich erscheinenden [Indikatorenbericht](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Nachhaltigkeitsindikatoren/Deutsche-Nachhaltigkeit/_inhalt.html) des Statistischen Bundesamtes.
 
@@ -28,7 +28,7 @@ Bei den meisten Indikatoren veranschaulicht ein Wettersymbol –von Sonnenschein
 
 Die Indikatoren der DNS und ihre Nummerierung sind nicht identisch mit den SDG-Indikatoren der Vereinten Nationen. Wenn ein vergleichbarer Indikator der SDGs zu einem Indikator der DNS vorhanden ist, ist dies über eine Schaltfläche mit Direktlink zum Indikator auf der Berichtsplattform von Deutschland auf der jeweiligen Indikatorseite kenntlich gemacht (Abb.4).
 
-<img src="Nachhaltige-Entwicklung-Deutschland.github.io/open-sdg-site-starter/assets/img/about/dnsIndicatorPage.png" alt="Abbildung 4: Aufbau der Indikator-Seiten" title="Abbildung 1: Aufbau der Indikator-Seiten">
+<img src="https://Nachhaltige-Entwicklung-Deutschland.github.io/open-sdg-site-starter/assets/img/about/dnsIndicatorPage.png" alt="Abbildung 4: Aufbau der Indikator-Seiten" title="Abbildung 1: Aufbau der Indikator-Seiten">
 
 Neben dem Suchfeld oben rechts auf dieser Seite gibt es einen Direktlink zur Startseite der nationalen Berichtsplattform zu den SDG-Indikatoren der Agenda 2030 der Vereinten Nationen:
 
