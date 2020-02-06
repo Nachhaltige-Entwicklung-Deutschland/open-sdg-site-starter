@@ -40,15 +40,11 @@ Die Symbole und Farbwahl der 17 Ziele (Abb. 2 und Abb. 3), die hier und auf der 
 
 <br>
 
-<h3>Bewertung der Indikatoren</h3>
-
-Bei den meisten Indikatoren veranschaulicht ein Wettersymbol –von Sonnenschein bis Gewitter– auf leicht zu erfassende Weise, inwiefern sich der Indikator auf dem angestrebten Pfad in Richtung Ziel bewegt (Abb. 5). Erläuterungen zur Definition der Symbole können [hier](https://sustainabledevelopment-deutschland/status/) gefunden werden. Wettersymbole für die letzten vier Jahre sind unter der Schaltfläche „Statusübersicht“ auf der jeweiligen Indikatorseite zu finden. Anhand der Wettersymbole lässt sich grob einschätzen, wie stabil die Entwicklung zuletzt gewesen ist. Sie ersetzen jedoch nicht die erläuternden Texte mit ihren Hintergrundinformationen.
+<h3>Bewertung der Indikatoren</h3>Bei den meisten Indikatoren veranschaulicht ein Wettersymbol –von Sonnenschein bis Gewitter– auf leicht zu erfassende Weise, inwiefern sich der Indikator auf dem angestrebten Pfad in Richtung Ziel bewegt (Abb. 5). Erläuterungen zur Definition der Symbole können [hier](https://sustainabledevelopment-deutschland/status/) gefunden werden. Wettersymbole für die letzten vier Jahre sind unter der Schaltfläche „Statusübersicht“ auf der jeweiligen Indikatorseite zu finden. Anhand der Wettersymbole lässt sich grob einschätzen, wie stabil die Entwicklung zuletzt gewesen ist. Sie ersetzen jedoch nicht die erläuternden Texte mit ihren Hintergrundinformationen.
 
 Über die Schaltfläche „Bewertung“ und „Übersicht“ ganz oben auf der DNS-Seite kommt man zur Übersicht der [gesamten zeitlichen Entwicklung der Wettersymbole aller Indikatoren]https://sustainabledevelopment-deutschland/status_summary/).
 
-<h3>Indikatorenvergleich DNS und SDG</h3>
-
-Die Indikatoren der DNS und ihre Nummerierung sind nicht identisch mit den SDG-Indikatoren der Vereinten Nationen. Wenn ein vergleichbarer Indikator der SDGs zu einem Indikator der DNS vorhanden ist, ist dies über eine Schaltfläche mit Direktlink zum Indikator auf der Berichtsplattform von Deutschland auf der jeweiligen Indikatorseite kenntlich gemacht (Abb.5).
+<h3>Indikatorenvergleich DNS und SDG</h3>Die Indikatoren der DNS und ihre Nummerierung sind nicht identisch mit den SDG-Indikatoren der Vereinten Nationen. Wenn ein vergleichbarer Indikator der SDGs zu einem Indikator der DNS vorhanden ist, ist dies über eine Schaltfläche mit Direktlink zum Indikator auf der Berichtsplattform von Deutschland auf der jeweiligen Indikatorseite kenntlich gemacht (Abb.5).
 
 <br>
 <img src="https://Nachhaltige-Entwicklung-Deutschland.github.io/open-sdg-site-starter/assets/img/about/dnsIndicatorPage.PNG" alt="Abbildung 5: Aufbau der Indikator-Seiten" class="responsiveImg">
@@ -58,15 +54,11 @@ Die Indikatoren der DNS und ihre Nummerierung sind nicht identisch mit den SDG-I
 
 Neben dem Suchfeld oben rechts auf dieser Seite gibt es einen Direktlink zur Startseite der nationalen Berichtsplattform zu den SDG-Indikatoren der Agenda 2030 der Vereinten Nationen:
 
-<h3>Technischer Hintergrund</h3>
-
-Um die Daten aufbereitet darstellen zu können, bietet das Open-Source-Projekt Open SDG auf GitHub Vorlagen. Mehr dazu finden Sie unter „Technische Hinweise“.
+<h3>Technischer Hintergrund</h3>Um die Daten aufbereitet darstellen zu können, bietet das Open-Source-Projekt Open SDG auf GitHub Vorlagen. Mehr dazu finden Sie unter „Technische Hinweise“.
 
 <h2>Agenda 2030 und die Arbeit der nationalen Statistikämter</h2>
 
-<h3>Die UN-Nachhaltigkeitsziele</h3>
-
-Die „Agenda 2030 für nachhaltige Entwicklung“ ist ein globaler Aktionsplan der Vereinten Nationen für die Menschen, den Planeten und den Wohlstand, der von der UN-Generalversammlung im September 2015 verabschiedet worden ist.
+<h3>Die UN-Nachhaltigkeitsziele</h3>Die „Agenda 2030 für nachhaltige Entwicklung“ ist ein globaler Aktionsplan der Vereinten Nationen für die Menschen, den Planeten und den Wohlstand, der von der UN-Generalversammlung im September 2015 verabschiedet worden ist.
 Mit der Agenda 2030 haben die Mitgliedstaaten der Vereinten Nationen einen Fahrplan zur „Transformation der Welt zum Besseren“ im Sinne einer nachhaltigen Umgestaltung von Gesellschaft, Wirtschaft und Umwelt bis zum Jahr 2030 entwickelt. Bestandteil der Agenda 2030 sind 17 globale Ziele unterteilt in 169 Unterziele und über 240 Indikatoren.
 
 Überprüfung der Zielerreichung
