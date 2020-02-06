@@ -575,7 +575,7 @@ var indicatorModel = function (options) {
 
             label: combinationDescription ? combinationDescription : that.country,
             //---#13 noLineForTargets---start-------------------------------
-            borderColor: '#000000'//'#' + getColor(datasetIndexMod),
+            borderColor: '#000000',//'#' + getColor(datasetIndexMod),
             //borderColor: getLineStyle(combinationDescription, datasetIndexMod),
             showLine: getLineStyle(combinationDescription, datasetIndexMod, data),
             //---#13 noLineForTargets---stop--------------------------------
