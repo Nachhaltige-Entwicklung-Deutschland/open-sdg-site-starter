@@ -474,7 +474,14 @@ var indicatorModel = function (options) {
       //---#22 xxx---start-------------------------------------------------------------------------------------------------
       //-Since showLines does not work we set the opacity to 0.0 if it is a target------------------------------------------------------
 
-
+      getBorderColor = function(combinationDescription,datasetIndexMod,indicatorId) {
+        if (getChartStyle(indicatorId) == 'bar'){
+          return '#' + getColor(datasetIndexMod);
+        }
+        else{
+          return getBackground(combinationDescription,datasetIndexMod)
+        }
+      }
 
 
       getBackground = function (combinationDescription, datasetIndexMod) {
@@ -575,9 +582,8 @@ var indicatorModel = function (options) {
 
             label: combinationDescription ? combinationDescription : that.country,
             //---#13 noLineForTargets---start-------------------------------
-            borderColor: '#' + getColor(datasetIndexMod),
+            borderColor: getBorderColor(combinationDescription,datasetIndexMod,that.indicatorId),//'#' + getColor(datasetIndexMod),
             //borderColor: getLineStyle(combinationDescription, datasetIndexMod),
-            showLine: true,//getLineStyle(combinationDescription, datasetIndexMod, data),
             //---#13 noLineForTargets---stop--------------------------------
             //---#4 sameColorForTargetAndTimeSeries---start-----------------
             //backgroundColor: '#' + getColor(datasetIndex),
