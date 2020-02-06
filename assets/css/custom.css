@@ -602,4 +602,6 @@ header {
 
 .responsiveImg {
   width: 100%;
-  height: auto; }
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px; }
