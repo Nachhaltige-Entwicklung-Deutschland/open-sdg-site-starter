@@ -12,7 +12,7 @@ Das Statistische Bundesamt berichtet im Auftrag der Bundesregierung seit dem Jah
 
 Die Plattform ist nach Zielen, Indikatorbereichen und Postulaten und den dazugehörigen Indikatoren gegliedert (Abb.1). Alle vier Jahre wird die Strategie und ihre Indikatoren durch die Bundesregierung überprüft und bei Bedarf angepasst. Dabei können z.B. Indikatoren ersetzt werden oder neue hinzukommen.
 
-<img src="Nachhaltige-Entwicklung-Deutschland.github.io/assets/img/about/dnsTargetPage.png" alt="Abbildung 1: Aufbau der Ziel Seiten" title="Abbildung 1: Aufbau der Ziel Seiten">
+<img src="Nachhaltige-Entwicklung-Deutschland.github.io/sdg-site-starter/assets/img/about/dnsTargetPage.png" alt="Abbildung 1: Aufbau der Ziel Seiten" title="Abbildung 1: Aufbau der Ziel Seiten">
 
 Jeder Indikator der DNS wird auf einer eigenen Seite einzeln oder mit einem inhaltlich eng verbundenen Indikator zusammen dargestellt. Die Entwicklung des Indikators wird in einer Grafik visualisiert. Außerdem werden die Definitionen, Intentionen sowie die Entwicklung der jeweiligen Indikatoren angegeben. Diese Informationen stammen aus dem zweijährlich erscheinenden [Indikatorenbericht](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Nachhaltigkeitsindikatoren/Deutsche-Nachhaltigkeit/_inhalt.html) des Statistischen Bundesamtes.
 
