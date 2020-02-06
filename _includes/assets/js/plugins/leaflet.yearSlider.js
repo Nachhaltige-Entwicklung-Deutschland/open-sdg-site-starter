@@ -29,7 +29,7 @@
     _getDisplayDateFormat: function(date){
       return date.getFullYear();
     }
-
+    
   });
 
   // Helper function to compose the full widget.

@@ -55,6 +55,7 @@ Die Symbole und Farbwahl der 17 Ziele (Abb. 2 und Abb. 3), die hier und auf der 
 <br>
 
 Neben dem Suchfeld oben rechts auf dieser Seite gibt es einen Direktlink zur Startseite der nationalen Berichtsplattform zu den SDG-Indikatoren der Agenda 2030 der Vereinten Nationen:
+<img src="https://Nachhaltige-Entwicklung-Deutschland.github.io/open-sdg-site-starter/assets/img/about/wheel.PNG" alt="AWheel" class="responsiveImg">
 
 <h3>Technischer Hintergrund</h3>Um die Daten aufbereitet darstellen zu können, bietet das Open-Source-Projekt Open SDG auf GitHub Vorlagen. Mehr dazu finden Sie unter „Technische Hinweise“.
 
