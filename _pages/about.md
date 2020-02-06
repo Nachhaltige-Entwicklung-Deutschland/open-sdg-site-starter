@@ -11,9 +11,9 @@ Das Statistische Bundesamt berichtet im Auftrag der Bundesregierung seit dem Jah
 <h3>Aufabu der Berichtsplattform</h3>
 
 Die Plattform ist nach Zielen, Indikatorbereichen und Postulaten und den dazugehörigen Indikatoren gegliedert (Abb.1). Alle vier Jahre wird die Strategie und ihre Indikatoren durch die Bundesregierung überprüft und bei Bedarf angepasst. Dabei können z.B. Indikatoren ersetzt werden oder neue hinzukommen.
-
+<div class="col-lg-12">
 <img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/dnsTargetPage.png" alt="Abbildung 1: Aufbau der Ziel-Seiten" title="Abbildung 1: Aufbau der Ziel-Seiten">
-
+</div>
 Jeder Indikator der DNS wird auf einer eigenen Seite einzeln oder mit einem inhaltlich eng verbundenen Indikator zusammen dargestellt. Die Entwicklung des Indikators wird in einer Grafik visualisiert. Außerdem werden die Definitionen, Intentionen sowie die Entwicklung der jeweiligen Indikatoren angegeben. Diese Informationen stammen aus dem zweijährlich erscheinenden [Indikatorenbericht](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Nachhaltigkeitsindikatoren/Deutsche-Nachhaltigkeit/_inhalt.html) des Statistischen Bundesamtes.
 
 Die Symbole und Farbwahl der 17 Ziele (Abb. 2 und Abb. 3), die hier und auf der SDG-Berichtsplattform verwendet werden, stammen von den Vereinten Nationen. Auf der DNS-Plattform werden außerdem noch „Die Glorreichen 17“ verwendet (Abb. 4). Sie sind Teil der gleichnamigen Informationskampagne der Bundesregierung zu den Zielen für nachhaltige Entwicklung.
