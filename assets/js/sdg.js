@@ -1319,7 +1319,14 @@ var indicatorDataStore = function(dataUrl) {
       //---#22 xxx---start-------------------------------------------------------------------------------------------------
       //-Since showLines does not work we set the opacity to 0.0 if it is a target------------------------------------------------------
 
-
+      getBorderColor = function(combinationDescription,datasetIndexMod,indicatorId) {
+        if (getChartStyle(indicatorId) == 'bar'){
+          return '#' + getColor(datasetIndexMod);
+        }
+        else{
+          return getBackground(combinationDescription,datasetIndexMod)
+        }
+      }
 
 
       getBackground = function (combinationDescription, datasetIndexMod) {
@@ -1420,9 +1427,8 @@ var indicatorDataStore = function(dataUrl) {
 
             label: combinationDescription ? combinationDescription : that.country,
             //---#13 noLineForTargets---start-------------------------------
-            borderColor: '#' + getColor(datasetIndexMod),
+            borderColor: getBorderColor(combinationDescription,datasetIndexMod,that.indicatorId),//'#' + getColor(datasetIndexMod),
             //borderColor: getLineStyle(combinationDescription, datasetIndexMod),
-            showLine: true,//getLineStyle(combinationDescription, datasetIndexMod, data),
             //---#13 noLineForTargets---stop--------------------------------
             //---#4 sameColorForTargetAndTimeSeries---start-----------------
             //backgroundColor: '#' + getColor(datasetIndex),
@@ -2189,7 +2195,7 @@ var indicatorView = function (model, options) {
             //vvv #18.1 vvvv sort the dataset by substring if it contains "target" or "timeseries"
             var temp = [];
             _.each(chart.data.datasets, function(dataset, datasetIndex) {
-              temp.push({label: dataset.label, borderDash: dataset.borderDash, backgroundColor: dataset.backgroundColor, borderColor: dataset.borderColor, datasetIndex: datasetIndex, type: dataset.type});
+              temp.push({label: dataset.label, borderDash: dataset.borderDash, backgroundColor: dataset.backgroundColor, borderColor: dataset.borderColor, pointBorderColor: dataset.pointBorderColor, datasetIndex: datasetIndex, type: dataset.type});
             });
             var replaceForOrder = [{old: 'Insgesamt', new:'AAA'},
                                   {old: 'Total', new: 'AAA'},
@@ -2267,19 +2273,19 @@ var indicatorView = function (model, options) {
               //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
               if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
                 if (dataset.type != 'bar'){
-                  text.push('<span class="swatchTgt' + '" style="border-color: ' + dataset.borderColor + '"></span>');
+                  text.push('<span class="swatchTgt' + '" style="border-color: ' + dataset.pointBorderColor + '"></span>');
                 }
                 else{
-                  text.push('<span class="swatchTgtBar' + '" style="border-color: ' + dataset.borderColor + '"></span>');
+                  text.push('<span class="swatchTgtBar' + '" style="border-color: ' + dataset.pointBorderColor + '"></span>');
                 }
               }
               else if (dataset.type != 'bar'){
-                text.push('<span class="swatchLine' + (dataset.borderDash ? ' dashed' : '') + ' left" style="background-color: ' + dataset.backgroundColor + '"></span>');
-                text.push('<span class="swatchTsr' + (dataset.borderDash ? ' dashed' : '') + '" style="border-color: ' + dataset.backgroundColor + '"></span>');
-                text.push('<span class="swatchLine' + (dataset.borderDash ? ' dashed' : '') + ' right" style="background-color: ' + dataset.backgroundColor + '"></span>');
+                text.push('<span class="swatchLine' + (dataset.borderDash ? ' dashed' : '') + ' left" style="background-color: ' + dataset.pointBorderColor + '"></span>');
+                text.push('<span class="swatchTsr' + (dataset.borderDash ? ' dashed' : '') + '" style="border-color: ' + dataset.pointBorderColor + '"></span>');
+                text.push('<span class="swatchLine' + (dataset.borderDash ? ' dashed' : '') + ' right" style="background-color: ' + dataset.pointBorderColor + '"></span>');
               }
               else{
-                text.push('<span class="swatchBar' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '"></span>');
+                text.push('<span class="swatchBar' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.pointBorderColor + '"></span>');
               }
               //---#3 targetDifferentInLegend---stop-----------------------------------------------------------------------------------------------------------------------------
 
