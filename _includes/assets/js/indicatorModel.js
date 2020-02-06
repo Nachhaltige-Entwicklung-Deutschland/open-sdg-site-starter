@@ -524,7 +524,6 @@ var indicatorModel = function (options) {
       //--#14.1 barsOnly---stop--------------------------------------------------------------------------------------------------------
 
 
-
       getBorderDash = function(datasetIndex) {
         // offset if there is no headline data:
         if(!this.hasHeadline) {
