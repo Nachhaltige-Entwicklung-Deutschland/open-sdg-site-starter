@@ -13,26 +13,30 @@ Das Statistische Bundesamt berichtet im Auftrag der Bundesregierung seit dem Jah
 Die Plattform ist nach Zielen, Indikatorbereichen und Postulaten und den dazugehörigen Indikatoren gegliedert (Abb.1). Alle vier Jahre wird die Strategie und ihre Indikatoren durch die Bundesregierung überprüft und bei Bedarf angepasst. Dabei können z.B. Indikatoren ersetzt werden oder neue hinzukommen.
 
 
+<br>
 <img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/dnsTargetPage.png" alt="Abbildung 1: Aufbau der Ziel-Seiten" class="responsiveImg">
 <small> Abb. 1: Beispiel für die Gliederung der DNS anhand von Ziel 7 „Bezahlbare und Saubere Energie“ (Stand Indikatorenbericht 2018)</small>
+<br>
 
 
 Jeder Indikator der DNS wird auf einer eigenen Seite einzeln oder mit einem inhaltlich eng verbundenen Indikator zusammen dargestellt. Die Entwicklung des Indikators wird in einer Grafik visualisiert. Außerdem werden die Definitionen, Intentionen sowie die Entwicklung der jeweiligen Indikatoren angegeben. Diese Informationen stammen aus dem zweijährlich erscheinenden [Indikatorenbericht](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Nachhaltigkeitsindikatoren/Deutsche-Nachhaltigkeit/_inhalt.html) des Statistischen Bundesamtes.
 
 Die Symbole und Farbwahl der 17 Ziele (Abb. 2 und Abb. 3), die hier und auf der SDG-Berichtsplattform verwendet werden, stammen von den Vereinten Nationen. Auf der DNS-Plattform werden außerdem noch „Die Glorreichen 17“ verwendet (Abb. 4). Sie sind Teil der gleichnamigen Informationskampagne der Bundesregierung zu den Zielen für nachhaltige Entwicklung.
 
+<br>
 <div class="col-xs-12 col-md-4 col-lg-4">
 <img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/sdgIcons.PNG" alt="Abbildung 2: SDG Icons" class="responsiveImg">
 <small> Abb. 2: 17 SDG-Symbole der Vereinten Nationen, eingesetzt auf der SDG-Berichtsplattform Deutschland</small>
 </div>
 <div class="col-xs-12 col-md-4 col-lg-4">
-<img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/sdgIconsInver.PNG" alt="Abbildung 3: SDG Icons inverted" class="responsiveImg">
+<img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/sdgIconsInvert.PNG" alt="Abbildung 3: SDG Icons inverted" class="responsiveImg">
 <small> Abb. 3: 17 SDG-Symbole der Vereinten Nationen, invertiert, eingesetzt auf der DNS-Berichtsplattform</small>
 </div>
 <div class="col-xs-12 col-md-4 col-lg-4">
 <img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/glory17.PNG" alt="Abbildung 4: Glory 17" class="responsiveImg">
 <small> Abb. 4: Die Glorreichen 17, eingesetzt auf der DNS-Berichtsplattform</small>
 </div>
+<br>
 
 <h3>Bewertung der Indikatoren</h3>
 
@@ -44,10 +48,10 @@ Bei den meisten Indikatoren veranschaulicht ein Wettersymbol –von Sonnenschein
 
 Die Indikatoren der DNS und ihre Nummerierung sind nicht identisch mit den SDG-Indikatoren der Vereinten Nationen. Wenn ein vergleichbarer Indikator der SDGs zu einem Indikator der DNS vorhanden ist, ist dies über eine Schaltfläche mit Direktlink zum Indikator auf der Berichtsplattform von Deutschland auf der jeweiligen Indikatorseite kenntlich gemacht (Abb.5).
 
-
+<br>
 <img src="https://Nachhaltige-Entwicklung-Deutschland.github.io/open-sdg-site-starter/assets/img/about/dnsIndicatorPage.PNG" alt="Abbildung 5: Aufbau der Indikator-Seiten" class="responsiveImg">
 <small> Abb. 5: Schaltfläche zu verwandtem globalen Indikator (rot markiert) und Beispiel für Wettersymbol anhand des Indikators 6.1.a „Phosphor in Fließgewässern“ (Stand Indikatorenbericht 2018)</small>
-
+<br>
 
 Neben dem Suchfeld oben rechts auf dieser Seite gibt es einen Direktlink zur Startseite der nationalen Berichtsplattform zu den SDG-Indikatoren der Agenda 2030 der Vereinten Nationen:
 
