@@ -15,6 +15,7 @@ Die Plattform ist nach Zielen, Indikatorbereichen und Postulaten und den dazugeh
 
 <br>
 <img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/dnsTargetPage.png" alt="Abbildung 1: Aufbau der Ziel-Seiten" class="responsiveImg">
+
 <small> Abb. 1: Beispiel für die Gliederung der DNS anhand von Ziel 7 „Bezahlbare und Saubere Energie“ (Stand Indikatorenbericht 2018)</small>
 
 <br>
@@ -26,12 +27,12 @@ Die Symbole und Farbwahl der 17 Ziele (Abb. 2 und Abb. 3), die hier und auf der 
 
 <div class="container">
 <div class="col-xs-12 col-md-4 col-lg-4">
-<img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/sdgIcons.PNG" alt="Abbildung 2: SDG Icons" class="responsiveImg">
+<img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/sdgIcons.PNG" alt="Abbildung 2: SDG Icons" class="responsiveImg" style="width: 100%;">
 <small> Abb. 2: 17 SDG-Symbole der Vereinten Nationen, eingesetzt auf der <b>SDG-Seite der Berichtsplattform Deutschland</b></small>
 </div>
 
 <div class="col-xs-12 col-md-4 col-lg-4">
-<img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/sdgIconsInvert.PNG" alt="Abbildung 3: SDG Icons inverted" class="responsiveImg">
+<img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/sdgIconsInvert.PNG" alt="Abbildung 3: SDG Icons inverted" class="responsiveImg" style="width: 100%;">
 <small> Abb. 3: 17 SDG-Symbole der Vereinten Nationen, invertiert, eingesetzt auf der <b>DNS-Seite der Berichtsplattform</b></small>
 </div>
 
