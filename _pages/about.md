@@ -28,18 +28,18 @@ Jeder Indikator der DNS wird auf einer eigenen Seite einzeln oder mit einem inha
 
 Die Symbole und Farbwahl der 17 Ziele (Abb. 2 und Abb. 3), die hier und auf der SDG-Seite dieser Berichtsplattform verwendet werden, stammen von den Vereinten Nationen. Auf der DNS-Seite der Plattform werden außerdem noch „Die Glorreichen 17“ verwendet (Abb. 4). Sie sind Teil der gleichnamigen Informationskampagne der Bundesregierung zu den Zielen für nachhaltige Entwicklung.
 
-<div class="container">
-<div class="col-xs-12 col-md-4 col-lg-4">
+<div class="container" style="padding-left: 0px:">
+<div class="col-xs-12 col-md-4 col-lg-4" style="padding-left: 0px:">
 <img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/sdgIcons.PNG" alt="Abbildung 2: SDG Icons" class="responsiveImg" style="width: 100%;">
 <small> Abb. 2: 17 SDG-Symbole der Vereinten Nationen, eingesetzt auf der <b>SDG-Seite der Berichtsplattform Deutschland</b></small>
 </div>
 
-<div class="col-xs-12 col-md-4 col-lg-4">
+<div class="col-xs-12 col-md-4 col-lg-4" style="padding-left: 0px:">
 <img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/sdgIconsInvert.PNG" alt="Abbildung 3: SDG Icons inverted" class="responsiveImg" style="width: 100%;">
 <small> Abb. 3: 17 SDG-Symbole der Vereinten Nationen, invertiert, eingesetzt auf der <b>DNS-Seite der Berichtsplattform</b></small>
 </div>
 
-<div class="col-xs-12 col-md-4 col-lg-4">
+<div class="col-xs-12 col-md-4 col-lg-4" style="padding-left: 0px:">
 <img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/glory17.PNG" alt="Abbildung 4: Glory 17" class="responsiveImg" style="width: 100%;">
 <small> Abb. 4: Die Glorreichen 17, eingesetzt auf der <b>DNS-Seite der Berichtsplattform</b></small>
 </div>
