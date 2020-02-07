@@ -30,17 +30,18 @@
                   {% assign hty_indicator = "history_indicator_" | append: i %}
                   {% assign idc_sort_order = indicator["indicator_sort_order"] %}
                   {% if indicator[hty_active] == true %}
-
+                    {% assign indicator_key = indicator[indicator_sort_order] | append: "_" | append: i %}
+                    {% assign target_key = indicator_key | append: "_target" %}
                     <table class="table table-hover tableresp">
 
                       <tr>
                         <th width="10%"> <div class=responsiveText>{{ t.summary.indicator }}</div> </th>
-                        <th colspan="9"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/{{ idc_sort_order }}/ "><div class=responsiveText>{{ indicator[hty_indicator] }}</div></a> </th>
+                        <th colspan="9"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/{{ idc_sort_order }}/ "><div class=responsiveText>{{ t.summary[indicator_key] }}</div></a> </th> <!--{{ indicator[hty_indicator] }}</div></a> </th>-->
                       </tr>
                       <tr>
                         <th> <div class=responsiveText>{{ t.summary.target }} </div></th>
                         {% assign target = "history_target_" | append: i %}
-                        <td colspan="9"> <div class=responsiveText>{{ indicator[target]}}</div> </td>
+                        <td colspan="9"> <div class=responsiveText>{{ t.summary[target_key] }}</div> </td><!--{{ indicator[target]}}</div> </td>-->
                       </tr>
 
                       <tr>
