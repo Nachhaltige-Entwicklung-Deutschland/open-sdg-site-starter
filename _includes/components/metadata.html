@@ -48,7 +48,7 @@
               {% endif %}
             </td>
 
-          {% endif %}  
+          {% endif %}
 
         {% else %} <!-- case: content -->
           <p> {{ meta[indicator_metadata.name] | t | markdownify }} </p>
@@ -82,10 +82,10 @@
               <tr>
                 <th scope="row">{{ metadata_label }} </th>
                   {% if year_d and year_a %}
-                  <td align="center" style="padding-left: 0px;padding-right: 0px;"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ year_d }}.png" alt="{{ alter }}" class="responsiveWeather" title="{{ title_d }}"/></a></td>
-                  <td align="center" style="padding-left: 0px;padding-right: 0px;"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ year_c }}.png" alt="{{ alter }}" class="responsiveWeather" title="{{ title_c }}"/></a></td>
-                  <td align="center" style="padding-left: 0px;padding-right: 0px;"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ year_b }}.png" alt="{{ alter }}" class="responsiveWeather" title="{{ title_b }}"/></a></td>
-                  <td align="center" style="padding-left: 0px;padding-right: 0px;"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ year_a }}.png" alt="{{ alter }}" class="responsiveWeather" title="{{ title_a }}"/></a></td>
+                  <td align="center" style="padding-left: 0px;padding-right: 0px;"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ year_d }}.png" alt="{{ alter }}" class="responsiveWeather" title="{{ title_d }}"/></a></td>
+                  <td align="center" style="padding-left: 0px;padding-right: 0px;"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ year_c }}.png" alt="{{ alter }}" class="responsiveWeather" title="{{ title_c }}"/></a></td>
+                  <td align="center" style="padding-left: 0px;padding-right: 0px;"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ year_b }}.png" alt="{{ alter }}" class="responsiveWeather" title="{{ title_b }}"/></a></td>
+                  <td align="center" style="padding-left: 0px;padding-right: 0px;"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ year_a }}.png" alt="{{ alter }}" class="responsiveWeather" title="{{ title_a }}"/></a></td>
                   {% endif %}
               </tr>
             {% else %}
