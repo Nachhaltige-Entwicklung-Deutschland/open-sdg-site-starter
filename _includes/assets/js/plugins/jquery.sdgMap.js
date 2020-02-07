@@ -19,7 +19,7 @@
     maxZoom: 15,
     // Visual/choropleth considerations.
     colorRange: chroma.brewer.BuGn,
-    noValueColor: '#f0f0f0',
+    noValueColor: '#ffffff',
     styleNormal: {
       weight: 1,
       opacity: 1,
@@ -69,6 +69,12 @@
     //---#1 GoalDependendMapColor---stop---------------------------------------
     //---#2.1 caseNoTimeSeriesInCsv---start------------------------------------
     this.title = options.title;
+
+    //---#2.2 footerUnitInMapLegend---start------------------------------------
+    this.unit1 = options.measurementUnit;
+    //---#2.2 footerUnitInMapLegend---stop-------------------------------------
+
+
     //---#2.1 caseNoTimeSeriesInCsv---stop-------------------------------------
 
     // Require at least one geoLayer.
@@ -97,16 +103,26 @@
       //---#1 GoalDependendMapColor---stop-------------------------------------
 
     this.years = _.uniq(_.pluck(this.geoData, 'Year')).sort();
-    this.currentYear = this.years[0];
-
+    this.currentYear = this.years.slice(-1)[0];//[0];
+    console.log("jq:",this.years.slice(-1)[0]);
     //---#2.1 caseNoTimeSeriesInCsv---start------------------------------------
-    this.title = translations.t(this.title)
+    this.title = translations.t(this.title);
     //---#2.1 caseNoTimeSeriesInCsv---stop------------------------------------
     //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
     this.timeSeries = _.pluck(this.geoData, 'timeseries');
     this.timeSeriesName = translations.t(this.timeSeries[this.timeSeries.length -1]);
-    this.unit = _.pluck(this.geoData, 'Units');
-    this.unitName = translations.t('unit') + ": " + translations.t(this.unit[this.unit.length -1]);
+
+    if (this.unit1){
+      this.unit = this.unit1;
+
+      this.unitName = translations.t('unit') + ": " + translations.t(this.unit);
+    }
+    else {
+      this.unit = _.pluck(this.geoData, 'Units');
+      this.unitName = translations.t('unit') + ": " + translations.t(this.unit[this.unit.length -1]);
+    }
+
+
     //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
     this.sex = _.pluck(this.geoData, 'sex');
     this.sexName = translations.t(this.sex[this.sex.length -1]);
@@ -400,7 +416,8 @@
           plugin.updateColors();
           plugin.selectionLegend.update();
 
-        }
+        },
+        playReverseButton: true
       }));
 
       //---#7 addMapboxWordmark---start-----------------------------------------------------------------------------------------

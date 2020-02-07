@@ -392,6 +392,7 @@ var indicatorModel = function (options) {
   };
 
   this.getData = function(options) {
+
     // field: 'Grade'
     // values: ['A', 'B']
     var options = _.defaults(options || {}, {
@@ -407,11 +408,9 @@ var indicatorModel = function (options) {
       datasetIndex = 0,
 
       //---#4 sameColorForTargetAndTimeSeries---start-----------------
-      nameList = []
-      indexList = []
+      nameList = [],
+      indexList = [],
       //---#4 sameColorForTargetAndTimeSeries---stop------------------
-
-
 
       getCombinationDescription = function(combination) {
         return _.map(Object.keys(combination), function(key) {
@@ -452,34 +451,85 @@ var indicatorModel = function (options) {
 
       //---#13 noLineForTargets---start-------------------------------------------------------------------------------------------------
       //-Since showLines does not work we set the opacity to 0.0 if it is a target------------------------------------------------------
-      getLineStyle = function (combinationDescription, datasetIndexMod) {
+      getLineStyle = function (combinationDescription, datasetIndexMod, data) {
+
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
-          return 'rgba(0, 0, 0, 0.0)';
+          if (data.length == 1){
+            console.log('a',combinationDescription, datasetIndexMod)
+            return true;
+          }
+          else{
+            console.log('b',combinationDescription, datasetIndexMod)
+            return false;
+          }
+          //return true;//'rgba(0, 0, 0, 0.0)';
+        }
+        else{
+          console.log('c',combinationDescription, datasetIndexMod)
+          return true;//'#' + getColor(datasetIndexMod);
+        }
+      },
+      //---#13 noLineForTargets---stop--------------------------------------------------------------------------------------------------
+
+      //---#22 xxx---start-------------------------------------------------------------------------------------------------
+      //-Since showLines does not work we set the opacity to 0.0 if it is a target------------------------------------------------------
+
+      getBorderColor = function(combinationDescription,datasetIndexMod,indicatorId) {
+        if (getChartStyle(indicatorId) == 'bar'){
+          return '#' + getColor(datasetIndexMod);
+        }
+        else{
+          return getBackground(combinationDescription,datasetIndexMod)
+        }
+      }
+
+
+      getBackground = function (combinationDescription, datasetIndexMod) {
+        if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
+
+          return '#ffffff';
         }
         else{
           return '#' + getColor(datasetIndexMod);
         }
       },
-      //---#13 noLineForTargets---stop--------------------------------------------------------------------------------------------------
+      //---#22 xxx---stop--------------------------------------------------------------------------------------------------
 
       //--#14 mixedCharts---start-------------------------------------------------------------------------------------------------------
-      barCharts = [translations.t('a) time series')+", "+translations.t('calculated annual values'),
-                  translations.t('a) time series')+", "+translations.t('air pollutants overall'),
+      //barCharts = [//translations.t('a) time series')+", "+translations.t('calculated annual values'),
+                  //translations.t('a) time series')+", "+translations.t('air pollutants overall'),
                   //translations.t('b) target (max)')+", "+translations.t('air pollutants overall'),
-                  translations.t('a) time series')+", "+translations.t('funding balance (share of gross domestic product (at current prices) in %)'),
-                  translations.t('a) time series')+", "+translations.t('structural funding balance (share of gross domestic product (at current prices) in %)'),
-                  translations.t('a) time series')+", "+translations.t('proportion of msy examined in all managed stocks'),
-                  translations.t('a) time series')+", "+translations.t('index overall'),
-                  translations.t('b) target (min)')+", "+translations.t('index overall')]
-      getChartStyle = function (combinationDescription) {
-        if (barCharts.indexOf(String(combinationDescription)) != -1) {
+                  //translations.t('a) time series')+", "+translations.t('funding balance (share of gross domestic product (at current prices) in %)'),
+                  //translations.t('a) time series')+", "+translations.t('structural funding balance (share of gross domestic product (at current prices) in %)'),
+                  //translations.t('a) time series')+", "+translations.t('proportion of msy examined in all managed stocks'),
+                  //translations.t('a) time series')+", "+translations.t('index overall'),
+                  //translations.t('b) target (min)')+", "+translations.t('index overall')
+
+                //]
+      //getChartStyle = function (combinationDescription) {
+        //if (barCharts.indexOf(String(combinationDescription)) != -1) {
+          //return 'bar';
+        //}
+        //else {
+          //return 'line';
+        //}
+      //},
+      //--#14 mixedCharts---stop--------------------------------------------------------------------------------------------------------
+
+      //--#14.1 barsOnly---start--------------------------------------------------------------------------------------------------------
+      barCharts = ['indicator_2-2-a','indicator_3-1-e','indicator_5-1-b','indicator_5-1-c','indicator_6-2-a','indicator_8-2-c','indicator_8-3-a','indicator_8-4-a','indicator_8-6-a','indicator_11-1-a','indicator_11-1-b','indicator_11-2-c','indicator_12-1-a','indicator_12-1-b','indicator_13-1-b','indicator_15-2-a','indicator_16-1-a','indicator_16-2-a','indicator_17-1-a','indicator_17-2-a'];
+
+      getChartStyle = function (indicatorId) {
+
+        if (barCharts.indexOf(indicatorId) != -1) {
           return 'bar';
         }
         else {
           return 'line';
         }
       },
-      //--#14 mixedCharts---stop--------------------------------------------------------------------------------------------------------
+      //--#14.1 barsOnly---stop--------------------------------------------------------------------------------------------------------
+
 
       getBorderDash = function(datasetIndex) {
         // offset if there is no headline data:
@@ -532,12 +582,13 @@ var indicatorModel = function (options) {
 
             label: combinationDescription ? combinationDescription : that.country,
             //---#13 noLineForTargets---start-------------------------------
-            //borderColor: '#' + getColor(datasetIndex),
-            borderColor: getLineStyle(combinationDescription, datasetIndexMod),
+            borderColor: getBorderColor(combinationDescription,datasetIndexMod,that.indicatorId),//'#' + getColor(datasetIndexMod),
+            //borderColor: getLineStyle(combinationDescription, datasetIndexMod),
             //---#13 noLineForTargets---stop--------------------------------
             //---#4 sameColorForTargetAndTimeSeries---start-----------------
             //backgroundColor: '#' + getColor(datasetIndex),
-            backgroundColor: '#' + getColor(datasetIndexMod),
+            //backgroundColor: '#' + getColor(datasetIndexMod),
+            backgroundColor: getBackground(combinationDescription,datasetIndexMod),
             //---#4 sameColorForTargetAndTimeSeries---stop------------------
             //---#11 setTargetPointstyle---start---------------------------------------
             pointStyle: getPointStyle(combinationDescription),
@@ -552,8 +603,11 @@ var indicatorModel = function (options) {
               return found ? found.Value : null;
             }),
             //--#14 mixedCharts---start------------------------------------------------
-            type: getChartStyle(combinationDescription),
+            //type: getChartStyle(combinationDescription),
             //--#14 mixedCharts---stop-------------------------------------------------
+            //--#14.1 barsOnly---start------------------------------------------------
+            type: getChartStyle(that.indicatorId),
+            //--#14.1 barsOnly---stop-------------------------------------------------
             borderWidth: combinationDescription ? 2 : 4
           }, that.datasetObject);
 
@@ -728,7 +782,12 @@ var indicatorModel = function (options) {
         //---#2.1 caseNoTimeSeriesInCsv---start-----------------------------------
         title: this.chartTitle,
         //---#2.1 caseNoTimeSeriesInCsv---stop------------------------------------
+
+        //---#2.2 footerUnitInMapLegend---start-----------------------------------
+        measurementUnit: this.measurementUnit,
+        //---#2.2 footerUnitInMapLegend---stop------------------------------------
       });
+
 
 
     } else {
@@ -749,14 +808,23 @@ var indicatorModel = function (options) {
         // with disaggregation categories. The value, at this point, is a string
         // which we assume to be pipe-delimited.
         var valuesToLookFor = this.startValues.split('|');
+
         // Match up each field value with a field.
         _.each(this.fieldItemStates, function(fieldItem) {
+          //--#21 allowMultipleStartValues---start-----------------------------
+          minimumFieldSelections[fieldItem.field] = [];
+          //--#21 allowMultipleStartValues---stop------------------------------
           _.each(fieldItem.values, function(fieldValue) {
+            //console.log('C',fieldValue);
             if (_.contains(valuesToLookFor, fieldValue.value)) {
-              minimumFieldSelections[fieldItem.field] = fieldValue.value;
+              //--#21 allowMultipleStartValues---start-----------------------------
+              //minimumFieldSelections[fieldItem.field] = fieldValue.value;
+              minimumFieldSelections[fieldItem.field].push(fieldValue.value);
+              //--#21 allowMultipleStartValues---stop------------------------------
             }
           });
         });
+
       }
       if (_.size(minimumFieldSelections) == 0) {
         // If we did not have any pre-configured start values, we calculate them.

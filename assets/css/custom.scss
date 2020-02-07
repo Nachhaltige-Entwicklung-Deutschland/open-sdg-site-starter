@@ -146,6 +146,15 @@ header {
     border: 2.5px solid;
   }
 
+  .swatchTgtBar {
+    display: inline-block;
+    width: 45px;
+    height: 15px;
+    margin-right: 3px;
+    margin-left: 0px;
+    border: 2.5px solid;
+  }
+
   .swatchLine {
     display: inline-block;
     width: 15px;
@@ -455,6 +464,7 @@ header {
 }
 
 .status-toggle-button {
+  margin-right: 0px;
   cursor: pointer;
 }
 .navbar ul.navbar-nav li a.status-toggle-button {
@@ -558,6 +568,8 @@ header {
   width: 100%;
   max-width: 60px;
   min-width: 15px;
+  padding-left: 0px;
+  padding-right: 0px;
   height: auto;
 }
 
@@ -589,9 +601,8 @@ header {
 }
 .my-header-note {
   display: inline-block;
-  font-size: 0.6em;
+  font-size: 0.8em;
 }
-
 
 // Map-related styles
 #main-content {
@@ -737,4 +748,21 @@ header {
 
     }
   }
+}
+
+
+//---------------------------
+.responsiveImg {
+  width: 75%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.responsiveSubtitle{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

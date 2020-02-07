@@ -97,9 +97,23 @@ var indicatorView = function (model, options) {
             .click();
         }
       }
+
       for (var fieldToSelect in args.minimumFieldSelections) {
         var fieldValue = args.minimumFieldSelections[fieldToSelect];
-        setTimeout(getClickFunction(fieldToSelect, fieldValue), 500);
+        //--#21 allowMultipleStartValues---start------------------------------
+        //setTimeout(getClickFunction(fieldToSelect, fieldValue), 500);
+        if (typeof args.minimumFieldSelections[fieldToSelect] == 'object'){
+          console.log('M: ',args.minimumFieldSelections, args.minimumFieldSelections[fieldToSelect], typeof args.minimumFieldSelections[fieldToSelect]);
+          _.each(fieldValue, function(multiValue){
+            setTimeout(getClickFunction(fieldToSelect, multiValue), 500);
+          });
+        }
+        else {
+          console.log('S: ',args.minimumFieldSelections, args.minimumFieldSelections[fieldToSelect], typeof args.minimumFieldSelections[fieldToSelect]);
+          setTimeout(getClickFunction(fieldToSelect, fieldValue), 500);
+        }
+        //--#21 allowMultipleStartValues---stop------------------------------
+
       }
     }
     else {
@@ -140,8 +154,9 @@ var indicatorView = function (model, options) {
       //view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx);
       //view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr);
       //---#1 GoalDependendMapColor---stop---------------------------
-      view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr, args.title);
+      view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr, args.title, args.measurementUnit); //---#2.2 footerUnitInMapLegend
       //---#2 TimeSeriesNameDisplayedInMaps---stop------------------
+
     }
   });
 
@@ -388,7 +403,7 @@ var indicatorView = function (model, options) {
 
 
   this.createPlot = function (chartInfo) {
-
+    console.log("chartinfo",chartInfo);
     var that = this;
     var chartConfig = {
       type: this._model.graphType,
@@ -424,7 +439,7 @@ var indicatorView = function (model, options) {
             //vvv #18.1 vvvv sort the dataset by substring if it contains "target" or "timeseries"
             var temp = [];
             _.each(chart.data.datasets, function(dataset, datasetIndex) {
-              temp.push({label: dataset.label, borderDash: dataset.borderDash, backgroundColor: dataset.backgroundColor, datasetIndex: datasetIndex, type: dataset.type});
+              temp.push({label: dataset.label, borderDash: dataset.borderDash, backgroundColor: dataset.backgroundColor, borderColor: dataset.borderColor, pointBorderColor: dataset.pointBorderColor, datasetIndex: datasetIndex, type: dataset.type});
             });
             var replaceForOrder = [{old: 'Insgesamt', new:'AAA'},
                                   {old: 'Total', new: 'AAA'},
@@ -443,10 +458,10 @@ var indicatorView = function (model, options) {
                 var subA = a.label.substr(a.label.indexOf(','), a.label.length)
                 var subB = b.label.substr(b.label.indexOf(','), b.label.length)
                 for (var i=0; i<replaceForOrder.length; i++){
-                  console.log('1:',subA);
+                  //console.log('1:',subA);
                   subA = subA.replace(replaceForOrder[i]['old'],replaceForOrder[i]['new']);
                   subB = subB.replace(replaceForOrder[i]['old'],replaceForOrder[i]['new']);
-                  console.log('2:',subA)
+                  //console.log('2:',subA)
                 }
 
               }
@@ -481,9 +496,16 @@ var indicatorView = function (model, options) {
               };
               //-----------------------------------------------------------
               var exc = 0;
-              if (label.indexOf('Deutschland (insgesamt)') != -1 || label.indexOf('Germany (total)') != -1) {
+              var exceptions = ['Deutschland (insgesamt)', 'Germany (total)',
+                                'Insgesamt', 'Total',
+                                'Index insgesamt', 'Index overall'];
+              if (exceptions.includes(label)) {
                 exc = 1;
               }
+
+              //if (label.indexOf('Deutschland (insgesamt)') != -1 || label.indexOf('Germany (total)') != -1) {
+                //exc = 1;
+              //}
               for (var i=0; i<label.split(',').length - exc; i++){
                 indent = indent.concat('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;');
               };
@@ -491,19 +513,23 @@ var indicatorView = function (model, options) {
               text.push(indent);
               // ^^^^ #18.4 ^^^^----------------------------------------------------
 
-
               //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
               //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
               if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
-                text.push('<span class="swatchTgt' + '" style="border-color: ' + dataset.backgroundColor + '"></span>');
+                if (dataset.type != 'bar'){
+                  text.push('<span class="swatchTgt' + '" style="border-color: ' + dataset.pointBorderColor + '"></span>');
+                }
+                else{
+                  text.push('<span class="swatchTgtBar' + '" style="border-color: ' + dataset.pointBorderColor + '"></span>');
+                }
               }
               else if (dataset.type != 'bar'){
-                text.push('<span class="swatchLine' + (dataset.borderDash ? ' dashed' : '') + ' left" style="background-color: ' + dataset.backgroundColor + '"></span>');
-                text.push('<span class="swatchTsr' + (dataset.borderDash ? ' dashed' : '') + '" style="border-color: ' + dataset.backgroundColor + '"></span>');
-                text.push('<span class="swatchLine' + (dataset.borderDash ? ' dashed' : '') + ' right" style="background-color: ' + dataset.backgroundColor + '"></span>');
+                text.push('<span class="swatchLine' + (dataset.borderDash ? ' dashed' : '') + ' left" style="background-color: ' + dataset.pointBorderColor + '"></span>');
+                text.push('<span class="swatchTsr' + (dataset.borderDash ? ' dashed' : '') + '" style="border-color: ' + dataset.pointBorderColor + '"></span>');
+                text.push('<span class="swatchLine' + (dataset.borderDash ? ' dashed' : '') + ' right" style="background-color: ' + dataset.pointBorderColor + '"></span>');
               }
               else{
-                text.push('<span class="swatchBar' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '"></span>');
+                text.push('<span class="swatchBar' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.pointBorderColor + '"></span>');
               }
               //---#3 targetDifferentInLegend---stop-----------------------------------------------------------------------------------------------------------------------------
 

@@ -7,42 +7,54 @@
       {%- assign metadata_label = indicator_metadata.field.label -%}
     {%- endif -%}
 
+    {% if indicator_metadata.name contains "source_organisation_" %}
+      {% assign var = 'dontShow' %}
+      {% if indicator_metadata.name contains "short" or indicator_metadata.name contains "_logo" %}
+        {% assign var = 'doShow' %}
+      {% endif %}
+    {% endif %}
+
     {% if indicator_metadata.field.scope == include.scope %}
-      {% unless indicator_metadata.name contains "_url_text" or indicator_metadata.name contains "_link_text" or indicator_metadata.name contains "_year" %}
+      {% unless var == 'dontShow' or indicator_metadata.name contains "_url_text" or indicator_metadata.name contains "_link_text" or indicator_metadata.name contains "_year" or indicator_metadata.name == "national_indicator_available" or indicator_metadata.name == "national_geographical_coverage" %}
       <tr>
         {% if indicator_metadata.field.scope != 'content' %}
-          <th scope="row">{{ metadata_label }} </th>
 
-          <td colspan="4">
-            {% if indicator_metadata.name contains "_url" or indicator_metadata.name contains "_link" %}
-              {% assign url_text_name = indicator_metadata.name | replace_first:'_url','_url_text'  %}
-              {% assign url_text_name = url_text_name | replace_first:'_link','_link_text'  %}
-              {% assign url_text = meta[url_text_name] | t %}
-              {% unless url_text %}
-                {% assign url_text = 'Link' %}
-              {% endunless %}
+          {% if meta[indicator_metadata.name] %}
 
-              {% if meta[indicator_metadata.name] contains "http" or meta[indicator_metadata.name] contains "mailto" %}
-                <a href="{{ meta[indicator_metadata.name] }}" target="_blank">
-                  {{ url_text }} <span class="visuallyhidden">{{ t.general.opens_new_window }}</span>
-                </a>
+            <th scope="row" height="{{ tableHeight }}" >{{ metadata_label }}</th>
+
+            <td colspan="4">
+              {% if indicator_metadata.name contains "_url" or indicator_metadata.name contains "_link" %}
+                {% assign url_text_name = indicator_metadata.name | replace_first:'_url','_url_text'  %}
+                {% assign url_text_name = url_text_name | replace_first:'_link','_link_text'  %}
+                {% assign url_text = meta[url_text_name] | t %}
+                {% unless url_text %}
+                  {% assign url_text = 'Link' %}
+                {% endunless %}
+
+                {% if meta[indicator_metadata.name] contains "http" or meta[indicator_metadata.name] contains "mailto" %}
+                  <a href="{{ meta[indicator_metadata.name] }}" target="_blank">
+                    {{ url_text }} <span class="visuallyhidden">{{ t.general.opens_new_window }}</span>
+                  </a>
+                {% endif %}
+
+              {% elsif indicator_metadata.field.element == 'multiselect' %}
+                {% for item in meta[indicator_metadata.name] %}
+                  {{ item | t }}{% unless forloop.last %}, {% endunless %}
+                {% endfor %}
+
+              {% else %}
+                {{ meta[indicator_metadata.name] | t | markdownify }}
               {% endif %}
+            </td>
 
-            {% elsif indicator_metadata.field.element == 'multiselect' %}
-              {% for item in meta[indicator_metadata.name] %}
-                {{ item | t }}{% unless forloop.last %}, {% endunless %}
-              {% endfor %}
+          {% endif %}
 
-            {% else %}
-              {{ meta[indicator_metadata.name] | t | markdownify }}
-            {% endif %}
-          </td>
         {% else %} <!-- case: content -->
           <p> {{ meta[indicator_metadata.name] | t | markdownify }} </p>
         {% endif %}
       </tr>
       {% endunless %}
-
 
       {% if indicator_metadata.name contains "_year" %}
 
@@ -70,10 +82,10 @@
               <tr>
                 <th scope="row">{{ metadata_label }} </th>
                   {% if year_d and year_a %}
-                  <td align="center"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ year_d }}.png" alt="{{ alter }}" class="responsiveWeather" title="{{ title_d }}"/></a></td>
-                  <td align="center"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ year_c }}.png" alt="{{ alter }}" class="responsiveWeather" title="{{ title_c }}"/></a></td>
-                  <td align="center"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ year_b }}.png" alt="{{ alter }}" class="responsiveWeather" title="{{ title_b  }}"/></a></td>
-                  <td align="center"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ year_a }}.png" alt="{{ alter }}" class="responsiveWeather" title="{{ title_a }}"/></a></td>
+                  <td align="center" style="padding-left: 0px;padding-right: 0px;"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ year_d }}.png" alt="{{ alter }}" class="responsiveWeather" title="{{ title_d }}"/></a></td>
+                  <td align="center" style="padding-left: 0px;padding-right: 0px;"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ year_c }}.png" alt="{{ alter }}" class="responsiveWeather" title="{{ title_c }}"/></a></td>
+                  <td align="center" style="padding-left: 0px;padding-right: 0px;"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ year_b }}.png" alt="{{ alter }}" class="responsiveWeather" title="{{ title_b }}"/></a></td>
+                  <td align="center" style="padding-left: 0px;padding-right: 0px;"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ year_a }}.png" alt="{{ alter }}" class="responsiveWeather" title="{{ title_a }}"/></a></td>
                   {% endif %}
               </tr>
             {% else %}
