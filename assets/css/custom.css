@@ -608,3 +608,8 @@ header {
   height: auto;
   border: 1px solid #ddd;
   border-radius: 4px; }
+
+.responsiveSubtitle {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
