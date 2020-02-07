@@ -5,7 +5,7 @@
 {% assign goal_title_key = goal_number | append: '-title' %}
 {% assign goal_short_key = goal_number | append: '-short' %}
 {% assign goal_title = t.global_goals[goal_title_key] %}
-{% assign goal_short = t.dns_goals[goal_short_key] %}
+{% assign goal_short = t.dns_goals[goal_title_key] %}
 
 <div class="heading goal-{{page.sdg_goal}}">
   <div class="container">
