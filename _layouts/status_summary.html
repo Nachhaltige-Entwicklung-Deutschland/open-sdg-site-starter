@@ -30,7 +30,9 @@
                   {% assign hty_indicator = "history_indicator_" | append: i %}
                   {% assign idc_sort_order = indicator["indicator_sort_order"] %}
                   {% if indicator[hty_active] == true %}
-                    {% assign indicator_key = indicator[indicator_sort_order] | append: "_" | append: i %}
+
+                    {% assign indicator_number = indicator[indicator_sort_order]  %}
+                    {% assign indicator_key = indicator_number | append: "_" | append: i %}
                     {% assign target_key = indicator_key | append: "_target" %}
                     <table class="table table-hover tableresp">
 
