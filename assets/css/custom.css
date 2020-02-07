@@ -601,7 +601,8 @@ header {
       width: 200px; } }
 
 .responsiveImg {
-  width: 100%;
+  width: 75%;
+  align: center;
   height: auto;
   border: 1px solid #ddd;
   border-radius: 4px; }
