@@ -3047,6 +3047,7 @@ $(function() {
     timeSliderDragUpdate: true,
     speedSlider: false,
     position: 'bottomleft',
+    timeSlider: false,
     // Player options.
     playerOptions: {
       transitionTime: 1000,
