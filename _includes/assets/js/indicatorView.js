@@ -414,7 +414,7 @@ var indicatorView = function (model, options) {
       _.each(chart.data.datasets, function(dataset) {
         console.log('funct.:', dataset);
       },
-    };
+    )};
 
     var chartConfig = {
       type: this._model.graphType,
