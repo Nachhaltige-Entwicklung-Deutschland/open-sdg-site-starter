@@ -530,11 +530,17 @@ var indicatorModel = function (options) {
 
       //--#14.1 barsOnly---start--------------------------------------------------------------------------------------------------------
       barCharts = ['indicator_2-2-a','indicator_3-1-e','indicator_5-1-b','indicator_5-1-c','indicator_6-2-a','indicator_8-2-c','indicator_8-3-a','indicator_8-4-a','indicator_8-6-a','indicator_11-1-a','indicator_11-1-b','indicator_11-2-c','indicator_12-1-a','indicator_12-1-b','indicator_13-1-b','indicator_15-2-a','indicator_16-1-a','indicator_16-2-a','indicator_17-1-a','indicator_17-2-a'];
+      exceptions = [translations.t('direct co2 emissions and co2 content of consumer goods')];
 
-      getChartStyle = function (indicatorId) {
+      getChartStyle = function (indicatorId, combinationDescription) {
 
         if (barCharts.indexOf(indicatorId) != -1) {
-          return 'bar';
+          if (exceptions.indexOf(combinationDescription) != -1){
+            return 'line';
+          }
+          else{
+            return 'bar';
+          }
         }
         else {
           return 'line';
@@ -618,7 +624,7 @@ var indicatorModel = function (options) {
             //type: getChartStyle(combinationDescription),
             //--#14 mixedCharts---stop-------------------------------------------------
             //--#14.1 barsOnly---start------------------------------------------------
-            type: getChartStyle(that.indicatorId),
+            type: getChartStyle(that.indicatorId, combinationDescription),
             //--#14.1 barsOnly---stop-------------------------------------------------
 
             stacked: getStacked(that.indicatorId),
