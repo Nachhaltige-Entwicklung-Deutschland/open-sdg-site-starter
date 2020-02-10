@@ -506,7 +506,6 @@ var indicatorModel = function (options) {
       },
 
 
-
       //--#14 mixedCharts---start-------------------------------------------------------------------------------------------------------
       //barCharts = [//translations.t('a) time series')+", "+translations.t('calculated annual values'),
                   //translations.t('a) time series')+", "+translations.t('air pollutants overall'),
