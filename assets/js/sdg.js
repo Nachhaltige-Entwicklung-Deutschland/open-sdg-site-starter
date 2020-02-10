@@ -2203,7 +2203,7 @@ var indicatorView = function (model, options) {
               _.each(chart.data.datasets, function(dataset) {
                 console.log('funct.:', dataset);
               });
-              return: true;
+              return true;
             };,
             maxBarThickness: 150,
             gridLines: {
@@ -2215,7 +2215,7 @@ var indicatorView = function (model, options) {
               _.each(chart.data.datasets, function(dataset) {
                 console.log('funct.:', dataset);
               });
-              return: true;
+              return true;
             };,
             ticks: {
               suggestedMin: 0
