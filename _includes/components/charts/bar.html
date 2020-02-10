@@ -25,3 +25,24 @@ being used, see `createPlot()` in `indicatorView.js`.
     }
   </script>
 {% endif %}
+{% if meta.stackedBar %}
+  <script>
+    opensdg.chartConfigAlter = function(config) {
+      var overrides = {
+        options: {
+          scales: {
+            xAxes: [{
+              stacked: true,
+            }],
+            yAxes: [{
+              stacked: true,
+            }]
+          }
+        }
+      }
+      // Add these overrides onto the normal config, and return it.
+      $.extend(true, config, overrides);
+      return config;
+    }
+  </script>
+{% endif %}
