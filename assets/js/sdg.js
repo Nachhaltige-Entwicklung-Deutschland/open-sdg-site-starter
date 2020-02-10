@@ -1341,7 +1341,7 @@ var indicatorDataStore = function(dataUrl) {
       },
       //---#22 xxx---stop--------------------------------------------------------------------------------------------------
 
-      stackedCharts = ['indicator_12-1-b']
+      stackedCharts = ['indicator_12-1-b'];
       getStacked( indicatorId){
         if (stackedCharts.indexOf(indicatorId) != -1) {
           return true;
@@ -2176,6 +2176,8 @@ var indicatorView = function (model, options) {
 
   this.createPlot = function (chartInfo) {
     console.log("chartinfo",chartInfo);
+    console.log("chartinfo1",chartInfo[datasets]);
+    console.log("chartinfo2",chartInfo.datasets);
     var that = this;
     var chartConfig = {
       type: this._model.graphType,
