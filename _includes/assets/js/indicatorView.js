@@ -410,7 +410,7 @@ var indicatorView = function (model, options) {
     this._model.stackedBar ? console.log("chartinfoy",this._model.stackedBar) : console.log("notStacked");
 
     var stack = [ ];
-    
+
 
     var chartConfig = {
       type: this._model.graphType,
@@ -427,7 +427,7 @@ var indicatorView = function (model, options) {
             stacked: function(chart){
               _.each(chart.data.datasets, function(dataset) {
                 console.log('funct.:', dataset);
-              },
+              };
               return: true;
             )};,
             maxBarThickness: 150,
@@ -439,7 +439,7 @@ var indicatorView = function (model, options) {
             stacked: function(chart){
               _.each(chart.data.datasets, function(dataset) {
                 console.log('funct.:', dataset);
-              },
+              };
               return: true;
             )};,
             ticks: {
