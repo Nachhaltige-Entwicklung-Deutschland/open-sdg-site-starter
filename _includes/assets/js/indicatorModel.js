@@ -455,17 +455,17 @@ var indicatorModel = function (options) {
 
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
           if (data.length == 1){
-            console.log('a',combinationDescription, datasetIndexMod)
+            //console.log('a',combinationDescription, datasetIndexMod)
             return true;
           }
           else{
-            console.log('b',combinationDescription, datasetIndexMod)
+            //console.log('b',combinationDescription, datasetIndexMod)
             return false;
           }
           //return true;//'rgba(0, 0, 0, 0.0)';
         }
         else{
-          console.log('c',combinationDescription, datasetIndexMod)
+          //console.log('c',combinationDescription, datasetIndexMod)
           return true;//'#' + getColor(datasetIndexMod);
         }
       },
@@ -495,6 +495,17 @@ var indicatorModel = function (options) {
       },
       //---#22 xxx---stop--------------------------------------------------------------------------------------------------
 
+      stackedCharts = ['indicator_12-1-b'];
+      getStacked = function(indicatorId){
+        if (stackedCharts.indexOf(indicatorId) != -1) {
+          return true;
+        }
+        else {
+          return false;
+        }
+      },
+
+
       //--#14 mixedCharts---start-------------------------------------------------------------------------------------------------------
       //barCharts = [//translations.t('a) time series')+", "+translations.t('calculated annual values'),
                   //translations.t('a) time series')+", "+translations.t('air pollutants overall'),
@@ -518,11 +529,17 @@ var indicatorModel = function (options) {
 
       //--#14.1 barsOnly---start--------------------------------------------------------------------------------------------------------
       barCharts = ['indicator_2-2-a','indicator_3-1-e','indicator_5-1-b','indicator_5-1-c','indicator_6-2-a','indicator_8-2-c','indicator_8-3-a','indicator_8-4-a','indicator_8-6-a','indicator_11-1-a','indicator_11-1-b','indicator_11-2-c','indicator_12-1-a','indicator_12-1-b','indicator_13-1-b','indicator_15-2-a','indicator_16-1-a','indicator_16-2-a','indicator_17-1-a','indicator_17-2-a'];
+      exceptions = [translations.t('direct co2 emissions and co2 content of consumer goods')];
 
-      getChartStyle = function (indicatorId) {
+      getChartStyle = function (indicatorId, combinationDescription) {
 
         if (barCharts.indexOf(indicatorId) != -1) {
-          return 'bar';
+          if (exceptions.indexOf(combinationDescription) != -1){
+            return 'line';
+          }
+          else{
+            return 'bar';
+          }
         }
         else {
           return 'line';
@@ -606,8 +623,11 @@ var indicatorModel = function (options) {
             //type: getChartStyle(combinationDescription),
             //--#14 mixedCharts---stop-------------------------------------------------
             //--#14.1 barsOnly---start------------------------------------------------
-            type: getChartStyle(that.indicatorId),
+            type: getChartStyle(that.indicatorId, combinationDescription),
             //--#14.1 barsOnly---stop-------------------------------------------------
+
+            stacked: getStacked(that.indicatorId),
+
             borderWidth: combinationDescription ? 2 : 4
           }, that.datasetObject);
 

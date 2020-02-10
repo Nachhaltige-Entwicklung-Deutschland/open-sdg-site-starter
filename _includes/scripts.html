@@ -39,6 +39,7 @@ $(function() {
           $('.async-loading').remove();
           $('.async-loaded').show();
           var model = new indicatorModel({
+
             data: res.data,
             edgesData: res.edges,
             geoCodeRegEx: domData.geocoderegex,

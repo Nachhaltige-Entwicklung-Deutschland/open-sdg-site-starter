@@ -45,7 +45,7 @@
       times: options.years.join('-01-02,') + '-01-02',
       currentTime: new Date(options.years.slice(-1)[0] + '-01-02').getTime(),
     });
-    console.log("ys:",options.years);
+    //console.log("ys:",options.years);
     // Create the player.
     options.player = new L.TimeDimension.Player(options.playerOptions, options.timeDimension);
     // Listen for time changes.
