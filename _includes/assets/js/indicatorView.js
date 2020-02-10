@@ -403,11 +403,13 @@ var indicatorView = function (model, options) {
 
 
   this.createPlot = function (chartInfo) {
-    console.log("chartinfox",chartInfo.data.datasets);
+    console.log("chartinfox",chartInfo);
 
     var that = this;
 
     this._model.stackedBar ? console.log("chartinfoy",this._model.stackedBar) : console.log("notStacked");
+
+    var stack = [ ]
 
     var chartConfig = {
       type: this._model.graphType,
