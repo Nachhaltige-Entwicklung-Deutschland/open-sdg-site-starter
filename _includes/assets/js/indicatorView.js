@@ -429,7 +429,7 @@ var indicatorView = function (model, options) {
                 console.log('funct.:', dataset);
               });
               return true;
-            };,
+            },
             maxBarThickness: 150,
             gridLines: {
               color: '#ddd',
@@ -441,7 +441,7 @@ var indicatorView = function (model, options) {
                 console.log('funct.:', dataset);
               });
               return true;
-            };,
+            },
             ticks: {
               suggestedMin: 0
             },
