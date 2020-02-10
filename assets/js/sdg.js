@@ -2187,9 +2187,9 @@ var indicatorView = function (model, options) {
     var stack = [ ];
     getStacked = function(chart){
       _.each(chart.data.datasets, function(dataset) {
-        console.log('funct.:', dataset)
-      }
-    };
+        console.log('funct.:', dataset);
+      },
+    )};
 
     var chartConfig = {
       type: this._model.graphType,
