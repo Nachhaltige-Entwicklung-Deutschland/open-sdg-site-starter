@@ -2179,7 +2179,10 @@ var indicatorView = function (model, options) {
 
   this.createPlot = function (chartInfo) {
     console.log("chartinfox",chartInfo);
+
     var that = this;
+
+    this._model.stackedBar ? console.log("chartinfox",this._model.stackedBar) : console.log("notStacked");
     var chartConfig = {
       type: this._model.graphType,
       data: chartInfo,
