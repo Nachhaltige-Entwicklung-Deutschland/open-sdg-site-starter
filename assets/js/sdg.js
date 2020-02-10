@@ -2176,7 +2176,7 @@ var indicatorView = function (model, options) {
 
   this.createPlot = function (chartInfo) {
     console.log("chartinfo",chartInfo);
-    //console.log("chartinfo1",chartInfo[datasets]);
+    console.log("chartinfo1",chartInfo.selectedUnit);
     console.log("chartinfo2",chartInfo.datasets);
     var that = this;
     var chartConfig = {
