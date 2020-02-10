@@ -407,11 +407,6 @@ var indicatorView = function (model, options) {
 
     var that = this;
 
-    this._model.stackedBar ? console.log("chartinfoy",this._model.stackedBar) : console.log("notStacked");
-
-    var stack = [ ];
-
-
     var chartConfig = {
       type: this._model.graphType,
       data: chartInfo,
@@ -424,25 +419,13 @@ var indicatorView = function (model, options) {
         sScrollXInner: '150%',
         scales: {
           xAxes: [{
-            stacked: function(chart){
-              _.each(chart.data.datasets, function(dataset) {
-                console.log('funct.:', dataset);
-              });
-              return true;
-            },
             maxBarThickness: 150,
             gridLines: {
               color: '#ddd',
             }
           }],
           yAxes: [{
-            stacked: function(chart){
-              _.each(chart.data.datasets, function(dataset) {
-                console.log('funct.:', dataset);
-              });
-              return true;
-            },
-            ticks: {
+              ticks: {
               suggestedMin: 0
             },
             scaleLabel: {

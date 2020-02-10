@@ -38,9 +38,6 @@ var indicatorModel = function (options) {
   this.graphType = options.graphType;
   this.measurementUnit = options.measurementUnit;
   this.copyright = options.copyright;
-
-  this.stackedBar = options.stackedBar;
-
   this.dataSource = options.dataSource;
   this.geographicalArea = options.geographicalArea;
   this.footnote = options.footnote;
