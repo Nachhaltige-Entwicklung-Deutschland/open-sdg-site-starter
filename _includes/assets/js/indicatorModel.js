@@ -608,6 +608,9 @@ var indicatorModel = function (options) {
             //--#14.1 barsOnly---start------------------------------------------------
             type: getChartStyle(that.indicatorId),
             //--#14.1 barsOnly---stop-------------------------------------------------
+
+            stacked: false,
+
             borderWidth: combinationDescription ? 2 : 4
           }, that.datasetObject);
 
