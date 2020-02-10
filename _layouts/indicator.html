@@ -21,6 +21,7 @@
         </a>
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10">
+
         <h1>
           <a href="{{ goal_uri }}">
             <span class="hidden-sm hidden-md hidden-lg">{{ goalShort }}</span><span class="hidden-xs">{{ t.general.goal }} {{ goal_number }}: {{ goalLong }}</span>
@@ -29,9 +30,9 @@
 
         <hr>
 
-        <h4>
+        <h3 style="color:white;">
           {{ meta.section }} - <i>{{ meta.postulate }}</i>
-        </h4>
+        </h3>
 
         <h2>{{ meta.indicator_display }}: {{ meta.indicator | get_indicator_name }}</h2>
       </div>
