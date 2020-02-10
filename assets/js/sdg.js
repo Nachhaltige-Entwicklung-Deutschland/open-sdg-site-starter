@@ -2484,8 +2484,8 @@ var indicatorView = function (model, options) {
   this.createSelectionsTable = function(chartInfo) {
     //---#19 addUnitToTableHeaderIfNeeded---start---------------------------------------------------
     var tableUnit = (chartInfo.selectedUnit && !chartInfo.footerFields[translations.indicator.unit_of_measurement]) ? translations.t(chartInfo.selectedUnit) : '';
-    this.createTable(chartInfo.selectionsTable, chartInfo.indicatorId, '#selectionsTable', true);
-    //this.createTable(chartInfo.selectionsTable, tableUnit, chartInfo.indicatorId, '#selectionsTable', true);
+    //this.createTable(chartInfo.selectionsTable, chartInfo.indicatorId, '#selectionsTable', true);
+    this.createTable(chartInfo.selectionsTable, tableUnit, chartInfo.indicatorId, '#selectionsTable', true);
     //---#19 addUnitToTableHeaderIfNeeded---stop----------------------------------------------------
     this.createTableFooter('selectionTableFooter', chartInfo.footerFields, '#selectionsTable');
     this.createDownloadButton(chartInfo.selectionsTable, 'Table', chartInfo.indicatorId, '#selectionsTable');
@@ -2544,8 +2544,8 @@ var indicatorView = function (model, options) {
     }));
   }
   //---#19 addUnitToTableHeaderIfNeeded---start---------------------------------------------------
-  this.createTable = function(table, indicatorId, el) {
-  //this.createTable = function(table, tableUnit, indicatorId, el) {
+  //this.createTable = function(table, indicatorId, el) {
+  this.createTable = function(table, tableUnit, indicatorId, el) {
   //---#19 addUnitToTableHeaderIfNeeded---stop----------------------------------------------------
     options = options || {};
     var that = this,
@@ -2575,8 +2575,8 @@ var indicatorView = function (model, options) {
         var span = '<span class="sort" />';
         var span_heading = '<span>' + translations.t(heading) + '</span>';
         //---#19 addUnitToTableHeaderIfNeeded---start---------------------------------------------------
-        return (!index || heading.toLowerCase() == 'units') ? span_heading + span : span + span_heading;
-        //return (!index || heading.toLowerCase() == 'units') ? span_heading + span : span + span_heading + ((tableUnit == '') ? '' : ('<br>(' + tableUnit)+')');
+        //return (!index || heading.toLowerCase() == 'units') ? span_heading + span : span + span_heading;
+        return (!index || heading.toLowerCase() == 'units') ? span_heading + span : span + span_heading + ((tableUnit == '') ? '' : ('<br>(' + tableUnit)+')');
         //---#19 addUnitToTableHeaderIfNeeded---stop----------------------------------------------------
       };
       table.headings.forEach(function (heading, index) {
