@@ -1341,6 +1341,18 @@ var indicatorDataStore = function(dataUrl) {
       },
       //---#22 xxx---stop--------------------------------------------------------------------------------------------------
 
+      stackedCharts = ['indicator_12-1-b']
+      getStacked( indicatorId){
+        if (stackedCharts.indexOf(indicatorId) != -1) {
+          return true;
+        }
+        else {
+          return false;
+        }
+      },
+
+
+
       //--#14 mixedCharts---start-------------------------------------------------------------------------------------------------------
       //barCharts = [//translations.t('a) time series')+", "+translations.t('calculated annual values'),
                   //translations.t('a) time series')+", "+translations.t('air pollutants overall'),
@@ -1455,7 +1467,7 @@ var indicatorDataStore = function(dataUrl) {
             type: getChartStyle(that.indicatorId),
             //--#14.1 barsOnly---stop-------------------------------------------------
 
-            stacked: false,
+            stacked: getStacked(that.indicatorId),
 
             borderWidth: combinationDescription ? 2 : 4
           }, that.datasetObject);
