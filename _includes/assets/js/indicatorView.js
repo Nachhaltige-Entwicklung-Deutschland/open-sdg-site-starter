@@ -421,12 +421,14 @@ var indicatorView = function (model, options) {
         sScrollXInner: '150%',
         scales: {
           xAxes: [{
+            stacked: true,
             maxBarThickness: 150,
             gridLines: {
               color: '#ddd',
             }
           }],
           yAxes: [{
+            stacked: true,
             ticks: {
               suggestedMin: 0
             },
