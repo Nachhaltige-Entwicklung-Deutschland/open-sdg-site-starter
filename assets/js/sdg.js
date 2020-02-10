@@ -884,6 +884,9 @@ var indicatorDataStore = function(dataUrl) {
   this.graphType = options.graphType;
   this.measurementUnit = options.measurementUnit;
   this.copyright = options.copyright;
+
+  this.stackedBar = options.stackedBar;
+
   this.dataSource = options.dataSource;
   this.geographicalArea = options.geographicalArea;
   this.footnote = options.footnote;
@@ -1301,17 +1304,17 @@ var indicatorDataStore = function(dataUrl) {
 
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
           if (data.length == 1){
-            console.log('a',combinationDescription, datasetIndexMod)
+            //console.log('a',combinationDescription, datasetIndexMod)
             return true;
           }
           else{
-            console.log('b',combinationDescription, datasetIndexMod)
+            //console.log('b',combinationDescription, datasetIndexMod)
             return false;
           }
           //return true;//'rgba(0, 0, 0, 0.0)';
         }
         else{
-          console.log('c',combinationDescription, datasetIndexMod)
+          //console.log('c',combinationDescription, datasetIndexMod)
           return true;//'#' + getColor(datasetIndexMod);
         }
       },
@@ -1875,13 +1878,13 @@ var indicatorView = function (model, options) {
         //--#21 allowMultipleStartValues---start------------------------------
         //setTimeout(getClickFunction(fieldToSelect, fieldValue), 500);
         if (typeof args.minimumFieldSelections[fieldToSelect] == 'object'){
-          console.log('M: ',args.minimumFieldSelections, args.minimumFieldSelections[fieldToSelect], typeof args.minimumFieldSelections[fieldToSelect]);
+          //console.log('M: ',args.minimumFieldSelections, args.minimumFieldSelections[fieldToSelect], typeof args.minimumFieldSelections[fieldToSelect]);
           _.each(fieldValue, function(multiValue){
             setTimeout(getClickFunction(fieldToSelect, multiValue), 500);
           });
         }
         else {
-          console.log('S: ',args.minimumFieldSelections, args.minimumFieldSelections[fieldToSelect], typeof args.minimumFieldSelections[fieldToSelect]);
+          //console.log('S: ',args.minimumFieldSelections, args.minimumFieldSelections[fieldToSelect], typeof args.minimumFieldSelections[fieldToSelect]);
           setTimeout(getClickFunction(fieldToSelect, fieldValue), 500);
         }
         //--#21 allowMultipleStartValues---stop------------------------------
@@ -2175,9 +2178,7 @@ var indicatorView = function (model, options) {
 
 
   this.createPlot = function (chartInfo) {
-    console.log("chartinfo",chartInfo);
-    console.log("chartinfo1",chartInfo.allLabels);
-    console.log("chartinfo2",chartInfo.datasets[0]);
+    console.log("chartinfox",chartInfo);
     var that = this;
     var chartConfig = {
       type: this._model.graphType,
