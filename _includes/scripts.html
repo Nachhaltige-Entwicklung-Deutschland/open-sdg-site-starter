@@ -39,6 +39,7 @@ $(function() {
           $('.async-loading').remove();
           $('.async-loaded').show();
           var model = new indicatorModel({
+
             data: res.data,
             edgesData: res.edges,
             geoCodeRegEx: domData.geocoderegex,
@@ -49,6 +50,9 @@ $(function() {
             chartTitle: domData.charttitle,
             measurementUnit: domData.measurementunit,
             copyright: domData.copyright,
+
+            stackedBar: domData.stackedBar,
+
             dataSource: domData.datasource,
             geographicalArea: domData.geographicalarea,
             showData: domData.showdata,

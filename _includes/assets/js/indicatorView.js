@@ -103,13 +103,13 @@ var indicatorView = function (model, options) {
         //--#21 allowMultipleStartValues---start------------------------------
         //setTimeout(getClickFunction(fieldToSelect, fieldValue), 500);
         if (typeof args.minimumFieldSelections[fieldToSelect] == 'object'){
-          console.log('M: ',args.minimumFieldSelections, args.minimumFieldSelections[fieldToSelect], typeof args.minimumFieldSelections[fieldToSelect]);
+          //console.log('M: ',args.minimumFieldSelections, args.minimumFieldSelections[fieldToSelect], typeof args.minimumFieldSelections[fieldToSelect]);
           _.each(fieldValue, function(multiValue){
             setTimeout(getClickFunction(fieldToSelect, multiValue), 500);
           });
         }
         else {
-          console.log('S: ',args.minimumFieldSelections, args.minimumFieldSelections[fieldToSelect], typeof args.minimumFieldSelections[fieldToSelect]);
+          //console.log('S: ',args.minimumFieldSelections, args.minimumFieldSelections[fieldToSelect], typeof args.minimumFieldSelections[fieldToSelect]);
           setTimeout(getClickFunction(fieldToSelect, fieldValue), 500);
         }
         //--#21 allowMultipleStartValues---stop------------------------------
@@ -403,9 +403,7 @@ var indicatorView = function (model, options) {
 
 
   this.createPlot = function (chartInfo) {
-    console.log("chartinfo",chartInfo);
-    console.log("chartinfo1",chartInfo.allLabels);
-    console.log("chartinfo2",chartInfo.datasets[0]);
+    console.log("chartinfox",chartInfo);
     var that = this;
     var chartConfig = {
       type: this._model.graphType,
