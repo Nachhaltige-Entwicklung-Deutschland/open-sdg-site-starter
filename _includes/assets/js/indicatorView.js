@@ -405,7 +405,7 @@ var indicatorView = function (model, options) {
   this.createPlot = function (chartInfo) {
     console.log("chartinfo",chartInfo);
     console.log("chartinfo1",chartInfo.selectedUnit);
-    console.log("chartinfo2",chartInfo.datasets);
+    console.log("chartinfo2",chartInfo.datasets[0]);
     var that = this;
     var chartConfig = {
       type: this._model.graphType,
