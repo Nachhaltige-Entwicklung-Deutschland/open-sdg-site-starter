@@ -496,7 +496,7 @@ var indicatorModel = function (options) {
       //---#22 xxx---stop--------------------------------------------------------------------------------------------------
 
       stackedCharts = ['indicator_12-1-b'];
-      getStacked( indicatorId){
+      getStacked = function(indicatorId){
         if (stackedCharts.indexOf(indicatorId) != -1) {
           return true;
         }
