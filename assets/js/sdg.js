@@ -2492,7 +2492,6 @@ var indicatorView = function (model, options) {
     this.createSourceButton(chartInfo.shortIndicatorId, '#selectionsTable');
   };
 
-
   this.createDownloadButton = function(table, name, indicatorId, el) {
     if(window.Modernizr.blobconstructor) {
       var downloadKey = 'download_csv';
