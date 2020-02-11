@@ -11,6 +11,7 @@
 {% assign goalShort = t.dns_goals[goalKey] %}
 {% assign goalLong = t.global_goals[goalKey] %}
 
+
 <div class="heading indicator goal-{{ goal_number }}">
   <div class="container">
     <div class="row">
@@ -29,8 +30,8 @@
 
         <hr>
 
-        <h1 style="color:white;" title="Bereich">
-          {{ meta.section }} - <i title="Postulat">{{ meta.postulate }}</i>
+        <h1 style="color:white;" title="{{ t.general.section }}: {{ meta.section }}">
+          {{ meta.section }} - <i title="{{ t.general.postulate}}: {{ meta.postulate }}">{{ meta.postulate }}</i>
         </h1>
 
         <h2>{{ t.general.indicator }} {{ meta.indicator_display }}: {{ meta.indicator | get_indicator_name }}</h2>
