@@ -1389,9 +1389,9 @@ var indicatorDataStore = function(dataUrl) {
 
 
       getChartStyle = function (indicatorId, combinationDescription) {
-        
+
         if (barCharts.indexOf(indicatorId) != -1) {
-          if (exceptions.indexOf(combinationDescription) != -1 || excBl ){
+          if (exceptions.indexOf(combinationDescription) != -1){
             return 'line';
           }
           else{
