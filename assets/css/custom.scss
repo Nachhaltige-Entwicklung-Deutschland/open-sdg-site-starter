@@ -766,3 +766,30 @@ header {
   margin-left: auto;
   margin-right: auto;
 }
+
+
+//---edit head Banner
+
+@for $i from 1 through length($goal-colors) {
+  $c: nth($goal-colors, $i);
+  $dark-c: darken($c, 20%);
+  .goal-#{$i} {
+    &.heading {
+      background-color: white//$c;
+      border-bottom: 5px solid $dark-c;
+    }
+    &.goal-indicators {
+      div {
+        span {
+          border-color: $dark-c;
+          color: $dark-c;
+        }
+      }
+    }
+  }
+  .goal-tiles #goal-#{$i} {
+    &:hover {
+      background-color: $c;
+    }
+  }
+}
