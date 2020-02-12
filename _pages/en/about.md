@@ -57,7 +57,7 @@ The button “Evaluation” on the very top of the DNS page and “Summary” in
 The DNS-indicators and their numbering are not substitutable with the SDG-indicators of the United Nations. If there is a comparable SDG-indicator to one of the DNS-indicators it is marked with a button and a direct link to the respective indicator (figure 5).
 
 <br>
-<img src="https://Nachhaltige-Entwicklung-Deutschland.github.io/open-sdg-site-starter/assets/img/about/en/dnsIndicatorPage.PNG" alt="Figure 5: Structure of the indicator page" class="responsiveImg">
+<img src="https://Nachhaltige-Entwicklung-Deutschland.github.io/open-sdg-site-starter/assets/img/about/en/dnsIndicatorPage.png" alt="Figure 5: Structure of the indicator page" class="responsiveImg">
 
 <p style="text-align:center">
 <small> Figure 5: Button to related global indicator (marked in red) and an example for a weather symbol <br>based on indicator 6.1.a “Phosphorous in flowing waters” (state of the indicator report 2018)</small>
