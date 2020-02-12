@@ -775,7 +775,7 @@ header {
   $dark-c: darken($c, 20%);
   .goal-#{$i} {
     &.heading {
-      background-color: white//$c;
+      background-color: white;//$c;
       border-bottom: 5px solid $dark-c;
     }
     &.goal-indicators {
