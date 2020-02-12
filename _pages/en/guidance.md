@@ -16,20 +16,20 @@ The project code for this platform is available to the public in the following [
 
 If you want to comment or give feedback to the Open SDG-project or if you elsewise want to be part of the Open SDG-community, kindly contact [Open SDG GitHub](https://github.com/open-sdg/open-sdg/issues).
 
-###Used Software
+### Used Software
 
-####Back-end IT-requirements:
+#### Back-end IT-requirements:
 
 - GitHub: Hosting of the website which was developed for the programming of projects with the GIT-version controll system.
 - Jekyll: Generator for statistical sites written in Ruby.
 
-####Front-end IT-requirements:
+#### Front-end IT-requirements:
 
 - XHTML, CSS, JavaScript
 - Chartist: JavaScript library
 - Bootstrap: framework CSS
 
-###Shortcomings of the current presentation
+### Shortcomings of the current presentation
 
 There are still technical difficulties. Currently we cannot properly present the following issues:
 
