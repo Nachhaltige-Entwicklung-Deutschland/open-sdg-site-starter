@@ -17,24 +17,24 @@
     <div class="row">
       <div class="col-xs-4 col-md-3 col-lg-2">
         <a href="{{ goal_uri }}" title="{{ t.indicator.view_indicator_list }}">
-          <img src="{{ site.goal_image_base }}/{{ current_language }}/17/{{ goal_number }}.png" alt="{{ goal_short }} - {{ t.general.goal }} {{ goal_number }}" title="{{ goalShort }}" />
+          <img src="{{ site.goal_image_base }}/{{ current_language }}/{{ goal_number }}.png" alt="{{ goal_short }} - {{ t.general.goal }} {{ goal_number }}" title="{{ goalShort }}" />
         </a>
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10">
 
         <h1>
           <a href="{{ goal_uri }}">
-            <span class="hidden-sm hidden-md hidden-lg">{{ goalShort }}</span><span class="hidden-xs">{{ t.general.goal }} {{ goal_number }}: {{ goalLong }}</span>
+            <span class="hidden-sm hidden-md hidden-lg titles goal-{{page.sdg_goal}}">{{ goalShort }}</span><span class="hidden-xs titles goal-{{page.sdg_goal}}">{{ t.general.goal }} {{ goal_number }}: {{ goalLong }}</span>
           </a>
         </h1>
 
         <hr>
 
-        <h1 title="{{ t.general.section }}: {{ meta.section }}">
+        <h1 class="titles goal-{{page.sdg_goal}}" title="{{ t.general.section }}: {{ meta.section }}">
           {{ meta.section }} - <i title="{{ t.general.postulate}}: {{ meta.postulate }}">{{ meta.postulate }}</i>
         </h1>
 
-        <h2>{{ t.general.indicator }} {{ meta.indicator_display }}: {{ meta.indicator | get_indicator_name }}</h2>
+        <h2 class="titles goal-{{page.sdg_goal}}">{{ t.general.indicator }} {{ meta.indicator_display }}: {{ meta.indicator | get_indicator_name }}</h2>
       </div>
     </div>
   </div>

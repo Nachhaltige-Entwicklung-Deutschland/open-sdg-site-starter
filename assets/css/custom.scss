@@ -776,8 +776,8 @@ $goal-colors : #E52B3D #DDA63A #4C9F38 #C42130 #FF3E24 #28BCE1 #FCC30B #A21942 #
   .goal-#{$i} {
     &.heading {
       background-color: white;//$c;
-      border-bottom: 20px solid $c;
-      border-top: 20px solid $c;//$dark-c;
+      border-bottom: 15px solid $c;
+      border-top: 15px solid $c;//$dark-c;
       color: red;
     }
     &.titles{
