@@ -24,17 +24,17 @@
 
         <h1>
           <a href="{{ goal_uri }}">
-            <span class="hidden-sm hidden-md hidden-lg titles goal-{{page.sdg_goal}}">{{ goalShort }}</span><span class="hidden-xs titles goal-{{page.sdg_goal}}">{{ t.general.goal }} {{ goal_number }}: {{ goalLong }}</span>
+            <span class="hidden-sm hidden-md hidden-lg titles goal-{{goal_number}}">{{ goalShort }}</span><span class="hidden-xs titles goal-{{goal_number}}">{{ t.general.goal }} {{ goal_number }}: {{ goalLong }}</span>
           </a>
         </h1>
 
         <hr>
 
-        <h1 class="titles goal-{{page.sdg_goal}}" title="{{ t.general.section }}: {{ meta.section }}">
+        <h1 class="titles goal-{{goal_number}}" title="{{ t.general.section }}: {{ meta.section }}">
           {{ meta.section }} - <i title="{{ t.general.postulate}}: {{ meta.postulate }}">{{ meta.postulate }}</i>
         </h1>
 
-        <h2 class="titles goal-{{page.sdg_goal}}">{{ t.general.indicator }} {{ meta.indicator_display }}: {{ meta.indicator | get_indicator_name }}</h2>
+        <h2 class="titles goal-{{goal_number}}">{{ t.general.indicator }} {{ meta.indicator_display }}: {{ meta.indicator | get_indicator_name }}</h2>
       </div>
     </div>
   </div>
