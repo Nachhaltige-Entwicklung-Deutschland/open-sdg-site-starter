@@ -616,7 +616,10 @@ header {
 
 .goal-1.heading {
   background-color: white;
-  border-bottom: 5px solid #97131f; }
+  border-bottom: 5px solid #97131f;
+  color: red; }
+.goal-1.h1 {
+  color: black; }
 .goal-1.goal-indicators div span {
   border-color: #97131f;
   color: #97131f; }
@@ -626,7 +629,10 @@ header {
 
 .goal-2.heading {
   background-color: white;
-  border-bottom: 5px solid #976d1a; }
+  border-bottom: 5px solid #976d1a;
+  color: red; }
+.goal-2.h1 {
+  color: black; }
 .goal-2.goal-indicators div span {
   border-color: #976d1a;
   color: #976d1a; }
@@ -636,7 +642,10 @@ header {
 
 .goal-3.heading {
   background-color: white;
-  border-bottom: 5px solid #28541d; }
+  border-bottom: 5px solid #28541d;
+  color: red; }
+.goal-3.h1 {
+  color: black; }
 .goal-3.goal-indicators div span {
   border-color: #28541d;
   color: #28541d; }
@@ -646,7 +655,10 @@ header {
 
 .goal-4.heading {
   background-color: white;
-  border-bottom: 5px solid #6d121b; }
+  border-bottom: 5px solid #6d121b;
+  color: red; }
+.goal-4.h1 {
+  color: black; }
 .goal-4.goal-indicators div span {
   border-color: #6d121b;
   color: #6d121b; }
@@ -656,7 +668,10 @@ header {
 
 .goal-5.heading {
   background-color: white;
-  border-bottom: 5px solid #bd1600; }
+  border-bottom: 5px solid #bd1600;
+  color: red; }
+.goal-5.h1 {
+  color: black; }
 .goal-5.goal-indicators div span {
   border-color: #bd1600;
   color: #bd1600; }
@@ -666,7 +681,10 @@ header {
 
 .goal-6.heading {
   background-color: white;
-  border-bottom: 5px solid #14768f; }
+  border-bottom: 5px solid #14768f;
+  color: red; }
+.goal-6.h1 {
+  color: black; }
 .goal-6.goal-indicators div span {
   border-color: #14768f;
   color: #14768f; }
@@ -676,7 +694,10 @@ header {
 
 .goal-7.heading {
   background-color: white;
-  border-bottom: 5px solid #9f7a02; }
+  border-bottom: 5px solid #9f7a02;
+  color: red; }
+.goal-7.h1 {
+  color: black; }
 .goal-7.goal-indicators div span {
   border-color: #9f7a02;
   color: #9f7a02; }
@@ -686,7 +707,10 @@ header {
 
 .goal-8.heading {
   background-color: white;
-  border-bottom: 5px solid #4a0b1e; }
+  border-bottom: 5px solid #4a0b1e;
+  color: red; }
+.goal-8.h1 {
+  color: black; }
 .goal-8.goal-indicators div span {
   border-color: #4a0b1e;
   color: #4a0b1e; }
@@ -696,7 +720,10 @@ header {
 
 .goal-9.heading {
   background-color: white;
-  border-bottom: 5px solid #ba3c02; }
+  border-bottom: 5px solid #ba3c02;
+  color: red; }
+.goal-9.h1 {
+  color: black; }
 .goal-9.goal-indicators div span {
   border-color: #ba3c02;
   color: #ba3c02; }
@@ -706,7 +733,10 @@ header {
 
 .goal-10.heading {
   background-color: white;
-  border-bottom: 5px solid #7f0b3b; }
+  border-bottom: 5px solid #7f0b3b;
+  color: red; }
+.goal-10.h1 {
+  color: black; }
 .goal-10.goal-indicators div span {
   border-color: #7f0b3b;
   color: #7f0b3b; }
@@ -716,7 +746,10 @@ header {
 
 .goal-11.heading {
   background-color: white;
-  border-bottom: 5px solid #bc6802; }
+  border-bottom: 5px solid #bc6802;
+  color: red; }
+.goal-11.h1 {
+  color: black; }
 .goal-11.goal-indicators div span {
   border-color: #bc6802;
   color: #bc6802; }
@@ -726,7 +759,10 @@ header {
 
 .goal-12.heading {
   background-color: white;
-  border-bottom: 5px solid #6d4f1a; }
+  border-bottom: 5px solid #6d4f1a;
+  color: red; }
+.goal-12.h1 {
+  color: black; }
 .goal-12.goal-indicators div span {
   border-color: #6d4f1a;
   color: #6d4f1a; }
@@ -736,7 +772,10 @@ header {
 
 .goal-13.heading {
   background-color: white;
-  border-bottom: 5px solid #1e3a20; }
+  border-bottom: 5px solid #1e3a20;
+  color: red; }
+.goal-13.h1 {
+  color: black; }
 .goal-13.goal-indicators div span {
   border-color: #1e3a20;
   color: #1e3a20; }
@@ -746,7 +785,10 @@ header {
 
 .goal-14.heading {
   background-color: white;
-  border-bottom: 5px solid #055277; }
+  border-bottom: 5px solid #055277;
+  color: red; }
+.goal-14.h1 {
+  color: black; }
 .goal-14.goal-indicators div span {
   border-color: #055277;
   color: #055277; }
@@ -756,7 +798,10 @@ header {
 
 .goal-15.heading {
   background-color: white;
-  border-bottom: 5px solid #326c1b; }
+  border-bottom: 5px solid #326c1b;
+  color: red; }
+.goal-15.h1 {
+  color: black; }
 .goal-15.goal-indicators div span {
   border-color: #326c1b;
   color: #326c1b; }
@@ -766,7 +811,10 @@ header {
 
 .goal-16.heading {
   background-color: white;
-  border-bottom: 5px solid #002436; }
+  border-bottom: 5px solid #002436;
+  color: red; }
+.goal-16.h1 {
+  color: black; }
 .goal-16.goal-indicators div span {
   border-color: #002436;
   color: #002436; }
@@ -776,7 +824,10 @@ header {
 
 .goal-17.heading {
   background-color: white;
-  border-bottom: 5px solid #08131b; }
+  border-bottom: 5px solid #08131b;
+  color: red; }
+.goal-17.h1 {
+  color: black; }
 .goal-17.goal-indicators div span {
   border-color: #08131b;
   color: #08131b; }
