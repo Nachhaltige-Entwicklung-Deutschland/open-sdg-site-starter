@@ -12,7 +12,7 @@ Das Statistische Bundesamt berichtet im Auftrag der Bundesregierung seit dem Jah
 
 <h3>Struktur der Berichtsplattform</h3>
 
-Die Plattform ist nach Zielen, Indikatorbereichen und Postulaten und den dazugehörigen Indikatoren gegliedert (Abb.1). Alle vier Jahre wird die Strategie und ihre Indikatoren durch die Bundesregierung überprüft und bei Bedarf angepasst. Dabei können z.B. Indikatoren ersetzt werden oder neue hinzukommen.
+Die Plattform ist nach Zielen, Indikatorbereichen und Postulaten und den dazugehörigen Indikatoren gegliedert (Abb.1). Alle vier Jahre werden die Strategie und ihre Indikatoren durch die Bundesregierung überprüft und bei Bedarf angepasst. Dabei können z.B. Indikatoren ersetzt werden oder neue hinzukommen.
 
 
 <br>
@@ -22,7 +22,6 @@ Die Plattform ist nach Zielen, Indikatorbereichen und Postulaten und den dazugeh
 <small> Abb. 1: Beispiel für die Gliederung der DNS anhand von Ziel 7 „Bezahlbare und Saubere Energie“ (Stand Indikatorenbericht 2018)</small>
 </p>
 <br>
-
 
 Jeder Indikator der DNS wird auf einer eigenen Seite einzeln oder mit einem inhaltlich eng verbundenen Indikator zusammen dargestellt. Die Entwicklung des Indikators wird in einer Grafik visualisiert. Außerdem werden die Definitionen, Intentionen sowie die Entwicklung der jeweiligen Indikatoren angegeben. Diese Informationen stammen aus dem zweijährlich erscheinenden [Indikatorenbericht](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Nachhaltigkeitsindikatoren/Deutsche-Nachhaltigkeit/_inhalt.html) des Statistischen Bundesamtes.
 
@@ -48,7 +47,7 @@ Die Symbole und Farbwahl der 17 Ziele (Abb. 2 und Abb. 3), die hier und auf der 
 
 <h3 align="left">Bewertung der Indikatoren</h3>Bei den meisten Indikatoren veranschaulicht ein Wettersymbol –von Sonnenschein bis Gewitter– auf leicht zu erfassende Weise, inwiefern sich der Indikator auf dem angestrebten Pfad in Richtung Ziel bewegt (Abb. 5). Erläuterungen zur Definition der Symbole können [hier](https://sustainabledevelopment-deutschland.github.io/status/) gefunden werden. Wettersymbole für die letzten vier Jahre sind unter der Schaltfläche „Statusübersicht“ auf der jeweiligen Indikatorseite zu finden. Anhand der Wettersymbole lässt sich grob einschätzen, wie stabil die Entwicklung zuletzt gewesen ist. Sie ersetzen jedoch nicht die erläuternden Texte mit ihren Hintergrundinformationen.
 
-Über die Schaltfläche „Bewertung“ und „Übersicht“ ganz oben auf der DNS-Seite kommt man zur Übersicht der [gesamten zeitlichen Entwicklung der Wettersymbole aller Indikatoren](https://sustainabledevelopment-deutschland.github.io/status_summary/).
+Oben auf der DNS-Seite gelangt man über die Schaltfläche „Bewertung“ und die Auswahl „Übersicht“ zur Darstellung der [gesamten zeitlichen Entwicklung der Wettersymbole aller Indikatoren](https://sustainabledevelopment-deutschland.github.io/status_summary/).
 
 <h3>Indikatorenvergleich DNS und SDG</h3>Die Indikatoren der DNS und ihre Nummerierung sind nicht identisch mit den SDG-Indikatoren der Vereinten Nationen. Wenn ein vergleichbarer Indikator der SDGs zu einem Indikator der DNS vorhanden ist, ist dies über eine Schaltfläche mit Direktlink zum jeweiligen Indikator kenntlich gemacht (Abb.5).
 
