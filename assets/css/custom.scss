@@ -778,7 +778,6 @@ $goal-colors : #E52B3D #DDA63A #4C9F38 #C42130 #FF3E24 #28BCE1 #FCC30B #A21942 #
       background-color: white;//$c;
       border-bottom: 15px solid $c;
       border-top: 15px solid $c;//$dark-c;
-      color: red;
     }
     &.heading:after {
       border-bottom: 10px solid $dark-c;
@@ -786,7 +785,7 @@ $goal-colors : #E52B3D #DDA63A #4C9F38 #C42130 #FF3E24 #28BCE1 #FCC30B #A21942 #
 
     }
     &.titles{
-      color: $c;
+      color: $dark-c;
     }
     &.goal-indicators {
       div {
@@ -803,7 +802,7 @@ $goal-colors : #E52B3D #DDA63A #4C9F38 #C42130 #FF3E24 #28BCE1 #FCC30B #A21942 #
       border-bottom: 15px solid $dark-c;
       border-top: 15px solid $dark-c;//$dark-c;
     }
-    
+
   .goal-tiles #goal-#{$i} {
     &:hover {
       background-color: $c;
