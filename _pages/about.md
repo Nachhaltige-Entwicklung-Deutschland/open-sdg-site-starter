@@ -60,6 +60,6 @@ Oben auf der DNS-Seite gelangt man über die Schaltfläche „Bewertung“ und d
 <br>
 
 Neben dem Suchfeld oben rechts auf dieser Seite gibt es einen Direktlink zur Startseite der nationalen Berichtsplattform zu den SDG-Indikatoren der Agenda 2030 der Vereinten Nationen:
-[<img src="https://Nachhaltige-Entwicklung-Deutschland.github.io/open-sdg-site-starter/assets/img/about/wheel.png" alt="Wheel">](https://sustainabledevelopment-deutschland.github.io)
+[<img src="https://Nachhaltige-Entwicklung-Deutschland.github.io/open-sdg-site-starter/assets/img/about/wheel.png" alt="Wheel">](https://sustainabledevelopment-germany.github.io)
 
 <h3>Technischer Hintergrund</h3>Um die Daten aufbereitet darstellen zu können, bietet das Open-Source-Projekt Open SDG auf GitHub Vorlagen. Mehr dazu finden Sie unter [Technische Hinweise](https://sustainabledevelopment-deutschland.github.io/guidance/).

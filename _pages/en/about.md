@@ -64,7 +64,7 @@ The DNS-indicators and their numbering are not substitutable with the SDG-indica
 </p>
 <br>
 
-Next to the search field on the upper right of this page there is a direct link to the starting page of the SDG-part of the national reporting platform for the agenda 2030 of the United Nations: [<img src="https://Nachhaltige-Entwicklung-Deutschland.github.io/open-sdg-site-starter/assets/img/about/wheel.png" alt="Wheel">](https://sustainabledevelopment-deutschland.github.io/en/)
+Next to the search field on the upper right of this page there is a direct link to the starting page of the SDG-part of the national reporting platform for the agenda 2030 of the United Nations: [<img src="https://Nachhaltige-Entwicklung-Deutschland.github.io/open-sdg-site-starter/assets/img/about/wheel.png" alt="Wheel">](https://sustainabledevelopment-germany.github.io/en/)
 
 <h3>Technical background</h3>
 
