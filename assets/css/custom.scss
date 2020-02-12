@@ -781,7 +781,7 @@ $goal-colors : #E52B3D #DDA63A #4C9F38 #C42130 #FF3E24 #28BCE1 #FCC30B #A21942 #
       color: red;
     }
     &.titles{
-      color: black;
+      color: $c;
     }
     &.goal-indicators {
       div {
