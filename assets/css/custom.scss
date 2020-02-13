@@ -811,6 +811,7 @@ $goal-colors : #E52B3D #DDA63A #4C9F38 #C42130 #FF3E24 #28BCE1 #FCC30B #A21942 #
 //addIconsForTabs---stop--------------------------------------------
 
 
+
 //13.2.20 addition from default css to add .goal-x.titles to contrast-high
 body.contrast-high {
   @for $i from 1 through length($goal-colors) {
