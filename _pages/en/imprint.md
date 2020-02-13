@@ -29,7 +29,7 @@ For data protection notes with regards to the use of our contact form, social me
 
 The following applies for all standard publications of the Federal Statistical Office, either in printed or electronic form, and for the content of this website, including charts and downloadable products, unless additional or other information is given on the product/website itself.
 
-© Statistisches Bundesamt (Destatis), 2019 <br>
+© Statistisches Bundesamt (Destatis), 2020 <br>
 Reproduction and distribution, also of parts, are permitted provided that the source is mentioned.
 
 This applies for any redistribution of texts, data and charts by third parties where the Federal Statistical Office is the copyright owner and holds exclusive publishing rights. Re-use is permitted both for commercial and non-commercial purposes. There are also no restrictions on distribution by electronic means, via the Internet or in printed form. No express authorisation is required from the Federal Statistical Office. It is, however, required to provide a source note. The Statistisches Bundesamt (Destatis) shall be named as the publisher in the list of references
