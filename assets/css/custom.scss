@@ -787,6 +787,11 @@ $goal-colors : #E52B3D #DDA63A #4C9F38 #C42130 #FF3E24 #28BCE1 #FCC30B #A21942 #
     &.titles{
       color: $dark-c;
     }
+    &.contrast-high {
+        background: black;
+        a {
+          color: yellow;
+        }
     &.goal-indicators {
       div {
         span {
