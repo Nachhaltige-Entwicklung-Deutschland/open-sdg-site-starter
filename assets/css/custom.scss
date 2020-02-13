@@ -808,3 +808,233 @@ $goal-colors : #E52B3D #DDA63A #4C9F38 #C42130 #FF3E24 #28BCE1 #FCC30B #A21942 #
     }
   }
 }
+//addIconsForTabs---stop--------------------------------------------
+
+
+//13.2.20 addition from default css to add .goal-x.titles to contrast-high
+body.contrast-high {
+  @for $i from 1 through length($goal-colors) {
+    .goal-#{$i} {
+      &.heading {
+        background-color: black;//$c;
+        border-bottom: 15px solid yellow;
+        border-top: 15px solid yellow;//$dark-c;
+      }
+
+      &.titles{
+        color: white;
+      }
+    }
+  }
+  #page-content {
+    .alert {
+      div {
+        p, h4 {
+          color: black;
+	}
+      }
+    }
+  }
+
+  #accessibility-nav {
+    li {
+      &.contrast-default {
+        display: block;
+      }
+
+      &.contrast-high {
+        display: none;
+      }
+    }
+  }
+
+  background-color: black;
+  .table {
+    background: black;
+  }
+
+  .btn { background: white !important; color: black !important;
+    &:hover {
+      background: yellow !important;
+    }
+    &:focus {
+      background: yellow !important;
+    }
+  }
+
+  div#units {
+    color: white;
+  }
+
+  .nav-tabs { border-color: yellow; }
+
+  #main-content #fields .bar .selected { background-color: white; }
+
+  #main-content #fields .variable-selector .variable-hint { color: white; }
+
+  #main-content .nav-tabs .nav-item.active a { background: yellow; color: black; border-color: yellow; }
+
+  a.nav-link:focus { background: white; color: black; }
+
+  caption {
+    color: white;
+  }
+
+  .table-hover {
+    tbody tr:hover {
+      background: yellow;
+      td {
+        color: black;
+      }
+      th {
+        color: black;
+      }
+      a {
+        color: blue;
+        text-decoration: underline;
+      }
+    }
+  }
+
+
+
+  .container, #main-content, header, footer, #disclaimer, .heading {
+    background: black;
+    border-color: black;
+  }
+
+  p, h2, h3, h4, span, td, th, a#text {
+    color: white;
+  }
+
+  h1, li, a {
+    color: yellow;
+  }
+
+  li.contrast-default a {
+    color: black !important;
+  }
+
+  .navbar {
+    li {
+      a {
+        color: white;
+        &:hover, &:focus {
+          color: yellow;
+        }
+      }
+    }
+    li.active {
+      a {
+        color: yellow;
+        border-color: yellow;
+        &:hover {
+          color: yellow;
+        }
+        &:focus {
+          color: yellow;
+        }
+      }
+    }
+  }
+
+  .goal-indicators {
+    div {
+      span {
+        border-color: white !important;
+        color: white !important;
+      }
+    }
+    .indicator-cards {
+      a, &.target {
+        color: white !important;
+      }
+      span.status, .tags li{
+        color: black !important;
+      }
+    }
+  }
+
+  #main-content #fields label {
+    background: black;
+    color: white;
+    &:hover {
+      background: white;
+      color: black;
+    }
+    &:focus {
+      background: white;
+      color: black;
+    }
+  }
+
+  #toolbar {
+    button {
+      background-color: black !important;
+      border-color: white;
+      color: white;
+    }
+  }
+
+  .danger {
+    background-color: red;
+  }
+  .warning {
+    background-color: yellow;
+  }
+  .success {
+    background-color: green;
+  }
+
+  .statuses {
+    strong {
+      color: white;
+    }
+    .value {
+      color: white !important;
+    }
+  }
+
+  .variable-options {
+    background: black;
+    color: white;
+    div {
+      background: black;
+      color: white; }
+      button {
+        background: black;
+        color: white !important;
+        border-color: white; }
+      }
+
+      .breadcrumb {
+        background: white;
+        a {
+          color: black !important;
+        }
+      }
+
+      span.match {
+        color: black !important;
+      }
+
+      @media screen and (max-width: 768px) {
+        .navbar.navbar-default {
+          background: black;
+          color: white;
+        }
+        .navbar .top-level li.active {
+          background: white;
+          span {
+            color: black;
+          }
+        }
+        .navbar .menu-target {
+          background: black;
+        }
+        .navbar ul.navbar-nav li a {
+          background: black;
+        }
+      }
+
+    }
