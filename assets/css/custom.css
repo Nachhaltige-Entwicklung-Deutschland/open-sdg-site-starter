@@ -618,19 +618,14 @@ header {
   background-color: white;
   border-bottom: 15px solid #E52B3D;
   border-top: 15px solid #E52B3D; }
-.goal-1.heading:after {
-  border-bottom: 10px solid #97131f;
-  border-top: 10px solid #97131f; }
+.goal-1.underline {
+  height: 5px;
+  border-top: 5px solid #97131f; }
 .goal-1.titles {
   color: #97131f; }
 .goal-1.goal-indicators div span {
   border-color: #97131f;
   color: #97131f; }
-
-.goal-1:after.heading {
-  background-color: white;
-  border-bottom: 15px solid #97131f;
-  border-top: 15px solid #97131f; }
 
 .goal-tiles #goal-1:hover {
   background-color: #E52B3D; }
@@ -639,19 +634,14 @@ header {
   background-color: white;
   border-bottom: 15px solid #DDA63A;
   border-top: 15px solid #DDA63A; }
-.goal-2.heading:after {
-  border-bottom: 10px solid #976d1a;
-  border-top: 10px solid #976d1a; }
+.goal-2.underline {
+  height: 5px;
+  border-top: 5px solid #976d1a; }
 .goal-2.titles {
   color: #976d1a; }
 .goal-2.goal-indicators div span {
   border-color: #976d1a;
   color: #976d1a; }
-
-.goal-2:after.heading {
-  background-color: white;
-  border-bottom: 15px solid #976d1a;
-  border-top: 15px solid #976d1a; }
 
 .goal-tiles #goal-2:hover {
   background-color: #DDA63A; }
@@ -660,19 +650,14 @@ header {
   background-color: white;
   border-bottom: 15px solid #4C9F38;
   border-top: 15px solid #4C9F38; }
-.goal-3.heading:after {
-  border-bottom: 10px solid #28541d;
-  border-top: 10px solid #28541d; }
+.goal-3.underline {
+  height: 5px;
+  border-top: 5px solid #28541d; }
 .goal-3.titles {
   color: #28541d; }
 .goal-3.goal-indicators div span {
   border-color: #28541d;
   color: #28541d; }
-
-.goal-3:after.heading {
-  background-color: white;
-  border-bottom: 15px solid #28541d;
-  border-top: 15px solid #28541d; }
 
 .goal-tiles #goal-3:hover {
   background-color: #4C9F38; }
@@ -681,19 +666,14 @@ header {
   background-color: white;
   border-bottom: 15px solid #C42130;
   border-top: 15px solid #C42130; }
-.goal-4.heading:after {
-  border-bottom: 10px solid #6d121b;
-  border-top: 10px solid #6d121b; }
+.goal-4.underline {
+  height: 5px;
+  border-top: 5px solid #6d121b; }
 .goal-4.titles {
   color: #6d121b; }
 .goal-4.goal-indicators div span {
   border-color: #6d121b;
   color: #6d121b; }
-
-.goal-4:after.heading {
-  background-color: white;
-  border-bottom: 15px solid #6d121b;
-  border-top: 15px solid #6d121b; }
 
 .goal-tiles #goal-4:hover {
   background-color: #C42130; }
@@ -702,19 +682,14 @@ header {
   background-color: white;
   border-bottom: 15px solid #FF3E24;
   border-top: 15px solid #FF3E24; }
-.goal-5.heading:after {
-  border-bottom: 10px solid #bd1600;
-  border-top: 10px solid #bd1600; }
+.goal-5.underline {
+  height: 5px;
+  border-top: 5px solid #bd1600; }
 .goal-5.titles {
   color: #bd1600; }
 .goal-5.goal-indicators div span {
   border-color: #bd1600;
   color: #bd1600; }
-
-.goal-5:after.heading {
-  background-color: white;
-  border-bottom: 15px solid #bd1600;
-  border-top: 15px solid #bd1600; }
 
 .goal-tiles #goal-5:hover {
   background-color: #FF3E24; }
@@ -723,19 +698,14 @@ header {
   background-color: white;
   border-bottom: 15px solid #28BCE1;
   border-top: 15px solid #28BCE1; }
-.goal-6.heading:after {
-  border-bottom: 10px solid #14768f;
-  border-top: 10px solid #14768f; }
+.goal-6.underline {
+  height: 5px;
+  border-top: 5px solid #14768f; }
 .goal-6.titles {
   color: #14768f; }
 .goal-6.goal-indicators div span {
   border-color: #14768f;
   color: #14768f; }
-
-.goal-6:after.heading {
-  background-color: white;
-  border-bottom: 15px solid #14768f;
-  border-top: 15px solid #14768f; }
 
 .goal-tiles #goal-6:hover {
   background-color: #28BCE1; }
@@ -744,19 +714,14 @@ header {
   background-color: white;
   border-bottom: 15px solid #FCC30B;
   border-top: 15px solid #FCC30B; }
-.goal-7.heading:after {
-  border-bottom: 10px solid #9f7a02;
-  border-top: 10px solid #9f7a02; }
+.goal-7.underline {
+  height: 5px;
+  border-top: 5px solid #9f7a02; }
 .goal-7.titles {
   color: #9f7a02; }
 .goal-7.goal-indicators div span {
   border-color: #9f7a02;
   color: #9f7a02; }
-
-.goal-7:after.heading {
-  background-color: white;
-  border-bottom: 15px solid #9f7a02;
-  border-top: 15px solid #9f7a02; }
 
 .goal-tiles #goal-7:hover {
   background-color: #FCC30B; }
@@ -765,19 +730,14 @@ header {
   background-color: white;
   border-bottom: 15px solid #A21942;
   border-top: 15px solid #A21942; }
-.goal-8.heading:after {
-  border-bottom: 10px solid #4a0b1e;
-  border-top: 10px solid #4a0b1e; }
+.goal-8.underline {
+  height: 5px;
+  border-top: 5px solid #4a0b1e; }
 .goal-8.titles {
   color: #4a0b1e; }
 .goal-8.goal-indicators div span {
   border-color: #4a0b1e;
   color: #4a0b1e; }
-
-.goal-8:after.heading {
-  background-color: white;
-  border-bottom: 15px solid #4a0b1e;
-  border-top: 15px solid #4a0b1e; }
 
 .goal-tiles #goal-8:hover {
   background-color: #A21942; }
@@ -786,19 +746,14 @@ header {
   background-color: white;
   border-bottom: 15px solid #FD6925;
   border-top: 15px solid #FD6925; }
-.goal-9.heading:after {
-  border-bottom: 10px solid #ba3c02;
-  border-top: 10px solid #ba3c02; }
+.goal-9.underline {
+  height: 5px;
+  border-top: 5px solid #ba3c02; }
 .goal-9.titles {
   color: #ba3c02; }
 .goal-9.goal-indicators div span {
   border-color: #ba3c02;
   color: #ba3c02; }
-
-.goal-9:after.heading {
-  background-color: white;
-  border-bottom: 15px solid #ba3c02;
-  border-top: 15px solid #ba3c02; }
 
 .goal-tiles #goal-9:hover {
   background-color: #FD6925; }
@@ -807,19 +762,14 @@ header {
   background-color: white;
   border-bottom: 15px solid #DD1367;
   border-top: 15px solid #DD1367; }
-.goal-10.heading:after {
-  border-bottom: 10px solid #7f0b3b;
-  border-top: 10px solid #7f0b3b; }
+.goal-10.underline {
+  height: 5px;
+  border-top: 5px solid #7f0b3b; }
 .goal-10.titles {
   color: #7f0b3b; }
 .goal-10.goal-indicators div span {
   border-color: #7f0b3b;
   color: #7f0b3b; }
-
-.goal-10:after.heading {
-  background-color: white;
-  border-bottom: 15px solid #7f0b3b;
-  border-top: 15px solid #7f0b3b; }
 
 .goal-tiles #goal-10:hover {
   background-color: #DD1367; }
@@ -828,19 +778,14 @@ header {
   background-color: white;
   border-bottom: 15px solid #FD9C27;
   border-top: 15px solid #FD9C27; }
-.goal-11.heading:after {
-  border-bottom: 10px solid #bc6802;
-  border-top: 10px solid #bc6802; }
+.goal-11.underline {
+  height: 5px;
+  border-top: 5px solid #bc6802; }
 .goal-11.titles {
   color: #bc6802; }
 .goal-11.goal-indicators div span {
   border-color: #bc6802;
   color: #bc6802; }
-
-.goal-11:after.heading {
-  background-color: white;
-  border-bottom: 15px solid #bc6802;
-  border-top: 15px solid #bc6802; }
 
 .goal-tiles #goal-11:hover {
   background-color: #FD9C27; }
@@ -849,19 +794,14 @@ header {
   background-color: white;
   border-bottom: 15px solid #BF8B2E;
   border-top: 15px solid #BF8B2E; }
-.goal-12.heading:after {
-  border-bottom: 10px solid #6d4f1a;
-  border-top: 10px solid #6d4f1a; }
+.goal-12.underline {
+  height: 5px;
+  border-top: 5px solid #6d4f1a; }
 .goal-12.titles {
   color: #6d4f1a; }
 .goal-12.goal-indicators div span {
   border-color: #6d4f1a;
   color: #6d4f1a; }
-
-.goal-12:after.heading {
-  background-color: white;
-  border-bottom: 15px solid #6d4f1a;
-  border-top: 15px solid #6d4f1a; }
 
 .goal-tiles #goal-12:hover {
   background-color: #BF8B2E; }
@@ -870,19 +810,14 @@ header {
   background-color: white;
   border-bottom: 15px solid #417D46;
   border-top: 15px solid #417D46; }
-.goal-13.heading:after {
-  border-bottom: 10px solid #1e3a20;
-  border-top: 10px solid #1e3a20; }
+.goal-13.underline {
+  height: 5px;
+  border-top: 5px solid #1e3a20; }
 .goal-13.titles {
   color: #1e3a20; }
 .goal-13.goal-indicators div span {
   border-color: #1e3a20;
   color: #1e3a20; }
-
-.goal-13:after.heading {
-  background-color: white;
-  border-bottom: 15px solid #1e3a20;
-  border-top: 15px solid #1e3a20; }
 
 .goal-tiles #goal-13:hover {
   background-color: #417D46; }
@@ -891,19 +826,14 @@ header {
   background-color: white;
   border-bottom: 15px solid #0A96D8;
   border-top: 15px solid #0A96D8; }
-.goal-14.heading:after {
-  border-bottom: 10px solid #055277;
-  border-top: 10px solid #055277; }
+.goal-14.underline {
+  height: 5px;
+  border-top: 5px solid #055277; }
 .goal-14.titles {
   color: #055277; }
 .goal-14.goal-indicators div span {
   border-color: #055277;
   color: #055277; }
-
-.goal-14:after.heading {
-  background-color: white;
-  border-bottom: 15px solid #055277;
-  border-top: 15px solid #055277; }
 
 .goal-tiles #goal-14:hover {
   background-color: #0A96D8; }
@@ -912,19 +842,14 @@ header {
   background-color: white;
   border-bottom: 15px solid #57BE2F;
   border-top: 15px solid #57BE2F; }
-.goal-15.heading:after {
-  border-bottom: 10px solid #326c1b;
-  border-top: 10px solid #326c1b; }
+.goal-15.underline {
+  height: 5px;
+  border-top: 5px solid #326c1b; }
 .goal-15.titles {
   color: #326c1b; }
 .goal-15.goal-indicators div span {
   border-color: #326c1b;
   color: #326c1b; }
-
-.goal-15:after.heading {
-  background-color: white;
-  border-bottom: 15px solid #326c1b;
-  border-top: 15px solid #326c1b; }
 
 .goal-tiles #goal-15:hover {
   background-color: #57BE2F; }
@@ -933,19 +858,14 @@ header {
   background-color: white;
   border-bottom: 15px solid #00689C;
   border-top: 15px solid #00689C; }
-.goal-16.heading:after {
-  border-bottom: 10px solid #002436;
-  border-top: 10px solid #002436; }
+.goal-16.underline {
+  height: 5px;
+  border-top: 5px solid #002436; }
 .goal-16.titles {
   color: #002436; }
 .goal-16.goal-indicators div span {
   border-color: #002436;
   color: #002436; }
-
-.goal-16:after.heading {
-  background-color: white;
-  border-bottom: 15px solid #002436;
-  border-top: 15px solid #002436; }
 
 .goal-tiles #goal-16:hover {
   background-color: #00689C; }
@@ -954,19 +874,14 @@ header {
   background-color: white;
   border-bottom: 15px solid #1F4A6A;
   border-top: 15px solid #1F4A6A; }
-.goal-17.heading:after {
-  border-bottom: 10px solid #08131b;
-  border-top: 10px solid #08131b; }
+.goal-17.underline {
+  height: 5px;
+  border-top: 5px solid #08131b; }
 .goal-17.titles {
   color: #08131b; }
 .goal-17.goal-indicators div span {
   border-color: #08131b;
   color: #08131b; }
-
-.goal-17:after.heading {
-  background-color: white;
-  border-bottom: 15px solid #08131b;
-  border-top: 15px solid #08131b; }
 
 .goal-tiles #goal-17:hover {
   background-color: #1F4A6A; }
