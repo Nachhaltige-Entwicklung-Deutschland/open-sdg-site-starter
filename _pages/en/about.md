@@ -32,7 +32,7 @@ The symbols and choice of colour of the 17 goals (figures 2 and 3) which are use
 <div class="container" style="padding-left: 0px;">
 <div class="col-xs-12 col-md-6 col-lg-6" style="padding-left: 100px; padding-left: 100px;">
 <img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/en/sdgIcons.PNG" alt="Figure 2: SDG Icons" class="responsiveImg" style="width: 100%;">
-<small style="width: 100%;"> Figure 2: 17 icons of the SDGs of the United Nations, used on the <b>SDG-part of the reporting platform Germany</b></small>
+<small> Figure 2: 17 icons of the SDGs of the United Nations, used on the <b>SDG-part of the reporting platform Germany</b></small>
 </div>
 
 <div class="col-xs-12 col-md-6 col-lg-6" style="padding-left: 100px; padding-left: 100px;">
