@@ -41,4 +41,4 @@ Excluded from the temporally and geographically unlimited scope of use are the u
 It is therefore recommended that, when exploiting our data, users ensure that the copyright information is included in the product in question and, if necessary, that they contact the copyright owner given in the imprint.
 
 Rights to the SDG logos used on this website:<br>
-© United Nations Department of Public Information
+© United Nations Department of Public Information / [www.globalgoals.org](http://www.globalgoals.org/asset-licence/) / [Guidelines for the use](https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/01/SDG_Guidelines_AUG_2019_Final.pdf) (as of 2020)

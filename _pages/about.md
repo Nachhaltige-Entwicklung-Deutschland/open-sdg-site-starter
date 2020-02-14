@@ -6,9 +6,9 @@ layout: page
 
 <h3>Ziel und Hintergrund</h3>
 Ziel dieser nationalen Berichtsplattform ist die Darstellung der Indikatoren der Deutschen Nachhaltigkeitsstrategie. Deutschland hat seit 2002 eine nationale Nachhaltigkeitsstrategie mit eigenen Zielen, Indikatorenbereichen und Postulaten.
-2017 wurde diese Strategie anlässlich der [Agenda 2030](https://sustainabledevelopment-deutschland.github.io/agenda/) der Vereinten Nationen und den zugehörigen 17 Zielen für eine nachhaltige Entwicklung (Sustainable Development Goals, SGDs) überarbeitet und firmiert nun unter dem Namen Deutschen Nachhaltigkeitsstrategie (DNS). Bei der Überarbeitung wurde thematisch passend mindestens ein Indikator zu jedem der 17 Ziele in die Strategie aufgenommen. Die zu erreichenden Zielwerte, die Indikatoren, ihre Datengrundlagen und Berechnungen sind von der Bundesregierung beschlossen worden.
+2017 wurde diese Strategie anlässlich der [Agenda 2030](https://sustainabledevelopment-deutschland.github.io/agenda/) der Vereinten Nationen und den zugehörigen 17 Zielen für eine nachhaltige Entwicklung (Sustainable Development Goals, SGDs) überarbeitet und firmiert nun unter dem Namen Deutschen Nachhaltigkeitsstrategie (DNS). Bei der Überarbeitung wurde thematisch passend mindestens ein Indikator zu jedem der 17 Ziele in die Strategie aufgenommen. Die Zielwerte, die Indikatoren, ihre Datengrundlagen und Berechnungen sind von der Bundesregierung beschlossen worden.
 
-Das Statistische Bundesamt berichtet im Auftrag der Bundesregierung seit dem Jahr 2006 im zweijährlichen Rhythmus über die Zielerreichung der Deutschen Nachhaltigkeitsstrategie. In gebundener Form und als PDF liegen die Informationen als [Indikatorenbericht](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Nachhaltigkeitsindikatoren/Deutsche-Nachhaltigkeit/_inhalt.html) vor. Seit 2020 wird die Entwicklung der Indikatoren der DNS zusätzlich über diese Berichtsplattform veröffentlicht.
+Seit 2006 berichtet das Statistische Bundesamt im Auftrag der Bundesregierung im zweijährlichen Rhythmus über die Zielerreichung der Deutschen Nachhaltigkeitsstrategie. In gebundener Form und als PDF liegen die Informationen als [Indikatorenbericht](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Nachhaltigkeitsindikatoren/Deutsche-Nachhaltigkeit/_inhalt.html) vor. Seit 2020 wird die Entwicklung der Indikatoren der DNS zusätzlich über diese Berichtsplattform veröffentlicht.
 
 <h3>Struktur der Berichtsplattform</h3>
 
@@ -23,7 +23,7 @@ Die Plattform ist nach Zielen, Indikatorbereichen und Postulaten und den dazugeh
 </p>
 <br>
 
-Jeder Indikator der DNS wird auf einer eigenen Seite einzeln oder mit einem inhaltlich eng verbundenen Indikator zusammen dargestellt. Die Entwicklung des Indikators wird in einer Grafik visualisiert. Außerdem werden die Definitionen, Intentionen sowie die Entwicklung der jeweiligen Indikatoren angegeben. Diese Informationen stammen aus dem zweijährlich erscheinenden [Indikatorenbericht](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Nachhaltigkeitsindikatoren/Deutsche-Nachhaltigkeit/_inhalt.html) des Statistischen Bundesamtes.
+Jeder Indikator der DNS wird auf einer eigenen Seite einzeln oder mit einem inhaltlich eng verbundenen Indikator zusammen dargestellt. Die Entwicklung des Indikators wird in einer Grafik visualisiert. Außerdem werden die Definitionen und Intentionen angegeben. Diese Informationen stammen aus dem zweijährlich erscheinenden [Indikatorenbericht](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Nachhaltigkeitsindikatoren/Deutsche-Nachhaltigkeit/_inhalt.html) des Statistischen Bundesamtes.
 
 Die Symbole und Farbwahl der 17 Ziele (Abb. 2 und Abb. 3), die hier und auf der SDG-Seite dieser Berichtsplattform verwendet werden, stammen von den Vereinten Nationen. Auf der DNS-Seite der Plattform werden außerdem noch „Die Glorreichen 17“ verwendet (Abb. 4). Sie sind Teil der gleichnamigen Informationskampagne der Bundesregierung zu den Zielen für nachhaltige Entwicklung.
 

@@ -37,5 +37,5 @@ Ausgenommen vom zeitlich und räumlich uneingeschränkten Nutzungsumfang sind Nu
 Bei Verwendung unserer Daten empfiehlt es sich daher, auf die Ausbringung der Copyright-Angaben im jeweiligen Produkt zu achten und im Bedarfsfalle die im Impressum genannten Copyright-Inhaber zu kontakten.
 
 Logo und Pictogramme der Globalen Ziele nachhaltiger Entwicklung (SDGs):<br>
-© United Nations / [www.globalgoals.org](http://www.globalgoals.org/asset-licence/)<br>
+© United Nations / [www.globalgoals.org](http://www.globalgoals.org/asset-licence/)/ [Guidelines for the use(https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/01/SDG_Guidelines_AUG_2019_Final.pdf) (Stand Februar 2020)<br>
 für die deutsche Übersetzung Bundespresseamt / [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
