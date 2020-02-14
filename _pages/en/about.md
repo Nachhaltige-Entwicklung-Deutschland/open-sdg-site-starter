@@ -29,14 +29,14 @@ Each indicator of the DNS is presented individually or together with a closely r
 
 The symbols and choice of colour of the 17 goals (figures 2 and 3) which are used here and on the SDG-part of this reporting platform are copyright protected by the United Nations.
 
-<div class="container" style="padding-left: 80px; padding-right: 80px;">
-<div class="col-xs-12 col-md-6 col-lg-6" style="padding-left: 0px;">
-<img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/en/sdgIcons.PNG" alt="Figure 2: SDG Icons" class="responsiveImg" style="width: 100%;">
+<div class="container" style="padding-left: 0px;">
+<div class="col-xs-12 col-md-6 col-lg-6" style="padding-left: 20px;">
+<img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/en/sdgIcons.PNG" alt="Figure 2: SDG Icons" class="responsiveImg" style="width: 35%;">
 <small> Figure 2: 17 icons of the SDGs of the United Nations, used on the <b>SDG-part of the reporting platform Germany</b></small>
 </div>
 
-<div class="col-xs-12 col-md-6 col-lg-6" style="padding-left: 80px; padding-right: 80px;">
-<img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/en/sdgIconsInvert.PNG" alt="Figure 3: SDG Icons inverted" class="responsiveImg" style="width: 100%;">
+<div class="col-xs-12 col-md-6 col-lg-6" style="padding-left: 20px">
+<img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/en/sdgIconsInvert.PNG" alt="Figure 3: SDG Icons inverted" class="responsiveImg" style="width: 35%;">
 <small> Figure 3: 17 icons of the SDGs of the United Nations, inverted and used on the <b>DNS-part of the reporting platform Germany</b></small>
 </div>
 
