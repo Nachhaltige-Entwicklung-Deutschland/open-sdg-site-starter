@@ -11,7 +11,7 @@ Mit der Agenda 2030 haben die Mitgliedstaaten der Vereinten Nationen einen Fahrp
 
 <h3>Überprüfung der Zielerreichung</h3>
 
-Die Statistische Kommission der Vereinten Nationen wurde beauftragt, gemeinsam mit den nationalen Statistischen Ämtern globale Indikatoren für die Unterziele zu entwickeln. Die dafür eingesetzte "Inter-agency and Expert Group on SDG Indicators" (IAEG-SDGs) hat ein Indikatorenset vorgelegt und kontinuierlich weiterentwickelt. Die IAEG-SDGs setzt sich aus statistischen Ämtern einiger UN-Mitgliedstaaten zusammen, darunter das Statistische Bundesamt für Deutschland.
+Die Statistische Kommission der Vereinten Nationen wurde beauftragt, gemeinsam mit den nationalen Statistischen Ämtern globale Indikatoren für die Unterziele zu entwickeln. Die dafür eingesetzte „Inter-agency and Expert Group on SDG Indicators“ (IAEG-SDGs) hat ein Indikatorenset vorgelegt und kontinuierlich weiterentwickelt. Die IAEG-SDGs setzt sich aus statistischen Ämtern einiger UN-Mitgliedstaaten zusammen, darunter das Statistische Bundesamt für Deutschland.
 
 <h3>Nationale Berichterstattung zur nachhaltigen Entwicklung in Deutschland</h3>
 

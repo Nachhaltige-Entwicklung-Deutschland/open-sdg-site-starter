@@ -11,7 +11,7 @@ The [Agenda 2030 for Sustainable Development](https://www.un.org/sustainabledeve
 
 <h3>Reviewing the goal achievement</h3>
 
-The UN Statistical Commission was charged together with the national statistical offices to develop global indicators for the targets. The mandated „Inter-agency and Expert Group on SDG Indicators" ([IAEG-SDGs](https://unstats.un.org/sdgs/iaeg-sdgs/)) presented and continuously developed a set of indicators for this purpose. This IAEG-SDGs consists of statistical offices of some UN member states, including the Federal Statistical Office for Germany.
+The UN Statistical Commission was charged together with the national statistical offices to develop global indicators for the targets. The mandated "Inter-agency and Expert Group on SDG Indicators" ([IAEG-SDGs](https://unstats.un.org/sdgs/iaeg-sdgs/)) presented and continuously developed a set of indicators for this purpose. This IAEG-SDGs consists of statistical offices of some UN member states, including the Federal Statistical Office for Germany.
 
 <h3>National Reporting about sustainable development</h3>
 
