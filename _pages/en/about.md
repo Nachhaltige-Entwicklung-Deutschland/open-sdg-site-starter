@@ -27,7 +27,7 @@ The platform is organised in goals, indicator groups and postulates, and their r
 
 Each indicator of the DNS is presented individually or together with a closely related indicator on an own page. A chart visualizes the development of the indicator. The definitions and intentions as well as the development of the indicators are explained. The information stem from the biannual published [indicator report](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Nachhaltigkeitsindikatoren/Publikationen/Downloads-Nachhaltigkeit/indicator-report-0230002189004.pdf?__blob=publicationFile) of the Federal Statistical Office.
 
-The symbols and choice of colour of the 17 goals (figures 2 and 3) which are used here and on the SDG-part of this reporting platform are copyright protected by the United Nations. The DNS-part of the reporting platform also uses “The Magnificent 17” (figure 4). “The Magnificent 17” are part of an information campaign of the same name for the sustainable development goals of the Federal government.
+The symbols and choice of colour of the 17 goals (figures 2 and 3) which are used here and on the SDG-part of this reporting platform are copyright protected by the United Nations.
 
 <div class="container" style="padding-left: 0px;">
 <div class="col-xs-12 col-md-4 col-lg-4" style="padding-left: 0px;">
@@ -35,15 +35,11 @@ The symbols and choice of colour of the 17 goals (figures 2 and 3) which are use
 <small> Figure 2: 17 icons of the SDGs of the United Nations, used on the <b>SDG-part of the reporting platform Germany</b></small>
 </div>
 
-<div class="col-xs-12 col-md-4 col-lg-4" style="padding-left: 0px;">
+<div class="col-xs-12 col-md-6 col-lg-6" style="padding-left: 0px;">
 <img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/en/sdgIconsInvert.PNG" alt="Figure 3: SDG Icons inverted" class="responsiveImg" style="width: 100%;">
 <small> Figure 3: 17 icons of the SDGs of the United Nations, inverted and used on the <b>DNS-part of the reporting platform Germany</b></small>
 </div>
 
-<div class="col-xs-12 col-md-4 col-lg-4" style="padding-left: 0px;">
-<img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/glory17.PNG" alt="Figure 4: Magnificent 17" class="responsiveImg" style="width: 100%;">
-<small> Figure 4: “The Magnificent 17”, used on the <b>DNS-part of the reporting platform Germany</b></small>
-</div>
 </div>
 
 <h3 align="left">Indicator evaluation</h3>
@@ -54,13 +50,13 @@ The button “Evaluation” on the very top of the DNS page and “Summary” in
 
 <h3>Comparison of DNS- and SDG-indicators</h3>
 
-The DNS-indicators and their numbering are not substitutable with the SDG-indicators of the United Nations. If there is a comparable SDG-indicator to one of the DNS-indicators it is marked with a button and a direct link to the respective indicator (figure 5).
+The DNS-indicators and their numbering are not substitutable with the SDG-indicators of the United Nations. If there is a comparable SDG-indicator to one of the DNS-indicators it is marked with a button and a direct link to the respective indicator (figure 4).
 
 <br>
-<img src="https://Nachhaltige-Entwicklung-Deutschland.github.io/open-sdg-site-starter/assets/img/about/en/dnsIndicatorPage.png" alt="Figure 5: Structure of the indicator page" class="responsiveImg">
+<img src="https://Nachhaltige-Entwicklung-Deutschland.github.io/open-sdg-site-starter/assets/img/about/en/dnsIndicatorPage.png" alt="Figure 4: Structure of the indicator page" class="responsiveImg">
 
 <p style="text-align:center">
-<small> Figure 5: Button to related global indicator (marked in red) and an example for a weather symbol <br>based on indicator 6.1.a “Phosphorous in flowing waters” (state of the indicator report 2018)</small>
+<small> Figure 4: Button to related global indicator (marked in red) and an example for a weather symbol <br>based on indicator 6.1.a “Phosphorous in flowing waters” (state of the indicator report 2018)</small>
 </p>
 <br>
 
