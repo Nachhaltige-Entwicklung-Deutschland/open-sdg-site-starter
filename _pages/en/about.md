@@ -29,13 +29,13 @@ Each indicator of the DNS is presented individually or together with a closely r
 
 The symbols and choice of colour of the 17 goals (figures 2 and 3) which are used here and on the SDG-part of this reporting platform are copyright protected by the United Nations.
 
-<div class="container" style="padding-left: 60px; padding-right: 60px;">
+<div class="container" style="padding-left: 80px; padding-right: 80px;">
 <div class="col-xs-12 col-md-6 col-lg-6" style="padding-left: 0px;">
 <img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/en/sdgIcons.PNG" alt="Figure 2: SDG Icons" class="responsiveImg" style="width: 100%;">
 <small> Figure 2: 17 icons of the SDGs of the United Nations, used on the <b>SDG-part of the reporting platform Germany</b></small>
 </div>
 
-<div class="col-xs-12 col-md-6 col-lg-6" style="padding-left: 60px; padding-right: 60px;">
+<div class="col-xs-12 col-md-6 col-lg-6" style="padding-left: 80px; padding-right: 80px;">
 <img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/en/sdgIconsInvert.PNG" alt="Figure 3: SDG Icons inverted" class="responsiveImg" style="width: 100%;">
 <small> Figure 3: 17 icons of the SDGs of the United Nations, inverted and used on the <b>DNS-part of the reporting platform Germany</b></small>
 </div>
@@ -44,7 +44,7 @@ The symbols and choice of colour of the 17 goals (figures 2 and 3) which are use
 
 <h3 align="left">Indicator evaluation</h3>
 
-Weather symbols illustrate in an easy-to-understand way – from sunshine to thunderstorm (figure 5) - the course of development of most indicators. An explanation of the definition of the symbols is found [here](https://sustainabledevelopment-deutschland.github.io/en/status/). Weather symbols of the last four years can be found behind the button “indicator status summary” on each respective indicator page. A rough estimation about how stable the development was is possible by using the weather symbols. However, the symbols cannot replace the explanatory texts with their background information.
+Weather symbols illustrate in an easy-to-understand way – from sunshine to thunderstorm (figure 4) - the course of development of most indicators. An explanation of the definition of the symbols is found [here](https://sustainabledevelopment-deutschland.github.io/en/status/). Weather symbols of the last four years can be found behind the button “indicator status summary” on each respective indicator page. A rough estimation about how stable the development was is possible by using the weather symbols. However, the symbols cannot replace the explanatory texts with their background information.
 
 The button “Evaluation” on the very top of the DNS page and “Summary” in the drop-down menu following leads to a summary of the whole development of the weather symbols of all indicators over time.
 
@@ -56,7 +56,7 @@ The DNS-indicators and their numbering are not substitutable with the SDG-indica
 <img src="https://Nachhaltige-Entwicklung-Deutschland.github.io/open-sdg-site-starter/assets/img/about/en/dnsIndicatorPage.png" alt="Figure 4: Structure of the indicator page" class="responsiveImg">
 
 <p style="text-align:center">
-<small> Figure 4: Button to related global indicator (marked in red) and an example for a weather symbol <br>based on indicator 6.1.a “Phosphorous in flowing waters” (state of the indicator report 2018)</small>
+<small> Figure 4: Button to related global indicator (highlighted) and an example for a weather symbol <br>based on indicator 6.1.a “Phosphorous in flowing waters” (state of the indicator report 2018)</small>
 </p>
 <br>
 
