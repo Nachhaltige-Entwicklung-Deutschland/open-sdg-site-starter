@@ -92,19 +92,16 @@
               </tr>
             {% else %}
               <tr>
-                <th scope="row">{{ metadata_label }} </th>
-                  <td align="center">{{ year_d }}</td>
-                  <td align="center">{{ year_c }}</td>
-                  <td align="center">{{ year_b }}</td>
-                  <td align="center">{{ year_a }}</td>
+                <th scope="row" height="">{{ metadata_label }} </th>
+                  <td align="center" style="margin-bottom: 15px;"><p>{{ year_d }}</p></td>
+                  <td align="center" style="margin-bottom: 15px;"><p>{{ year_c }}</p></td>
+                  <td align="center" style="margin-bottom: 15px;"><p>{{ year_b }}</p></td>
+                  <td align="center" style="margin-bottom: 15px;"><p>{{ year_a }}</p></td>
               </tr>
             {% endif %}
         {% endif %}
 
-
       {% endif %}
-
-
 
     {% endif %}
   {% endfor %}

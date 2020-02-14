@@ -6,13 +6,13 @@ layout: page
 
 <h3>Ziel und Hintergrund</h3>
 Ziel dieser nationalen Berichtsplattform ist die Darstellung der Indikatoren der Deutschen Nachhaltigkeitsstrategie. Deutschland hat seit 2002 eine nationale Nachhaltigkeitsstrategie mit eigenen Zielen, Indikatorenbereichen und Postulaten.
-2017 wurde diese Strategie anlässlich der [Agenda 2030](https://sustainabledevelopment-deutschland.github.io/agenda/) der Vereinten Nationen und den zugehörigen 17 Zielen für eine nachhaltige Entwicklung (Sustainable Development Goals, SGDs) überarbeitet und firmiert nun unter dem Namen Deutschen Nachhaltigkeitsstrategie (DNS). Bei der Überarbeitung wurde thematisch passend mindestens ein Indikator zu jedem der 17 Ziele in die Strategie aufgenommen. Die zu erreichenden Zielwerte, die Indikatoren, ihre Datengrundlagen und Berechnungen sind von der Bundesregierung beschlossen worden.
+2017 wurde diese Strategie anlässlich der [Agenda 2030](https://sustainabledevelopment-deutschland.github.io/agenda/) der Vereinten Nationen und den zugehörigen 17 Zielen für eine nachhaltige Entwicklung (Sustainable Development Goals, SGDs) überarbeitet und firmiert nun unter dem Namen Deutschen Nachhaltigkeitsstrategie (DNS). Bei der Überarbeitung wurde thematisch passend mindestens ein Indikator zu jedem der 17 Ziele in die Strategie aufgenommen. Die Zielwerte, die Indikatoren, ihre Datengrundlagen und Berechnungen sind von der Bundesregierung beschlossen worden.
 
-Das Statistische Bundesamt berichtet im Auftrag der Bundesregierung seit dem Jahr 2006 im zweijährlichen Rhythmus über die Zielerreichung der Deutschen Nachhaltigkeitsstrategie. In gebundener Form und als PDF liegen die Informationen als [Indikatorenbericht](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Nachhaltigkeitsindikatoren/Deutsche-Nachhaltigkeit/_inhalt.html) vor. Seit 2020 wird die Entwicklung der Indikatoren der DNS zusätzlich über diese Berichtsplattform veröffentlicht.
+Seit 2006 berichtet das Statistische Bundesamt im Auftrag der Bundesregierung im zweijährlichen Rhythmus über die Zielerreichung der Deutschen Nachhaltigkeitsstrategie. In gebundener Form und als PDF liegen die Informationen als [Indikatorenbericht](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Nachhaltigkeitsindikatoren/Deutsche-Nachhaltigkeit/_inhalt.html) vor. Seit 2020 wird die Entwicklung der Indikatoren der DNS zusätzlich über diese Berichtsplattform veröffentlicht.
 
 <h3>Struktur der Berichtsplattform</h3>
 
-Die Plattform ist nach Zielen, Indikatorbereichen und Postulaten und den dazugehörigen Indikatoren gegliedert (Abb.1). Alle vier Jahre wird die Strategie und ihre Indikatoren durch die Bundesregierung überprüft und bei Bedarf angepasst. Dabei können z.B. Indikatoren ersetzt werden oder neue hinzukommen.
+Die Plattform ist nach Zielen, Indikatorbereichen und Postulaten und den dazugehörigen Indikatoren gegliedert (Abb.1). Alle vier Jahre werden die Strategie und ihre Indikatoren durch die Bundesregierung überprüft und bei Bedarf angepasst. Dabei können z.B. Indikatoren ersetzt werden oder neue hinzukommen.
 
 
 <br>
@@ -23,44 +23,39 @@ Die Plattform ist nach Zielen, Indikatorbereichen und Postulaten und den dazugeh
 </p>
 <br>
 
+Jeder Indikator der DNS wird auf einer eigenen Seite einzeln oder mit einem inhaltlich eng verbundenen Indikator zusammen dargestellt. Die Entwicklung des Indikators wird in einer Grafik visualisiert. Die Definitionen und Intentionen sowie die Entwicklung der Indikatoren werden erklärt. Diese Informationen stammen aus dem zweijährlich erscheinenden [Indikatorenbericht](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Nachhaltigkeitsindikatoren/Deutsche-Nachhaltigkeit/_inhalt.html) des Statistischen Bundesamtes.
 
-Jeder Indikator der DNS wird auf einer eigenen Seite einzeln oder mit einem inhaltlich eng verbundenen Indikator zusammen dargestellt. Die Entwicklung des Indikators wird in einer Grafik visualisiert. Außerdem werden die Definitionen, Intentionen sowie die Entwicklung der jeweiligen Indikatoren angegeben. Diese Informationen stammen aus dem zweijährlich erscheinenden [Indikatorenbericht](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Nachhaltigkeitsindikatoren/Deutsche-Nachhaltigkeit/_inhalt.html) des Statistischen Bundesamtes.
-
-Die Symbole und Farbwahl der 17 Ziele (Abb. 2 und Abb. 3), die hier und auf der SDG-Seite dieser Berichtsplattform verwendet werden, stammen von den Vereinten Nationen. Auf der DNS-Seite der Plattform werden außerdem noch „Die Glorreichen 17“ verwendet (Abb. 4). Sie sind Teil der gleichnamigen Informationskampagne der Bundesregierung zu den Zielen für nachhaltige Entwicklung.
+Die Symbole und Farbwahl der 17 Ziele (Abb. 2 und Abb. 3), die hier und auf der SDG-Seite dieser Berichtsplattform verwendet werden, stammen von den Vereinten Nationen.
 
 <div class="container" style="padding-left: 0px;">
-<div class="col-xs-12 col-md-4 col-lg-4" style="padding-left: 0px;">
+<div class="col-xs-12 col-md-6 col-lg-6" style="padding-left: 100px; padding-right: 100px;">
 <img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/sdgIcons.PNG" alt="Abbildung 2: SDG Icons" class="responsiveImg" style="width: 100%;">
 <small> Abb. 2: 17 SDG-Symbole der Vereinten Nationen, eingesetzt auf der <b>SDG-Seite der Berichtsplattform Deutschland</b></small>
 </div>
 
-<div class="col-xs-12 col-md-4 col-lg-4" style="padding-left: 0px;">
+<div class="col-xs-12 col-md-6 col-lg-6" style="padding-left: 100px; padding-right: 100px;">
 <img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/sdgIconsInvert.PNG" alt="Abbildung 3: SDG Icons inverted" class="responsiveImg" style="width: 100%;">
 <small> Abb. 3: 17 SDG-Symbole der Vereinten Nationen, invertiert, eingesetzt auf der <b>DNS-Seite der Berichtsplattform</b></small>
 </div>
 
-<div class="col-xs-12 col-md-4 col-lg-4" style="padding-left: 0px;">
-<img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/glory17.PNG" alt="Abbildung 4: Glory 17" class="responsiveImg" style="width: 100%;">
-<small> Abb. 4: Die Glorreichen 17, eingesetzt auf der <b>DNS-Seite der Berichtsplattform</b></small>
-</div>
 </div>
 
 
-<h3 align="left">Bewertung der Indikatoren</h3>Bei den meisten Indikatoren veranschaulicht ein Wettersymbol –von Sonnenschein bis Gewitter– auf leicht zu erfassende Weise, inwiefern sich der Indikator auf dem angestrebten Pfad in Richtung Ziel bewegt (Abb. 5). Erläuterungen zur Definition der Symbole können [hier](https://sustainabledevelopment-deutschland.github.io/status/) gefunden werden. Wettersymbole für die letzten vier Jahre sind unter der Schaltfläche „Statusübersicht“ auf der jeweiligen Indikatorseite zu finden. Anhand der Wettersymbole lässt sich grob einschätzen, wie stabil die Entwicklung zuletzt gewesen ist. Sie ersetzen jedoch nicht die erläuternden Texte mit ihren Hintergrundinformationen.
+<h3 align="left">Bewertung der Indikatoren</h3>Bei den meisten Indikatoren veranschaulicht ein Wettersymbol –von Sonnenschein bis Gewitter– auf leicht zu erfassende Weise, inwiefern sich der Indikator auf dem angestrebten Pfad in Richtung Ziel bewegt (Abb. 4). Erläuterungen zur Definition der Symbole können [hier](https://sustainabledevelopment-deutschland.github.io/status/) gefunden werden. Wettersymbole für die letzten vier Jahre sind unter der Schaltfläche „Statusübersicht“ auf der jeweiligen Indikatorseite zu finden. Anhand der Wettersymbole lässt sich grob einschätzen, wie stabil die Entwicklung zuletzt gewesen ist. Sie ersetzen jedoch nicht die erläuternden Texte mit ihren Hintergrundinformationen.
 
-Über die Schaltfläche „Bewertung“ und „Übersicht“ ganz oben auf der DNS-Seite kommt man zur Übersicht der [gesamten zeitlichen Entwicklung der Wettersymbole aller Indikatoren](https://sustainabledevelopment-deutschland.github.io/status_summary/).
+Oben auf der DNS-Seite gelangt man über die Schaltfläche „Bewertung“ und die Auswahl „Übersicht“ zur Darstellung der [gesamten zeitlichen Entwicklung der Wettersymbole aller Indikatoren](https://sustainabledevelopment-deutschland.github.io/status_summary/).
 
-<h3>Indikatorenvergleich DNS und SDG</h3>Die Indikatoren der DNS und ihre Nummerierung sind nicht identisch mit den SDG-Indikatoren der Vereinten Nationen. Wenn ein vergleichbarer Indikator der SDGs zu einem Indikator der DNS vorhanden ist, ist dies über eine Schaltfläche mit Direktlink zum jeweiligen Indikator kenntlich gemacht (Abb.5).
+<h3>Indikatorenvergleich DNS und SDG</h3>Die Indikatoren der DNS und ihre Nummerierung sind nicht identisch mit den SDG-Indikatoren der Vereinten Nationen. Wenn ein vergleichbarer Indikator der SDGs zu einem Indikator der DNS vorhanden ist, ist dies über eine Schaltfläche mit Direktlink zum jeweiligen Indikator kenntlich gemacht (Abb.4).
 
 <br>
-<img src="https://Nachhaltige-Entwicklung-Deutschland.github.io/open-sdg-site-starter/assets/img/about/dnsIndicatorPage.PNG" alt="Abbildung 5: Aufbau der Indikator-Seiten" class="responsiveImg">
+<img src="https://Nachhaltige-Entwicklung-Deutschland.github.io/open-sdg-site-starter/assets/img/about/dnsIndicatorPage.PNG" alt="Abbildung 4: Aufbau der Indikator-Seiten" class="responsiveImg">
 
 <p style="text-align:center">
-<small> Abb. 5: Schaltfläche zu verwandtem globalen Indikator (rot markiert) <br>und Beispiel für Wettersymbol anhand des Indikators 6.1.a „Phosphor in Fließgewässern“ (Stand Indikatorenbericht 2018)</small>
+<small> Abb. 4: Schaltfläche zu verwandtem globalen Indikator (hervorgehoben) <br>und Beispiel für Wettersymbol anhand des Indikators 6.1.a „Phosphor in Fließgewässern“ (Stand Indikatorenbericht 2018)</small>
 </p>
 <br>
 
 Neben dem Suchfeld oben rechts auf dieser Seite gibt es einen Direktlink zur Startseite der nationalen Berichtsplattform zu den SDG-Indikatoren der Agenda 2030 der Vereinten Nationen:
-[<img src="https://Nachhaltige-Entwicklung-Deutschland.github.io/open-sdg-site-starter/assets/img/about/wheel.png" alt="Wheel">](https://sustainabledevelopment-deutschland.github.io)
+[<img src="https://Nachhaltige-Entwicklung-Deutschland.github.io/open-sdg-site-starter/assets/img/about/wheel.png" alt="Wheel">](https://sustainabledevelopment-germany.github.io)
 
 <h3>Technischer Hintergrund</h3>Um die Daten aufbereitet darstellen zu können, bietet das Open-Source-Projekt Open SDG auf GitHub Vorlagen. Mehr dazu finden Sie unter [Technische Hinweise](https://sustainabledevelopment-deutschland.github.io/guidance/).

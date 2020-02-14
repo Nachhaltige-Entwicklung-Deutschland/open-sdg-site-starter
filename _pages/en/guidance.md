@@ -1,24 +1,39 @@
 ---
-title: Guidance
+title: Technical Guidance
 permalink: /en/guidance/
 layout: page
 language: en
 ---
 
-This page shares information for people using this website and for countries or localities wishing to take a copy of it.
+The Federal Statistical Office (Destatis) supports actively the development of national reporting platforms, especially as an open source solution. The USA and the United Kingdom are pioneers in this area of expertise. They have developed platforms in order to present the indicators for the SDG’s (Sustainable Development Goals) of the United Nations.
 
-## The platform
+There is an universal version of the code for a reporting platform for the SDGs available. The USA, the United Kingdom, and the Center for Open Data Enterprise have developed it. The reporting platform for the indicators of the German Sustainable Development Strategy uses the universal code. If you are interested, we recommend to have a look at the SDG-platforms of US and of the United Kingdom as well as at the [Open SDG-project documentation](https://open-sdg.readthedocs.io/en/latest/). There are instruction on how to copy the Open SDG platform.
 
-This site is built and hosted using an open-source platform with 100% free software and services. For detailed documentation on the underlying platform, including information for developers, data providers, and policy makers, see [here](https://open-sdg.readthedocs.io).
+- [SDG- reporting platform USA](https://sdg.data.gov/)
+- [SDG- reporting platform UK](https://sustainabledevelopment-uk.github.io/)
 
-## Using this website
+The project code for this platform is available to the public in the following [GitHub Repository](https://github.com/sustainabledevelopment-deutschland/sustainabledevelopment-deutschland.github.io).
 
-Answers to some specific questions about the website are included in our [Frequently Asked Questions]({{ site.baseurl }}/faq/) page.
+If you want to comment or give feedback to the Open SDG-project or if you elsewise want to be part of the Open SDG-community, kindly contact [Open SDG GitHub](https://github.com/open-sdg/open-sdg/issues).
 
-The platform documentation includes information for people adding [data](https://open-sdg.readthedocs.io/en/latest/data-format/) and [metadata](https://open-sdg.readthedocs.io/en/latest/metadata-format/).
+### Used Software
 
-## Creating a copy of this website
+#### Back-end IT-requirements:
 
-Other countries or localities wishing to implement a version of this platform are welcome to do so for free.
+- GitHub: Hosting of the website which was developed for the programming of projects with the GIT-version controll system.
+- Jekyll: Generator for statistical sites written in Ruby.
 
-The platform documentation includes [technical information and instructions for developers](https://open-sdg.readthedocs.io/en/latest/quick-start/).
+#### Front-end IT-requirements:
+
+- XHTML, CSS, JavaScript
+- Chartist: JavaScript library
+- Bootstrap: framework CSS
+
+### Shortcomings of the current presentation
+
+There are still technical difficulties. Currently we cannot properly present the following issues:
+
+- Whole numbers are always displayed without any decimal places – even though there might be other numbers in the same data set that have decimal places (which are shown).
+- Axis labels cannot be wrapped to the next line. Instead very long titles of time series are partly cut off on axis labels.
+- In charts, super- and subscripted numbers and letters in tooltips for single data points are not correctly displayed.
+- In charts, the names of data series in tooltips for individual data points are not wrapped to the next line.
