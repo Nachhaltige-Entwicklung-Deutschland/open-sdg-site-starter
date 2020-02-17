@@ -1045,6 +1045,8 @@ body.contrast-high {
 figure {
   float: right;
   display: table;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
 
 figcaption {
