@@ -1374,14 +1374,17 @@ var indicatorDataStore = function(dataUrl) {
       //--#14 mixedCharts---stop--------------------------------------------------------------------------------------------------------
 
       //--#14.1 barsOnly---start--------------------------------------------------------------------------------------------------------
-      barCharts = ['indicator_2-2-a','indicator_3-1-e','indicator_5-1-b','indicator_5-1-c','indicator_6-2-a','indicator_8-2-c','indicator_8-3-a',
+      barCharts = ['indicator_2-2-a','indicator_3-1-e','indicator_5-1-b','indicator_5-1-c','indicator_6-2-a','indicator_8-2-ab','indicator_8-2-c','indicator_8-3-a',
       'indicator_8-4-a','indicator_8-6-a','indicator_11-1-a','indicator_11-1-b','indicator_11-2-c','indicator_12-1-a','indicator_12-1-b','indicator_13-1-b','indicator_15-2-a','indicator_16-1-a','indicator_16-2-a','indicator_17-1-a','indicator_17-2-a'];
 
       bl = ['bw','by','be','bb','hb','hh','he','mv','ni','nw','rp','sl','sn','st','sh','th'];
 
       exceptions = [translations.t('direct co2 emissions and co2 content of consumer goods'),
                     translations.t('a) time series') + ', ' + translations.t('a) total (moving four-year average)'),
-                    translations.t('b) target (max)') + ', ' + translations.t('a) total (moving four-year average)')];
+                    translations.t('b) target (max)') + ', ' + translations.t('a) total (moving four-year average)'),
+                    translations.t('b) target (min)') + ', ' + translations.t('funding balance (share of gross domestic product (at current prices) in %)'),
+                    translations.t('b) target (min)') + ', ' + translations.t('structural funding balance (share of gross domestic product (at current prices) in %)'),
+                    translations.t('a) time series') + ', ' + translations.t('gross domestic produkt (price-adjusted) (year-on-year changes in %)')];
 
       for (var i=0; i<bl.length; i++){
         exceptions.push(translations.t('a) time series') + ', ' + translations.t('a) total (moving four-year average)') + ', ' + translations.t(bl[i]));
