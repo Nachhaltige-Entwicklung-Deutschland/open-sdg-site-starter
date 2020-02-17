@@ -17,7 +17,7 @@ Die Statistische Kommission der Vereinten Nationen wurde beauftragt, gemeinsam m
 
 Das Statistische Bundesamt ist verantwortlich für die Koordination und Veröffentlichung deutscher Daten für die SDG-Indikatoren und für die statistische Berichterstattung zu den Fortschritten Deutschlands auf diesem Gebiet.
 
-<img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/agenda2.png" alt="Abbildung 2: Datenfluss Diagramm" class="responsiveImg"><small> Abb. 1: Datenfluss zum Berechnen der Indikatoren der SDGs in Bezug auf Deutschland)</small>
+<img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/agenda2.png" alt="Abbildung 2: Datenfluss Diagramm" class="responsiveImg"><p style="text-align:center"><small> Abb. 1: Datenfluss zum Berechnen der Indikatoren der SDGs in Bezug auf Deutschland)</small></p>
 
 
 Im Juli 2019 hat das Statistische Bundesamt eine nationale Berichtsplattform zu den Indikatoren der globalen Nachhaltigkeitsziele der UN freigeschaltet. Auf dieser stehen statistische Daten und Metadaten für Deutschland zur globalen nachhaltigen Entwicklung in aufbereiteter und interaktiver Form zur Verfügung. Die SDG-Seite dieser Berichtsplattform (LINK https://sustainabledevelopment-germany.github.io/) ermöglicht es den zuständigen internationalen Organisationen (Custodian Agencies) die Daten für einzelne SDG-Indikatoren direkt herunterzuladen und zum Beispiel für die globale Berichterstattung zu nutzen (Abb. 2). Seit Anfang 2020 gibt es die Berichtsplattform auch für die Indikatoren der Deutschen Nachhaltigkeitsstrategie (DNS).
