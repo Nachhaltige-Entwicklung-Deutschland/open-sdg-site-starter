@@ -20,10 +20,10 @@ Das Statistische Bundesamt ist verantwortlich für die Koordination und Veröffe
 <img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/agenda2.png" alt="Abbildung 2: Datenfluss Diagramm" class="responsiveImg">
 
 <p style="text-align:center;">
-<small> Abb. 1: Datenfluss zum Berechnen der Indikatoren der SDGs in Bezug auf Deutschland)
+<small> Abb. 1: Datenfluss zum Berechnen der Indikatoren der SDGs in Bezug auf Deutschland
 </small>
 </p>
 
-Im Juli 2019 hat das Statistische Bundesamt eine nationale Berichtsplattform zu den Indikatoren der globalen Nachhaltigkeitsziele der UN freigeschaltet. Auf dieser stehen statistische Daten und Metadaten für Deutschland zur globalen nachhaltigen Entwicklung in aufbereiteter und interaktiver Form zur Verfügung. Die SDG-Seite dieser Berichtsplattform (LINK https://sustainabledevelopment-germany.github.io/) ermöglicht es den zuständigen internationalen Organisationen (Custodian Agencies) die Daten für einzelne SDG-Indikatoren direkt herunterzuladen und zum Beispiel für die globale Berichterstattung zu nutzen (Abb. 2). Seit Anfang 2020 gibt es die Berichtsplattform auch für die Indikatoren der Deutschen Nachhaltigkeitsstrategie (DNS).
+Im Juli 2019 hat das Statistische Bundesamt eine nationale Berichtsplattform zu den Indikatoren der globalen Nachhaltigkeitsziele der UN freigeschaltet. Auf dieser stehen statistische Daten und Metadaten für Deutschland zur globalen nachhaltigen Entwicklung in aufbereiteter und interaktiver Form zur Verfügung. Die SDG-Seite dieser [Berichtsplattform](https://sustainabledevelopment-germany.github.io/) ermöglicht es den zuständigen internationalen Organisationen (Custodian Agencies) die Daten für einzelne SDG-Indikatoren direkt herunterzuladen und zum Beispiel für die globale Berichterstattung zu nutzen (Abb. 2). Seit Anfang 2020 gibt es die Berichtsplattform auch für die Indikatoren der Deutschen Nachhaltigkeitsstrategie (DNS).
 
 <i>Quelle: [Indikatoren der UN-Nachhaltigkeitsziele](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Nachhaltigkeitsindikatoren/Publikationen/Downloads-Nachhaltigkeit/indikatoren-un-nachhaltigkeitziele-2018-pdf.pdf?__blob=publicationFile), Stand Juni 2018, bearbeitet</i>
