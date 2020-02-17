@@ -1039,3 +1039,15 @@ body.contrast-high {
       }
 
     }
+
+
+//for images in agenda
+figure {
+  display: table;
+}
+
+figcaption {
+  display: table-caption;
+  caption-side: bottom;
+}
+//---------------------------
