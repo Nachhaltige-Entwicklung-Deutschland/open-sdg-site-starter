@@ -1,5 +1,5 @@
 ---
-title: About the reporting platform for Germany's National Sustainable Development Strategy
+title: About the reporting platform for the DNS
 permalink: /en/about/
 layout: page
 language: en
@@ -7,9 +7,9 @@ language: en
 
 <h3>Aim and Background</h3>
 
-The purpose of this national reporting platform is the presentation and explanation of the indicators of the German Sustainable Development Strategy. In 2002 the first adoption of a German Sustainability Strategy was published. Since then it always consisted of own goals, indicator groups, and postulates.
+The purpose of this national reporting platform is the presentation and explanation of the indicators of the German Sustainable Development Strategy (Deutsche Nachhaltigkeitsstrategie, DNS). In 2002 the first adoption of a German Sustainability Strategy was published. Since then it always consisted of own goals, indicator groups, and postulates.
 
-2017 the national strategy was adjusted as a response to the [Agenda 2030](https://sustainabledevelopment-deutschland.github.io/en/agenda/) of the United Nations and its 17 Sustainable Development Goals (SDGs). The strategy is now called German Sustainable Development Strategy (Deutsche Nachhaltigkeitsstrategie, DNS). As part of the adjustments at least one indicator for each of the 17 goals has been included. The Federal Government determined the target values, as well as the indicators, their database, and calculations.
+2017 the national strategy was adjusted as a response to the [Agenda 2030](https://sustainabledevelopment-deutschland.github.io/en/agenda/) of the United Nations and its 17 Sustainable Development Goals (SDGs). The strategy is now called German Sustainable Development Strategy. As part of the adjustments at least one indicator for each of the 17 goals has been included. The Federal Government determined the target values, as well as the indicators, their database, and calculations.
 
 Since 2006 the Federal Statistical Office is assigned by the Federal Government to report every two years about the target achievement of the German Sustainable Development Strategy. The information is published in an [indicator report](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Nachhaltigkeitsindikatoren/Publikationen/Downloads-Nachhaltigkeit/indicator-report-0230002189004.pdf?__blob=publicationFile). It is available as a bound book and a digital version. Since 2020 the development of the indicators is also published on this reporting platform.
 
