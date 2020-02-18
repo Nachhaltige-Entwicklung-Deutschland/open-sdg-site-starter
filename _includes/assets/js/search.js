@@ -1,6 +1,4 @@
 var indicatorSearch = function(inputElement, indicatorDataStore) {
-  console.log("search",inputElement);
-  console.log("search2",indicatorDataStore);
 
   that = this;
   this.inputElement = inputElement;
@@ -9,6 +7,7 @@ var indicatorSearch = function(inputElement, indicatorDataStore) {
   this.hasErrored = false;
 
   this.processData = function(data) {
+    console.log("search",inputElement);
     for(var goalLoop = 0; goalLoop < data.length; goalLoop++) {
       for(var indicatorLoop = 0; indicatorLoop < data[goalLoop].goal.indicators.length; indicatorLoop++) {
         var currentIndicator = data[goalLoop].goal.indicators[indicatorLoop];
