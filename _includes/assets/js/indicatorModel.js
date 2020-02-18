@@ -5,6 +5,7 @@ var indicatorModel = function (options) {
   };
 
   this.colorSet = {{ site.colorset | jsonify }};
+  this.numberOfColors = {{ site.numberOfColors | jsonify }};
   console.log("a",options);
   console.log("b",this.colorSet);
   // events:
@@ -193,8 +194,10 @@ var indicatorModel = function (options) {
 
   var headlineColor = '777777';
 
-  var colorSets = {'default':['aa','bb'],'sdgColors':['cc','dd'],'goalColors':['ee','ff']};
-  var colors = colorSets[this.colorSet];
+  var colorSets = {'default':['7e984f', '8d73ca', 'aaa533', 'c65b8a', '4aac8d', 'c95f44'],
+                  'sdgColors':['e5243b', 'e5b735', '4c9f38', 'c5192d', 'ff3a21', '26bde2', 'fcc30b', 'a21942', 'fd6925', 'dd1367'],
+                  'goalColors':['ee','ff']};
+  var colors = colorSets[this.colorSet].slice(0,this.numberOfColors);
   console.log(colors);
 
 

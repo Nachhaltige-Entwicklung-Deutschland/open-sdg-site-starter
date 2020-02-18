@@ -145,7 +145,13 @@ create_goals:
 create_indicators:
   layout: indicator
 
+# choose the set of colors you want to use in the charts. Set colorset to
+# - 'default' to use the default colors
+# - 'sdgColors' to use the 17 SDG colors in all charts
+# - 'goalColors' to use shades of the color of the indicator`s goal
 colorset: 'default'
+# choose the number of different colors you want to use in the charts (max = 17)
+numberOfColors: 6
 
 # Mapping
 map_options:
