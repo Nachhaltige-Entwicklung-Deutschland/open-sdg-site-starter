@@ -1055,7 +1055,7 @@ var indicatorDataStore = function(dataUrl) {
   }
 
   if (this.colorset == 'goalColors'){
-    colorSets['goalColors'].push(colorSets['sdgGoals'][goalNumber - 1]);
+    colorSets['goalColors'].push(colorSets['sdgColors'][goalNumber - 1]);
     for (var num=1; num<this.numberOfColors; num++){
       if ( num % 2 == 0) {
         colorSets['goalColors'].push(LightenDarkenColor(num*10));
@@ -1067,7 +1067,7 @@ var indicatorDataStore = function(dataUrl) {
   }
 
   var colors = colorSets[this.colorSet].slice(0,this.numberOfColors);
-  console.log(colors, colorSets['sdgGoals'][goalNumber - 1]);
+  console.log(colors, colorSets['sdgColors'][goalNumber - 1]);
 
 
   if (this.indicatorId.indexOf('_1-') != -1){
