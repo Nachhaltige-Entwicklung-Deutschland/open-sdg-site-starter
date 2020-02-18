@@ -1055,13 +1055,16 @@ var indicatorDataStore = function(dataUrl) {
   }
 
   if (this.colorset == 'goalColors'){
-    colorSets['goalColors'].push('x');
+    var sdgColor = colorSets['sdgcolors'][goalNumber];
+    colorSets['goalColors'].push(sdgColor);
     for (var num=1; num<this.numberOfColors; num++){
       if ( num % 2 == 0) {
-        colorSets['goalColors'].push(LightenDarkenColor(colorSets['sdgColors'][goalNumber - 1], num*10));
+        var darker = LightenDarkenColor(sdgColor, num*10);
+        colorSets['goalColors'].push(darker);
       }
       else{
-        colorSets['goalColors'].push(LightenDarkenColor(colorSets['sdgColors'][goalNumber - 1], num*-10));
+        var lighter = LightenDarkenColor(sdgColor, num*-10);
+        colorSets['goalColors'].push(lighter);
       }
     }
   }
