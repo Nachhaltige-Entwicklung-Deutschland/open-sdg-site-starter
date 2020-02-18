@@ -151,7 +151,7 @@ create_indicators:
 # - 'goalColors' to use shades of the color of the indicator`s goal
 colorset: 'goalColors'
 # choose the number of different colors you want to use in the charts (max = 17)
-numberOfColors: 5
+numberOfColors: 20
 
 # Mapping
 map_options:
