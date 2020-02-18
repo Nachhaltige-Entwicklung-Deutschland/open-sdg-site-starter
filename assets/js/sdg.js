@@ -1056,7 +1056,12 @@ var indicatorDataStore = function(dataUrl) {
 if (this.colorset == 'goalColors'){
   colorSets['goalColors'].push(colorsets['sdgGoals'][goalNumber - 1]);
   for (var num=1; num<this.numberOfColors; num++){
-    colorSets['goalColors'].push(LightenDarkenColor(num*10));
+    if ( num % 2 == 0) {
+      colorSets['goalColors'].push(LightenDarkenColor(num*10));
+    }
+    else{
+      colorSets['goalColors'].push(LightenDarkenColor(num*-10));
+    }
   }
 }
 
