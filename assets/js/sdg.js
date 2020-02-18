@@ -1057,7 +1057,7 @@ var indicatorDataStore = function(dataUrl) {
   if (this.colorSet == 'goalColors'){
     console.log("y");
 
-    var sdgColor = colorSets['sdgcolors'][goalNumber];
+    var sdgColor = colorSets['sdgColors'][goalNumber];
     colorSets['goalColors'].push(sdgColor);
 
     for (var num=1; num<this.numberOfColors; num++){
@@ -1073,7 +1073,7 @@ var indicatorDataStore = function(dataUrl) {
   }
 
   var colors = colorSets[this.colorSet].slice(0,this.numberOfColors);
-  console.log(colorSets, colorSets['sdgColors'][goalNumber - 1]);
+  console.log(colorSets, sdgColor);
 
 
   if (this.indicatorId.indexOf('_1-') != -1){
