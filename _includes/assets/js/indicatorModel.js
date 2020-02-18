@@ -220,7 +220,7 @@ if (this.colorset == 'goalColors'){
 }
 
 var colors = colorSets[this.colorSet].slice(0,this.numberOfColors);
-console.log(colors);
+console.log(colors, colorsets['sdgGoals'][goalNumber - 1]);
 
 
   if (this.indicatorId.indexOf('_1-') != -1){
