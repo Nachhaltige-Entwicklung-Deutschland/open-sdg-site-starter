@@ -850,6 +850,9 @@ var indicatorDataStore = function(dataUrl) {
     return this.indexOf(val) != -1;
   };
 
+  colorSet: "sdgGoal";
+  console.log("a",options);
+  console.log("b",colorSet);
   // events:
   this.onDataComplete = new event(this);
   this.onSeriesComplete = new event(this);
