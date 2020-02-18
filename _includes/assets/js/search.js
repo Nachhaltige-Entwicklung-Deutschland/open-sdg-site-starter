@@ -1,4 +1,7 @@
 var indicatorSearch = function(inputElement, indicatorDataStore) {
+  console.log("search",inputElement);
+  console.log("search2",indicatorDataStore);
+
   that = this;
   this.inputElement = inputElement;
   this.indicatorDataStore = indicatorDataStore;
@@ -52,7 +55,7 @@ var indicatorSearch = function(inputElement, indicatorDataStore) {
 
       that.processData(data);
       var searchResults = _.filter(that.indicatorData, function(indicator) {
-        console.log("search",indicator);
+
         return indicator.title.toLowerCase().indexOf(searchString.toLowerCase()) != -1 ||
           indicator.description.toLowerCase().indexOf(searchString.toLowerCase()) != -1 ||
           indicator.keywords.toLowerCase().indexOf(searchString.toLowerCase()) != -1;
