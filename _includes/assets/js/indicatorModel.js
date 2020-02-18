@@ -194,10 +194,14 @@ var indicatorModel = function (options) {
 
   var headlineColor = '777777';
 
-  var goalNumber = this.indicatorId.slice(this.indicatorId.indexOf('_')+1;this.indicatorId.indexOf('-'));
+  var goalNumber = this.indicatorId.slice(this.indicatorId.indexOf('_')+1,this.indicatorId.indexOf('-'));
   var colorSets = {'default':['7e984f', '8d73ca', 'aaa533', 'c65b8a', '4aac8d', 'c95f44'],
                   'sdgColors':['e5243b', 'e5b735', '4c9f38', 'c5192d', 'ff3a21', '26bde2', 'fcc30b', 'a21942', 'fd6925', 'dd1367'],
-                  'goalColors':['ee','ff']};
+                  'goalColors':[]};
+  if (this.colorset == 'goalColors'){
+    colorSets['goalColors'].push(colorsets['sdgGoals'][goalNumber - 1]);
+
+  }
   var colors = colorSets[this.colorSet].slice(0,this.numberOfColors);
   console.log(goalNumber);
 
