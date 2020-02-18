@@ -1040,10 +1040,11 @@ var indicatorDataStore = function(dataUrl) {
 
   var headlineColor = '777777';
 
-  var goalNumber = this.indicatorId.slice(this.indicatorId.indexOf('_')+1,this.indicatorId.indexOf('-'));
+  var goalNumber = parseInt(this.indicatorId.slice(this.indicatorId.indexOf('_')+1,this.indicatorId.indexOf('-')));
   var colorSets = {'default':['7e984f', '8d73ca', 'aaa533', 'c65b8a', '4aac8d', 'c95f44'],
-                  'sdgColors':['e5243b', 'e5b735', '4c9f38', 'c5192d', 'ff3a21', '26bde2', 'fcc30b', 'a21942', 'fd6925', 'dd1367'],
+                  'sdgColors':['e5243b', 'DDA63A', '4c9f38', 'c5192d', 'ff3a21', '26bde2', 'fcc30b', 'a21942', 'fd6925', 'dd1367','FD9D24','BF8B2E','3F7E44','0A97D9','56C02B','00689D','19486A'],
                   'goalColors':[]};
+  var shades = [0,1,-1,1/2,-1/2,3/4,-3/4,1/4,-1/4,7/8,-7/8,3/8,-3/8,5/8,-5/8,1/8,-1/8];
 
   function LightenDarkenColor(col, amt) {
     var num = parseInt(col, 16);
@@ -1055,7 +1056,6 @@ var indicatorDataStore = function(dataUrl) {
   }
 
   if (this.colorSet == 'goalColors'){
-    console.log("y");
 
     var sdgColor = colorSets['sdgColors'][goalNumber];
     colorSets['goalColors'].push(sdgColor);
