@@ -209,7 +209,7 @@ var indicatorModel = function (options) {
   }
 
   if (this.colorset == 'goalColors'){
-    colorSets['goalColors'].push(colorSets['sdgColors'][goalNumber - 1]);
+    colorSets['goalColors'].push('x');
     for (var num=1; num<this.numberOfColors; num++){
       if ( num % 2 == 0) {
         colorSets['goalColors'].push(LightenDarkenColor(colorSets['sdgColors'][goalNumber - 1], num*10));
