@@ -198,12 +198,24 @@ var indicatorModel = function (options) {
   var colorSets = {'default':['7e984f', '8d73ca', 'aaa533', 'c65b8a', '4aac8d', 'c95f44'],
                   'sdgColors':['e5243b', 'e5b735', '4c9f38', 'c5192d', 'ff3a21', '26bde2', 'fcc30b', 'a21942', 'fd6925', 'dd1367'],
                   'goalColors':[]};
-  if (this.colorset == 'goalColors'){
-    colorSets['goalColors'].push(colorsets['sdgGoals'][goalNumber - 1]);
 
+  function LightenDarkenColor(col, amt) {
+  var num = parseInt(col, 16);
+  var r = (num >> 16) + amt;
+  var b = ((num >> 8) & 0x00FF) + amt;
+  var g = (num & 0x0000FF) + amt;
+  var newColor = g | (b << 8) | (r << 16);
+  return newColor.toString(16);
+}
+if (this.colorset == 'goalColors'){
+  colorSets['goalColors'].push(colorsets['sdgGoals'][goalNumber - 1]);
+  for (var num=1; num<this.numberOfColors; num++){
+    colorSets['goalColors'].push(LightenDarkenColor(num*10));
   }
-  var colors = colorSets[this.colorSet].slice(0,this.numberOfColors);
-  console.log(goalNumber);
+}
+
+var colors = colorSets[this.colorSet].slice(0,this.numberOfColors);
+console.log(goalNumber);
 
 
   if (this.indicatorId.indexOf('_1-') != -1){
