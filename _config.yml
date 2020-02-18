@@ -145,7 +145,7 @@ create_goals:
 create_indicators:
   layout: indicator
 
-colorset: sdgGoal
+colorset: goalColors
 
 # Mapping
 map_options:

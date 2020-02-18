@@ -403,7 +403,7 @@ var indicatorView = function (model, options) {
 
 
   this.createPlot = function (chartInfo) {
-    console.log("chartinfox",chartInfo);
+    //console.log("chartinfox",chartInfo);
 
     var that = this;
 
