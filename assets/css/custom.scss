@@ -1039,3 +1039,18 @@ body.contrast-high {
       }
 
     }
+
+
+//for images in agenda
+figure {
+  float: right;
+  display: table;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+figcaption {
+  display: table-caption;
+  caption-side: bottom;
+}
+//---------------------------
