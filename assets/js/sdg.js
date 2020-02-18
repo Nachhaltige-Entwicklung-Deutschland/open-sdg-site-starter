@@ -1057,16 +1057,17 @@ var indicatorDataStore = function(dataUrl) {
 
   if (this.colorSet == 'goalColors'){
 
-    var sdgColor = colorSets['sdgColors'][goalNumber];
+    var sdgColor = colorSets['sdgColors'][goalNumber-1];
     colorSets['goalColors'].push(sdgColor);
 
     for (var num=1; num<this.numberOfColors; num++){
+      var shadeNum = shades[num-1];
       if ( num % 2 == 0) {
-        var darker = LightenDarkenColor(sdgColor, num*10);
+        var darker = LightenDarkenColor(sdgColor, shadeNum*50);
         colorSets['goalColors'].push(darker);
       }
       else{
-        var lighter = LightenDarkenColor(sdgColor, num*-10);
+        var lighter = LightenDarkenColor(sdgColor, shadeNum*-50);
         colorSets['goalColors'].push(lighter);
       }
     }
