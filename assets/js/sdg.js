@@ -851,7 +851,7 @@ var indicatorDataStore = function(dataUrl) {
   };
 
   this.colorSet = "default";
-  this.numberOfColors = 6;
+  this.numberOfColors = 5;
   console.log("a",options);
   console.log("b",this.colorSet);
   // events:
