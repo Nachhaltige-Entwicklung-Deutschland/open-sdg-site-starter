@@ -852,7 +852,7 @@ var indicatorDataStore = function(dataUrl) {
 
   this.colorSet = "goalColors";
   this.numberOfColors = 5;
-  console.log("a",options);
+
   console.log("b",this.colorSet);
   // events:
   this.onDataComplete = new event(this);
@@ -1046,27 +1046,28 @@ var indicatorDataStore = function(dataUrl) {
                   'goalColors':[]};
 
   function LightenDarkenColor(col, amt) {
-  var num = parseInt(col, 16);
-  var r = (num >> 16) + amt;
-  var b = ((num >> 8) & 0x00FF) + amt;
-  var g = (num & 0x0000FF) + amt;
-  var newColor = g | (b << 8) | (r << 16);
-  return newColor.toString(16);
-}
-if (this.colorset == 'goalColors'){
-  colorSets['goalColors'].push(colorsets['sdgGoals'][goalNumber - 1]);
-  for (var num=1; num<this.numberOfColors; num++){
-    if ( num % 2 == 0) {
-      colorSets['goalColors'].push(LightenDarkenColor(num*10));
-    }
-    else{
-      colorSets['goalColors'].push(LightenDarkenColor(num*-10));
+    var num = parseInt(col, 16);
+    var r = (num >> 16) + amt;
+    var b = ((num >> 8) & 0x00FF) + amt;
+    var g = (num & 0x0000FF) + amt;
+    var newColor = g | (b << 8) | (r << 16);
+    return newColor.toString(16);
+  }
+
+  if (this.colorset == 'goalColors'){
+    colorSets['goalColors'].push(colorSets['sdgGoals'][goalNumber - 1]);
+    for (var num=1; num<this.numberOfColors; num++){
+      if ( num % 2 == 0) {
+        colorSets['goalColors'].push(LightenDarkenColor(num*10));
+      }
+      else{
+        colorSets['goalColors'].push(LightenDarkenColor(num*-10));
+      }
     }
   }
-}
 
-var colors = colorSets[this.colorSet].slice(0,this.numberOfColors);
-console.log(colors, colorsets['sdgGoals'][goalNumber - 1]);
+  var colors = colorSets[this.colorSet].slice(0,this.numberOfColors);
+  console.log(colors, colorSets['sdgGoals'][goalNumber - 1]);
 
 
   if (this.indicatorId.indexOf('_1-') != -1){
