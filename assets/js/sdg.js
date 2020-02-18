@@ -1040,7 +1040,7 @@ var indicatorDataStore = function(dataUrl) {
   var headlineColor = '777777';
 
   var colorSets = {'default':['aa','bb'],'sdgColors':['cc','dd'],'goalColors':['ee','ff']};
-  var colors = colorSets.this.colorSet;
+  var colors = colorSets[this.colorSet];
   console.log(colors);
 
 
