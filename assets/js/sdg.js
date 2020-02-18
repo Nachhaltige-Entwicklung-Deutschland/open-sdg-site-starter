@@ -850,7 +850,7 @@ var indicatorDataStore = function(dataUrl) {
     return this.indexOf(val) != -1;
   };
 
-  colorSet = goalColors;
+  colorSet = default;
   console.log("a",options);
   console.log("b",colorSet);
   // events:
