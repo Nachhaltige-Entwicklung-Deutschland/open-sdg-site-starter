@@ -208,7 +208,7 @@ var indicatorModel = function (options) {
     return newColor.toString(16);
   }
 
-  if (this.colorset == 'goalColors'){
+  if (this.colorSet == 'goalColors'){
     console.log("y");
 
     var sdgColor = colorSets['sdgcolors'][goalNumber];
