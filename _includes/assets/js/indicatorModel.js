@@ -4,7 +4,7 @@ var indicatorModel = function (options) {
     return this.indexOf(val) != -1;
   };
 
-  colorSet = {{ site.colorset | jsonify }};
+  colorSet = {{ site.colorset }};
   console.log("a",options);
   console.log("b",colorSet);
   // events:
