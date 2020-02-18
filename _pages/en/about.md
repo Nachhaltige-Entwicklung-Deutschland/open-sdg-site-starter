@@ -11,7 +11,7 @@ The purpose of this national reporting platform is the presentation and explanat
 
 2017 the national strategy was adjusted as a response to the [Agenda 2030](https://sustainabledevelopment-deutschland.github.io/en/agenda/) of the United Nations and its 17 Sustainable Development Goals (SDGs). The strategy is now called German Sustainable Development Strategy. As part of the adjustments at least one indicator for each of the 17 goals has been included. The Federal Government determined the target values, as well as the indicators, their database, and calculations.
 
-Since 2006 the Federal Statistical Office is assigned by the Federal Government to report every two years about the target achievement of the German Sustainable Development Strategy. The information is published as [indicator report](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Nachhaltigkeitsindikatoren/Publikationen/Downloads-Nachhaltigkeit/indicator-report-0230002189004.pdf?__blob=publicationFile). It is available as a bound book and in digital version. Since 2020 the development of the indicators is also published on this reporting platform.
+Since 2006 the Federal Statistical Office is assigned by the Federal Government to report every two years about the target achievement of the German Sustainable Development Strategy. The information is published as [indicator report](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Nachhaltigkeitsindikatoren/Publikationen/Downloads-Nachhaltigkeit/indicator-report-0230002189004.pdf?__blob=publicationFile). It is available in a printed and in a digital version. Since 2020 the development of the indicators is also published on this reporting platform.
 
 <h3>Structure of the reporting platform</h3>
 
@@ -46,11 +46,11 @@ The symbols and choice of colour of the 17 goals (figures 2 and 3) which are use
 
 Weather symbols illustrate in an easy-to-understand way – from sunshine to thunderstorm (figure 4) - the course of development of most indicators. An explanation of the definition of the symbols is found [here](https://sustainabledevelopment-deutschland.github.io/en/status/). Weather symbols of the last four years can be found behind the button “indicator status summary” on each respective indicator page. A rough estimation about how stable the development was is possible by using the weather symbols. However, the symbols cannot replace the explanatory texts with their background information.
 
-The button “Evaluation” on the very top of the DNS page and “Summary” in the drop-down menu following leads to a summary of the whole development of the weather symbols of all indicators over time.
+On the very top of the DNS page there is a button “evaluation”. If you follow the drop-down menu to “summary” the whole development of the weather symbols of all indicators over time is shown.
 
 <h3>Comparison of DNS- and SDG-indicators</h3>
 
-The DNS-indicators and their numbering are not substitutable with the SDG-indicators of the United Nations. If there is a comparable SDG-indicator to one of the DNS-indicators it is marked with a button and a direct link to the respective indicator (figure 4).
+The DNS-indicators and their numbering are not identical with the SDG-indicators of the United Nations and their numbering. If there is a comparable SDG-indicator to one of the DNS-indicators it is marked with a button and a direct link to the respective indicator (figure 4).
 
 <br>
 <img src="https://Nachhaltige-Entwicklung-Deutschland.github.io/open-sdg-site-starter/assets/img/about/en/dnsIndicatorPage.png" alt="Figure 4: Structure of the indicator page" class="responsiveImg">

@@ -13,9 +13,13 @@ language: en
 
 The UN Statistical Commission was charged together with the national statistical offices to develop global indicators for the targets. The mandated "Inter-agency and Expert Group on SDG Indicators" ([IAEG-SDGs](https://unstats.un.org/sdgs/iaeg-sdgs/)) presented and continuously developed a set of indicators for this purpose. This IAEG-SDGs consists of statistical offices of some UN member states, including the Federal Statistical Office for Germany.
 
+<br>
+
 <h3>National Reporting about sustainable development</h3>
 
-The Federal Statistical Office coordinates and publishes the German data to the SDG indicators. It is responsible for the statistical reporting about the German progress concerning the SDGs. In July 2019 the Federal Statistical Office has released a national reporting platform for indicators of the Sustainable Development Goals (SDGs). On this platform, statistical data and metadata regarding Germany and the global sustainable development are presented in an edited and interactive way. Now the SDG-part of the platform enables the responsible international organisations (so-called Custodian Agencies) to directly download data for single SDG-indicators (Figure 2).
+The Federal Statistical Office coordinates and publishes the German data to the SDG indicators. It is responsible for the statistical reporting about the German progress concerning the SDGs. In July 2019 the Federal Statistical Office has released a national [reporting platform for indicators of the Sustainable Development Goals](https://sustainabledevelopment-germany.github.io) (SDGs). On this platform, statistical data and metadata regarding Germany and the global sustainable development are presented in an edited and interactive way. Now the SDG-part of the platform enables the responsible international organisations (so-called Custodian Agencies) to directly download data for single SDG-indicators (Figure 2).
+
+In February 2020 the DNS-part of the platform was released. It includes data and metadata regarding the indicators of the German Sustainable Development Strategy (Deutsche Nachhaltigkeitsstrategie, DNS).
 
 <img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/en/agenda2.png" alt="Abbildung 2: Datenfluss Diagramm" class="responsiveImg">
 
@@ -23,7 +27,3 @@ The Federal Statistical Office coordinates and publishes the German data to the 
 <small> Figure 2: Data flow for calculating the SDG-indicators regarding Germany
 </small>
 </p>
-
-The DNS-part of the platform was released February 2020 and includes data and metadata regarding the indicators of the German Sustainable Development Strategy (Deutsche Nachhaltigkeitsstrategie, DNS).
-
-<i>Source: [National Data for UN-SDGs](https://www.destatis.de/EN/Themes/Society-Environment/Sustainable-Development-Indicators/Publications/Downloads/national-data-un-sdgs-2018-pdf.pdf?__blob=publicationFile), as of June 2018, edited.</i>
