@@ -209,8 +209,11 @@ var indicatorModel = function (options) {
   }
 
   if (this.colorset == 'goalColors'){
+    console.log("y");
+
     var sdgColor = colorSets['sdgcolors'][goalNumber];
     colorSets['goalColors'].push(sdgColor);
+
     for (var num=1; num<this.numberOfColors; num++){
       if ( num % 2 == 0) {
         var darker = LightenDarkenColor(sdgColor, num*10);
