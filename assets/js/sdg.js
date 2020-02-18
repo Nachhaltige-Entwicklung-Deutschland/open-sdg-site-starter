@@ -850,9 +850,9 @@ var indicatorDataStore = function(dataUrl) {
     return this.indexOf(val) != -1;
   };
 
-  colorSet = default;
+  this.colorSet = "default";
   console.log("a",options);
-  console.log("b",colorSet);
+  console.log("b",this.colorSet);
   // events:
   this.onDataComplete = new event(this);
   this.onSeriesComplete = new event(this);
@@ -1039,9 +1039,9 @@ var indicatorDataStore = function(dataUrl) {
 
   var headlineColor = '777777';
 
-  var colors = {'default':['aa','bb'],'sdgColors':['cc','dd'],'goalColors':['ee','ff']};
-
-  console.log(colors.colorSet);
+  var colorSets = {'default':['aa','bb'],'sdgColors':['cc','dd'],'goalColors':['ee','ff']};
+  var colors = colorSets.this.colorSet;
+  console.log(colors);
 
 
   if (this.indicatorId.indexOf('_1-') != -1){
