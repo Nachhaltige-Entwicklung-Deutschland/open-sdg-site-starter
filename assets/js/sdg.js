@@ -1061,7 +1061,7 @@ if (this.colorset == 'goalColors'){
 }
 
 var colors = colorSets[this.colorSet].slice(0,this.numberOfColors);
-console.log(goalNumber);
+console.log(colors);
 
 
   if (this.indicatorId.indexOf('_1-') != -1){
