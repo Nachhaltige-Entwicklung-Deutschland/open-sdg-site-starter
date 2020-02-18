@@ -229,11 +229,11 @@ var indicatorModel = function (options) {
     for (var num=1; num<this.numberOfColors; num++){
       var shadeNum = shades[num-1];
       if ( num % 2 == 0) {
-        var darker = shadeColor(sdgColor, shadeNum*50);
+        var darker = shadeColor('#'+sdgColor, shadeNum*50);
         colorSets['goalColors'].push(darker);
       }
       else{
-        var lighter = shadeColor(sdgColor, shadeNum*-50);
+        var lighter = shadeColor('#'+sdgColor, shadeNum*-50);
         colorSets['goalColors'].push(lighter);
       }
     }
