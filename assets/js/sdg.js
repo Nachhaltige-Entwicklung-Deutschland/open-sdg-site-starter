@@ -1067,7 +1067,7 @@ var indicatorDataStore = function(dataUrl) {
   }
 
   var colors = colorSets[this.colorSet].slice(0,this.numberOfColors);
-  console.log(colors, colorSets['sdgColors'][goalNumber - 1]);
+  console.log(colorSets, colorSets['sdgColors'][goalNumber - 1]);
 
 
   if (this.indicatorId.indexOf('_1-') != -1){
