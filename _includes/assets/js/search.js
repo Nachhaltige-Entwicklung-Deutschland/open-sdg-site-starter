@@ -55,7 +55,7 @@ var indicatorSearch = function(inputElement, indicatorDataStore) {
       that.processData(data);
       var searchResults = _.filter(that.indicatorData, function(indicator) {
 
-        return indicator.title.replce('&shy;','').toLowerCase().indexOf(searchString.toLowerCase()) != -1 ||
+        return indicator.title.toLowerCase().indexOf(searchString.toLowerCase()) != -1 ||
           indicator.description.toLowerCase().indexOf(searchString.toLowerCase()) != -1 ||
           indicator.keywords.toLowerCase().indexOf(searchString.toLowerCase()) != -1;
       });
