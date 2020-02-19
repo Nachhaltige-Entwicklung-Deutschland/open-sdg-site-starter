@@ -2771,7 +2771,6 @@ var indicatorSearch = function(inputElement, indicatorDataStore) {
       // goal
       //    indicators
 
-
       _.each(searchResults, function(result) {
         var goal = _.findWhere(results, { goalId: result.goalId }),
             indicator = {
