@@ -2704,167 +2704,122 @@ indicatorController.prototype = {
     this._model.initialise();
   }
 };
-var indicatorSearch = function() {
+var indicatorSearch = function(inputElement, indicatorDataStore) {
 
-  var urlParams = new URLSearchParams(window.location.search);
-  var searchTerms = urlParams.get('q');
-  if (searchTerms !== null) {
-    document.getElementById('search-bar-on-page').value = searchTerms;
-    document.getElementById('search-term').innerHTML = searchTerms;
+  that = this;
+  this.inputElement = inputElement;
+  this.indicatorDataStore = indicatorDataStore;
+  this.indicatorData = [];
+  this.hasErrored = false;
 
-    var searchTermsToUse = searchTerms;
-    // This is to allow for searching by indicator with dashes.
-    if (searchTerms.split('-').length == 3 && searchTerms.length < 15) {
-      // Just a best-guess check to see if the user intended to search for an
-      // indicator ID.
-      searchTermsToUse = searchTerms.replace(/-/g, '.');
-    }
-
-    var useLunr = typeof window.lunr !== 'undefined';
-    if (useLunr && opensdg.language != 'en') {
-      if (typeof lunr[opensdg.language] === 'undefined') {
-        useLunr = false;
-      }
-    }
-
-    var results = [];
-    var alternativeSearchTerms = [];
-
-    if (useLunr) {
-      // Engish-specific tweak for words separated only by commas.
-      if (opensdg.language == 'en') {
-        lunr.tokenizer.separator = /[\s\-,]+/
-      }
-
-      var searchIndex = lunr(function () {
-        if (opensdg.language != 'en' && lunr[opensdg.language]) {
-          this.use(lunr[opensdg.language]);
-        }
-        this.ref('url');
-        // Index the expected fields.
-        this.field('title', getSearchFieldOptions('title'));
-        this.field('content', getSearchFieldOptions('content'));
-        this.field('id', getSearchFieldOptions('id'));
-        // Index any extra fields.
-        var i;
-        for (i = 0; i < opensdg.searchIndexExtraFields.length; i++) {
-          var extraField = opensdg.searchIndexExtraFields[i];
-          this.field(extraField, getSearchFieldOptions(extraField));
-        }
-        // Index all the documents.
-        for (var ref in opensdg.searchItems) {
-          this.add(opensdg.searchItems[ref]);
-        };
-      });
-
-      // Perform the search.
-      var results = searchIndex.search(searchTermsToUse);
-
-      // If we didn't find anything, get progressively "fuzzier" to look for
-      // alternative search term options.
-      if (!results.length > 0) {
-        for (var fuzziness = 1; fuzziness < 5; fuzziness++) {
-          var fuzzierQuery = getFuzzierQuery(searchTermsToUse, fuzziness);
-          var alternativeResults = searchIndex.search(fuzzierQuery);
-          if (alternativeResults.length > 0) {
-            var matchedTerms = getMatchedTerms(alternativeResults);
-            if (matchedTerms) {
-              alternativeSearchTerms = matchedTerms;
-            }
-            break;
-          }
+  this.processData = function(data) {
+    console.log("search",inputElement);
+    for(var goalLoop = 0; goalLoop < data.length; goalLoop++) {
+      for(var indicatorLoop = 0; indicatorLoop < data[goalLoop].goal.indicators.length; indicatorLoop++) {
+        var currentIndicator = data[goalLoop].goal.indicators[indicatorLoop];
+        currentIndicator.goalId = data[goalLoop].goal.id;
+        currentIndicator.goalTitle = data[goalLoop].goal.title.replace('&shy;','');
+        that.indicatorData.push(currentIndicator);
+        if (goalLoop==1 && indicatorLoop ==1){
         }
       }
     }
-    else {
-      // Non-Lunr basic search functionality.
-      results = _.filter(opensdg.searchItems, function(item) {
-        var i, match = false;
-        if (item.title) {
-          match = match || item.title.indexOf(searchTermsToUse) !== -1;
-        }
-        if (item.content) {
-          match = match || item.content.indexOf(searchTermsToUse) !== -1;
-        }
-        for (i = 0; i < opensdg.searchIndexExtraFields.length; i++) {
-          var extraField = opensdg.searchIndexExtraFields[i];
-          if (typeof item[extraField] !== 'undefined') {
-            match = match || item[extraField].indexOf(searchTermsToUse) !== -1;
-          }
-        }
-        return match;
-      });
-      // Mimic what Lunr does.
-      results = _.map(results, function(item) {
-        return { ref: item.url }
-      });
+  };
+
+  this.inputElement.keyup(function(e) {
+    var searchValue = that.inputElement.val();
+    if(e.keyCode === 13 && searchValue.length) {
+      window.location.replace(that.inputElement.data('pageurl') + searchValue);
     }
+  });
 
-    var resultItems = [];
-
-    results.forEach(function(result) {
-      var doc = opensdg.searchItems[result.ref]
-      // Truncate the contents.
-      if (doc.content.length > 400) {
-        doc.content = doc.content.substring(0, 400) + '...';
-      }
-      // Indicate the matches.
-      doc.content = doc.content.replace(new RegExp('(' + escapeRegExp(searchTerms) + ')', 'gi'), '<span class="match">$1</span>');
-      doc.title = doc.title.replace(new RegExp('(' + escapeRegExp(searchTerms) + ')', 'gi'), '<span class="match">$1</span>');
-      resultItems.push(doc);
-    });
-
-    $('.loader').hide();
-
-    // Print the results using a template.
-    var template = _.template(
-      $("script.results-template").html()
-    );
-    $('div.results').html(template({
-      searchResults: resultItems,
-      resultsCount: resultItems.length,
-      didYouMean: (alternativeSearchTerms.length > 0) ? alternativeSearchTerms : false,
-    }));
-  }
-
-  // Helper function to make a search query "fuzzier", using the ~ syntax.
-  // See https://lunrjs.com/guides/searching.html#fuzzy-matches.
-  function getFuzzierQuery(query, amountOfFuzziness) {
-    return query
-      .split(' ')
-      .map(function(x) { return x + '~' + amountOfFuzziness; })
-      .join(' ');
-  }
-
-  // Helper function to get the matched words from a result set.
-  function getMatchedTerms(results) {
-    var matchedTerms = {};
-    results.forEach(function(result) {
-      Object.keys(result.matchData.metadata).forEach(function(matchedTerm) {
-        matchedTerms[matchedTerm] = true;
-      })
-    });
-    return Object.keys(matchedTerms);
-  }
-
-  // Helper function to get a boost score, if any.
-  function getSearchFieldOptions(field) {
-    var opts = {}
-    if (opensdg.searchIndexBoost[field]) {
-      opts['boost'] = intval(opensdg.searchIndexBoost[field])
+  $("#search-btn").click(function() {
+    var searchValue = that.inputElement.val();
+    if(searchValue.length) {
+      window.location.replace(that.inputElement.data('pageurl') + searchValue);
     }
-    return opts
-  }
+  });
 
-  // Used to highlight search term matches on the screen.
-  function escapeRegExp(str) {
+  var escapeRegExp = function(str) {
     return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/gi, "\\$&");
   };
+
+  if($('#main-content').hasClass('search-results')) {
+
+    var results = [],
+        that = this,
+        searchString = decodeURIComponent(location.search.substring(1)).replace("q=", "");
+
+    // we got here because of a redirect, so reinstate:
+    this.inputElement.val(searchString);
+
+    $('#main-content h1 span').text(searchString);
+    $('#main-content h1').show();
+
+    this.indicatorDataStore.getData().then(function(data) {
+
+      that.processData(data);
+      var searchResults = _.filter(that.indicatorData, function(indicator) {
+
+        return indicator.title.toLowerCase().indexOf(searchString.toLowerCase()) != -1 ||
+          indicator.description.toLowerCase().indexOf(searchString.toLowerCase()) != -1 ||
+          indicator.keywords.toLowerCase().indexOf(searchString.toLowerCase()) != -1;
+      });
+
+      // goal
+      //    indicators
+      // goal
+      //    indicators
+
+      _.each(searchResults, function(result) {
+        var goal = _.findWhere(results, { goalId: result.goalId }),
+            indicator = {
+              parsedTitle: result.title.replace(new RegExp('(' + escapeRegExp(searchString) + ')', 'gi'), '<span class="match">$1</span>'),
+              parsedDescription: result.description.replace(new RegExp('(' + escapeRegExp(searchString) + ')', 'gi'), '<span class="match">$1</span>'),
+              parsedKeywords: result.keywords.replace(new RegExp('(' + escapeRegExp(searchString) + ')', 'gi'), '<span class="match">$1</span>'),
+              hasKeywords: result.keywords && result.keywords.length,
+              hasDescription: result.description && result.description.length,
+              id: result.id,
+              title: result.title,
+              href: result.href,
+              status: result.status
+            };
+
+        if(!goal) {
+          results.push({
+            goalId: result.goalId,
+            goalTitle: result.goalTitle,
+            indicators: [indicator]
+          });
+        } else {
+          goal.indicators.push(indicator);
+        }
+      });
+
+      $('.loader').hide();
+
+      var template = _.template(
+        $("script.results").html()
+      );
+
+      $('div.results').html(template({
+        searchResults: results,
+        resultsCount: searchResults.length,
+        imgPath: $('.results').data('imgpath')
+      }));
+    });
+  }
+};
+
+indicatorSearch.prototype = {
+
 };
 
 $(function() {
 
   var $el = $('#indicator_search');
+  new indicatorSearch($el, new indicatorDataStore($el.data('url')));
+
   $('#jump-to-search').show();
   $('#jump-to-search a').click(function() {
     if($el.is(':hidden')) {
@@ -2873,7 +2828,7 @@ $(function() {
     $el.focus();
   });
 
-  indicatorSearch();
+
 });
 $(function() {
 
