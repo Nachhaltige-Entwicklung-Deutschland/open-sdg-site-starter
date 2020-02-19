@@ -37,7 +37,7 @@ The symbols and choice of colour of the 17 goals (figures 2 and 3) which are use
 
 <div class="col-xs-12 col-md-6 col-lg-6" style="padding-left: 100px; padding-right: 100px;">
 <img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/en/sdgIconsInvert.PNG" alt="Figure 3: SDG Icons inverted" class="responsiveImg" style="width: 100%;">
-<small> Figure 3: 17 icons of the SDGs of the United Nations, inverted and used on the <b>DNS-part of the reporting platform Germany</b></small>
+<small> Figure 3: 17 inverted icons of the SDGs of the United Nations, and the N in a circle of the German Sustainable Development Strategy, used on the <b>DNS-part of the reporting platform Germany</b> </small>
 </div>
 
 </div>
