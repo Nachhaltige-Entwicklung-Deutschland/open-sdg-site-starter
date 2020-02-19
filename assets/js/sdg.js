@@ -2718,7 +2718,7 @@ var indicatorSearch = function(inputElement, indicatorDataStore) {
       for(var indicatorLoop = 0; indicatorLoop < data[goalLoop].goal.indicators.length; indicatorLoop++) {
         var currentIndicator = data[goalLoop].goal.indicators[indicatorLoop];
         currentIndicator.goalId = data[goalLoop].goal.id;
-        currentIndicator.goalTitle = data[goalLoop].goal.title.replace('&shy;','');
+        currentIndicator.goalTitle = data[goalLoop].goal.title;
         that.indicatorData.push(currentIndicator);
         if (goalLoop==1 && indicatorLoop ==1){
         }
@@ -2770,6 +2770,7 @@ var indicatorSearch = function(inputElement, indicatorDataStore) {
       //    indicators
       // goal
       //    indicators
+
 
       _.each(searchResults, function(result) {
         var goal = _.findWhere(results, { goalId: result.goalId }),
