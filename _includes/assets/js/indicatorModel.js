@@ -222,7 +222,7 @@ var indicatorModel = function (options) {
   this.numberOfColors = {{ site.numberOfColors | jsonify }}>length ? length : {{ site.numberOfColors | jsonify }};
 
   var colors = colorSets[this.colorSet].slice(0,this.numberOfColors);
-  console.log(colorSet, length);
+  console.log(this.colorSet, length);
   //---
 
   // if (this.indicatorId.indexOf('_1-') != -1){
