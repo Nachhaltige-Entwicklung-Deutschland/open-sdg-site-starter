@@ -149,7 +149,7 @@ create_indicators:
 # - 'default' to use the default colors
 # - 'sdgColors' to use the 17 SDG colors in all charts
 # - 'goalColors' to use shades of the color of the indicator`s goal
-colorset: 'goalColors'
+colorset: 'sdgColors'
 # choose the number of different colors you want to use in the charts
 # - for 'default' the maximal number of colors is 6
 # - for 'sdgColors' the maximal number of colors is 17

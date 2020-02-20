@@ -3,10 +3,6 @@ var indicatorModel = function (options) {
   Array.prototype.containsValue = function(val) {
     return this.indexOf(val) != -1;
   };
-
-
-
-  console.log("b",this.colorSet);
   // events:
   this.onDataComplete = new event(this);
   this.onSeriesComplete = new event(this);
