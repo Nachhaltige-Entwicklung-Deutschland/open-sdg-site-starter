@@ -1,5 +1,5 @@
 var indicatorModel = function (options) {
-
+  console.log(options);
   Array.prototype.containsValue = function(val) {
     return this.indexOf(val) != -1;
   };
