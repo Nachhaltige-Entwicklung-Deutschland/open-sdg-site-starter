@@ -1068,7 +1068,7 @@ var indicatorDataStore = function(dataUrl) {
   this.numberOfColors = 20>length ? length : 20;
 
   var colors = colorSets[this.colorSet].slice(0,this.numberOfColors);
-  console.log(colorSet, length);
+  console.log(this.colorSet, length);
   //---
 
   // if (this.indicatorId.indexOf('_1-') != -1){
