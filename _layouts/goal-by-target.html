@@ -49,7 +49,6 @@
     {% assign target_title = t.dns_targets[target_title_key_dashes] | default: t.dns_targets[target_title_key] %}
     <div class="indicator-cards target col-md-6">
       <span>
-        <!--<label class="hidden-md hidden-lg">{{ t.general.target }}</label>-->
         {{ target_range }}
       </span>
       {{ target_title }}
