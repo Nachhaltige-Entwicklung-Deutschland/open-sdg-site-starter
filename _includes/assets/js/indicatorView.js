@@ -510,6 +510,7 @@ var indicatorView = function (model, options) {
                 }
               }
 
+
               //if (label.indexOf('Deutschland (insgesamt)') != -1 || label.indexOf('Germany (total)') != -1) {
                 //exc = 1;
               //}
