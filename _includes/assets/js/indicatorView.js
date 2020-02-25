@@ -492,7 +492,9 @@ var indicatorView = function (model, options) {
                             {old: 'Entwicklungszusammenarbeit, deren', new: 'Entwicklungszusammenarbeit deren'},
                             {old: 'Moving five-year average, referring to the middle year', new: 'Moving five-year average referring to the middle year'},
                             {old: 'onsumption, investments', new: 'onsumption investments'},
-                            {old: 'area, c', new: 'area c'}];
+                            {old: 'area, c', new: 'area c'},
+                            {old: ', Germany', new: ''},
+                            {old: ', Deutschland', new: ''}];
 
               for (var i=0; i<replace.length; i++){
                 label = label.replace(replace[i]['old'], replace[i]['new']);
