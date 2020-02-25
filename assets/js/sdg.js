@@ -2272,7 +2272,7 @@ var indicatorView = function (model, options) {
               var exceptions = ['Deutschland', 'Germany',
                                 'Insgesamt', 'Total',
                                 'Index insgesamt', 'Index overall'];
-              for (var j=0; i<exceptions.length; i++){
+              for (var j=0; j<exceptions.length; j++){
                 if (label.indexOf(exceptions[j]) != -1){
                   exc += 1;
                 }
