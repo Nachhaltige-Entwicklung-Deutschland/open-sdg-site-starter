@@ -16,6 +16,13 @@
       "id": "2",
       "title": "Den Hunger beenden, Ernährungssicherheit und eine bessere Ernährung erreichen und eine nachhaltige Landwirtschaft fördern",
       "indicators": [{
+          "id": "2-1-a",
+          "title": "Stick&shy;stoff&shy;über&shy;schuss der Landwirtschaft",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/2-1-a",
+          "status": "complete"
+        },{
           "id": "2-1-b",
           "title": "Ökologischer Landbau",
           "description": "",
@@ -29,13 +36,6 @@
           "keywords": "",
           "href": "/open-sdg-site-starter/2-2-a",
           "status": "complete"
-        },{
-          "id": "2-1-a",
-          "title": "Stick&shy;stoff&shy;über&shy;schuss der Landwirtschaft",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/2-1-a",
-          "status": "complete"
         }]
     }
   },{
@@ -43,6 +43,20 @@
       "id": "3",
       "title": "Ein gesundes Leben für alle Menschen jeden Alters gewährleisten und ihr Wohlergehen fördern",
       "indicators": [{
+          "id": "3-2-b",
+          "title": "Anteil der Bevölkerung mit erhöhter PM<sub>10</sub>-Fein&shy;staub&shy;expo&shy;sition",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/3-2-b",
+          "status": "complete"
+        },{
+          "id": "3-1-e",
+          "title": "Adipositasquote von Jugendlichen",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/3-1-e",
+          "status": "complete"
+        },{
           "id": "3-1-f",
           "title": "Adipositasquote von Erwachsenen",
           "description": "",
@@ -50,11 +64,11 @@
           "href": "/open-sdg-site-starter/3-1-f",
           "status": "complete"
         },{
-          "id": "3-2-b",
-          "title": "Anteil der Bevölkerung mit erhöhter PM<sub>10</sub>-Fein&shy;staub&shy;expo&shy;sition",
+          "id": "3-1-ab",
+          "title": "Vorzeitige Sterblichkeit",
           "description": "",
           "keywords": "",
-          "href": "/open-sdg-site-starter/3-2-b",
+          "href": "/open-sdg-site-starter/3-1-ab",
           "status": "complete"
         },{
           "id": "3-1-cd",
@@ -70,20 +84,6 @@
           "keywords": "",
           "href": "/open-sdg-site-starter/3-2-a",
           "status": "complete"
-        },{
-          "id": "3-1-ab",
-          "title": "Vorzeitige Sterblichkeit",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/3-1-ab",
-          "status": "complete"
-        },{
-          "id": "3-1-e",
-          "title": "Adipositasquote von Jugendlichen",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/3-1-e",
-          "status": "complete"
         }]
     }
   },{
@@ -91,13 +91,6 @@
       "id": "4",
       "title": "Inklusive, gleichberechtigte und hochwertige Bildung gewährleisten und Möglichkeiten lebenslangen Lernens für alle fördern",
       "indicators": [{
-          "id": "4-1-a",
-          "title": "Frühe Schul&shy;abgäng&shy;erinnen und Schulabgänger",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/4-1-a",
-          "status": "complete"
-        },{
           "id": "4-2-ab",
           "title": "Ganz&shy;tags&shy;be&shy;treu&shy;ung für Kinder",
           "description": "",
@@ -111,6 +104,13 @@
           "keywords": "",
           "href": "/open-sdg-site-starter/4-1-b",
           "status": "complete"
+        },{
+          "id": "4-1-a",
+          "title": "Frühe Schul&shy;abgäng&shy;erinnen und Schulabgänger",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/4-1-a",
+          "status": "complete"
         }]
     }
   },{
@@ -118,13 +118,6 @@
       "id": "5",
       "title": "Geschlechtergleichstellung erreichen und alle Frauen und Mädchen zur Selbstbestimmung befähigen",
       "indicators": [{
-          "id": "5-1-c",
-          "title": "Berufliche Qualifizierung von Mädchen und Frauen durch deutsche ent&shy;wick&shy;lungs&shy;po&shy;li&shy;ti&shy;sche Zu&shy;sam&shy;men&shy;ar&shy;beit",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/5-1-c",
-          "status": "complete"
-        },{
           "id": "5-1-b",
           "title": "Frauen in Führungs&shy;po&shy;si&shy;tio&shy;nen in der Wirtschaft",
           "description": "",
@@ -137,6 +130,13 @@
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/5-1-a",
+          "status": "complete"
+        },{
+          "id": "5-1-c",
+          "title": "Berufliche Qualifizierung von Mädchen und Frauen durch deutsche ent&shy;wick&shy;lungs&shy;po&shy;li&shy;ti&shy;sche Zu&shy;sam&shy;men&shy;ar&shy;beit",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/5-1-c",
           "status": "complete"
         }]
     }
@@ -152,18 +152,18 @@
           "href": "/open-sdg-site-starter/6-1-a",
           "status": "complete"
         },{
-          "id": "6-1-b",
-          "title": "Nitrat im Grundwasser",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/6-1-b",
-          "status": "complete"
-        },{
           "id": "6-2-a",
           "title": "Entwicklungs&shy;zusammen&shy;arbeit für Trinkwasser- und Sanitär&shy;versorgung",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/6-2-a",
+          "status": "complete"
+        },{
+          "id": "6-1-b",
+          "title": "Nitrat im Grundwasser",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/6-1-b",
           "status": "complete"
         }]
     }
@@ -172,11 +172,11 @@
       "id": "7",
       "title": "Zugang zu bezahlbarer, verlässlicher, nachhaltiger und moderner Energie für alle sichern",
       "indicators": [{
-          "id": "7-2-b",
-          "title": "Anteil des Stroms aus erneuerbaren Energiequellen am Brutto&shy;strom&shy;ver&shy;brauch",
+          "id": "7-1-ab",
+          "title": "Endenergie&shy;produkti&shy;vität und Primär&shy;energie&shy;verbrauch",
           "description": "",
           "keywords": "",
-          "href": "/open-sdg-site-starter/7-2-b",
+          "href": "/open-sdg-site-starter/7-1-ab",
           "status": "complete"
         },{
           "id": "7-2-a",
@@ -186,11 +186,11 @@
           "href": "/open-sdg-site-starter/7-2-a",
           "status": "complete"
         },{
-          "id": "7-1-ab",
-          "title": "Endenergie&shy;produkti&shy;vität und Primär&shy;energie&shy;verbrauch",
+          "id": "7-2-b",
+          "title": "Anteil des Stroms aus erneuerbaren Energiequellen am Brutto&shy;strom&shy;ver&shy;brauch",
           "description": "",
           "keywords": "",
-          "href": "/open-sdg-site-starter/7-1-ab",
+          "href": "/open-sdg-site-starter/7-2-b",
           "status": "complete"
         }]
     }
@@ -206,20 +206,6 @@
           "href": "/open-sdg-site-starter/8-3-a",
           "status": "complete"
         },{
-          "id": "8-4-a",
-          "title": "Brutto&shy;inlands&shy;produkt je Einwohner",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/8-4-a",
-          "status": "complete"
-        },{
-          "id": "8-2-ab",
-          "title": "Staatsdefizit und strukturelles Defizit",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/8-2-ab",
-          "status": "complete"
-        },{
           "id": "8-2-c",
           "title": "Schuldenstand",
           "description": "",
@@ -232,6 +218,20 @@
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/8-6-a",
+          "status": "complete"
+        },{
+          "id": "8-2-ab",
+          "title": "Staatsdefizit und strukturelles Defizit",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/8-2-ab",
+          "status": "complete"
+        },{
+          "id": "8-4-a",
+          "title": "Brutto&shy;inlands&shy;produkt je Einwohner",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/8-4-a",
           "status": "complete"
         },{
           "id": "8-1-a",
@@ -267,18 +267,18 @@
       "id": "10",
       "title": "Ungleichheit in und zwischen Ländern verringern",
       "indicators": [{
-          "id": "10-2-a",
-          "title": "Gini-Koeffizient zur Ein&shy;kommens&shy;ver&shy;teilung",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/10-2-a",
-          "status": "complete"
-        },{
           "id": "10-1-a",
           "title": "Ausländische Schul&shy;absol&shy;ven&shy;tinnen und Schul&shy;absol&shy;venten",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/10-1-a",
+          "status": "complete"
+        },{
+          "id": "10-2-a",
+          "title": "Gini-Koeffizient zur Ein&shy;kommens&shy;ver&shy;teilung",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/10-2-a",
           "status": "complete"
         }]
     }
@@ -287,18 +287,11 @@
       "id": "11",
       "title": "Städte und Siedlungen inklusiv, sicher, widerstandsfähig und nachhaltig gestalten",
       "indicators": [{
-          "id": "11-2-a",
-          "title": "End&shy;energie&shy;ver&shy;brauch im Güterverkehr",
+          "id": "11-1-c",
+          "title": "Siedlungsdichte",
           "description": "",
           "keywords": "",
-          "href": "/open-sdg-site-starter/11-2-a",
-          "status": "complete"
-        },{
-          "id": "11-1-a",
-          "title": "Anstieg der Siedlungs- und Verkehrsfläche",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/11-1-a",
+          "href": "/open-sdg-site-starter/11-1-c",
           "status": "complete"
         },{
           "id": "11-1-b",
@@ -308,6 +301,13 @@
           "href": "/open-sdg-site-starter/11-1-b",
           "status": "complete"
         },{
+          "id": "11-2-b",
+          "title": "End&shy;energie&shy;ver&shy;brauch im Per&shy;sonen&shy;ver&shy;kehr",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/11-2-b",
+          "status": "complete"
+        },{
           "id": "11-2-c",
           "title": "Erreichbarkeit von Mittel- und Oberzentren mit öffentlichen Verkehrsmitteln",
           "description": "",
@@ -315,11 +315,11 @@
           "href": "/open-sdg-site-starter/11-2-c",
           "status": "complete"
         },{
-          "id": "11-2-b",
-          "title": "End&shy;energie&shy;ver&shy;brauch im Per&shy;sonen&shy;ver&shy;kehr",
+          "id": "11-2-a",
+          "title": "End&shy;energie&shy;ver&shy;brauch im Güterverkehr",
           "description": "",
           "keywords": "",
-          "href": "/open-sdg-site-starter/11-2-b",
+          "href": "/open-sdg-site-starter/11-2-a",
           "status": "complete"
         },{
           "id": "11-3-a",
@@ -329,11 +329,11 @@
           "href": "/open-sdg-site-starter/11-3-a",
           "status": "complete"
         },{
-          "id": "11-1-c",
-          "title": "Siedlungsdichte",
+          "id": "11-1-a",
+          "title": "Anstieg der Siedlungs- und Verkehrsfläche",
           "description": "",
           "keywords": "",
-          "href": "/open-sdg-site-starter/11-1-c",
+          "href": "/open-sdg-site-starter/11-1-a",
           "status": "complete"
         }]
     }
@@ -416,13 +416,6 @@
       "id": "15",
       "title": "Landökosysteme schützen, wiederherstellen und ihre nachhaltige Nutzung fördern, Wälder nachhaltig bewirtschaften, Wüstenbildung bekämpfen, Bodendegradation beenden und umkehren und dem Verlust der biologischen Vielfalt ein Ende setzen",
       "indicators": [{
-          "id": "15-3-a",
-          "title": "Erhalt bzw. Wiederaufbau von Wäldern in Entwick&shy;lungs&shy;ländern unter dem REDD+-Regelwerk",
-          "description": "",
-          "keywords": "",
-          "href": "/open-sdg-site-starter/15-3-a",
-          "status": "complete"
-        },{
           "id": "15-2-a",
           "title": "Eutrophierung der Ökosysteme",
           "description": "",
@@ -435,6 +428,13 @@
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/15-1-a",
+          "status": "complete"
+        },{
+          "id": "15-3-a",
+          "title": "Erhalt bzw. Wiederaufbau von Wäldern in Entwick&shy;lungs&shy;ländern unter dem REDD+-Regelwerk",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-site-starter/15-3-a",
           "status": "complete"
         }]
     }
