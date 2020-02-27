@@ -12,7 +12,7 @@ Seit 2006 berichtet das Statistische Bundesamt im Auftrag der Bundesregierung im
 
 <h3>Struktur der Berichtsplattform</h3>
 
-Die Plattform ist nach Zielen, Indikatorbereichen und Postulaten und den dazugehörigen Indikatoren gegliedert (Abb.1). Alle vier Jahre werden die Strategie und ihre Indikatoren durch die Bundesregierung überprüft und bei Bedarf angepasst. Dabei können z.B. Indikatoren ersetzt werden oder neue hinzukommen.
+Die Plattform ist nach Zielen, Indikatorenbereichen und Postulaten und den dazugehörigen Indikatoren gegliedert (Abb.1). Alle vier Jahre werden die Strategie und ihre Indikatoren durch die Bundesregierung überprüft und bei Bedarf angepasst. Dabei können z.B. Indikatoren ersetzt werden oder neue hinzukommen.
 
 
 <br>
@@ -23,7 +23,9 @@ Die Plattform ist nach Zielen, Indikatorbereichen und Postulaten und den dazugeh
 </p>
 <br>
 
-Jeder Indikator der DNS wird auf einer eigenen Seite einzeln oder mit einem inhaltlich eng verbundenen Indikator zusammen dargestellt. Die Entwicklung des Indikators wird in einer Grafik visualisiert. Die Definitionen und Intentionen sowie die Entwicklung der Indikatoren werden erklärt. Diese Informationen stammen aus dem zweijährlich erscheinenden [Indikatorenbericht](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Nachhaltigkeitsindikatoren/Deutsche-Nachhaltigkeit/_inhalt.html) des Statistischen Bundesamtes.
+Jeder Indikator der DNS wird auf einer eigenen Seite einzeln oder mit einem inhaltlich eng verbundenen Indikator zusammen dargestellt. Die Entwicklung des Indikators und - soweit möglich - das zu erreichende Ziel für Deutschland werden in einer Grafik visualisiert. Die Definitionen und Intentionen sowie die Entwicklung der Indikatoren werden erklärt. Diese Informationen stammen aus dem zweijährlich erscheinenden [Indikatorenbericht](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Nachhaltigkeitsindikatoren/Deutsche-Nachhaltigkeit/_inhalt.html) des Statistischen Bundesamtes.
+
+Für manche Indikatoren können die Daten auch nach Bundesländern disaggregiert werden. Das angezeigte, zu erreichende Ziel bleibt jedoch das deutschlandweite Ziel. Die Bundesländer haben zum Großteil eigene Nachhaltigkeitsstrategien und –Indikatoren. Diese werden auf der DNS-Plattform nicht dargestellt. [Hier](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Nachhaltigkeitsindikatoren/Deutsche-Nachhaltigkeit/nachhaltigkeit-laender.html) finden Sie eine Zusammenstellung der Nachhaltigkeitsstrategien der Länder.
 
 Die Symbole und Farbwahl der 17 Ziele (Abb. 2 und Abb. 3), die hier und auf der SDG-Seite dieser Berichtsplattform verwendet werden, stammen von den Vereinten Nationen.
 
@@ -35,7 +37,7 @@ Die Symbole und Farbwahl der 17 Ziele (Abb. 2 und Abb. 3), die hier und auf der 
 
 <div class="col-xs-12 col-md-6 col-lg-6" style="padding-left: 100px; padding-right: 100px;">
 <img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/sdgIconsInvert.PNG" alt="Abbildung 3: SDG Icons inverted" class="responsiveImg" style="width: 100%;">
-<small> Abb. 3: 17 invertierte SDG-Symbole der Vereinten Nationen und das N im Kreis aus der Deutschen Nachhaltigkeisstrategie, eingesetzt auf der <b>DNS-Seite der Berichtsplattform</b></small>
+<small> Abb. 3: 17 invertierte SDG-Symbole der Vereinten Nationen und das N im Kreis aus der Deutschen Nachhaltigkeitsstrategie, eingesetzt auf der <b>DNS-Seite der Berichtsplattform</b></small>
 </div>
 
 </div>

@@ -7,7 +7,7 @@ language: en
 
 <h3>Aim and Background</h3>
 
-The purpose of this national reporting platform is the presentation and explanation of the indicators of the German Sustainable Development Strategy (Deutsche Nachhaltigkeitsstrategie, DNS). In 2002 the first adoption of a German Sustainability Strategy was published. Since then it always consisted of own goals, indicator groups, and postulates.
+The purpose of this national reporting platform is the presentation and explanation of the indicators of the German Sustainable Development Strategy (Deutsche Nachhaltigkeitsstrategie, DNS). In 2002 the first adoption of a German Sustainability Strategy was published. Since then it always consisted of own goals, indicator fields, and postulates.
 
 2017 the national strategy was adjusted as a response to the [Agenda 2030](https://sustainabledevelopment-deutschland.github.io/en/agenda/) of the United Nations and its 17 Sustainable Development Goals (SDGs). The strategy is now called German Sustainable Development Strategy. As part of the adjustments at least one indicator for each of the 17 goals has been included. The Federal Government determined the target values, as well as the indicators, their database, and calculations.
 
@@ -15,7 +15,7 @@ Since 2006 the Federal Statistical Office is assigned by the Federal Government 
 
 <h3>Structure of the reporting platform</h3>
 
-The platform is organised in goals, indicator groups and postulates, and their respective indicators (figure 1). Every four years the Federal Government reviews the strategy and its indicators. The strategy is modified if required, and indicators are i.e. replaced or new ones added.
+The platform is organised in goals, indicator fields and postulates, and their respective indicators (figure 1). Every four years the Federal Government reviews the strategy and its indicators. The strategy is modified if required, and indicators are i.e. replaced or new ones added.
 
 <br>
 <img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/en/dnsTargetPage.png" alt="Figure 1: Structure of the dnsTargetPage pages" class="responsiveImg">
@@ -25,7 +25,9 @@ The platform is organised in goals, indicator groups and postulates, and their r
 </p>
 <br>
 
-Each indicator of the DNS is presented individually or together with a closely related indicator on an own page. A chart visualizes the development of the indicator. The definitions and intentions as well as the development of the indicators are explained. The information stem from the biennial published [indicator report](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Nachhaltigkeitsindikatoren/Publikationen/Downloads-Nachhaltigkeit/indicator-report-0230002189004.pdf?__blob=publicationFile) of the Federal Statistical Office.
+Each indicator of the DNS is presented individually or together with a closely related indicator on an own page. A chart visualizes the development of the indicator as well as - if possible - the goal to be reached. The definitions and intentions as well as the development of the indicators are explained. The information stem from the biennial published [indicator report](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Nachhaltigkeitsindikatoren/Publikationen/Downloads-Nachhaltigkeit/indicator-report-0230002189004.pdf?__blob=publicationFile) of the Federal Statistical Office.
+
+For some indicators the data are displayed at Federal States level. However, the goal shown stays the goal for Germany. Most of the Federal States of Germany have own sustainability strategies and indicators. They are not displayed the DNS platform. [Here](https://www.destatis.de/EN/Themes/Society-Environment/Sustainable-Development-Indicators/German/SubstainableDevelopmentIndicatorsLaender.html) you can find a compilation of sustainability strategies of the Federal States of Germany (also called “Länder”).
 
 The symbols and choice of colour of the 17 goals (figures 2 and 3) which are used here and on the SDG-part of this reporting platform are copyright protected by the United Nations.
 
@@ -46,11 +48,13 @@ The symbols and choice of colour of the 17 goals (figures 2 and 3) which are use
 
 Weather symbols illustrate in an easy-to-understand way – from sunshine to thunderstorm (figure 4) - the course of development of most indicators. An explanation of the definition of the symbols is found [here](https://sustainabledevelopment-deutschland.github.io/en/status/). Weather symbols of the last four years can be found behind the button “indicator status summary” on each respective indicator page. A rough estimation about how stable the development was is possible by using the weather symbols. However, the symbols cannot replace the explanatory texts with their background information.
 
+On the top of the DNS page there is a button “evaluation”. If you choose in the following drop-down menu “summary”, the whole development of the weather symbols of all indicators over time is shown.
+
 On the very top of the DNS page there is a button “evaluation”. If you follow the drop-down menu to “summary” the whole development of the weather symbols of all indicators over time is shown.
 
-<h3>Comparison of DNS- and SDG-indicators</h3>
+<h3>Comparison of DNS and SDG indicators</h3>
 
-The DNS-indicators and their numbering are not identical with the SDG-indicators of the United Nations and their numbering. If there is a comparable SDG-indicator to one of the DNS-indicators it is marked with a button and a direct link to the respective indicator (figure 4).
+The DNS-indicators and their numbering are not identical with the SDG indicators of the United Nations and their numbering. If there is a comparable SDG indicator to one of the DNS indicators it is marked with a button and a direct link to the respective indicator (figure 4).
 
 <br>
 <img src="https://Nachhaltige-Entwicklung-Deutschland.github.io/open-sdg-site-starter/assets/img/about/en/dnsIndicatorPage.png" alt="Figure 4: Structure of the indicator page" class="responsiveImg">
