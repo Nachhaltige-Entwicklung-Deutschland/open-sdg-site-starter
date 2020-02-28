@@ -141,7 +141,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20200228084633">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20200228085328">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -149,7 +149,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20200228084633"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20200228085328"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
 <body class="language-de layout-indicator">
@@ -615,7 +615,17 @@ data-event-label="Change to Map tab"
 
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
-          <li role="presentation" class="nav-item active">
+
+
+          <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
+          
+            <li role="presentation" class="nav-item active">
+          
+          <!--<li role="presentation" class="nav-item active">-->
+          <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
             <a class="nav-link" data-toggle="tab" href="#metadata" aria-controls="metadata" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
@@ -631,15 +641,6 @@ data-event-label="Change to Content tab"
 >Inhalt und Entwicklung</a>
           </li>
           <!---#5 addContentAndProgress---stop-------------------------------------------------------------------------------------------------------------------------------------->
-          <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
-          <li role="presentation" class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#additional_information" aria-controls="additional_information" role="tab" data-on="click"
-data-event-category="Tab change"
-data-event-action="Change metadata view"
-data-event-label="Change to additional_information tab"
->Zusätzliche Zeitreihen</a>
-          </li>
-          <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
 
           <li role="presentation" class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#globalmetadata" aria-controls="globalmetadata" role="tab" data-on="click"
@@ -1260,7 +1261,7 @@ data-event-label="Change to Sources tab"
     
       
       <tr>
-         <!-- case: content -->
+        
           <p> <i> Text aus dem Indikatorenbericht 2018</i><br><br>Die Bruttoanlageinvestitionen werden vom Statistischen Bundesamt ermittelt. Sie umfassen den Zugang (also den Erwerb abzüglich der Veräußerungen ohne Berücksichtigung von Abschreibungen) von Anlagegütern durch gebietsansässige Wirtschaftseinheiten. Anlagegüter sind produzierte Vermögensgüter, die im Produktionsprozess wiederholt oder kontinuierlich länger als ein Jahr eingesetzt werden sollen. Hierzu zählen Bauten (Wohnbauten, Nichtwohnbauten), Ausrüstungen (Maschinen, Fahrzeuge, Geräte), militärische Waffensysteme und sonstige Anlagen (geistiges Eigentum wie Investitionen in Forschung und Entwicklung, Software und Datenbanken, Urheberrechte und Suchbohrungen sowie Nutztiere und Nutzpflanzungen). Eingeschlossen sind auch Verbesserungen an vorhandenem Anlagevermögen, die zu einer wesentlichen Steigerung des Wertes einer Anlage führen und/oder deren Nutzungsdauer verlängern. <br><br>Die Bruttoanlageinvestitionen werden im Rahmen der Volkswirtschaftlichen Gesamtrechnungen ermittelt, deren Erstellung harmonisierten europäischen Regeln folgt und auf allen verfügbaren, relevanten Datenquellen basiert. <br><br>Im Jahr 2017 lag der Anteil der Bruttoanlageinvestitionen am BIP bei 20,3&nbsp;% und damit um 4,5 Prozentpunkte unterhalb des Ausgangswertes von 1991 für das gesamte Bundesgebiet sowie 2,7 Prozentpunkte niedriger als im Jahr 2000. Der Indikator hat sich kurz- und mittelfristig betrachtet in die richtige Richtung entwickelt; er stagniert jedoch im Wesentlichen seit 2002. Preisbereinigt läge der Anteil gegenüber 2010 nahezu gleichbleibend bei 19,5&nbsp;%. <br><br>Die Investitionsquote in Deutschland lag im Schnitt der Jahre 2007 bis 2016 mit 19,9&nbsp;% unter der Investitionsquote für den gesamten OECD-Raum (21,1&nbsp;%). Seit 2010 ist der Abstand deutlich geringer als noch im Zeitraum zwischen 2003 und 2008 (– 2,9 Prozentpunkte). <br><br>Der Blick auf die Zeitreihe offenbart eine wellenförmige Entwicklung der Investitionsquote mit Rückgängen zu Beginn des Jahrtausends und, nach einer leichten Erholung, nochmals im Jahr 2009 infolge der Finanzmarkt- und Wirtschaftskrise 2008/2009. Bis 2011 erholte sich die Investitionstätigkeit und die Bruttoanlageinvestitionen übertrafen wieder das Niveau des Vorkrisenjahres. In den Jahren 2014 bis 2017 stiegen die Bruttoanlageinvestitionen kräftig um insgesamt 13,3&nbsp;% und erreichten ein Niveau von 666 Milliarden Euro. Da der Anstieg des nominalen BIP im selben Zeitraum etwas geringer ausfiel (11,5&nbsp;%), erhöhte sich die Investitionsquote leicht von 20,0&nbsp;% auf 20,3&nbsp;% und erreichte das Niveau von 2008 und 2011. <br><br>Bei den Bauinvestitionen weist der Bereich der Wohnbauten seit dem Jahr 2010 ein kräftiges nominales Wachstum auf (+ 48,8&nbsp;%), während die Investitionen im Bereich der Nichtwohnbauten (sowohl im Hoch- als auch im Tiefbau) im selben Zeitraum weniger stark anstiegen (+ 23,5&nbsp;%) und in den Jahren 2012 und 2015 sogar leicht rückläufig waren. Die Ausrüstungsinvestitionen in jeweiligen Preisen erhöhten sich zuletzt um 2,6&nbsp;% (2016) und 4,2&nbsp;% (2017) zum Vorjahr und konnten – trotz des starken Rückgangs im Jahr 2009 (– 22,0&nbsp;%) – das Vorkrisenniveau von 2008 übertreffen. Die stärksten Zuwächse verzeichneten seit 1991 die Investitionen in Forschung und Entwicklung sowie in Software und Datenbanken. Zwischen 1991 und 2017 hat sich ihr Volumen nahezu verdreifacht. <br><br>Die Investitionstätigkeit hat sich im Zeitraum von 1991 bis 2017 stark vom Produzierenden Gewerbe hin zu den Dienstleistungsbereichen verlagert. Während 1991 noch 30,9&nbsp;% der neuen Anlageinvestitionen von Unternehmen des Produzierenden Gewerbes getätigt wurden, waren dies 2017 nur noch 23,7&nbsp;%. Im Jahr 2017 entfielen auf die Dienstleistungsbereiche hingegen 74,9&nbsp;% der Anlageinvestitionen; 1991 waren es noch 67,5&nbsp;%. Der größte investierende Bereich war das Grundstücks- und Wohnungswesen. Auf diesen entfielen im Jahr 2017 allein 31,2&nbsp;% der gesamten neuen Anlagen. Dem Staatssektor, dessen Investitionstätigkeiten sich auf verschiedene Wirtschaftszweige verteilen, wurden im Jahr 2017&nbsp;11,0&nbsp;% der gesamtwirtschaftlichen Bruttoanlageinvestitionen zugerechnet. </p>
         
       </tr>
@@ -3865,7 +3866,7 @@ data-event-label="Change to Sources tab"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20200228084633'></script><script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20200228085328'></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

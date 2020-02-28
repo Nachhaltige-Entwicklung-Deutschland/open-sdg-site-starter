@@ -141,7 +141,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20200228084633">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20200228085328">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -149,7 +149,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20200228084633"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20200228085328"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
 <body class="language-en layout-indicator">
@@ -625,7 +625,17 @@ data-event-label="Change to Map tab"
 
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
-          <li role="presentation" class="nav-item active">
+
+
+          <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
+          
+            <li role="presentation" class="nav-item active">
+          
+          <!--<li role="presentation" class="nav-item active">-->
+          <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
             <a class="nav-link" data-toggle="tab" href="#metadata" aria-controls="metadata" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
@@ -641,15 +651,6 @@ data-event-label="Change to Content tab"
 >Content and progress</a>
           </li>
           <!---#5 addContentAndProgress---stop-------------------------------------------------------------------------------------------------------------------------------------->
-          <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
-          <li role="presentation" class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#additional_information" aria-controls="additional_information" role="tab" data-on="click"
-data-event-category="Tab change"
-data-event-action="Change metadata view"
-data-event-label="Change to additional_information tab"
-></a>
-          </li>
-          <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
 
           <li role="presentation" class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#globalmetadata" aria-controls="globalmetadata" role="tab" data-on="click"
@@ -1270,7 +1271,7 @@ data-event-label="Change to Sources tab"
     
       
       <tr>
-         <!-- case: content -->
+        
           <p> <i>Text from the Indicator Report 2018</i><br><br>Reducing Emissions from Deforestation and Forest Degradation (REDD+) is a financing instrument designed to protect forests and their biodiversity, which was developed by the international community. REDD+ rewards governments and local communities financially for reducing deforestation and thereby demonstrably cutting emissions. The sums paid out are based on the scope of emissions reduced or of carbon stored. REDD+ funds are disbursed only after the reduction in deforestation has been verified – which means they are result-based. Consequently, the indicator may fluctuate over time even though the level of committed payments remains unchanged over the years.<br><br>The indicator includes only part of the public development expenditure for the preservation, sustainable management and restoration of forests since the Federal Government is involved in promoting sustainable forest development in developing and emerging countries not only as part of REDD+ but also through other programmes and initiatives.<br><br>Payments made under the REDD+ rulebook are also part of climate finance (indicator 13.1.b), as the preservation of forests serves primarily to limit emissions.<br><br>The data sources used for the indicator are the financial reports compiled by the Federal Ministry for Economic Cooperation and Development and by the Federal Ministry for the Environment, Nature Conservation and Nuclear Safety. The data have been collected annually since 2008.<br><br>In the reference period between 2009 and 2017, the indicator developed in a very uneven manner. Following an increase from 3.0&nbsp;million euros in 2009 to 20.0&nbsp;million euros in 2010, the payments fell to 12.0&nbsp;million euros in 2011, before increasing sharply to 36.3&nbsp;million euros in 2013. Payments declined in the following two years to stand at 15.7&nbsp;million euros in 2015, well below the level of 2010, before increasing sharply again in 2016 and 2017. In 2017, payments totalled 68.0&nbsp;million euros, the highest level to date, and almost doubled compared to 2013. Of this amount, 58.9&nbsp;million euros went to multilateral programmes, and 9.1&nbsp;million euros to bilateral programmes. The development of the indicator since 2010 does not reveal a definitive trend. Strong increases in payments have always been followed by declines. </p>
         
       </tr>
@@ -3326,7 +3327,7 @@ data-event-label="Change to Sources tab"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20200228084633'></script><script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20200228085328'></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

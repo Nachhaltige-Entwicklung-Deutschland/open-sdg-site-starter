@@ -141,7 +141,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20200228084633">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20200228085328">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -149,7 +149,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20200228084633"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20200228085328"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
 <body class="language-en layout-indicator">
@@ -620,7 +620,17 @@ data-event-label="Change to Map tab"
 
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
-          <li role="presentation" class="nav-item active">
+
+
+          <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
+          
+            <li role="presentation" class="nav-item active">
+          
+          <!--<li role="presentation" class="nav-item active">-->
+          <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
             <a class="nav-link" data-toggle="tab" href="#metadata" aria-controls="metadata" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
@@ -636,15 +646,6 @@ data-event-label="Change to Content tab"
 >Content and progress</a>
           </li>
           <!---#5 addContentAndProgress---stop-------------------------------------------------------------------------------------------------------------------------------------->
-          <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
-          <li role="presentation" class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#additional_information" aria-controls="additional_information" role="tab" data-on="click"
-data-event-category="Tab change"
-data-event-action="Change metadata view"
-data-event-label="Change to additional_information tab"
-></a>
-          </li>
-          <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
 
           <li role="presentation" class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#globalmetadata" aria-controls="globalmetadata" role="tab" data-on="click"
@@ -1265,7 +1266,7 @@ data-event-label="Change to Sources tab"
     
       
       <tr>
-         <!-- case: content -->
+        
           <p> <i>Text from the Indicator Report 2018</i><br><br>The Body Mass Index (BMI) is a benchmark that is used to measure excess weight and especially obesity. It is calculated by dividing the body weight in kilograms by the square of an individual’s height in metres. This calculation does not take age-specific and gender-specific differences into account. Nor does it indicate the individual body mass composition. However, obesity and excess weight among children and adolescents are defined by taking account also of age and gender. In order to determine if people suffer from obesity or excess weight, the individual BMI value is compared with a defined comparison group (reference population). The percentile reference values according to Kromeyer-Hauschild as recommended by the “Arbeitsgemeinschaft Adipositas im Kinder- und Jugendalter” (AGA) are used as a comparative benchmark. According to these values, children and adolescents are considered to be overweight if their BMI value is above the 90th age- and gender-specific percentile of the reference population (> P90). This means that they fall within the range of those 10&nbsp;% of the reference group with the highest BMI values. A BMI value above the 97th percentile of the reference population (that is, as high as the 3&nbsp;% of adolescents with the highest BMI values) is classified as obesity (> P97). These reference values are based on details of body size and weight that were recorded between 1985 and 1998 in various regions of Germany using different methods.<br><br>The data for the indicator are gathered by the Robert Koch Institute (RKI). The German Health Interview and Examination Survey for Children and Adolescents (KiGGS – referred to as the KiGGS baseline study) for the period 2003 to 2006 delivered the first nationwide representative results. In 2015, new results for the reporting years 2009 to 2012 were published (KiGGS Wave 1). These results were based on information provided by respondents via telephone rather than on measured data as in the baseline survey. New measurement data are available for the period 2014 to 2017 from the second follow-up survey of the KiGGS study (KiGGS Wave 2). In order to allow the data to be compared in a suitable way, the results were age standardised to the reference date 31 December 2015 of the population update.<br><br>For the time period 2014 to 2017, 8.0&nbsp;% of the adolescents were classified as obese. The proportion of girls was 7.2&nbsp;% and that of boys 8.7&nbsp;%. In the period 2003–2006, the proportion of adolescents suffering from obesity was 8.3&nbsp;%, that is, 8.2&nbsp;% of the girls and 8.4&nbsp;% of the boys. Overall, the obesity rate among adolescents was slightly down. While the obesity rate amongst girls decreased by 1.0 percentage point, the rate increased slightly by 0.3 percentage points amongst boys.<br><br>The proportion of adolescents suffering from excess weight including obesity (> P90) did not change much compared with the period 2003 – 2006 (increase by 0.6 percentage points to 18.7&nbsp;%).<br><br>Important factors in the development of overweight are dietary and exercise behaviour, which differ – when looking at the results – in terms of socioeconomic status (SES). The results from KiGGS Wave 2 confirm that 3 to 17-year-old children and adolescents with a low socioeconomic status eat unhealthy more often than their peers from socially better-off families and exercise less frequently. The risk of overweight and obesity is about 3 to 4 times higher for children and adolescents with low SES than in the upper status group (about 20&nbsp;% of the study population).<br><br>An opposite phenomenon to overweight is underweight. A BMI value below the 10th percentile of the reference population indicates underweight. The proportion of underweight adolescents has developed in a negative direction over the last few years, increasing from 7.4&nbsp;% to 8.4&nbsp;%. In this context, an increase from 7.1&nbsp;% to 7.5&nbsp;% can be seen among girls, while the proportion of boys increased even more strongly from 7.7&nbsp;% to 9.2&nbsp;%. Overall, more boys than girls are affected by underweight. </p>
         
       </tr>
@@ -3318,7 +3319,7 @@ data-event-label="Change to Sources tab"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20200228084633'></script><script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20200228085328'></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

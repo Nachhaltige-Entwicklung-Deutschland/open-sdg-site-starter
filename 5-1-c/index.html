@@ -141,7 +141,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20200228084633">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20200228085328">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -149,7 +149,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20200228084633"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20200228085328"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
 <body class="language-de layout-indicator">
@@ -620,7 +620,17 @@ data-event-label="Change to Map tab"
 
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
-          <li role="presentation" class="nav-item active">
+
+
+          <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
+          
+            <li role="presentation" class="nav-item active">
+          
+          <!--<li role="presentation" class="nav-item active">-->
+          <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
             <a class="nav-link" data-toggle="tab" href="#metadata" aria-controls="metadata" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
@@ -636,15 +646,6 @@ data-event-label="Change to Content tab"
 >Inhalt und Entwicklung</a>
           </li>
           <!---#5 addContentAndProgress---stop-------------------------------------------------------------------------------------------------------------------------------------->
-          <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
-          <li role="presentation" class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#additional_information" aria-controls="additional_information" role="tab" data-on="click"
-data-event-category="Tab change"
-data-event-action="Change metadata view"
-data-event-label="Change to additional_information tab"
->Zusätzliche Zeitreihen</a>
-          </li>
-          <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
 
           <li role="presentation" class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#globalmetadata" aria-controls="globalmetadata" role="tab" data-on="click"
@@ -1265,7 +1266,7 @@ data-event-label="Change to Sources tab"
     
       
       <tr>
-         <!-- case: content -->
+        
           <p> <i> Text aus dem Indikatorenbericht 2018</i><br><br>Als Datenquelle wurden Informationen vom Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung (BMZ) zu geförderten Projekten verwendet, die sich im Jahr 2015 in der Durchführungsphase befanden. Zu diesen Maßnahmen zählen alle kurz-, mittel- und langfristigen formalen und non-formalen Berufsbildungsmaßnahmen in Entwicklungs- und Schwellenländern. Die Maßnahmen werden vollständig durch Mittel des Bundeshaushalts sowie durch Marktmittel der Kreditanstalt für Wiederaufbau finanziert. Die Datenerhebung erfolgte erstmalig im Jahr 2015 im Auftrag des BMZ durch die Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH sowie das Centrum für Evaluation GmbH und soll zukünftig im dreijährlichen Rhythmus durchgeführt werden. Insofern können die bisherige Entwicklung und eine mögliche Zielerreichung des Indikators noch nicht beurteilt werden. Seit dem letzten Indikatorenbericht 2016 liegen dementsprechend keine neuen Daten vor. <br><br>Mädchen und Frauen werden auf unterschiedlichen Ebenen von deutscher entwicklungspolitischer Zusammenarbeit erreicht, weswegen die Daten auf drei Ebenen abgefragt wurden. Bei Maßnahmen auf Individualebene kann die Anzahl der Mädchen und Frauen, die beruflich aus- und weitergebildet wurden oder an entsprechend ausgerichteten Beratungsmaßnahmen teilgenommen haben, direkt erfasst werden. Bei Förderung von Institutionen oder Förderung auf Politikfeldebene muss die erreichte Anzahl in den geförderten Aus- und Weiterbildungseinrichtungen geschätzt werden. Dabei werden auf Institutionenebene die Gesamtzahl der weiblichen Aus- und Weiterzubildenden in den jeweils geförderten Aus- und Weiterbildungseinrichtungen sowie auf Politikfeldebene alle weiblichen Aus- und Weiterzubildenden in den Partnerländern als erreichte Mädchen und Frauen angenommen. Folglich kann es zu Überschätzungen und zu Mehrfachzählungen kommen – insbesondere auf Politikfeldebene. Ferner kann nicht ausgeschlossen werden, dass es bei Nachfolgeprojekten oder bei mehreren zeitgleich durchgeführten Projekten in derselben Region zu Mehrfachzählungen der erreichten Mädchen und Frauen kommt. <br><br>Der Wert des Indikators hängt stark von der geförderten Ebene ab, da durch die Förderung von Institutionen oder Politikfeldern in der Regel mehr Mädchen und Frauen erreicht werden als bei individuellen Maßnahmen. Der Indikator trifft keine Aussage zu Erfolg, Umfang und Qualität der Qualifizierungsmaßnahmen, die recht unterschiedlich sein können. Die Maßnahmen zur Förderung der beruflichen Qualifizierung von Mädchen und Frauen sind Teil der gesamten öffentlichen Entwicklungsausgaben. Diese sind im Indikator 17.1 dargestellt. <br><br>Im Jahr 2015 wurden 354&nbsp;841 Mädchen und Frauen durch berufliche Qualifizierungsmaßnahmen erreicht. Davon konnten 3,6&nbsp;% über direkte Berufsbildungsmaßnahmen erreicht werden. Durch Institutionenförderung wurden 14,1&nbsp;% der Mädchen und Frauen erreicht und durch Maßnahmen auf Politikfeldebene 29,9&nbsp;%. Durch die finanzielle Zusammenarbeit wurden weitere 50,7&nbsp;% der Mädchen und Frauen erreicht. Bei diesen Maßnahmen erfolgte keine Zuordnung zu einer der drei vorgenannten Ebenen, weitere 1,7&nbsp;% der erreichten Mädchen und Frauen konnten nicht zugeordnet werden. <br><br>Betrachtet man die Anzahl der Maßnahmen, so wurden im Jahr 2015 insgesamt 151 Maßnahmen zur beruflichen Qualifizierung von Mädchen und Frauen durch deutsche entwicklungspolitische Zusammenarbeit durchgeführt. Davon entfielen 44,6&nbsp;% auf die Individualebene, 12,0&nbsp;% auf die Institutionenebene und 8,7&nbsp;% auf die Politikebene. Weitere 28,0&nbsp;% wurden im Rahmen der finanziellen Zusammenarbeit durchgeführt und 6,7&nbsp;% der Maßnahmen waren den einzelnen Ebenen nicht zuzuordnen. </p>
         
       </tr>
@@ -4359,7 +4360,7 @@ data-event-label="Change to Sources tab"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20200228084633'></script><script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20200228085328'></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

@@ -141,7 +141,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20200228084633">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20200228085328">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -149,7 +149,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20200228084633"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20200228085328"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
 <body class="language-en layout-indicator">
@@ -628,7 +628,17 @@ data-event-label="Change to Map tab"
 
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
-          <li role="presentation" class="nav-item active">
+
+
+          <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
+          
+            <li role="presentation" class="nav-item active">
+          
+          <!--<li role="presentation" class="nav-item active">-->
+          <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
             <a class="nav-link" data-toggle="tab" href="#metadata" aria-controls="metadata" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
@@ -644,15 +654,6 @@ data-event-label="Change to Content tab"
 >Content and progress</a>
           </li>
           <!---#5 addContentAndProgress---stop-------------------------------------------------------------------------------------------------------------------------------------->
-          <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
-          <li role="presentation" class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#additional_information" aria-controls="additional_information" role="tab" data-on="click"
-data-event-category="Tab change"
-data-event-action="Change metadata view"
-data-event-label="Change to additional_information tab"
-></a>
-          </li>
-          <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
 
           <li role="presentation" class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#globalmetadata" aria-controls="globalmetadata" role="tab" data-on="click"
@@ -1273,7 +1274,7 @@ data-event-label="Change to Sources tab"
     
       
       <tr>
-         <!-- case: content -->
+        
           <p> <i>Text from the Indicator Report 2018</i><br><br>The data for the indicator are taken from the reporting in accordance with the EU Regulation on a mechanism for monitoring and reporting greenhouse gas emissions. The data source of the annually collected data is the Federal Ministry for Economic Cooperation and Development (BMZ), which in this context also reports on climate financing by other federal ministries. In general, the information on bilateral climate finance is based on the relevant commitments, while the actual payments are taken as a basis for multilateral climate finance and contributions to energy and climate funds. The indicator also includes the proportionately attributed climate finance derived from contributions to multilateral funds at development banks. If climate finance mainly benefits developing countries, it is considered to be part of official development assistance (see indicator 17.1).<br><br>In 2017, Germany committed or provided 3.6 billion euros from budget funds for international climate finance to reduce greenhouse gases and adapt to climate change. Compared to the previous year, during which climate finance amounted to 3.4 billion euros, this represents an increase of 8.6&nbsp;%. A proportion of 43&nbsp;% of climate financing in 2017 was spent on emission reduction and 25&nbsp;% on adaptation to climate change. The remaining 32&nbsp;% were used to finance cross-sectoral projects. As in previous years, more funds were spent on mitigation than on adaptation projects in 2017.<br><br>Multilateral channels provided 13&nbsp;% (481&nbsp;million euros) of climate finance in 2017. Of this amount, 187&nbsp;million euros represent the climate finance allocated proporotionately to Germany, which results from contributions to multilateral funds at development banks.<br><br>The purely monetary analysis of climate finance does not allow any conclusions to be drawn regarding the impact of the financed projects. Based on its resources for technical and financial cooperation, the BMZ assesses how many tonnes of carbon dioxide emissions will be saved in the future through mitigation projects. The impact assessments of financial cooperation are based on ex-ante estimates of the financing commitments of a year, while those of technical cooperation are calculated on an ex-post basis.<br><br>In 2017, direct savings of 8.7&nbsp;million tonnes of CO<sub>2</sub> equivalents were achieved usingfinancial cooperation funds. Through technical cooperation funds, emissions of 9.1&nbsp;million tonnes of CO<sub>2</sub> equivalents were directly avoided between 2015 and 2017.<br><br>In addition to public climate financing from budget funds, the KfW (Kreditanstalt für Wiederaufbau) and the DEG (Deutsche Investitions- und Entwicklungsgesellschaft) also provide climate-related loans via market funds. These represent the “mobilised public climate finance” which is not included in the indicator. In 2017, the resources mobilised in this way amounted to 3.1 billion euros compared to 5.2 billion euros in the previous year. Here again, more funds were disbursed for mitigation projects (83&nbsp;%) than for adaptation projects (9&nbsp;%). </p>
         
       </tr>
@@ -3349,7 +3350,7 @@ data-event-label="Change to Sources tab"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20200228084633'></script><script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20200228085328'></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

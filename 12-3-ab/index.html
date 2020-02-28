@@ -141,7 +141,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20200228084633">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20200228085328">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -149,7 +149,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20200228084633"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20200228085328"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
 <body class="language-de layout-indicator">
@@ -604,7 +604,17 @@ data-event-label="Change to Map tab"
 
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
-          <li role="presentation" class="nav-item active">
+
+
+          <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
+          
+            <li role="presentation" class="nav-item active">
+          
+          <!--<li role="presentation" class="nav-item active">-->
+          <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
             <a class="nav-link" data-toggle="tab" href="#metadata" aria-controls="metadata" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
@@ -620,15 +630,6 @@ data-event-label="Change to Content tab"
 >Inhalt und Entwicklung</a>
           </li>
           <!---#5 addContentAndProgress---stop-------------------------------------------------------------------------------------------------------------------------------------->
-          <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
-          <li role="presentation" class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#additional_information" aria-controls="additional_information" role="tab" data-on="click"
-data-event-category="Tab change"
-data-event-action="Change metadata view"
-data-event-label="Change to additional_information tab"
->Zusätzliche Zeitreihen</a>
-          </li>
-          <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
 
           <li role="presentation" class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#globalmetadata" aria-controls="globalmetadata" role="tab" data-on="click"
@@ -1249,7 +1250,7 @@ data-event-label="Change to Sources tab"
     
       
       <tr>
-         <!-- case: content -->
+        
           <p> <i> Text aus dem Indikatorenbericht 2018</i><br><br>Der Themenbereich Nachhaltigkeit in der öffentlichen Beschaffung ist sehr komplex und mit einem oder wenigen Indikatoren kaum adäquat abzudecken. Die beiden hier dargestellten Indikatoren fokussieren ausschließlich auf ausgewählte ökologische Aspekte von Nachhaltigkeit. Auch diese beiden ökologischen Aspekte vermögen sie vom Umfang her nicht vollständig zu erfassen. Soziale oder wirtschaftliche Aspekte von Nachhaltigkeit stehen bei den beiden Indikatoren nicht im Fokus.<br><br><i>CO<sub>2</sub>-Emissionen je Fahrleistung der Kfz der öffentlichen Hand</i><br><br>Die Daten für die Kfz der öffentlichen Hand werden von den Umweltökonomischen Gesamtrechnungen des Statistischen Bundesamtes unter Zuhilfenahme der TREMOD-Datenbank (Transport Emission Modell) des Instituts für Energie- und Umweltforschung bereitgestellt. Die öffentliche Hand umfasst Bund, Länder, Gemeinden und Gemeindeverbände, Polizei, Bundesgrenzschutz, Feuerschutz und Feuerwehren.<br><br>Die durchschnittlichen CO<sub>2</sub>-Emissionen je gefahrenem Kilometer von Kfz der öffentlichen Hand sind von 2015 zu 2016 um rund 2&nbsp;% von rund 184 auf 180,6 Gramm CO<sub>2</sub> je Kilometer gesunken. Dabei ist eine Entkoppelung von CO<sub>2</sub>-Emissionen und Fahrleistungen zu verzeichnen. Das Verhältnis von CO<sub>2</sub>-Emissionen zu Fahrleistungen sank, obwohl die Fahrleistungen weiterhin anstiegen. So sind im Jahr 2014 sowohl die Fahrleistungen als auch die CO<sub>2</sub>-Emissionen angestiegen. Im Jahr 2015 hingegen sind die CO<sub>2</sub>-Emissionen erstmals gesunken, obwohl die Fahrleistungen weiterhin gestiegen sind. Ein Grund hierfür könnte die zunehmende Beschaffung von effizienteren Kfz sowie von Elektro- und Hybridautos sein, die einen geringeren CO<sub>2</sub>-Ausstoß aufweisen. Der Anteil von Elektro- und Hybridautos am Gesamtbestand von Kfz der öffentlichen Hand ist von 2015 zu 2016 von 0,6&nbsp;% (1&nbsp;946 Stück) auf 0,9&nbsp;% (2&nbsp;827 Stück) angestiegen.<br><br>Betrachtet man hierzu im Vergleich die Kfz der unmittelbaren Bundesverwaltung, betrugen im Jahr 2017 die durchschnittlichen CO<sub>2</sub>-Emissionen 179,9 Gramm CO<sub>2</sub> je gefahrenen Kilometer. Die unmittelbare Bundesverwaltung umfasst die eigenen, aber rechtlich unselbstständigen zentralen oder nachgeordneten Behörden des Bundes. Die Daten für die CO<sub>2</sub>-Emissionen je Fahrleistung der Kfz der unmittelbaren Bundesverwaltung stammen vom Umweltbundesamt. Wie bei den Angaben zu den Kfz der öffentlichen Hand werden bei der unmittelbaren Bundesverwaltung ebenfalls alle Pkw bis zu einem Gewicht von 3,5 Tonnen berücksichtigt, allerdings nicht die leichten Nutzfahrzeuge dieser Klasse. Weiterhin stieg zwischen 2015 und 2017 der Anteil der neu angeschafften Kfz der unmittelbaren Bundesverwaltung, deren Emissionswert kleiner als 50 Gramm CO<sub>2</sub> je Kilometer ausfiel, am Gesamtvolumen der neu beschafften Kfz von 2,6 auf 4,1&nbsp;%. Dieser Anstieg könnte in einem geringeren CO<sub>2</sub>-Ausstoß resultieren und somit die Effizienz des Fuhrparks steigern.<br><br>Bei diesem Indikator werden nur diejenigen CO<sub>2</sub>-Emissionen berücksichtigt, die im Betrieb der Fahrzeuge anfallen. Betrachtet man jedoch die ganzheitlichen Lebenszykluskosten, fallen in den Prozessen der Produktion und Entsorgung ebenfalls Treibhausgasemissionen an, die für einen aussagekräftigen Indikator zu berücksichtigen wären. Darüber hinaus ist die Nachhaltigkeit der Elektromobilität von mehreren Faktoren abhängig, wie beispielsweise davon, inwiefern der verwendete Strom aus herkömmlichen oder regenerativen Quellen stammt, vom Materialaufwand, den verwendeten Materialien und der Recyclingfähigkeit.<br><br><i>Anteil Papier mit Blauem Engel am Gesamtpapierverbrauch der unmittelbaren Bundesverwaltung</i><br><br>Die Daten für die Berechnung des Anteils von Papier mit Blauem Engel am Gesamtpapierverbrauch der unmittelbaren Bundesverwaltung werden durch das Monitoring des Maßnahmenprogramms Nachhaltigkeit erhoben, das von der Kompetenzstelle für nachhaltige Beschaffung beim Beschaffungsamt des Bundesinnenministeriums durchgeführt wird. Der Blaue Engel ist ein Umweltzeichen für umweltschonendere Produkte und Dienstleistungen. Bezogen auf Papier bedeutet dieses Siegel, dass die Papierfasern zu 100 Prozent aus Altpapier gewonnen werden und dass bei der Herstellung auf schädliche Chemikalien oder optische Aufheller verzichtet wird.<br><br>Der Anteil des Papiers mit Blauem Engel ist von 2015 bis 2017 um rund 48&nbsp;% gestiegen. Im Jahr 2015 betrug der Anteil noch 45&nbsp;% am Gesamtpapierverbrauch der Bundesverwaltung und erreichte einen Wert von 67&nbsp;% im Jahr 2017. Somit folgt der Indikator der Zielsetzung des Maßnahmenprogramms Nachhaltigkeit, den Anteil des Einsatzes von Papier mit dem Blauen Engel zu steigern.<br><br>Der Gesamtpapierverbrauch unterliegt jedoch jährlichen Schwankungen: Nach einem starken Anstieg des Gesamtpapierverbrauchs auf rund 1&nbsp;281 Millionen Blatt Papier war in 2016 ein leichter Rückgang für 2017 (rund 1&nbsp;250 Millionen) zu verzeichnen. Dieser Wert liegt allerdings noch über dem Ausgangswert des Jahres 2015 (rund 1&nbsp;150 Millionen). Somit ist im Vergleichszeitraum von 2015 bis 2017 nicht nur der Verbrauch von Papier mit Blauem Engel, sondern auch der Gesamtpapierverbrauch gestiegen (+ 8,7&nbsp;%). Der Anteil des Papiers mit Blauem Engel am Gesamtpapierverbrauch sagt somit nichts über die effiziente Nutzung von Papier aus. </p>
         
       </tr>
@@ -5430,7 +5431,7 @@ data-event-label="Change to Sources tab"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20200228084633'></script><script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20200228085328'></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

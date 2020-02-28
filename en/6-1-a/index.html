@@ -141,7 +141,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20200228084633">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20200228085328">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -149,7 +149,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20200228084633"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20200228085328"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
 <body class="language-en layout-indicator">
@@ -625,7 +625,17 @@ data-event-label="Change to Map tab"
 
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
-          <li role="presentation" class="nav-item active">
+
+
+          <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
+          
+            <li role="presentation" class="nav-item active">
+          
+          <!--<li role="presentation" class="nav-item active">-->
+          <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
             <a class="nav-link" data-toggle="tab" href="#metadata" aria-controls="metadata" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
@@ -641,15 +651,6 @@ data-event-label="Change to Content tab"
 >Content and progress</a>
           </li>
           <!---#5 addContentAndProgress---stop-------------------------------------------------------------------------------------------------------------------------------------->
-          <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
-          <li role="presentation" class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#additional_information" aria-controls="additional_information" role="tab" data-on="click"
-data-event-category="Tab change"
-data-event-action="Change metadata view"
-data-event-label="Change to additional_information tab"
-></a>
-          </li>
-          <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
 
           <li role="presentation" class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#globalmetadata" aria-controls="globalmetadata" role="tab" data-on="click"
@@ -1270,7 +1271,7 @@ data-event-label="Change to Sources tab"
     
       
       <tr>
-         <!-- case: content -->
+        
           <p> <i>Text from the Indicator Report 2018</i><br><br>The phosphorous pollution of rivers is measured by the Länder as part of the monitoring conducted for the EU Water Framework Directive. The data for the indicator come from the monitoring network, which consists of about 250 monitoring points. In most cases, the monitoring points were installed in the main currents of the large rivers and at the junction of important confluents. The data are compiled by the German Environment Agency based on information from the German Working Group on Water Issues of the Länder and the Federal Government represented by the Federal Environment Ministry (LAWA).<br><br>The indicator shows whether the annual average of the values measured at a particular monitoring point was equal to, or lower than, the benchmark value. However, it does not show by how far the target was surpassed if it was exceeded. The information about the individual monitoring points is presented in a summarised form. Accordingly, the value of the indicator is strongly dependent on the number of monitoring points and the representative status of their distribution. Lakes and other standing waters are not covered by the indicator.<br><br>Since the different bodies of water react with differing levels of sensitivity to nutrients such as phosphorous, the precise benchmark values vary. The vast majority of flowing waters use the benchmark value of 0.1&nbsp;mg/l of phosphorous. In organic substrate-dominated rivers, the benchmark value is 0.15&nbsp;mg/l, for marshland streams 0.3&nbsp;mg/l and for transitional waters influenced by tidal movement 0.045&nbsp;mg/l.<br><br>The indicators of phosphorous and nitrate levels (6.1.a and 6.1.b) cover two key aspects of water quality. However, there are other, additional components such as the existence of natural habitats around water bodies and the exposure to pollutants (such as pesticides, metals, medicines), all of which are also relevant to water quality. Phosphorous generally enters a body of water through the input of phosphates.<br><br>In 2016, the annual average of values measured was below the benchmark value at 37&nbsp;% of the monitoring points at rivers. 57&nbsp;% of the monitoring points showed average concentrations of up to twice the benchmark value, while 4&nbsp;% of the monitoring points were in the range of up to four times the benchmark value (not shown in the chart). The remaining 2&nbsp;% showed even higher concentrations.<br><br>When viewed over time, the proportion of monitoring points not exceeding the benchmark value has continuously increased and has doubled since 1990. However, the percentage rate of monitoring points with concentrations of up to twice the benchmark value tripled during the same period. Conversely, the share of monitoring points with even higher values has fallen significantly since the early 1990s. The level of pollution has been reduced significantly thanks in particular to the introduction of phosphate-free detergents and the specification of threshold values for the discharge of treated waste water.<br><br>If one examines the average trend of the last five years, the indicator has changed only to a minor degree. The goal of not exceeding the specified threshold value at all monitoring points cannot be achieved if the current trend continues. </p>
         
       </tr>
@@ -3346,7 +3347,7 @@ data-event-label="Change to Sources tab"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20200228084633'></script><script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20200228085328'></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

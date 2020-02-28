@@ -141,7 +141,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20200228084633">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20200228085328">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -149,7 +149,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20200228084633"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20200228085328"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
 <body class="language-en layout-indicator">
@@ -625,7 +625,17 @@ data-event-label="Change to Map tab"
 
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
-          <li role="presentation" class="nav-item active">
+
+
+          <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
+          
+            <li role="presentation" class="nav-item active">
+          
+          <!--<li role="presentation" class="nav-item active">-->
+          <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
             <a class="nav-link" data-toggle="tab" href="#metadata" aria-controls="metadata" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
@@ -641,15 +651,6 @@ data-event-label="Change to Content tab"
 >Content and progress</a>
           </li>
           <!---#5 addContentAndProgress---stop-------------------------------------------------------------------------------------------------------------------------------------->
-          <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
-          <li role="presentation" class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#additional_information" aria-controls="additional_information" role="tab" data-on="click"
-data-event-category="Tab change"
-data-event-action="Change metadata view"
-data-event-label="Change to additional_information tab"
-></a>
-          </li>
-          <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
 
           <li role="presentation" class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#globalmetadata" aria-controls="globalmetadata" role="tab" data-on="click"
@@ -1270,7 +1271,7 @@ data-event-label="Change to Sources tab"
     
       
       <tr>
-         <!-- case: content -->
+        
           <p> <i>Text from the Indicator Report 2018</i><br><br>The nitrate content of groundwater is recorded by the Länder for the purpose of reporting the condition of groundwater in Germany to the European Environment Agency (EEA). The monitoring points used for this purpose are combined in the “EEA monitoring network”. The data are summarised by the German Environment Agency based on information from the German Working Group on Water Issues of the Länder and the Federal Government represented by the Federal Environment Ministry (LAWA).<br><br>The pollution of groundwater with nitrate, a natural nitrogen compound, is caused primarily by the washout of nitrate from various fertilisers that are rich in nitrogen. In addition to farm fertilisers such as liquid manure or slurry that are produced in regions of intensive livestock farming, this also includes the mineral fertilisers used for intensive agriculture. The last few years have also seen an increase in the volume of digestate, which is produced as a by-product of biogas power plants and is likewise used as a fertiliser in agriculture. This also leads to an increased nitrogen content in the soil and therefore to higher nitrate values in groundwater.<br><br>The natural level of pollution for nitrate is between zero and a maximum of 10&nbsp;mg/l. Contents between 10 and 25&nbsp;mg/l are signs of minor to medium pollution. Concentrations of between 25 and 50&nbsp;mg/l indicate a high level of groundwater pollution. If the threshold value of the Ground Water Ordinance of 50&nbsp;mg/l, on which this indicator is based, is exceeded, the groundwater is in a poor chemical state and without treatment cannot be utilised as drinking water.<br><br>Similar to the indicator on phosphate in flowing waters, this indicator gives no indication of the extent to which the measured values are higher or lower than the threshold value. It solely captures the number of monitoring points at which the measured values were lower than the specified threshold value. In this context, the number and the representative nature of the distribution of the monitoring points or their regional concentration have a considerable influence on the result of this indicator. In 2015, however, EEA groundwater monitoring was fundamentally revised, adapted and expanded in order to make the results more representative.<br><br>At some monitoring points the nitrate pollution may have declined sharply. But if it remains above the threshold value of 50&nbsp;mg/l, the decrease is not reflected by the indicator. The same applies to increasing nitrate pollution which, however, remains below the threshold value. The interpretation must also take account of the fact that measures to reduce nitrate pollution may only show an effect with a delay, for example because the percolation time from the surface to the groundwater takes several years.<br><br>In 2015, the threshold value of 50&nbsp;mg/l of nitrate was exceeded at 19.0&nbsp;% of groundwater monitoring points in the EEA monitoring network. This means that the groundwater there must not be used for drinking water supplies without treatment. Since 2008, the share of monitoring points at which this threshold value is exceeded has remained unchanged. Consequently, the goal of not exceeding the threshold value at any monitoring point has not been achieved nor is any movement of the indicator in this direction to be seen.<br><br>The value of 25&nbsp;mg/l, which still indicates a high level of pollution, was exceeded at more than one third (38.0&nbsp;%) of all monitoring points. This share has also remained virtually unchanged over the years. </p>
         
       </tr>
@@ -3895,7 +3896,7 @@ data-event-label="Change to Sources tab"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20200228084633'></script><script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20200228085328'></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

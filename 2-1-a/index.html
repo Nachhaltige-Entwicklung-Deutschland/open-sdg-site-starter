@@ -141,7 +141,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20200228084633">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20200228085328">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -149,7 +149,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20200228084633"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20200228085328"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
 <body class="language-de layout-indicator">
@@ -612,7 +612,17 @@ data-event-label="Change to Map tab"
 
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
-          <li role="presentation" class="nav-item active">
+
+
+          <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
+          
+            <li role="presentation" class="nav-item active">
+          
+          <!--<li role="presentation" class="nav-item active">-->
+          <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
             <a class="nav-link" data-toggle="tab" href="#metadata" aria-controls="metadata" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
@@ -628,15 +638,6 @@ data-event-label="Change to Content tab"
 >Inhalt und Entwicklung</a>
           </li>
           <!---#5 addContentAndProgress---stop-------------------------------------------------------------------------------------------------------------------------------------->
-          <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
-          <li role="presentation" class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#additional_information" aria-controls="additional_information" role="tab" data-on="click"
-data-event-category="Tab change"
-data-event-action="Change metadata view"
-data-event-label="Change to additional_information tab"
->Zusätzliche Zeitreihen</a>
-          </li>
-          <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
 
           <li role="presentation" class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#globalmetadata" aria-controls="globalmetadata" role="tab" data-on="click"
@@ -1257,7 +1258,7 @@ data-event-label="Change to Sources tab"
     
       
       <tr>
-         <!-- case: content -->
+        
           <p> <i> Text aus dem Indikatorenbericht 2018</i><br><br>Der Indikator wird vom Institut für Pflanzenbau und Bodenkunde des Julius Kühn-Instituts und dem Institut für Landschaftsökologie und Ressourcenmanagement der Universität Gießen berechnet. Bei der Berechnung werden Stickstoffzufuhren durch Düngemittel, aus biologischer Stickstofffixierung, durch atmosphärische Einträge, die nicht von der Landwirtschaft emittiert wurden, durch Saat- und Pflanzgut sowie importierte und inländisch erzeugte Futtermittel berücksichtigt. Die Stickstoffabfuhr erfolgt über pflanzliche und tierische Marktprodukte.<br><br>Im Jahr 2016 waren Düngemittel mit 55,1&nbsp;% (107 Kilogramm Stickstoff je Hektar und Jahr) die wichtigste Komponente der Stickstoffzufuhr in der Gesamtbilanz. Futtermittel aus dem Inland trugen mit 22,4&nbsp;% (43&nbsp;kg/ha), Futtermittel aus dem Ausland mit 12,1&nbsp;% (23&nbsp;kg/ha), die biologische Stickstofffixierung mit 6,6&nbsp;% (13&nbsp;kg/ha), die außerlandwirtschaftlichen Emissionen mit 2,0&nbsp;% (4&nbsp;kg/ha), Saat- und Pflanzgut mit 0,7&nbsp;% (1&nbsp;kg/ha) und Konfermente mit 1,1&nbsp;% (2&nbsp;kg/ha) zur Stickstoffzufuhr bei. Während die Stickstoffzufuhr zwischen 1990 und 2016 um rund 9&nbsp;% verringert wurde, stieg die Stickstoffabfuhr zwischen 1990 und 2016 mit 41&nbsp;% deutlich stärker an. Dabei entfielen 2016 knapp drei Viertel der Stickstoffabfuhr aus der Landwirtschaft auf pflanzliche und ein Viertel auf tierische Marktprodukte.<br><br>Der Gesamtsaldo des Indikators wird nach dem Prinzip der Hoftor-Bilanz berechnet, somit werden Stickstoffflüsse im innerbetrieblichen Kreislauf nicht berücksichtigt. Als maßgebliche Zeitreihe für den Indikator dient das gleitende Fünfjahresmittel, welches sich jeweils aus dem Gesamtsaldo des betreffenden Jahres sowie der beiden Vor- und Folgejahre berechnet. Hierdurch werden witterungs- und marktabhängige jährliche Schwankungen ausgeglichen, die nicht von den landwirtschaftlichen Betrieben beeinflusst werden können. Der Indikator trifft keine Aussage zur regionalen Verteilung der Stickstoffüberschüsse. Auch wenn der für Deutschland als Ziel vorgegebene Durchschnittswert unterschritten wird, können regionale Stickstoffüberschüsse deutlich mehr als 70 Kilogramm je Hektar und Jahr betragen. <br><br>Der Stickstoffsaldo sank im Zeitraum von 1992 bis 2014 von 121 auf 97 Kilogramm je Hektar und Jahr (– 19,5&nbsp;%). Nach der starken Reduktion des Stickstoffüberschusses zu Beginn der Zeitreihe, ging der Stickstoffüberschuss zwischen 2010 und 2014 nur um 0,9&nbsp;% zurück. Setzt sich diese Entwicklung fort, kann eine Verringerung bis auf 70 Kilogramm je Hektar landwirtschaftlich genutzter Fläche im Jahresmittel 2028 bis 2032 nicht erreicht werden. <br><br>Der deutliche Rückgang des Stickstoffüberschusses Anfang der 1990er-Jahre resultierte aus einem reduzierten Düngemitteleinsatz und abnehmenden Tierbeständen in den neuen Bundesländern. Die vergleichsweise schwache Reduktion im weiteren Verlauf der Zeitreihe beruhte auf einem leichten Rückgang bei mineralischem Düngemitteleinsatz und höheren Erntemengen aufgrund des technischen Fortschritts in der Pflanzenproduktion und -züchtung (effizientere Stickstoffdüngung, Sortenspektrum) bei gleichzeitiger Ausweitung des Anbauumfangs ertragsstarker Kulturarten (Mais, Weizen) sowie einer verbesserten Futterverwertung bei den Nutztieren. <br><br>Der Indikator weist eine enge Beziehung zu den Indikatoren 3.2.a „Emissionen von Luftschadstoffen“, 6.1.b „Nitrat im Grundwasser“, 14.1.a „Stickstoffeintrag über die Zuflüsse in Nordund Ostsee“ und 15.2 „Eutrophierung der Ökosysteme“ auf. </p>
         
       </tr>
@@ -3882,7 +3883,7 @@ data-event-label="Change to Sources tab"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20200228084633'></script><script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20200228085328'></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
