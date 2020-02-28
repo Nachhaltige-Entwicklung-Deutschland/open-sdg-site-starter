@@ -50,10 +50,8 @@
 
           {% endif %}
 
-        {% elsif indicator_metadata.field.scope == 'content' %} <!-- case: content -->
+        {% else %} <!-- case: content -->
           <p> {{ meta[indicator_metadata.name] | t | markdownify }} </p>
-        {% elsif indicator_metadata.field.scope == 'add_info' %}
-          <p> {{ meta[indicator_metadata.name] }} </p>
         {% endif %}
       </tr>
       {% endunless %}
