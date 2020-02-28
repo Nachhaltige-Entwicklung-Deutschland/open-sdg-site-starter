@@ -169,7 +169,22 @@
 
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
-          <li role="presentation" class="nav-item active">
+
+
+          <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
+          {% if meta.additional_information %}
+            <li role="presentation" class="nav-item active">
+              <a class="nav-link" data-toggle="tab" href="#additional_information" aria-controls="additional_information" role="tab" {% include autotrack.html preset="tab_meta_additional_information" category="Tab change" action="Change metadata view" label="Change to additional_information tab" %}>{{ t.indicator.add_info }}</a>
+            </li>
+            <li role="presentation" class="nav-item">
+          {% else %}
+            <li role="presentation" class="nav-item active">
+          {% endif %}
+          <!--<li role="presentation" class="nav-item active">-->
+          <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
             <a class="nav-link" data-toggle="tab" href="#metadata" aria-controls="metadata" role="tab" {% include autotrack.html preset="tab_meta_national" category="Tab change" action="Change metadata view" label="Change to Metadata tab" %}>{{ t.indicator.details }}</a>
           </li>
           <!---#5 addContentAndProgress---start------------------------------------------------------------------------------------------------------------------------------------->
@@ -177,6 +192,7 @@
             <a class="nav-link" data-toggle="tab" href="#content" aria-controls="content" role="tab" {% include autotrack.html preset="tab_meta_content" category="Tab change" action="Change metadata view" label="Change to Content tab" %}>{{ t.indicator.contentAndProgress }}</a>
           </li>
           <!---#5 addContentAndProgress---stop-------------------------------------------------------------------------------------------------------------------------------------->
+
           <li role="presentation" class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#globalmetadata" aria-controls="globalmetadata" role="tab" {% include autotrack.html preset="tab_meta_global" category="Tab change" action="Change metadata view" label="Change to Global Metadata tab" %}>{{ t.indicator.history }}</a>
           </li>
@@ -195,7 +211,26 @@
 
         <!-- Tab panes -->
         <div class="tab-content">
-          <div role="tabpanel" class="tab-pane active" id="metadata">
+          {% if meta.additional_information %}
+            <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
+            <div role="tabpanel" class="tab-pane active" id="additional_information">
+              <div>
+                <article>
+                  {% include components/additional_information.html %}
+                </article>
+                {{ meta.additional_information }}
+              </div>
+            </div>
+
+            <div role="tabpanel" class="tab-pane" id="metadata">
+          {% else %}
+            <div role="tabpanel" class="tab-pane active" id="metadata">
+          {% endif %}
+          <!--<div role="tabpanel" class="tab-pane active" id="metadata">-->
+            <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
             <!-- National Metadata -->
             <div > <!-- formerly class="collapsible expanded" -->
               <!-- <h3 tabindex='0'>National Metadata</h3> -->
