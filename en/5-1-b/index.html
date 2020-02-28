@@ -141,7 +141,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20200228081010">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20200228082542">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -149,7 +149,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20200228081010"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20200228082542"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
 <body class="language-en layout-indicator">
@@ -644,6 +644,16 @@ data-event-label="Change to Content tab"
 >Content and progress</a>
           </li>
           <!---#5 addContentAndProgress---stop-------------------------------------------------------------------------------------------------------------------------------------->
+          <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
+          <li role="presentation" class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#additional_information" aria-controls="additional_information" role="tab" data-on="click"
+data-event-category="Tab change"
+data-event-action="Change metadata view"
+data-event-label="Change to additional_information tab"
+></a>
+          </li>
+          <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
+
           <li role="presentation" class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#globalmetadata" aria-controls="globalmetadata" role="tab" data-on="click"
 data-event-category="Tab change"
@@ -1260,9 +1270,21 @@ data-event-label="Change to Sources tab"
     
       
       <tr>
-         <!-- case: content -->
-          <p> <p><i>Text from the Indicator Report 2018</i><br /><br />This indicator measures the proportion of women on the supervisory boards of listed companies and joint-stock companies with more than 2,000 employees as well as European Companies (SE) and listed companies that are subject to equal co-determination. The data are based on publications of the results of elections at general meetings of shareholders of listed and fully co-determined companies, which are evaluated by the association “Frauen in die Aufsichtsräte” (FidAR). This currently includes 104 companies with almost 1,600 supervisory board positions.<br /><br />In January 2018, the average proportion of women on the supervisory boards of these companies was 30.9 %. In January 2015, the share was 21.3 %. This means that the target share of 30 % was already reached twelve years before the deadline set in the German Sustainability Strategy. Provided that the companies complied with the law, this increase was to be expected as the “Act on the Equal Participation of Women and Men in Executive Positions” since 2015 requires at least 30 % of the supervisory board positions to be filled by women in all newly elected supervisory boards of the above-mentioned companies. Multiple counts of persons holding several supervisory board positions are not eliminated.<br /><br />With regard to the results, it should also be noted that the majority of companies in Germany and most of the management positions in the economy are excluded by the underlying definition. On the one hand, the group of reporting entities currently comprises 104 companies according to the definition. However, there are nearly 3.5 million companies in Germany in total. On the other hand, the roughly 1,600 supervisory board positions considered by FidAR to date represent only a small portion of management positions in the economy with its 816,000 managers in 2014. These numbers illustrate that only part of the management positions in a company are considered when the coverage is limited to the supervisory bodies.<br /><br />According to the International Standard Classification of Occupations (ISCO), managers are all persons who plan, control, coordinate and evaluate the overall activities of companies, governments and other organisations or internal organisational units and who review and evaluate guidelines, laws, rules and regulations. When the ISCO classification is applied, just under 21 % of the 816,000 management positions in the economy (all companies with more than one employee) were filled by women in 2014.</p>
- </p>
+        
+
+          
+
+            <th scope="row" height="" >Content and progress</th>
+
+            <td colspan="4">
+              
+                <p><i>Text from the Indicator Report 2018</i><br /><br />This indicator measures the proportion of women on the supervisory boards of listed companies and joint-stock companies with more than 2,000 employees as well as European Companies (SE) and listed companies that are subject to equal co-determination. The data are based on publications of the results of elections at general meetings of shareholders of listed and fully co-determined companies, which are evaluated by the association “Frauen in die Aufsichtsräte” (FidAR). This currently includes 104 companies with almost 1,600 supervisory board positions.<br /><br />In January 2018, the average proportion of women on the supervisory boards of these companies was 30.9 %. In January 2015, the share was 21.3 %. This means that the target share of 30 % was already reached twelve years before the deadline set in the German Sustainability Strategy. Provided that the companies complied with the law, this increase was to be expected as the “Act on the Equal Participation of Women and Men in Executive Positions” since 2015 requires at least 30 % of the supervisory board positions to be filled by women in all newly elected supervisory boards of the above-mentioned companies. Multiple counts of persons holding several supervisory board positions are not eliminated.<br /><br />With regard to the results, it should also be noted that the majority of companies in Germany and most of the management positions in the economy are excluded by the underlying definition. On the one hand, the group of reporting entities currently comprises 104 companies according to the definition. However, there are nearly 3.5 million companies in Germany in total. On the other hand, the roughly 1,600 supervisory board positions considered by FidAR to date represent only a small portion of management positions in the economy with its 816,000 managers in 2014. These numbers illustrate that only part of the management positions in a company are considered when the coverage is limited to the supervisory bodies.<br /><br />According to the International Standard Classification of Occupations (ISCO), managers are all persons who plan, control, coordinate and evaluate the overall activities of companies, governments and other organisations or internal organisational units and who review and evaluate guidelines, laws, rules and regulations. When the ISCO classification is applied, just under 21 % of the 816,000 management positions in the economy (all companies with more than one employee) were filled by women in 2014.</p>
+
+              
+            </td>
+
+          
+
         
       </tr>
       
@@ -1627,6 +1649,413 @@ data-event-label="Change to Sources tab"
             </div>
           </div>
           <!---#5 addContentAndProgress---stop-------------------------------------------------------------------------------------------------------------------------------------->
+          <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
+          <div role="tabpanel" class="tab-pane" id="additional_information">
+            <div>
+              <article>
+                
+<!---#5 addContentAndProgress---start------------------------------------------------------------------------------------------------------------------------------------->
+<p>
+  <table class="table table-hover">
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+</table>
+
+  
+  
+</p>
+<!---#5 addContentAndProgress---stop-------------------------------------------------------------------------------------------------------------------------------------->
+
+              </article>
+            </div>
+          </div>
+          <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
 
           <div role="tabpanel" class="tab-pane" id="globalmetadata">
             <!-- Global Metadata -->
@@ -2918,7 +3347,7 @@ data-event-label="Change to Sources tab"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20200228081010'></script><script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20200228082542'></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

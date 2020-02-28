@@ -141,7 +141,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20200228081010">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20200228082542">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -149,7 +149,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20200228081010"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20200228082542"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
 <body class="language-en layout-indicator">
@@ -654,6 +654,16 @@ data-event-label="Change to Content tab"
 >Content and progress</a>
           </li>
           <!---#5 addContentAndProgress---stop-------------------------------------------------------------------------------------------------------------------------------------->
+          <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
+          <li role="presentation" class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#additional_information" aria-controls="additional_information" role="tab" data-on="click"
+data-event-category="Tab change"
+data-event-action="Change metadata view"
+data-event-label="Change to additional_information tab"
+></a>
+          </li>
+          <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
+
           <li role="presentation" class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#globalmetadata" aria-controls="globalmetadata" role="tab" data-on="click"
 data-event-category="Tab change"
@@ -1270,9 +1280,21 @@ data-event-label="Change to Sources tab"
     
       
       <tr>
-         <!-- case: content -->
-          <p> <p><i>Text from the Indicator Report 2018</i><br /><br />Final energy and primary energy consumption are directly related to one another. Final energy consumption is derived from the sum of primary energy consumption, conversion, flare and transmission losses as well as the statistical difference.<br /><br />Primary energy consumption is the sum of domestically extracted primary fuels, withdrawals from reserves and all imported fuels minus storage, energy exports and marine bunkers. A key component in the calculation of energy consumption is the data from the energy balances of the AGEB (Energy Balance Association), which are supplemented with data from other sources.<br /><br />Final energy productivity indicates the amount of value added created by each unit of final energy used. It represents a measurement of energy efficiency in production areas and in the energy use of households. However, estimates of energy efficiency in the areas of conversion (efficiency of power stations) or in the transmission of energy and storage (elimination of breaches, improved heat insulation, etc.) cannot be directly derived from the indicator.<br /><br />According to preliminary results, final energy productivity in the period 2008 to 2017 increased by 9.6 %, equating to an average annual increase of 1.0 %. This means that the goal of an annual increase of 2.1 % on average up to 2050 has not yet been achieved. In the year-on-year comparison, energy productivity for 2017 has even fallen by 0.9 percentage points. The reason for this was that the final energy consumption in every sector except households (+2.2 % on the previous year) increased proportionally faster than the gross domestic product. In particular, at a rate of change of around 3.9 % in 2017, final energy consumption in the industrial sector was far above the price-adjusted growth rate of the gross domestic product (2.2 %). If final energy consumption grows faster than the gross domestic product, final energy productivity decreases.<br /><br />Primary energy consumption rose slightly in 2017, which can be partially attributed to slightly cooler weather conditions and to growth in the economy. Although primary energy consumption was lower than in 1990, it increased slightly compared with the previous year. Provisional results indicate that primary energy consumption fell by 5.5 % in the period from 2008 to 2017. If development remains the same as in the previous years, the target value for 2020 will not be achieved.</p>
- </p>
+        
+
+          
+
+            <th scope="row" height="" >Content and progress</th>
+
+            <td colspan="4">
+              
+                <p><i>Text from the Indicator Report 2018</i><br /><br />Final energy and primary energy consumption are directly related to one another. Final energy consumption is derived from the sum of primary energy consumption, conversion, flare and transmission losses as well as the statistical difference.<br /><br />Primary energy consumption is the sum of domestically extracted primary fuels, withdrawals from reserves and all imported fuels minus storage, energy exports and marine bunkers. A key component in the calculation of energy consumption is the data from the energy balances of the AGEB (Energy Balance Association), which are supplemented with data from other sources.<br /><br />Final energy productivity indicates the amount of value added created by each unit of final energy used. It represents a measurement of energy efficiency in production areas and in the energy use of households. However, estimates of energy efficiency in the areas of conversion (efficiency of power stations) or in the transmission of energy and storage (elimination of breaches, improved heat insulation, etc.) cannot be directly derived from the indicator.<br /><br />According to preliminary results, final energy productivity in the period 2008 to 2017 increased by 9.6 %, equating to an average annual increase of 1.0 %. This means that the goal of an annual increase of 2.1 % on average up to 2050 has not yet been achieved. In the year-on-year comparison, energy productivity for 2017 has even fallen by 0.9 percentage points. The reason for this was that the final energy consumption in every sector except households (+2.2 % on the previous year) increased proportionally faster than the gross domestic product. In particular, at a rate of change of around 3.9 % in 2017, final energy consumption in the industrial sector was far above the price-adjusted growth rate of the gross domestic product (2.2 %). If final energy consumption grows faster than the gross domestic product, final energy productivity decreases.<br /><br />Primary energy consumption rose slightly in 2017, which can be partially attributed to slightly cooler weather conditions and to growth in the economy. Although primary energy consumption was lower than in 1990, it increased slightly compared with the previous year. Provisional results indicate that primary energy consumption fell by 5.5 % in the period from 2008 to 2017. If development remains the same as in the previous years, the target value for 2020 will not be achieved.</p>
+
+              
+            </td>
+
+          
+
         
       </tr>
       
@@ -1637,6 +1659,413 @@ data-event-label="Change to Sources tab"
             </div>
           </div>
           <!---#5 addContentAndProgress---stop-------------------------------------------------------------------------------------------------------------------------------------->
+          <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
+          <div role="tabpanel" class="tab-pane" id="additional_information">
+            <div>
+              <article>
+                
+<!---#5 addContentAndProgress---start------------------------------------------------------------------------------------------------------------------------------------->
+<p>
+  <table class="table table-hover">
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+</table>
+
+  
+  
+</p>
+<!---#5 addContentAndProgress---stop-------------------------------------------------------------------------------------------------------------------------------------->
+
+              </article>
+            </div>
+          </div>
+          <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
 
           <div role="tabpanel" class="tab-pane" id="globalmetadata">
             <!-- Global Metadata -->
@@ -4581,7 +5010,7 @@ data-event-label="Change to Sources tab"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20200228081010'></script><script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20200228082542'></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

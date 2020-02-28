@@ -141,7 +141,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20200228081010">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20200228082542">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -149,7 +149,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20200228081010"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20200228082542"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
 <body class="language-en layout-indicator">
@@ -641,6 +641,16 @@ data-event-label="Change to Content tab"
 >Content and progress</a>
           </li>
           <!---#5 addContentAndProgress---stop-------------------------------------------------------------------------------------------------------------------------------------->
+          <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
+          <li role="presentation" class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#additional_information" aria-controls="additional_information" role="tab" data-on="click"
+data-event-category="Tab change"
+data-event-action="Change metadata view"
+data-event-label="Change to additional_information tab"
+></a>
+          </li>
+          <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
+
           <li role="presentation" class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#globalmetadata" aria-controls="globalmetadata" role="tab" data-on="click"
 data-event-category="Tab change"
@@ -1257,9 +1267,21 @@ data-event-label="Change to Sources tab"
     
       
       <tr>
-         <!-- case: content -->
-          <p> <p><i>Text from the Indicator Report 2018</i><br /><br />The initial data for the indicator originate from the Europe-wide harmonised statistics on income and living conditions (EU-SILC). The indicator expresses expenditure on housing relative to disposable household income. In case a household is in receipt of housing allowance or comparable social benefits such as payments for accommodation and heating from basic security benefits, these are also included in the calculation of the indicator. These social benefits are not added to the income, but are deducted from the housing costs so that the burden of housing costs of households that rely on housing-related social benefits is reduced or approaches zero.<br /><br />The purchase of an owner-occupied property is not included in the expenditure on housing. Other spending on measures to enhance the value of a property should not be taken into account either. However, it is not always possible to clearly differentiate between these and value-maintaining expenditures that are considered as housing expenditure. Therefore, some simplifying assumptions must be made. Moreover, the indicator also does not take into account any additional expenditure associated with the place of residence. For instance, expenditure on travelling from the place of residence to the workplace is not taken into account, although it is possible that the threshold of 40 % is not reached only due to the fact that the place of residence is far away from work.<br /><br />By defining the threshold value as “40 % of disposable household income”, the indicator provides no information about average housing costs. If clusters emerge close to this threshold, they can cause major changes in the indicator over time even if there is only a small change in the ratio of income and housing expenditure. <br /><br />The indicator increased from 14.5 % in 2010 to a relatively constant 16 % during the period from 2011 until 2016. In 2017, it decreased to the initial value of 14.5 %. However, due to statistical uncertainties this cannot be considered a statistically significant change, but constitutes more of a continuation at a similar level. Based on the current trend, it is therefore not (yet) possible to determine whether there is any movement in the direction of the set target.<br /><br />With regard to the actual housing situation and disposable income, the indicator provides only a limited amount of information. After all, the calculation method also declares high-income households with a high housing expenditure as being overburdened. However, the data do indicate that considerably more households with a low income are above the 40 % threshold. Separate analysis of the population at risk of poverty, i.e. of those people who have less than 60 % of the median equivalised income of the population, also shows that the share of people overburdened by housing costs is closely related to income. Among those at risk of poverty, the proportion of people overburdened by housing costs rose from 42.2 % (2010) to 54.4 % (2014). In the following three years, this share declined slightly and stood at 48.5 % in 2017. The proportion of people not considered to be at risk of poverty who were overburdened by housing costs was considerably lower and also relatively constant over time (starting value in 2010: 9.4 %, peak in 2011: 10.5 %, lowest value in 2017: 7.9 %).</p>
- </p>
+        
+
+          
+
+            <th scope="row" height="" >Content and progress</th>
+
+            <td colspan="4">
+              
+                <p><i>Text from the Indicator Report 2018</i><br /><br />The initial data for the indicator originate from the Europe-wide harmonised statistics on income and living conditions (EU-SILC). The indicator expresses expenditure on housing relative to disposable household income. In case a household is in receipt of housing allowance or comparable social benefits such as payments for accommodation and heating from basic security benefits, these are also included in the calculation of the indicator. These social benefits are not added to the income, but are deducted from the housing costs so that the burden of housing costs of households that rely on housing-related social benefits is reduced or approaches zero.<br /><br />The purchase of an owner-occupied property is not included in the expenditure on housing. Other spending on measures to enhance the value of a property should not be taken into account either. However, it is not always possible to clearly differentiate between these and value-maintaining expenditures that are considered as housing expenditure. Therefore, some simplifying assumptions must be made. Moreover, the indicator also does not take into account any additional expenditure associated with the place of residence. For instance, expenditure on travelling from the place of residence to the workplace is not taken into account, although it is possible that the threshold of 40 % is not reached only due to the fact that the place of residence is far away from work.<br /><br />By defining the threshold value as “40 % of disposable household income”, the indicator provides no information about average housing costs. If clusters emerge close to this threshold, they can cause major changes in the indicator over time even if there is only a small change in the ratio of income and housing expenditure. <br /><br />The indicator increased from 14.5 % in 2010 to a relatively constant 16 % during the period from 2011 until 2016. In 2017, it decreased to the initial value of 14.5 %. However, due to statistical uncertainties this cannot be considered a statistically significant change, but constitutes more of a continuation at a similar level. Based on the current trend, it is therefore not (yet) possible to determine whether there is any movement in the direction of the set target.<br /><br />With regard to the actual housing situation and disposable income, the indicator provides only a limited amount of information. After all, the calculation method also declares high-income households with a high housing expenditure as being overburdened. However, the data do indicate that considerably more households with a low income are above the 40 % threshold. Separate analysis of the population at risk of poverty, i.e. of those people who have less than 60 % of the median equivalised income of the population, also shows that the share of people overburdened by housing costs is closely related to income. Among those at risk of poverty, the proportion of people overburdened by housing costs rose from 42.2 % (2010) to 54.4 % (2014). In the following three years, this share declined slightly and stood at 48.5 % in 2017. The proportion of people not considered to be at risk of poverty who were overburdened by housing costs was considerably lower and also relatively constant over time (starting value in 2010: 9.4 %, peak in 2011: 10.5 %, lowest value in 2017: 7.9 %).</p>
+
+              
+            </td>
+
+          
+
         
       </tr>
       
@@ -1624,6 +1646,413 @@ data-event-label="Change to Sources tab"
             </div>
           </div>
           <!---#5 addContentAndProgress---stop-------------------------------------------------------------------------------------------------------------------------------------->
+          <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
+          <div role="tabpanel" class="tab-pane" id="additional_information">
+            <div>
+              <article>
+                
+<!---#5 addContentAndProgress---start------------------------------------------------------------------------------------------------------------------------------------->
+<p>
+  <table class="table table-hover">
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+</table>
+
+  
+  
+</p>
+<!---#5 addContentAndProgress---stop-------------------------------------------------------------------------------------------------------------------------------------->
+
+              </article>
+            </div>
+          </div>
+          <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
 
           <div role="tabpanel" class="tab-pane" id="globalmetadata">
             <!-- Global Metadata -->
@@ -2895,7 +3324,7 @@ data-event-label="Change to Sources tab"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20200228081010'></script><script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20200228082542'></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

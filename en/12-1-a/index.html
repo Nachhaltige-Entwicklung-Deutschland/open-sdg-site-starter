@@ -141,7 +141,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20200228081010">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20200228082542">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -149,7 +149,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20200228081010"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20200228082542"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
 <body class="language-en layout-indicator">
@@ -631,6 +631,16 @@ data-event-label="Change to Content tab"
 >Content and progress</a>
           </li>
           <!---#5 addContentAndProgress---stop-------------------------------------------------------------------------------------------------------------------------------------->
+          <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
+          <li role="presentation" class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#additional_information" aria-controls="additional_information" role="tab" data-on="click"
+data-event-category="Tab change"
+data-event-action="Change metadata view"
+data-event-label="Change to additional_information tab"
+></a>
+          </li>
+          <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
+
           <li role="presentation" class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#globalmetadata" aria-controls="globalmetadata" role="tab" data-on="click"
 data-event-category="Tab change"
@@ -1247,9 +1257,21 @@ data-event-label="Change to Sources tab"
     
       
       <tr>
-         <!-- case: content -->
-          <p> <p><i>Text from the Indicator Report 2018</i><br /><br />The indicator comprises the market shares of products eco-labelled with one of the following: “EU ecolabel”, “EU organic logo”, the “Blue Angel” or the respective highest class of the “EU energy label”. The EU energy label primarily addresses energy consumption and greenhouse gas emissions, while the other three product labels also take into account other environmental pollution such as pesticide use and harmful wastewater. The indicator is designed to monitor whether environmentally friendly product variants are replacing conventional product variants in the market. In this case, only a selection of product groups is examined for reasons that include the limited availability of data regarding sales of products bearing sustainability labels. In addition, the inclusion of certain product groups would lead to duplicate counting as they bear multiple sustainability labels simultaneously.<br /><br />For the indicator, household appliances such as refrigerators, washing machines, televisions and vacuum cleaners are examined. Illuminants, organic foods, tissue paper, washing and cleaning agents and cars are also assessed. Since the markets for the individual product groups are of different sizes, the market shares are weighted with the sales volume of the respective overall market. This is to prevent any distortion of the indicator by high market shares in small niche markets. Furthermore, this enables the expenditure on environmentally friendly products to be related to the total expenditure by households.<br /><br />It is not possible to weight the market shares of the respective product groups according to their environmental relevance because the environmental labels address different categories (energy consumption, greenhouse gas emissions, material demand) that cannot be balanced against one another. Therefore, it is not possible to present an all-encompassing evaluation across multiple environmental categories in form of an environmental footprint of the product groups. As the indicator covers only products that are newly introduced on the market in relation to the overall market, rebound effects are not considered. Furthermore, it describes the market share based on sales. Due to the price differences between products with and without the relevant ecolabels, it does not allow conclusions to be drawn regarding their numbers. In addition, any change in the value of the indicator may be attributable to pricing changes for a product group.<br /><br />Data supplied by the Gesellschaft für Konsumforschung, the Federal Motor Transport Authority, Agricultural Market Information Company (AMI), Bund Ökologische Lebensmittelwirtschaft e.V., Verkehrsclub Deutschland e.V. and the German Environment Agency serve as source for calculating the indicator. The latter agency calculates the indicator values annually from the reference year of 2012 onwards.<br /><br />Between 2012 and 2016, the market share of products certified by publicly managed eco-labelling schemes increased from 3.6 % to 8.6 %. This is equivalent to overall sales of 25.7 billion euros in 2016.<br /><br />The definition of the energy consumption classes of passenger cars is updated by the EU in line with the current technical state at regular intervals. Devices such as refrigerators, ovens or tumble dryers must also meet minimum legal requirements for new products. In general, this can contribute to the wider distribution of energy-saving products, but can also bias the indicator indirectly, through adjustments to the allocation criteria.</p>
- </p>
+        
+
+          
+
+            <th scope="row" height="" >Content and progress</th>
+
+            <td colspan="4">
+              
+                <p><i>Text from the Indicator Report 2018</i><br /><br />The indicator comprises the market shares of products eco-labelled with one of the following: “EU ecolabel”, “EU organic logo”, the “Blue Angel” or the respective highest class of the “EU energy label”. The EU energy label primarily addresses energy consumption and greenhouse gas emissions, while the other three product labels also take into account other environmental pollution such as pesticide use and harmful wastewater. The indicator is designed to monitor whether environmentally friendly product variants are replacing conventional product variants in the market. In this case, only a selection of product groups is examined for reasons that include the limited availability of data regarding sales of products bearing sustainability labels. In addition, the inclusion of certain product groups would lead to duplicate counting as they bear multiple sustainability labels simultaneously.<br /><br />For the indicator, household appliances such as refrigerators, washing machines, televisions and vacuum cleaners are examined. Illuminants, organic foods, tissue paper, washing and cleaning agents and cars are also assessed. Since the markets for the individual product groups are of different sizes, the market shares are weighted with the sales volume of the respective overall market. This is to prevent any distortion of the indicator by high market shares in small niche markets. Furthermore, this enables the expenditure on environmentally friendly products to be related to the total expenditure by households.<br /><br />It is not possible to weight the market shares of the respective product groups according to their environmental relevance because the environmental labels address different categories (energy consumption, greenhouse gas emissions, material demand) that cannot be balanced against one another. Therefore, it is not possible to present an all-encompassing evaluation across multiple environmental categories in form of an environmental footprint of the product groups. As the indicator covers only products that are newly introduced on the market in relation to the overall market, rebound effects are not considered. Furthermore, it describes the market share based on sales. Due to the price differences between products with and without the relevant ecolabels, it does not allow conclusions to be drawn regarding their numbers. In addition, any change in the value of the indicator may be attributable to pricing changes for a product group.<br /><br />Data supplied by the Gesellschaft für Konsumforschung, the Federal Motor Transport Authority, Agricultural Market Information Company (AMI), Bund Ökologische Lebensmittelwirtschaft e.V., Verkehrsclub Deutschland e.V. and the German Environment Agency serve as source for calculating the indicator. The latter agency calculates the indicator values annually from the reference year of 2012 onwards.<br /><br />Between 2012 and 2016, the market share of products certified by publicly managed eco-labelling schemes increased from 3.6 % to 8.6 %. This is equivalent to overall sales of 25.7 billion euros in 2016.<br /><br />The definition of the energy consumption classes of passenger cars is updated by the EU in line with the current technical state at regular intervals. Devices such as refrigerators, ovens or tumble dryers must also meet minimum legal requirements for new products. In general, this can contribute to the wider distribution of energy-saving products, but can also bias the indicator indirectly, through adjustments to the allocation criteria.</p>
+
+              
+            </td>
+
+          
+
         
       </tr>
       
@@ -1614,6 +1636,413 @@ data-event-label="Change to Sources tab"
             </div>
           </div>
           <!---#5 addContentAndProgress---stop-------------------------------------------------------------------------------------------------------------------------------------->
+          <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
+          <div role="tabpanel" class="tab-pane" id="additional_information">
+            <div>
+              <article>
+                
+<!---#5 addContentAndProgress---start------------------------------------------------------------------------------------------------------------------------------------->
+<p>
+  <table class="table table-hover">
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+</table>
+
+  
+  
+</p>
+<!---#5 addContentAndProgress---stop-------------------------------------------------------------------------------------------------------------------------------------->
+
+              </article>
+            </div>
+          </div>
+          <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
 
           <div role="tabpanel" class="tab-pane" id="globalmetadata">
             <!-- Global Metadata -->
@@ -5455,7 +5884,7 @@ data-event-label="Change to Sources tab"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20200228081010'></script><script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20200228082542'></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

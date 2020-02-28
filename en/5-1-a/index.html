@@ -141,7 +141,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20200228081010">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20200228082542">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -149,7 +149,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20200228081010"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20200228082542"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
 <body class="language-en layout-indicator">
@@ -641,6 +641,16 @@ data-event-label="Change to Content tab"
 >Content and progress</a>
           </li>
           <!---#5 addContentAndProgress---stop-------------------------------------------------------------------------------------------------------------------------------------->
+          <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
+          <li role="presentation" class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#additional_information" aria-controls="additional_information" role="tab" data-on="click"
+data-event-category="Tab change"
+data-event-action="Change metadata view"
+data-event-label="Change to additional_information tab"
+></a>
+          </li>
+          <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
+
           <li role="presentation" class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#globalmetadata" aria-controls="globalmetadata" role="tab" data-on="click"
 data-event-category="Tab change"
@@ -1257,9 +1267,21 @@ data-event-label="Change to Sources tab"
     
       
       <tr>
-         <!-- case: content -->
-          <p> <p><i>Text from the Indicator Report 2018</i><br /><br />The indicator presented here shows the unadjusted gender pay gap. Therefore, it only expresses the relative average gross hourly earnings as a ratio without considering the underlying causes, such as qualification, occupation or a different employment history.<br /><br />The data for the indicator are based on the four-yearly structure of earnings survey conducted by the statistical offices of the Länder as a representative sample survey covering a maximum of 60,000 businesses who are obliged to provide the requested information. Based on these data, results are provided by age, educational attainment, performance group, activity, collective agreement, company size class and economic sector, and the adjusted gender pay gap (GPG) is published. For the interim years, the unadjusted GPG is updated using the rates of change from the quarterly survey of earnings. In the following, the EU definition is used for the adjusted and unadjusted GPG; it excludes employees in “agriculture, forestry and fishing”, “public administration and defence; compulsory social security” and in micro-enterprises.<br /><br />In 2017, the unadjusted gender pay gap was 21 % on average. This means that the average gross hourly earnings of women were by around one fifth lower than those earnings of men. Since 1995 the unadjusted GPG has scarcely changed. Hence, if the trend recorded over the last five years continues, the goal set for 2020 will not be achieved.<br /><br />On an EU average, the unadjusted GPG was 16 % in 2016. The countries with the smallest differences in unadjusted gross hourly earnings, along with Italy and Romania (5 %), were Belgium and Luxembourg (6 %). Only in Estonia (25 %) and the Czech Republic (22 %) was the unadjusted GPG higher in 2016 than in Germany (21 %).<br /><br />However, there was no uniform picture for Germany. The unadjusted gender pay gap varied markedly between the Länder: in 2017, the GPG was highest in Baden-Württemberg with 27 %, whereas in Saxony-Anhalt with its overall lower earnings level it was only 2 %.<br /><br />The factors underlying the GPG can be studied every four years based on the detailed results of the structure of earnings survey. The results for 2014 are currently available. These factors, which determine the differences in earnings, are subject to long-term change processes and therefore relatively stable over time. The main quantifiable reasons underlying the unadjusted GPG are women and men working in different sectors and occupations and the unequal division of job requirements in terms of leadership and qualification. In addition, women are more likely than men to be in part-time or marginal employment.<br /><br />The above reasons explain, in statistical terms, around three quarters of the difference between hourly earnings at national level. The adjusted GPG of 6 % in 2014 accounts for the remaining quarter of the difference in earnings.<br /><br />Compared with the unadjusted GPG, the adjusted GPG presents a much more uniform picture at the level of the Länder. In 2014, it was between 4 % (in Thuringia) and 10 % (in Brandenburg).</p>
- </p>
+        
+
+          
+
+            <th scope="row" height="" >Content and progress</th>
+
+            <td colspan="4">
+              
+                <p><i>Text from the Indicator Report 2018</i><br /><br />The indicator presented here shows the unadjusted gender pay gap. Therefore, it only expresses the relative average gross hourly earnings as a ratio without considering the underlying causes, such as qualification, occupation or a different employment history.<br /><br />The data for the indicator are based on the four-yearly structure of earnings survey conducted by the statistical offices of the Länder as a representative sample survey covering a maximum of 60,000 businesses who are obliged to provide the requested information. Based on these data, results are provided by age, educational attainment, performance group, activity, collective agreement, company size class and economic sector, and the adjusted gender pay gap (GPG) is published. For the interim years, the unadjusted GPG is updated using the rates of change from the quarterly survey of earnings. In the following, the EU definition is used for the adjusted and unadjusted GPG; it excludes employees in “agriculture, forestry and fishing”, “public administration and defence; compulsory social security” and in micro-enterprises.<br /><br />In 2017, the unadjusted gender pay gap was 21 % on average. This means that the average gross hourly earnings of women were by around one fifth lower than those earnings of men. Since 1995 the unadjusted GPG has scarcely changed. Hence, if the trend recorded over the last five years continues, the goal set for 2020 will not be achieved.<br /><br />On an EU average, the unadjusted GPG was 16 % in 2016. The countries with the smallest differences in unadjusted gross hourly earnings, along with Italy and Romania (5 %), were Belgium and Luxembourg (6 %). Only in Estonia (25 %) and the Czech Republic (22 %) was the unadjusted GPG higher in 2016 than in Germany (21 %).<br /><br />However, there was no uniform picture for Germany. The unadjusted gender pay gap varied markedly between the Länder: in 2017, the GPG was highest in Baden-Württemberg with 27 %, whereas in Saxony-Anhalt with its overall lower earnings level it was only 2 %.<br /><br />The factors underlying the GPG can be studied every four years based on the detailed results of the structure of earnings survey. The results for 2014 are currently available. These factors, which determine the differences in earnings, are subject to long-term change processes and therefore relatively stable over time. The main quantifiable reasons underlying the unadjusted GPG are women and men working in different sectors and occupations and the unequal division of job requirements in terms of leadership and qualification. In addition, women are more likely than men to be in part-time or marginal employment.<br /><br />The above reasons explain, in statistical terms, around three quarters of the difference between hourly earnings at national level. The adjusted GPG of 6 % in 2014 accounts for the remaining quarter of the difference in earnings.<br /><br />Compared with the unadjusted GPG, the adjusted GPG presents a much more uniform picture at the level of the Länder. In 2014, it was between 4 % (in Thuringia) and 10 % (in Brandenburg).</p>
+
+              
+            </td>
+
+          
+
         
       </tr>
       
@@ -1624,6 +1646,413 @@ data-event-label="Change to Sources tab"
             </div>
           </div>
           <!---#5 addContentAndProgress---stop-------------------------------------------------------------------------------------------------------------------------------------->
+          <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
+          <div role="tabpanel" class="tab-pane" id="additional_information">
+            <div>
+              <article>
+                
+<!---#5 addContentAndProgress---start------------------------------------------------------------------------------------------------------------------------------------->
+<p>
+  <table class="table table-hover">
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+</table>
+
+  
+  
+</p>
+<!---#5 addContentAndProgress---stop-------------------------------------------------------------------------------------------------------------------------------------->
+
+              </article>
+            </div>
+          </div>
+          <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
 
           <div role="tabpanel" class="tab-pane" id="globalmetadata">
             <!-- Global Metadata -->
@@ -2915,7 +3344,7 @@ data-event-label="Change to Sources tab"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20200228081010'></script><script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20200228082542'></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

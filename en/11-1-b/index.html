@@ -141,7 +141,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20200228081010">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20200228082542">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -149,7 +149,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20200228081010"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20200228082542"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
 <body class="language-en layout-indicator">
@@ -644,6 +644,16 @@ data-event-label="Change to Content tab"
 >Content and progress</a>
           </li>
           <!---#5 addContentAndProgress---stop-------------------------------------------------------------------------------------------------------------------------------------->
+          <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
+          <li role="presentation" class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#additional_information" aria-controls="additional_information" role="tab" data-on="click"
+data-event-category="Tab change"
+data-event-action="Change metadata view"
+data-event-label="Change to additional_information tab"
+></a>
+          </li>
+          <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
+
           <li role="presentation" class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#globalmetadata" aria-controls="globalmetadata" role="tab" data-on="click"
 data-event-category="Tab change"
@@ -1260,9 +1270,21 @@ data-event-label="Change to Sources tab"
     
       
       <tr>
-         <!-- case: content -->
-          <p> <p><i>Text from the Indicator Report 2018</i><br /><br />Agricultural, wooded, mining and pile areas as well as water areas in the form of flowing and standing waters are referred to as open space areas. Therefore, all areas not covered by the category of housing and transport area are included. A distinction must be made between open space areas, and open areas as well as housing open areas, such as cemeteries, gardens, parks, green spaces or wildlife preserves, which – although they are non-built-up areas – are considered part of the housing and transport area. Therefore, if buildings are erected in gardens, parks or green spaces, this development will not be reflected in this indicator. However, such a development would increase the population density. In this respect, the indicator “Loss of open space area” corresponds to indicators 11.1.a “Expansion of housing and transport area “ and 11.1.c “Density of settlements”.<br /><br />The data sources for the indicator are the population figures and the area survey by type of actual use compiled by the Federal Statistical Office. Since population data at regional level are used for the calculation, the 2011 census caused a jump in the time series. Moreover, changes in the methodology of the official land registers in the Länder have increasingly resulted in the reclassification of areas in previous years. To smooth out these effects and to establish the long-term trend, a four-year moving average is calculated, which covers the four preceding years.<br /><br />Regarding the area survey by type of actual use, a methodological change in the survey basis took place in 2016, so that the comparability of the data with previous years is limited from 2016 onwards. For this reason, the development of the indicator in 2016 is shown only as a four-year moving average.<br /><br />The distinction between “rural” and “non-rural” is based on a type classification of the Thünen Institute. This classification allocates a degree of “ruralness” to rural districts and towns not attached to an administrative district – based on spatial characteristics such as “density of settlements”, “share of agricultural and forestry area” and “location relative to the centres”.<br /><br />In the period under review, the loss of per capita open space area declined on average nationwide. Whereas the four-year moving average for 2004 was still around 5 square metres per capita and year, the current average for 2015 is only about 2.9 square metres.<br /><br />Although subject to a similar trend, considerable differences can be observed between rural and non-rural district types in terms of the scope of change. For instance, the loss of open space area per capita and year in rural district types decreased from above 7 to slightly over 4 square metres. In the non-rural district types, it fell from just under 2 to around 1 square metre. In this context, it is important to remember that non-rural districts and towns not attached to an administrative district have much less open space area such as forests or agricultural land than rural areas. In addition, demographic trends develop at differing rates and have a corresponding impact on the indicator. Whereas the majority of rural regions in the period under review reported a decline in population, the population figures in non-rural regions as a whole increased slightly.</p>
- </p>
+        
+
+          
+
+            <th scope="row" height="" >Content and progress</th>
+
+            <td colspan="4">
+              
+                <p><i>Text from the Indicator Report 2018</i><br /><br />Agricultural, wooded, mining and pile areas as well as water areas in the form of flowing and standing waters are referred to as open space areas. Therefore, all areas not covered by the category of housing and transport area are included. A distinction must be made between open space areas, and open areas as well as housing open areas, such as cemeteries, gardens, parks, green spaces or wildlife preserves, which – although they are non-built-up areas – are considered part of the housing and transport area. Therefore, if buildings are erected in gardens, parks or green spaces, this development will not be reflected in this indicator. However, such a development would increase the population density. In this respect, the indicator “Loss of open space area” corresponds to indicators 11.1.a “Expansion of housing and transport area “ and 11.1.c “Density of settlements”.<br /><br />The data sources for the indicator are the population figures and the area survey by type of actual use compiled by the Federal Statistical Office. Since population data at regional level are used for the calculation, the 2011 census caused a jump in the time series. Moreover, changes in the methodology of the official land registers in the Länder have increasingly resulted in the reclassification of areas in previous years. To smooth out these effects and to establish the long-term trend, a four-year moving average is calculated, which covers the four preceding years.<br /><br />Regarding the area survey by type of actual use, a methodological change in the survey basis took place in 2016, so that the comparability of the data with previous years is limited from 2016 onwards. For this reason, the development of the indicator in 2016 is shown only as a four-year moving average.<br /><br />The distinction between “rural” and “non-rural” is based on a type classification of the Thünen Institute. This classification allocates a degree of “ruralness” to rural districts and towns not attached to an administrative district – based on spatial characteristics such as “density of settlements”, “share of agricultural and forestry area” and “location relative to the centres”.<br /><br />In the period under review, the loss of per capita open space area declined on average nationwide. Whereas the four-year moving average for 2004 was still around 5 square metres per capita and year, the current average for 2015 is only about 2.9 square metres.<br /><br />Although subject to a similar trend, considerable differences can be observed between rural and non-rural district types in terms of the scope of change. For instance, the loss of open space area per capita and year in rural district types decreased from above 7 to slightly over 4 square metres. In the non-rural district types, it fell from just under 2 to around 1 square metre. In this context, it is important to remember that non-rural districts and towns not attached to an administrative district have much less open space area such as forests or agricultural land than rural areas. In addition, demographic trends develop at differing rates and have a corresponding impact on the indicator. Whereas the majority of rural regions in the period under review reported a decline in population, the population figures in non-rural regions as a whole increased slightly.</p>
+
+              
+            </td>
+
+          
+
         
       </tr>
       
@@ -1627,6 +1649,413 @@ data-event-label="Change to Sources tab"
             </div>
           </div>
           <!---#5 addContentAndProgress---stop-------------------------------------------------------------------------------------------------------------------------------------->
+          <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
+          <div role="tabpanel" class="tab-pane" id="additional_information">
+            <div>
+              <article>
+                
+<!---#5 addContentAndProgress---start------------------------------------------------------------------------------------------------------------------------------------->
+<p>
+  <table class="table table-hover">
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+</table>
+
+  
+  
+</p>
+<!---#5 addContentAndProgress---stop-------------------------------------------------------------------------------------------------------------------------------------->
+
+              </article>
+            </div>
+          </div>
+          <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
 
           <div role="tabpanel" class="tab-pane" id="globalmetadata">
             <!-- Global Metadata -->
@@ -3424,7 +3853,7 @@ data-event-label="Change to Sources tab"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20200228081010'></script><script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20200228082542'></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
