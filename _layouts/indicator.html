@@ -211,6 +211,24 @@
 
         <!-- Tab panes -->
         <div class="tab-content">
+          {% if meta.additional_information %}
+            <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
+            <div role="tabpanel" class="tab-pane active" id="additional_information">
+              <div>
+                <article>
+                  {% include components/additional_information.html %}
+                </article>
+                {{ meta.additional_information }}
+              </div>
+            </div>
+
+            <div role="tabpanel" class="tab-pane" id="metadata">
+          {% else %}
+            <div role="tabpanel" class="tab-pane active" id="metadata">
+          {% endif %}
+            <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
+
+
           <div role="tabpanel" class="tab-pane active" id="metadata">
             <!-- National Metadata -->
             <div > <!-- formerly class="collapsible expanded" -->
@@ -234,15 +252,6 @@
             </div>
           </div>
           <!---#5 addContentAndProgress---stop-------------------------------------------------------------------------------------------------------------------------------------->
-          <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
-          <div role="tabpanel" class="tab-pane" id="additional_information">
-            <div>
-              <article>
-                {% include components/additional_information.html %}
-              </article>
-            </div>
-          </div>
-          <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
 
           <div role="tabpanel" class="tab-pane" id="globalmetadata">
             <!-- Global Metadata -->
