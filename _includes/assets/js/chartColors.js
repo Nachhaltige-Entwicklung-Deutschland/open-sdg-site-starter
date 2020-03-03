@@ -1,4 +1,4 @@
-var chartColors = function (indicatorId){
+opensdg.chartColors = function (indicatorId){
   console.log("a, indicatorId", indicatorId);
 
   this.indicatorId = indicatorId;

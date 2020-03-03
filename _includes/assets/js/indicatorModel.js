@@ -220,7 +220,7 @@ var indicatorModel = function (options) {
   // this.numberOfColors = {{ site.numberOfColors | jsonify }}>colorSets[this.colorSet].length ? colorSets[this.colorSet].length : {{ site.numberOfColors | jsonify }};
   //
   // var colors = colorSets[this.colorSet].slice(0,this.numberOfColors);
-  var colorOps = new chartColors(this.indicatorId);
+  var colorOps = opensdg.chartColors(this.indicatorId);
   var colors = colorOps.colors;
   console.log("z", colors);
 
