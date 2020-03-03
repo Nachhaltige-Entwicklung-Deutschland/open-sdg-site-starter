@@ -220,7 +220,7 @@ var indicatorModel = function (options) {
   this.numberOfColors = {{ site.numberOfColors | jsonify }}>colorSets[this.colorSet].length ? colorSets[this.colorSet].length : {{ site.numberOfColors | jsonify }};
 
   var colors = colorSets[this.colorSet].slice(0,this.numberOfColors);
-  console.log(this.colorSet, this.numberOfColors);
+  
 
    var headlinePointstyle = 'circle';
    var pointStyles = ['circle', 'triangle', 'cross', 'crossRot', 'dash', 'line', 'rect', 'rectRounded', 'rectRot', 'star', 'triangle'];
