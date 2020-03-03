@@ -221,8 +221,9 @@ var indicatorModel = function (options) {
   //
   // var colors = colorSets[this.colorSet].slice(0,this.numberOfColors);
   this.colorSet = {{ site.colorset | jsonify }};
-  this.numberOfColors = {{ site.numberOfColors | jsonify }}
-  this.colorOps = new chartColors(this.indicatorId, this.colorSet, this.numberOfColors);
+  this.numberOfColors = {{ site.numberOfColors | jsonify }};
+  this.customColorList = {{ site.customColorList | jsonify }}
+  this.colorOps = new chartColors(this.indicatorId, this.colorSet, this.numberOfColors, this.customColorList);
   var colors = colorOps.colors;
   console.log("z", colors);
 

@@ -1,4 +1,4 @@
-  var chartColors = function (indicatorId, colorSet, numberOfColors){
+  var chartColors = function (indicatorId, colorSet, numberOfColors, customColorList){
     console.log("a, indicatorId", indicatorId);
 
     this.indicatorId = indicatorId;
@@ -28,7 +28,7 @@
     this.colorSets = {'default':['7e984f', '8d73ca', 'aaa533', 'c65b8a', '4aac8d', 'c95f44'],
                     'sdgColors':['e5243b', 'dda63a', '4c9f38', 'c5192d', 'ff3a21', '26bde2', 'fcc30b', 'a21942', 'fd6925', 'dd1367','fd9d24','bf8b2e','3f7e44','0a97d9','56c02b','00689d','19486a'],
                     'goalColors': goalColors[goalNumber-1],
-                    'customColors': {{ site.customColorList | jsonify }}};
+                    'customColors': customColorList};
 
     this.numberOfColors = numberOfColors>colorSets[this.colorSet].length ? colorSets[this.colorSet].length : numberOfColors;
     this.colors = colorSets[this.colorSet].slice(0,this.numberOfColors);
