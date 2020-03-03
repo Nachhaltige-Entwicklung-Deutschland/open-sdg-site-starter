@@ -1037,7 +1037,7 @@ var indicatorDataStore = function(dataUrl) {
 
   //---
 
-  this.colorSet = "goalColors";
+  this.colorSet = null;
 
   var goalNumber = parseInt(this.indicatorId.slice(this.indicatorId.indexOf('_')+1,this.indicatorId.indexOf('-')));
   var goalColors = [['e5243b', '891523', 'ef7b89', '2d070b', 'f4a7b0', 'b71c2f', 'ea4f62', '5b0e17', 'fce9eb'],
@@ -1061,12 +1061,12 @@ var indicatorDataStore = function(dataUrl) {
   var colorSets = {'default':['7e984f', '8d73ca', 'aaa533', 'c65b8a', '4aac8d', 'c95f44'],
                   'sdgColors':['e5243b', 'DDA63A', '4c9f38', 'c5192d', 'ff3a21', '26bde2', 'fcc30b', 'a21942', 'fd6925', 'dd1367','FD9D24','BF8B2E','3F7E44','0A97D9','56C02B','00689D','19486A'],
                   'goalColors': goalColors[goalNumber-1],
-                  'customColors': []};
+                  'customColors': null};
 
-  this.numberOfColors = 9>colorSets[this.colorSet].length ? colorSets[this.colorSet].length : 9;
+  this.numberOfColors = null>colorSets[this.colorSet].length ? colorSets[this.colorSet].length : null;
 
   var colors = colorSets[this.colorSet].slice(0,this.numberOfColors);
-  console.log(this.colorSet, this.numberOfColors);
+  
 
    var headlinePointstyle = 'circle';
    var pointStyles = ['circle', 'triangle', 'cross', 'crossRot', 'dash', 'line', 'rect', 'rectRounded', 'rectRot', 'star', 'triangle'];
