@@ -213,9 +213,9 @@ var indicatorModel = function (options) {
                 ['19486a', '0a1c2a', '8ca3b4', '16377c', 'd1dae1', '11324a', '466c87', '5b73a3', '0f2656']];
 
   var colorSets = {'default':['7e984f', '8d73ca', 'aaa533', 'c65b8a', '4aac8d', 'c95f44'],
-                  'sdgColors':['e5243b', 'dda63a', '4c9f38', 'c5192d', 'ff3a21', '26bde2', 'fcc30b', 'a21942', 'fd6925', 'dd1367','fd9d24','bf8b2e','3f7e44','0a97d9','56c02b','00689d','19486a'],
-                  'goalColors': goalColors[goalNumber-1],
-                  'customColors': {{ site.graph_color_list | jsonify }}};
+                  'sdg':['e5243b', 'dda63a', '4c9f38', 'c5192d', 'ff3a21', '26bde2', 'fcc30b', 'a21942', 'fd6925', 'dd1367','fd9d24','bf8b2e','3f7e44','0a97d9','56c02b','00689d','19486a'],
+                  'goal': goalColors[goalNumber-1],
+                  'custom': {{ site.graph_color_list | jsonify }}};
 
   this.numberOfColors = {{ site.graph_color_number | jsonify }}>colorSets[this.colorSet].length ? colorSets[this.colorSet].length : {{ site.graph_color_number | jsonify }};
 
