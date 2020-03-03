@@ -845,7 +845,7 @@ var indicatorDataStore = function(dataUrl) {
     });
   };
 };var indicatorModel = function (options) {
-  console.log(options);
+
   Array.prototype.containsValue = function(val) {
     return this.indexOf(val) != -1;
   };
@@ -1066,7 +1066,9 @@ var indicatorDataStore = function(dataUrl) {
   // this.numberOfColors = null>colorSets[this.colorSet].length ? colorSets[this.colorSet].length : null;
   //
   // var colors = colorSets[this.colorSet].slice(0,this.numberOfColors);
-  var colorOps = opensdg.chartColors(this.indicatorId);
+  this.colorSet = null;
+  this.numberOfColors = null
+  this.colorOps = new chartColors(this.indicatorId, this.colorSet, this.numberOfColors);
   var colors = colorOps.colors;
   console.log("z", colors);
 
