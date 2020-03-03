@@ -1067,8 +1067,9 @@ var indicatorDataStore = function(dataUrl) {
   //
   // var colors = colorSets[this.colorSet].slice(0,this.numberOfColors);
   this.colorSet = null;
-  this.numberOfColors = null
-  this.colorOps = new chartColors(this.indicatorId, this.colorSet, this.numberOfColors);
+  this.numberOfColors = null;
+  this.customColorList = null
+  this.colorOps = new chartColors(this.indicatorId, this.colorSet, this.numberOfColors, this.customColorList);
   var colors = colorOps.colors;
   console.log("z", colors);
 
