@@ -1,4 +1,4 @@
-var cahrtColors = function (indicatorId){
+var chartColors = function (indicatorId){
   console.log("a, indicatorId", indicatorId);
 
   this.indicatorId = indicatorId;
@@ -35,4 +35,4 @@ var cahrtColors = function (indicatorId){
 
   console.log("c, colors", this.colors);
 
-}
+};
