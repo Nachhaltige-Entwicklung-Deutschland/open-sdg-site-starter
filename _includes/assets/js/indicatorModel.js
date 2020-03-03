@@ -191,7 +191,7 @@ var indicatorModel = function (options) {
 
   //---
 
-  this.colorSet = {{ site.colorset | jsonify }};
+  this.colorSet = {{ site.graph_color_set | jsonify }};
 
   var goalNumber = parseInt(this.indicatorId.slice(this.indicatorId.indexOf('_')+1,this.indicatorId.indexOf('-')));
   var goalColors = [['e5243b', '891523', 'ef7b89', '2d070b', 'f4a7b0', 'b71c2f', 'ea4f62', '5b0e17', 'fce9eb'],
@@ -215,9 +215,9 @@ var indicatorModel = function (options) {
   var colorSets = {'default':['7e984f', '8d73ca', 'aaa533', 'c65b8a', '4aac8d', 'c95f44'],
                   'sdgColors':['e5243b', 'dda63a', '4c9f38', 'c5192d', 'ff3a21', '26bde2', 'fcc30b', 'a21942', 'fd6925', 'dd1367','fd9d24','bf8b2e','3f7e44','0a97d9','56c02b','00689d','19486a'],
                   'goalColors': goalColors[goalNumber-1],
-                  'customColors': {{ site.customColorList | jsonify }}};
+                  'customColors': {{ site.graph_color_list | jsonify }}};
 
-  this.numberOfColors = {{ site.numberOfColors | jsonify }}>colorSets[this.colorSet].length ? colorSets[this.colorSet].length : {{ site.numberOfColors | jsonify }};
+  this.numberOfColors = {{ site.graph_color_number | jsonify }}>colorSets[this.colorSet].length ? colorSets[this.colorSet].length : {{ site.graph_color_number | jsonify }};
 
   var colors = colorSets[this.colorSet].slice(0,this.numberOfColors);
 
