@@ -1,5 +1,5 @@
 var indicatorModel = function (options) {
-  console.log(options);
+
   Array.prototype.containsValue = function(val) {
     return this.indexOf(val) != -1;
   };
@@ -220,7 +220,9 @@ var indicatorModel = function (options) {
   // this.numberOfColors = {{ site.numberOfColors | jsonify }}>colorSets[this.colorSet].length ? colorSets[this.colorSet].length : {{ site.numberOfColors | jsonify }};
   //
   // var colors = colorSets[this.colorSet].slice(0,this.numberOfColors);
-  var colorOps = opensdg.chartColors(this.indicatorId);
+  this.colorSet = {{ site.colorset | jsonify }};
+  this.numberOfColors = {{ site.numberOfColors | jsonify }}
+  this.colorOps = new chartColors(this.indicatorId, this.colorSet, this.numberOfColors);
   var colors = colorOps.colors;
   console.log("z", colors);
 
