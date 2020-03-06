@@ -999,6 +999,10 @@ var indicatorDataStore = function(dataUrl) {
       if(item.Value != 0) {
         // For rounding, use a function that can be set on the global opensdg
         // object, for easier control: opensdg.dataRounding()
+        if (typeof opensdg.chartColors === 'function') {
+          console.log("Color: true");
+        }
+        
         if (typeof opensdg.dataRounding === 'function') {
           console.log("true");
           item.Value = opensdg.dataRounding(item.Value);
