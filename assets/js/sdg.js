@@ -1038,7 +1038,7 @@ var indicatorDataStore = function(dataUrl) {
 
   //---
 
-  // this.colorSet = "custom";
+  // this.colorSet = "goal";
   //
   //
   // var goalNumber = parseInt(this.indicatorId.slice(this.indicatorId.indexOf('_')+1,this.indicatorId.indexOf('-')));
@@ -1066,14 +1066,14 @@ var indicatorDataStore = function(dataUrl) {
   //                 'goal': goalColors[goalNumber-1],
   //                 'custom': null};
   //
-  // this.numberOfColors = 9>colorSets[this.colorSet].length ? colorSets[this.colorSet].length : 9;
+  // this.numberOfColors = null>colorSets[this.colorSet].length ? colorSets[this.colorSet].length : null;
   //
   // var colors = colorSets[this.colorSet].slice(0,this.numberOfColors);
 
 
 
-  this.colorSet = "custom";
-  this.numberOfColors = 9;
+  this.colorSet = "goal";
+  this.numberOfColors = null;
   this.customColors = null;
   var colors = opensdg.chartColors(this.indicatorId, this.colorSet, this.numberOfColors, this.customColors);
 
