@@ -2,8 +2,8 @@ opensdg.chartColors = function(indicatorId, colorSet, numberOfColors, customColo
 
   console.log("a, indicatorId", indicatorId);
 
-  this.indicatorId = indicatorId;
-  this.colorSet = colorSet;
+  //this.indicatorId = indicatorId;
+  //this.colorSet = colorSet;
 
   this.goalNumber = parseInt(indicatorId.slice(indicatorId.indexOf('_')+1,indicatorId.indexOf('-')));
   console.log("b, goalNumber", this.goalNumber);
@@ -31,8 +31,8 @@ opensdg.chartColors = function(indicatorId, colorSet, numberOfColors, customColo
                   'goalColors': this.goalColors[this.goalNumber-1],
                   'customColors': customColorList};
 
-  this.numberOfColors = numberOfColors>colorSets[this.colorSet].length ? colorSets[this.colorSet].length : numberOfColors;
-  this.colors = colorSets[this.colorSet].slice(0,this.numberOfColors);
+  this.numberOfColors = numberOfColors>this.colorSets[colorSet].length ? this.colorSets[colorSet].length : numberOfColors;
+  this.colors = colorSets[colorSet].slice(0,this.numberOfColors);
 
   console.log("c, colors", this.colors);
   return this.colors;
