@@ -171,7 +171,7 @@
         <ul class="nav nav-tabs" role="tablist">
 
 
-          <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
+          <!--#22 additionalDataAsEmbedded---start-------------------------->
           {% if meta.additional_information %}
             <li role="presentation" class="nav-item active">
               <a class="nav-link" data-toggle="tab" href="#additional_information" aria-controls="additional_information" role="tab" {% include autotrack.html preset="tab_meta_additional_information" category="Tab change" action="Change metadata view" label="Change to additional_information tab" %}>{{ t.indicator.add_info }}</a>
@@ -181,7 +181,7 @@
             <li role="presentation" class="nav-item active">
           {% endif %}
           <!--<li role="presentation" class="nav-item active">-->
-          <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
+          <!--#22 additionalDataAsEmbedded---stop--------------------------->
 
 
 
@@ -211,8 +211,8 @@
 
         <!-- Tab panes -->
         <div class="tab-content">
+          <!--#22 additionalDataAsEmbedded---start-------------------------->
           {% if meta.additional_information %}
-            <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
             <div role="tabpanel" class="tab-pane active" id="additional_information">
               <div>
                 <article>
@@ -227,7 +227,7 @@
             <div role="tabpanel" class="tab-pane active" id="metadata">
           {% endif %}
           <!--<div role="tabpanel" class="tab-pane active" id="metadata">-->
-            <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
+          <!--#22 additionalDataAsEmbedded---stop--------------------------->
 
 
 
