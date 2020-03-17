@@ -139,8 +139,8 @@ remote_theme: open-sdg/open-sdg@0.9.1
 custom_css:
   - /assets/css/custom.css
 
-custom_js:
-  - /includes/assets/js/chartColors.js
+#custom_js:
+#  - /includes/assets/js/chartColors.js
 
 create_goals:
   layout: goal-by-target
