@@ -233,7 +233,7 @@ var indicatorModel = function (options) {
     var colors = opensdg.chartColors(this.indicatorId, this.colorSet, this.numberOfColors, this.customColors);
   }
   else{
-    var colors = ['19486a', '0a1c2a', '8ca3b4', '16377c', 'd1dae1', '11324a', '466c87', '5b73a3', '0f2656'];
+    var colors = ['7e984f', '8d73ca', 'aaa533', 'c65b8a', '4aac8d', 'c95f44'];
   }
 
    var headlinePointstyle = 'circle';
