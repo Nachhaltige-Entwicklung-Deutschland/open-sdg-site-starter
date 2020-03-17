@@ -140,7 +140,7 @@ custom_css:
   - /assets/css/custom.css
 
 custom_js:
-  - /assets/js/custom.js
+  - _includes/assets/js/chartColors.js
 
 create_goals:
   layout: goal-by-target
@@ -153,13 +153,13 @@ create_indicators:
 # - 'sdg' to use the 17 SDG colors in all charts
 # - 'goal' to use shades of the color of the indicator`s goal
 # - 'custom' to use a set of customised colors. In this case, write the hex-codes of the colors you want to use to the list in 'graph_color_list'. E.g. ['330b06','ca541d',...]
-graph_color_set: 'goal'
+graph_color_set: 'sdg'
 graph_color_list:
 # choose the number of different colors you want to use in the charts
 # - for 'default' the maximal number of colors is 6
 # - for 'sdg' the maximal number of colors is 17
 # - for 'goal' the maximal number of colors is 9
-graph_color_number: 
+graph_color_number:
 
 
 # Mapping
