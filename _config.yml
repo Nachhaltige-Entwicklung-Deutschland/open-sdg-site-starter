@@ -140,7 +140,7 @@ custom_css:
   - /assets/css/custom.css
 
 custom_js:
-  - /_includes/assets/js/chartColors.js
+  - /assets/js/chartColors.js
 
 create_goals:
   layout: goal-by-target
