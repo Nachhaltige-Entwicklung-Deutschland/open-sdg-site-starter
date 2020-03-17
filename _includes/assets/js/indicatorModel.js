@@ -225,12 +225,16 @@ var indicatorModel = function (options) {
   // var colors = colorSets[this.colorSet].slice(0,this.numberOfColors);
 
 
+  if (opensdg.chartColors){
 
-  this.colorSet = {{ site.graph_color_set | jsonify }};
-  this.numberOfColors = {{ site.graph_color_number | jsonify }};
-  this.customColors = {{ site.graph_color_list | jsonify }};
-  var colors = opensdg.chartColors(this.indicatorId, this.colorSet, this.numberOfColors, this.customColors);
-
+    this.colorSet = {{ site.graph_color_set | jsonify }};
+    this.numberOfColors = {{ site.graph_color_number | jsonify }};
+    this.customColors = {{ site.graph_color_list | jsonify }};
+    var colors = opensdg.chartColors(this.indicatorId, this.colorSet, this.numberOfColors, this.customColors);
+  }
+  else{
+    var colors = ['19486a', '0a1c2a', '8ca3b4', '16377c', 'd1dae1', '11324a', '466c87', '5b73a3', '0f2656'];
+  }
 
    var headlinePointstyle = 'circle';
    var pointStyles = ['circle', 'triangle', 'cross', 'crossRot', 'dash', 'line', 'rect', 'rectRounded', 'rectRot', 'star', 'triangle'];
