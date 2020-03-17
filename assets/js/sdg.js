@@ -1038,7 +1038,7 @@ var indicatorDataStore = function(dataUrl) {
 
   //---
 
-  // this.colorSet = "goal";
+  // this.colorSet = "sdg";
   //
   //
   // var goalNumber = parseInt(this.indicatorId.slice(this.indicatorId.indexOf('_')+1,this.indicatorId.indexOf('-')));
@@ -1073,7 +1073,7 @@ var indicatorDataStore = function(dataUrl) {
 
   if (opensdg.chartColors){
 
-    this.colorSet = "goal";
+    this.colorSet = "sdg";
     this.numberOfColors = null;
     this.customColors = null;
     var colors = opensdg.chartColors(this.indicatorId, this.colorSet, this.numberOfColors, this.customColors);
