@@ -139,7 +139,7 @@ remote_theme: open-sdg/open-sdg@0.9.1
 custom_css:
   - /assets/css/custom.css
 
-#custom_js:
+custom_js:
   - /assets/js/chartColors.js
 
 create_goals:
