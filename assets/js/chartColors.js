@@ -1,10 +1,11 @@
 opensdg.chartColors = function(indicatorId) {
 
-  var colorSet = {{ site.graph_color_set | jsonify }};
-  var numberOfColors = {{ site.graph_color_number | jsonify }};
-  var customColors = {{ site.graph_color_list | jsonify }};
+  var colorSet = {{ site.graph_color_set | jsonify }},
+    numberOfColors = {{ site.graph_color_number | jsonify }},
+    customColorList = {{ site.graph_color_list | jsonify }};
 
-  this.goalNumber = parseInt(indicatorId.slice(indicatorId.indexOf('_')+1,indicatorId.indexOf('-')));
+
+  var goalNumber = parseInt(indicatorId.slice(indicatorId.indexOf('_')+1,indicatorId.indexOf('-')));
 
   console.log("log", this.colorSet, this.numberOfColors, this.customColors, this.goalNumber)
 
