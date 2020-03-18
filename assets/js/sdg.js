@@ -1076,12 +1076,11 @@ var indicatorDataStore = function(dataUrl) {
     this.colorSet = "goal";
     this.numberOfColors = null;
     this.customColors = null;
-    var colors = opensdg.chartColors(this.shortIndicatorId, this.colorSet, this.numberOfColors, this.customColors)[0];
+    var colors = opensdg.chartColors(this.shortIndicatorId, this.colorSet, this.numberOfColors, this.customColors);
   }
   else{
     var colors = ['7e984f', '8d73ca', 'aaa533', 'c65b8a', '4aac8d', 'c95f44'];
   }
-  console.log(opensdg.chartColors(this.shortIndicatorId, this.colorSet, this.numberOfColors, this.customColors)[1])
 
    var headlinePointstyle = 'circle';
    var pointStyles = ['circle', 'triangle', 'cross', 'crossRot', 'dash', 'line', 'rect', 'rectRounded', 'rectRot', 'star', 'triangle'];
