@@ -1038,7 +1038,7 @@ var indicatorDataStore = function(dataUrl) {
 
   //---
 
-  // this.colorSet = null;
+  // this.colorSet = "goal";
   //
   //
   // var goalNumber = parseInt(this.indicatorId.slice(this.indicatorId.indexOf('_')+1,this.indicatorId.indexOf('-')));
@@ -1073,10 +1073,8 @@ var indicatorDataStore = function(dataUrl) {
 
   if (opensdg.chartColors){
 
-    this.colorSet = null;
-    this.numberOfColors = null;
-    this.customColors = null;
-    var colors = opensdg.chartColors(this.indicatorId, this.colorSet, this.numberOfColors, this.customColors);
+    
+    var colors = opensdg.chartColors(this.shortIndicatorId, this.colorSet, this.numberOfColors, this.customColors);
   }
   else{
     var colors = ['7e984f', '8d73ca', 'aaa533', 'c65b8a', '4aac8d', 'c95f44'];
