@@ -1,6 +1,4 @@
 opensdg.chartColors = function(indicatorId, colorSet, numberOfColors, customColorList) {
-  this.test = {{ site.graph_color_set | jsonify }};
-
 
   this.goalNumber = parseInt(indicatorId.slice(indicatorId.indexOf('_')+1,indicatorId.indexOf('-')));
 
@@ -34,6 +32,6 @@ opensdg.chartColors = function(indicatorId, colorSet, numberOfColors, customColo
   this.numberOfColors = (numberOfColors>this.colorSets[colorSet].length || numberOfColors == null) ? this.colorSets[colorSet].length : numberOfColors;
   this.colors = this.colorSets[colorSet].slice(0,this.numberOfColors);
 
-  return this.colors, this.test;
+  return this.colors;
 
 };
