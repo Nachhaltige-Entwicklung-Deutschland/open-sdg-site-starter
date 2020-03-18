@@ -227,10 +227,8 @@ var indicatorModel = function (options) {
 
   if (opensdg.chartColors){
 
-    this.colorSet = {{ site.graph_color_set | jsonify }};
-    this.numberOfColors = {{ site.graph_color_number | jsonify }};
-    this.customColors = {{ site.graph_color_list | jsonify }};
-    var colors = opensdg.chartColors(this.indicatorId, this.colorSet, this.numberOfColors, this.customColors);
+    
+    var colors = opensdg.chartColors(this.shortIndicatorId, this.colorSet, this.numberOfColors, this.customColors);
   }
   else{
     var colors = ['7e984f', '8d73ca', 'aaa533', 'c65b8a', '4aac8d', 'c95f44'];
