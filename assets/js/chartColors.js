@@ -1,15 +1,9 @@
-opensdg.chartColors = function(indicatorId) {
+opensdg.chartColors = function(indicatorId, colorSet, numberOfColors, customColorList) {
 
-  var colorSet = {{ site.graph_color_set | jsonify }},
-    numberOfColors = {{ site.graph_color_number | jsonify }},
-    customColorList = {{ site.graph_color_list | jsonify }};
+  
+  this.goalNumber = parseInt(indicatorId.slice(indicatorId.indexOf('_')+1,indicatorId.indexOf('-')));
 
-
-  var goalNumber = parseInt(indicatorId.slice(indicatorId.indexOf('_')+1,indicatorId.indexOf('-')));
-
-  console.log("log", colorSet, numberOfColors, customColors, goalNumber);
-
-  var goalColors = [['e5243b', '891523', 'ef7b89', '2d070b', 'f4a7b0', 'b71c2f', 'ea4f62', '5b0e17', 'fce9eb'],
+  this.goalColors = [['e5243b', '891523', 'ef7b89', '2d070b', 'f4a7b0', 'b71c2f', 'ea4f62', '5b0e17', 'fce9eb'],
                 ['e5b735', '896d1f', 'efd385', '2d240a', 'f4e2ae', 'b7922a', 'eac55d', '5b4915', 'f9f0d6'],
                 ['4c9f38', '2d5f21', '93c587', '0f1f0b', 'c9e2c3', '3c7f2c', '6fb25f', '1e3f16', 'a7d899'],
                 ['c5192d', '760f1b', 'dc7581', '270509', 'f3d1d5', '9d1424', 'd04656', '4e0a12', 'e7a3ab'],
@@ -27,18 +21,18 @@ opensdg.chartColors = function(indicatorId) {
                 ['00689d', '00293e', '99c2d7', '00486d', '4c95ba', '126b80', 'cce0eb', '5a9fb0', 'a1c8d2'],
                 ['19486a', '0a1c2a', '8ca3b4', '16377c', 'd1dae1', '11324a', '466c87', '5b73a3', '0f2656']];
 
-  var colorSets = {'default':['7e984f', '8d73ca', 'aaa533', 'c65b8a', '4aac8d', 'c95f44'],
+  this.colorSets = {'default':['7e984f', '8d73ca', 'aaa533', 'c65b8a', '4aac8d', 'c95f44'],
                   'sdg':['e5243b', 'dda63a', '4c9f38', 'c5192d', 'ff3a21', '26bde2', 'fcc30b', 'a21942', 'fd6925', 'dd1367','fd9d24','bf8b2e','3f7e44','0a97d9','56c02b','00689d','19486a'],
-                  'goal': goalColors[goalNumber-1],
-                  'custom': customColors};
+                  'goal': this.goalColors[this.goalNumber-1],
+                  'custom': customColorList};
 
-  if(Object.keys(colorSets).indexOf(colorSet) == -1 || (colorSet=='custom' && customColorList == null)){
-    return colorSets['default'];
+  if(Object.keys(this.colorSets).indexOf(colorSet) == -1 || (colorSet=='custom' && customColorList == null)){
+    return this.colorSets['default'];
   }
 
-  var listLength = (numberOfColors>colorSets[colorSet].length || numberOfColors == null) ? colorSets[colorSet].length : numberOfColors;
-  var colors = colorSets[colorSet].slice(0,listLength);
+  this.numberOfColors = (numberOfColors>this.colorSets[colorSet].length || numberOfColors == null) ? this.colorSets[colorSet].length : numberOfColors;
+  this.colors = this.colorSets[colorSet].slice(0,this.numberOfColors);
 
-  return colors;
+  return this.colors;
 
 };

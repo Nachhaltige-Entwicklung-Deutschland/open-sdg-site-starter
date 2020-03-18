@@ -1073,7 +1073,9 @@ var indicatorDataStore = function(dataUrl) {
 
   if (opensdg.chartColors){
 
-    
+    this.colorSet = "goal";
+    this.numberOfColors = null;
+    this.customColors = null;
     var colors = opensdg.chartColors(this.shortIndicatorId, this.colorSet, this.numberOfColors, this.customColors);
   }
   else{
