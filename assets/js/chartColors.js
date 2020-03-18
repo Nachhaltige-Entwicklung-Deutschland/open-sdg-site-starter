@@ -2,8 +2,8 @@ opensdg.chartColors = function(indicatorId) {
 
   this.colorSet = site.graph_color_set;
   console.log("a",this.colorSet);
-  this.numberOfColors = {{ site.graph_color_number | jsonify }};
-  this.customColors = {{ site.graph_color_list | jsonify }};
+  this.numberOfColors = site.graph_color_number;
+  this.customColors =site.graph_color_list;
 
   this.goalNumber = parseInt(indicatorId.slice(indicatorId.indexOf('_')+1,indicatorId.indexOf('-')));
 
