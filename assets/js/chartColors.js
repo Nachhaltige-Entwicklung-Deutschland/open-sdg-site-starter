@@ -1,12 +1,13 @@
 opensdg.chartColors = function(indicatorId) {
 
-  this.colorSet = {{ site.graph_color_set | jsonify }};
+  this.colorSet = site.graph_color_set;
+  console.log("a",this.colorSet);
   this.numberOfColors = {{ site.graph_color_number | jsonify }};
   this.customColors = {{ site.graph_color_list | jsonify }};
 
   this.goalNumber = parseInt(indicatorId.slice(indicatorId.indexOf('_')+1,indicatorId.indexOf('-')));
 
-  console.log("log", this.colorSet, this.numberOfColors, this.customColors, this.goalNumber)
+  console.log("log", this.colorSet, this.numberOfColors, this.customColors, this.goalNumber);
 
   this.goalColors = [['e5243b', '891523', 'ef7b89', '2d070b', 'f4a7b0', 'b71c2f', 'ea4f62', '5b0e17', 'fce9eb'],
                 ['e5b735', '896d1f', 'efd385', '2d240a', 'f4e2ae', 'b7922a', 'eac55d', '5b4915', 'f9f0d6'],
