@@ -484,7 +484,9 @@ var indicatorModel = function (options) {
           return '#ffffff';
         }
         else{
-          return '#' + getColor(datasetIndexMod);
+          var color = '#' + getColor(datasetIndex);
+          return datasetIndex > colors.length ? pattern.draw('diagonal', color) : color;
+          //return '#' + getColor(datasetIndexMod);
         }
       },
       //---#22 xxx---stop--------------------------------------------------------------------------------------------------
