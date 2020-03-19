@@ -140,7 +140,7 @@ custom_css:
   - /assets/css/custom.css
 
 custom_js:
-  - /assets/js/custom.js
+  - /assets/js/chartColors.js
 
 create_goals:
   layout: goal-by-target
@@ -159,7 +159,7 @@ graph_color_list:
 # - for 'default' the maximal number of colors is 6
 # - for 'sdg' the maximal number of colors is 17
 # - for 'goal' the maximal number of colors is 9
-graph_color_number: 
+graph_color_number:
 
 
 # Mapping

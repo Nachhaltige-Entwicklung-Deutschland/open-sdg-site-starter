@@ -225,12 +225,16 @@ var indicatorModel = function (options) {
   // var colors = colorSets[this.colorSet].slice(0,this.numberOfColors);
 
 
+  if (opensdg.chartColors){
 
-  this.colorSet = {{ site.graph_color_set | jsonify }};
-  this.numberOfColors = {{ site.graph_color_number | jsonify }};
-  this.customColors = {{ site.graph_color_list | jsonify }};
-  var colors = opensdg.chartColors(this.indicatorId, this.colorSet, this.numberOfColors, this.customColors);
-
+    this.colorSet = {{ site.graph_color_set | jsonify }};
+    this.numberOfColors = {{ site.graph_color_number | jsonify }};
+    this.customColors = {{ site.graph_color_list | jsonify }};
+    var colors = opensdg.chartColors(this.shortIndicatorId, this.colorSet, this.numberOfColors, this.customColors);
+  }
+  else{
+    var colors = ['7e984f', '8d73ca', 'aaa533', 'c65b8a', '4aac8d', 'c95f44'];
+  }
 
    var headlinePointstyle = 'circle';
    var pointStyles = ['circle', 'triangle', 'cross', 'crossRot', 'dash', 'line', 'rect', 'rectRounded', 'rectRot', 'star', 'triangle'];
@@ -480,7 +484,9 @@ var indicatorModel = function (options) {
           return '#ffffff';
         }
         else{
-          return '#' + getColor(datasetIndexMod);
+          var color = '#' + getColor(datasetIndex);
+          return datasetIndex >= colors.length ? pattern.draw('line', color) : color;
+          //return '#' + getColor(datasetIndexMod);
         }
       },
       //---#22 xxx---stop--------------------------------------------------------------------------------------------------
