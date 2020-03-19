@@ -485,7 +485,7 @@ var indicatorModel = function (options) {
         }
         else{
           var color = '#' + getColor(datasetIndex);
-          return datasetIndex >= colors.length ? pattern.draw('horizontal', color) : color;
+          return datasetIndex >= colors.length ? pattern.draw('line', color) : color;
           //return '#' + getColor(datasetIndexMod);
         }
       },
