@@ -276,6 +276,9 @@ header {
 //---#8 addNavigationButtons---start--------------------------------------
 .btn-label {
   color: green;
+  &.contrast-high{
+    color: red;
+  }
 }
 .G1-background {
   background-color: #E5243B;
