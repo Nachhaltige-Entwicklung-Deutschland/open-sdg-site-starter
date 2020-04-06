@@ -199,6 +199,8 @@ header {
   background-color: #E5243B;
   border-color: transparent;
   margin-bottom: 5px; }
+  .G1-background .contrast-high {
+    color: black; }
 
 .G1-background:hover {
   background-color: #B71D2F;
