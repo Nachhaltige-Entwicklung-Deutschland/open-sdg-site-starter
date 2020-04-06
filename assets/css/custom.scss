@@ -280,8 +280,7 @@ header {
 .G1-background {
   background-color: #E5243B;
   border-color: transparent;
-  margin-bottom: 5px;
-  color: orange;}
+  margin-bottom: 5px}
 .G1-background:hover {
   background-color: #B71D2F;
   border-color: transparent;
@@ -517,18 +516,6 @@ header {
   }
   .btn-label {
     color: black;
-  }
-  .goal-indicators{
-    color: pink;
-    &.goal_1{
-      color: gray;
-    }
-  }
-  .goal-1{
-    color: pink;
-  }
-  .goal-by-target{
-    color: brown;
   }
 }
 
