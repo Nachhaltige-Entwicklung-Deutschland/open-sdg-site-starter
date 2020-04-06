@@ -274,7 +274,9 @@ header {
 
 
 //---#8 addNavigationButtons---start--------------------------------------
-
+.btn-label {
+  color: white;
+}
 .G1-background {
   background-color: #E5243B;
   border-color: transparent;
@@ -512,6 +514,9 @@ header {
         color: black;
       }
     }
+  }
+  .btn-label {
+    color: black;
   }
   .G1-background{
     color: black;
