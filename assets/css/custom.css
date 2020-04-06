@@ -197,6 +197,8 @@ header {
 
 .btn-label {
   color: green; }
+  .btn-label.contrast-high {
+    color: red; }
 
 .G1-background {
   background-color: #E5243B;
