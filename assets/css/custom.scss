@@ -520,7 +520,16 @@ header {
   }
   .goal-indicators{
     color: pink;
+    &.goal_1{
+      color: gray;
     }
+  }
+  .goal-1{
+    color: pink;
+  }
+  .goal-by-target{
+    color: brown;
+  }
 }
 
 
