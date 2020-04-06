@@ -196,9 +196,7 @@ header {
   opacity: 1; }
 
 .btn-label {
-  color: green; }
-  .btn-label.contrast-high {
-    color: red; }
+  color: white; }
 
 .G1-background {
   background-color: #E5243B;
