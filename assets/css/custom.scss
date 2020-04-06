@@ -518,8 +518,10 @@ header {
   .btn-label {
     color: black;
   }
-  .G1-background{
-    color: black;
+  .goal-1{
+    &.goal-indicators{
+      color: pink;
+    }
   }
 }
 
