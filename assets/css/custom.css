@@ -195,6 +195,9 @@ header {
   visibility: visible;
   opacity: 1; }
 
+.btn-label {
+  color: white; }
+
 .G1-background {
   background-color: #E5243B;
   border-color: transparent;
@@ -437,6 +440,8 @@ header {
   color: black; }
   .contrast-high .status-toggle-mobile .status-options a:hover, .contrast-high ul.navbar-nav .status-options a:hover {
     color: black; }
+.contrast-high .btn-label {
+  color: black; }
 .contrast-high .G1-background {
   color: black; }
 
