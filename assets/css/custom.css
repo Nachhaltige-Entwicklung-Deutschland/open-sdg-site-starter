@@ -201,8 +201,7 @@ header {
 .G1-background {
   background-color: #E5243B;
   border-color: transparent;
-  margin-bottom: 5px;
-  color: orange; }
+  margin-bottom: 5px; }
 
 .G1-background:hover {
   background-color: #B71D2F;
@@ -442,14 +441,6 @@ header {
     color: black; }
 .contrast-high .btn-label {
   color: black; }
-.contrast-high .goal-indicators {
-  color: pink; }
-  .contrast-high .goal-indicators.goal_1 {
-    color: gray; }
-.contrast-high .goal-1 {
-  color: pink; }
-.contrast-high .goal-by-target {
-  color: brown; }
 
 .link_btn {
   padding-top: 0px;
