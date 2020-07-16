@@ -14,9 +14,9 @@
 baseurl: ""
 environment: production
 # Replace my-github-org and open-sdg-data-starter as needed.
-#remotedatabaseurl: "https://sustainabledevelopment-deutschland.github.io/sdg-data-pub"
+remotedatabaseurl: "https://sustainabledevelopment-deutschland.github.io/sdg-data-pub"
 #remotedatabaseurl: "http://dns-indikatoren.de/sdg-data-pub/"
-remotedatabaseurl: "https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-data-starter"
+#remotedatabaseurl: "https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-data-starter"
 
 jekyll_get_json:
   - data: meta
