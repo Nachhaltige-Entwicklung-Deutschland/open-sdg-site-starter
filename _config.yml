@@ -87,6 +87,7 @@ collections:
   goals:
     output: true
 
+
 # Menu
 menu:
   # Use these to customise the main navigation.
