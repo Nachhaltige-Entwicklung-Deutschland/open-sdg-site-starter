@@ -36,7 +36,6 @@ jekyll_get_json:
     #json: 'https://open-sdg.github.io/sdg-translations/translations-0.5.2.json'
     json: 'https://JustusCas.github.io/sdg-translations/translations.json'
 
-
 analytics:
   ga_prod: ''
 
