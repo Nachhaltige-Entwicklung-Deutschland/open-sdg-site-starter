@@ -19,7 +19,7 @@ In den meisten Fällen soll ein Indikator einen konkreten absoluten oder relativ
 
 <img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/Blitz.png" alt="Blitz" /> &nbsp; Der Indikator entwickelt sich nicht in die gewünschte Richtung und somit vergrößert sich der Abstand zum Ziel.
 
-LIn Ausnahmefällen, wenn für die oben genannte Berechnung nicht genügend Daten vorliegen, werden mindestens die letzten vier zusammenhängenden Zeitpunkte, zu denen Daten existieren, für die Berechnung der durchschnittlichen Veränderung herangezogen. Stehen weniger als vier verwendbare Jahreswerte zur Verfügung, wird von einer Berechnung abgesehen.
+In Ausnahmefällen, wenn für die oben genannte Berechnung nicht genügend Daten vorliegen, werden mindestens die letzten vier zusammenhängenden Zeitpunkte, zu denen Daten existieren, für die Berechnung der durchschnittlichen Veränderung herangezogen. Stehen weniger als vier verwendbare Jahreswerte zur Verfügung, wird von einer Berechnung abgesehen.
 
 <b>Indikatoren mit Zielintervallen</b>
 
