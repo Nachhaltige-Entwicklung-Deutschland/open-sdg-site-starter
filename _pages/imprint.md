@@ -98,12 +98,12 @@ Unser Online-Angebot enthält Links zu Webseiten anderer Anbieter. Wir haben kei
 
 Sie haben nach der Datenschutz-Grundverordnung hinsichtlich der Sie betreffenden personenbezogenen Daten gegenüber uns bei Vorliegen der Voraussetzungen die folgenden Rechte auf:
 
-•	Auskunft nach Artikel 15 DS-GVO
-•	Berichtigung nach Artikel 16 DS-GVO
-•	Löschung nach Artikel 17 DS-GVO
-•	Einschränkung der Verarbeitung nach Artikel 18 DS-GVO
-•	Widerspruch gegen die Verarbeitung nach Artikel 21 DS-GVO
-•	Datenübertragbarkeit nach Artikel 20 DS-GVO.
+-	Auskunft nach Artikel 15 DS-GVO
+-	Berichtigung nach Artikel 16 DS-GVO
+-	Löschung nach Artikel 17 DS-GVO
+-	Einschränkung der Verarbeitung nach Artikel 18 DS-GVO
+-	Widerspruch gegen die Verarbeitung nach Artikel 21 DS-GVO
+-	Datenübertragbarkeit nach Artikel 20 DS-GVO.
 
 Liegt aus Ihrer Sicht ein Verstoß gegen die datenschutzrechtlichen Bestimmungen vor, haben Sie zudem das Recht, sich bei der Datenschutzaufsichtsbehörde - Der Bundesbeauftragte für den Datenschutz und die Informationsfreiheit -  Graurheindorfer Straße 153 - 53117 Bonn - über die Verarbeitung Ihrer personenbezogenen Daten durch uns zu beschweren (Artikel 77 DS-GVO).
 
