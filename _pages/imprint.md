@@ -25,10 +25,10 @@ Postfach 17 03 77<br>
 53029 Bonn
 <br><br>
 Telefon:	+49 (0)611 75-8855<br>
-E-Mail:	[dns-indicators@destatis.de](mailto:dns-indicators@destatis.de)
+E-Mail:	[dns-indikatoren@destatis.de](mailto:dns-indikatoren@destatis.de)
 <br><br>
 <b>Redaktion</b>:<br>
-E-Mail:	[dns-indicators@destatis.de](mailto:dns-indicators@destatis.de)
+E-Mail:	[dns-indikatoren@destatis.de](mailto:dns-indikatoren@destatis.de)
 <br><br>
 <b>Inhalte/Produktion</b>:<br>
 Statistisches Bundesamt (Destatis)
@@ -39,7 +39,7 @@ Statistisches Bundesamt (Destatis)
 
 ## Haftungsausschluss
 
-Die Inhalte dieser Website werden mit größtmöglicher Sorgfalt recherchiert und implementiert. Fehler im Bearbeitungsvorgang sind dennoch nicht auszuschließen. Hinweise und Korrekturen senden Sie bitte an unsere E-Mail-Adresse: [dns-indicators@destatis.de](mailto:dns-indicators@destatis.de).
+Die Inhalte dieser Website werden mit größtmöglicher Sorgfalt recherchiert und implementiert. Fehler im Bearbeitungsvorgang sind dennoch nicht auszuschließen. Hinweise und Korrekturen senden Sie bitte an unsere E-Mail-Adresse: [dns-indikatoren@destatis.de](mailto:dns-indikatoren@destatis.de).
 
 Eine Haftung für die Richtigkeit, Vollständigkeit und Aktualität dieser Webseiten kann trotz sorgfältiger Prüfung nicht übernommen werden. Das Statistische Bundesamt übernimmt insbesondere keinerlei Haftung für eventuelle Schäden oder Konsequenzen, die durch die direkte oder indirekte Nutzung der angebotenen Inhalte entstehen.
 
