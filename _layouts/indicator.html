@@ -19,6 +19,14 @@
 {% endif %}
 
 
+
+{% assign dialogDisplay = meta.indicator_display %}
+{% if dialogDisplay == "5.1.b" %}
+  {% assign dialogDisplay = "5.1.b, c" %}
+{% elsif dialogDisplay == "5.1.c" %}
+  {% assign dialogDisplay = "5.1.e" %}
+{% endif %}
+
 <div class="heading indicator goal-{{ goal_number }}">
   <div class="container">
     <div class="row">
@@ -44,7 +52,7 @@
 <div id="main-content" class="container goal-{{ goal_number }}">
 
   <h2 style="margin-top:10px; margin-left: 16px;">
-    <a href="https://dialogfassungdns.github.io/open-sdg-site-starter/{{ dialogLink }}" style="color: black">  <small>{{ t.general.dialog_target_link_1 }} {{ goal_number}} {{ t.general.dialog_target_link_2}} </small></a>
+    <a href="https://dialogfassungdns.github.io/open-sdg-site-starter/{{ dialogLink }}" style="color: black">  <small>{{ t.general.dialog_indikator_1 }} {{ dialogDisplay }} {{ t.general.dialog_indikator_2}} </small></a>
   </h2>
 
   {% include components/breadcrumb.html %}
