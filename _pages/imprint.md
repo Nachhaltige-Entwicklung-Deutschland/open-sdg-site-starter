@@ -41,7 +41,7 @@ Statistisches Bundesamt (Destatis)
 
 Die Inhalte dieser Website werden mit größtmöglicher Sorgfalt recherchiert und implementiert. Fehler im Bearbeitungsvorgang sind dennoch nicht auszuschließen. Hinweise und Korrekturen senden Sie bitte an unsere E-Mail-Adresse: [dns-indikatoren@destatis.de](mailto:dns-indikatoren@destatis.de).
 
-Eine Haftung für die Richtigkeit, Vollständigkeit und Aktualität dieser Webseite kann trotz sorgfältiger Prüfung nicht übernommen werden. Das Statistische Bundesamt übernimmt insbesondere keinerlei Haftung für eventuelle Schäden oder Konsequenzen, die durch die direkte oder indirekte Nutzung der angebotenen Inhalte entstehen.
+Eine Haftung für die Richtigkeit, Vollständigkeit und Aktualität dieser Website kann trotz sorgfältiger Prüfung nicht übernommen werden. Das Statistische Bundesamt übernimmt insbesondere keinerlei Haftung für eventuelle Schäden oder Konsequenzen, die durch die direkte oder indirekte Nutzung der angebotenen Inhalte entstehen.
 
 Neben den eigenen Inhalten bietet das Statistische Bundesamt Querverweise („externe Links“) auf die von anderen Anbietern bereitgehaltenen Inhalte. Die fremden Inhalte stammen weder vom Statistischen Bundesamt noch hat das Statistische Bundesamt die Möglichkeit, den Inhalt von Seiten Dritter zu beeinflussen. Die Inhalte fremder Seiten, auf die das Statistische Bundesamt mittels Links hinweist, spiegeln nicht die Meinung des Statistischen Bundesamts wider, sondern dienen lediglich der Information und der Darstellung von Zusammenhängen. Das Statistische Bundesamt haftet nicht für fremde Inhalte, auf die es lediglich im oben genannten Sinne hinweist. Die Verantwortlichkeit liegt alleine bei dem Anbieter der Inhalte. Bei Nutzungsausfällen der Website wegen technischer oder organisatorischer Störungen bestehen keinerlei Ansprüche - gleich welcher Art - gegen das Statistische Bundesamt.
 
@@ -67,7 +67,7 @@ Ihre Daten werden dadurch erhoben, dass Sie uns diese, z. B. in einer E-Mail, mi
 
 ## Einsatz von Cookies
 
-Auf diesen Seiten kommen Cookies zum Einsatz. Diese sind zur optimalen Bereitstellung unseres Internetangebots technisch erforderlich. Der Einsatz dieser Cookies erfolgt auf der Grundlage des Art. 6 Absatz 1 lit. e-DSGVO in Verbindung mit § 3 Bundesdatenschutzgesetz (BDSG).
+Auf diesen Seiten kommen Cookies zum Einsatz. Diese sind zur optimalen Bereitstellung unseres Internetangebots technisch erforderlich. Der Einsatz dieser Cookies erfolgt auf der Grundlage des Art. 6 Absatz 1 lit. e DS-GVO in Verbindung mit § 3 Bundesdatenschutzgesetz (BDSG).
 
 Die meisten Internetbrowser sind so eingestellt, dass sie Cookies automatisch akzeptieren. Sie können das Speichern von Cookies jedoch deaktivieren oder Ihren Browser so einstellen, dass Cookies nur für die Dauer der jeweiligen Verbindung zum Internet gespeichert werden.
 Sollten Sie eine Browsererweiterung nutzen, die die Ablage unserer Cookies verhindert, respektieren wir dies selbstverständlich. Cookies werden in diesem Fall nicht abgelegt. Wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich werden nutzen können.
@@ -80,7 +80,7 @@ Diese Funktionen werden angeboten durch die Twitter Inc., 1355 Market Street, Su
 
 Ihre Datenschutzeinstellungen bei Twitter können Sie in den Konto-Einstellungen unter [https://twitter.com/account/settings](https://twitter.com/account/settings) ändern.
 
-Um Inhalte in den sozialen Netzwerken zu planen und zu posten, keine für uns relevanten Posts zu verpassen sowie mit Nutzerinnen und Nutzern zu interagieren, nutzt das Statistische Bundesamt das Produkt "Social Hub" des Dienstleisters maloon GmbH; Schütterlettenweg 4; 85053 Ingolstadt; Deutschland; Telefon: +49 (0)841 493 990-0; Fax: +49 (0)841 493 990-10; E-Mail: hallo@socialhub.io; Web: [www.socialhub.io](http://www.socialhub.io/)
+Um Inhalte in den sozialen Netzwerken zu planen und zu posten, keine für uns relevanten Posts zu verpassen sowie mit Nutzerinnen und Nutzern zu interagieren, nutzt das Statistische Bundesamt das Produkt &bdquo;Social&ldquo; des Dienstleisters maloon GmbH; Schütterlettenweg 4; 85053 Ingolstadt; Deutschland; Telefon: +49 (0)841 493 990-0; Fax: +49 (0)841 493 990-10; E-Mail: hallo@socialhub.io; Web: [www.socialhub.io](http://www.socialhub.io/)
 
 ## Anfragen per E-Mail oder Telefon
 
@@ -90,9 +90,9 @@ Wenn Sie Ihre Anfragen per E-Mail oder Telefon an uns richten, werden Ihre Angab
 
 Personen unter 18 Jahren sollten ohne Zustimmung der Eltern oder Erziehungsberechtigten keine personenbezogenen Daten an uns übermitteln. Wir fordern keine personenbezogenen Daten von Kindern und Jugendlichen an. Wissentlich sammeln wir solche Daten nicht und geben sie auch nicht weiter.
 
-## Links zu Webseites anderer Anbieter
+## Links zu Websites anderer Anbieter
 
-Unser Online-Angebot enthält Links zu Webseites anderer Anbieter. Wir haben keinen Einfluss darauf, dass diese Anbieter die Datenschutzbestimmungen einhalten.
+Unser Online-Angebot enthält Links zu Websites anderer Anbieter. Wir haben keinen Einfluss darauf, dass diese Anbieter die Datenschutzbestimmungen einhalten.
 
 ## Ihre Rechte
 
@@ -139,5 +139,6 @@ Ausgenommen vom zeitlich und räumlich uneingeschränkten Nutzungsumfang sind Nu
 
 Bei Verwendung unserer Daten empfiehlt es sich daher, auf die Ausbringung der Copyright-Angaben im jeweiligen Produkt zu achten und im Bedarfsfalle die im Impressum genannten Copyright-Inhaber zu kontakten.
 
-Copyright Icons:
-© United Nations/[www.globalgoals.org](http://www.globalgoals.org/asset-licence/), [Guidelines for the use (Logos und Pictogramme)](https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/01/SDG_Guidelines_AUG_2019_Final.pdf) / © [Bundespresseamt, CC BY-SA 3.0 (deutsche Übersetzung)](https://creativecommons.org/licenses/by-sa/3.0/)
+## Copyright Icons
+
+© United Nations/[www.globalgoals.org](http://www.globalgoals.org/asset-licence/), [Guidelines for the use](https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/01/SDG_Guidelines_AUG_2019_Final.pdf) (Logos und Pictogramme) / © Bundespresseamt, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) (deutsche Übersetzung)
