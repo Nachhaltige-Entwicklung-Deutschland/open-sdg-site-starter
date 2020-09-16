@@ -80,7 +80,7 @@ Diese Funktionen werden angeboten durch die Twitter Inc., 1355 Market Street, Su
 
 Ihre Datenschutzeinstellungen bei Twitter können Sie in den Konto-Einstellungen unter [https://twitter.com/account/settings](https://twitter.com/account/settings) ändern.
 
-Um Inhalte in den sozialen Netzwerken zu planen und zu posten, keine für uns relevanten Posts zu verpassen sowie mit Nutzerinnen und Nutzern zu interagieren, nutzt das Statistische Bundesamt das Produkt &bdquo;Social&ldquo; des Dienstleisters maloon GmbH; Schütterlettenweg 4; 85053 Ingolstadt; Deutschland; Telefon: +49 (0)841 493 990-0; Fax: +49 (0)841 493 990-10; E-Mail: hallo@socialhub.io; Web: [www.socialhub.io](http://www.socialhub.io/)
+Um Inhalte in den sozialen Netzwerken zu planen und zu posten, keine für uns relevanten Posts zu verpassen sowie mit Nutzerinnen und Nutzern zu interagieren, nutzt das Statistische Bundesamt das Produkt „Social Hub“ des Dienstleisters maloon GmbH; Schütterlettenweg 4; 85053 Ingolstadt; Deutschland; Telefon: +49 (0)841 493 990-0; Fax: +49 (0)841 493 990-10; E-Mail: hallo@socialhub.io; Web: [www.socialhub.io](http://www.socialhub.io/)
 
 ## Anfragen per E-Mail oder Telefon
 
