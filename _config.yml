@@ -98,6 +98,8 @@ menu:
     translation_key: menu.status
   - path: /about/
     translation_key: menu.about_this_site
+  - path: /navigation/
+    translation_key: menu.navigation
   - path: /guidance
     translation_key: menu.guidance
   - path: /agenda
