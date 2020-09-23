@@ -1,6 +1,6 @@
 ---
 title: Agenda 2030 und die Arbeit der nationalen Statistikämter
-permalink: /agenda/
+permalink: /facts_agenda/
 layout: page
 ---
 

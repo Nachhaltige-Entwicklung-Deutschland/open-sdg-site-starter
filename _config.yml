@@ -100,10 +100,12 @@ menu:
     translation_key: menu.about_this_site
   - path: /navigation/
     translation_key: menu.navigation
-  - path: /guidance
+  - path: /guidance/
     translation_key: menu.guidance
-  - path: /agenda
-    translation_key: menu.agenda
+  - path: /facts_sdg/
+    translation_key: menu.facts_sdg
+  - path: /facts_agenda/
+    translation_key: menu.facts_agenda
 
 
 # Configure the text (or "translation key") to be used on the
