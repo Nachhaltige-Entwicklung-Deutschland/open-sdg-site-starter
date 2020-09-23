@@ -21,7 +21,7 @@ Die DNS-Online Plattform gliedert sich in Ziele, Unterziele und den dazugehörig
 <br>
 
 <h3>Darstellung einzelner DNS-Indikatoren</h3>
-Jeder DNS-Indikator wird auf einer eigenen Seite dargestellt. Linkerhand werden, je nach Indikator, verschiedene Auswahlmenüs angezeigt. Das erste Auswahlmenü enthält alle Zeitreihen, die für den Indikator zur Verfügung stehen. In den Untermenüs können Sie je nach Datenreihe verschiedene Ausprägungen auswählen – z.&nbspB. verschiedene Altersklassen.
+Jeder DNS-Indikator wird auf einer eigenen Seite dargestellt. Linkerhand werden, je nach Indikator, verschiedene Auswahlmenüs angezeigt. Das erste Auswahlmenü enthält alle Zeitreihen, die für den Indikator zur Verfügung stehen. In den Untermenüs können Sie je nach Datenreihe verschiedene Ausprägungen auswählen – z.&nbsp;B. verschiedene Altersklassen.
 
 Die Entwicklung der Zeitreihe wird in einer Grafik visualisiert. Auf dem zweiten Reiter neben „Grafik“ können zugrundeliegende Daten hinter der Grafik und alle anderen verfügbaren Daten der Auswahlmenüs als Tabelle eingesehen werden (Abb. 2).
 
