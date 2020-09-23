@@ -1,5 +1,5 @@
 ---
-title: About the reporting platform for the DNS
+title: About the SDGs
 permalink: /en/facts_sdg/
 layout: page
 language: en
