@@ -6,7 +6,7 @@
 
     {% assign country_name = site.country.name | t %}
     {% assign heading_default = t.frontpage.heading_dns | replace: '%name', country_name %}
-    <h1>{{ site.frontpage_heading | default: heading_default | t }}</h1>
+    <h1>{{ site.frontpage_heading | default: heading_default | t }} <a href="https://dns-dialogfassung.github.io" class="btn"> Dialogfassung</a></h1>
 
     {% assign instructions_default = t.frontpage.instructions_dns | replace_first: '%before_link', '<span id="jump-to-search"><a>' | replace_first: '%after_link', '</a></span>' | replace_first: '%name', country_name %}
     <p>{{ site.frontpage_instructions | default: instructions_default | t }}</p>
@@ -36,11 +36,11 @@
         </div>
     {% endif %}
     </div>
-
+    <!--
     <h1>
         <a href="https://dns-dialogfassung.github.io//">
             <small>{{ t.general.dialog_front }}</small>
     </h1>
-
+    -->
 </div>
 {% include footer.html %}
