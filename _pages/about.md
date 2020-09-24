@@ -4,7 +4,7 @@ permalink: /about/
 layout: page
 ---
 
-Die Online Plattform gliedert sich in das Indikatorenset der [deutschen Nachhaltigkeitsstrategie](https://www.bundesregierung.de/breg-de/themen/nachhaltigkeitspolitik/eine-strategie-begleitet-uns/die-deutsche-nachhaltigkeitsstrategie) (DNS) sowie das Indikatorenset für Deutschland zu den globalen Nachhaltigkeitszielen ([Sustainable Development Goals, SDGs](https://www.un.org/sustainabledevelopment/sustainable-development-goals/)) der Agenda 2030 der Vereinten Nationen. Da die Deutsche Nachhaltigkeitsstrategie die nationale Umsetzung der Agenda 2030 ist, werden verwandte Indikatoren beider Strategien auf der Plattform miteinander verlinkt.
+Die Online Plattform gliedert sich in das Indikatorenset der [Deutschen Nachhaltigkeitsstrategie](https://www.bundesregierung.de/breg-de/themen/nachhaltigkeitspolitik/eine-strategie-begleitet-uns/die-deutsche-nachhaltigkeitsstrategie) (DNS) sowie das Indikatorenset für Deutschland zu den globalen Nachhaltigkeitszielen ([Sustainable Development Goals, SDGs](https://www.un.org/sustainabledevelopment/sustainable-development-goals/)) der Agenda 2030 der Vereinten Nationen. Da die Deutsche Nachhaltigkeitsstrategie die nationale Umsetzung der Agenda 2030 ist, werden verwandte Indikatoren beider Strategien auf der Plattform miteinander verlinkt.
 
 Die Zeitreihen zu den Indikatoren beider Online Plattformen stehen Ihnen zum Download zur Verfügung.
 
@@ -33,7 +33,7 @@ Deutschland hat seit 2002 eine nationale Nachhaltigkeitsstrategie mit eigenen Zi
 Seit 2006 berichtet das Statistische Bundesamt im Auftrag der Bundesregierung im zweijährlichen Rhythmus über die Zielerreichung der Deutschen Nachhaltigkeitsstrategie. In gebundener Form und als PDF liegen die Informationen als [Indikatorenbericht](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Nachhaltigkeitsindikatoren/Deutsche-Nachhaltigkeit/_inhalt.html) vor. Seit 2020 wird die Entwicklung der DNS-Indikatoren zusätzlich über die DNS-Online Plattform veröffentlicht.
 
 <h3>Struktur der DNS-Online Plattform</h3>
-Die DNS-Online Plattform ist nach Zielen, Indikatorenberichten und Postulaten und den dazugehörigen Indikatoren gegliedert (Abb.1). Alle vier Jahre werden die Strategie und ihre Indikatoren durch die Bundesregierung überprüft und bei Bedarf angepasst. Dabei können z.B. Indikatoren ersetzt werden oder neue hinzukommen.
+Die DNS-Online Plattform ist nach Zielen, Indikatorenberichten und Postulaten und den dazugehörigen Indikatoren gegliedert (Abb.3). Alle vier Jahre werden die Strategie und ihre Indikatoren durch die Bundesregierung überprüft und bei Bedarf angepasst. Dabei können z.B. Indikatoren ersetzt werden oder neue hinzukommen.
 
 <br>
 <img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/dnsTargetPage.png" alt="Abbildung 3: Aufbau der Ziel-Seiten" class="responsiveImg">
