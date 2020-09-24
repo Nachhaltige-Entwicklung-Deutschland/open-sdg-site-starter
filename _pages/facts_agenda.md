@@ -24,6 +24,6 @@ Das Statistische Bundesamt ist verantwortlich für die Koordination und Veröffe
 </small>
 </p>
 
-m Juli 2019 hat das Statistische Bundesamt die Online Plattform zu den Indikatoren der globalen Nachhaltigkeitsziele der Vereinten Nationen freigeschaltet. Hier finden sich Zeitreihen und zugehörige Metadaten für Deutschland zur globalen nachhaltigen Entwicklung in aufbereiteter und interaktiver Form. Der Bereich zu den SDGs auf der [Online Plattform](https://sustainabledevelopment-germany.github.io/) ermöglicht es den zuständigen internationalen Organisationen (Custodian Agencies) die Daten für einzelne SDG-Indikatoren für Deutschland direkt herunterzuladen und zum Beispiel für die globale Berichterstattung zu nutzen (Abb. 2).
+Im Juli 2019 hat das Statistische Bundesamt die Online Plattform zu den Indikatoren der globalen Nachhaltigkeitsziele der Vereinten Nationen freigeschaltet. Hier finden sich Zeitreihen und zugehörige Metadaten für Deutschland zur globalen nachhaltigen Entwicklung in aufbereiteter und interaktiver Form. Der Bereich zu den SDGs auf der [Online Plattform](https://sustainabledevelopment-germany.github.io/) ermöglicht es den zuständigen internationalen Organisationen (Custodian Agencies) die Daten für einzelne SDG-Indikatoren für Deutschland direkt herunterzuladen und zum Beispiel für die globale Berichterstattung zu nutzen (Abb. 2).
 
 Seit Anfang 2020 gibt es die Online Plattform auch für die Indikatoren der Deutschen Nachhaltigkeitsstrategie (DNS).
