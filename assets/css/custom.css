@@ -374,6 +374,11 @@ header {
   border-color: transparent;
   margin-bottom: 5px; }
 
+.frontBtn:hover {
+  background-color: #a5a3a3;
+  border-color: transparent;
+  margin-bottom: 5px; }
+
 #disclaimer {
   background: #BF0C16; }
   #disclaimer .phase-tag {
