@@ -13,9 +13,9 @@ Das Statistische Bundesamt (Destatis) unterstützt aktiv die Entwicklung nationa
 Eine universelle Version des von den USA, Großbritannien und dem Center for Open Data Enterprise entwickelten Codes für eine Online Plattform ist verfügbar. Auf diesem basiert die DNS-Online Plattform. Bei Interesse empfehlen wir Ihnen, sich mit den SDG-Online Plattformen in den USA und in Großbritannien sowie mit der entsprechenden [Open-SDG Projektdokumentation](https://open-sdg.readthedocs.io/en/latest/) vertraut zu machen. Diese enthält technische Anweisungen, wie z.B. eine Kopie der Open SDG-Online Plattform erstellt werden kann.
 
 
-- [SDG Berichtsplattform USA](https://sdg.data.gov/)
+- [SDG-Online Plattform USA](https://sdg.data.gov/)
 
-- [SDG Berichtsplattform GB](https://sustainabledevelopment-uk.github.io)
+- [SDG-Online Plattform Großbritannien](https://sustainabledevelopment-uk.github.io)
 
 Wenn Sie Kommentare oder Feedback zum Open SDG-Projekt haben oder an der Open SDG-Community teilnehmen möchten, wenden Sie sich an [Open SDG GitHub](https://github.com/open-sdg/open-sdg/issues).
 
