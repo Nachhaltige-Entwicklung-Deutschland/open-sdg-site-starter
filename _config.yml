@@ -98,14 +98,14 @@ menu:
     translation_key: menu.status
   - path: /about/
     translation_key: menu.about_this_site
-  #- path: /navigation/
-    #translation_key: menu.navigation
+  - path: /navigation/
+    translation_key: menu.navigation
   - path: /guidance/
     translation_key: menu.guidance
   - path: /facts_agenda/
     translation_key: menu.facts_agenda
-  #- path: /facts_sdg/
-    #translation_key: menu.facts_sdg
+  - path: /facts_sdg/
+    translation_key: menu.facts_sdg
 
 # Configure the text (or "translation key") to be used on the
 # non-global metadata tab.
