@@ -11,6 +11,21 @@
 {% assign goalShort = t.dns_goals[goalKey] %}
 {% assign goalLong = t.global_goals[goalKey] %}
 
+{% assign dialogLink = meta.permalink %}
+{% if dialogLink == "/5-1-b/" %}
+  {% assign dialogLink = "/5-1-bc/" %}
+{% elsif dialogLink == "/5-1-c/" %}
+  {% assign dialogLink = "/5-1-e/" %}
+{% endif %}
+
+
+
+{% assign dialogDisplay = meta.indicator_display %}
+{% if dialogDisplay == "5.1.b" %}
+  {% assign dialogDisplay = "5.1.b, c" %}
+{% elsif dialogDisplay == "5.1.c" %}
+  {% assign dialogDisplay = "5.1.e" %}
+{% endif %}
 
 <div class="heading indicator goal-{{ goal_number }}">
   <div class="container">
@@ -21,6 +36,7 @@
         </a>
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10">
+
 
         <h1 class="titles goal-{{goal_number}}" title="{{ t.general.section }}: {{ meta.section }}">
           {{ meta.section }} - <i title="{{ t.general.postulate}}: {{ meta.postulate }}">{{ meta.postulate }}</i>
@@ -35,6 +51,12 @@
 </div>
 
 <div id="main-content" class="container goal-{{ goal_number }}">
+  <!--
+  <h2 style="margin-top:10px; margin-left: 16px;">
+    <a href="https://dns-dialogfassung.github.io/{{ dialogLink }}" style="color: black">  <small>{{ t.general.dialog_indikator_1 }} {{ dialogDisplay }} {{ t.general.dialog_indikator_2}} </small></a>
+  </h2>
+  -->
+
   {% include components/breadcrumb.html %}
   {% include components/navigation.html %}
 

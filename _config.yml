@@ -91,18 +91,21 @@ collections:
 menu:
   # Use these to customise the main navigation.
   - path: /
-    translation_key: general.goals
+    translation_key: general.seventeen_goals
   - path: /status_summary
     translation_key: menu.status_summary
   - path: /status
     translation_key: menu.status
   - path: /about/
     translation_key: menu.about_this_site
-  - path: /guidance
+  #- path: /navigation/
+    #translation_key: menu.navigation
+  - path: /guidance/
     translation_key: menu.guidance
-  - path: /agenda
-    translation_key: menu.agenda
-
+  - path: /facts_agenda/
+    translation_key: menu.facts_agenda
+  #- path: /facts_sdg/
+    #translation_key: menu.facts_sdg
 
 # Configure the text (or "translation key") to be used on the
 # non-global metadata tab.

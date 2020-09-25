@@ -1,6 +1,6 @@
 ---
 title: Agenda 2030 and the tasks of the national statistical offices
-permalink: /en/agenda/
+permalink: /en/facts_agenda/
 layout: page
 language: en
 ---
