@@ -122,19 +122,19 @@
             <li role="presentation" class="nav-item active">
               <!---#12 addIconsForTabs---start------------------------------------------->
               <!--<a class="nav-link" data-toggle="tab" href="#chartview" aria-controls="chartview" role="tab" {% include autotrack.html preset="tab_data_chart" category="Tab change" action="Change data view" label="Change to Chart tab" %}>{{ t.indicator.chart }}</a>-->
-              <a class="nav-link" data-toggle="tab" href="#chartview" aria-controls="chartview" role="tab" {% include autotrack.html preset="tab_data_chart" category="Tab change" action="Change data view" label="Change to Chart tab" %}> <i class="fa fa-line-chart" aria-hidden="true"></i> <span class="hidden-sm hidden-xs">{{ t.indicator.chart }}</span> </a>
+              <a class="nav-link" data-toggle="tab" href="#chartview" aria-controls="chartview" role="tab" {% include autotrack.html preset="tab_data_chart" category="Tab change" action="Change data view" label="Change to Chart tab" %}> <i class="fa fa-line-chart" aria-hidden="true"></i> {{ t.indicator.chart }}</a>
               <!---#12 addIconsForTabs---stop-------------------------------------------->
             </li>
             <li role="presentation" class="nav-item">
               <!---#12 addIconsForTabs---start------------------------------------------->
               <!--<a class="nav-link" data-toggle="tab" href="#tableview" aria-controls="tableview" role="tab" {% include autotrack.html preset="tab_data_table" category="Tab change" action="Change data view" label="Change to Table tab" %}>{{ t.indicator.table }}</a>-->
-              <a class="nav-link" data-toggle="tab" href="#tableview" aria-controls="tableview" role="tab" {% include autotrack.html preset="tab_data_table" category="Tab change" action="Change data view" label="Change to Table tab" %}> <i class="fa fa-table" aria-hidden="true"></i> <span class="hidden-sm hidden-xs">{{ t.indicator.table }}</span> </a>
+              <a class="nav-link" data-toggle="tab" href="#tableview" aria-controls="tableview" role="tab" {% include autotrack.html preset="tab_data_table" category="Tab change" action="Change data view" label="Change to Table tab" %}> <i class="fa fa-table" aria-hidden="true"></i> {{ t.indicator.table }}</a>
               <!---#12 addIconsForTabs---stop-------------------------------------------->
             </li>
             <li role="presentation" class="nav-item map" style="display:none">
               <!---#12 addIconsForTabs---start------------------------------------------->
               <!--<a data-no-disagg="true" class="nav-link" data-toggle="tab" href="#mapview" aria-controls="mapview" role="tab" {% include autotrack.html preset="tab_data_map" category="Tab change" action="Change data view" label="Change to Map tab" %}>{{ t.indicator.map }}</a>-->
-              <a data-no-disagg="true" class="nav-link" data-toggle="tab" href="#mapview" aria-controls="mapview" role="tab" {% include autotrack.html preset="tab_data_map" category="Tab change" action="Change data view" label="Change to Map tab" %}><i class="fa fa-map" aria-hidden="true"></i> <span class="hidden-sm hidden-xs">{{ t.indicator.map }}</span></a>
+              <a data-no-disagg="true" class="nav-link" data-toggle="tab" href="#mapview" aria-controls="mapview" role="tab" {% include autotrack.html preset="tab_data_map" category="Tab change" action="Change data view" label="Change to Map tab" %}><i class="fa fa-map" aria-hidden="true"></i> {{ t.indicator.map }}</a>
               <!---#12 addIconsForTabs---stop-------------------------------------------->
             </li>
             {%- if meta.embedded_feature_url -%}
