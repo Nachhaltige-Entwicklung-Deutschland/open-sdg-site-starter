@@ -27,7 +27,7 @@ D-53029 Bonn
 <br><br>
   
 tel:	+49 (0)611 75-8855<br>
-e-mail:	[dns-indikatoren@destatis.de](mailto:dns-indikatoren@destatis.de)
+e-mail:	[dns-indikatoren@destatis.de](mailto:dns-indikatoren@destatis.de)<br>
 
 <b>Editorial office</b>
 e-mail:	[dns-indikatoren@destatis.de](mailto:dns-indikatoren@destatis.de)
