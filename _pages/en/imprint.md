@@ -29,13 +29,13 @@ D-53029 Bonn
 tel:	+49 (0)611 75-8855<br>
 e-mail:	[dns-indikatoren@destatis.de](mailto:dns-indikatoren@destatis.de)<br>
 
-<b>Editorial office</b>
+<b>Editorial office</b><br>
 e-mail:	[dns-indikatoren@destatis.de](mailto:dns-indikatoren@destatis.de)
 
-<b>Content/production</b>
+<b>Content/production</b><br>
 Federal Statistical Office (Destatis)
 
-<b>Hosting</b>
+<b>Hosting</b><br>
 [GitHub](https://github.com/)
 
 <h2> Disclaimer</h2>
