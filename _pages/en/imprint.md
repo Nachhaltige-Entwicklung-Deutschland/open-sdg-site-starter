@@ -5,15 +5,13 @@ language: en
 layout: page
 ---
 
-### Legally binding original text in the German language
-
 Legally binding original text in the German language. This legal notice also applies to our [Twitter account](https://twitter.com/destatis).
 
 ## Publisher
 
 This website is published by the Federal Statistical Office, Bonn Branch Office, represented by the President.
 
-<b>Legal form<b>: Higher federal authority within the remit of the Federal Ministry of the Interior, Building and Community
+<b>Legal form</b>: Higher federal authority within the remit of the Federal Ministry of the Interior, Building and Community
 <br><br>
 <b>Office address</b><br>
 Federal Statistical Office<br>
@@ -37,10 +35,10 @@ e-mail:	[dns-indikatoren@destatis.de](mailto:dns-indikatoren@destatis.de)
 <b>Content/production</b>
 Federal Statistical Office (Destatis)
 
-<b>sting</b>
+<b>Hosting</b>
 [GitHub](https://github.com/)
 
-## Disclaimer
+<h2> Disclaimer</h2>
 
 The content of this website is researched and implemented with the utmost care. Nevertheless, it cannot be ruled out that errors occur in the process. Please send any comments and corrections to our e-mail address: [dns-indikatoren@destatis.de](mailto:dns-indikatoren@destatis.de).
 
