@@ -23,10 +23,10 @@ D-53117 Bonn
 Federal Statistical Office<br>
 Bonn Branch Office<br>
 Postfach 17 03 77<br>
-D-53029 Bonn<br>
+D-53029 Bonn
 <br><br>
   
-tel:	+49 (0)611 75-8855
+tel:	+49 (0)611 75-8855<br>
 e-mail:	[dns-indikatoren@destatis.de](mailto:dns-indikatoren@destatis.de)
 
 <b>Editorial office</b>
