@@ -496,7 +496,8 @@ header {
   min-width: 15px;
   padding-left: 0px;
   padding-right: 0px;
-  height: auto; }
+  height: auto;
+  border: transparent; }
 
 .responsiveText {
   font-size: 1.0em; }
