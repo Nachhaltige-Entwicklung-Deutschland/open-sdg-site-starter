@@ -1,13 +1,5 @@
 ---
 ---
-#main-content {
-  .no-gutters img {
-    width: 99%;
-    border: 2px solid;
-    padding: 2px;
-    margin: 2px 2px 0 0;
-  }
-}
 
 
 $vanilla: #fff;
@@ -594,6 +586,7 @@ header {
   padding-left: 0px;
   padding-right: 0px;
   height: auto;
+  border: transparent;
 }
 
 
@@ -1075,5 +1068,14 @@ figure {
 figcaption {
   display: table-caption;
   caption-side: bottom;
+}
+
+#main-content {
+  .no-gutters img {
+    width: 99%;
+    border: 2px solid;
+    padding: 2px;
+    margin: 2px 2px 0 0;
+  }
 }
 //---------------------------
