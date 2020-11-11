@@ -1,6 +1,13 @@
 ---
 ---
-
+#main-content {
+  .no-gutters img {
+    //width: 99%;
+    border: 2px solid;
+    padding: 2px;
+    margin: 2px 2px 0 0;
+  }
+}
 
 $vanilla: #fff;
 $main-background-color: #eaeaea;
@@ -1070,12 +1077,5 @@ figcaption {
   caption-side: bottom;
 }
 
-#main-content {
-  .no-gutters img {
-    width: 99%;
-    border: 2px solid;
-    padding: 2px;
-    margin: 2px 2px 0 0;
-  }
-}
+
 //---------------------------
