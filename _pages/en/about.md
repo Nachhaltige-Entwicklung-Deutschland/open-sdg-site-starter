@@ -21,7 +21,7 @@ Both sets of indicators are structured according to the 17 goals of the United N
 
 <div class="col-xs-12 col-md-6 col-lg-6" style="padding-left: 100px; padding-right: 100px;">
 <img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/en/sdgIcons.PNG" alt="Figure 2: SDG Icons" class="responsiveImg" style="width: 100%;">
-<small> Figure 2: 17 SDG icons of the United Nations used on the <b>SDG online platform for Germany</b> </small>
+<small> Fig. 2: 17 SDG icons of the United Nations used on the <b>SDG online platform for Germany</b> </small>
 </div>
 
 </div>
