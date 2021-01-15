@@ -28,8 +28,6 @@ Both sets of indicators are structured according to the 17 goals of the United N
 
 ## Aim and background
 
-The aim of the DNS online platform is to present the indicators oft he German Sustainable Development Strategy.
-
 The purpose of this national reporting platform is the presentation and explanation of the indicators of the German Sustainable Development Strategy (Deutsche Nachhaltigkeitsstrategie, DNS). In 2002 the first adoption of a German Sustainability Strategy was published. Since then it always consisted of own goals, indicator fields, and postulates.
 
 2017 the national strategy was adjusted as a response to the [Agenda 2030](https://sustainabledevelopment-deutschland.github.io/en/agenda/) of the United Nations and its 17 Sustainable Development Goals (SDGs). The strategy is now called German Sustainable Development Strategy. As part of the adjustments at least one indicator for each of the 17 goals has been included. The Federal Government determined the target values, as well as the indicators, their database, and calculations.
