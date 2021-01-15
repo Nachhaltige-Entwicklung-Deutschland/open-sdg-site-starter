@@ -26,7 +26,6 @@ Beide Indikatorensets sind nach den 17 Zielen der Agenda 2030 der Vereinten Nati
 </div>
 
 <h3>Ziel und Hintergrund</h3>
-Ziel der DNS-Online Plattform ist die Darstellung der Indikatoren der Deutschen Nachhaltigkeitsstrategie.
 
 Deutschland hat seit 2002 eine nationale Nachhaltigkeitsstrategie mit eigenen Zielen, Indikatorenberichten und Postulaten. 2017 wurde diese Strategie anlässlich der [Agenda 2030](https://sustainabledevelopment-deutschland.github.io/agenda/) der Vereinten Nationen und den zugehörigen 17 Zielen für eine nachhaltige Entwicklung (Sustainable Development Goals, SGDs) überarbeitet und wird nun Deutsche Nachhaltigkeitsstrategie (DNS) genannt. Bei der Überarbeitung wurde thematisch passend mindestens ein Indikator zu jedem der 17 Ziele in die Strategie aufgenommen. Die Zielwerte, die Indikatoren, ihre Datengrundlagen und Berechnungen sind von der Bundesregierung beschlossen worden.
 
