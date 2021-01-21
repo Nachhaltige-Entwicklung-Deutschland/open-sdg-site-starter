@@ -1,29 +1,29 @@
 ---
-title: Agenda 2030 and the tasks of the national statistical offices
+title: Agenda and national statistical offices
 permalink: /en/facts_agenda/
 layout: page
 language: en
 ---
 
-<h3>The UN Sustainable Development Goals</h3>
+## United Nations Sustainable Development Goals
 
-<figure style="width: 40%; margin-left: 10px;"><img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/en/agenda1.png" alt="Figure 1: One logo of the SDGs" style="width: 100%; padding-left: 20px; padding-right:20px; padding-bottom:10px; padding-top:10px;"><figcaption >Figure. 1: One logo of the SDGs</figcaption></figure>The [Agenda 2030 for Sustainable Development](https://www.un.org/sustainabledevelopment/development-agenda/) is a global United Nations action plan for people, the planet and prosperity, which has been adopted by the UN General Assembly in September 2015. The Agenda 2030 of the United Nations is a roadmap to "transform the world for the better" by the year 2030 in terms of sustainable transformation of society, economy and environment. The Agenda 2030 contains 17 global goals divided into 169 targets with over 240 indicators.The goals are called Sustainable Development Goals (SDGs (Figure 1).
+<figure style="width: 20%; margin-left: 10px; float: right; border: 1px solid #ddd; border-radius: 4px;"><img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/en/agenda1.png" alt="Fig. 1: Logo of the SDGs" style="width: 100%; padding-left: 20px; padding-right:20px; padding-bottom:10px; padding-top:10px;"><figcaption style="margin-bottom:20px; text-align: center"><small>Figure 1: Logo of the SDGs</small></figcaption></figure> The [2030 Agenda for Sustainable Development](https://www.un.org/sustainabledevelopment/development-agenda/) is a global United Nations action plan for the planet, people and their prosperity adopted by the UN General Assembly in September 2015. The 2030 Agenda, developed by the Member States of the United Nations, is a roadmap for “Transforming our world for the better“, aimed at achieiving a sustainable transformation in social, economic and environmental terms by 2030. It comprises 17 global goals that are subdivided into 169 targets with over 240 indicators. The goals are called Sustainable Development Goals and are abbreviated as SDGs (Fig. 1).
 
-<h3>Reviewing the goal achievement</h3>
+## Monitoring goal achievement
 
-The UN Statistical Commission was charged together with the national statistical offices to develop global indicators for the targets. The mandated "Inter-agency and Expert Group on SDG Indicators" ([IAEG-SDGs](https://unstats.un.org/sdgs/iaeg-sdgs/)) presented and continuously developed a set of indicators for this purpose. This IAEG-SDGs consists of statistical offices of some UN member states, including the Federal Statistical Office for Germany.
+The United Nations Statistical Commission was mandated to develop global indicators for the targets together with the national statistical offices. The Inter-Agency and Expert Group on SDG Indicators ([IAEG-SDGs](https://unstats.un.org/sdgs/iaeg-sdgs/2020-comprev/UNSC-proposal/)) established for this purpose presented a set of indicators and has continuously refined it. The IAEG-SDGs is composed of statistical offices of some Member States of the United Nations, including the Federal Statistical Office representing Germany.
 
-<br>
+## National reporting on sustainable development in Germany
 
-<h3>National Reporting about sustainable development</h3>
-
-The Federal Statistical Office coordinates and publishes the German data to the SDG indicators. It is responsible for the statistical reporting about the German progress concerning the SDGs. In July 2019 the Federal Statistical Office has released a national [reporting platform for indicators of the Sustainable Development Goals](https://sustainabledevelopment-germany.github.io) (SDGs). On this platform, statistical data and metadata regarding Germany and the global sustainable development are presented in an edited and interactive way. Now the SDG-part of the platform enables the responsible international organisations (so-called Custodian Agencies) to directly download data for single SDG-indicators (Figure 2).
-
-In February 2020 the DNS-part of the platform was released. It includes data and metadata regarding the indicators of the German Sustainable Development Strategy (Deutsche Nachhaltigkeitsstrategie, DNS).
+The Federal Statistical Office is responsible for coordinating and publishing national SGD indicator data for Germany and for statistical reporting on Germany's progress in this field.
 
 <img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/en/agenda2.png" alt="Abbildung 2: Datenfluss Diagramm" class="responsiveImg">
 
 <p style="text-align:center;">
-<small> Figure 2: Data flow for calculating the SDG-indicators regarding Germany
+<small> Fig. 2: Data flow for calculating the SDG-indicators regarding Germany
 </small>
 </p>
+
+In July 2019, the Federal Statistical Office launched this online platform on the indicators of the UN global Sustainable Development Goals. Here time series and associated metadata regarding global sustainable development are provided in a processed and interactive form for Germany. The SDGs section of the [online platform](https://sustainabledevelopment-germany.github.io/) enables the competent international organisations (custodian agencies) to directly download Germany’s SDG indicator data and use them, for example, for global reporting assignments.
+
+In February 2020 the DNS-part of the platform was released. It includes data and metadata regarding the indicators of the German Sustainable Development Strategy (Deutsche Nachhaltigkeitsstrategie, DNS).
