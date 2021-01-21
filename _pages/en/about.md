@@ -51,7 +51,7 @@ Each indicator of the DNS is presented individually or together with a closely r
 
 For some indicators the data are displayed at Federal States level. However, the goal shown stays the goal for Germany. Most of the Federal States of Germany have own sustainability strategies and indicators. They are not displayed the DNS platform. [Here](https://www.destatis.de/EN/Themes/Society-Environment/Sustainable-Development-Indicators/German/SubstainableDevelopmentIndicatorsLaender.html) you can find a compilation of sustainability strategies of the Federal States of Germany (also called “Länder”).
 
-The symbols and choice of colour of the 17 goals (Fig. 2 and 3) which are used here and on the SDG-part of this reporting platform are copyright protected by the United Nations.
+The symbols and choice of colour of the 17 goals (Fig. 1 and 2) which are used here and on the SDG-part of this reporting platform are copyright protected by the United Nations.
 
 ## Indicator evaluation
 
