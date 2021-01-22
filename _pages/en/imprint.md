@@ -25,7 +25,7 @@ Bonn Branch Office<br>
 Postfach 17 03 77<br>
 D-53029 Bonn
 <br><br>
-  
+
 tel:	+49 (0)611 75-8855<br>
 e-mail:	[dns-indikatoren@destatis.de](mailto:dns-indikatoren@destatis.de)<br>
 
@@ -51,7 +51,7 @@ In addition to information of its own, the Federal Statistical Office provides l
 
 With these notes, we meet our information obligations regarding the collection of personal data, as laid down in Article 13 of the General Data Protection Regulation (GDPR).
 
-The Federal Statistical Office does not collect any personal data when the SDGs online platform is accessed. However, you are also using the services of the provider GitHub. The GitHub privacy statement is here: 
+The Federal Statistical Office does not collect any personal data when the SDGs online platform is accessed. However, you are also using the services of the provider GitHub. The GitHub privacy statement is here:
 [https://help.github.com/en/articles/github-privacy-statement](https://help.github.com/en/articles/github-privacy-statement)
 
 Technical information from website visitors is recorded, including the IP address: this can be a personal date. Personal data are collected when you create an account.
@@ -128,7 +128,7 @@ E-mail communication may involve security gaps. For example, E-mails may be dela
 
 The following applies to all standard publications of the Federal Statistical Office, either in printed or electronic form, and for the content of this website, including charts and downloadable products, unless additional or other information is given on the product/web page itself.
 
-© Statistisches Bundesamt (Destatis), 2020
+© Statistisches Bundesamt (Destatis), 2021
 Reproduction and distribution, also of parts, are permitted provided that the source is mentioned.
 
 This applies to any redistribution of texts, data and charts by third parties where the Federal Statistical Office is the copyright owner and holds exclusive publishing rights. Re-use is permitted both for commercial and non-commercial purposes. There are also no restrictions on distribution by electronic means, via the internet or in printed form. No express authorisation is required from the Federal Statistical Office. It is, however, required to provide a source note. Statistisches Bundesamt (Destatis) shall be named as the publisher in the list of references.
