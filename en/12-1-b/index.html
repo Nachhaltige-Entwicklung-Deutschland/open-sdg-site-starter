@@ -113,7 +113,7 @@ var translations = {
         <!---#15 setCorrectTitle---stop--------------------->
 
         
-          <meta name="description" content= "Data for Germany for SDG indicator 12.1.b - Energy consumption and CO<sub>2</sub> emissions from consumption" >
+          <meta name="description" content= "Data for Germany for SDG indicator 12.1.b - Energy consumption and CO2 emissions from consumption" >
         
 
         <meta property="og:description" content="">
@@ -141,7 +141,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20210128001027">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20210128115831">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -149,7 +149,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20210128001027"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20210128115831"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
 <body class="language-en layout-indicator">
@@ -376,7 +376,7 @@ var translations = {
           Responsible consumption - <i title="Postulate: Making consumption environmentally and socially compatible">Making consumption environmentally and socially compatible</i>
         </h1>
 
-        <h2 class="titles goal-12">Indicator 12.1.b: Energy consumption and CO<sub>2</sub> emissions from consumption</h2>
+        <h2 class="titles goal-12">Indicator 12.1.b: Energy consumption and CO2 emissions from consumption</h2>
       </div>
     </div>
   </div>
@@ -448,15 +448,7 @@ var translations = {
       
 
       <div id="page-content">
-  <div>                           
-  <div class="my-header">                           
-    <a href="https://sustainabledevelopment-deutschland.github.io/en/status/"><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/Leicht bewölkt.png" title="If the trend continues, the indicator will be presumably miss its target by at least 5&nbsp;% and at most 20&nbsp;% of the difference between the target value and the current value" alt="Covered" />                           
-    </a>                           
-  </div>
-  <div class="my-header-note">
-    <span>(Evaluation of the year 2015 as reporting year from indicator report 2018)</span>
-  </div>                           
-</div>
+  
 
 </div>
 
@@ -465,7 +457,7 @@ var translations = {
   <!--
   <div class="row">
     <div class="col-xs-12">
-      <h2>Energy consumption and CO<sub>2</sub> emissions by households</h2>
+      <h2>Energy consumption and CO2 emissions by households</h2>
     </div>
   </div>
   -->
@@ -474,10 +466,10 @@ var translations = {
 
   
 
-  <div class="row" id="indicatorData" data-indicatorid='indicator_12-1-b' data-id="12-1-b" data-country="Germany"
-  data-charttitle="Energy consumption and CO<sub>2</sub> emissions by households" data-measurementunit="2005=100" data-datasource="Federal Statistical Office, German Environment Agency, AGEB (Energy Balance Association)" data-copyright="&copy; Federal Statistical Office (Destatis), 2020"
-  data-geographicalarea="Germany" data-footnote="2016 provisional data" data-showdata="true" data-graphtype="bar"
-  data-geocoderegex="" data-showmap="" data-startvalues="a) time series|b) target (min)|direct co2 emissions and co2 content of consumer goods|energy content of consumer goods|direct energy consumption">
+  <div class="row" id="indicatorData" data-indicatorid='indicator_12-1-b' data-id="12-1-b" data-country=""
+  data-charttitle="Energy consumption and CO2 emissions by households" data-measurementunit="Number of organisations/locations of organisations and number of employees in thousands" data-datasource="Federal Statistical Office (Destatis)" data-copyright="&copy; Federal Statistical Office (Destatis), 2020"
+  data-geographicalarea="" data-footnote="" data-showdata="true" data-graphtype="line"
+  data-geocoderegex="" data-showmap="" data-startvalues="">
     
     <div id="indicator-sidebar" class="col-md-3">
       <div id="toolbar">
@@ -592,33 +584,10 @@ data-event-label="Change to Map tab"
     
     <div id="selectionsChart">
       <div id="chart-canvas">
-        <h3 class="chart-title">Energy consumption and CO<sub>2</sub> emissions by households</h3>
+        <h3 class="chart-title">Energy consumption and CO2 emissions by households</h3>
         <div id="chart" class="plot-container">
           
 <canvas></canvas>
-
-
-
-
-  <script>
-    opensdg.chartConfigAlter = function(config) {
-      var overrides = {
-        options: {
-          scales: {
-            xAxes: [{
-              stacked: true,
-            }],
-            yAxes: [{
-              stacked: true,
-            }]
-          }
-        }
-      }
-      // Add these overrides onto the normal config, and return it.
-      $.extend(true, config, overrides);
-      return config;
-    }
-  </script>
 
 
         </div>
@@ -646,7 +615,7 @@ data-event-label="Change to Map tab"
                 
                 
                   
-                    <p>Sources: Federal Statistical Office, German Environment Agency, AGEB (Energy Balance Association)</p>
+                    <p>Source: Federal Statistical Office (Destatis)</p>
                   
                 
               </div>
@@ -865,8 +834,8 @@ data-event-label="Change to Sources tab"
                 
 
                 
-                  <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/d2a759b04fec38665bf04fb7b09818cdeeb85e68" target="_blank">
-                    2020-02-18: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
+                  <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/ef6f5b62561114380569acd043d9f5af9e637ca3" target="_blank">
+                    2021-01-28: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
                   </a>
                 
 
@@ -909,8 +878,8 @@ data-event-label="Change to Sources tab"
                 
 
                 
-                  <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/1f059585782e336e69bd58eb079ff2f71da847de" target="_blank">
-                    2020-09-09: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
+                  <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/f376a5a5951743bf0ae21e3b0e962624544e45c0" target="_blank">
+                    2021-01-28: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
                   </a>
                 
 
@@ -1314,7 +1283,7 @@ data-event-label="Change to Sources tab"
       
       <tr>
          <!-- case: content -->
-          <p> <p><i>Text from the Indicator Report 2018</i><br /><br />The data are derived from the environmental-economic accounts of the Federal Statistical Office based on the energy balances from the AGEB (Energy Balance Association) and on the emission reporting of the German Environment Agency.<br /><br />Households consume energy directly, for example, for heating or through the consumption of fuels for road transport. In addition to this direct energy consumption, substantial amounts of energy are consumed in the production of goods for private consumption. This indirect energy consumption occurs domestically and abroad, among both the direct producers of the consumer goods and their suppliers. Both forms are recorded by this indicator.<br /><br />The same applies to the emissions of carbon dioxide (CO<sub>2</sub>), presented here as an index for information purposes. In addition to the direct emissions by households caused by the combustion of fuels, much greater quantities of emissions are generated indirectly during the production of consumer goods. The depicted key figure includes both direct as well as indirect emissions.<br /><br />Closer analysis of the time series reveals a wavelike trend in energy consumption due to the consumption activities of households with a slight increase of 1.9 % from 2005 until 2010. Between 2010 and 2012, energy consumption by households declined steadily by a total of 5.3 %. In 2013, however, consumption increased by 1.9 % year on year, while in 2014 it decreased by 6.2 % compared with the previous year. According to provisional results, energy consumption in 2015 increased again by 2.0 % year on year. The value of the indicator in 2015 decreased by a total of 5.7 % compared with 2005. However, there are currently no signs of a continuous reduction.<br /><br />In 2015, direct energy consumption by households accounted for 39.2 % of overall household energy consumption. Of this amount, energy sources including electricity and district heating accounted for 62.6 % and fuels for 37.4 %. The greater proportion of overall energy consumption at 60.8 % was indirect energy consumption associated with the production of consumer goods domestically and abroad.<br /><br />Energy consumption is differentiated according to areas of demand such as housing, mobility, food, other products and services. Most energy is consumed in the sectors of housing, transport and food. In 2015, housing was the sector with the highest consumption of roughly 3,324 petajoules (35.6 % of total household consumption). The losses occurring during the generation of electricity and district heating for households are included here as indirect consumption.<br /><br />The development of energy-related CO<sub>2</sub> emissions shows a pattern similar to that of energy consumption. In 2015, CO<sub>2</sub> emissions by households, including the emission content of consumer goods and emissions from the combustion of biomass, amounted to 638 million tonnes, which was thus a 1.0% decline compared with 2005. The combustion of fuels accounted for 33.3 % of emissions, with the remaining 66.7 % accounted for by the production of consumer goods. Between 2005 and 2015, direct CO<sub>2</sub> emissions decreased by 2.5 %, although the emission content of consumer goods increased by 2.5 %.</p>
+          <p> <p><i>Text from the Indicator Report 2018</i><br /><br />The data are derived from the environmental-economic accounts of the Federal Statistical Office based on the energy balances from the AGEB (Energy Balance Association) and on the emission reporting of the German Environment Agency.<br /><br />Households consume energy directly, for example, for heating or through the consumption of fuels for road transport. In addition to this direct energy consumption, substantial amounts of energy are consumed in the production of goods for private consumption. This indirect energy consumption occurs domestically and abroad, among both the direct producers of the consumer goods and their suppliers. Both forms are recorded by this indicator.<br /><br />The same applies to the emissions of carbon dioxide (CO2), presented here as an index for information purposes. In addition to the direct emissions by households caused by the combustion of fuels, much greater quantities of emissions are generated indirectly during the production of consumer goods. The depicted key figure includes both direct as well as indirect emissions.<br /><br />Closer analysis of the time series reveals a wavelike trend in energy consumption due to the consumption activities of households with a slight increase of 1.9 % from 2005 until 2010. Between 2010 and 2012, energy consumption by households declined steadily by a total of 5.3 %. In 2013, however, consumption increased by 1.9 % year on year, while in 2014 it decreased by 6.2 % compared with the previous year. According to provisional results, energy consumption in 2015 increased again by 2.0 % year on year. The value of the indicator in 2015 decreased by a total of 5.7 % compared with 2005. However, there are currently no signs of a continuous reduction.<br /><br />In 2015, direct energy consumption by households accounted for 39.2 % of overall household energy consumption. Of this amount, energy sources including electricity and district heating accounted for 62.6 % and fuels for 37.4 %. The greater proportion of overall energy consumption at 60.8 % was indirect energy consumption associated with the production of consumer goods domestically and abroad.<br /><br />Energy consumption is differentiated according to areas of demand such as housing, mobility, food, other products and services. Most energy is consumed in the sectors of housing, transport and food. In 2015, housing was the sector with the highest consumption of roughly 3,324 petajoules (35.6 % of total household consumption). The losses occurring during the generation of electricity and district heating for households are included here as indirect consumption.<br /><br />The development of energy-related CO2 emissions shows a pattern similar to that of energy consumption. In 2015, CO2 emissions by households, including the emission content of consumer goods and emissions from the combustion of biomass, amounted to 638 million tonnes, which was thus a 1.0% decline compared with 2005. The combustion of fuels accounted for 33.3 % of emissions, with the remaining 66.7 % accounted for by the production of consumer goods. Between 2005 and 2015, direct CO2 emissions decreased by 2.5 %, although the emission content of consumer goods increased by 2.5 %.</p>
  </p>
         
       </tr>
@@ -1787,7 +1756,7 @@ data-event-label="Change to Sources tab"
 
             <td colspan="4">
               
-                <p>12.1.b - Energy consumption and CO<sub>2</sub> emissions from consumption</p>
+                <p>12.1.b Energy consumption and CO2 emissions from consumption</p>
 
               
             </td>
@@ -1807,17 +1776,6 @@ data-event-label="Change to Sources tab"
       
       <tr>
         
-
-          
-
-            <th scope="row" height="" >Target</th>
-
-            <td colspan="4">
-              
-                <p>Reduce energy consumption continuously</p>
-
-              
-            </td>
 
           
 
@@ -1894,10 +1852,10 @@ data-event-label="Change to Sources tab"
             
               <tr>
                 <th scope="row" height="">Year </th>
-                  <td align="center" style="margin-bottom: 15px;"><p>2012</p></td>
-                  <td align="center" style="margin-bottom: 15px;"><p>2013</p></td>
-                  <td align="center" style="margin-bottom: 15px;"><p>2014</p></td>
+                  <td align="center" style="margin-bottom: 15px;"><p></p></td>
+                  <td align="center" style="margin-bottom: 15px;"><p></p></td>
                   <td align="center" style="margin-bottom: 15px;"><p>2015</p></td>
+                  <td align="center" style="margin-bottom: 15px;"><p>2016</p></td>
               </tr>
             
         
@@ -2032,10 +1990,7 @@ data-event-label="Change to Sources tab"
               <tr>
                 <th scope="row">Evaluation </th>
                   
-                  <td align="center" style="padding-left: 0px;padding-right: 0px;"><a href=" /open-sdg-site-starter/en/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/en/Wolke.png" alt="-" class="responsiveWeather" title="The indicator is moving in the right direction but if the trend continues, the target value will be missed by more than 20&nbsp;% in the target year" style="border: transparent"/></a></td>
-                  <td align="center" style="padding-left: 0px;padding-right: 0px;"><a href=" /open-sdg-site-starter/en/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/en/Blitz.png" alt="-" class="responsiveWeather" title="The indicator is not moving in the right direction so that the gap to the target value is widening" style="border: transparent"/></a></td>
-                  <td align="center" style="padding-left: 0px;padding-right: 0px;"><a href=" /open-sdg-site-starter/en/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/en/Sonne.png" alt="-" class="responsiveWeather" title="If the trend continues, the target value will be met or the difference between the target value and the current value will be less than 5&nbsp;%" style="border: transparent"/></a></td>
-                  <td align="center" style="padding-left: 0px;padding-right: 0px;"><a href=" /open-sdg-site-starter/en/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/en/Leicht bewölkt.png" alt="-" class="responsiveWeather" title="If the trend continues, the indicator will be presumably miss its target by at least 5&nbsp;% and at most 20&nbsp% of the difference between the target value and the current value" style="border: transparent"/></a></td>
+                  <td align="center" style="padding-left: 0px;padding-right: 0px;"><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/en/x.png" alt="-" class="responsiveWeather" title="If the trend continues, the target value will be met or the difference between the target value and the current value will be less than 5&nbsp;%" style="border: transparent"/></td>
                   
               </tr>
             
@@ -2386,8 +2341,6 @@ data-event-label="Change to Sources tab"
     
     <div class="col-md-6">
       
-        <h4>Source 1</h4>
-      
       <table class="table table-hover">
   
 
@@ -2603,7 +2556,7 @@ data-event-label="Change to Sources tab"
 
             <td colspan="4">
               
-                <p><a href="https://www.destatis.de/EN/Home/_node.html"><img src="https://g205sdgs.github.io/sdg-indicators/public/LogosEn/destatis.png" alt="Logo Federal Statistical Office (Destatis)" title="Click here to visit the homepage of the organization" /></a></p>
+                <p><a href="https://www.destatis.de/EN/Home/_node.html"><img src="https://g205sdgs.github.io/sdg-indicators/public/logosEn/destatis.png" alt=" Federal Statistical Office" title="Click here to visit the homepage of the organization" /></a></p>
 
               
             </td>
@@ -2638,7 +2591,7 @@ data-event-label="Change to Sources tab"
 
             <td colspan="4">
               
-                <p>Federal Statistical Office (Destatis)</p>
+                <p>Federal Statistical Office</p>
 
               
             </td>
@@ -2812,1042 +2765,6 @@ data-event-label="Change to Sources tab"
 
     
   
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-</table>
-
-    </div>
-    
-   
-    
-    <div class="col-md-6">
-      
-        <h4>Source 2</h4>
-      
-      <table class="table table-hover">
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-      
-      <tr>
-        
-
-          
-
-            <th scope="row" height="" ></th>
-
-            <td colspan="4">
-              
-                <p><a href="https://www.umweltbundesamt.de/en"><img src="https://g205sdgs.github.io/sdg-indicators/public/LogosEn/uba.png" alt="Logo German Environment Agency (UBA)" title="Click here to visit the homepage of the organization" /></a></p>
-
-              
-            </td>
-
-          
-
-        
-      </tr>
-      
-
-      
-
-    
-  
-
-    
-      
-
-      
-
-    
-  
-
-    
-      
-      <tr>
-        
-
-          
-
-            <th scope="row" height="" >Organisation</th>
-
-            <td colspan="4">
-              
-                <p>German Environment Agency (UBA)</p>
-
-              
-            </td>
-
-          
-
-        
-      </tr>
-      
-
-      
-
-    
-  
-
-    
-      
-      <tr>
-        
-
-          
-
-        
-      </tr>
-      
-
-      
-
-    
-  
-
-    
-      
-
-      
-
-    
-  
-
-    
-      
-      <tr>
-        
-
-          
-
-        
-      </tr>
-      
-
-      
-
-    
-  
-
-    
-      
-
-      
-
-    
-  
-
-    
-      
-      <tr>
-        
-
-          
-
-        
-      </tr>
-      
-
-      
-
-    
-  
-
-    
-      
-
-      
-
-    
-  
-
-    
-      
-      <tr>
-        
-
-          
-
-        
-      </tr>
-      
-
-      
-
-    
-  
-
-    
-      
-
-      
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-</table>
-
-    </div>
-    
-   
-    
-    <div class="col-md-6">
-      
-        <h4>Source 3</h4>
-      
-      <table class="table table-hover">
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-  
-
-    
-      
-      <tr>
-        
-
-          
-
-            <th scope="row" height="" ></th>
-
-            <td colspan="4">
-              
-                <p><a href="https://ag-energiebilanzen.de/4-1-Home.html"><img src="https://g205sdgs.github.io/sdg-indicators/public/LogosEn/ageb.png" alt="Logo Energy Balance Association (AGEB)" title="Click here to visit the homepage of the organization" /></a></p>
-
-              
-            </td>
-
-          
-
-        
-      </tr>
-      
-
-      
-
-    
-  
-
-    
-      
-
-      
-
-    
-  
-
-    
-      
-      <tr>
-        
-
-          
-
-            <th scope="row" height="" >Organisation</th>
-
-            <td colspan="4">
-              
-                <p>Energy Balance Association (AGEB)</p>
-
-              
-            </td>
-
-          
-
-        
-      </tr>
-      
-
-      
-
-    
-  
-
-    
-      
-      <tr>
-        
-
-          
-
-        
-      </tr>
-      
-
-      
-
-    
-  
-
-    
-      
-
-      
-
-    
-  
-
-    
-      
-      <tr>
-        
-
-          
-
-        
-      </tr>
-      
-
-      
-
-    
-  
-
-    
-      
-
-      
-
-    
-  
-
-    
-      
-      <tr>
-        
-
-          
-
-        
-      </tr>
-      
-
-      
-
-    
-  
-
-    
-      
-
-      
 
     
   
@@ -4001,7 +2918,7 @@ data-event-label="Change to Sources tab"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20210128001027'></script><script src="/open-sdg-site-starter/assets/js/chartColors.js?v=20210128001027"></script><script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20210128115831'></script><script src="/open-sdg-site-starter/assets/js/chartColors.js?v=20210128115831"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

@@ -141,7 +141,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20210128001027">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20210128115831">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -149,7 +149,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20210128001027"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20210128115831"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
 <body class="language-en layout-indicator">
@@ -400,12 +400,6 @@ var translations = {
       <!--
 
       
-        <li class="btn">
-          <a href="https://g205sdgs.github.io/sdg-indicators/2-2-2/">
-            Related global indicator: 2.2.2
-          </a>
-        </li>
-      
 
 
       <li class="pull-right">
@@ -431,24 +425,17 @@ var translations = {
 
   <!---3 Btns if there is a corresponding Indicator-->
   
-    <div class="col-xs-3 col-md-3 col-lg-4">
+    <div class="col-xs-6 col-md-6 col-lg-6">
       <a href="/open-sdg-site-starter/en/3-1-cd" class="btn btn-primary btn-block G3-background" role="button">
         <i class="fa fa-chevron-left" aria-hidden="true"></i> <b><span class="btn-label hidden-sm hidden-xs">Previous indicator</span></b>
       </a>
     </div>
 
-    <div class="col-xs-6 col-md-6 col-lg-4">
-      <a href="https://sustainabledevelopment-germany.github.io/en/2-2-2/" class="btn btn-primary btn-block G3-background" title="Go to the page of the corresponding SDG indicator" role="button">
-        <b><span class="btn-label hidden-sm hidden-xs">Related global indicator:</span> SDG-2.2.2</b>
-      </a>
-    </div>
-
-    <div class="col-xs-3 col-md-3 col-lg-4">
+    <div class="col-xs-6 col-md-6 col-lg-6">
       <a href="/open-sdg-site-starter/en/3-1-f" class="btn btn-primary btn-block G3-background" role="button">
         <b><span class="btn-label hidden-sm hidden-xs">Next indicator</span></b> <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
     </div>
-  <!---2 Btns if there is no corresponding Indicator-->
   
 
 <!---Goal page-->
@@ -479,10 +466,10 @@ var translations = {
 
   
 
-  <div class="row" id="indicatorData" data-indicatorid='indicator_3-1-e' data-id="3-1-e" data-country="Germany"
-  data-charttitle="Share of adolescents suffering from excess weight (11 to 17 years)" data-measurementunit="Percentage of those surveyed" data-datasource="Robert Koch Institute" data-copyright="&copy; Federal Statistical Office (Destatis), 2020"
-  data-geographicalarea="Germany" data-footnote="The comparison between the KiGGS baseline study (2003 to 2006) and the KiGGS Wave 2 (2014 to 2017) is based only metadata and has been agestandardised to the population in 2015" data-showdata="true" data-graphtype="bar"
-  data-geocoderegex="" data-showmap="" data-startvalues="a) overweight|b) obese|a) boys|b) girls">
+  <div class="row" id="indicatorData" data-indicatorid='indicator_3-1-e' data-id="3-1-e" data-country=""
+  data-charttitle="Share of adolescents suffering from excess weight (11 to 17 years)" data-measurementunit="Percentage of those surveyed" data-datasource="Robert Koch Institute (RKI)" data-copyright="&copy; Federal Statistical Office (Destatis), 2020"
+  data-geographicalarea="" data-footnote="" data-showdata="true" data-graphtype="line"
+  data-geocoderegex="" data-showmap="" data-startvalues="">
     
     <div id="indicator-sidebar" class="col-md-3">
       <div id="toolbar">
@@ -603,9 +590,6 @@ data-event-label="Change to Map tab"
 <canvas></canvas>
 
 
-
-
-
         </div>
         <div id="plotLegend"></div>
       </div>
@@ -631,7 +615,7 @@ data-event-label="Change to Map tab"
                 
                 
                   
-                    <p>Source: Robert Koch Institute</p>
+                    <p>Source: Robert Koch Institute (RKI)</p>
                   
                 
               </div>
@@ -850,8 +834,8 @@ data-event-label="Change to Sources tab"
                 
 
                 
-                  <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/f078d0eb0de59b8ee03c6a1485f43bbadc3db561" target="_blank">
-                    2020-02-13: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
+                  <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/ef6f5b62561114380569acd043d9f5af9e637ca3" target="_blank">
+                    2021-01-28: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
                   </a>
                 
 
@@ -894,8 +878,8 @@ data-event-label="Change to Sources tab"
                 
 
                 
-                  <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/c91ae6280fd3a6b830bc006d34ef74a59d0cdf58" target="_blank">
-                    2020-04-07: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
+                  <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/f376a5a5951743bf0ae21e3b0e962624544e45c0" target="_blank">
+                    2021-01-28: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
                   </a>
                 
 
@@ -1299,7 +1283,7 @@ data-event-label="Change to Sources tab"
       
       <tr>
          <!-- case: content -->
-          <p> <p><i>Text from the Indicator Report 2018</i><br /><br />The Body Mass Index (BMI) is a benchmark that is used to measure excess weight and especially obesity. It is calculated by dividing the body weight in kilograms by the square of an individual’s height in metres. This calculation does not take age-specific and gender-specific differences into account. Nor does it indicate the individual body mass composition. However, obesity and excess weight among children and adolescents are defined by taking account also of age and gender. In order to determine if people suffer from obesity or excess weight, the individual BMI value is compared with a defined comparison group (reference population). The percentile reference values according to Kromeyer-Hauschild as recommended by the “Arbeitsgemeinschaft Adipositas im Kinder- und Jugendalter” (AGA) are used as a comparative benchmark. According to these values, children and adolescents are considered to be overweight if their BMI value is above the 90th age- and gender-specific percentile of the reference population (&gt; P90). This means that they fall within the range of those 10 % of the reference group with the highest BMI values. A BMI value above the 97th percentile of the reference population (that is, as high as the 3 % of adolescents with the highest BMI values) is classified as obesity (&gt; P97). These reference values are based on details of body size and weight that were recorded between 1985 and 1998 in various regions of Germany using different methods.<br /><br />The data for the indicator are gathered by the Robert Koch Institute (RKI). The German Health Interview and Examination Survey for Children and Adolescents (KiGGS – referred to as the KiGGS baseline study) for the period 2003 to 2006 delivered the first nationwide representative results. In 2015, new results for the reporting years 2009 to 2012 were published (KiGGS Wave 1). These results were based on information provided by respondents via telephone rather than on measured data as in the baseline survey. New measurement data are available for the period 2014 to 2017 from the second follow-up survey of the KiGGS study (KiGGS Wave 2). In order to allow the data to be compared in a suitable way, the results were age standardised to the reference date 31 December 2015 of the population update.<br /><br />For the time period 2014 to 2017, 8.0 % of the adolescents were classified as obese. The proportion of girls was 7.2 % and that of boys 8.7 %. In the period 2003–2006, the proportion of adolescents suffering from obesity was 8.3 %, that is, 8.2 % of the girls and 8.4 % of the boys. Overall, the obesity rate among adolescents was slightly down. While the obesity rate amongst girls decreased by 1.0 percentage point, the rate increased slightly by 0.3 percentage points amongst boys.<br /><br />The proportion of adolescents suffering from excess weight including obesity (&gt; P90) did not change much compared with the period 2003 – 2006 (increase by 0.6 percentage points to 18.7 %).<br /><br />Important factors in the development of overweight are dietary and exercise behaviour, which differ – when looking at the results – in terms of socioeconomic status (SES). The results from KiGGS Wave 2 confirm that 3 to 17-year-old children and adolescents with a low socioeconomic status eat unhealthy more often than their peers from socially better-off families and exercise less frequently. The risk of overweight and obesity is about 3 to 4 times higher for children and adolescents with low SES than in the upper status group (about 20 % of the study population).<br /><br />An opposite phenomenon to overweight is underweight. A BMI value below the 10th percentile of the reference population indicates underweight. The proportion of underweight adolescents has developed in a negative direction over the last few years, increasing from 7.4 % to 8.4 %. In this context, an increase from 7.1 % to 7.5 % can be seen among girls, while the proportion of boys increased even more strongly from 7.7 % to 9.2 %. Overall, more boys than girls are affected by underweight.</p>
+          <p> <p><i>Text from the Indicator Report 2018</i><br /><br />The Body Mass Index (BMI) is a benchmark that is used to measure excess weight and especially obesity. It is calculated by dividing the body weight in kilograms by the square of an individual’s height in metres. This calculation does not take age-specific and gender-specific differences into account. Nor does it indicate the individual body mass composition. However, obesity and excess weight among children and adolescents are defined by taking account also of age and gender. In order to determine if people suffer from obesity or excess weight, the individual BMI value is compared with a defined comparison group (reference population). The percentile reference values according to Kromeyer-Hauschild as recommended by the “Arbeitsgemeinschaft Adipositas im Kinder- und Jugendalter” (AGA) are used as a comparative benchmark. According to these values, children and adolescents are considered to be overweight if their BMI value is above the 90th age- and gender-specific percentile of the reference population (&gt; P90). This means that they fall within the range of those 10 % of the reference group with the highest BMI values. A BMI value above the 97th percentile of the reference population (that is, as high as the 3 % of adolescents with the highest BMI values) is classified as obesity (&gt; P97). These reference values are based on details of body size and weight that were recorded between 1985 and 1998 in various regions of Germany using different methods.<br /><br />The data for the indicator are gathered by the Robert Koch Institute (RKI). The German Health Interview and Examination Survey for Children and Adolescents (KiGGS – referred to as the KiGGS baseline study) for the period 2003 to 2006 delivered the first nationwide representative results. In 2015, new results for the reporting years 2009 to 2012 were published (KiGGS Wave 1). These results were based on information provided by respondents via telephone rather than on measured data as in the baseline survey. New measurement data are available for the period 2014 to 2017 from the second follow-up survey of the KiGGS study (KiGGS Wave 2). In order to allow the data to be compared in a suitable way, the results were age standardised to the reference date 31 December 2015 of the population update.<br /><br />For the time period 2014 to 2017, 8.0 % of the adolescents were classified as obese. The proportion of girls was 7.2 % and that of boys 8.7 %. In the period 2003–2006, the proportion of adolescents suffering from obesity was 8.3 %, that is, 8.2 % of the girls and 8.4 % of the boys. Overall, the obesity rate among adolescents was slightly down. While the obesity rate amongst girls decreased by 1.0 percentage point, the rate increased slightly by 0.3 percentage points amongst boys.<br /><br />The proportion of adolescents suffering from excess weight including obesity (&gt; P90) did not change much compared with the period 2003 – 2006 (increase by 0.6 percentage points to 18.7 %).<br /><br />Important factors in the development of overweight are dietary and exercise behaviour, which differ – when looking at the results – in terms of socioeconomic status (SES). The results from KiGGS Wave 2 confirm that 3 to 17-year-old children and adolescents with a low socioeconomic status eat unhealthy more often than their peers from socially better-off families and exercise less frequently. The risk of overweight and obesity is about 3 to 4 times higher for children and adolescents with low SES than in the upper status group (about 20 % of the study population).<br /><br />An opposite phenomenon to overweight is underweight. A BMI value below the 10th percentile of the reference population indicates underweight. The proportion of underweight adolescents has developed in a negative direction over the last few years, increasing from 7.4 % to 8.4 %. In this context, an increase from 7.1 % to 7.5 % can be seen among girls, while the proportion of boys increased even more strongly from 7.7 % to 9.2 %. Overall, more boys than girls are affected by underweight.</p>
  </p>
         
       </tr>
@@ -1772,7 +1756,7 @@ data-event-label="Change to Sources tab"
 
             <td colspan="4">
               
-                <p>3.1.e - Obesity rate among adolescents</p>
+                <p>3.1.e Obesity rate among adolescents</p>
 
               
             </td>
@@ -1792,17 +1776,6 @@ data-event-label="Change to Sources tab"
       
       <tr>
         
-
-          
-
-            <th scope="row" height="" >Target</th>
-
-            <td colspan="4">
-              
-                <p>Further increase is to be permanently stopped.</p>
-
-              
-            </td>
 
           
 
@@ -2017,7 +1990,7 @@ data-event-label="Change to Sources tab"
               <tr>
                 <th scope="row">Evaluation </th>
                   
-                  <td align="center" style="padding-left: 0px;padding-right: 0px;"><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/en/x.png" alt="-" class="responsiveWeather" title="No evaluation possible" style="border: transparent"/></td>
+                  <td align="center" style="padding-left: 0px;padding-right: 0px;"><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/en/x.png" alt="-" class="responsiveWeather" title="" style="border: transparent"/></td>
                   
               </tr>
             
@@ -2583,7 +2556,7 @@ data-event-label="Change to Sources tab"
 
             <td colspan="4">
               
-                <p><a href="https://www.rki.de/EN/Home/homepage_node.html"><img src="https://g205sdgs.github.io/sdg-indicators/public/LogosEn/rki.png" alt="Logo Robert Koch Institute (RKI)" title="Click here to visit the homepage of the organization" /></a></p>
+                <p><a href="https://www.rki.de/EN/Home/homepage_node.html"><img src="https://g205sdgs.github.io/sdg-indicators/public/logosEn/rki.png" alt=" Robert Koch Institute" title="Click here to visit the homepage of the organization" /></a></p>
 
               
             </td>
@@ -2618,7 +2591,7 @@ data-event-label="Change to Sources tab"
 
             <td colspan="4">
               
-                <p>Robert Koch Institute (RKI)</p>
+                <p>Robert Koch Institute</p>
 
               
             </td>
@@ -2638,6 +2611,26 @@ data-event-label="Change to Sources tab"
       
       <tr>
         
+
+          
+
+            <th scope="row" height="" >Link to <br>data source</th>
+
+            <td colspan="4">
+              
+                
+                
+                
+                
+
+                
+                  <a href="http://www.rki.de/DE/Content/Gesundheitsmonitoring/Studien/Kiggs/kiggs_node.html" target="_blank">
+                    KiGGS: Studie zur Gesundheit von Kindern und Jugendlichen in Deutschland <span class="visuallyhidden">opens in a new window</span>
+                  </a>
+                
+
+              
+            </td>
 
           
 
@@ -2945,7 +2938,7 @@ data-event-label="Change to Sources tab"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20210128001027'></script><script src="/open-sdg-site-starter/assets/js/chartColors.js?v=20210128001027"></script><script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20210128115831'></script><script src="/open-sdg-site-starter/assets/js/chartColors.js?v=20210128115831"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
