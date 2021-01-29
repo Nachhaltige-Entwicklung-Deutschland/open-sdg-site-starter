@@ -47,12 +47,20 @@
   {% for group in goal_indicators %}
     {% assign target_id = group.name %}
     {% assign target_id_dashes = target_id | replace: ".", "-" %}
+
     {% assign target_title_key = target_id | append: '-title' %}
-    {% assign range_title_key = target_id | minus: 2 | append: '-title' %}
     {% assign target_title_key_dashes = target_id_dashes | append: '-title' %}
-    {% assign range_title_key_dashes = target_id_dashes | minus: 2 | append: '-title' %}
-    {% assign target_range = t.dns_ranges[range_title_key_dashes] | default: t.dns_ranges[range_title_key] %}
     {% assign target_title = t.dns_targets[target_title_key_dashes] | default: t.dns_targets[target_title_key] %}
+
+
+
+    {% assign size = target_id | size | minus: 2 %}
+    {{ target_id | slice: 0, size }}
+    {% assign target_id_dashes = target_id | replace: ".", "-" %}
+    {% assign range_title_key = target_id  | append: '-title' %}
+    {% assign range_title_key_dashes = target_id_dashes | append: '-title' %}
+    {% assign target_range = t.dns_ranges[range_title_key_dashes] | default: t.dns_ranges[range_title_key] %}
+
     <div class="indicator-cards target col-md-6">
       <span>
         {{ target_range }}
