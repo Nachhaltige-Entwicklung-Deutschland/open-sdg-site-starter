@@ -56,12 +56,13 @@
 
     {% assign size = target_id | size | minus: 2 %}
     {{ target_id | slice: 0, size }}
+    <script>console.log({{target_id|json}})</script>
     {% assign target_id_dashes = target_id | replace: ".", "-" %}
     {% assign range_title_key = target_id  | append: '-title' %}
     {% assign range_title_key_dashes = target_id_dashes | append: '-title' %}
     {% assign target_range = t.dns_ranges[range_title_key_dashes] | default: t.dns_ranges[range_title_key] %}
     <script>console.log({{range_title_key|json}});</script>
-    <script>console.log("-" {{target_range|json}});</script>
+    <script>console.log({{target_range|json}});</script>
     <div class="indicator-cards target col-md-6">
       <span>
         {{ target_range }}
