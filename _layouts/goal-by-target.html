@@ -55,8 +55,8 @@
 
 
     {% assign size = target_id | size | minus: 2 %}
-    {% assign range_id = target_id | slice: 0, size %}
-    
+    {% assign range_id = target_id | slice: 0, size | replace: "-", "." %}
+
     {% assign range_title_key = range_id  | append: '-title' %}
     {% assign target_range = t.dns_ranges[range_title_key] %}
     <script>console.log({{range_title_key|json}});</script>
