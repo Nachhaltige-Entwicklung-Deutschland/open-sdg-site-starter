@@ -141,7 +141,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20210129001015">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20210129063246">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -149,7 +149,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20210129001015"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20210129063246"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
 <body class="language-de layout-indicator">
@@ -366,7 +366,7 @@ var translations = {
     <div class="row">
       <div class="col-xs-4 col-md-3 col-lg-2">
         <a href="/open-sdg-site-starter/12" title="Zeigt die Indikatorenliste zum SDG-Ziel an.">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/12.png" alt="Verantwortungsvolle Konsum- und Produktionsmuster - Ziel 12" title="Für nachhaltige Konsum- und Produktionsmuster sorgen" />
+          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/12.png" alt="Verantwortungsvolle Konsum- und Produktionsmuster - Ziel 12" title="Nachhaltige Konsum- und Produktionsmuster sicherstellen" />
         </a>
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10">
@@ -466,9 +466,9 @@ var translations = {
 
   
 
-  <div class="row" id="indicatorData" data-indicatorid='indicator_12-1-b' data-id="12-1-b" data-country=""
+  <div class="row" id="indicatorData" data-indicatorid='indicator_12-1-b' data-id="12-1-b" data-country="Deutschland"
   data-charttitle="Globale Umweltinanspruchnahme durch den Konsums privater Haushalte" data-measurementunit="2010=100" data-datasource="Statistisches Bundesamt (Destatis)" data-copyright="&copy; Statistisches Bundesamt (Destatis), 2021"
-  data-geographicalarea="" data-footnote="" data-showdata="true" data-graphtype="line"
+  data-geographicalarea="Deutschland" data-footnote="2016 provisional data" data-showdata="true" data-graphtype="line"
   data-geocoderegex="" data-showmap="" data-startvalues="">
     
     <div id="indicator-sidebar" class="col-md-3">
@@ -588,6 +588,26 @@ data-event-label="Change to Map tab"
         <div id="chart" class="plot-container">
           
 <canvas></canvas>
+
+  <script>
+    opensdg.chartConfigAlter = function(config) {
+      var overrides = {
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                min: 80.0,
+                max: 120.0
+              }
+            }]
+          }
+        }
+      }
+      // Add these overrides onto the normal config, and return it.
+      $.extend(true, config, overrides);
+      return config;
+    }
+  </script>
 
 
         </div>
@@ -878,8 +898,8 @@ data-event-label="Change to Sources tab"
                 
 
                 
-                  <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/f376a5a5951743bf0ae21e3b0e962624544e45c0" target="_blank">
-                    2021-01-28: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+                  <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/22774e0848b9ae052e5b107a0e56ed7e4f087a24" target="_blank">
+                    2021-01-29: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
                   </a>
                 
 
@@ -1283,7 +1303,7 @@ data-event-label="Change to Sources tab"
       
       <tr>
          <!-- case: content -->
-          <p> <p><i> Text aus dem Indikatorenbericht 2018</i><br /><br />Das Konsumverhalten privater Haushalte hat verschiedene Auswirkungen auf die Umwelt. Der Indikator stellt drei der verantwortlichen Einflussfaktoren, Energie, CO2-Emissionen und den Rohstoffeinsatz, dar. Die zugehörigen Daten werden in den umweltökonomischen Gesamtrechnungen aus verschiedenen amtlichen und nichtamtlichen Quellen errechnet.<br /><br />Ressourcen können direkt oder indirekt durch Haushalte konsumiert werden. Der Einsatz von Erdgas, etwa zum Heizen, oder von Kraftstoff im Straßenverkehr, aber auch der Verzehr von Nahrung zählen zum direkten Konsum. Zudem werden Ressourcen auch während des gesamten Herstellungsprozesses von Konsumgütern und deren Transport im In- und Ausland in den Gütern gebunden oder verbraucht. Der Konsum erfolgt dann indirekt bei Erwerb und Nutzung dieser Güter durch inländische private Haushalte. Beide Arten des Konsums werden mit dem vorliegenden Indikator erfasst und getrennt für Energie, Rohstoffe und CO2 dargestellt.<br /><br />Rohstoffeinsatz, Energieverbrauch und CO2-Ausstoß sind eng miteinander verbunden. Der stoffliche Einsatz von Kohle, Öl oder Gas in Kraftwerken und Heizungen zur Produktion von Strom und Wärme ist gleichzeitig ein Verbrauch von Energie. Zudem zieht das Verbrennen von Energieträgern in der Regel auch den Ausstoß von CO2 nach sich.<br /><br />Der Einsatz von Rohstoffen umfasst jedoch nicht nur Energieträger. Dies wird auch in den Zeitreihen offenbar: Während die Daten für Energieverbrauch und Emissionen einen wellenförmigen, insgesamt rückläufigen Verlauf aufweisen, ist diese Entwicklung für den Rohstoffe-insatz weniger markant. In den Rohstoffeinsatz fließen nämlich neben abiotischen Rohstof-fen, zu denen neben Energieträgern beispielsweise auch andere mineralische Rohstoffe wie Sand oder Salze gehören, auch erneuerbare Rohstoffe, wie land- und forstwirtschaftliche Erzeugnisse. Während der Einsatz von abiotischen Rohstoffen kontinuierlich sinkt, gibt es im Bereich der landwirtschaftlichen Erzeugnisse größere Schwankungen. Dies führte, im Vergleich zu den anderen Teilindikatoren, zu einem weniger ausgeprägten Rückgang um insgesamt 3 % von 2010 bis 2016.<br /><br />Im gleichen Zeitraum verzeichnete der Energieverbrauch dagegen einen Rückgang um 8 %. Verluste, die bei der Erzeugung von Strom und Fernwärme für den Konsum privater Haushalte anfallen, sind dabei im indirekten Verbrauch berücksichtigt. Der Energieverbrauch lässt sich in die Bedarfsfelder Wohnen, Mobilität, Ernährung, sonstige Produkte und Dienstleistungen gliedern. Der Bereich Wohnen machte dabei im Jahr 2016 mit insgesamt rund 3 406 Petajoule (36,8 % des Gesamtverbrauchs der privaten Haushalte) den größten Teil aus.<br /><br />Die CO2-Emissionen zeigen eine ähnliche Entwicklung. Die überwiegenden Mengen an Emissionen entstehen bereits indirekt bei der Produktion der Konsumgüter im In- und Ausland und nicht erst beim Konsum der Güter selbst. Insgesamt betrugen die CO2-Emissionen durch den Konsum privater Haushalte im Jahr 2016 631 Millionen Tonnen. Dabei lag das Verhältnis zwischen direkten und indirekten Emissionen bei 1:1,8. Zwischen 2010 und 2016 sanken die direkten CO2-Emissionen um 8,5 % und der Emissionsgehalt der Konsumgüter um 5,8 %.<br /><br />Dieser Indikator weist Querbezüge zum Indikator 8.1 „Gesamtrohstoffproduktivität“ auf, in dem der Rohstoffeinsatz nicht nur für den Konsum privater Haushalte, sondern auch für andere Verwendungszwecke, in Relation zum monetären Wert dargestellt wird.</p>
+          <p> <p><i> Text aus dem Indikatorenbericht 2020</i><br /><br />Das Konsumverhalten privater Haushalte hat verschiedene Auswirkungen auf die Umwelt. Der Indikator stellt drei der verantwortlichen Einflussfaktoren, Energie, CO2-Emissionen und den Rohstoffeinsatz, dar. Die zugehörigen Daten werden in den umweltökonomischen Gesamtrechnungen aus verschiedenen amtlichen und nichtamtlichen Quellen errechnet.<br /><br />Ressourcen können direkt oder indirekt durch Haushalte konsumiert werden. Der Einsatz von Erdgas, etwa zum Heizen, oder von Kraftstoff im Straßenverkehr, aber auch der Verzehr von Nahrung zählen zum direkten Konsum. Zudem werden Ressourcen auch während des gesamten Herstellungsprozesses von Konsumgütern und deren Transport im In- und Ausland in den Gütern gebunden oder verbraucht. Der Konsum erfolgt dann indirekt bei Erwerb und Nutzung dieser Güter durch inländische private Haushalte. Beide Arten des Konsums werden mit dem vorliegenden Indikator erfasst und getrennt für Energie, Rohstoffe und CO2 dargestellt.<br /><br />Rohstoffeinsatz, Energieverbrauch und CO2-Ausstoß sind eng miteinander verbunden. Der stoffliche Einsatz von Kohle, Öl oder Gas in Kraftwerken und Heizungen zur Produktion von Strom und Wärme ist gleichzeitig ein Verbrauch von Energie. Zudem zieht das Verbrennen von Energieträgern in der Regel auch den Ausstoß von CO2 nach sich.<br /><br />Der Einsatz von Rohstoffen umfasst jedoch nicht nur Energieträger. Dies wird auch in den Zeitreihen offenbar: Während die Daten für Energieverbrauch und Emissionen einen wellenförmigen, insgesamt rückläufigen Verlauf aufweisen, ist diese Entwicklung für den Rohstoffe-insatz weniger markant. In den Rohstoffeinsatz fließen nämlich neben abiotischen Rohstof-fen, zu denen neben Energieträgern beispielsweise auch andere mineralische Rohstoffe wie Sand oder Salze gehören, auch erneuerbare Rohstoffe, wie land- und forstwirtschaftliche Erzeugnisse. Während der Einsatz von abiotischen Rohstoffen kontinuierlich sinkt, gibt es im Bereich der landwirtschaftlichen Erzeugnisse größere Schwankungen. Dies führte, im Vergleich zu den anderen Teilindikatoren, zu einem weniger ausgeprägten Rückgang um insgesamt 3 % von 2010 bis 2016.<br /><br />Im gleichen Zeitraum verzeichnete der Energieverbrauch dagegen einen Rückgang um 8 %. Verluste, die bei der Erzeugung von Strom und Fernwärme für den Konsum privater Haushalte anfallen, sind dabei im indirekten Verbrauch berücksichtigt. Der Energieverbrauch lässt sich in die Bedarfsfelder Wohnen, Mobilität, Ernährung, sonstige Produkte und Dienstleistungen gliedern. Der Bereich Wohnen machte dabei im Jahr 2016 mit insgesamt rund 3 406 Petajoule (36,8 % des Gesamtverbrauchs der privaten Haushalte) den größten Teil aus.<br /><br />Die CO2-Emissionen zeigen eine ähnliche Entwicklung. Die überwiegenden Mengen an Emissionen entstehen bereits indirekt bei der Produktion der Konsumgüter im In- und Ausland und nicht erst beim Konsum der Güter selbst. Insgesamt betrugen die CO2-Emissionen durch den Konsum privater Haushalte im Jahr 2016 631 Millionen Tonnen. Dabei lag das Verhältnis zwischen direkten und indirekten Emissionen bei 1:1,8. Zwischen 2010 und 2016 sanken die direkten CO2-Emissionen um 8,5 % und der Emissionsgehalt der Konsumgüter um 5,8 %.<br /><br />Dieser Indikator weist Querbezüge zum Indikator 8.1 „Gesamtrohstoffproduktivität“ auf, in dem der Rohstoffeinsatz nicht nur für den Konsum privater Haushalte, sondern auch für andere Verwendungszwecke, in Relation zum monetären Wert dargestellt wird.</p>
  </p>
         
       </tr>
@@ -1670,6 +1690,8 @@ data-event-label="Change to Sources tab"
     
     <div class="col-md-6">
       
+        <h4>Zeitreihe 1</h4>
+      
       <table class="table table-hover">
   
 
@@ -1756,7 +1778,7 @@ data-event-label="Change to Sources tab"
 
             <td colspan="4">
               
-                <p>12.1.b Globale Umweltinanspruchnahme des Konsums privater Haushalte</p>
+                <p>12.1.ba Globale Umweltinanspruchnahme durch den Konsums privater Haushalte  - Rohstoffeinsatz</p>
 
               
             </td>
@@ -1776,6 +1798,17 @@ data-event-label="Change to Sources tab"
       
       <tr>
         
+
+          
+
+            <th scope="row" height="" >Ziel</th>
+
+            <td colspan="4">
+              
+                <p>Kontinuierliche Reduzierung</p>
+
+              
+            </td>
 
           
 
@@ -2090,6 +2123,585 @@ data-event-label="Change to Sources tab"
 
     
   
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+</table>
+
+    </div>
+    
+   
+    
+    <div class="col-md-6">
+      
+        <h4>Zeitreihe 2</h4>
+      
+      <table class="table table-hover">
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+  
+
+    
+      
+      <tr>
+        
+
+          
+
+            <th scope="row" height="" >Indikator</th>
+
+            <td colspan="4">
+              
+                <p>12.1.bb Globale Umweltinanspruchnahme durch den Konsums privater Haushalte - Energieverbrauch</p>
+
+              
+            </td>
+
+          
+
+        
+      </tr>
+      
+
+      
+
+    
+  
+
+    
+      
+      <tr>
+        
+
+          
+
+            <th scope="row" height="" >Ziel</th>
+
+            <td colspan="4">
+              
+                <p>Kontinuierliche Reduzierung</p>
+
+              
+            </td>
+
+          
+
+        
+      </tr>
+      
+
+      
+
+    
+  
+
+    
+      
+
+      
+
+        
+          
+        
+
+      
+
+    
+  
+
+    
+      
+
+      
+
+        
+          
+        
+
+      
+
+    
+  
+
+    
+      
+
+      
+
+        
+          
+        
+
+      
+
+    
+  
+
+    
+      
+
+      
+
+        
+          
+
+        
+        
+        
+        
+        
+        
+        
+        
+
+        
+
+            
+              <tr>
+                <th scope="row" height="">Jahr </th>
+                  <td align="center" style="margin-bottom: 15px;"><p></p></td>
+                  <td align="center" style="margin-bottom: 15px;"><p></p></td>
+                  <td align="center" style="margin-bottom: 15px;"><p>2015</p></td>
+                  <td align="center" style="margin-bottom: 15px;"><p>2016</p></td>
+              </tr>
+            
+        
+
+      
+
+    
+  
+
+    
+      
+
+      
+
+        
+          
+        
+
+      
+
+    
+  
+
+    
+      
+
+      
+
+        
+          
+        
+
+      
+
+    
+  
+
+    
+      
+
+      
+
+        
+          
+        
+
+      
+
+    
+  
+
+    
+      
+
+      
+
+        
+          
+
+        
+        
+        
+        
+        
+        
+        
+        
+
+        
+
+            
+              <tr>
+                <th scope="row">Bewertung </th>
+                  
+                  <td align="center" style="padding-left: 0px;padding-right: 0px;"><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/de/x.png" alt="-" class="responsiveWeather" title="Bei Fortsetzung der Entwicklung würde das Ziel voraussichtlich um mindestens 5&nbsp;%, aber maximal um 20&nbsp;% der Differenz zwischen Zielwert und aktuellem Wert verfehlt" style="border: transparent"/></td>
+                  
+              </tr>
+            
+        
+
+      
 
     
   
@@ -2918,7 +3530,7 @@ data-event-label="Change to Sources tab"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20210129001015'></script><script src="/open-sdg-site-starter/assets/js/chartColors.js?v=20210129001015"></script><script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20210129063246'></script><script src="/open-sdg-site-starter/assets/js/chartColors.js?v=20210129063246"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

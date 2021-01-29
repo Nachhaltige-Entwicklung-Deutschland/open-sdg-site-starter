@@ -141,7 +141,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20210129001015">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20210129063246">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -149,7 +149,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20210129001015"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20210129063246"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
 <body class="language-de layout-indicator">
@@ -366,7 +366,7 @@ var translations = {
     <div class="row">
       <div class="col-xs-4 col-md-3 col-lg-2">
         <a href="/open-sdg-site-starter/12" title="Zeigt die Indikatorenliste zum SDG-Ziel an.">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/12.png" alt="Verantwortungsvolle Konsum- und Produktionsmuster - Ziel 12" title="Für nachhaltige Konsum- und Produktionsmuster sorgen" />
+          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/12.png" alt="Verantwortungsvolle Konsum- und Produktionsmuster - Ziel 12" title="Nachhaltige Konsum- und Produktionsmuster sicherstellen" />
         </a>
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10">
@@ -400,6 +400,12 @@ var translations = {
       <!--
 
       
+        <li class="btn">
+          <a href="https://g205sdgs.github.io/sdg-indicators12.6.1">
+            Verwandter globaler Indikator: 12.6.1
+          </a>
+        </li>
+      
 
 
       <li class="pull-right">
@@ -425,17 +431,24 @@ var translations = {
 
   <!---3 Btns if there is a corresponding Indicator-->
   
-    <div class="col-xs-6 col-md-6 col-lg-6">
+    <div class="col-xs-3 col-md-3 col-lg-4">
       <a href="/open-sdg-site-starter/12-1-b" class="btn btn-primary btn-block G12-background" role="button">
         <i class="fa fa-chevron-left" aria-hidden="true"></i> <b><span class="btn-label hidden-sm hidden-xs">Vorheriger Indikator</span></b>
       </a>
     </div>
 
-    <div class="col-xs-6 col-md-6 col-lg-6">
+    <div class="col-xs-6 col-md-6 col-lg-4">
+      <a href="https://sustainabledevelopment-germany.github.io/12.6.1" class="btn btn-primary btn-block G12-background" title="Hier gelangen Sie zur Seite des korrespondierenden SDG-Indikators" role="button">
+        <b><span class="btn-label hidden-sm hidden-xs">Verwandter globaler Indikator:</span> SDG-12.6.1</b>
+      </a>
+    </div>
+
+    <div class="col-xs-3 col-md-3 col-lg-4">
       <a href="/open-sdg-site-starter/12-3-ab" class="btn btn-primary btn-block G12-background" role="button">
         <b><span class="btn-label hidden-sm hidden-xs">Nächster Indikator</span></b> <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
     </div>
+  <!---2 Btns if there is no corresponding Indicator-->
   
 
 <!---Goal page-->
@@ -466,10 +479,10 @@ var translations = {
 
   
 
-  <div class="row" id="indicatorData" data-indicatorid='indicator_12-2-a' data-id="12-2-a" data-country=""
+  <div class="row" id="indicatorData" data-indicatorid='indicator_12-2-a' data-id="12-2-a" data-country="Deutschland"
   data-charttitle="Einsatz des Umweltmanagementsystems EMAS in Deutschland" data-measurementunit="Anzahl der registrierten Organisationen/Standorte; Anzahl der Beschäftigten, in Tausend" data-datasource="Deutscher Industrie- und Handelskammertag e. V. (DIHK)" data-copyright="&copy; Statistisches Bundesamt (Destatis), 2021"
-  data-geographicalarea="" data-footnote="" data-showdata="true" data-graphtype="line"
-  data-geocoderegex="" data-showmap="" data-startvalues="">
+  data-geographicalarea="Deutschland" data-footnote="EMAS = Eco-Management and Audit Scheme; There is a difference between the national results and the results of the Länder due to locations abroad that are included in the count for the national results." data-showdata="true" data-graphtype="line"
+  data-geocoderegex="" data-showmap="true" data-startvalues="">
     
     <div id="indicator-sidebar" class="col-md-3">
       <div id="toolbar">
@@ -588,6 +601,26 @@ data-event-label="Change to Map tab"
         <div id="chart" class="plot-container">
           
 <canvas></canvas>
+
+  <script>
+    opensdg.chartConfigAlter = function(config) {
+      var overrides = {
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                min: nan,
+                max: nan
+              }
+            }]
+          }
+        }
+      }
+      // Add these overrides onto the normal config, and return it.
+      $.extend(true, config, overrides);
+      return config;
+    }
+  </script>
 
 
         </div>
@@ -878,8 +911,8 @@ data-event-label="Change to Sources tab"
                 
 
                 
-                  <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/f376a5a5951743bf0ae21e3b0e962624544e45c0" target="_blank">
-                    2021-01-28: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+                  <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/22774e0848b9ae052e5b107a0e56ed7e4f087a24" target="_blank">
+                    2021-01-29: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
                   </a>
                 
 
@@ -1283,7 +1316,7 @@ data-event-label="Change to Sources tab"
       
       <tr>
          <!-- case: content -->
-          <p> <p><i> Text aus dem Indikatorenbericht 2018</i><br /><br />EMAS ist ein freiwilliges Instrument der Europäischen Union, das Organisationen jeder Größe und Branche dabei unterstützt, ihre Umweltleistung kontinuierlich zu verbessern. Eine EMAS-Zertifizierung impliziert nicht, dass eine Organisation oder ihre Produkte per se umweltfreundlicher als vergleichbare Organisationen bzw. Produkte sind. Mit EMAS ist eine Umweltberichtspflicht (sogenannte Umwelterklärung) verbunden. Diese beinhaltet die Berichterstattung zu den wesentlichen Umweltauswirkungen des betreffenden Unternehmens sowie die Datenbereitstellung zu den Themenfeldern Energie und Materialeffizienz, Emissionen, Wasser, Abfall und Flächenverbrauch/biologische Vielfalt. Die Umwelterklärung muss von den Organisationen jährlich – seit 2010 von kleinen und mittleren Unternehmen auf Antrag zweijährlich – aktualisiert werden. Die öffentliche Umwelterklärung sowie weitere interne Dokumente werden von unabhängigen, staatlich zugelassenen Umweltgutachterinnen und -gutachtern geprüft. Die Prüfung ist regelmäßig und dabei spätestens alle drei Jahre zu wiederholen. Organisationen, welche die Überprüfung erfolgreich bestehen und bei denen keine Umweltrechtsverstöße oder Beschwerden vorliegen, werden in das EMAS-Register eingetragen. Für die Qualitätssicherung ist der Umweltgutachterausschuss<sup>1</sup>  zuständig. EMAS-Organisationen und -Standorte werden durch die zuständige Industrie- und Handelskammer oder Handwerkskammer registriert und in einer öffentlich zugänglichen Datenbank beim Deutschen Industrie- und Handelskammertag gespeichert.<br /><br />Methodisch ist zu beachten, dass im EMAS-Register die Anzahl der Registrierungen abgebildet wird. Teilnehmenden Organisationen steht es frei, unter einer Organisationsregistrierung mehrere Standorte aufzunehmen (Sammelregistrierung) oder Standorte einzeln registrieren zu lassen. Einige Organisationen haben zum Teil auch ihre ausländischen Standorte in Deutschland registrieren lassen oder ausländische Organisationen ihre deutschen Standorte. Diese befinden sich ebenfalls im EMAS-Register, sind jedoch bei der hier ausgewiesenen Anzahl der EMAS-Standorte nicht enthalten.<br /><br />Im Jahr 2019 waren in Deutschland 2 170 EMAS-Standorte registriert. Dies entspricht einer Erhöhung um 10,8 % gegenüber 2005. Betrachtet man die Entwicklung der letzten fünf Jahre, so hat sich der Indikator im Durchschnitt leicht in Richtung des Ziels entwickelt. Bei gleichbleibender Entwicklung würde das Ziel für 2030 allerdings deutlich verfehlt werden.<br /><br />Die Anzahl der Beschäftigten in den registrierten Organisationen betrug im Jahr 2019 insgesamt 988 401 Personen. Dies entsprach einer Erhöhung von 2,8 % gegenüber 2005.<br /><br />Die 2 170 im Jahr 2019 registrieren EMAS-Standorte in Deutschland gehörten insgesamt 1 150 Organisationen an. Die Zahl der Organisationen ist seit 2005 um 22,9% gesunken. Darüber hinaus waren die Organisationen im Jahr 2019 sehr heterogen auf das Bundesgebiet verteilt. Die meisten waren in Baden-Württemberg (347) und Bayern (288) angesiedelt, gefolgt von Nordrhein-Westfalen (105). In Mecklenburg-Vorpommern gab es dagegen nur zwei registrierte Organisationen. Die Verteilung nach Wirtschaftszweigen im Jahr 2019 gestaltete sich wie folgt: 38,3 % der Organisationen gehörten dem Verarbeitenden Gewerbe, 9,4 % der Erbringung von sonstigen Dienstleistungen, 8,0 % dem Bereich Erziehung und Unterricht sowie 7,6 % dem Gastgewerbe an.<br /><br /><small><sup>1</sup>Der Umweltgutachterausschuss ist ein unabhängiges Beratungsgremium des Bundesministeriums für Umwelt, Naturschutz und nukleare Sicherheit.</small></p>
+          <p> <p><i> Text aus dem Indikatorenbericht 2020</i><br /><br />EMAS ist ein freiwilliges Instrument der Europäischen Union, das Organisationen jeder Größe und Branche dabei unterstützt, ihre Umweltleistung kontinuierlich zu verbessern. Eine EMAS-Zertifizierung impliziert nicht, dass eine Organisation oder ihre Produkte per se umweltfreundlicher als vergleichbare Organisationen bzw. Produkte sind. Mit EMAS ist eine Umweltberichtspflicht (sogenannte Umwelterklärung) verbunden. Diese beinhaltet die Berichterstattung zu den wesentlichen Umweltauswirkungen des betreffenden Unternehmens sowie die Datenbereitstellung zu den Themenfeldern Energie und Materialeffizienz, Emissionen, Wasser, Abfall und Flächenverbrauch/biologische Vielfalt. Die Umwelterklärung muss von den Organisationen jährlich – seit 2010 von kleinen und mittleren Unternehmen auf Antrag zweijährlich – aktualisiert werden. Die öffentliche Umwelterklärung sowie weitere interne Dokumente werden von unabhängigen, staatlich zugelassenen Umweltgutachterinnen und -gutachtern geprüft. Die Prüfung ist regelmäßig und dabei spätestens alle drei Jahre zu wiederholen. Organisationen, welche die Überprüfung erfolgreich bestehen und bei denen keine Umweltrechtsverstöße oder Beschwerden vorliegen, werden in das EMAS-Register eingetragen. Für die Qualitätssicherung ist der Umweltgutachterausschuss<sup>1</sup>  zuständig. EMAS-Organisationen und -Standorte werden durch die zuständige Industrie- und Handelskammer oder Handwerkskammer registriert und in einer öffentlich zugänglichen Datenbank beim Deutschen Industrie- und Handelskammertag gespeichert.<br /><br />Methodisch ist zu beachten, dass im EMAS-Register die Anzahl der Registrierungen abgebildet wird. Teilnehmenden Organisationen steht es frei, unter einer Organisationsregistrierung mehrere Standorte aufzunehmen (Sammelregistrierung) oder Standorte einzeln registrieren zu lassen. Einige Organisationen haben zum Teil auch ihre ausländischen Standorte in Deutschland registrieren lassen oder ausländische Organisationen ihre deutschen Standorte. Diese befinden sich ebenfalls im EMAS-Register, sind jedoch bei der hier ausgewiesenen Anzahl der EMAS-Standorte nicht enthalten.<br /><br />Im Jahr 2019 waren in Deutschland 2 170 EMAS-Standorte registriert. Dies entspricht einer Erhöhung um 10,8 % gegenüber 2005. Betrachtet man die Entwicklung der letzten fünf Jahre, so hat sich der Indikator im Durchschnitt leicht in Richtung des Ziels entwickelt. Bei gleichbleibender Entwicklung würde das Ziel für 2030 allerdings deutlich verfehlt werden.<br /><br />Die Anzahl der Beschäftigten in den registrierten Organisationen betrug im Jahr 2019 insgesamt 988 401 Personen. Dies entsprach einer Erhöhung von 2,8 % gegenüber 2005.<br /><br />Die 2 170 im Jahr 2019 registrieren EMAS-Standorte in Deutschland gehörten insgesamt 1 150 Organisationen an. Die Zahl der Organisationen ist seit 2005 um 22,9% gesunken. Darüber hinaus waren die Organisationen im Jahr 2019 sehr heterogen auf das Bundesgebiet verteilt. Die meisten waren in Baden-Württemberg (347) und Bayern (288) angesiedelt, gefolgt von Nordrhein-Westfalen (105). In Mecklenburg-Vorpommern gab es dagegen nur zwei registrierte Organisationen. Die Verteilung nach Wirtschaftszweigen im Jahr 2019 gestaltete sich wie folgt: 38,3 % der Organisationen gehörten dem Verarbeitenden Gewerbe, 9,4 % der Erbringung von sonstigen Dienstleistungen, 8,0 % dem Bereich Erziehung und Unterricht sowie 7,6 % dem Gastgewerbe an.<br /><br /><small><sup>1</sup>Der Umweltgutachterausschuss ist ein unabhängiges Beratungsgremium des Bundesministeriums für Umwelt, Naturschutz und nukleare Sicherheit.</small></p>
  </p>
         
       </tr>
@@ -1776,6 +1809,17 @@ data-event-label="Change to Sources tab"
       
       <tr>
         
+
+          
+
+            <th scope="row" height="" >Ziel</th>
+
+            <td colspan="4">
+              
+                <p>5 000 Organisationsstandorte bis 2030</p>
+
+              
+            </td>
 
           
 
@@ -2941,7 +2985,7 @@ data-event-label="Change to Sources tab"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20210129001015'></script><script src="/open-sdg-site-starter/assets/js/chartColors.js?v=20210129001015"></script><script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20210129063246'></script><script src="/open-sdg-site-starter/assets/js/chartColors.js?v=20210129063246"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

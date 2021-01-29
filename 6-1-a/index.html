@@ -141,7 +141,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20210129001015">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20210129063246">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -149,7 +149,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20210129001015"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20210129063246"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
 <body class="language-de layout-indicator">
@@ -400,6 +400,12 @@ var translations = {
       <!--
 
       
+        <li class="btn">
+          <a href="https://g205sdgs.github.io/sdg-indicators6.3.2">
+            Verwandter globaler Indikator: 6.3.2
+          </a>
+        </li>
+      
 
 
       <li class="pull-right">
@@ -425,17 +431,24 @@ var translations = {
 
   <!---3 Btns if there is a corresponding Indicator-->
   
-    <div class="col-xs-6 col-md-6 col-lg-6">
+    <div class="col-xs-3 col-md-3 col-lg-4">
       <a href="/open-sdg-site-starter/5-1-e" class="btn btn-primary btn-block G6-background" role="button">
         <i class="fa fa-chevron-left" aria-hidden="true"></i> <b><span class="btn-label hidden-sm hidden-xs">Vorheriger Indikator</span></b>
       </a>
     </div>
 
-    <div class="col-xs-6 col-md-6 col-lg-6">
+    <div class="col-xs-6 col-md-6 col-lg-4">
+      <a href="https://sustainabledevelopment-germany.github.io/6.3.2" class="btn btn-primary btn-block G6-background" title="Hier gelangen Sie zur Seite des korrespondierenden SDG-Indikators" role="button">
+        <b><span class="btn-label hidden-sm hidden-xs">Verwandter globaler Indikator:</span> SDG-6.3.2</b>
+      </a>
+    </div>
+
+    <div class="col-xs-3 col-md-3 col-lg-4">
       <a href="/open-sdg-site-starter/6-1-b" class="btn btn-primary btn-block G6-background" role="button">
         <b><span class="btn-label hidden-sm hidden-xs">Nächster Indikator</span></b> <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
     </div>
+  <!---2 Btns if there is no corresponding Indicator-->
   
 
 <!---Goal page-->
@@ -466,9 +479,9 @@ var translations = {
 
   
 
-  <div class="row" id="indicatorData" data-indicatorid='indicator_6-1-a' data-id="6-1-a" data-country=""
+  <div class="row" id="indicatorData" data-indicatorid='indicator_6-1-a' data-id="6-1-a" data-country="Deutschland"
   data-charttitle="Phosphor in Fließgewässern" data-measurementunit="Anteil der Messstellen, an denen der Orientierungswert des guten ökologischen Zustands für Gesamt-Phosohor eingehalten wird, in %" data-datasource="Umweltbundesamt (UBA) nach Angaben der Bund/Länder-Arbeitsgemeinschaft Wasser" data-copyright="&copy; Statistisches Bundesamt (Destatis), 2021"
-  data-geographicalarea="" data-footnote="" data-showdata="true" data-graphtype="line"
+  data-geographicalarea="Deutschland" data-footnote="" data-showdata="true" data-graphtype="line"
   data-geocoderegex="" data-showmap="" data-startvalues="">
     
     <div id="indicator-sidebar" class="col-md-3">
@@ -588,6 +601,26 @@ data-event-label="Change to Map tab"
         <div id="chart" class="plot-container">
           
 <canvas></canvas>
+
+  <script>
+    opensdg.chartConfigAlter = function(config) {
+      var overrides = {
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                min: nan,
+                max: nan
+              }
+            }]
+          }
+        }
+      }
+      // Add these overrides onto the normal config, and return it.
+      $.extend(true, config, overrides);
+      return config;
+    }
+  </script>
 
 
         </div>
@@ -878,8 +911,8 @@ data-event-label="Change to Sources tab"
                 
 
                 
-                  <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/f376a5a5951743bf0ae21e3b0e962624544e45c0" target="_blank">
-                    2021-01-28: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+                  <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/22774e0848b9ae052e5b107a0e56ed7e4f087a24" target="_blank">
+                    2021-01-29: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
                   </a>
                 
 
@@ -1283,7 +1316,7 @@ data-event-label="Change to Sources tab"
       
       <tr>
          <!-- case: content -->
-          <p> <p><i> Text aus dem Indikatorenbericht 2018</i><br /><br />Die Phosphorbelastung der Flüsse wird von den Bundesländern im Rahmen der Überwachung zur EG-Wasserrahmenrichtlinie gemessen. Für den Indikator werden die Daten des Überblicksmessnetzes genutzt, das aus etwa 250 Messstellen besteht. Die Messstellen wurden meist in den Hauptströmen der großen Flüsse und an Einmündungen bedeutender Nebengewässer eingerichtet. Die Zusammenstellung der Daten erfolgt durch das Umweltbundesamt nach Angaben der Bund/Länder-Arbeitsgemeinschaft Wasser (LAWA).<br /><br />In den Indikator geht ein, ob der Orientierungswert an einer gegebenen Messstelle im Jahresmittel eingehalten oder unterschritten wurde, jedoch nicht wie weit das Ziel bei einer Überschreitung verfehlt wurde. Die Angaben zu den einzelnen Messstellen werden zusammengefasst dargestellt. Entsprechend hängt der Wert des Indikators von der Anzahl und der Repräsentativität der Verteilung der Messstellen ab. Seen und andere Stillgewässer sind durch den Indikator nicht abgedeckt.<br /><br />Da die Gewässertypen unterschiedlich empfindlich auf Nährstoffe wie Phosphor reagieren, variiert der exakte Orientierungswert. Der überwiegende Teil der Fließgewässer hat den Orientierungswert 0,1 Milligramm Phosphor pro Liter. Bei organisch geprägten Flüssen beträgt der Orientierungswert 0,15 Milligramm pro Liter, bei Marschgewässern 0,3 Milligramm pro Liter und bei tidebeeinflussten Übergangsgewässern 0,045 Milligramm pro Liter.<br /><br />Die Indikatoren zu Phosphor- und Nitratgehalt (6.1.a und 6.1.b) decken zwei wesentliche Aspekte der Gewässerqualität ab. Daneben gibt es jedoch noch weitere Komponenten, wie zum Beispiel die Ausstattung der Gewässer mit naturnahen Lebensräumen und die Belastung mit schädlichen Stoffen (wie Metalle, Arzneimittel, Pflanzenschutzmittel), die ebenfalls für die Gewässerqualität relevant sind. Phosphor gelangt im Regelfall durch den Eintrag von Phosphaten in Gewässer.<br /><br />Im Jahr 2018 lag der Jahresmittelwert bei 44 % der Messstellen an Flüssen unter dem Orientierungswert. 50 % der Messstellen wiesen mittlere Konzentrationen, das heißt bis zum Doppelten des Orientierungswertes auf und rund 4 % der Messstellen lagen im Bereich bis zum Vierfachen dieses Wertes (nicht in der Grafik dargestellt). Die übrigen 2 % wiesen noch höhere Konzentrationen auf.<br /><br />Im Zeitverlauf hat sich der Anteil der Messstellen, die den Orientierungswert einhalten, kontinuierlich erhöht und seit 1990 mehr als verdoppelt. Der Prozentsatz der Messstellen mit Konzentrationen bis zum Doppelten des Orientierungswertes hat sich jedoch im gleichen Zeitraum fast verdreifacht. Im Gegenzug verzeichnete der Anteil von Messstellen mit noch höheren Werten seit Anfang der 1990er Jahre einen deutlichen Rückgang. Insbesondere die Einführung phosphatfreier Waschmittel und die Einführung von Grenzwerten für die Einleitung von geklärtem Abwasser haben die Belastung deutlich verringert.<br /><br />Betrachtet man den durchschnittlichen Verlauf der letzten fünf Jahre, so hat sich der Indikator leicht positiv entwickelt. Das Ziel, den jeweils vorgegebenen Grenzwert an allen Messstellen einzuhalten, würde weiterhin deutlich verfehlt.</p>
+          <p> <p><i> Text aus dem Indikatorenbericht 2020</i><br /><br />Die Phosphorbelastung der Flüsse wird von den Bundesländern im Rahmen der Überwachung zur EG-Wasserrahmenrichtlinie gemessen. Für den Indikator werden die Daten des Überblicksmessnetzes genutzt, das aus etwa 250 Messstellen besteht. Die Messstellen wurden meist in den Hauptströmen der großen Flüsse und an Einmündungen bedeutender Nebengewässer eingerichtet. Die Zusammenstellung der Daten erfolgt durch das Umweltbundesamt nach Angaben der Bund/Länder-Arbeitsgemeinschaft Wasser (LAWA).<br /><br />In den Indikator geht ein, ob der Orientierungswert an einer gegebenen Messstelle im Jahresmittel eingehalten oder unterschritten wurde, jedoch nicht wie weit das Ziel bei einer Überschreitung verfehlt wurde. Die Angaben zu den einzelnen Messstellen werden zusammengefasst dargestellt. Entsprechend hängt der Wert des Indikators von der Anzahl und der Repräsentativität der Verteilung der Messstellen ab. Seen und andere Stillgewässer sind durch den Indikator nicht abgedeckt.<br /><br />Da die Gewässertypen unterschiedlich empfindlich auf Nährstoffe wie Phosphor reagieren, variiert der exakte Orientierungswert. Der überwiegende Teil der Fließgewässer hat den Orientierungswert 0,1 Milligramm Phosphor pro Liter. Bei organisch geprägten Flüssen beträgt der Orientierungswert 0,15 Milligramm pro Liter, bei Marschgewässern 0,3 Milligramm pro Liter und bei tidebeeinflussten Übergangsgewässern 0,045 Milligramm pro Liter.<br /><br />Die Indikatoren zu Phosphor- und Nitratgehalt (6.1.a und 6.1.b) decken zwei wesentliche Aspekte der Gewässerqualität ab. Daneben gibt es jedoch noch weitere Komponenten, wie zum Beispiel die Ausstattung der Gewässer mit naturnahen Lebensräumen und die Belastung mit schädlichen Stoffen (wie Metalle, Arzneimittel, Pflanzenschutzmittel), die ebenfalls für die Gewässerqualität relevant sind. Phosphor gelangt im Regelfall durch den Eintrag von Phosphaten in Gewässer.<br /><br />Im Jahr 2018 lag der Jahresmittelwert bei 44 % der Messstellen an Flüssen unter dem Orientierungswert. 50 % der Messstellen wiesen mittlere Konzentrationen, das heißt bis zum Doppelten des Orientierungswertes auf und rund 4 % der Messstellen lagen im Bereich bis zum Vierfachen dieses Wertes (nicht in der Grafik dargestellt). Die übrigen 2 % wiesen noch höhere Konzentrationen auf.<br /><br />Im Zeitverlauf hat sich der Anteil der Messstellen, die den Orientierungswert einhalten, kontinuierlich erhöht und seit 1990 mehr als verdoppelt. Der Prozentsatz der Messstellen mit Konzentrationen bis zum Doppelten des Orientierungswertes hat sich jedoch im gleichen Zeitraum fast verdreifacht. Im Gegenzug verzeichnete der Anteil von Messstellen mit noch höheren Werten seit Anfang der 1990er Jahre einen deutlichen Rückgang. Insbesondere die Einführung phosphatfreier Waschmittel und die Einführung von Grenzwerten für die Einleitung von geklärtem Abwasser haben die Belastung deutlich verringert.<br /><br />Betrachtet man den durchschnittlichen Verlauf der letzten fünf Jahre, so hat sich der Indikator leicht positiv entwickelt. Das Ziel, den jeweils vorgegebenen Grenzwert an allen Messstellen einzuhalten, würde weiterhin deutlich verfehlt.</p>
  </p>
         
       </tr>
@@ -1776,6 +1809,17 @@ data-event-label="Change to Sources tab"
       
       <tr>
         
+
+          
+
+            <th scope="row" height="" >Ziel</th>
+
+            <td colspan="4">
+              
+                <p>Einhaltung oder Unterschreitung der gewässertypischen Orientierungswerte an allen Messstellen bis 2030</p>
+
+              
+            </td>
 
           
 
@@ -2941,7 +2985,7 @@ data-event-label="Change to Sources tab"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20210129001015'></script><script src="/open-sdg-site-starter/assets/js/chartColors.js?v=20210129001015"></script><script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20210129063246'></script><script src="/open-sdg-site-starter/assets/js/chartColors.js?v=20210129063246"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

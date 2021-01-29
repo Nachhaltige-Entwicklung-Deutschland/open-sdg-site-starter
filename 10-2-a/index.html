@@ -141,7 +141,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20210129001015">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20210129063246">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -149,7 +149,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20210129001015"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20210129063246"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
 <body class="language-de layout-indicator">
@@ -366,7 +366,7 @@ var translations = {
     <div class="row">
       <div class="col-xs-4 col-md-3 col-lg-2">
         <a href="/open-sdg-site-starter/10" title="Zeigt die Indikatorenliste zum SDG-Ziel an.">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/10.png" alt="Weniger Ungleichheiten - Ziel 10" title="Ungleichheit innerhalb von und zwischen Staaten verringern" />
+          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/10.png" alt="Weniger Ungleichheiten - Ziel 10" title="Ungleichheit in und zwischen Ländern verringern" />
         </a>
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10">
@@ -400,6 +400,12 @@ var translations = {
       <!--
 
       
+        <li class="btn">
+          <a href="https://g205sdgs.github.io/sdg-indicators10.2.1">
+            Verwandter globaler Indikator: 10.2.1
+          </a>
+        </li>
+      
 
 
       <li class="pull-right">
@@ -425,17 +431,24 @@ var translations = {
 
   <!---3 Btns if there is a corresponding Indicator-->
   
-    <div class="col-xs-6 col-md-6 col-lg-6">
+    <div class="col-xs-3 col-md-3 col-lg-4">
       <a href="/open-sdg-site-starter/10-1-a" class="btn btn-primary btn-block G10-background" role="button">
         <i class="fa fa-chevron-left" aria-hidden="true"></i> <b><span class="btn-label hidden-sm hidden-xs">Vorheriger Indikator</span></b>
       </a>
     </div>
 
-    <div class="col-xs-6 col-md-6 col-lg-6">
+    <div class="col-xs-6 col-md-6 col-lg-4">
+      <a href="https://sustainabledevelopment-germany.github.io/10.2.1" class="btn btn-primary btn-block G10-background" title="Hier gelangen Sie zur Seite des korrespondierenden SDG-Indikators" role="button">
+        <b><span class="btn-label hidden-sm hidden-xs">Verwandter globaler Indikator:</span> SDG-10.2.1</b>
+      </a>
+    </div>
+
+    <div class="col-xs-3 col-md-3 col-lg-4">
       <a href="/open-sdg-site-starter/11-1-a" class="btn btn-primary btn-block G10-background" role="button">
         <b><span class="btn-label hidden-sm hidden-xs">Nächster Indikator</span></b> <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
     </div>
+  <!---2 Btns if there is no corresponding Indicator-->
   
 
 <!---Goal page-->
@@ -466,9 +479,9 @@ var translations = {
 
   
 
-  <div class="row" id="indicatorData" data-indicatorid='indicator_10-2-a' data-id="10-2-a" data-country=""
+  <div class="row" id="indicatorData" data-indicatorid='indicator_10-2-a' data-id="10-2-a" data-country="Deutschland/EU-28"
   data-charttitle="Verfügbares Äquivalenzeinkommen (Gini-Koeffizent)" data-measurementunit="xxx" data-datasource="Statistisches Bundesamt (Destatis), Eurostat, Deutsche Bundesbank, Europäische Zentralbank (EZB), Deutsches Institut für Wirtschaftsforschung (DIW)" data-copyright="&copy; Statistisches Bundesamt (Destatis), 2021"
-  data-geographicalarea="" data-footnote="" data-showdata="true" data-graphtype="line"
+  data-geographicalarea="Deutschland/EU-28" data-footnote="Gini coefficient of wealth: Interim years were interpolated; Social transfers do not include pensions; Gini coefficient of equivalised disposable income: to 2009 EU-27, from 2010 EU-28" data-showdata="true" data-graphtype="line"
   data-geocoderegex="" data-showmap="" data-startvalues="">
     
     <div id="indicator-sidebar" class="col-md-3">
@@ -588,6 +601,26 @@ data-event-label="Change to Map tab"
         <div id="chart" class="plot-container">
           
 <canvas></canvas>
+
+  <script>
+    opensdg.chartConfigAlter = function(config) {
+      var overrides = {
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                min: nan,
+                max: nan
+              }
+            }]
+          }
+        }
+      }
+      // Add these overrides onto the normal config, and return it.
+      $.extend(true, config, overrides);
+      return config;
+    }
+  </script>
 
 
         </div>
@@ -878,8 +911,8 @@ data-event-label="Change to Sources tab"
                 
 
                 
-                  <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/f376a5a5951743bf0ae21e3b0e962624544e45c0" target="_blank">
-                    2021-01-28: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+                  <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/22774e0848b9ae052e5b107a0e56ed7e4f087a24" target="_blank">
+                    2021-01-29: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
                   </a>
                 
 
@@ -1283,7 +1316,7 @@ data-event-label="Change to Sources tab"
       
       <tr>
          <!-- case: content -->
-          <p> <p><i> Text aus dem Indikatorenbericht 2018</i><br /><br />Der Gini-Koeffizient ist ein statistisches Ungleichverteilungsmaß. Er nimmt einen Wert zwischen 0 und 1 an. Verfügt jede Person über exakt das gleiche Einkommen, so nimmt der Koeffizient den Wert 0 an. Erhält dagegen eine einzige Person das gesamte Einkommen, so beträgt der Gini-Koeffizient 1 und gibt somit die Situation bei maximaler Ungleichverteilung an. Je kleiner der Gini-Koeffizient, umso gleicher ist somit das Einkommen verteilt.<br /><br />Das Äquivalenzeinkommen ist ein Wert, der sich aus dem Gesamteinkommen eines Haushalts und der Anzahl und dem Alter der von diesem Einkommen lebenden Personen ergibt. Mithilfe einer Äquivalenzskala werden die Einkommen nach Haushaltsgröße und Zusammensetzung gewichtet, da durch die gemeinsame Nutzung von Wohnraum und Haushaltsgeräten Einspareffekte auftreten. Somit wird ein Vergleich der Einkommen unabhängig von Haushaltsgröße oder Alter der Haushaltsmitglieder ermöglicht, da das Äquivalenzeinkommen jedem Haushaltsmitglied in gleicher Höhe zugeordnet wird. Das verfügbare Äquivalenzeinkommen ist das Einkommen (einschließlich Sozialtransfers) eines Haushalts nach Steuern und anderen Abzügen und somit das Einkommen, das für Ausgaben und Sparen zur Verfügung steht. Abzugrenzen davon ist das Äquivalenzeinkommen vor Sozialleistungen, bei dem das verfügbare Einkommen ohne eventuelle Sozialtransfers (zum Beispiel Arbeitslosengeld oder Wohnbeihilfe) betrachtet wird, sowie das Markteinkommen, das sich vor Steuern, Sozialabgaben und Sozialleistungen errechnet. Bei allen betrachteten Einkommen wird nicht unterschieden, welche Quellen zur Einkommenserzielung dienen (etwa Arbeitslohn, Mieteinkünfte oder Kapitalerträge).<br /><br />Die Ausgangsdaten zum Äquivalenzeinkommen stammen aus der europaweit harmonisierten jährlichen Statistik über Einkommen und Lebensbedingungen (EU-SILC). Die Angaben zur Vermögensverteilung stammen aus der von der Europäischen Zentralbank unregelmäßig durchgeführten „Household Finance and Consumption Survey (HFCS)“. Dabei wird methodisch kompensiert, dass in freiwilligen Stichprobenerhebungen Haushalte mit hohem Einkommen beziehungsweise großem Vermögen unterrepräsentiert sind. Somit sind sowohl für Einkommen als auch für Vermögen die Werte für Deutschland mit denen für Europa bzw. die Eurozone methodisch vergleichbar. Da aus EU-SILC kein Gini-Koeffizient für das Markteinkommen berechnet wird, wird hierfür auf die Angaben aus dem Sozio-oekonomischen Panel (SOEP) des Deutschen Instituts für Wirtschafsforschung zurückgegriffen.<br /><br />Wie in den vergangenen Jahren entspricht der Gini-Koeffizient des verfügbaren Äquivalenzeinkommens für Deutschland (2018: 0,311) nahezu dem Wert für die Europäische Union (2018: 0,308) und zeigt einen stabilen Verlauf über die Jahre. Somit liegen zwischen Deutschland und Europa keine signifikanten Unterschiede in der Einkommensverteilung vor. Weiterhin liegt der Gini-Koeffizient des verfügbaren Äquivalenzeinkommens klar unter dem Gini-Koeffizienten des Äquivalenzeinkommens vor Sozialleistungen (0,311 zu 0,366). Erwartungsgemäß lag der Gini-Koeffizient des Markteinkommens mit 0,500 (2017) höher. Somit tragen in Deutschland also Sozialleistungen, Sozialversicherungen und Steuern erheblich zum Abbau von Ungleichheiten beim verfügbaren Einkommen bei.<br /><br />Vermögen sind mit Blick auf den entsprechenden Gini-Koeffizienten (2017: 0,740) in Deutschland wesentlich ungleicher als die Einkommen verteilt. Dabei zeigt sich auch im Zeitverlauf kaum eine Veränderung (2010 und 2014 0,760). Für die Eurozone lag der Wert im Jahr 2017 bei 0,695 und somit niedriger als der Wert in Deutschland. Allerdings relativieren einige durch den Gini-Koeffizienten nicht abgedeckte Faktoren den Eindruck einer überdurchschnittlich hohen Vermögensungleichheit. So werden bei der Bewertung des Vermögens zukünftige Renten- und Pensionsansprüche nicht berücksichtigt. Zudem leben Menschen in Deutschland im Vergleich zu anderen europäischen Ländern wegen des stärker ausgeprägten Mieterschutzes häufiger zur Miete als in einer eigenen Immobilie.</p>
+          <p> <p><i> Text aus dem Indikatorenbericht 2020</i><br /><br />Der Gini-Koeffizient ist ein statistisches Ungleichverteilungsmaß. Er nimmt einen Wert zwischen 0 und 1 an. Verfügt jede Person über exakt das gleiche Einkommen, so nimmt der Koeffizient den Wert 0 an. Erhält dagegen eine einzige Person das gesamte Einkommen, so beträgt der Gini-Koeffizient 1 und gibt somit die Situation bei maximaler Ungleichverteilung an. Je kleiner der Gini-Koeffizient, umso gleicher ist somit das Einkommen verteilt.<br /><br />Das Äquivalenzeinkommen ist ein Wert, der sich aus dem Gesamteinkommen eines Haushalts und der Anzahl und dem Alter der von diesem Einkommen lebenden Personen ergibt. Mithilfe einer Äquivalenzskala werden die Einkommen nach Haushaltsgröße und Zusammensetzung gewichtet, da durch die gemeinsame Nutzung von Wohnraum und Haushaltsgeräten Einspareffekte auftreten. Somit wird ein Vergleich der Einkommen unabhängig von Haushaltsgröße oder Alter der Haushaltsmitglieder ermöglicht, da das Äquivalenzeinkommen jedem Haushaltsmitglied in gleicher Höhe zugeordnet wird. Das verfügbare Äquivalenzeinkommen ist das Einkommen (einschließlich Sozialtransfers) eines Haushalts nach Steuern und anderen Abzügen und somit das Einkommen, das für Ausgaben und Sparen zur Verfügung steht. Abzugrenzen davon ist das Äquivalenzeinkommen vor Sozialleistungen, bei dem das verfügbare Einkommen ohne eventuelle Sozialtransfers (zum Beispiel Arbeitslosengeld oder Wohnbeihilfe) betrachtet wird, sowie das Markteinkommen, das sich vor Steuern, Sozialabgaben und Sozialleistungen errechnet. Bei allen betrachteten Einkommen wird nicht unterschieden, welche Quellen zur Einkommenserzielung dienen (etwa Arbeitslohn, Mieteinkünfte oder Kapitalerträge).<br /><br />Die Ausgangsdaten zum Äquivalenzeinkommen stammen aus der europaweit harmonisierten jährlichen Statistik über Einkommen und Lebensbedingungen (EU-SILC). Die Angaben zur Vermögensverteilung stammen aus der von der Europäischen Zentralbank unregelmäßig durchgeführten „Household Finance and Consumption Survey (HFCS)“. Dabei wird methodisch kompensiert, dass in freiwilligen Stichprobenerhebungen Haushalte mit hohem Einkommen beziehungsweise großem Vermögen unterrepräsentiert sind. Somit sind sowohl für Einkommen als auch für Vermögen die Werte für Deutschland mit denen für Europa bzw. die Eurozone methodisch vergleichbar. Da aus EU-SILC kein Gini-Koeffizient für das Markteinkommen berechnet wird, wird hierfür auf die Angaben aus dem Sozio-oekonomischen Panel (SOEP) des Deutschen Instituts für Wirtschafsforschung zurückgegriffen.<br /><br />Wie in den vergangenen Jahren entspricht der Gini-Koeffizient des verfügbaren Äquivalenzeinkommens für Deutschland (2018: 0,311) nahezu dem Wert für die Europäische Union (2018: 0,308) und zeigt einen stabilen Verlauf über die Jahre. Somit liegen zwischen Deutschland und Europa keine signifikanten Unterschiede in der Einkommensverteilung vor. Weiterhin liegt der Gini-Koeffizient des verfügbaren Äquivalenzeinkommens klar unter dem Gini-Koeffizienten des Äquivalenzeinkommens vor Sozialleistungen (0,311 zu 0,366). Erwartungsgemäß lag der Gini-Koeffizient des Markteinkommens mit 0,500 (2017) höher. Somit tragen in Deutschland also Sozialleistungen, Sozialversicherungen und Steuern erheblich zum Abbau von Ungleichheiten beim verfügbaren Einkommen bei.<br /><br />Vermögen sind mit Blick auf den entsprechenden Gini-Koeffizienten (2017: 0,740) in Deutschland wesentlich ungleicher als die Einkommen verteilt. Dabei zeigt sich auch im Zeitverlauf kaum eine Veränderung (2010 und 2014 0,760). Für die Eurozone lag der Wert im Jahr 2017 bei 0,695 und somit niedriger als der Wert in Deutschland. Allerdings relativieren einige durch den Gini-Koeffizienten nicht abgedeckte Faktoren den Eindruck einer überdurchschnittlich hohen Vermögensungleichheit. So werden bei der Bewertung des Vermögens zukünftige Renten- und Pensionsansprüche nicht berücksichtigt. Zudem leben Menschen in Deutschland im Vergleich zu anderen europäischen Ländern wegen des stärker ausgeprägten Mieterschutzes häufiger zur Miete als in einer eigenen Immobilie.</p>
  </p>
         
       </tr>
@@ -1756,7 +1789,7 @@ data-event-label="Change to Sources tab"
 
             <td colspan="4">
               
-                <p>10.2 Gini-Koeffizient zur Einkommensverteilung</p>
+                <p>10.2 Gini-Koeffizient des Einkommens nach Sozialtransfers</p>
 
               
             </td>
@@ -1776,6 +1809,17 @@ data-event-label="Change to Sources tab"
       
       <tr>
         
+
+          
+
+            <th scope="row" height="" >Ziel</th>
+
+            <td colspan="4">
+              
+                <p>Gini-Koeffizient Einkommen nach Sozialtransfer bis 2030 unterhalb des EU-28-Wertes</p>
+
+              
+            </td>
 
           
 
@@ -5057,7 +5101,7 @@ data-event-label="Change to Sources tab"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20210129001015'></script><script src="/open-sdg-site-starter/assets/js/chartColors.js?v=20210129001015"></script><script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20210129063246'></script><script src="/open-sdg-site-starter/assets/js/chartColors.js?v=20210129063246"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

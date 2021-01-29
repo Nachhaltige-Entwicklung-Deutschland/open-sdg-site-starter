@@ -141,7 +141,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20210129001015">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20210129063246">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -149,7 +149,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20210129001015"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20210129063246"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
 <body class="language-en layout-indicator">
@@ -366,7 +366,7 @@ var translations = {
     <div class="row">
       <div class="col-xs-4 col-md-3 col-lg-2">
         <a href="/open-sdg-site-starter/en/16" title="View this goal's indicator list">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/16.png" alt="Peace and justice - strong institutions - Goal 16" title="Peace and justice - strong institutions" />
+          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/16.png" alt="Peace and justice - strong institutions - Goal 16" title="" />
         </a>
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10">
@@ -400,6 +400,12 @@ var translations = {
       <!--
 
       
+        <li class="btn">
+          <a href="https://g205sdgs.github.io/sdg-indicators16.4.2">
+            Related global indicator: 16.4.2
+          </a>
+        </li>
+      
 
 
       <li class="pull-right">
@@ -425,17 +431,24 @@ var translations = {
 
   <!---3 Btns if there is a corresponding Indicator-->
   
-    <div class="col-xs-6 col-md-6 col-lg-6">
+    <div class="col-xs-3 col-md-3 col-lg-4">
       <a href="/open-sdg-site-starter/en/16-1-a" class="btn btn-primary btn-block G16-background" role="button">
         <i class="fa fa-chevron-left" aria-hidden="true"></i> <b><span class="btn-label hidden-sm hidden-xs">Previous indicator</span></b>
       </a>
     </div>
 
-    <div class="col-xs-6 col-md-6 col-lg-6">
+    <div class="col-xs-6 col-md-6 col-lg-4">
+      <a href="https://sustainabledevelopment-germany.github.io/en16.4.2" class="btn btn-primary btn-block G16-background" title="Go to the page of the corresponding SDG indicator" role="button">
+        <b><span class="btn-label hidden-sm hidden-xs">Related global indicator:</span> SDG-16.4.2</b>
+      </a>
+    </div>
+
+    <div class="col-xs-3 col-md-3 col-lg-4">
       <a href="/open-sdg-site-starter/en/16-3-ab" class="btn btn-primary btn-block G16-background" role="button">
         <b><span class="btn-label hidden-sm hidden-xs">Next indicator</span></b> <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
     </div>
+  <!---2 Btns if there is no corresponding Indicator-->
   
 
 <!---Goal page-->
@@ -468,7 +481,7 @@ var translations = {
 
   <div class="row" id="indicatorData" data-indicatorid='indicator_16-2-a' data-id="16-2-a" data-country=""
   data-charttitle="Number of projects to secure, register and destroy small arms and light weapons carried out by Germany in affected regions of the world" data-measurementunit="Percent" data-datasource="Federal Foreign Office" data-copyright="&copy; Federal Statistical Office (Destatis), 2020"
-  data-geographicalarea="" data-footnote="" data-showdata="true" data-graphtype="line"
+  data-geographicalarea="" data-footnote="" data-showdata="true" data-graphtype="bar"
   data-geocoderegex="" data-showmap="" data-startvalues="">
     
     <div id="indicator-sidebar" class="col-md-3">
@@ -588,6 +601,29 @@ data-event-label="Change to Map tab"
         <div id="chart" class="plot-container">
           
 <canvas></canvas>
+
+  <script>
+    opensdg.chartConfigAlter = function(config) {
+      var overrides = {
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                min: nan,
+                max: nan
+              }
+            }]
+          }
+        }
+      }
+      // Add these overrides onto the normal config, and return it.
+      $.extend(true, config, overrides);
+      return config;
+    }
+  </script>
+
+
+
 
 
         </div>
@@ -878,8 +914,8 @@ data-event-label="Change to Sources tab"
                 
 
                 
-                  <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/f376a5a5951743bf0ae21e3b0e962624544e45c0" target="_blank">
-                    2021-01-28: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
+                  <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/22774e0848b9ae052e5b107a0e56ed7e4f087a24" target="_blank">
+                    2021-01-29: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
                   </a>
                 
 
@@ -1283,7 +1319,7 @@ data-event-label="Change to Sources tab"
       
       <tr>
          <!-- case: content -->
-          <p> <p><i>Text from the Indicator Report 2018</i><br /><br />According to the Federal Foreign Office, the number of projects undertaken each year increased from 8 in 2006 to 26 in 2016. Thus the goal of Germany being involved in a minimum of 15 projects would have been achieved in 2012 for the first time. Except for 2013, the level would have been reached or even exceeded in subsequent years, too. According to the Federal Foreign Office, the regional focus of German efforts was on East and West Africa, the western Balkans and Ukraine. Other projects supported were in Latin America and the Caribbean. It is possible that projects with a duration longer than one year are counted more than once.<br /><br />The reported projects are not financed exclusively by the Federal Foreign Office, but in part with third-party funds as well. Thus, the indicator also takes into account those projects that are financed only in part by the government. The number of projects undertaken, however, says nothing about their scope or success. In addition, it is important to have well-defined and communicated criteria to clearly match a project with the objective of the indicator. The annual disarmament reports list projects aimed at combating small arms and their financing. Their number differs from the figures reported for the indicator. One reason for this could be the focus of the projects, which is decisive for the respective classification. The indicator also takes into account aspects other than the extent of government participation in these projects.<br /><br />The Organisation for Economic Co-operation and Development (OECD) also publishes detailed figures on “Reintegration; Combating small arms and light weapons” projects (funding code 15240) in accordance with the Statistical Reporting Directives of the Development Assistance Committee. Again, there is a degree of uncertainty as parts of a project could be aimed at combating small arms and light weapons but are not accounted for because of the focus of the overall project.<br /><br />If the indicator were to be based on the number of projects in accordance with the OECD funding code, the target of at least 15 projects per year would have been met only in 2006 and 2016. Between these years, the values would have been below the target value. However, these projects also include measures, for instance to reintegrate demobilised military personnel into the economy. Without these measures of reintegration, the number of projects that focus exclusively or predominantly on combating small arms and light weapons would have been smaller.</p>
+          <p> <p><i>Text from the Indicator Report 2020</i><br /><br />According to the Federal Foreign Office, the number of projects undertaken each year increased from 8 in 2006 to 26 in 2016. Thus the goal of Germany being involved in a minimum of 15 projects would have been achieved in 2012 for the first time. Except for 2013, the level would have been reached or even exceeded in subsequent years, too. According to the Federal Foreign Office, the regional focus of German efforts was on East and West Africa, the western Balkans and Ukraine. Other projects supported were in Latin America and the Caribbean. It is possible that projects with a duration longer than one year are counted more than once.<br /><br />The reported projects are not financed exclusively by the Federal Foreign Office, but in part with third-party funds as well. Thus, the indicator also takes into account those projects that are financed only in part by the government. The number of projects undertaken, however, says nothing about their scope or success. In addition, it is important to have well-defined and communicated criteria to clearly match a project with the objective of the indicator. The annual disarmament reports list projects aimed at combating small arms and their financing. Their number differs from the figures reported for the indicator. One reason for this could be the focus of the projects, which is decisive for the respective classification. The indicator also takes into account aspects other than the extent of government participation in these projects.<br /><br />The Organisation for Economic Co-operation and Development (OECD) also publishes detailed figures on “Reintegration; Combating small arms and light weapons” projects (funding code 15240) in accordance with the Statistical Reporting Directives of the Development Assistance Committee. Again, there is a degree of uncertainty as parts of a project could be aimed at combating small arms and light weapons but are not accounted for because of the focus of the overall project.<br /><br />If the indicator were to be based on the number of projects in accordance with the OECD funding code, the target of at least 15 projects per year would have been met only in 2006 and 2016. Between these years, the values would have been below the target value. However, these projects also include measures, for instance to reintegrate demobilised military personnel into the economy. Without these measures of reintegration, the number of projects that focus exclusively or predominantly on combating small arms and light weapons would have been smaller.</p>
  </p>
         
       </tr>
@@ -1776,6 +1812,17 @@ data-event-label="Change to Sources tab"
       
       <tr>
         
+
+          
+
+            <th scope="row" height="" >Target</th>
+
+            <td colspan="4">
+              
+                <p>By 2030 at least 15 projects each year</p>
+
+              
+            </td>
 
           
 
@@ -2921,7 +2968,7 @@ data-event-label="Change to Sources tab"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20210129001015'></script><script src="/open-sdg-site-starter/assets/js/chartColors.js?v=20210129001015"></script><script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20210129063246'></script><script src="/open-sdg-site-starter/assets/js/chartColors.js?v=20210129063246"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

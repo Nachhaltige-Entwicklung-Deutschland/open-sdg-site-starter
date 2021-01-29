@@ -141,7 +141,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20210129001015">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20210129063246">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -149,7 +149,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20210129001015"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20210129063246"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
 <body class="language-de layout-indicator">
@@ -589,6 +589,26 @@ data-event-label="Change to Map tab"
           
 <canvas></canvas>
 
+  <script>
+    opensdg.chartConfigAlter = function(config) {
+      var overrides = {
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                min: nan,
+                max: nan
+              }
+            }]
+          }
+        }
+      }
+      // Add these overrides onto the normal config, and return it.
+      $.extend(true, config, overrides);
+      return config;
+    }
+  </script>
+
 
         </div>
         <div id="plotLegend"></div>
@@ -878,8 +898,8 @@ data-event-label="Change to Sources tab"
                 
 
                 
-                  <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/f376a5a5951743bf0ae21e3b0e962624544e45c0" target="_blank">
-                    2021-01-28: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+                  <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/22774e0848b9ae052e5b107a0e56ed7e4f087a24" target="_blank">
+                    2021-01-29: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
                   </a>
                 
 
@@ -1283,7 +1303,7 @@ data-event-label="Change to Sources tab"
       
       <tr>
          <!-- case: content -->
-          <p> <p><i> Text aus dem Indikatorenbericht 2018</i><br /><br />Die Daten des Indikators sind der Berichterstattung zur EU-Verordnung über ein System für die Überwachung von Treibhausgasen entnommen. Datenquelle der jährlich erhobenen Daten ist das Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung (BMZ), das in diesem Kontext auch über die Klimafinanzierung anderer Bundesministerien berichtet. Dabei werden für die Berechnung der Ausgaben für bilaterale Klimafinanzierung die Zusagen, für multilaterale Klimafinanzierung sowie für Beiträge zu Energie- und Klimafonds die tatsächlichen Auszahlungen zugrunde gelegt. Der Indikator beinhaltet darüber hinaus die anteilig zuzurechnende Klimafinanzierung, welche sich aus deren Beiträgen zu multilateralen Fonds bei Entwicklungsbanken ergibt. Sofern die Klimafinanzierung schwerpunktmäßig Entwicklungsländern zugutekommt, ist diese Teil der öffentlichen Entwicklungsausgaben (siehe Indikator 17.1).<br /><br />Im Jahr 2018 wurden aus Deutschen Haushaltsmitteln 3,37 Milliarden Euro für die internationale Klimafinanzierung zur Reduzierung von Treibhausgasen und zur Anpassung an den Klimawandel zugesagt beziehungsweise bereitgestellt. Im Vergleich zum Vorjahr, in dem die Klimafinanzierung 3,65 Milliarden Euro betrug, ist ein Rückgang um 7,7 % zu verzeichnen. Die Soll-Vorgabe für das Jahr 2018 wird knapp unterschritten. 40 % der Klimafinanzierungsmittel flossen 2018 in die Emissionsminderung und 32 % in die Anpassung an den Klimawandel. Mit den verbleibenden 28 % wurden bereichsübergreifende Projekte finanziert. Da diese auch minderungs- oder anpassungsrelevant sind, ergibt sich in Summe, dass – wie in den Jahren zuvor – auch 2018 mehr Mittel für Minderungsvorhaben (54 %) als für Anpassungsvorhaben (46 %) aufgewendet wurden.<br /><br />Über multilaterale Kanäle wurden 17 % (568 Millionen Euro) der Klimafinanzierung im Jahr 2018 bereitgestellt. Davon können Deutschland 200 Millionen Euro zugerechnet werden. Diese ergeben sich auf Basis der deutschen Beiträge zu den multilateralen Fonds bei Entwicklungsbanken.<br /><br />Neben der öffentlichen Klimafinanzierung aus Haushaltsmitteln stellen die Kreditanstalt für Wiederaufbau und die Deutsche Entwicklungsgesellschaft ebenfalls klimabezogene Kredite aus Marktmitteln bereit. Diese stellen die „mobilisierte öffentliche Klimafinanzierung“ dar und sind nicht im Indikator enthalten. Im Jahr 2018 umfassten die so mobilisierten Ressourcen rund 3,25 Milliarden Euro im Vergleich zu 3,1 Milliarden Euro aus dem Vorjahr. Auch hier wurden mehr Mittel für Minderungsvorhaben (83 %) als für Anpassungsvorhaben (17 %) aufgewendet.</p>
+          <p> <p><i> Text aus dem Indikatorenbericht 2020</i><br /><br />Die Daten des Indikators sind der Berichterstattung zur EU-Verordnung über ein System für die Überwachung von Treibhausgasen entnommen. Datenquelle der jährlich erhobenen Daten ist das Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung (BMZ), das in diesem Kontext auch über die Klimafinanzierung anderer Bundesministerien berichtet. Dabei werden für die Berechnung der Ausgaben für bilaterale Klimafinanzierung die Zusagen, für multilaterale Klimafinanzierung sowie für Beiträge zu Energie- und Klimafonds die tatsächlichen Auszahlungen zugrunde gelegt. Der Indikator beinhaltet darüber hinaus die anteilig zuzurechnende Klimafinanzierung, welche sich aus deren Beiträgen zu multilateralen Fonds bei Entwicklungsbanken ergibt. Sofern die Klimafinanzierung schwerpunktmäßig Entwicklungsländern zugutekommt, ist diese Teil der öffentlichen Entwicklungsausgaben (siehe Indikator 17.1).<br /><br />Im Jahr 2018 wurden aus Deutschen Haushaltsmitteln 3,37 Milliarden Euro für die internationale Klimafinanzierung zur Reduzierung von Treibhausgasen und zur Anpassung an den Klimawandel zugesagt beziehungsweise bereitgestellt. Im Vergleich zum Vorjahr, in dem die Klimafinanzierung 3,65 Milliarden Euro betrug, ist ein Rückgang um 7,7 % zu verzeichnen. Die Soll-Vorgabe für das Jahr 2018 wird knapp unterschritten. 40 % der Klimafinanzierungsmittel flossen 2018 in die Emissionsminderung und 32 % in die Anpassung an den Klimawandel. Mit den verbleibenden 28 % wurden bereichsübergreifende Projekte finanziert. Da diese auch minderungs- oder anpassungsrelevant sind, ergibt sich in Summe, dass – wie in den Jahren zuvor – auch 2018 mehr Mittel für Minderungsvorhaben (54 %) als für Anpassungsvorhaben (46 %) aufgewendet wurden.<br /><br />Über multilaterale Kanäle wurden 17 % (568 Millionen Euro) der Klimafinanzierung im Jahr 2018 bereitgestellt. Davon können Deutschland 200 Millionen Euro zugerechnet werden. Diese ergeben sich auf Basis der deutschen Beiträge zu den multilateralen Fonds bei Entwicklungsbanken.<br /><br />Neben der öffentlichen Klimafinanzierung aus Haushaltsmitteln stellen die Kreditanstalt für Wiederaufbau und die Deutsche Entwicklungsgesellschaft ebenfalls klimabezogene Kredite aus Marktmitteln bereit. Diese stellen die „mobilisierte öffentliche Klimafinanzierung“ dar und sind nicht im Indikator enthalten. Im Jahr 2018 umfassten die so mobilisierten Ressourcen rund 3,25 Milliarden Euro im Vergleich zu 3,1 Milliarden Euro aus dem Vorjahr. Auch hier wurden mehr Mittel für Minderungsvorhaben (83 %) als für Anpassungsvorhaben (17 %) aufgewendet.</p>
  </p>
         
       </tr>
@@ -1776,6 +1796,17 @@ data-event-label="Change to Sources tab"
       
       <tr>
         
+
+          
+
+            <th scope="row" height="" >Ziel</th>
+
+            <td colspan="4">
+              
+                <p>Verdopplung der Finanzierung bis 2020 gegenüber 2014</p>
+
+              
+            </td>
 
           
 
@@ -2941,7 +2972,7 @@ data-event-label="Change to Sources tab"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20210129001015'></script><script src="/open-sdg-site-starter/assets/js/chartColors.js?v=20210129001015"></script><script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20210129063246'></script><script src="/open-sdg-site-starter/assets/js/chartColors.js?v=20210129063246"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

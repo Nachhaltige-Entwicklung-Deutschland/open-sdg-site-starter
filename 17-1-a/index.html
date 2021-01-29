@@ -141,7 +141,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20210129001015">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20210129063246">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -149,7 +149,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20210129001015"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20210129063246"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
 <body class="language-de layout-indicator">
@@ -468,7 +468,7 @@ var translations = {
 
   <div class="row" id="indicatorData" data-indicatorid='indicator_17-1-a' data-id="17-1-a" data-country=""
   data-charttitle="Anteil der öffentlichen Entwicklungsausgaben am Bruttonationaleinkommen" data-measurementunit="" data-datasource="Statistisches Bundesamt (Destatis), Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung (BMZ), Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD)" data-copyright="&copy; Statistisches Bundesamt (Destatis), 2021"
-  data-geographicalarea="" data-footnote="" data-showdata="true" data-graphtype="line"
+  data-geographicalarea="" data-footnote="2019 provisional data" data-showdata="true" data-graphtype="bar"
   data-geocoderegex="" data-showmap="" data-startvalues="">
     
     <div id="indicator-sidebar" class="col-md-3">
@@ -588,6 +588,29 @@ data-event-label="Change to Map tab"
         <div id="chart" class="plot-container">
           
 <canvas></canvas>
+
+  <script>
+    opensdg.chartConfigAlter = function(config) {
+      var overrides = {
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                min: nan,
+                max: nan
+              }
+            }]
+          }
+        }
+      }
+      // Add these overrides onto the normal config, and return it.
+      $.extend(true, config, overrides);
+      return config;
+    }
+  </script>
+
+
+
 
 
         </div>
@@ -878,8 +901,8 @@ data-event-label="Change to Sources tab"
                 
 
                 
-                  <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/f376a5a5951743bf0ae21e3b0e962624544e45c0" target="_blank">
-                    2021-01-28: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+                  <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/22774e0848b9ae052e5b107a0e56ed7e4f087a24" target="_blank">
+                    2021-01-29: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
                   </a>
                 
 
@@ -1283,7 +1306,7 @@ data-event-label="Change to Sources tab"
       
       <tr>
          <!-- case: content -->
-          <p> <p><i> Text aus dem Indikatorenbericht 2018</i><br /><br />Datengrundlage des Indikators sind die Statistiken der Leistungen der deutschen Entwicklungszusammenarbeit, die im Auftrag des Bundesministeriums für wirtschaftliche Zusammenarbeit und Entwicklung (BMZ) vom Statistischen Bundesamt erstellt werden. Die Anrechenbarkeit einer Leistung als ODA ist durch Richtlinien des Entwicklungsausschusses (DAC) der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD) definiert. Zur ODA zählen vor allem Ausgaben für die finanzielle und technische Zusammenarbeit mit Entwicklungsländern, humanitäre Hilfe sowie Beiträge für Entwicklungszusammenarbeit an multilaterale Institutionen wie zum Beispiel die Vereinten Nationen, die Europäische Union, die Weltbank oder regionale Entwicklungsbanken. Darüber hinaus sind auch Ausgaben für bestimmte Friedensmissionen, Schuldenerleichterungen sowie bestimmte Ausgaben für Entwicklung im Geberland, wie etwa Studienplatzkosten für Studierende aus Entwicklungsländern oder Ausgaben für entwicklungsspezifische Forschung, als ODA anrechenbar.<br /><br />Der DAC definiert auch die Liste der ODA-fähigen Entwicklungsländer. Diese umfasst die am wenigsten entwickelten Länder (LDCs) sowie weitere Länder mit niedrigem und mittlerem Bruttonationaleinkommen pro Kopf. Ausgeschlossen sind Mitglieder der G7 und Russland, der EU sowie EU-Beitrittskandidaten mit festem Beitrittsdatum. Die Liste wird in der Regel dreijährlich aktualisiert. Veränderungen des Indikators können sich also auch dadurch ergeben, dass einzelne oder mehrere Länder in die Liste aufgenommen werden oder aus ihr herausfallen.<br /><br />2018 fand eine Änderung bei der Erfassung der ODA statt. Wurden bisher die Nettoausgaben betrachtet, so basiert die Berechnung der ODA seitdem auf der sogenannten „Zuschussäquivalent-Methode“. Hierbei werden Zuschüsse bzw. bei vergünstigten Darlehen nur der Schenkungsanteil als ODA erfasst. So betrugen die ODA-Leistungen nach neuer Methode 2019 21,3 Milliarden Euro (Daten der OECD vorläufig) und lagen nur geringfügig höher als 2018 (21,2 Milliarden Euro). Der Anteil der öffentlichen Entwicklungsausgaben am deutschen BNE lag in 2019 bei 0,60 % (vorläufiger Wert; 2018: 0,6 1 %).<br /><br />Zur Vergleichbarkeit der alten und neuen Berechnungsmethode werden im Folgenden die ODA-Daten nach der bisherigen Methoden dargestellt. Nach alter Berechnungsmethode betrugen die Netto-ODA-Leistungen im Jahr 2019 rund 21,2 Milliarden Euro (Daten der OECD vorläufig), dies bedeutet einen Rückgang um 2,5 % im Vergleich zum Vorjahr (21,8 Milliarden Euro). <br /><br />Im internationalen Vergleich war Deutschland 2019 absolut gesehen erneut der zweitgrößte Geber hinter den USA und vor Großbritannien (vorläufige Ergebnisse). Die von Deutschland erreichte ODA-Quote von 0,60 % lag über dem Durchschnittswert der EU-Mitglieder des OECD-Entwicklungsausschusses (0,47 %). Im Hinblick auf die ODA-Quote lag Deutschland auf Platz 6 der 29 DAC-Mitgliedsländer. Das internationale Ziel von 0,7 % erreichen nach vorläufigen Ergebnissen für das Jahr 2019 die DAC-Länder Luxemburg, Norwegen, Schweden, Dänemark und Großbritannien. <br /><br />Neben der öffentlichen Entwicklungszusammenarbeit werden auch von privater Seite Eigenmittel, zum Beispiel von Kirchen, Stiftungen und Verbänden, aufgewendet. Diese private Entwicklungszusammenarbeit, die nicht ODA-relevant ist, belief sich 2018 auf 1,2 Milliarden Euro, was einem Anteil von 0,03 % am Bruttonationaleinkommen entsprach. Private Direktinvestitionen in den Entwicklungsländern beliefen sich 2018 auf 13,7 Milliarden Euro.</p>
+          <p> <p><i> Text aus dem Indikatorenbericht 2020</i><br /><br />Datengrundlage des Indikators sind die Statistiken der Leistungen der deutschen Entwicklungszusammenarbeit, die im Auftrag des Bundesministeriums für wirtschaftliche Zusammenarbeit und Entwicklung (BMZ) vom Statistischen Bundesamt erstellt werden. Die Anrechenbarkeit einer Leistung als ODA ist durch Richtlinien des Entwicklungsausschusses (DAC) der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD) definiert. Zur ODA zählen vor allem Ausgaben für die finanzielle und technische Zusammenarbeit mit Entwicklungsländern, humanitäre Hilfe sowie Beiträge für Entwicklungszusammenarbeit an multilaterale Institutionen wie zum Beispiel die Vereinten Nationen, die Europäische Union, die Weltbank oder regionale Entwicklungsbanken. Darüber hinaus sind auch Ausgaben für bestimmte Friedensmissionen, Schuldenerleichterungen sowie bestimmte Ausgaben für Entwicklung im Geberland, wie etwa Studienplatzkosten für Studierende aus Entwicklungsländern oder Ausgaben für entwicklungsspezifische Forschung, als ODA anrechenbar.<br /><br />Der DAC definiert auch die Liste der ODA-fähigen Entwicklungsländer. Diese umfasst die am wenigsten entwickelten Länder (LDCs) sowie weitere Länder mit niedrigem und mittlerem Bruttonationaleinkommen pro Kopf. Ausgeschlossen sind Mitglieder der G7 und Russland, der EU sowie EU-Beitrittskandidaten mit festem Beitrittsdatum. Die Liste wird in der Regel dreijährlich aktualisiert. Veränderungen des Indikators können sich also auch dadurch ergeben, dass einzelne oder mehrere Länder in die Liste aufgenommen werden oder aus ihr herausfallen.<br /><br />2018 fand eine Änderung bei der Erfassung der ODA statt. Wurden bisher die Nettoausgaben betrachtet, so basiert die Berechnung der ODA seitdem auf der sogenannten „Zuschussäquivalent-Methode“. Hierbei werden Zuschüsse bzw. bei vergünstigten Darlehen nur der Schenkungsanteil als ODA erfasst. So betrugen die ODA-Leistungen nach neuer Methode 2019 21,3 Milliarden Euro (Daten der OECD vorläufig) und lagen nur geringfügig höher als 2018 (21,2 Milliarden Euro). Der Anteil der öffentlichen Entwicklungsausgaben am deutschen BNE lag in 2019 bei 0,60 % (vorläufiger Wert; 2018: 0,6 1 %).<br /><br />Zur Vergleichbarkeit der alten und neuen Berechnungsmethode werden im Folgenden die ODA-Daten nach der bisherigen Methoden dargestellt. Nach alter Berechnungsmethode betrugen die Netto-ODA-Leistungen im Jahr 2019 rund 21,2 Milliarden Euro (Daten der OECD vorläufig), dies bedeutet einen Rückgang um 2,5 % im Vergleich zum Vorjahr (21,8 Milliarden Euro). <br /><br />Im internationalen Vergleich war Deutschland 2019 absolut gesehen erneut der zweitgrößte Geber hinter den USA und vor Großbritannien (vorläufige Ergebnisse). Die von Deutschland erreichte ODA-Quote von 0,60 % lag über dem Durchschnittswert der EU-Mitglieder des OECD-Entwicklungsausschusses (0,47 %). Im Hinblick auf die ODA-Quote lag Deutschland auf Platz 6 der 29 DAC-Mitgliedsländer. Das internationale Ziel von 0,7 % erreichen nach vorläufigen Ergebnissen für das Jahr 2019 die DAC-Länder Luxemburg, Norwegen, Schweden, Dänemark und Großbritannien. <br /><br />Neben der öffentlichen Entwicklungszusammenarbeit werden auch von privater Seite Eigenmittel, zum Beispiel von Kirchen, Stiftungen und Verbänden, aufgewendet. Diese private Entwicklungszusammenarbeit, die nicht ODA-relevant ist, belief sich 2018 auf 1,2 Milliarden Euro, was einem Anteil von 0,03 % am Bruttonationaleinkommen entsprach. Private Direktinvestitionen in den Entwicklungsländern beliefen sich 2018 auf 13,7 Milliarden Euro.</p>
  </p>
         
       </tr>
@@ -1776,6 +1799,17 @@ data-event-label="Change to Sources tab"
       
       <tr>
         
+
+          
+
+            <th scope="row" height="" >Ziel</th>
+
+            <td colspan="4">
+              
+                <p>Steigerung des Anteils auf 0,7 Prozent des  Bruttonationaleinkommens bis 2030</p>
+
+              
+            </td>
 
           
 
@@ -4019,7 +4053,7 @@ data-event-label="Change to Sources tab"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20210129001015'></script><script src="/open-sdg-site-starter/assets/js/chartColors.js?v=20210129001015"></script><script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20210129063246'></script><script src="/open-sdg-site-starter/assets/js/chartColors.js?v=20210129063246"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

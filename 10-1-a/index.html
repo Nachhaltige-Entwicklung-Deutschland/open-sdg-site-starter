@@ -141,7 +141,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20210129001015">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20210129063246">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -149,7 +149,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20210129001015"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20210129063246"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
 <body class="language-de layout-indicator">
@@ -366,7 +366,7 @@ var translations = {
     <div class="row">
       <div class="col-xs-4 col-md-3 col-lg-2">
         <a href="/open-sdg-site-starter/10" title="Zeigt die Indikatorenliste zum SDG-Ziel an.">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/10.png" alt="Weniger Ungleichheiten - Ziel 10" title="Ungleichheit innerhalb von und zwischen Staaten verringern" />
+          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/10.png" alt="Weniger Ungleichheiten - Ziel 10" title="Ungleichheit in und zwischen Ländern verringern" />
         </a>
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10">
@@ -466,10 +466,10 @@ var translations = {
 
   
 
-  <div class="row" id="indicatorData" data-indicatorid='indicator_10-1-a' data-id="10-1-a" data-country=""
+  <div class="row" id="indicatorData" data-indicatorid='indicator_10-1-a' data-id="10-1-a" data-country="Deutschland"
   data-charttitle="Ausländische Schulabsolventinnen und -absolventen" data-measurementunit="In %" data-datasource="Statistisches Bundesamt (Destatis)" data-copyright="&copy; Statistisches Bundesamt (Destatis), 2021"
-  data-geographicalarea="" data-footnote="" data-showdata="true" data-graphtype="line"
-  data-geocoderegex="" data-showmap="" data-startvalues="">
+  data-geographicalarea="Deutschland" data-footnote="Federal States: Gender-specific distribution of foreign graduates, partly estimated. External graduates are not surveyed." data-showdata="true" data-graphtype="line"
+  data-geocoderegex="" data-showmap="true" data-startvalues="">
     
     <div id="indicator-sidebar" class="col-md-3">
       <div id="toolbar">
@@ -588,6 +588,26 @@ data-event-label="Change to Map tab"
         <div id="chart" class="plot-container">
           
 <canvas></canvas>
+
+  <script>
+    opensdg.chartConfigAlter = function(config) {
+      var overrides = {
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                min: nan,
+                max: nan
+              }
+            }]
+          }
+        }
+      }
+      // Add these overrides onto the normal config, and return it.
+      $.extend(true, config, overrides);
+      return config;
+    }
+  </script>
 
 
         </div>
@@ -878,8 +898,8 @@ data-event-label="Change to Sources tab"
                 
 
                 
-                  <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/f376a5a5951743bf0ae21e3b0e962624544e45c0" target="_blank">
-                    2021-01-28: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+                  <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/22774e0848b9ae052e5b107a0e56ed7e4f087a24" target="_blank">
+                    2021-01-29: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
                   </a>
                 
 
@@ -1283,7 +1303,7 @@ data-event-label="Change to Sources tab"
       
       <tr>
          <!-- case: content -->
-          <p> <p><i> Text aus dem Indikatorenbericht 2018</i><br /><br />Datengrundlage des Indikators bilden die Schulstatistiken der einzelnen Bundesländer. Dabei handelt es sich in der Regel um Totalerhebungen mit Auskunftspflicht. Ihre Zusammenfassung zum Bundesergebnis erfolgt durch das Statistische Bundesamt auf Grundlage des von der Kultusministerkonferenz erstellten Definitionenkatalogs. Die Aggregation der Länderergebnisse zum Bundesergebnis wird beeinträchtigt durch die unterschiedliche Bildungspolitik der Länder, zum Beispiel bei Versetzungsregeln oder der Einrichtung von Bildungsgängen im Bereich der beruflichen Schulen. Dies kann auch durch formale Regelungen der jeweiligen Zuordnungen nur zum Teil kompensiert werden.<br /><br />Absolventinnen und Absolventen sind Schülerinnen und Schüler, die die jeweilige Schulart mit Abschluss verlassen haben. Eingeschlossen werden Schülerinnen und Schüler, die auf eine andere allgemeinbildende Schulart gewechselt haben, um einen zusätzlichen Abschluss zu erwerben. Zudem gelten als Ausländerin oder Ausländer alle Personen, die nicht Deutsche im Sinne des Art. 116 Abs. 1 GG sind, das heißt die deutsche Staatsangehörigkeit nicht besitzen. Dazu zählen auch Staatenlose und Personen mit ungeklärter Staatsangehörigkeit. Deutsche, die zugleich eine weitere Staatsangehörigkeit besitzen, zählen nicht zur ausländischen Bevölkerung.<br /><br />Im Jahr 2018 lag der Anteil der ausländischen Schulabsolventinnen und -absolventen, die mindestens einen Hauptschulabschluss erreicht haben, gemessen an allen ausländischen Schulabgängerinnen und -abgängern sowie Schulabsolventinnen und -absolventen bei 81,8 %. Damit hat sich der Anteil gegenüber dem Vorjahreswert nicht verändert. Betrachtet man die geschlechterspezifischen Anteile, so lag der Anteil der ausländischen Absolventinnen bei 85,6 %, während der Anteil der Absolventen mit 78,8 % geringer ausfiel. Der Anteil deutscher Schulabsolventinnen und -absolventen, die mindestens einen Hauptschulabschluss erlangt haben lag zuletzt bei 94,6 % und somit annähernd stabil. Der Abstand zwischen dem Anteil ausländischer Schulabsolventinnen und -absolventen gegenüber den deutschen Schulabsolventinnen und -absolventen hat sich von 11,9 Prozentpunkten im Jahr 1996 auf 12,8 Prozentpunkte im Jahr 2018 leicht erhöht. Nachdem die Werte sich bis zum Jahr 2013 tendenziell anglichen, gehen sie seitdem wieder auseinander.<br /><br />Betrachtet man zusätzlich die erreichten Abschlüsse, so lässt sich feststellen, dass 31,1 % der ausländischen Schulabsolventinnen und -absolventen allgemeinbildender Schulen des Jahrgangs 2018 einen Hauptschulabschluss erwarben, 34,7 % beendeten die Schule mit einem mittleren Abschluss und 15,9 % erreichten die Fachhochschulreife oder die allgemeine Hochschulreife. Bei den deutschen Schulabsolventinnen und -absolventen erwarben 14,9 % einen Hauptschulabschluss, 42,8 % einen mittleren Abschluss und 36,8 % die Fachhochschulreife oder die allgemeine Hochschulreife. Insbesondere bei den höheren Bildungsabschlüssen sind demnach die ausländischen Jugendlichen im Vergleich zu den deutschen deutlich unterrepräsentiert.</p>
+          <p> <p><i> Text aus dem Indikatorenbericht 2020</i><br /><br />Datengrundlage des Indikators bilden die Schulstatistiken der einzelnen Bundesländer. Dabei handelt es sich in der Regel um Totalerhebungen mit Auskunftspflicht. Ihre Zusammenfassung zum Bundesergebnis erfolgt durch das Statistische Bundesamt auf Grundlage des von der Kultusministerkonferenz erstellten Definitionenkatalogs. Die Aggregation der Länderergebnisse zum Bundesergebnis wird beeinträchtigt durch die unterschiedliche Bildungspolitik der Länder, zum Beispiel bei Versetzungsregeln oder der Einrichtung von Bildungsgängen im Bereich der beruflichen Schulen. Dies kann auch durch formale Regelungen der jeweiligen Zuordnungen nur zum Teil kompensiert werden.<br /><br />Absolventinnen und Absolventen sind Schülerinnen und Schüler, die die jeweilige Schulart mit Abschluss verlassen haben. Eingeschlossen werden Schülerinnen und Schüler, die auf eine andere allgemeinbildende Schulart gewechselt haben, um einen zusätzlichen Abschluss zu erwerben. Zudem gelten als Ausländerin oder Ausländer alle Personen, die nicht Deutsche im Sinne des Art. 116 Abs. 1 GG sind, das heißt die deutsche Staatsangehörigkeit nicht besitzen. Dazu zählen auch Staatenlose und Personen mit ungeklärter Staatsangehörigkeit. Deutsche, die zugleich eine weitere Staatsangehörigkeit besitzen, zählen nicht zur ausländischen Bevölkerung.<br /><br />Im Jahr 2018 lag der Anteil der ausländischen Schulabsolventinnen und -absolventen, die mindestens einen Hauptschulabschluss erreicht haben, gemessen an allen ausländischen Schulabgängerinnen und -abgängern sowie Schulabsolventinnen und -absolventen bei 81,8 %. Damit hat sich der Anteil gegenüber dem Vorjahreswert nicht verändert. Betrachtet man die geschlechterspezifischen Anteile, so lag der Anteil der ausländischen Absolventinnen bei 85,6 %, während der Anteil der Absolventen mit 78,8 % geringer ausfiel. Der Anteil deutscher Schulabsolventinnen und -absolventen, die mindestens einen Hauptschulabschluss erlangt haben lag zuletzt bei 94,6 % und somit annähernd stabil. Der Abstand zwischen dem Anteil ausländischer Schulabsolventinnen und -absolventen gegenüber den deutschen Schulabsolventinnen und -absolventen hat sich von 11,9 Prozentpunkten im Jahr 1996 auf 12,8 Prozentpunkte im Jahr 2018 leicht erhöht. Nachdem die Werte sich bis zum Jahr 2013 tendenziell anglichen, gehen sie seitdem wieder auseinander.<br /><br />Betrachtet man zusätzlich die erreichten Abschlüsse, so lässt sich feststellen, dass 31,1 % der ausländischen Schulabsolventinnen und -absolventen allgemeinbildender Schulen des Jahrgangs 2018 einen Hauptschulabschluss erwarben, 34,7 % beendeten die Schule mit einem mittleren Abschluss und 15,9 % erreichten die Fachhochschulreife oder die allgemeine Hochschulreife. Bei den deutschen Schulabsolventinnen und -absolventen erwarben 14,9 % einen Hauptschulabschluss, 42,8 % einen mittleren Abschluss und 36,8 % die Fachhochschulreife oder die allgemeine Hochschulreife. Insbesondere bei den höheren Bildungsabschlüssen sind demnach die ausländischen Jugendlichen im Vergleich zu den deutschen deutlich unterrepräsentiert.</p>
  </p>
         
       </tr>
@@ -1776,6 +1796,17 @@ data-event-label="Change to Sources tab"
       
       <tr>
         
+
+          
+
+            <th scope="row" height="" >Ziel</th>
+
+            <td colspan="4">
+              
+                <p>Erhöhung des Anteils der ausländischen Schulabgänger mit mindestens Hauptschulabschluss und Angleichung an die Quote deutscher Schulabgänger bis 2030</p>
+
+              
+            </td>
 
           
 
@@ -2921,7 +2952,7 @@ data-event-label="Change to Sources tab"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20210129001015'></script><script src="/open-sdg-site-starter/assets/js/chartColors.js?v=20210129001015"></script><script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20210129063246'></script><script src="/open-sdg-site-starter/assets/js/chartColors.js?v=20210129063246"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

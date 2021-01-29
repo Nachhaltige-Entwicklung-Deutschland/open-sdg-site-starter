@@ -141,7 +141,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20210129001015">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20210129063246">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -149,7 +149,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20210129001015"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20210129063246"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
 <body class="language-de layout-indicator">
@@ -366,7 +366,7 @@ var translations = {
     <div class="row">
       <div class="col-xs-4 col-md-3 col-lg-2">
         <a href="/open-sdg-site-starter/11" title="Zeigt die Indikatorenliste zum SDG-Ziel an.">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/11.png" alt="Nachhaltige Städte und Gemeinden - Ziel 11" title="Städte und Siedlungen inklusiv, sicher, widerstandsfähig und nachhaltig machen" />
+          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/11.png" alt="Nachhaltige Städte und Gemeinden - Ziel 11" title="Städte und Siedlungen inklusiv, sicher, widerstandsfähig und nachhaltig gestalten" />
         </a>
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10">
@@ -400,6 +400,12 @@ var translations = {
       <!--
 
       
+        <li class="btn">
+          <a href="https://g205sdgs.github.io/sdg-indicators11.2.1">
+            Verwandter globaler Indikator: 11.2.1
+          </a>
+        </li>
+      
 
 
       <li class="pull-right">
@@ -425,17 +431,24 @@ var translations = {
 
   <!---3 Btns if there is a corresponding Indicator-->
   
-    <div class="col-xs-6 col-md-6 col-lg-6">
+    <div class="col-xs-3 col-md-3 col-lg-4">
       <a href="/open-sdg-site-starter/11-2-b" class="btn btn-primary btn-block G11-background" role="button">
         <i class="fa fa-chevron-left" aria-hidden="true"></i> <b><span class="btn-label hidden-sm hidden-xs">Vorheriger Indikator</span></b>
       </a>
     </div>
 
-    <div class="col-xs-6 col-md-6 col-lg-6">
+    <div class="col-xs-6 col-md-6 col-lg-4">
+      <a href="https://sustainabledevelopment-germany.github.io/11.2.1" class="btn btn-primary btn-block G11-background" title="Hier gelangen Sie zur Seite des korrespondierenden SDG-Indikators" role="button">
+        <b><span class="btn-label hidden-sm hidden-xs">Verwandter globaler Indikator:</span> SDG-11.2.1</b>
+      </a>
+    </div>
+
+    <div class="col-xs-3 col-md-3 col-lg-4">
       <a href="/open-sdg-site-starter/11-3-a" class="btn btn-primary btn-block G11-background" role="button">
         <b><span class="btn-label hidden-sm hidden-xs">Nächster Indikator</span></b> <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
     </div>
+  <!---2 Btns if there is no corresponding Indicator-->
   
 
 <!---Goal page-->
@@ -466,10 +479,10 @@ var translations = {
 
   
 
-  <div class="row" id="indicatorData" data-indicatorid='indicator_11-2-c' data-id="11-2-c" data-country=""
+  <div class="row" id="indicatorData" data-indicatorid='indicator_11-2-c' data-id="11-2-c" data-country="Deutschland"
   data-charttitle="Reisezeit mit öffentlichen Verkehrsmitteln zum nächsten Mittel- oder Oberzentrum" data-measurementunit="Minuten" data-datasource="Bundesinstitut für Bau-, Stadt- und Raumforschung (BBSR)" data-copyright="&copy; Statistisches Bundesamt (Destatis), 2021"
-  data-geographicalarea="" data-footnote="" data-showdata="true" data-graphtype="line"
-  data-geocoderegex="" data-showmap="" data-startvalues="">
+  data-geographicalarea="Deutschland" data-footnote="" data-showdata="true" data-graphtype="bar"
+  data-geocoderegex="" data-showmap="true" data-startvalues="">
     
     <div id="indicator-sidebar" class="col-md-3">
       <div id="toolbar">
@@ -588,6 +601,29 @@ data-event-label="Change to Map tab"
         <div id="chart" class="plot-container">
           
 <canvas></canvas>
+
+  <script>
+    opensdg.chartConfigAlter = function(config) {
+      var overrides = {
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                min: nan,
+                max: nan
+              }
+            }]
+          }
+        }
+      }
+      // Add these overrides onto the normal config, and return it.
+      $.extend(true, config, overrides);
+      return config;
+    }
+  </script>
+
+
+
 
 
         </div>
@@ -878,8 +914,8 @@ data-event-label="Change to Sources tab"
                 
 
                 
-                  <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/f376a5a5951743bf0ae21e3b0e962624544e45c0" target="_blank">
-                    2021-01-28: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+                  <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/22774e0848b9ae052e5b107a0e56ed7e4f087a24" target="_blank">
+                    2021-01-29: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
                   </a>
                 
 
@@ -1283,7 +1319,7 @@ data-event-label="Change to Sources tab"
       
       <tr>
          <!-- case: content -->
-          <p> <p><i> Text aus dem Indikatorenbericht 2018</i><br /><br />Der Indikator wird vom Bundesinstitut für Bau-, Stadt- und Raumforschung berechnet. Als öffentliche Verkehrsmittel werden Verkehrsangebote definiert, die jedermann nach Entrichtung der jeweiligen Gebühren benutzen kann. Flexible Bedienformen wie zum Beispiel Anrufbusse, die ohne feste Haltestellen und Fahrpläne auf Anforderung verkehren, werden hierbei nicht berücksichtigt.<br /><br />Ein Vergleich zwischen den Indikatorenwerten von 2012 und 2018 zeigt, dass sich die bevölkerungsgewichtete durchschnittliche Reisezeit zum nächsten Mittel- oder Oberzentrum in diesem Zeitraum von 23,5 auf 21,9 Minuten verkürzt hat. Dies entspricht einer Verringerung um 6,9 %.<br /><br />Seit dem Jahr 2012 hat sich jedoch die Zahl der Mittel- oder Oberzentren von 1 010 auf 1 109 im Jahr 2018 erhöht. Dies ist insbesondere auf die zusätzliche Ausweisung von Mittelzentren in Bayern zurückzuführen. Inwiefern diese Neuausweisung mit einer tatsächlichen Verbesserung des Versorgungsangebotes der Orte einhergeht kann hier nicht beurteilt werden. Die Zunahme der Mittel- und Oberzentren trug jedoch wesentlich zu einer Senkung der durchschnittlichen Reisezeit bei. Bei einer Berechnung der durchschnittlichen Reisezeit, bei der die Mittel- und Oberzentren des Jahres 2012 über den gesamten Zeitverlauf als Basis genutzt werden, ergibt sich eine Verkürzung der Reisezeit von 23,5 Minuten im Jahr 2012 auf 22,5 Minuten im Jahr 2018. Dies entspricht lediglich einer Verringerung der Reisezeit von 4,3 % gegenüber dem Jahr 2012.<br /><br />Als Datengrundlage dienen Fahrplandaten der Deutschen Bahn, von Verkehrsverbünden sowie zahlreiche weitere Fahrpläne. Aus den Fahrplandaten wurden für etwa 258 000 Haltestellen die Fahrzeiten in das nächste Mittel- beziehungsweise Oberzentrum während der morgendlichen Hauptverkehrszeit ermittelt. Dieser Zeitraum ist je nach Berichtsjahr unterschiedlich definiert. Wurden 2012 Verbindungen mit einer Ankunftszeit zwischen sechs und neun Uhr berücksichtigt, waren es 2016 und 2018 solche mit einer Ankunftszeit zwischen acht und zwölf Uhr.<br /><br />Auch weil noch nicht alle Nahverkehrspläne vollständig in die verwendete Datenbank integriert wurden, sind die Werte zwischen den Berichtsjahren nicht ohne Einschränkungen vergleichbar. Die Häufigkeit eines Verkehrsangebotes ins nächstgelegene Mittel- beziehungsweise Oberzentrum bleibt zudem ebenso außer Betracht wie die Wegezeit zur beziehungsweise von der Haltestelle. Zudem basiert dieser Indikator auf den Fahrplandaten – somit bleiben Verspätungen oder auch Ausfälle unberücksichtigt.<br /><br />Die Einstufung eines Ortes als Mittel- oder Oberzentrum bestimmt sich nach der Ausstattung des Ortes mit Versorgungsangeboten an Waren, Dienstleistungen und Infrastruktur, die in den umgebenden Unterzentren nicht zur Verfügung stehen. Hierzu zählen unter anderem Facharztpraxen, Krankenhäuser, kulturelle Angebote sowie weiterführende Schulen und Hochschulen. In jedem Mittel- beziehungsweise Oberzentrum, insbesondere in Großstädten, wurde nur ein Zielpunkt (Stadtzentrum) bestimmt. Die Zielhaltestellen wurden im Umkreis von einem Kilometer um den Zielpunkt gewählt und die schnellste Verbindung von der Starthaltestelle dorthin gesucht. Mit Hilfe kleinräumiger Bevölkerungsdaten des Statistischen Bundesamtes wurde dann ein bevölkerungsgewichteter Mittelwert der Reisezeit für Deutschland ermittelt.</p>
+          <p> <p><i> Text aus dem Indikatorenbericht 2020</i><br /><br />Der Indikator wird vom Bundesinstitut für Bau-, Stadt- und Raumforschung berechnet. Als öffentliche Verkehrsmittel werden Verkehrsangebote definiert, die jedermann nach Entrichtung der jeweiligen Gebühren benutzen kann. Flexible Bedienformen wie zum Beispiel Anrufbusse, die ohne feste Haltestellen und Fahrpläne auf Anforderung verkehren, werden hierbei nicht berücksichtigt.<br /><br />Ein Vergleich zwischen den Indikatorenwerten von 2012 und 2018 zeigt, dass sich die bevölkerungsgewichtete durchschnittliche Reisezeit zum nächsten Mittel- oder Oberzentrum in diesem Zeitraum von 23,5 auf 21,9 Minuten verkürzt hat. Dies entspricht einer Verringerung um 6,9 %.<br /><br />Seit dem Jahr 2012 hat sich jedoch die Zahl der Mittel- oder Oberzentren von 1 010 auf 1 109 im Jahr 2018 erhöht. Dies ist insbesondere auf die zusätzliche Ausweisung von Mittelzentren in Bayern zurückzuführen. Inwiefern diese Neuausweisung mit einer tatsächlichen Verbesserung des Versorgungsangebotes der Orte einhergeht kann hier nicht beurteilt werden. Die Zunahme der Mittel- und Oberzentren trug jedoch wesentlich zu einer Senkung der durchschnittlichen Reisezeit bei. Bei einer Berechnung der durchschnittlichen Reisezeit, bei der die Mittel- und Oberzentren des Jahres 2012 über den gesamten Zeitverlauf als Basis genutzt werden, ergibt sich eine Verkürzung der Reisezeit von 23,5 Minuten im Jahr 2012 auf 22,5 Minuten im Jahr 2018. Dies entspricht lediglich einer Verringerung der Reisezeit von 4,3 % gegenüber dem Jahr 2012.<br /><br />Als Datengrundlage dienen Fahrplandaten der Deutschen Bahn, von Verkehrsverbünden sowie zahlreiche weitere Fahrpläne. Aus den Fahrplandaten wurden für etwa 258 000 Haltestellen die Fahrzeiten in das nächste Mittel- beziehungsweise Oberzentrum während der morgendlichen Hauptverkehrszeit ermittelt. Dieser Zeitraum ist je nach Berichtsjahr unterschiedlich definiert. Wurden 2012 Verbindungen mit einer Ankunftszeit zwischen sechs und neun Uhr berücksichtigt, waren es 2016 und 2018 solche mit einer Ankunftszeit zwischen acht und zwölf Uhr.<br /><br />Auch weil noch nicht alle Nahverkehrspläne vollständig in die verwendete Datenbank integriert wurden, sind die Werte zwischen den Berichtsjahren nicht ohne Einschränkungen vergleichbar. Die Häufigkeit eines Verkehrsangebotes ins nächstgelegene Mittel- beziehungsweise Oberzentrum bleibt zudem ebenso außer Betracht wie die Wegezeit zur beziehungsweise von der Haltestelle. Zudem basiert dieser Indikator auf den Fahrplandaten – somit bleiben Verspätungen oder auch Ausfälle unberücksichtigt.<br /><br />Die Einstufung eines Ortes als Mittel- oder Oberzentrum bestimmt sich nach der Ausstattung des Ortes mit Versorgungsangeboten an Waren, Dienstleistungen und Infrastruktur, die in den umgebenden Unterzentren nicht zur Verfügung stehen. Hierzu zählen unter anderem Facharztpraxen, Krankenhäuser, kulturelle Angebote sowie weiterführende Schulen und Hochschulen. In jedem Mittel- beziehungsweise Oberzentrum, insbesondere in Großstädten, wurde nur ein Zielpunkt (Stadtzentrum) bestimmt. Die Zielhaltestellen wurden im Umkreis von einem Kilometer um den Zielpunkt gewählt und die schnellste Verbindung von der Starthaltestelle dorthin gesucht. Mit Hilfe kleinräumiger Bevölkerungsdaten des Statistischen Bundesamtes wurde dann ein bevölkerungsgewichteter Mittelwert der Reisezeit für Deutschland ermittelt.</p>
  </p>
         
       </tr>
@@ -1776,6 +1812,17 @@ data-event-label="Change to Sources tab"
       
       <tr>
         
+
+          
+
+            <th scope="row" height="" >Ziel</th>
+
+            <td colspan="4">
+              
+                <p>Verringerung der durchschnittlichen Reisezeit mit öffentlichen Verkehrsmitteln</p>
+
+              
+            </td>
 
           
 
@@ -2918,7 +2965,7 @@ data-event-label="Change to Sources tab"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20210129001015'></script><script src="/open-sdg-site-starter/assets/js/chartColors.js?v=20210129001015"></script><script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20210129063246'></script><script src="/open-sdg-site-starter/assets/js/chartColors.js?v=20210129063246"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

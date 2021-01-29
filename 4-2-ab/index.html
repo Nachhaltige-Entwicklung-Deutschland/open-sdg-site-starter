@@ -141,7 +141,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20210129001015">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20210129063246">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -149,7 +149,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20210129001015"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20210129063246"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
 <body class="language-de layout-indicator">
@@ -400,6 +400,12 @@ var translations = {
       <!--
 
       
+        <li class="btn">
+          <a href="https://g205sdgs.github.io/sdg-indicators4.2.2">
+            Verwandter globaler Indikator: 4.2.2
+          </a>
+        </li>
+      
 
 
       <li class="pull-right">
@@ -425,17 +431,24 @@ var translations = {
 
   <!---3 Btns if there is a corresponding Indicator-->
   
-    <div class="col-xs-6 col-md-6 col-lg-6">
+    <div class="col-xs-3 col-md-3 col-lg-4">
       <a href="/open-sdg-site-starter/4-1-b" class="btn btn-primary btn-block G4-background" role="button">
         <i class="fa fa-chevron-left" aria-hidden="true"></i> <b><span class="btn-label hidden-sm hidden-xs">Vorheriger Indikator</span></b>
       </a>
     </div>
 
-    <div class="col-xs-6 col-md-6 col-lg-6">
+    <div class="col-xs-6 col-md-6 col-lg-4">
+      <a href="https://sustainabledevelopment-germany.github.io/4.2.2" class="btn btn-primary btn-block G4-background" title="Hier gelangen Sie zur Seite des korrespondierenden SDG-Indikators" role="button">
+        <b><span class="btn-label hidden-sm hidden-xs">Verwandter globaler Indikator:</span> SDG-4.2.2</b>
+      </a>
+    </div>
+
+    <div class="col-xs-3 col-md-3 col-lg-4">
       <a href="/open-sdg-site-starter/5-1-a" class="btn btn-primary btn-block G4-background" role="button">
         <b><span class="btn-label hidden-sm hidden-xs">Nächster Indikator</span></b> <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
     </div>
+  <!---2 Btns if there is no corresponding Indicator-->
   
 
 <!---Goal page-->
@@ -466,10 +479,10 @@ var translations = {
 
   
 
-  <div class="row" id="indicatorData" data-indicatorid='indicator_4-2-ab' data-id="4-2-ab" data-country=""
+  <div class="row" id="indicatorData" data-indicatorid='indicator_4-2-ab' data-id="4-2-ab" data-country="Deutschland"
   data-charttitle="Kinder in Ganztagsbetreuung in Tageseinrichtungen" data-measurementunit="Anteil an allen Kindern der gleichen Altersgruppe, in %" data-datasource="Statistisches Bundesamt (Destatis)" data-copyright="&copy; Statistisches Bundesamt (Destatis), 2021"
-  data-geographicalarea="" data-footnote="" data-showdata="true" data-graphtype="line"
-  data-geocoderegex="" data-showmap="" data-startvalues="">
+  data-geographicalarea="Deutschland" data-footnote="Childcare provision of more than seven hours in day-care facilities, excluding day care in private homes" data-showdata="true" data-graphtype="line"
+  data-geocoderegex="" data-showmap="true" data-startvalues="">
     
     <div id="indicator-sidebar" class="col-md-3">
       <div id="toolbar">
@@ -588,6 +601,26 @@ data-event-label="Change to Map tab"
         <div id="chart" class="plot-container">
           
 <canvas></canvas>
+
+  <script>
+    opensdg.chartConfigAlter = function(config) {
+      var overrides = {
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                min: nan,
+                max: nan
+              }
+            }]
+          }
+        }
+      }
+      // Add these overrides onto the normal config, and return it.
+      $.extend(true, config, overrides);
+      return config;
+    }
+  </script>
 
 
         </div>
@@ -878,8 +911,8 @@ data-event-label="Change to Sources tab"
                 
 
                 
-                  <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/f376a5a5951743bf0ae21e3b0e962624544e45c0" target="_blank">
-                    2021-01-28: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+                  <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/22774e0848b9ae052e5b107a0e56ed7e4f087a24" target="_blank">
+                    2021-01-29: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
                   </a>
                 
 
@@ -1283,7 +1316,7 @@ data-event-label="Change to Sources tab"
       
       <tr>
          <!-- case: content -->
-          <p> <p><i> Text aus dem Indikatorenbericht 2018</i><br /><br />Die Indikatoren geben den Anteil der Kinder an, für die eine tägliche Betreuungszeit von mehr als sieben Stunden vereinbart wurde. Diese Zeitangabe kann von der tatsächlich in Anspruch genommenen Betreuungsdauer abweichen. Vertraglich vereinbarte Betreuungszeiten von sieben Stunden und weniger, die ebenfalls die Vereinbarkeit von Beruf und Familie vereinfachen können, sowie weitere Betreuungsformen, zum Beispiel Tagespflege, fließen nicht ein. Darüber hinaus sind für das Themengebiet auch Informationen zu Betreuungsangeboten für Kinder ab 6 Jahren relevant. Entsprechende ergänzende Informationen bieten beispielsweise Daten der Kultusministerkonferenz (siehe letzter Abschnitt).<br /><br />Die Angaben zum Indikator stammen aus der jährlichen Statistik über Kinder und tätige Personen in Kindertageseinrichtungen des Statistischen Bundesamtes. Im Jahr 2019 war für 46,9 % der 3- bis 5-Jährigen (Kindergartenalter) eine Ganztagsbetreuung in Kindertageseinrichtungen vereinbart. Für Kinder unter 3 Jahren (Krippenalter) lag dieser Wert bei 16,9 %. Somit erhöhte sich der Anteil der ganztags betreuten Kinder bei den 3- bis 5-Jährigen seit 2006 um 25 Prozentpunkte und hat sich damit mehr als verdoppelt. Die ganztägige Betreuung der Kinder unter 3 Jahren stieg von 2006 bis 2019 um 11 Prozentpunkte und hat sich damit nahezu verdreifacht. Insgesamt entwickeln sich beide Indikatoren in die richtige Richtung, wobei Indikator 4.2.b näher am Zielwert für 2030 liegt als Indikator 4.2.a.<br /><br />Die absolute Zahl der ganztags in Kindertageseinrichtungen betreuten Kinder unter 6 Jahren lag 2019 bei 1,47 Millionen; die Zahl der Kinder in Teilzeitbetreuung bei rund 1,3 Millionen. Weitere rund 64 379 Kinder im Alter von unter 6 Jahren wurden ganztägig in öffentlich geförderter Tagespflege betreut und werden somit nicht vom Indikator erfasst. Daneben geht ein Teil der 5-jährigen Kinder bereits zur Schule. <br /><br />Mehr als ein Viertel der in Kindertageseinrichtungen und in öffentlich geförderter Tagespflege betreuten Kinder unter 6 Jahren hatte einen Migrationshintergrund, das heißt, mindestens ein Elternteil war ausländischer Herkunft. Die Betreuungsquote betrug bei diesen Kindern im Jahr 2019 50 %; bei Kindern ohne Migrationshintergrund lag sie bei 70 %.<br /><br />Bei der Ganztagsbetreuung in Tageseinrichtungen besteht ein deutliches Gefälle zwischen den alten und neuen Bundesländern. Die höchsten Ganztagsquoten für 0- bis 2-Jährige sind in den neuen Bundesländern sowie in Berlin zu verzeichnen. Die Spanne bewegt sich insgesamt zwischen 49,9 % in Thüringen und 9,9 % in Baden-Württemberg. Bei den 3- bis 5-Jährigen weist ebenfalls Thüringen mit 92,3 % die höchste Ganztagsbetreuungsquote auf; Baden-Württemberg mit 25,1 % die niedrigste (jeweils 2019).<br /><br />Im Hinblick auf die Betreuungsmöglichkeiten für Schulkinder spielen auch Horte und Ganztagsschulen eine wichtige Rolle. 2019 wurden in Kindertageseinrichtungen (Horten) 21 200 Kinder von 5 bis 13 Jahren ganztags und rund 483 600 Kinder in Teilzeit betreut (die Unterrichtszeit gilt nicht als Betreuungszeit). Der Anteil der Ganztagsschülerinnen und Ganztagsschüler gemessen an allen Schülerinnen und Schülern in allgemeinbildenden Schulen lag im Schuljahr 2018/2019 bei 45,0 %. Hier sind jedoch alle Schulformen und somit auch Schülerinnen und Schüler über 13 Jahren einbezogen. An Grundschulen wurden im gleichen Schuljahr 42,2 % der Kinder ganztags betreut. Im Vergleich zum Jahr 2006 ist die Zahl der Ganztagsschülerinnen und -schüler 2018 deutlich gestiegen, und zwar von knapp 1,5 Millionen auf 3,3 Millionen (allgemeinbildende Schulen insgesamt) und von 400 000 auf 1,2 Millionen in Grundschulen.</p>
+          <p> <p><i> Text aus dem Indikatorenbericht 2020</i><br /><br />Die Indikatoren geben den Anteil der Kinder an, für die eine tägliche Betreuungszeit von mehr als sieben Stunden vereinbart wurde. Diese Zeitangabe kann von der tatsächlich in Anspruch genommenen Betreuungsdauer abweichen. Vertraglich vereinbarte Betreuungszeiten von sieben Stunden und weniger, die ebenfalls die Vereinbarkeit von Beruf und Familie vereinfachen können, sowie weitere Betreuungsformen, zum Beispiel Tagespflege, fließen nicht ein. Darüber hinaus sind für das Themengebiet auch Informationen zu Betreuungsangeboten für Kinder ab 6 Jahren relevant. Entsprechende ergänzende Informationen bieten beispielsweise Daten der Kultusministerkonferenz (siehe letzter Abschnitt).<br /><br />Die Angaben zum Indikator stammen aus der jährlichen Statistik über Kinder und tätige Personen in Kindertageseinrichtungen des Statistischen Bundesamtes. Im Jahr 2019 war für 46,9 % der 3- bis 5-Jährigen (Kindergartenalter) eine Ganztagsbetreuung in Kindertageseinrichtungen vereinbart. Für Kinder unter 3 Jahren (Krippenalter) lag dieser Wert bei 16,9 %. Somit erhöhte sich der Anteil der ganztags betreuten Kinder bei den 3- bis 5-Jährigen seit 2006 um 25 Prozentpunkte und hat sich damit mehr als verdoppelt. Die ganztägige Betreuung der Kinder unter 3 Jahren stieg von 2006 bis 2019 um 11 Prozentpunkte und hat sich damit nahezu verdreifacht. Insgesamt entwickeln sich beide Indikatoren in die richtige Richtung, wobei Indikator 4.2.b näher am Zielwert für 2030 liegt als Indikator 4.2.a.<br /><br />Die absolute Zahl der ganztags in Kindertageseinrichtungen betreuten Kinder unter 6 Jahren lag 2019 bei 1,47 Millionen; die Zahl der Kinder in Teilzeitbetreuung bei rund 1,3 Millionen. Weitere rund 64 379 Kinder im Alter von unter 6 Jahren wurden ganztägig in öffentlich geförderter Tagespflege betreut und werden somit nicht vom Indikator erfasst. Daneben geht ein Teil der 5-jährigen Kinder bereits zur Schule. <br /><br />Mehr als ein Viertel der in Kindertageseinrichtungen und in öffentlich geförderter Tagespflege betreuten Kinder unter 6 Jahren hatte einen Migrationshintergrund, das heißt, mindestens ein Elternteil war ausländischer Herkunft. Die Betreuungsquote betrug bei diesen Kindern im Jahr 2019 50 %; bei Kindern ohne Migrationshintergrund lag sie bei 70 %.<br /><br />Bei der Ganztagsbetreuung in Tageseinrichtungen besteht ein deutliches Gefälle zwischen den alten und neuen Bundesländern. Die höchsten Ganztagsquoten für 0- bis 2-Jährige sind in den neuen Bundesländern sowie in Berlin zu verzeichnen. Die Spanne bewegt sich insgesamt zwischen 49,9 % in Thüringen und 9,9 % in Baden-Württemberg. Bei den 3- bis 5-Jährigen weist ebenfalls Thüringen mit 92,3 % die höchste Ganztagsbetreuungsquote auf; Baden-Württemberg mit 25,1 % die niedrigste (jeweils 2019).<br /><br />Im Hinblick auf die Betreuungsmöglichkeiten für Schulkinder spielen auch Horte und Ganztagsschulen eine wichtige Rolle. 2019 wurden in Kindertageseinrichtungen (Horten) 21 200 Kinder von 5 bis 13 Jahren ganztags und rund 483 600 Kinder in Teilzeit betreut (die Unterrichtszeit gilt nicht als Betreuungszeit). Der Anteil der Ganztagsschülerinnen und Ganztagsschüler gemessen an allen Schülerinnen und Schülern in allgemeinbildenden Schulen lag im Schuljahr 2018/2019 bei 45,0 %. Hier sind jedoch alle Schulformen und somit auch Schülerinnen und Schüler über 13 Jahren einbezogen. An Grundschulen wurden im gleichen Schuljahr 42,2 % der Kinder ganztags betreut. Im Vergleich zum Jahr 2006 ist die Zahl der Ganztagsschülerinnen und -schüler 2018 deutlich gestiegen, und zwar von knapp 1,5 Millionen auf 3,3 Millionen (allgemeinbildende Schulen insgesamt) und von 400 000 auf 1,2 Millionen in Grundschulen.</p>
  </p>
         
       </tr>
@@ -1778,6 +1811,17 @@ data-event-label="Change to Sources tab"
       
       <tr>
         
+
+          
+
+            <th scope="row" height="" >Ziel</th>
+
+            <td colspan="4">
+              
+                <p>Anstieg auf 35 Prozent bis 2030</p>
+
+              
+            </td>
 
           
 
@@ -2502,6 +2546,17 @@ data-event-label="Change to Sources tab"
       
       <tr>
         
+
+          
+
+            <th scope="row" height="" >Ziel</th>
+
+            <td colspan="4">
+              
+                <p>Anstieg auf 60 Prozent bis 2020 und auf 70 Prozent bis 2030</p>
+
+              
+            </td>
 
           
 
@@ -3494,7 +3549,7 @@ data-event-label="Change to Sources tab"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20210129001015'></script><script src="/open-sdg-site-starter/assets/js/chartColors.js?v=20210129001015"></script><script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20210129063246'></script><script src="/open-sdg-site-starter/assets/js/chartColors.js?v=20210129063246"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

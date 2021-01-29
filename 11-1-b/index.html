@@ -141,7 +141,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20210129001015">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20210129063246">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -149,7 +149,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20210129001015"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20210129063246"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
 <body class="language-de layout-indicator">
@@ -366,7 +366,7 @@ var translations = {
     <div class="row">
       <div class="col-xs-4 col-md-3 col-lg-2">
         <a href="/open-sdg-site-starter/11" title="Zeigt die Indikatorenliste zum SDG-Ziel an.">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/11.png" alt="Nachhaltige Städte und Gemeinden - Ziel 11" title="Städte und Siedlungen inklusiv, sicher, widerstandsfähig und nachhaltig machen" />
+          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/11.png" alt="Nachhaltige Städte und Gemeinden - Ziel 11" title="Städte und Siedlungen inklusiv, sicher, widerstandsfähig und nachhaltig gestalten" />
         </a>
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10">
@@ -400,6 +400,12 @@ var translations = {
       <!--
 
       
+        <li class="btn">
+          <a href="https://g205sdgs.github.io/sdg-indicators11.3.1">
+            Verwandter globaler Indikator: 11.3.1
+          </a>
+        </li>
+      
 
 
       <li class="pull-right">
@@ -425,17 +431,24 @@ var translations = {
 
   <!---3 Btns if there is a corresponding Indicator-->
   
-    <div class="col-xs-6 col-md-6 col-lg-6">
+    <div class="col-xs-3 col-md-3 col-lg-4">
       <a href="/open-sdg-site-starter/11-1-a" class="btn btn-primary btn-block G11-background" role="button">
         <i class="fa fa-chevron-left" aria-hidden="true"></i> <b><span class="btn-label hidden-sm hidden-xs">Vorheriger Indikator</span></b>
       </a>
     </div>
 
-    <div class="col-xs-6 col-md-6 col-lg-6">
+    <div class="col-xs-6 col-md-6 col-lg-4">
+      <a href="https://sustainabledevelopment-germany.github.io/11.3.1" class="btn btn-primary btn-block G11-background" title="Hier gelangen Sie zur Seite des korrespondierenden SDG-Indikators" role="button">
+        <b><span class="btn-label hidden-sm hidden-xs">Verwandter globaler Indikator:</span> SDG-11.3.1</b>
+      </a>
+    </div>
+
+    <div class="col-xs-3 col-md-3 col-lg-4">
       <a href="/open-sdg-site-starter/11-1-c" class="btn btn-primary btn-block G11-background" role="button">
         <b><span class="btn-label hidden-sm hidden-xs">Nächster Indikator</span></b> <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
     </div>
+  <!---2 Btns if there is no corresponding Indicator-->
   
 
 <!---Goal page-->
@@ -466,10 +479,10 @@ var translations = {
 
   
 
-  <div class="row" id="indicatorData" data-indicatorid='indicator_11-1-b' data-id="11-1-b" data-country=""
+  <div class="row" id="indicatorData" data-indicatorid='indicator_11-1-b' data-id="11-1-b" data-country="Deutschland"
   data-charttitle="Veränderung der Freiraumfläche je Einwohnerin und Einwohner" data-measurementunit="Gleitender Vierjahresdurchschnitt in Quadratmetern pro Jahr" data-datasource="Statistisches Bundesamt (Destatis), Bundesinstitut für Bau-, Stadt- und Raumforschung (BBSR)" data-copyright="&copy; Statistisches Bundesamt (Destatis), 2021"
-  data-geographicalarea="" data-footnote="" data-showdata="true" data-graphtype="line"
-  data-geocoderegex="" data-showmap="" data-startvalues="">
+  data-geographicalarea="Deutschland" data-footnote="A new catalogue of types of use has been applied since the data basis was changed as of 31 December 2016 so that the relevant change from 2015 to 2016 cannot be determined. Comparability over time is therefore very limited" data-showdata="true" data-graphtype="bar"
+  data-geocoderegex="" data-showmap="true" data-startvalues="">
     
     <div id="indicator-sidebar" class="col-md-3">
       <div id="toolbar">
@@ -588,6 +601,29 @@ data-event-label="Change to Map tab"
         <div id="chart" class="plot-container">
           
 <canvas></canvas>
+
+  <script>
+    opensdg.chartConfigAlter = function(config) {
+      var overrides = {
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                min: nan,
+                max: nan
+              }
+            }]
+          }
+        }
+      }
+      // Add these overrides onto the normal config, and return it.
+      $.extend(true, config, overrides);
+      return config;
+    }
+  </script>
+
+
+
 
 
         </div>
@@ -878,8 +914,8 @@ data-event-label="Change to Sources tab"
                 
 
                 
-                  <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/f376a5a5951743bf0ae21e3b0e962624544e45c0" target="_blank">
-                    2021-01-28: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+                  <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/22774e0848b9ae052e5b107a0e56ed7e4f087a24" target="_blank">
+                    2021-01-29: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
                   </a>
                 
 
@@ -1283,7 +1319,7 @@ data-event-label="Change to Sources tab"
       
       <tr>
          <!-- case: content -->
-          <p> <p><i> Text aus dem Indikatorenbericht 2018</i><br /><br />Als Freiraumflächen werden Vegetationsflächen (z. B. Ackerland, Weideland oder Waldflächen), sowie Abbauflächen und Wasserflächen bezeichnet. Freiraumflächen sind begrifflich abzugrenzen von Freiflächen im Siedlungsbereich, wie beispielsweise Friedhöfe, Gärten, Parks oder Freizeitanlagen, die zwar weitestgehend unbebaut sind, aber prinzipiell zur Siedlungs- und Verkehrsfläche zählen. Werden also bisher von Bebauung freigehaltene Siedlungsflächen bebaut, spiegelt sich dies nicht im Indikator zum Freiraumverlust wider.<br /><br />Im betrachteten Zeitraum verringerte sich der Freiraumverlust pro Kopf im Bundesdurchschnitt. Waren es im gleitenden Vierjahresmittel 2001-2004 noch etwa 5 Quadratmeter je Einwohnerin und Einwohner, so sind es im aktuellen Vierjahresmittel 2015-2018 nur noch rund 3 Quadratmeter.<br /><br />Bei gleicher Tendenz zeigen sich zwischen ländlichen und nicht ländlichen Räumen deutliche Unterschiede im Ausmaß der Veränderung. So reduzierte sich der Freiraumverlust in ländlichen Räumen je Einwohnerin und Einwohner von 7,4 auf 4,5 Quadratmeter pro Jahr. In den nicht ländlichen Räumen ging er von 1,8 auf 0,6 Quadratmeter zurück. Hierbei ist zu berücksichtigen, dass es in nicht ländlichen Kreisen und kreisfreien Städten erheblich weniger Freiräumflächen wie Wälder oder Landwirtschaftsflächen gibt als in ländlichen Räumen. Zudem verläuft die Bevölkerungsentwicklung unterschiedlich und wirkt sich entsprechend auf den Indikator aus: Während ländliche Regionen im betrachteten Zeitraum überwiegend einen Rückgang der Bevölkerung verzeichneten, stieg die Einwohnerzahl in nicht ländlichen Regionen insgesamt etwas an.<br /><br />Datengrundlagen des Indikators sind die Bevölkerungszahlen und die Flächenerhebung nach Art der tatsächlichen Nutzung des Statistischen Bundesamtes. Da zu seiner Berechnung Bevölkerungsdaten auf regionaler Ebene herangezogen werden, gab es durch den Zensus 2011 einen Sprung in den Zeitreihen. Daneben kam es im amtlichen Liegenschaftskataster der Länder in den vergangenen Jahren teilweise zur Neuzuordnung von Flächennutzungen ohne reale Änderung in der Landschaft. Um diese Effekte zu glätten und den langfristigen Trend herauszustellen, wird ein gleitender Vierjahresdurchschnitt abgebildet, der die Daten der jeweiligen Jahre und der drei vorangegangenen Jahre mittelt. Zudem wurde im Jahr 2016 die Umstellung des alten auf den neuen Nutzungsartenkatalog vollendet, was sich auch auf die amtliche Flächenstatistik auswirkte, sodass die Vergleichbarkeit der Daten von 2016 mit den Vorjahren eingeschränkt ist. Aus diesem Grund ist die Entwicklung des Indikators für das Jahr 2016 in der Grafik nur in gestrichelter Form abgebildet.<br /><br />Die Unterscheidung zwischen „ländlich“ und „nicht ländlich“ basiert auf einer Typisierung des Thünen-Instituts. Das Institut ordnet Landkreisen und kreisfreien Städten – auf Basis von räumlichen Merkmalen wie „Siedlungsdichte“ und „Anteil land- und forstwirtschaftlicher Fläche“ – einen Grad an „Ländlichkeit“ zu. Somit bezieht sich diese Typisierung auf die Kreisebene und nicht auf kleinere räumliche Einheiten wie Städte und Dörfer.</p>
+          <p> <p><i> Text aus dem Indikatorenbericht 2020</i><br /><br />Als Freiraumflächen werden Vegetationsflächen (z. B. Ackerland, Weideland oder Waldflächen), sowie Abbauflächen und Wasserflächen bezeichnet. Freiraumflächen sind begrifflich abzugrenzen von Freiflächen im Siedlungsbereich, wie beispielsweise Friedhöfe, Gärten, Parks oder Freizeitanlagen, die zwar weitestgehend unbebaut sind, aber prinzipiell zur Siedlungs- und Verkehrsfläche zählen. Werden also bisher von Bebauung freigehaltene Siedlungsflächen bebaut, spiegelt sich dies nicht im Indikator zum Freiraumverlust wider.<br /><br />Im betrachteten Zeitraum verringerte sich der Freiraumverlust pro Kopf im Bundesdurchschnitt. Waren es im gleitenden Vierjahresmittel 2001-2004 noch etwa 5 Quadratmeter je Einwohnerin und Einwohner, so sind es im aktuellen Vierjahresmittel 2015-2018 nur noch rund 3 Quadratmeter.<br /><br />Bei gleicher Tendenz zeigen sich zwischen ländlichen und nicht ländlichen Räumen deutliche Unterschiede im Ausmaß der Veränderung. So reduzierte sich der Freiraumverlust in ländlichen Räumen je Einwohnerin und Einwohner von 7,4 auf 4,5 Quadratmeter pro Jahr. In den nicht ländlichen Räumen ging er von 1,8 auf 0,6 Quadratmeter zurück. Hierbei ist zu berücksichtigen, dass es in nicht ländlichen Kreisen und kreisfreien Städten erheblich weniger Freiräumflächen wie Wälder oder Landwirtschaftsflächen gibt als in ländlichen Räumen. Zudem verläuft die Bevölkerungsentwicklung unterschiedlich und wirkt sich entsprechend auf den Indikator aus: Während ländliche Regionen im betrachteten Zeitraum überwiegend einen Rückgang der Bevölkerung verzeichneten, stieg die Einwohnerzahl in nicht ländlichen Regionen insgesamt etwas an.<br /><br />Datengrundlagen des Indikators sind die Bevölkerungszahlen und die Flächenerhebung nach Art der tatsächlichen Nutzung des Statistischen Bundesamtes. Da zu seiner Berechnung Bevölkerungsdaten auf regionaler Ebene herangezogen werden, gab es durch den Zensus 2011 einen Sprung in den Zeitreihen. Daneben kam es im amtlichen Liegenschaftskataster der Länder in den vergangenen Jahren teilweise zur Neuzuordnung von Flächennutzungen ohne reale Änderung in der Landschaft. Um diese Effekte zu glätten und den langfristigen Trend herauszustellen, wird ein gleitender Vierjahresdurchschnitt abgebildet, der die Daten der jeweiligen Jahre und der drei vorangegangenen Jahre mittelt. Zudem wurde im Jahr 2016 die Umstellung des alten auf den neuen Nutzungsartenkatalog vollendet, was sich auch auf die amtliche Flächenstatistik auswirkte, sodass die Vergleichbarkeit der Daten von 2016 mit den Vorjahren eingeschränkt ist. Aus diesem Grund ist die Entwicklung des Indikators für das Jahr 2016 in der Grafik nur in gestrichelter Form abgebildet.<br /><br />Die Unterscheidung zwischen „ländlich“ und „nicht ländlich“ basiert auf einer Typisierung des Thünen-Instituts. Das Institut ordnet Landkreisen und kreisfreien Städten – auf Basis von räumlichen Merkmalen wie „Siedlungsdichte“ und „Anteil land- und forstwirtschaftlicher Fläche“ – einen Grad an „Ländlichkeit“ zu. Somit bezieht sich diese Typisierung auf die Kreisebene und nicht auf kleinere räumliche Einheiten wie Städte und Dörfer.</p>
  </p>
         
       </tr>
@@ -1776,6 +1812,17 @@ data-event-label="Change to Sources tab"
       
       <tr>
         
+
+          
+
+            <th scope="row" height="" >Ziel</th>
+
+            <td colspan="4">
+              
+                <p>Verringerung des einwohnerbezogenen Freiflächenverlusts</p>
+
+              
+            </td>
 
           
 
@@ -3450,7 +3497,7 @@ data-event-label="Change to Sources tab"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20210129001015'></script><script src="/open-sdg-site-starter/assets/js/chartColors.js?v=20210129001015"></script><script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20210129063246'></script><script src="/open-sdg-site-starter/assets/js/chartColors.js?v=20210129063246"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

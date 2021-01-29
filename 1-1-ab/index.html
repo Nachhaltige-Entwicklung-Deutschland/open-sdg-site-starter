@@ -141,7 +141,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20210129001015">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20210129063246">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -149,7 +149,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20210129001015"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20210129063246"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
 <body class="language-de layout-indicator">
@@ -400,6 +400,12 @@ var translations = {
       <!--
 
       
+        <li class="btn">
+          <a href="https://g205sdgs.github.io/sdg-indicators1.2.2">
+            Verwandter globaler Indikator: 1.2.2
+          </a>
+        </li>
+      
 
 
       <li class="pull-right">
@@ -425,17 +431,24 @@ var translations = {
 
   <!---3 Btns if there is a corresponding Indicator-->
   
-    <div class="col-xs-6 col-md-6 col-lg-6">
+    <div class="col-xs-3 col-md-3 col-lg-4">
       <a href="/open-sdg-site-starter/17-3-a" class="btn btn-primary btn-block G1-background" role="button">
         <i class="fa fa-chevron-left" aria-hidden="true"></i> <b><span class="btn-label hidden-sm hidden-xs">Vorheriger Indikator</span></b>
       </a>
     </div>
 
-    <div class="col-xs-6 col-md-6 col-lg-6">
+    <div class="col-xs-6 col-md-6 col-lg-4">
+      <a href="https://sustainabledevelopment-germany.github.io/1.2.2" class="btn btn-primary btn-block G1-background" title="Hier gelangen Sie zur Seite des korrespondierenden SDG-Indikators" role="button">
+        <b><span class="btn-label hidden-sm hidden-xs">Verwandter globaler Indikator:</span> SDG-1.2.2</b>
+      </a>
+    </div>
+
+    <div class="col-xs-3 col-md-3 col-lg-4">
       <a href="/open-sdg-site-starter/2-1-a" class="btn btn-primary btn-block G1-background" role="button">
         <b><span class="btn-label hidden-sm hidden-xs">Nächster Indikator</span></b> <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
     </div>
+  <!---2 Btns if there is no corresponding Indicator-->
   
 
 <!---Goal page-->
@@ -466,9 +479,9 @@ var translations = {
 
   
 
-  <div class="row" id="indicatorData" data-indicatorid='indicator_1-1-ab' data-id="1-1-ab" data-country=""
+  <div class="row" id="indicatorData" data-indicatorid='indicator_1-1-ab' data-id="1-1-ab" data-country="Deutschland/EU-28"
   data-charttitle="Materiell deprivierte sowie erheblich materiell deprivierte Personen" data-measurementunit="Anteile, in %" data-datasource="Statistisches Bundesamt (Destatis), Eurostat" data-copyright="&copy; Statistisches Bundesamt (Destatis), 2021"
-  data-geographicalarea="" data-footnote="" data-showdata="true" data-graphtype="line"
+  data-geographicalarea="Deutschland/EU-28" data-footnote="2018 estimated values respective provisional data" data-showdata="true" data-graphtype="line"
   data-geocoderegex="" data-showmap="" data-startvalues="a) Materially deprived persons|b) Severely materially deprived persons|EU-28|Germany">
     
     <div id="indicator-sidebar" class="col-md-3">
@@ -588,6 +601,26 @@ data-event-label="Change to Map tab"
         <div id="chart" class="plot-container">
           
 <canvas></canvas>
+
+  <script>
+    opensdg.chartConfigAlter = function(config) {
+      var overrides = {
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                min: nan,
+                max: nan
+              }
+            }]
+          }
+        }
+      }
+      // Add these overrides onto the normal config, and return it.
+      $.extend(true, config, overrides);
+      return config;
+    }
+  </script>
 
 
         </div>
@@ -878,8 +911,8 @@ data-event-label="Change to Sources tab"
                 
 
                 
-                  <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/f376a5a5951743bf0ae21e3b0e962624544e45c0" target="_blank">
-                    2021-01-28: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+                  <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/22774e0848b9ae052e5b107a0e56ed7e4f087a24" target="_blank">
+                    2021-01-29: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
                   </a>
                 
 
@@ -1283,7 +1316,7 @@ data-event-label="Change to Sources tab"
       
       <tr>
          <!-- case: content -->
-          <p> <p><i> Text aus dem Indikatorenbericht 2018</i><br /><br />Die Daten stammen aus der europaweit harmonisierten, jährlichen Statistik über Einkommen und Lebensbedingungen (EU-SILC), die in Deutschland vom Statistischen Bundesamt in Zusammenarbeit mit den Statistischen Landesämtern unter dem Namen „Leben in Europa“ durchgeführt wird. Dabei geben jährlich etwa 14 000 Privathaushalte in Deutschland auf freiwilliger Basis Auskunft zu Einkommen und Lebensbedingungen.<br /><br />Beide Indikatoren stellen den Anteil der Bevölkerung dar, welcher basierend auf der Selbsteinschätzung in mehreren Bereichen einen unfreiwilligen Verzicht oder Mangel aus finanziellen Gründen empfindet. Als Prüfmerkmale wurden Ausgaben für eine Lebensführung ausgewählt, die in Europa als angemessen, wünschenswert oder gar notwendig angesehen wird. Diese neun Kriterien, die zur Beschreibung „materieller Entbehrung“ dienen, sind für alle Länder, in denen EU-SILC durchgeführt wird, einheitlich und ermöglichen somit einen europaweiten Vergleich.<br /><br />Die neun Merkmale umfassen im Einzelnen: das Fehlen eines Autos, einer Waschmaschine, eines Farbfernsehgeräts oder eines Telefons im Haushalt (jeweils weil es sich der Haushalt finanziell nicht leisten kann), ein finanzielles Problem zu haben, die Miete nicht zahlen zu können, Hypothek oder Rechnungen für Versorgungsleistungen nicht rechtzeitig bezahlen zu können, die Wohnung nicht angemessen heizen zu können, nicht jeden zweiten Tag Fleisch, Fisch oder eine gleichwertige vegetarische Mahlzeit essen zu können, nicht jährlich eine Woche Urlaub außerhalb der eigenen Wohnung verbringen zu können oder unerwartete Ausgaben in einer bestimmten Höhe (2018:1 050 Euro) aus eigenen finanziellen Mitteln nicht bestreiten zu können.<br /><br />Mit der materiellen Deprivation verbunden ist das Problem der sozialen Ausgrenzung, da die Teilnahme am gesellschaftlichen Leben aufgrund fehlender finanzieller Mittel gefährdet ist. Der Indikator „Erhebliche materielle Entbehrung“ ist ebenfalls Teil des Indikators „Armut oder soziale Ausgrenzung“, mit dem eines der fünf Kernziele der Europa 2020-Strategie (Bekämpfung von Armut und sozialer Ausgrenzung) gemessen wird.<br /><br />Im Jahr 2018 galten 7,8 % der Bevölkerung in Deutschland als materiell depriviert, 3,1 % waren von erheblicher materieller Entbehrung betroffen. Die entsprechenden Werte lagen im Jahr 2010 bei 11,1 bzw. 4,5 %, in den Folgejahren teilweise auch etwas darüber. So zeichnete sich im Zeitverlauf, ähnlich wie in der gesamten EU, ein leichter Rückgang ab. Die Durchschnittswerte für Personen in der EU sind jedoch jeweils deutlich höher als die Werte für Deutschland. So betrug 2018 der Anteil der materiell deprivierten EU-Bevölkerung nach Schätzung des statistischen Amts der Europäischen Union (Eurostat) 13,1 % und war damit um mehr als die Hälfte höher als in Deutschland. Als erheblich materiell depriviert galten 5,9 %. Diese Quote ist um 90 % höher als der deutsche Vergleichswert.</p>
+          <p> <p><i> Text aus dem Indikatorenbericht 2020</i><br /><br />Die Daten stammen aus der europaweit harmonisierten, jährlichen Statistik über Einkommen und Lebensbedingungen (EU-SILC), die in Deutschland vom Statistischen Bundesamt in Zusammenarbeit mit den Statistischen Landesämtern unter dem Namen „Leben in Europa“ durchgeführt wird. Dabei geben jährlich etwa 14 000 Privathaushalte in Deutschland auf freiwilliger Basis Auskunft zu Einkommen und Lebensbedingungen.<br /><br />Beide Indikatoren stellen den Anteil der Bevölkerung dar, welcher basierend auf der Selbsteinschätzung in mehreren Bereichen einen unfreiwilligen Verzicht oder Mangel aus finanziellen Gründen empfindet. Als Prüfmerkmale wurden Ausgaben für eine Lebensführung ausgewählt, die in Europa als angemessen, wünschenswert oder gar notwendig angesehen wird. Diese neun Kriterien, die zur Beschreibung „materieller Entbehrung“ dienen, sind für alle Länder, in denen EU-SILC durchgeführt wird, einheitlich und ermöglichen somit einen europaweiten Vergleich.<br /><br />Die neun Merkmale umfassen im Einzelnen: das Fehlen eines Autos, einer Waschmaschine, eines Farbfernsehgeräts oder eines Telefons im Haushalt (jeweils weil es sich der Haushalt finanziell nicht leisten kann), ein finanzielles Problem zu haben, die Miete nicht zahlen zu können, Hypothek oder Rechnungen für Versorgungsleistungen nicht rechtzeitig bezahlen zu können, die Wohnung nicht angemessen heizen zu können, nicht jeden zweiten Tag Fleisch, Fisch oder eine gleichwertige vegetarische Mahlzeit essen zu können, nicht jährlich eine Woche Urlaub außerhalb der eigenen Wohnung verbringen zu können oder unerwartete Ausgaben in einer bestimmten Höhe (2018:1 050 Euro) aus eigenen finanziellen Mitteln nicht bestreiten zu können.<br /><br />Mit der materiellen Deprivation verbunden ist das Problem der sozialen Ausgrenzung, da die Teilnahme am gesellschaftlichen Leben aufgrund fehlender finanzieller Mittel gefährdet ist. Der Indikator „Erhebliche materielle Entbehrung“ ist ebenfalls Teil des Indikators „Armut oder soziale Ausgrenzung“, mit dem eines der fünf Kernziele der Europa 2020-Strategie (Bekämpfung von Armut und sozialer Ausgrenzung) gemessen wird.<br /><br />Im Jahr 2018 galten 7,8 % der Bevölkerung in Deutschland als materiell depriviert, 3,1 % waren von erheblicher materieller Entbehrung betroffen. Die entsprechenden Werte lagen im Jahr 2010 bei 11,1 bzw. 4,5 %, in den Folgejahren teilweise auch etwas darüber. So zeichnete sich im Zeitverlauf, ähnlich wie in der gesamten EU, ein leichter Rückgang ab. Die Durchschnittswerte für Personen in der EU sind jedoch jeweils deutlich höher als die Werte für Deutschland. So betrug 2018 der Anteil der materiell deprivierten EU-Bevölkerung nach Schätzung des statistischen Amts der Europäischen Union (Eurostat) 13,1 % und war damit um mehr als die Hälfte höher als in Deutschland. Als erheblich materiell depriviert galten 5,9 %. Diese Quote ist um 90 % höher als der deutsche Vergleichswert.</p>
  </p>
         
       </tr>
@@ -4085,7 +4118,7 @@ data-event-label="Change to Sources tab"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20210129001015'></script><script src="/open-sdg-site-starter/assets/js/chartColors.js?v=20210129001015"></script><script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20210129063246'></script><script src="/open-sdg-site-starter/assets/js/chartColors.js?v=20210129063246"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

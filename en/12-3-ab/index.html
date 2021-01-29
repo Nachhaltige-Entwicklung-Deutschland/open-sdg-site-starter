@@ -141,7 +141,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20210129001015">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20210129063246">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -149,7 +149,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20210129001015"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20210129063246"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
 <body class="language-en layout-indicator">
@@ -366,7 +366,7 @@ var translations = {
     <div class="row">
       <div class="col-xs-4 col-md-3 col-lg-2">
         <a href="/open-sdg-site-starter/en/12" title="View this goal's indicator list">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/12.png" alt="Responsible consumption and production - Goal 12" title="Responsible consumption and production" />
+          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/12.png" alt="Responsible consumption and production - Goal 12" title="" />
         </a>
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10">
@@ -400,6 +400,12 @@ var translations = {
       <!--
 
       
+        <li class="btn">
+          <a href="https://g205sdgs.github.io/sdg-indicators12.7.1">
+            Related global indicator: 12.7.1
+          </a>
+        </li>
+      
 
 
       <li class="pull-right">
@@ -425,17 +431,24 @@ var translations = {
 
   <!---3 Btns if there is a corresponding Indicator-->
   
-    <div class="col-xs-6 col-md-6 col-lg-6">
+    <div class="col-xs-3 col-md-3 col-lg-4">
       <a href="/open-sdg-site-starter/en/12-2-a" class="btn btn-primary btn-block G12-background" role="button">
         <i class="fa fa-chevron-left" aria-hidden="true"></i> <b><span class="btn-label hidden-sm hidden-xs">Previous indicator</span></b>
       </a>
     </div>
 
-    <div class="col-xs-6 col-md-6 col-lg-6">
+    <div class="col-xs-6 col-md-6 col-lg-4">
+      <a href="https://sustainabledevelopment-germany.github.io/en12.7.1" class="btn btn-primary btn-block G12-background" title="Go to the page of the corresponding SDG indicator" role="button">
+        <b><span class="btn-label hidden-sm hidden-xs">Related global indicator:</span> SDG-12.7.1</b>
+      </a>
+    </div>
+
+    <div class="col-xs-3 col-md-3 col-lg-4">
       <a href="/open-sdg-site-starter/en/13-1-a" class="btn btn-primary btn-block G12-background" role="button">
         <b><span class="btn-label hidden-sm hidden-xs">Next indicator</span></b> <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
     </div>
+  <!---2 Btns if there is no corresponding Indicator-->
   
 
 <!---Goal page-->
@@ -466,9 +479,9 @@ var translations = {
 
   
 
-  <div class="row" id="indicatorData" data-indicatorid='indicator_12-3-ab' data-id="12-3-ab" data-country=""
+  <div class="row" id="indicatorData" data-indicatorid='indicator_12-3-ab' data-id="12-3-ab" data-country="Germany"
   data-charttitle="Responsible public procurement" data-measurementunit="1990 = 100" data-datasource="Federal Statistical Office (Destatis), German Institute for Energy and Environmental Research (IFEU), German Environment Agency, Competence Center for Sustainable Procurement" data-copyright="&copy; Federal Statistical Office (Destatis), 2020"
-  data-geographicalarea="" data-footnote="" data-showdata="true" data-graphtype="line"
+  data-geographicalarea="Germany" data-footnote="2018: Methodological break - data is not fully comparable" data-showdata="true" data-graphtype="line"
   data-geocoderegex="" data-showmap="" data-startvalues="">
     
     <div id="indicator-sidebar" class="col-md-3">
@@ -588,6 +601,26 @@ data-event-label="Change to Map tab"
         <div id="chart" class="plot-container">
           
 <canvas></canvas>
+
+  <script>
+    opensdg.chartConfigAlter = function(config) {
+      var overrides = {
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                min: 80.0,
+                max: nan
+              }
+            }]
+          }
+        }
+      }
+      // Add these overrides onto the normal config, and return it.
+      $.extend(true, config, overrides);
+      return config;
+    }
+  </script>
 
 
         </div>
@@ -878,8 +911,8 @@ data-event-label="Change to Sources tab"
                 
 
                 
-                  <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/f376a5a5951743bf0ae21e3b0e962624544e45c0" target="_blank">
-                    2021-01-28: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
+                  <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/22774e0848b9ae052e5b107a0e56ed7e4f087a24" target="_blank">
+                    2021-01-29: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
                   </a>
                 
 
@@ -1283,7 +1316,7 @@ data-event-label="Change to Sources tab"
       
       <tr>
          <!-- case: content -->
-          <p> <p><i>Text from the Indicator Report 2018</i><br /><br /> Sustainability in public procurement is a very complex topic. It is therefore hardly possible to address it appropriately using one or a few indicators. The two indicators shown here focus exclusively on selected ecological aspects of sustainability, although they cannot reflect these environmental aspects exhaustively. Social and economic aspects of sustainability are not in the focus of the two indicators.<br /><br /><i>CO2 emissions per mileage of motor vehicles of the public sector</i><br /><br />The data for motor vehicles of the public sector are provided by the environmental economic accounts of the Federal Statistical Office, also using the TREMOD (Transport Emission Model) database of the ifeu (German Institute for Energy and Environmental Research). The public sector comprises the federal level, the Länder level, the level of municipalities and associations of municipalities, the police, the Federal Border Guard, fire protection and fire brigades.<br /><br />From 2015 to 2016, the average CO2 emissions per kilometre driven by motor vehicles of the public sector decreased by around 2 % from roughly 184 to 180.6 grams of CO2 per kilometre. This has resulted in a separation of CO2 emissions and mileage. The ratio of CO2 emissions to mileage declined, although mileage continued to increase. In 2014, both mileage and CO2 emissions increased. In 2015, however, CO2 emissions decreased for the first time, although mileage continued to grow. One reason for this could be the increasing procurement of more efficient motor vehicles and of electric and hybrid cars with lower CO2 emissions. The propor-tion of electric and hybrid cars of the total stock of motor vehicles of the public sector increased from 0.6 % (1,946 units) in 2015 to 0.9 % (2,827 units) in 2016.<br /><br />As far as the motor vehicles of the direct federal administration are concerned, the average CO2 emissions in 2017 were 179.9 grams of CO2 per kilometre driven. The direct federal administration comprises the federal government’s own central and subordinate authorities, which are legally dependent. The data for CO2 emissions per mileage of motor vehicles of the direct federal administration are provided by the German Environment Agency. As in the case of motor vehicles of the public sector, all passenger cars of the direct federal administration up to a weight of 3.5 tonnes are taken into account; however, light commercial vehicles of this class are not considered. Furthermore, between 2015 and 2017, the proportion of newly acquired motor vehicles of the direct federal administration whose emission value was less than 50 grams of CO2 per kilometre increased from 2.6 % to 4.1 % of the total volume of newly procured motor vehicles. This increase could result in lower CO2 emissions and thus raise the efficiency of the vehicle fleet.<br /><br />This indicator covers only those CO2 emissions that occur during the operation of the vehicles. If, however, we consider the holistic life cycle costs approach, greenhouse gas emissions also occur in the production and disposal processes, which would have to be taken into account for a conclusive indicator. In addition, the sustainability of electric mobility depends for instance on the extent to which the electricity used is generated from conventional or renewable sources, on material expenditure, the materials used and recyclability.<br /><br /><i>Recycled paper bearing the Blue Angel label as a proportion of the total paper consumption of the direct federal administration</i><br /><br />The data to calculate the volume of paper with the Blue Angel label as a proportion of the total paper consumption of the direct federal administration are obtained by the Sustainability Programme monitoring, which is carried out by the Competence Center for Sustainable Procurement at the Procurement Office of the Federal Ministry of the Interior. The Blue Angel is an eco-label for products and services with a reduced environmental impact. With regard to paper, this label indicates that 100 % of the paper fibres are made from waste paper and no harmful chemicals or optical brighteners are used in the production process.<br /><br />The proportion of paper bearing the Blue Angel label increased by roughly 48% between 2015 and 2017. While it accounted for 45 % of the total paper consumption of the federal administration in 2015, it reached 67 % in 2017. The indicator is thus in line with the objective of the Sustainability Programme to raise the proportion of Blue Angel paper used.<br /><br />However, total paper consumption is subject to annual fluctuations. After a strong rise in total paper consumption to approximately 1,281 million sheets of paper in 2016, there was a slight decline in 2017 (roughly 1,250 million sheets). However, this value was still above the 2015 value (about 1,150 million sheets). This means that not only the consumption of paper with the Blue Angel label, but also total paper consumption (+8.7 %) increased in the period from 2015 to 2017. The volume of Blue Angel paper as a proportion of the total paper consumption does not allow conclusions to be drawn about the efficient consumption of paper in general.</p>
+          <p> <p><i>Text from the Indicator Report 2020</i><br /><br /> Sustainability in public procurement is a very complex topic. It is therefore hardly possible to address it appropriately using one or a few indicators. The two indicators shown here focus exclusively on selected ecological aspects of sustainability, although they cannot reflect these environmental aspects exhaustively. Social and economic aspects of sustainability are not in the focus of the two indicators.<br /><br /><i>CO2 emissions per mileage of motor vehicles of the public sector</i><br /><br />The data for motor vehicles of the public sector are provided by the environmental economic accounts of the Federal Statistical Office, also using the TREMOD (Transport Emission Model) database of the ifeu (German Institute for Energy and Environmental Research). The public sector comprises the federal level, the Länder level, the level of municipalities and associations of municipalities, the police, the Federal Border Guard, fire protection and fire brigades.<br /><br />From 2015 to 2016, the average CO2 emissions per kilometre driven by motor vehicles of the public sector decreased by around 2 % from roughly 184 to 180.6 grams of CO2 per kilometre. This has resulted in a separation of CO2 emissions and mileage. The ratio of CO2 emissions to mileage declined, although mileage continued to increase. In 2014, both mileage and CO2 emissions increased. In 2015, however, CO2 emissions decreased for the first time, although mileage continued to grow. One reason for this could be the increasing procurement of more efficient motor vehicles and of electric and hybrid cars with lower CO2 emissions. The propor-tion of electric and hybrid cars of the total stock of motor vehicles of the public sector increased from 0.6 % (1,946 units) in 2015 to 0.9 % (2,827 units) in 2016.<br /><br />As far as the motor vehicles of the direct federal administration are concerned, the average CO2 emissions in 2017 were 179.9 grams of CO2 per kilometre driven. The direct federal administration comprises the federal government’s own central and subordinate authorities, which are legally dependent. The data for CO2 emissions per mileage of motor vehicles of the direct federal administration are provided by the German Environment Agency. As in the case of motor vehicles of the public sector, all passenger cars of the direct federal administration up to a weight of 3.5 tonnes are taken into account; however, light commercial vehicles of this class are not considered. Furthermore, between 2015 and 2017, the proportion of newly acquired motor vehicles of the direct federal administration whose emission value was less than 50 grams of CO2 per kilometre increased from 2.6 % to 4.1 % of the total volume of newly procured motor vehicles. This increase could result in lower CO2 emissions and thus raise the efficiency of the vehicle fleet.<br /><br />This indicator covers only those CO2 emissions that occur during the operation of the vehicles. If, however, we consider the holistic life cycle costs approach, greenhouse gas emissions also occur in the production and disposal processes, which would have to be taken into account for a conclusive indicator. In addition, the sustainability of electric mobility depends for instance on the extent to which the electricity used is generated from conventional or renewable sources, on material expenditure, the materials used and recyclability.<br /><br /><i>Recycled paper bearing the Blue Angel label as a proportion of the total paper consumption of the direct federal administration</i><br /><br />The data to calculate the volume of paper with the Blue Angel label as a proportion of the total paper consumption of the direct federal administration are obtained by the Sustainability Programme monitoring, which is carried out by the Competence Center for Sustainable Procurement at the Procurement Office of the Federal Ministry of the Interior. The Blue Angel is an eco-label for products and services with a reduced environmental impact. With regard to paper, this label indicates that 100 % of the paper fibres are made from waste paper and no harmful chemicals or optical brighteners are used in the production process.<br /><br />The proportion of paper bearing the Blue Angel label increased by roughly 48% between 2015 and 2017. While it accounted for 45 % of the total paper consumption of the federal administration in 2015, it reached 67 % in 2017. The indicator is thus in line with the objective of the Sustainability Programme to raise the proportion of Blue Angel paper used.<br /><br />However, total paper consumption is subject to annual fluctuations. After a strong rise in total paper consumption to approximately 1,281 million sheets of paper in 2016, there was a slight decline in 2017 (roughly 1,250 million sheets). However, this value was still above the 2015 value (about 1,150 million sheets). This means that not only the consumption of paper with the Blue Angel label, but also total paper consumption (+8.7 %) increased in the period from 2015 to 2017. The volume of Blue Angel paper as a proportion of the total paper consumption does not allow conclusions to be drawn about the efficient consumption of paper in general.</p>
  </p>
         
       </tr>
@@ -1778,6 +1811,17 @@ data-event-label="Change to Sources tab"
       
       <tr>
         
+
+          
+
+            <th scope="row" height="" >Target</th>
+
+            <td colspan="4">
+              
+                <p>95 % by 2020</p>
+
+              
+            </td>
 
           
 
@@ -2499,6 +2543,17 @@ data-event-label="Change to Sources tab"
       
       <tr>
         
+
+          
+
+            <th scope="row" height="" >Target</th>
+
+            <td colspan="4">
+              
+                <p>Reduce significantly</p>
+
+              
+            </td>
 
           
 
@@ -5035,7 +5090,7 @@ data-event-label="Change to Sources tab"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20210129001015'></script><script src="/open-sdg-site-starter/assets/js/chartColors.js?v=20210129001015"></script><script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20210129063246'></script><script src="/open-sdg-site-starter/assets/js/chartColors.js?v=20210129063246"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

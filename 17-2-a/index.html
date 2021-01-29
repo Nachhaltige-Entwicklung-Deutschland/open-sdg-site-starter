@@ -141,7 +141,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20210129001015">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/default.css?v=20210129063246">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -149,7 +149,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20210129001015"><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><link rel="stylesheet" href="/open-sdg-site-starter/assets/css/custom.css?v=20210129063246"><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
     </head>
 <body class="language-de layout-indicator">
@@ -400,6 +400,12 @@ var translations = {
       <!--
 
       
+        <li class="btn">
+          <a href="https://g205sdgs.github.io/sdg-indicators17.2.1">
+            Verwandter globaler Indikator: 17.2.1
+          </a>
+        </li>
+      
 
 
       <li class="pull-right">
@@ -425,17 +431,24 @@ var translations = {
 
   <!---3 Btns if there is a corresponding Indicator-->
   
-    <div class="col-xs-6 col-md-6 col-lg-6">
+    <div class="col-xs-3 col-md-3 col-lg-4">
       <a href="/open-sdg-site-starter/17-1-a" class="btn btn-primary btn-block G17-background" role="button">
         <i class="fa fa-chevron-left" aria-hidden="true"></i> <b><span class="btn-label hidden-sm hidden-xs">Vorheriger Indikator</span></b>
       </a>
     </div>
 
-    <div class="col-xs-6 col-md-6 col-lg-6">
+    <div class="col-xs-6 col-md-6 col-lg-4">
+      <a href="https://sustainabledevelopment-germany.github.io/17.2.1" class="btn btn-primary btn-block G17-background" title="Hier gelangen Sie zur Seite des korrespondierenden SDG-Indikators" role="button">
+        <b><span class="btn-label hidden-sm hidden-xs">Verwandter globaler Indikator:</span> SDG-17.2.1</b>
+      </a>
+    </div>
+
+    <div class="col-xs-3 col-md-3 col-lg-4">
       <a href="/open-sdg-site-starter/17-3-a" class="btn btn-primary btn-block G17-background" role="button">
         <b><span class="btn-label hidden-sm hidden-xs">Nächster Indikator</span></b> <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
     </div>
+  <!---2 Btns if there is no corresponding Indicator-->
   
 
 <!---Goal page-->
@@ -466,9 +479,9 @@ var translations = {
 
   
 
-  <div class="row" id="indicatorData" data-indicatorid='indicator_17-2-a' data-id="17-2-a" data-country=""
+  <div class="row" id="indicatorData" data-indicatorid='indicator_17-2-a' data-id="17-2-a" data-country="Deutschland"
   data-charttitle="Studierende und Forschende aus Entwicklungs- und Schwellenländern in Deutschland" data-measurementunit="" data-datasource="Statistisches Bundesamt (Destatis)" data-copyright="&copy; Statistisches Bundesamt (Destatis), 2021"
-  data-geographicalarea="" data-footnote="" data-showdata="true" data-graphtype="line"
+  data-geographicalarea="Deutschland" data-footnote="2018 provisional data; The target is to increase the number of students and researchers by 10% until 2020 compared with 2015; LDCs = Least developed countries" data-showdata="true" data-graphtype="bar"
   data-geocoderegex="" data-showmap="" data-startvalues="">
     
     <div id="indicator-sidebar" class="col-md-3">
@@ -588,6 +601,29 @@ data-event-label="Change to Map tab"
         <div id="chart" class="plot-container">
           
 <canvas></canvas>
+
+  <script>
+    opensdg.chartConfigAlter = function(config) {
+      var overrides = {
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                min: nan,
+                max: nan
+              }
+            }]
+          }
+        }
+      }
+      // Add these overrides onto the normal config, and return it.
+      $.extend(true, config, overrides);
+      return config;
+    }
+  </script>
+
+
+
 
 
         </div>
@@ -878,8 +914,8 @@ data-event-label="Change to Sources tab"
                 
 
                 
-                  <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/f376a5a5951743bf0ae21e3b0e962624544e45c0" target="_blank">
-                    2021-01-28: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+                  <a href="https://github.com/Nachhaltige-Entwicklung-Deutschland/open-sdg-data-starter/commit/22774e0848b9ae052e5b107a0e56ed7e4f087a24" target="_blank">
+                    2021-01-29: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
                   </a>
                 
 
@@ -1283,7 +1319,7 @@ data-event-label="Change to Sources tab"
       
       <tr>
          <!-- case: content -->
-          <p> <p><i> Text aus dem Indikatorenbericht 2018</i><br /><br />Datengrundlage des Indikators ist sowohl die Studierendenstatistik als auch die Statistik des Hochschulpersonals des Statistischen Bundesamtes. Beides sind Vollerhebungen auf der Basis der Verwaltungsdaten der Hochschulen. Der Indikator umfasst die Studierenden im Wintersemester des jeweiligen Jahres. Die Hochschulen greifen dafür zum Erhebungsstichtag die für die Statistik erforderlichen Daten aus ihrem Verwaltungsprogramm ab. Die Forschenden werden zum Stichtag 1. Dezember erhoben. Unter Forschenden wird hierbei das haupt- und nebenberufliche wissenschaftliche Personal an deutschen Hochschulen (ohne studentische Hilfskräfte) verstanden. Promotionsstudierende, die als Studierende an einer Hochschule immatrikuliert sind und zugleich als wissenschaftliches Personal arbeiten, können zu Doppelzählungen im Indikator führen.<br /><br />Die Gesamtzahl aller Studierenden und Forschenden aus Entwicklungs- und Schwellenländern an deutschen Hochschulen im Jahr 2018 betrug rund 267 Tausend. Mit 92,8 % machten dabei die Studierenden den weitaus größeren Anteil am Wert des Indikators aus.<br /><br />Im Wintersemester 2018/19 waren 248 134 Studierende aus Entwicklungs- und Schwellenländern an deutschen Hochschulen immatrikuliert. Das entspricht 8,7 % aller Immatrikulierten. Die Anzahl der Studierenden aus Entwicklungs- und Schwellenländern ist seit 2005 (134 462 Studierende) stetig gestiegen – nur im Jahr 2007 gab es einen Rückgang. Der Anstieg im Wintersemester 2018/19 im Vergleich zum Vorjahr (rund 230 Tausend Studierende im Wintersemester 2017/18) lag bei 7,9 %. Im Wintersemester 2018/19 kamen 11 525 Studierende aus LDCs und somit 9,0 % mehr als im Vorjahr.<br /><br />Von den Studierenden aus Entwicklungs- und Schwellenländern kamen 42 676 aus China, 39 634 aus der Türkei sowie 20 810 Studierende aus Indien. Insgesamt waren 42,5 % davon Studentinnen. Während aus den europäischen Entwicklungs- und Schwellenländern mit 53,9 % Studentinnen etwa gleich viele Frauen und Männer in Deutschland studieren, kommen aus Ozeanien etwas mehr als ein Fünftel Studentinnen (22,2 %). Unter den Studierenden aus LDCs betrug der Frauenanteil rund ein Viertel (26,6 %).<br /><br />Im Jahr 2018 waren rund 19 Tausend Forscherinnen und Forscher aus Entwicklungs- und Schwellenländern Teil des wissenschaftlichen Personals an deutschen Hochschulen. Damit machten diese einen Anteil von 4,8 % am gesamten wissenschaftlichen Personal an deutschen Hochschulen aus. Der Anteil von Forschenden aus Entwicklungs- und Schwellenländern ist damit deutlich geringer als der Anteil unter den Studierenden. Im Vergleich zum Vorjahr ist ihre Anzahl um 8,9 % gestiegen, seit 2005 hat sie sich verdreifacht. 687 Forschende kamen im Jahr 2018 aus LDCs (0,2 % des gesamten wissenschaftlichen Personals). Im Vorjahr waren es 649 Forschende. Dies entspricht einem Zuwachs von 5,9 %.<br /><br />Das angestrebte Ziel, die Summe der Studierenden und Forschenden aus Entwicklungs- und Schwellenländern um 10 % gegenüber dem Jahr 2015 (215 Tausend) zu steigern, wurde bereits im Jahr 2017 erreicht.</p>
+          <p> <p><i> Text aus dem Indikatorenbericht 2020</i><br /><br />Datengrundlage des Indikators ist sowohl die Studierendenstatistik als auch die Statistik des Hochschulpersonals des Statistischen Bundesamtes. Beides sind Vollerhebungen auf der Basis der Verwaltungsdaten der Hochschulen. Der Indikator umfasst die Studierenden im Wintersemester des jeweiligen Jahres. Die Hochschulen greifen dafür zum Erhebungsstichtag die für die Statistik erforderlichen Daten aus ihrem Verwaltungsprogramm ab. Die Forschenden werden zum Stichtag 1. Dezember erhoben. Unter Forschenden wird hierbei das haupt- und nebenberufliche wissenschaftliche Personal an deutschen Hochschulen (ohne studentische Hilfskräfte) verstanden. Promotionsstudierende, die als Studierende an einer Hochschule immatrikuliert sind und zugleich als wissenschaftliches Personal arbeiten, können zu Doppelzählungen im Indikator führen.<br /><br />Die Gesamtzahl aller Studierenden und Forschenden aus Entwicklungs- und Schwellenländern an deutschen Hochschulen im Jahr 2018 betrug rund 267 Tausend. Mit 92,8 % machten dabei die Studierenden den weitaus größeren Anteil am Wert des Indikators aus.<br /><br />Im Wintersemester 2018/19 waren 248 134 Studierende aus Entwicklungs- und Schwellenländern an deutschen Hochschulen immatrikuliert. Das entspricht 8,7 % aller Immatrikulierten. Die Anzahl der Studierenden aus Entwicklungs- und Schwellenländern ist seit 2005 (134 462 Studierende) stetig gestiegen – nur im Jahr 2007 gab es einen Rückgang. Der Anstieg im Wintersemester 2018/19 im Vergleich zum Vorjahr (rund 230 Tausend Studierende im Wintersemester 2017/18) lag bei 7,9 %. Im Wintersemester 2018/19 kamen 11 525 Studierende aus LDCs und somit 9,0 % mehr als im Vorjahr.<br /><br />Von den Studierenden aus Entwicklungs- und Schwellenländern kamen 42 676 aus China, 39 634 aus der Türkei sowie 20 810 Studierende aus Indien. Insgesamt waren 42,5 % davon Studentinnen. Während aus den europäischen Entwicklungs- und Schwellenländern mit 53,9 % Studentinnen etwa gleich viele Frauen und Männer in Deutschland studieren, kommen aus Ozeanien etwas mehr als ein Fünftel Studentinnen (22,2 %). Unter den Studierenden aus LDCs betrug der Frauenanteil rund ein Viertel (26,6 %).<br /><br />Im Jahr 2018 waren rund 19 Tausend Forscherinnen und Forscher aus Entwicklungs- und Schwellenländern Teil des wissenschaftlichen Personals an deutschen Hochschulen. Damit machten diese einen Anteil von 4,8 % am gesamten wissenschaftlichen Personal an deutschen Hochschulen aus. Der Anteil von Forschenden aus Entwicklungs- und Schwellenländern ist damit deutlich geringer als der Anteil unter den Studierenden. Im Vergleich zum Vorjahr ist ihre Anzahl um 8,9 % gestiegen, seit 2005 hat sie sich verdreifacht. 687 Forschende kamen im Jahr 2018 aus LDCs (0,2 % des gesamten wissenschaftlichen Personals). Im Vorjahr waren es 649 Forschende. Dies entspricht einem Zuwachs von 5,9 %.<br /><br />Das angestrebte Ziel, die Summe der Studierenden und Forschenden aus Entwicklungs- und Schwellenländern um 10 % gegenüber dem Jahr 2015 (215 Tausend) zu steigern, wurde bereits im Jahr 2017 erreicht.</p>
  </p>
         
       </tr>
@@ -1776,6 +1812,17 @@ data-event-label="Change to Sources tab"
       
       <tr>
         
+
+          
+
+            <th scope="row" height="" >Ziel</th>
+
+            <td colspan="4">
+              
+                <p>Steigerung der Anzahl um 10 Prozent von 2015 bis 2020, anschließend Verstetigung</p>
+
+              
+            </td>
 
           
 
@@ -2921,7 +2968,7 @@ data-event-label="Change to Sources tab"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20210129001015'></script><script src="/open-sdg-site-starter/assets/js/chartColors.js?v=20210129001015"></script><script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20210129063246'></script><script src="/open-sdg-site-starter/assets/js/chartColors.js?v=20210129063246"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
