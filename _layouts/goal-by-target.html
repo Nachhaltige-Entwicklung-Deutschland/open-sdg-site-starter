@@ -55,7 +55,7 @@
 
 
     {% assign size = target_id | size | minus: 2 %}
-    {% assign range_id = target_id | slice: 0, size }}
+    {% assign range_id = target_id | slice: 0, size | replace: "-", "."}}
     <!-- {% assign range_id_dashes = range_id | replace: ".", "-" %} -->
     {% assign range_title_key = range_id  | append: '-title' %}
     <!-- {% assign range_title_key_dashes = range_id_dashes | append: '-title' %} -->
