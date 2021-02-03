@@ -79,7 +79,7 @@
           "status": "complete"
         },{
           "id": "3-2-b",
-          "title": "Share of the population with excessive exposure to PM10 in Germany",
+          "title": "Share of the population with excessive exposure to PM<sub>10</sub> in Germany",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/3-2-b",
@@ -378,7 +378,7 @@
           "status": "complete"
         },{
           "id": "12-1-b",
-          "title": "Energy consumption and CO2 emissions from consumption",
+          "title": "Energy consumption and CO<sub>2</sub> emissions from consumption",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/12-1-b",

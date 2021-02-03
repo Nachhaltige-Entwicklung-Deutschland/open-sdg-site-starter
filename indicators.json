@@ -79,7 +79,7 @@
           "status": "complete"
         },{
           "id": "3-2-b",
-          "title": "Anteil der Bevölkerung mit erhöhter PM10-Feinstaubexposition",
+          "title": "Anteil der Bevölkerung mit erhöhter PM<sub>10</sub>-Feinstaubexposition",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/3-2-b",
@@ -106,7 +106,7 @@
           "status": "complete"
         },{
           "id": "4-1-b",
-          "title": "30- bis 34-Jährige mit tertiärem oder postsekundarem nicht-tertiären Abschluss",
+          "title": "Akademisch Qualifizierte und beruflich Höherqualifizierte",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/4-1-b",
@@ -276,7 +276,7 @@
           "status": "complete"
         },{
           "id": "9-1-b",
-          "title": "Breitbandausbau – Anteil der Haushalte mit Zugang zu Gigabit-Breitbandversorgung",
+          "title": "Breitbandausbau",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/9-1-b",
@@ -344,7 +344,7 @@
           "status": "complete"
         },{
           "id": "11-2-c",
-          "title": "Erreichbarkeit von Mittel- und Oberzentren mit öffentlichen Verkehrsmitteln",
+          "title": "Erreichbarkeit von Mittel- und Oberzentren mit öffentlichen Verkehrsmitteln<br><br>",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/11-2-c",
@@ -371,7 +371,7 @@
       "title": "Nachhaltige Konsum- und Produktionsmuster sicherstellen",
       "indicators": [{
           "id": "12-1-a",
-          "title": "Produkte mit staatlichen Umweltzeichen",
+          "title": "Marktanteil von Produkten mit staatlichen Umweltzeichen",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/12-1-a",
@@ -459,7 +459,7 @@
           "status": "complete"
         },{
           "id": "15-3-ab",
-          "title": "Erhalt bzw. Wiederaufbau von Wäldern in Entwicklungsländern unter dem REDD+-Regelwerk",
+          "title": "Erhalt bzw. Wiederaufbau von Wäldern unter REDD+ sowie internationaler Bodenschutz",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/15-3-ab",
@@ -499,14 +499,14 @@
       "title": "Umsetzungsmittel stärken und die Globale Partnerschaft für nachhaltige Entwicklung mit neuem Leben erfüllen",
       "indicators": [{
           "id": "17-1-a",
-          "title": "Anteil öffentlicher Entwicklungsausgaben am Bruttonationaleinkommen",
+          "title": "Anteil öffentlicher Entwicklungsausgaben am Bruttonationaleinkommen<br><br>",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/17-1-a",
           "status": "complete"
         },{
           "id": "17-2-a",
-          "title": "Anzahl der Studierenden und Forschenden aus Entwicklungsländern sowie LDCs pro Jahr",
+          "title": "Anzahl der Studierenden und Forschenden aus Entwicklungsländern sowie LDCs pro Jahr<br><br>",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/17-2-a",
