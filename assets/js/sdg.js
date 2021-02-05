@@ -900,6 +900,8 @@ var indicatorDataStore = function(dataUrl) {
   this.geoCodeRegEx = options.geoCodeRegEx;
   this.showMap = options.showMap;
 
+  this.stackedDisaggregation = options.stackedDisaggregation;
+
   // initialise the field information, unique fields and unique values for each field:
   (function initialise() {
 
@@ -1588,7 +1590,8 @@ var indicatorDataStore = function(dataUrl) {
         // but some combinations may not have any data:
         filteredDatasets.push({
           data: filtered,
-          combinationDescription: getCombinationDescription(combination)
+          combinationDescription: getCombinationDescription(combination),
+          combination: combination
         });
       }
     });
@@ -1601,7 +1604,7 @@ var indicatorDataStore = function(dataUrl) {
 
     _.chain(filteredDatasets)
       .sortBy(function(ds) { return ds.combinationDescription; })
-      .each(function(ds) { datasets.push(convertToDataset(ds.data, ds.combinationDescription)); });
+      .each(function(ds) { datasets.push(convertToDataset(ds.data, ds.combinationDescription, ds.combinations)); });
 
     // convert datasets to tables:
     var selectionsTable = {
