@@ -646,7 +646,7 @@ var indicatorModel = function (options) {
 
             borderWidth: combinationDescription ? 2 : 4
           }, that.datasetObject);
-
+        console.log(fieldIndex);
         datasetIndex++;
         return ds;
       };
