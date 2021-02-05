@@ -570,8 +570,8 @@ var indicatorView = function (model, options) {
         }
       }
     };
-    //chartConfig = opensdg.chartConfigAlter(chartConfig);
-    this.alterChartConfig(chartConfig, chartInfo);
+    chartConfig = opensdg.chartConfigAlter(chartConfig, chartInfo);
+
 
     this._chartInstance = new Chart($(this._rootElement).find('canvas'), chartConfig);
     Chart.pluginService.register({
