@@ -2194,7 +2194,7 @@ var indicatorView = function (model, options) {
       data: view_obj._chartInstance.data,
       options: view_obj._chartInstance.options
     });
-    
+
     view_obj._chartInstance.type = updatedConfig.type;
     view_obj._chartInstance.data = updatedConfig.data;
     view_obj._chartInstance.options = updatedConfig.options;
@@ -2371,7 +2371,7 @@ var indicatorView = function (model, options) {
       }
     };
     chartConfig = opensdg.chartConfigAlter(chartConfig);
-
+    console.log(chartInfo);
 
     this._chartInstance = new Chart($(this._rootElement).find('canvas'), chartConfig);
     Chart.pluginService.register({
