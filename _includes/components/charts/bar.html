@@ -42,6 +42,18 @@ being used, see `createPlot()` in `indicatorView.js`.
           }
         }
       }
+
+      // If we have stackedDisaggregation, we need to group datasets into stacks.
+      config.data.datasets.forEach(function(dataset) {
+        var disaggregation = $.extend({}, dataset.disaggregation);
+        if (info.stackedDisaggregation) {
+          // We don't want the stackedDisaggregation to be considered when stacking.
+          delete disaggregation[info.stackedDisaggregation];
+        }
+        // Use the disaggregation as a unique id for each stack.
+        dataset.stack = JSON.stringify(disaggregation);
+      });
+      
       // Add these overrides onto the normal config, and return it.
       $.extend(true, config, overrides);
       return config;
