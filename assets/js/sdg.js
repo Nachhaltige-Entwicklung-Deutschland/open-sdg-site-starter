@@ -1485,18 +1485,18 @@ var indicatorDataStore = function(dataUrl) {
             //--#14.1 barsOnly---start------------------------------------------------
             type: getChartStyle(that.indicatorId, combinationDescription),
             //--#14.1 barsOnly---stop-------------------------------------------------
-            options:{
-                scales: {
-                    xAxes: [{
-                        stacked:  getStacked(that.indicatorId)
-                    }],
-                    yAxes: [{
-                        stacked: getStacked(that.indicatorId)
-                    }]
-                  }
-                },
-            //stacked: getStacked(that.indicatorId),
-            stack: getStackGroup(that.indicatorId),
+            // options:{
+            //     scales: {
+            //         xAxes: [{
+            //             stacked:  getStacked(that.indicatorId)
+            //         }],
+            //         yAxes: [{
+            //             stacked: getStacked(that.indicatorId)
+            //         }]
+            //       }
+            //     },
+            // //stacked: getStacked(that.indicatorId),
+            // stack: getStackGroup(that.indicatorId),
             borderWidth: combinationDescription ? 2 : 4
           }, that.datasetObject);
         console.log(ds);
