@@ -364,6 +364,12 @@ var indicatorView = function (model, options) {
       $(this._rootElement).addClass('no-units');
     }
   };
+  
+  this.alterChartConfig = function(config, info) {
+    opensdg.chartConfigAlterations.forEach(function(callback) {
+      callback(config, info);
+    });
+  };
 
   this.updatePlot = function(chartInfo) {
     // No Line for Targets--------------------------------------------------------------------------------------------
@@ -570,8 +576,8 @@ var indicatorView = function (model, options) {
         }
       }
     };
-    chartConfig = opensdg.chartConfigAlter(chartConfig, chartInfo);
-
+    //chartConfig = opensdg.chartConfigAlter(chartConfig);
+    this.alterChartConfig(chartConfig, chartInfo);
 
     this._chartInstance = new Chart($(this._rootElement).find('canvas'), chartConfig);
     Chart.pluginService.register({
