@@ -1492,7 +1492,7 @@ var indicatorDataStore = function(dataUrl) {
 
             borderWidth: combinationDescription ? 2 : 4
           }, that.datasetObject);
-        console.log(fieldIndex);
+        console.log(ds);
         datasetIndex++;
         return ds;
       };
