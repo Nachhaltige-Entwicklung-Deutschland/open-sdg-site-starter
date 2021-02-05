@@ -500,7 +500,11 @@ var indicatorModel = function (options) {
           return false;
         }
       },
-
+      getStackGroup = function(indicatorId){
+        if (indicatorId == 'indicator_3-2-e'){
+          return ''
+        }
+      }
 
       //--#14 mixedCharts---start-------------------------------------------------------------------------------------------------------
       //barCharts = [//translations.t('a) time series')+", "+translations.t('calculated annual values'),
@@ -565,7 +569,7 @@ var indicatorModel = function (options) {
         // the first dataset is the headline:
         return datasetIndex > colors.length ? [5, 5] : undefined;
       },
-      convertToDataset = function (data, combinationDescription /*field, fieldValue*/) {
+      convertToDataset = function (data, combinationDescription, combination /*field, fieldValue*/) {
         // var fieldIndex = field ? _.findIndex(that.selectedFields, function (f) {
         //     return f === field;
         //   }) : undefined,
@@ -605,6 +609,7 @@ var indicatorModel = function (options) {
           ds = _.extend({
 
             label: combinationDescription ? combinationDescription : that.country,
+            disaggregation: combination,
             //---#13 noLineForTargets---start-------------------------------
             borderColor: getBorderColor(combinationDescription,datasetIndexMod,that.indicatorId),//'#' + getColor(datasetIndexMod),
             //borderColor: getLineStyle(combinationDescription, datasetIndexMod),
@@ -643,7 +648,7 @@ var indicatorModel = function (options) {
                   }
                 },
             //stacked: getStacked(that.indicatorId),
-
+            stack: getStackGroup(that.indicatorId),
             borderWidth: combinationDescription ? 2 : 4
           }, that.datasetObject);
         console.log(ds);
