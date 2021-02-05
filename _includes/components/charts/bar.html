@@ -29,7 +29,8 @@ being used, see `createPlot()` in `indicatorView.js`.
 
 {% if meta.stackedBar %}
   <script>
-    opensdg.chartConfigAlter = function(config) {
+    //opensdg.chartConfigAlter = function(config) {
+    opensdg.chartConfigAlter(function(config, info) {
       var overrides = {
         options: {
           scales: {
@@ -53,10 +54,11 @@ being used, see `createPlot()` in `indicatorView.js`.
         // Use the disaggregation as a unique id for each stack.
         dataset.stack = JSON.stringify(disaggregation);
       });
-      
+
       // Add these overrides onto the normal config, and return it.
       $.extend(true, config, overrides);
       return config;
-    }
+    //}
+    })
   </script>
 {% endif %}
