@@ -2195,7 +2195,6 @@ var indicatorView = function (model, options) {
       options: view_obj._chartInstance.options
     });
     
-    this.alterChartConfig(updatedConfig, chartInfo);
     view_obj._chartInstance.type = updatedConfig.type;
     view_obj._chartInstance.data = updatedConfig.data;
     view_obj._chartInstance.options = updatedConfig.options;
