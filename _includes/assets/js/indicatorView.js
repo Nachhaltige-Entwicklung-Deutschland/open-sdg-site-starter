@@ -364,12 +364,6 @@ var indicatorView = function (model, options) {
       $(this._rootElement).addClass('no-units');
     }
   };
-  
-  this.alterChartConfig = function(config, info) {
-    opensdg.chartConfigAlterations.forEach(function(callback) {
-      callback(config, info);
-    });
-  };
 
   this.updatePlot = function(chartInfo) {
     // No Line for Targets--------------------------------------------------------------------------------------------
@@ -394,12 +388,12 @@ var indicatorView = function (model, options) {
     // to avoid completely replacing view_obj._chartInstance -- and instead we
     // just replace it's properties: "type", "data", and "options".
     //var updatedConfig = opensdg.chartConfigAlter({
-    var updatedConfig = {
+    var updatedConfig = opensdg.chartConfigAlter({
       type: view_obj._chartInstance.type,
       data: view_obj._chartInstance.data,
       options: view_obj._chartInstance.options
-    //});
-    }
+    });
+    
     this.alterChartConfig(updatedConfig, chartInfo);
     view_obj._chartInstance.type = updatedConfig.type;
     view_obj._chartInstance.data = updatedConfig.data;
@@ -576,8 +570,8 @@ var indicatorView = function (model, options) {
         }
       }
     };
-    //chartConfig = opensdg.chartConfigAlter(chartConfig);
-    this.alterChartConfig(chartConfig, chartInfo);
+    chartConfig = opensdg.chartConfigAlter(chartConfig);
+
 
     this._chartInstance = new Chart($(this._rootElement).find('canvas'), chartConfig);
     Chart.pluginService.register({
