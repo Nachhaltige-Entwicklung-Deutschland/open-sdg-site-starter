@@ -244,7 +244,7 @@ map_layers:
     #serviceUrl: https://g205sdgs.github.io/sdg-indicators/assets/maps/Ländergrenzen_ohne_Seegrenzen.geojson
     serviceUrl:  https:/nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/maps/vg2500_lan.geojson
     nameProperty: GEN
-    idProperty: GEN
+    idProperty: ARS_0
     staticBorders: false
 
 # link: https://hub.arcgis.com/datasets/b7507e654334481e8e0787f42c9028c1_3
