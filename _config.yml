@@ -235,7 +235,7 @@ map_layers:
     #idProperty: CNTR_CODE
     #staticBorders: true
   #Bundesland
-  - min_zoom: 5
+  - min_zoom: 2
     max_zoom: 15
     #serviceUrl: https://g205sdgs.github.io/sdg-indicators/assets/maps/NUTS_RG_01M_2016_4326_LEVL_1.geojson
     #nameProperty: NUTS_NAME
