@@ -241,8 +241,8 @@ map_layers:
     #nameProperty: NUTS_NAME
     #idProperty: NUTS_ID
     #staticBorders: false
-    serviceUrl: https://g205sdgs.github.io/sdg-indicators/assets/maps/Ländergrenzen_ohne_Seegrenzen.geojson
-    #serviceUrl:  https:/nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/maps/diy_lan.geojson #vg2500_lan.geojson
+    #serviceUrl: https://g205sdgs.github.io/sdg-indicators/assets/maps/Ländergrenzen_ohne_Seegrenzen.geojson
+    serviceUrl:  https:/nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/maps/diy_lan.geojson #vg2500_lan.geojson
     nameProperty: GEN
     idProperty: AGS #Ars_0
     staticBorders: false
