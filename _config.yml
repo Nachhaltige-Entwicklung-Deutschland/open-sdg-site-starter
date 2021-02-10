@@ -246,8 +246,8 @@ map_layers:
     # 2 serviceUrl:  https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/maps/Ländergrenzen_ohne_Seegrenzen.geojson  --> ja
     # 3 serviceUrl:  https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/maps/diy_lan.geojson --> ja
     # 4 serviceUrl:  https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/maps/diy_lan.geojson (mit Koordinaten für HH ersetzt) --> ja
-    serviceUrl:  https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/maps/vg2500.geojson # --> nö
-    #serviceUrl:  https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/maps/diy_lan.geojson #(mit Koordinaten für HH und ersetzt) --> ja
+    # 5 serviceUrl:  https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/maps/vg2500.geojson # --> nö
+    serviceUrl:  https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/maps/diy_lan.geojson #(mit Koordinaten für HH und ersetzt) --> ja
     nameProperty: GEN
     idProperty: Ars_0
     staticBorders: false
@@ -256,6 +256,7 @@ map_layers:
   #   serviceUrl:  https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/maps/diy_krs.geojson
   #   nameProperty: GEN
   #   idProperty: Ars_0
+  #   staticBorders: false
 
 
 # link: https://hub.arcgis.com/datasets/b7507e654334481e8e0787f42c9028c1_3
