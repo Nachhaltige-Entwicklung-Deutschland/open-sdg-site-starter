@@ -250,7 +250,7 @@ map_layers:
     serviceUrl:  https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/maps/diy_lan.geojson #(mit Koordinaten für HH und ersetzt) --> ja
     nameProperty: GEN
     idProperty: AGS
-    staticBorders: false
+    staticBorders: true
   - min_zoom: 15
     max_zoom: 35
     serviceUrl:  https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/maps/diy_krs.geojson
