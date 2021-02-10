@@ -245,10 +245,11 @@ map_layers:
     # 1 serviceUrl: https://g205sdgs.github.io/sdg-indicators/assets/maps/diy_lan.geojson -->ja (genaue Kopie)
     # 2 serviceUrl:  https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/maps/Ländergrenzen_ohne_Seegrenzen.geojson  --> ja
     # 3 serviceUrl:  https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/maps/diy_lan.geojson --> ja
-    # 4 serviceUrl:  https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/maps/diy_lan.geojson (mit Koordinaten für HH ersetzt)
-    serviceUrl:  https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/mapsvg2500.geojson
+    # 4 serviceUrl:  https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/maps/diy_lan.geojson (mit Koordinaten für HH ersetzt) --> ja
+    # 5 serviceUrl:  https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/mapsvg2500.geojson --> nö
+    serviceUrl:  https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/maps/diy_lan.geojson #(mit Koordinaten für HH und ersetzt) --> ja
     nameProperty: GEN
-    idProperty: Ars_0
+    idProperty: AGS #Ars_0
     staticBorders: false
 
 # link: https://hub.arcgis.com/datasets/b7507e654334481e8e0787f42c9028c1_3
