@@ -1499,7 +1499,7 @@ var indicatorDataStore = function(dataUrl) {
             // stack: getStackGroup(that.indicatorId),
             borderWidth: combinationDescription ? 2 : 4
           }, that.datasetObject);
-        console.log(ds);
+        //console.log(ds);
         datasetIndex++;
         return ds;
       };
