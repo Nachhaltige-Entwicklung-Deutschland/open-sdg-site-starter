@@ -19,14 +19,6 @@
 {% endif %}
 
 
-
-{% assign dialogDisplay = meta.indicator_display %}
-{% if dialogDisplay == "5.1.b" %}
-  {% assign dialogDisplay = "5.1.b, c" %}
-{% elsif dialogDisplay == "5.1.c" %}
-  {% assign dialogDisplay = "5.1.e" %}
-{% endif %}
-
 <div class="heading indicator goal-{{ goal_number }}">
   <div class="container">
     <div class="row">
