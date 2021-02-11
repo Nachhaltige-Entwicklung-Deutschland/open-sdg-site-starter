@@ -251,7 +251,7 @@ map_layers:
     nameProperty: GEN
     idProperty: AGS
     staticBorders: true
-  - min_zoom: 6
+  - min_zoom: 7
     max_zoom: 13
     serviceUrl:  https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/maps/diy_krs.geojson
     nameProperty: GEN
