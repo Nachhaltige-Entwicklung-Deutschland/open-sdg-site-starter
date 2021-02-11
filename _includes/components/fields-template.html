@@ -1,6 +1,8 @@
 <script type="text/template" id="item_template">
+  <script>
+    console.log(series);
+  </script>
   <% _.each(series, function(seriesItem) { %>
-    <script>console.log("a: ",series);</script>
     <div class="variable-selector<% if(allowedFields.indexOf(seriesItem.field) == -1) { %> disallowed child<% }%>" data-field="<%=seriesItem.field%>">
       <button class='accessBtn' tabindex='0' aria-expanded='false'><h5><%=translations.t(seriesItem.field)%><i class="fa fa-chevron-down"></i></h5></button>
       <div class="bar">
