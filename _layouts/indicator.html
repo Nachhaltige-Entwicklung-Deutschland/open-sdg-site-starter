@@ -11,12 +11,7 @@
 {% assign goalShort = t.dns_goals[goalKey] %}
 {% assign goalLong = t.global_goals[goalKey] %}
 
-{% assign dialogLink = meta.permalink %}
-{% if dialogLink == "/5-1-b/" %}
-  {% assign dialogLink = "/5-1-bc/" %}
-{% elsif dialogLink == "/5-1-c/" %}
-  {% assign dialogLink = "/5-1-e/" %}
-{% endif %}
+
 
 
 <div class="heading indicator goal-{{ goal_number }}">
