@@ -113,11 +113,15 @@
                 {% endif %}
                 {% if year_a %}
                   <td align="left" style="padding-left: 0px;padding-right: 0px;"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{ year_a }}.png" alt="{{ alter }}" class="responsiveWeather" title="{{ title_a }}" style="border: transparent"/></a></td>
+                {% else %}
+                  <td align="left" style="margin-bottom: 15px;"><p>{{ alter }}</p></td>
                 {% endif %}
               </tr>
             {% else %}
               <tr>
-                <th scope="row" height="">{{ metadata_label }} </th>
+                {% if year_a %}
+                  <th scope="row" height="">{{ metadata_label }} </th>
+                {% endif %}
                 {% if year_d %}
                   <td align="left" style="margin-bottom: 15px;"><p>{{ year_d }}</p></td>
                 {% endif %}
