@@ -4,33 +4,33 @@ permalink: /facts_publications/
 layout: page
 ---
 
-Hier vielleicht ein kleiner Einleitender Taxt zu den Publilationen??
+Hier vielleicht ein kleiner einleitender Text zu den Publikationen??
 
 ## Indikatorenberichte
 <br>
-[2018](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/2018.PDF)
+[Indikatorenbericht - 2018](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/2018.PDF)
 <br>
-[2016](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/2016.PDF)
+[Indikatorenbericht - 2016](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/2016.PDF)
 <br>
-[2014](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/2014.PDF)
+[Indikatorenbericht - 2014](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/2014.PDF)
 <br>
-[2012](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/2012.PDF)
+[Indikatorenbericht - 2012](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/2012.PDF)
 <br>
-[2010](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/2010.PDF)
+[Indikatorenbericht - 2010](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/2010.PDF)
 <br>
-[2008](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/2008.PDF)
+Indikatorenbericht - [2008](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/2008.PDF)
 <br>
-[2006](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/2006.PDF)
+[Indikatorenbericht - 2006](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/2006.PDF)
 <br>
 <br>
 ## Daten zum Indikatorenbericht
 <br>
-[2018](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/daten2018.PDF)
+[Datenkompendium - 2018](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/daten2018.PDF)
 <br>
-[2016](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/daten2016.PDF)
+[Datenkompendium - 2016](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/daten2016.PDF)
 <br>
-[2014](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/daten2014.PDF)
+[Datenkompendium - 2014](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/daten2014.PDF)
 <br>
-[2012](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/daten2012.PDF)
+[Datenkompendium - 2012](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/daten2012.PDF)
 <br>
-[2010](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/daten2010.PDF)
+[Datenkompendium - 2010](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/daten2010.PDF)
