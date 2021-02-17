@@ -1,6 +1,6 @@
 ---
 title: Publications
-permalink: /en/publications/
+permalink: /en/facts_publications/
 language: en
 layout: page
 ---
