@@ -4,35 +4,39 @@ permalink: /facts_publications/
 layout: page
 ---
 
-Veröffentlichungen des Statistischen Bundesamtes im Zusammenhang mit der Deutschen Nachhaltigkeitsstrategie (DNS).
+### Indikatorenberichte
+<br><br>
+[Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2018](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/2018.pdf)
+<br><br>
+[Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2016](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/2016.pdf)
+<br><br>
+[Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2014](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/2014.pdf)
+<br><br>
+[Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2012](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/2012.pdf)
+<br><br>
+[Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2010](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/2010.pdf)
+<br><br>
+[Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2008](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/2008.pdf)
+<br><br>
+[Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2006](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/2006.pdf)
+<br><br>
+<br><br>
+### Daten zum Indikatorenbericht
+<br><br>
+[Nachhaltige Entwicklung in Deutschland - Daten zum Indikatorenbericht 2018](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/daten2018.pdf)
+<br><br>
+[Nachhaltige Entwicklung in Deutschland - Daten zum Indikatorenbericht 2016](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/daten2016.pdf)
+<br><br>
+[Nachhaltige Entwicklung in Deutschland - Daten zum Indikatorenbericht 2014](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/daten2014.pdf)
+<br><br>
+[Nachhaltige Entwicklung in Deutschland - Daten zum Indikatorenbericht 2012](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/daten2012.pdf)
+<br><br>
+[Nachhaltige Entwicklung in Deutschland - Daten zum Indikatorenbericht 2010](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/daten2010.pdf)
 
-## Indikatorenberichte
-Der Indikatorenbericht zur Deutschen Nachhaltigkeitsstrategie enthält detaillierte Beschreibungen aller Indikatoren, deren Entwicklung sowie weiterführende Analysen.
+### Auszug aus der Publikation "WISTA - Wirtschaft und Statistik", 1/2017
 <br><br>
-[Indikatorenbericht - 2018](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/2018.pdf)
+[Neuauflage der deutschen Nachhaltigkeitsstrategie](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/wista2017_01.pdf)
+
+### Machbarkeitsstudie zur Darstellung der Indikatoren
 <br><br>
-[Indikatorenbericht - 2016](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/2016.pdf)
-<br><br>
-[Indikatorenbericht - 2014](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/2014.pdf)
-<br><br>
-[Indikatorenbericht - 2012](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/2012.pdf)
-<br><br>
-[Indikatorenbericht - 2010](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/2010.pdf)
-<br><br>
-[Indikatorenbericht - 2008](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/2008.pdf)
-<br><br>
-[Indikatorenbericht - 2006](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/2006.pdf)
-<br><br>
-<br><br>
-## Daten zum Indikatorenbericht
-Das Datenkompendium bietet zusätzliche Datenreihen, die die eigentlichen Nachhaltigkeitsindikatoren ergänzen.
-<br><br>
-[Datenkompendium - 2018](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/daten2018.pdf)
-<br><br>
-[Datenkompendium - 2016](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/daten2016.pdf)
-<br><br>
-[Datenkompendium - 2014](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/daten2014.pdf)
-<br><br>
-[Datenkompendium - 2012](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/daten2012.pdf)
-<br><br>
-[Datenkompendium - 2010](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/daten2010.pdf)
+[Machbarkeitsstudie zur Darstellung der Indikatorender Deutschen Nachhaltigkeitsstrategienach Bundesländern](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/machbarkeitsstudie.pdf)
