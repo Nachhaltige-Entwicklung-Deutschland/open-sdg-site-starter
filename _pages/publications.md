@@ -1,5 +1,5 @@
 ---
-title: Publications
+title: Publikationen
 permalink: /facts_publications/
 layout: page
 ---
