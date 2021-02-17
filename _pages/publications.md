@@ -4,9 +4,10 @@ permalink: /facts_publications/
 layout: page
 ---
 
-Hier vielleicht ein kleiner einleitender Text zu den Publikationen??
+Veröffentlichungen des Statistischen Bundesamtes im Zusammenhang mit der Deutschen Nachhaltigkeitsstrategie (DNS).
 
 ## Indikatorenberichte
+Der Indikatorenbericht zur Deutschen Nachhaltigkeitsstrategie enthält detaillierte Beschreibungen aller Indikatoren, deren Entwicklung sowie weiterführende Analysen.
 <br>
 [Indikatorenbericht - 2018](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/2018.pdf)
 <br>
@@ -24,6 +25,7 @@ Hier vielleicht ein kleiner einleitender Text zu den Publikationen??
 <br>
 <br>
 ## Daten zum Indikatorenbericht
+Das Datenkompendium bietet zusätzliche Datenreihen, die die eigentlichen Nachhaltigkeitsindikatoren ergänzen.
 <br>
 [Datenkompendium - 2018](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/daten2018.pdf)
 <br>
