@@ -18,7 +18,7 @@ Hier vielleicht ein kleiner einleitender Text zu den Publikationen??
 <br>
 [Indikatorenbericht - 2010](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/2010.pdf)
 <br>
-Indikatorenbericht - [2008](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/2008.pdf)
+[Indikatorenbericht - 2008](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/2008.pdf)
 <br>
 [Indikatorenbericht - 2006](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/2006.pdf)
 <br>
