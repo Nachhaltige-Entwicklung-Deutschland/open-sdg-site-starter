@@ -104,6 +104,8 @@ menu:
     translation_key: menu.guidance
   - path: /facts_agenda/
     translation_key: menu.facts_agenda
+  - path: /publications/
+    translation_key: menu.publications
   #- path: /facts_sdg/
     #translation_key: menu.facts_sdg
 
