@@ -32,6 +32,8 @@ layout: page
 <br><br>
 [Nachhaltige Entwicklung in Deutschland - Daten zum Indikatorenbericht 2010](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/daten2010.pdf)
 <br><br>
+[Nachhaltige Entwicklung in Deutschland - Daten zum Indikatorenbericht 2008](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/daten2008.pdf)
+<br><br>
 ### Auszug aus der Publikation "WISTA - Wirtschaft und Statistik", 1/2017
 <br>
 [Neuauflage der deutschen Nachhaltigkeitsstrategie](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/wista2017_01.pdf)
