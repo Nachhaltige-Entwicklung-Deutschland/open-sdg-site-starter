@@ -879,7 +879,7 @@ var indicatorDataStore = function(dataUrl) {
   this.country = options.country;
   this.indicatorId = options.indicatorId;
   this.shortIndicatorId = options.shortIndicatorId;
-  this.chartTitle = options.chartTitle + "<br>" + options.measurementUnit;
+  this.chartTitle = options.chartTitle; // + "<br>" + options.measurementUnit;
   this.graphType = options.graphType;
   this.measurementUnit = options.measurementUnit;
   this.copyright = options.copyright;
@@ -2521,7 +2521,8 @@ var indicatorView = function (model, options) {
     //---#19 addUnitToTableHeaderIfNeeded---start---------------------------------------------------
     //---Edit from 26.10.20: Add Unit to table heading
     //var tableUnit = (chartInfo.selectedUnit && !chartInfo.footerFields[translations.indicator.unit_of_measurement]) ? translations.t(chartInfo.selectedUnit) : '';
-    var tableUnit = (chartInfo.indicatorId == 'indicator_6-1-b' || chartInfo.indicatorId == 'indicator_6-1-a') ? '' : ' (' + chartInfo.footerFields[translations.indicator.unit_of_measurement] + ')';
+    //var tableUnit = (chartInfo.indicatorId == 'indicator_6-1-b' || chartInfo.indicatorId == 'indicator_6-1-a') ? '' : ' (' + chartInfo.footerFields[translations.indicator.unit_of_measurement] + ')';
+    var tableUnit =  '<br><small>' + chartInfo.footerFields[translations.indicator.unit_of_measurement] + '</small>';
     //this.createTable(chartInfo.selectionsTable, chartInfo.indicatorId, '#selectionsTable', true);
     this.createTable(chartInfo.selectionsTable, tableUnit, chartInfo.indicatorId, '#selectionsTable', true);
     //---#19 addUnitToTableHeaderIfNeeded---stop----------------------------------------------------
