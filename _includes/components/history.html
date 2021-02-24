@@ -8,7 +8,7 @@
 {% endfor %}
 
 {% if n_histories > 0 %}
-  <div class="row no-gutters">
+  <div class="row">
   {% for i in (1..n_histories) %}
    {% assign hty_active = "history_active_" | append: i %}
     {% assign hty_scope = "history_" | append: i %}
