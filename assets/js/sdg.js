@@ -247,7 +247,15 @@ opensdg.autotrack = function(preset, category, action, label) {
       var unique = [];
       for (var i = 0; i<expressions.length; i++){
         if (unique.indexOf(expressions[i]) == -1){
-          unique.push(expressions[i]);
+          if (expression[i] == undefined){
+            if (unique.indexOf('') == -1){
+              unique.push('');
+            }
+          }
+          else{
+            unique.push(expressions[i]);
+          }
+
         }
       };
       console.log('unique: ', unique);
