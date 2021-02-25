@@ -173,12 +173,7 @@
           var records = _.where(geoData, { GeoCode: geocode, title: exp });
         }
         else if(cat == 'sex'){
-          if (exp == ''){
-            var record = _.where(geoData, {GeoCode: geocode, sex: '' });
-          }
-          else {
-            var records = _.where(geoData, { GeoCode: geocode, sex: exp });
-          }
+          var records = _.where(geoData, { GeoCode: geocode, sex: exp });
         }
         else if(cat == 'age'){
           var records = _.where(geoData, { GeoCode: geocode, age: exp });
@@ -224,7 +219,7 @@
           unique.push(expressions[i]);
         }
       };
-
+      console.log('unique: ', unique);
       return unique;
     },
 
