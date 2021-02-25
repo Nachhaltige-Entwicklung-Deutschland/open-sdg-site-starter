@@ -178,6 +178,9 @@
         else if(cat == 'age'){
           var records = _.where(geoData, { GeoCode: geocode, age: exp });
         }
+        else if(cat == 'typification'){
+          var records = _.where(geoData, { GeoCode: geocode, typification: exp });
+        }
 
         //---#6 enableMapsForDisagData---stop------------------------------------------------------------------
         records.forEach(function(record) {
@@ -197,7 +200,7 @@
     //---#6 enableMapsForDisagData---start-----------------------------------------------------------------
     //Find those disaggregation-categories that have more then one expression in all lines that have geoData
     findCat: function(){
-      var categories = ['title','sex','age'];
+      var categories = ['title','sex','age', 'typification'];
       var category = '';
 
       for (var i = 0; i<categories.length; i++){
@@ -389,6 +392,9 @@
         }
         else if (cat == 'age'){
           plugin.ageName = translations.t(plugin.expression);
+        }
+        else if (cat == 'typification'){
+          plugin.typificationName = translations.t(plugin.expression);
         }
 
         //action, when click:
