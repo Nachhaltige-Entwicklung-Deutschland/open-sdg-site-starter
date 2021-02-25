@@ -492,7 +492,7 @@ var indicatorView = function (model, options) {
               var replace = [{old: '2,5', new: '2.5'},
                             {old: 'Siedlungsfläche: Wohnbau, Industrie und Gewerbe (ohne Abbauland), Öffentliche Einrichtungen', new: 'Siedlungsfläche: Wohnbau Industrie und Gewerbe (ohne Abbauland) Öffentliche Einrichtungen'},
                             {old: 'Siedlungsfläche: Sport-, Freizeit-, und Erholungsfläche, Friedhof', new: 'Siedlungsfläche: Sport- Freizeit- und Erholungsfläche Friedhof'},
-                            {old: 'Sport-, Freizeit- und Erholungsfläche, Friedof', new: 'Sport- Freizeit- und Erholungsfläche Friedof'},
+                            {old: 'Sport-, Freizeit- und Erholungsfläche, Friedhof', new: 'Sport- Freizeit- und Erholungsfläche Friedof'},
                             {old: 'Wohnbau, Industrie und Gewerbe (ohne Abbauland), Öffentliche Einrichtungen', new: 'Wohnbau Industrie und Gewerbe (ohne Abbauland) Öffentliche Einrichtungen'},
                             {old: 'Konsum, Investitionen und Exporte', new: 'Konsum Investitionen und Exporte'},
                             {old: 'Entwicklungszusammenarbeit, deren', new: 'Entwicklungszusammenarbeit deren'},
