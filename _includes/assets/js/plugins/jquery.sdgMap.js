@@ -214,24 +214,13 @@
       var expressions = _.pluck(this.geoData, category);
       //unique = [ ...new Set(expressions) ];//<------------------------does not work in internet explorer
       var unique = [];
-      // for (var i = 0; i<expressions.length; i++){
-      //   if (unique.indexOf(expressions[i]) == -1){
-      //     if (expression[i] == undefined){
-      //       if (unique.indexOf('') == -1){
-      //         unique.push('');
-      //       }
-      //     }
-      //     else{
-      //       unique.push(expressions[i]);
-      //     }
-      //
-      //   }
+      for (var i = 0; i<expressions.length; i++){
 
         if (unique.indexOf(expressions[i]) == -1){
           unique.push(expressions[i]);
         }
       };
-      console.log('unique: ', unique);
+      
       return unique;
     },
 
