@@ -204,12 +204,7 @@ opensdg.autotrack = function(preset, category, action, label) {
           var records = _.where(geoData, { GeoCode: geocode, title: exp });
         }
         else if(cat == 'sex'){
-          if (exp == ''){
-            var record = _.where(geoData, {GeoCode: geocode, sex: '' });
-          }
-          else {
-            var records = _.where(geoData, { GeoCode: geocode, sex: exp });
-          }
+          var records = _.where(geoData, { GeoCode: geocode, sex: exp });
         }
         else if(cat == 'age'){
           var records = _.where(geoData, { GeoCode: geocode, age: exp });
@@ -255,7 +250,7 @@ opensdg.autotrack = function(preset, category, action, label) {
           unique.push(expressions[i]);
         }
       };
-
+      console.log('unique: ', unique);
       return unique;
     },
 
