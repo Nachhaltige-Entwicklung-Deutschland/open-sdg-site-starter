@@ -374,7 +374,7 @@
       //Create a Button for every expression and add it to the map
       var cat = plugin.findCat();
       if (cat != ''){
-        div.innerHTML = '<label style="background-color: #c0c2c2"><input id="command'+toString(i)+' name="disagg" value="'+i+'"> Auswahl: </label><br>';
+        //div.innerHTML = '<label style="background-color: #c0c2c2"><input id="command'+toString(i)+' name="disagg" value="'+i+'"> Auswahl: </label><br>';
         var exp = plugin.findDisagg(cat);
         for (var i = 0; i<exp.length; i++) {
           var label = exp[i];
