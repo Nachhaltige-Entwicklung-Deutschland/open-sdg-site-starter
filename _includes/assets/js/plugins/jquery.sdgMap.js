@@ -374,6 +374,7 @@
       //Create a Button for every expression and add it to the map
       var cat = plugin.findCat();
       if (cat != ''){
+        div.innerHTML = '<label style="background-color: #c0c2c2"><input id="command'+toString(i)+' name="disagg" value="'+i+'"> Auswahl: </label><br>';
         var exp = plugin.findDisagg(cat);
         for (var i = 0; i<exp.length; i++) {
           var label = exp[i];
@@ -382,7 +383,7 @@
               var div = L.DomUtil.create('div', 'command');
               //set the Button on position 'startExp' to status checked
               if (i == plugin.startExp){
-                div.innerHTML = '<label  style="background-color: #c0c2c2"><input id="command'+toString(i)+'" type="radio" name="disagg" value="'+i+'" checked> '+translations.t(label)+' </label><br>';
+                div.innerHTML = '<label style="background-color: #c0c2c2"><input id="command'+toString(i)+'" type="radio" name="disagg" value="'+i+'" checked> '+translations.t(label)+' </label><br>';
               }
               else{
                 div.innerHTML = '<label style="background-color: #c0c2c2"><input id="command'+toString(i)+'" type="radio" name="disagg" value="'+i+'"> '+translations.t(label)+' </label><br>';
