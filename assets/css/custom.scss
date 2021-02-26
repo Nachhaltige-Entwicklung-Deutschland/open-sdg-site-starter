@@ -647,6 +647,10 @@ header {
       }
     }
 
+    .leaflet-container {
+    background-color:rgba(255,0,0,0.0);
+    }
+
     .leaflet-control {
       .timecontrol-date {
         min-width: 80px;
