@@ -627,7 +627,13 @@ header {
   font-size: 0.8em;
 }
 
+
+
 // Map-related styles
+.leaflet-container {
+background-color: rgba(51,51,51,0.8);
+}
+
 #main-content {
   #map {
     height: 500px;
@@ -647,9 +653,7 @@ header {
       }
     }
 
-    .leaflet-container {
-    background-color:rgba(51,51,51,0.8);
-    }
+
 
     .leaflet-control {
       .timecontrol-date {
