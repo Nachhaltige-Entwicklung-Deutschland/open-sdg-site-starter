@@ -261,7 +261,7 @@ map_layers:
     serviceUrl:  https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/maps/diy_krs.geojson
     nameProperty: GEN
     idProperty: ARS
-    staticBorders: false
+    staticBorders: true
 
 
 # link: https://hub.arcgis.com/datasets/b7507e654334481e8e0787f42c9028c1_3
