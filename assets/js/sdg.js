@@ -396,7 +396,7 @@ opensdg.autotrack = function(preset, category, action, label) {
         var exp = plugin.findDisagg(cat);
         for (var i = 0; i<exp.length; i++) {
           var label = exp[i];
-          var command = L.control({position: 'bottomright'});
+          var command = L.control({position: 'bottomleft'});
           command.onAdd = function (map) {
               var div = L.DomUtil.create('div', 'command');
               //set the Button on position 'startExp' to status checked
