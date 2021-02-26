@@ -170,7 +170,7 @@ graph_color_number:
 # Mapping
 map_options:
 
-  tileURL: https://api.mapbox.com/styles/v1/mobosse/cjzmrn62k0ek11cmgea7a1i1h/tiles/256/{z}/{x}/{y}?&access_token={accessToken}
+  #tileURL: https://api.mapbox.com/styles/v1/mobosse/cjzmrn62k0ek11cmgea7a1i1h/tiles/256/{z}/{x}/{y}?&access_token={accessToken}
   #tileURL: https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
   #tileURL: https://c.tile.openstreetmap.de/{z}/{x}/{y}.png
   #tileURL: http://a.tile.stamen.com/toner/{z}/{x}/{y}.png
@@ -240,8 +240,8 @@ map_layers:
     #idProperty: CNTR_CODE
     #staticBorders: true
   #Bundesland
-  - min_zoom: 5
-    max_zoom: 6
+  - min_zoom: 4
+    max_zoom: 7
     #serviceUrl: https://g205sdgs.github.io/sdg-indicators/assets/maps/NUTS_RG_01M_2016_4326_LEVL_1.geojson
     #nameProperty: NUTS_NAME
     #idProperty: NUTS_ID
@@ -256,8 +256,8 @@ map_layers:
     nameProperty: GEN
     idProperty: AGS
     staticBorders: true
-  - min_zoom: 7
-    max_zoom: 13
+  - min_zoom: 8
+    max_zoom: 11
     serviceUrl:  https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/maps/diy_krs.geojson
     nameProperty: GEN
     idProperty: ARS
