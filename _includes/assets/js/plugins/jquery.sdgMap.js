@@ -15,8 +15,8 @@
       attribution: '[replace me]',
     },
     // Zoom limits.
-    minZoom: 4,
-    maxZoom: 8,
+    minZoom: 4.5,
+    maxZoom: 11,
     // Visual/choropleth considerations.
     colorRange: chroma.brewer.BuGn,
     noValueColor: '#ffffff',
