@@ -176,7 +176,8 @@ map_options:
   #tileURL: http://a.tile.stamen.com/toner/{z}/{x}/{y}.png
   #tileURL: https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png
   #tileURL: https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png
-  tileURL: https://tiles.wmflabs.org/bw-mapnik/${z}/${x}/${y}.png
+  #tileURL: https://tiles.wmflabs.org/bw-mapnik/${z}/${x}/${y}.png
+  tileURL: https://{a|b|c}.tile.opentopomap.org/{z}/{x}/{y}.png
 
   tileOptions:
     id: #mapbox.light
