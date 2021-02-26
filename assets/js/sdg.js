@@ -363,6 +363,7 @@ opensdg.autotrack = function(preset, category, action, label) {
         minZoom: this.options.minZoom,
         maxZoom: this.options.maxZoom,
         zoomControl: false,
+        opacity: 0.5
       });
       this.map.setView([51.9, 10.26],0);
       this.dynamicLayers = new ZoomShowHide();
@@ -385,6 +386,18 @@ opensdg.autotrack = function(preset, category, action, label) {
 
       // Because after this point, "this" rarely works.
       var plugin = this;
+
+      // Add the year slider.
+      this.map.addControl(L.Control.yearSlider({
+        years: this.years,
+        yearChangeCallback: function(e) {
+          plugin.currentYear = new Date(e.time).getFullYear();
+          plugin.updateColors();
+          plugin.selectionLegend.update();
+
+        },
+        playReverseButton: true
+      }));
 
       //---#6 enableMapsForDisagData---start-----------------------------------------------------------------
       //Add the radio buttons
@@ -445,17 +458,7 @@ opensdg.autotrack = function(preset, category, action, label) {
       }
       //---#6 enableMapsForDisagData---stop------------------------------------------------------------------
 
-      // Add the year slider.
-      this.map.addControl(L.Control.yearSlider({
-        years: this.years,
-        yearChangeCallback: function(e) {
-          plugin.currentYear = new Date(e.time).getFullYear();
-          plugin.updateColors();
-          plugin.selectionLegend.update();
 
-        },
-        playReverseButton: true
-      }));
 
       //---#7 addMapboxWordmark---start-----------------------------------------------------------------------------------------
       //var logo = L.control({position: 'bottomleft'});
