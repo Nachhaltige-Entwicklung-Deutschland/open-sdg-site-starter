@@ -517,6 +517,9 @@ header {
   display: inline-block;
   font-size: 0.8em; }
 
+.leaflet-container {
+  background-color: rgba(51, 51, 51, 0.8); }
+
 #main-content #map {
   height: 500px;
   width: 100%; }
@@ -531,8 +534,6 @@ header {
     justify-content: center; }
     #main-content #map #loader-container img {
       height: auto; }
-  #main-content #map .leaflet-container {
-    background-color: rgba(51, 51, 51, 0.8); }
   #main-content #map .leaflet-control .timecontrol-date {
     min-width: 80px;
     padding: 0 10px; }
