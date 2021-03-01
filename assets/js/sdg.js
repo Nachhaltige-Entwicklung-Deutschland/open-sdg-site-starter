@@ -1394,7 +1394,9 @@ var indicatorDataStore = function(dataUrl) {
       exceptions = [translations.t('direct co2 emissions and co2 content of consumer goods'),
                     translations.t('a) time series') + ', ' + translations.t('a) total (moving four-year average)'),
                     translations.t('b) target (max)') + ', ' + translations.t('a) total (moving four-year average)'),
-                    translations.t('a) time series') + ', ' + translations.t('gross domestic produkt (price-adjusted) (year-on-year changes in %)')];
+                    translations.t('a) time series') + ', ' + translations.t('gross domestic produkt (price-adjusted) (year-on-year changes in %)'),
+                    translations.t('b) target (min)') + ', ' + translations.t('structural funding balance (share of gross domestic product (at current prices) in %)'),
+                    translations.t('b) target (min)') + ', ' + translations.t('funding balance (share of gross domestic product (at current prices) in %)')];
 
       for (var i=0; i<bl.length; i++){
         exceptions.push(translations.t('a) time series') + ', ' + translations.t('a) total (moving four-year average)') + ', ' + translations.t(bl[i]));
