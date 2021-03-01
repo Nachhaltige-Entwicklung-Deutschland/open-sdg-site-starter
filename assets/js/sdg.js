@@ -548,7 +548,7 @@ opensdg.autotrack = function(preset, category, action, label) {
           plugin.searchControl = new L.Control.Search({
             layer: plugin.getAllLayers(),
             propertyName: 'name',
-            textPlaceholder: 'Suche nach Bundesländern"'
+            textPlaceholder: 'Suche nach Bundesländern',
             marker: false,
             moveToLocation: function(latlng) {
               plugin.zoomToFeature(latlng.layer);
@@ -2979,7 +2979,7 @@ $(function() {
     initialize: function(plugin) {
       this.selections = [];
       this.plugin = plugin;
-      console.log("plugin: ", this.plugin);
+    
     },
 
     addSelection: function(selection) {
@@ -3047,7 +3047,7 @@ $(function() {
       //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
 
       div.innerHTML = L.Util.template(controlTpl, {
-        lowValue: this.plugin.valueRange[0] + ' ' + this.plugin.unitName,
+        lowValue: this.plugin.valueRange[0], // + ' ' + this.plugin.unitName,
         highValue: this.plugin.valueRange[1],
         legendSwatches: swatches,
 
