@@ -3045,7 +3045,7 @@ $(function() {
       //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
 
       div.innerHTML = L.Util.template(controlTpl, {
-        lowValue: this.plugin.valueRange[0],
+        lowValue: this.plugin.valueRange[0] + ' ' + this.plugin.unitName,
         highValue: this.plugin.valueRange[1],
         legendSwatches: swatches,
 
