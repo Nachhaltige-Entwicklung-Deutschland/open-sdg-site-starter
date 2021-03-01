@@ -265,6 +265,35 @@ opensdg.autotrack = function(preset, category, action, label) {
       this.map.fitBounds(layer.getBounds());
     },
 
+    // Build content for a tooltip.
+   getTooltipContent(feature) {
+     var tooltipContent = feature.properties.name;
+     var tooltipData = this.getData(feature.properties);
+     if (tooltipData) {
+       tooltipContent += ': ' + tooltipData;
+     }
+     return tooltipContent;
+   },
+
+   // Update a tooltip.
+   updateTooltip: function(layer) {
+     if (layer.getTooltip()) {
+       var tooltipContent = this.getTooltipContent(layer.feature);
+       layer.setTooltipContent(tooltipContent);
+     }
+   },
+
+   // Create tooltip.
+   createTooltip: function(layer) {
+     if (!layer.getTooltip()) {
+       var tooltipContent = this.getTooltipContent(layer.feature);
+       layer.bindTooltip(tooltipContent, {
+         permanent: true,
+       }).addTo(this.map);
+     }
+   },
+
+
     // Select a feature.
     highlightFeature: function(layer) {
       // Abort if the layer is not on the map.
@@ -274,16 +303,7 @@ opensdg.autotrack = function(preset, category, action, label) {
       // Update the style.
       layer.setStyle(this.options.styleHighlighted);
       // Add a tooltip if not already there.
-      if (!layer.getTooltip()) {
-        var tooltipContent = layer.feature.properties.name;
-        var tooltipData = this.getData(layer.feature.properties);
-        if (tooltipData) {
-          tooltipContent += ': ' + tooltipData;
-        }
-        layer.bindTooltip(tooltipContent, {
-          permanent: true,
-        }).addTo(this.map);
-      }
+      this.createTooltip(layer);
       if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
         layer.bringToFront();
       }
@@ -338,6 +358,14 @@ opensdg.autotrack = function(preset, category, action, label) {
       });
     },
 
+
+    // Update the tooltips of the selected Features on the map.
+    updateTooltips: function() {
+      var plugin = this;
+      this.selectionLegend.selections.forEach(function(selection) {
+        plugin.updateTooltip(selection);
+      });
+    },
     // Get the data from a feature's properties, according to the current year.
     getData: function(props) {
       if (props[this.currentYear]) {
@@ -394,6 +422,7 @@ opensdg.autotrack = function(preset, category, action, label) {
         yearChangeCallback: function(e) {
           plugin.currentYear = new Date(e.time).getFullYear();
           plugin.updateColors();
+          plugin.updateTooltips();
           plugin.selectionLegend.update();
 
         },
@@ -416,10 +445,10 @@ opensdg.autotrack = function(preset, category, action, label) {
               var div = L.DomUtil.create('div', 'command');
               //set the Button on position 'startExp' to status checked
               if (i == plugin.startExp){
-                div.innerHTML = '<label style="background-color: #c0c2c2; padding-right: 8px; font-size: 18px"><input id="command'+toString(i)+'" type="radio" name="disagg" value="'+i+'" checked> '+translations.t(label)+' </label><br>';
+                div.innerHTML = '<label style="background-color: #c0c2c2; padding-right: 6px; padding-left: 4px; font-size: 14px"><input id="command'+toString(i)+'" type="radio" name="disagg" value="'+i+'" checked> '+translations.t(label)+' </label><br>';
               }
               else{
-                div.innerHTML = '<label style="background-color: #c0c2c2; padding-right: 8px; font-size: 18px"><input id="command'+toString(i)+'" type="radio" name="disagg" value="'+i+'"> '+translations.t(label)+' </label><br>';
+                div.innerHTML = '<label style="background-color: #c0c2c2; padding-right: 6px; padding-left: 4px; font-size: 14px"><input id="command'+toString(i)+'" type="radio" name="disagg" value="'+i+'"> '+translations.t(label)+' </label><br>';
               }
               return div;
           };
