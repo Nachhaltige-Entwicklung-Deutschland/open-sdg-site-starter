@@ -2978,6 +2978,7 @@ $(function() {
     initialize: function(plugin) {
       this.selections = [];
       this.plugin = plugin;
+      console.log("plugin: ", this.plugin);
     },
 
     addSelection: function(selection) {
