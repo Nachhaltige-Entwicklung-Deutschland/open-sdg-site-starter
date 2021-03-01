@@ -570,7 +570,7 @@ var indicatorView = function (model, options) {
       }
     };
     chartConfig = opensdg.chartConfigAlter(chartConfig);
-    console.log(chartInfo);
+    //console.log(chartInfo);
 
     this._chartInstance = new Chart($(this._rootElement).find('canvas'), chartConfig);
     Chart.pluginService.register({
@@ -716,7 +716,7 @@ var indicatorView = function (model, options) {
 
 
   this.createSelectionsTable = function(chartInfo) {
-    console.log("chartInfo:", chartInfo);
+    //console.log("chartInfo:", chartInfo);
     //---#19 addUnitToTableHeaderIfNeeded---start---------------------------------------------------
     //---Edit from 26.10.20: Add Unit to table heading
     //var tableUnit = (chartInfo.selectedUnit && !chartInfo.footerFields[translations.indicator.unit_of_measurement]) ? translations.t(chartInfo.selectedUnit) : '';
