@@ -82,6 +82,7 @@ opensdg.autotrack = function(preset, category, action, label) {
   };
 
   function Plugin(element, options) {
+    console.log("Options:", options);
 
     this.element = element;
     this.options = $.extend(true, {}, defaults, options.mapOptions);
