@@ -517,7 +517,7 @@
           plugin.searchControl = new L.Control.Search({
             layer: plugin.getAllLayers(),
             propertyName: 'name',
-            textPlaceholder: 'Suche nach Bundesländern"'
+            textPlaceholder: 'Suche nach Bundesländern',
             marker: false,
             moveToLocation: function(latlng) {
               plugin.zoomToFeature(latlng.layer);
