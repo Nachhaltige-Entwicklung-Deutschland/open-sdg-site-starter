@@ -571,7 +571,7 @@ var indicatorModel = function (options) {
         // offset if there is no headline data:
         if(!this.hasHeadline) {
           datasetIndex += 1;
-        },
+        }
 
         // 0 -
         // the first dataset is the headline:
