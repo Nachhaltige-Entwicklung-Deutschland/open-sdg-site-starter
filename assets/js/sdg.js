@@ -1458,7 +1458,7 @@ var indicatorDataStore = function(dataUrl) {
         // offset if there is no headline data:
         if(!this.hasHeadline) {
           datasetIndex += 1;
-        },
+        }
 
         // 0 -
         // the first dataset is the headline:
@@ -1470,7 +1470,7 @@ var indicatorDataStore = function(dataUrl) {
           }
         }
         return datasetIndex  > colors.length || dash ? [5, 5] : undefined;
-      }
+      },
       convertToDataset = function (data, combinationDescription, combination /*field, fieldValue*/) {
         // var fieldIndex = field ? _.findIndex(that.selectedFields, function (f) {
         //     return f === field;
