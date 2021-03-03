@@ -583,7 +583,7 @@ var indicatorModel = function (options) {
           }
         }
         return datasetIndex  > colors.length || dash ? [5, 5] : undefined;
-      }
+      },
       convertToDataset = function (data, combinationDescription, combination /*field, fieldValue*/) {
         // var fieldIndex = field ? _.findIndex(that.selectedFields, function (f) {
         //     return f === field;
