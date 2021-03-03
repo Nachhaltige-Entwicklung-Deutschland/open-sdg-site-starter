@@ -1331,6 +1331,9 @@ var indicatorDataStore = function(dataUrl) {
           return 'circle';
         }
       },
+      getRadius(datasetIndex, combinationDescription){
+        getPointStyle(datasetIndex, combinationDescription) == 'circle' || getPointStyle(datasetIndex, combinationDescription) == 'rect' ? 6 : 0
+      },
       //---#11 setTargetPointstyle---stop-----------------------------------------------------------------------------------------------
 
       //---#13 noLineForTargets---start-------------------------------------------------------------------------------------------------
@@ -1520,7 +1523,7 @@ var indicatorDataStore = function(dataUrl) {
             //---#11 setTargetPointstyle---start---------------------------------------
             pointStyle: getPointStyle(datasetIndex, combinationDescription),
             //---#11 setTargetPointstyle---stop----------------------------------------
-            radius: 6,
+            radius: getRadius(datasetIndex, combinationDescription), //6,
             pointBorderColor: '#' + getColor(datasetIndexMod),
             borderDash: getBorderDash(datasetIndex, combinationDescription),
             data: _.map(that.years, function (year) {
