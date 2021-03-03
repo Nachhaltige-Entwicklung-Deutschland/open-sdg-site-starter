@@ -446,7 +446,7 @@ var indicatorModel = function (options) {
       },
       getRadius(datasetIndex, combinationDescription){
         getPointStyle(datasetIndex, combinationDescription) == 'circle' || getPointStyle(datasetIndex, combinationDescription) == 'rect' ? 6 : 0
-      }
+      },
       //---#11 setTargetPointstyle---stop-----------------------------------------------------------------------------------------------
 
       //---#13 noLineForTargets---start-------------------------------------------------------------------------------------------------
