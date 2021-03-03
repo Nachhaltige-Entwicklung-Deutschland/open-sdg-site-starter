@@ -578,7 +578,7 @@ var indicatorModel = function (options) {
         dashedLines = ['Ziel, Sanitärversorgung','Ziel, Trinkwasser']
         dash = false
         for (var d = 0; d < dashedLines.length; d++) {
-          if (combinationDescription.indexOf(dashedLines[0]) != -1 & dash == false){
+          if (combinationDescription.indexOf(dashedLines[0]) != -1 && dash == false){
             dash = true
           }
         }
