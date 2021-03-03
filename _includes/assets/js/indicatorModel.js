@@ -438,7 +438,7 @@ var indicatorModel = function (options) {
       getPointStyle = function (datasetIndex, combinationDescription) {
         dashedLines = ['Ziel, Sanitärvers','Ziel, Trinkwasser']
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
-          return dashedLines.indexOf(combinationDescription.substr(0,17)) != -1 ? 'rect' : '';
+          return dashedLines.indexOf(combinationDescription.substr(0,17)) == -1 ? 'rect' : 'false';
         }
         else {
           return 'circle';

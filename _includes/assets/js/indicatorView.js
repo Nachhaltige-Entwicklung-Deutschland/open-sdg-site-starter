@@ -528,9 +528,18 @@ var indicatorView = function (model, options) {
 
               //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
               //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
+              dashedLines = ['Ziel, Sanitärvers','Ziel, Trinkwasser']
               if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
                 if (dataset.type != 'bar'){
-                  text.push('<span class="swatchTgt' + '" style="border-color: ' + dataset.pointBorderColor + '"></span>');
+                  //edit legend for dashed target lines
+                  if (dashedLines.indexOf(dataset.label.substring(0,17)) != -1){
+                    text.push('<span class="swatchTgtLine dashed" style="background-color: ' + dataset.pointBorderColor + '"></span>');
+                  }
+                  else {
+                    text.push('<span class="swatchTgt' + '" style="border-color: ' + dataset.pointBorderColor + '"></span>');
+                  }
+                  //text.push('<span class="swatchTgt' + '" style="border-color: ' + dataset.pointBorderColor + '"></span>');
+                  //
                 }
                 else{
                   text.push('<span class="swatchTgtBar' + '" style="border-color: ' + dataset.pointBorderColor + '"></span>');
