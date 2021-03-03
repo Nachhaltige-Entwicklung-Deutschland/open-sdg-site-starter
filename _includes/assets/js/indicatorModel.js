@@ -571,11 +571,18 @@ var indicatorModel = function (options) {
         // offset if there is no headline data:
         if(!this.hasHeadline) {
           datasetIndex += 1;
-        }
+        },
 
         // 0 -
         // the first dataset is the headline:
-        return datasetIndex  > colors.length || combinationDescription.indexOf('Ziel') != -1 ? [5, 5] : undefined;
+        dashedLines = ['Ziel, Sanitärversorgung','Ziel, Trinkwasser']
+        dash = false
+        for (var d = 0; d < dashedLines.length; d++) {
+          if (combinationDescription.indexOf(dashedLines[0]) != -1 & dash == false){
+            dash = true
+          }
+        },
+        return datasetIndex  > colors.length || dash ? [5, 5] : undefined;
       },
       convertToDataset = function (data, combinationDescription, combination /*field, fieldValue*/) {
         // var fieldIndex = field ? _.findIndex(that.selectedFields, function (f) {
