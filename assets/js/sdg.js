@@ -1323,7 +1323,7 @@ var indicatorDataStore = function(dataUrl) {
       },
       //---#11 setTargetPointstyle---start-----------------------------------------------------------------------------------------------
       getPointStyle = function (datasetIndex, combinationDescription) {
-        dashedLines = ['Ziel, Sanitärvers','Ziel, Trinkwasser']
+        dashedLines = ['Ziel, Sanitärvers','Ziel, Trinkwasser','Ziel, Finanzierun','Ziel, Strukturell']
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
           return dashedLines.indexOf(combinationDescription.substr(0,17)) == -1 ? 'rect' : 'false';
         }
@@ -1466,7 +1466,7 @@ var indicatorDataStore = function(dataUrl) {
 
         // 0 -
         // the first dataset is the headline:
-        dashedLines = ['Ziel, Sanitärvers','Ziel, Trinkwasser']
+        dashedLines = ['Ziel, Sanitärvers','Ziel, Trinkwasser','Ziel, Finanzierun','Ziel, Strukturell']
 
         return datasetIndex  > colors.length || dashedLines.indexOf(combinationDescription.substring(0, 17)) != -1 ? [5, 5] : undefined;
       },
@@ -2383,7 +2383,7 @@ var indicatorView = function (model, options) {
 
               //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
               //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
-              dashedLines = ['Ziel, Sanitärvers','Ziel, Trinkwasser']
+              dashedLines = ['Ziel, Sanitärvers','Ziel, Trinkwasser','Ziel, Finanzierun','Ziel, Strukturell']
               if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
                 if (dataset.type != 'bar'){
                   //edit legend for dashed target lines
