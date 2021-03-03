@@ -1427,7 +1427,10 @@ var indicatorDataStore = function(dataUrl) {
                     translations.t('b) target (max)') + ', ' + translations.t('a) total (moving four-year average)'),
                     translations.t('a) time series') + ', ' + translations.t('gross domestic produkt (price-adjusted) (year-on-year changes in %)'),
                     translations.t('b) target (min)') + ', ' + translations.t('structural funding balance (share of gross domestic product (at current prices) in %)'),
-                    translations.t('b) target (min)') + ', ' + translations.t('funding balance (share of gross domestic product (at current prices) in %)')];
+                    translations.t('b) target (min)') + ', ' + translations.t('funding balance (share of gross domestic product (at current prices) in %)'),
+                    translations.t('b) target (min)') + ', ' + translations.t('a) drinking water and sanitation'),
+                    translations.t('b) target (min)') + ', ' + translations.t('b) drinking water'),
+                    translations.t('b) target (min)') + ', ' + translations.t('c) sanitation')];
 
       for (var i=0; i<bl.length; i++){
         exceptions.push(translations.t('a) time series') + ', ' + translations.t('a) total (moving four-year average)') + ', ' + translations.t(bl[i]));
