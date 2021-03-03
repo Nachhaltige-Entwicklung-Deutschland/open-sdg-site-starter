@@ -1462,14 +1462,9 @@ var indicatorDataStore = function(dataUrl) {
 
         // 0 -
         // the first dataset is the headline:
-        dashedLines = ['Ziel, Sanitärversorgung','Ziel, Trinkwasser']
-        dash = false
-        for (var d = 0; d < dashedLines.length; d++) {
-          if (combinationDescription.indexOf(dashedLines[0]) != -1 && dash == false){
-            dash = true
-          }
-        }
-        return datasetIndex  > colors.length || dash ? [5, 5] : undefined;
+        dashedLines = ['Ziel, Sanitärvers','Ziel, Trinkwasser']
+
+        return datasetIndex  > colors.length || dashedLines.indexOf(combinationDescription.substring(0, 17)) != -1 ? [5, 5] : undefined;
       },
       convertToDataset = function (data, combinationDescription, combination /*field, fieldValue*/) {
         // var fieldIndex = field ? _.findIndex(that.selectedFields, function (f) {
