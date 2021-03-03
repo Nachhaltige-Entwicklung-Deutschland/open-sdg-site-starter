@@ -1322,9 +1322,10 @@ var indicatorDataStore = function(dataUrl) {
         return datasetIndex === 0 ? headlineColor : colors[datasetIndex];
       },
       //---#11 setTargetPointstyle---start-----------------------------------------------------------------------------------------------
-      getPointStyle = function (combinationDescription) {
+      getPointStyle = function (datasetIndex, combinationDescription) {
+        dashedLines = ['Ziel, Sanitärvers','Ziel, Trinkwasser']
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
-          return 'rect';
+          return dashedLines.indexOf(combinationDescription.substr(0,17)) != -1 ? 'rect' : '';
         }
         else {
           return 'circle';
@@ -1517,7 +1518,7 @@ var indicatorDataStore = function(dataUrl) {
             backgroundColor: getBackground(combinationDescription,datasetIndexMod),
             //---#4 sameColorForTargetAndTimeSeries---stop------------------
             //---#11 setTargetPointstyle---start---------------------------------------
-            pointStyle: getPointStyle(combinationDescription),
+            pointStyle: getPointStyle(datasetIndex, combinationDescription),
             //---#11 setTargetPointstyle---stop----------------------------------------
             radius: 6,
             pointBorderColor: '#' + getColor(datasetIndexMod),
