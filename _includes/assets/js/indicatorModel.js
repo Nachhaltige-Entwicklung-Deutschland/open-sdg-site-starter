@@ -567,7 +567,7 @@ var indicatorModel = function (options) {
       //--#14.1 barsOnly---stop--------------------------------------------------------------------------------------------------------
 
 
-      getBorderDash = function(datasetIndex) {
+      getBorderDash = function(datasetIndex, combinationDescription) {
         // offset if there is no headline data:
         if(!this.hasHeadline) {
           datasetIndex += 1;
@@ -575,7 +575,7 @@ var indicatorModel = function (options) {
 
         // 0 -
         // the first dataset is the headline:
-        return datasetIndex > colors.length ? [5, 5] : undefined;
+        return datasetIndex || combinationDescription.indexOf('Ziel') != -1 > colors.length ? [5, 5] : undefined;
       },
       convertToDataset = function (data, combinationDescription, combination /*field, fieldValue*/) {
         // var fieldIndex = field ? _.findIndex(that.selectedFields, function (f) {
@@ -632,7 +632,7 @@ var indicatorModel = function (options) {
             //---#11 setTargetPointstyle---stop----------------------------------------
             radius: 6,
             pointBorderColor: '#' + getColor(datasetIndexMod),
-            borderDash: getBorderDash(datasetIndex),
+            borderDash: getBorderDash(datasetIndex, combinationDescription),
             data: _.map(that.years, function (year) {
               var found = _.findWhere(data, {
                 Year: year
