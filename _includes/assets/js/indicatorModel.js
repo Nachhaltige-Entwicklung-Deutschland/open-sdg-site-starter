@@ -575,7 +575,7 @@ var indicatorModel = function (options) {
 
         // 0 -
         // the first dataset is the headline:
-        return datasetIndex || combinationDescription.indexOf('Ziel') != -1 > colors.length ? [5, 5] : undefined;
+        return datasetIndex  > colors.length || combinationDescription.indexOf('Ziel') != -1 ? [5, 5] : undefined;
       },
       convertToDataset = function (data, combinationDescription, combination /*field, fieldValue*/) {
         // var fieldIndex = field ? _.findIndex(that.selectedFields, function (f) {
