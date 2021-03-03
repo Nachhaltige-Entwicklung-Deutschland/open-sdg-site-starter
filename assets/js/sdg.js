@@ -1465,12 +1465,12 @@ var indicatorDataStore = function(dataUrl) {
         dashedLines = ['Ziel, Sanitärversorgung','Ziel, Trinkwasser']
         dash = false
         for (var d = 0; d < dashedLines.length; d++) {
-          if (combinationDescription.indexOf(dashedLines[0]) != -1 & dash == false){
+          if (combinationDescription.indexOf(dashedLines[0]) != -1 && dash == false){
             dash = true
           }
-        },
+        }
         return datasetIndex  > colors.length || dash ? [5, 5] : undefined;
-      },
+      }
       convertToDataset = function (data, combinationDescription, combination /*field, fieldValue*/) {
         // var fieldIndex = field ? _.findIndex(that.selectedFields, function (f) {
         //     return f === field;
