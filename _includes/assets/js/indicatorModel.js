@@ -637,6 +637,7 @@ var indicatorModel = function (options) {
             pointStyle: getPointStyle(datasetIndex, combinationDescription),
             //---#11 setTargetPointstyle---stop----------------------------------------
             radius: getRadius(datasetIndex, combinationDescription), //6,
+            pointRadius: getRadius(datasetIndex, combinationDescription),
             pointBorderColor: '#' + getColor(datasetIndexMod),
             borderDash: getBorderDash(datasetIndex, combinationDescription),
             data: _.map(that.years, function (year) {
