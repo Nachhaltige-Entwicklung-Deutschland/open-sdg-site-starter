@@ -21,7 +21,7 @@ var mapView = function () {
       //---#2.2 footerUnitInMapLegend---start----------------------------------------------------------
       measurementUnit: measurementUnit,
       //---#2.2 footerUnitInMapLegend---stop-----------------------------------------------------------
-      mapTitle: mapTitle,
+      //mapTitle: mapTitle,
 
       //title: title
     });
