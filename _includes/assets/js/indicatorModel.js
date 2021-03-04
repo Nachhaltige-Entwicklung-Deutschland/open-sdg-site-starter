@@ -34,6 +34,9 @@ var indicatorModel = function (options) {
   this.indicatorId = options.indicatorId;
   this.shortIndicatorId = options.shortIndicatorId;
   this.chartTitle = options.chartTitle; // + "<br>" + options.measurementUnit;
+  //---4.3.21: No content but map title in maps
+  this.mapTitle =   options.mapTitle
+  //---4.3.21: No content but map title in maps stop
   this.graphType = options.graphType;
   this.measurementUnit = options.measurementUnit;
   this.copyright = options.copyright;
@@ -548,8 +551,8 @@ var indicatorModel = function (options) {
                     translations.t('b) target (min)') + ', ' + translations.t('a) drinking water and sanitation'),//6.2.ab
                     translations.t('b) target (min)') + ', ' + translations.t('b) drinking water'),//6.2.ab
                     translations.t('b) target (min)') + ', ' + translations.t('c) sanitation'),//6.2.ab
-                    translations.t('a) time series') + ', ' + translations.t('"moving five-year average, referring to the middle year"'),//2.1.a
-                    translations.t('b) target (max)') + ', ' + translations.t('"moving five-year average, referring to the middle year"')];//2.1.a
+                    translations.t('a) time series') + ', ' + translations.t('moving five-year average, referring to the middle year'),//2.1.a
+                    translations.t('b) target (max)') + ', ' + translations.t('moving five-year average, referring to the middle year')];//2.1.a
 
       for (var i=0; i<bl.length; i++){
         exceptions.push(translations.t('a) time series') + ', ' + translations.t('a) total (moving four-year average)') + ', ' + translations.t(bl[i]));
@@ -839,7 +842,9 @@ var indicatorModel = function (options) {
         //------------------------------------------------
 
         //---#2.1 caseNoTimeSeriesInCsv---start-----------------------------------
-        title: this.chartTitle,
+        //---4.3.21: No content but map title in maps
+        title: this.mapTitle,
+        //title: this.chartTitle,
         //---#2.1 caseNoTimeSeriesInCsv---stop------------------------------------
 
         //---#2.2 footerUnitInMapLegend---start-----------------------------------
