@@ -843,7 +843,7 @@ var indicatorModel = function (options) {
 
         //---#2.1 caseNoTimeSeriesInCsv---start-----------------------------------
         //---4.3.21: No content but map title in maps
-        //title: this.mapTitle,
+        mapTitle: this.mapTitle,
         title: this.chartTitle,
         //---#2.1 caseNoTimeSeriesInCsv---stop------------------------------------
 
