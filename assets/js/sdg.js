@@ -1840,7 +1840,7 @@ var mapView = function () {
   //this.initialise = function(geoData, geoCodeRegEx) {
   //this.initialise = function(geoData, geoCodeRegEx, goal) {
   //---#1 GoalDependendMapColor---stop---------------------------------------
-  this.initialise = function(geoData, geoCodeRegEx, goal, title, measurementUnit) {
+  this.initialise = function(geoData, geoCodeRegEx, goal, title, measurementUnit, maptitle) {
   //---#2.1 caseNoTimeSeriesInCsv---stop-------------------------------------
     $('.map').show();
     $('#map').sdgMap({
@@ -1855,6 +1855,8 @@ var mapView = function () {
       //---#2.2 footerUnitInMapLegend---start----------------------------------------------------------
       measurementUnit: measurementUnit,
       //---#2.2 footerUnitInMapLegend---stop-----------------------------------------------------------
+
+      maptitle: maptitle,
 
       title: title
     });
@@ -2016,7 +2018,7 @@ var indicatorView = function (model, options) {
       //view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx);
       //view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr);
       //---#1 GoalDependendMapColor---stop---------------------------
-      view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr, args.title, args.measurementUnit); //---#2.2 footerUnitInMapLegend
+      view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr, args.title, args.measurementUnit, args.maptitle); //---#2.2 footerUnitInMapLegend
       //---#2 TimeSeriesNameDisplayedInMaps---stop------------------
 
     }
@@ -3083,23 +3085,25 @@ $(function() {
       var div = L.DomUtil.create('div', 'selection-legend');
 
       //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
-      var headline = this.plugin.title
-      if (this.plugin.timeSeriesName){
-        headline += ', <br>' + this.plugin.timeSeriesName;
-      }
-      if (this.plugin.sexName){
-        headline += ', <br>' + this.plugin.sexName;
-      }
-      if (this.plugin.ageName){
-        headline += ', <br>' + this.plugin.ageName;
-      }
-      if (this.plugin.typificationName){
-        headline += ', <br>' + this.plugin.typificationName;
-      }
-      if (this.plugin.criminalOffenceName){
-        headline += ', <br>' + this.plugin.criminalOffenceName;
-      }
-      headline += ', <br>' + this.plugin.unitName;
+      //---4.3.21: No content but map title in maps
+      var headline = this.plugin.maptitle
+      // var headline = this.plugin.title
+      // if (this.plugin.timeSeriesName){
+      //   headline += ', <br>' + this.plugin.timeSeriesName;
+      // }
+      // if (this.plugin.sexName){
+      //   headline += ', <br>' + this.plugin.sexName;
+      // }
+      // if (this.plugin.ageName){
+      //   headline += ', <br>' + this.plugin.ageName;
+      // }
+      // if (this.plugin.typificationName){
+      //   headline += ', <br>' + this.plugin.typificationName;
+      // }
+      // if (this.plugin.criminalOffenceName){
+      //   headline += ', <br>' + this.plugin.criminalOffenceName;
+      // }
+      // headline += ', <br>' + this.plugin.unitName;
       //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
 
       div.innerHTML = L.Util.template(controlTpl, {
