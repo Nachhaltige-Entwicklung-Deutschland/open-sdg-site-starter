@@ -59,6 +59,8 @@
       }).join('');
       var div = L.DomUtil.create('div', 'selection-legend');
 
+      console.log("Plugin: ", this.plugin);
+
       //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
       //---4.3.21: No content but map title in maps
       var headline = this.plugin.title
