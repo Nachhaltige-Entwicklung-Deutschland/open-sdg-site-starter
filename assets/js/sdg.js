@@ -1840,7 +1840,7 @@ var mapView = function () {
   //this.initialise = function(geoData, geoCodeRegEx) {
   //this.initialise = function(geoData, geoCodeRegEx, goal) {
   //---#1 GoalDependendMapColor---stop---------------------------------------
-  this.initialise = function(geoData, geoCodeRegEx, goal, title, measurementUnit, args.mapTitle) {
+  this.initialise = function(geoData, geoCodeRegEx, goal, title, measurementUnit, mapTitle) {
   //---#2.1 caseNoTimeSeriesInCsv---stop-------------------------------------
     $('.map').show();
     $('#map').sdgMap({
