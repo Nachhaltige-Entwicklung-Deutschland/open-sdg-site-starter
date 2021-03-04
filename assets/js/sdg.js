@@ -1840,7 +1840,7 @@ var mapView = function () {
   //this.initialise = function(geoData, geoCodeRegEx) {
   //this.initialise = function(geoData, geoCodeRegEx, goal) {
   //---#1 GoalDependendMapColor---stop---------------------------------------
-  this.initialise = function(geoData, geoCodeRegEx, goal, title, measurementUnit, mapTitle) {
+  this.initialise = function(geoData, geoCodeRegEx, goal, title, measurementUnit) { //, mapTitle
   //---#2.1 caseNoTimeSeriesInCsv---stop-------------------------------------
     $('.map').show();
     $('#map').sdgMap({
@@ -1857,7 +1857,7 @@ var mapView = function () {
       //---#2.2 footerUnitInMapLegend---stop-----------------------------------------------------------
       mapTitle: mapTitle,
 
-      title: title
+      //title: title
     });
   };
 };
@@ -2018,7 +2018,7 @@ var indicatorView = function (model, options) {
       //view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr);
       //---#1 GoalDependendMapColor---stop---------------------------
       console.log("Args: ", args);
-      view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr, args.title, args.measurementUnit, args.mapTitle); //---#2.2 footerUnitInMapLegend
+      view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr, args.title, args.measurementUnit); //---#2.2 footerUnitInMapLegend  , args.mapTitle
       //---#2 TimeSeriesNameDisplayedInMaps---stop------------------
 
     }
