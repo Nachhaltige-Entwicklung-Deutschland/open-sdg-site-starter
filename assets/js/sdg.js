@@ -922,7 +922,7 @@ var indicatorDataStore = function(dataUrl) {
   this.shortIndicatorId = options.shortIndicatorId;
   this.chartTitle = options.chartTitle; // + "<br>" + options.measurementUnit;
   //---4.3.21: No content but map title in maps
-  //this.mapTitle =   options.mapTitle
+  this.mapTitle =   options.mapTitle;
   //---4.3.21: No content but map title in maps stop
   this.graphType = options.graphType;
   this.measurementUnit = options.measurementUnit;
