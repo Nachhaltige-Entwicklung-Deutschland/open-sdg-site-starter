@@ -60,23 +60,25 @@
       var div = L.DomUtil.create('div', 'selection-legend');
 
       //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
-      var headline = this.plugin.title
-      if (this.plugin.timeSeriesName){
-        headline += ', <br>' + this.plugin.timeSeriesName;
-      }
-      if (this.plugin.sexName){
-        headline += ', <br>' + this.plugin.sexName;
-      }
-      if (this.plugin.ageName){
-        headline += ', <br>' + this.plugin.ageName;
-      }
-      if (this.plugin.typificationName){
-        headline += ', <br>' + this.plugin.typificationName;
-      }
-      if (this.plugin.criminalOffenceName){
-        headline += ', <br>' + this.plugin.criminalOffenceName;
-      }
-      headline += ', <br>' + this.plugin.unitName;
+      //---4.3.21: No content but map title in maps
+      var headline = this.plugin.maptitle
+      // var headline = this.plugin.title
+      // if (this.plugin.timeSeriesName){
+      //   headline += ', <br>' + this.plugin.timeSeriesName;
+      // }
+      // if (this.plugin.sexName){
+      //   headline += ', <br>' + this.plugin.sexName;
+      // }
+      // if (this.plugin.ageName){
+      //   headline += ', <br>' + this.plugin.ageName;
+      // }
+      // if (this.plugin.typificationName){
+      //   headline += ', <br>' + this.plugin.typificationName;
+      // }
+      // if (this.plugin.criminalOffenceName){
+      //   headline += ', <br>' + this.plugin.criminalOffenceName;
+      // }
+      // headline += ', <br>' + this.plugin.unitName;
       //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
 
       div.innerHTML = L.Util.template(controlTpl, {
