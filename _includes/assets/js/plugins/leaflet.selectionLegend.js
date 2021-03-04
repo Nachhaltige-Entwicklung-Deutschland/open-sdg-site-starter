@@ -12,7 +12,7 @@
     initialize: function(plugin) {
       this.selections = [];
       this.plugin = plugin;
-    
+
     },
 
     addSelection: function(selection) {
@@ -32,8 +32,8 @@
 
     onAdd: function() {
       //---#2 TimeSeriesNameDisplayedInMaps---start-----------Disabled an 1.3.21----------------------------------
-      var controlTpl = '' +
-      //var controlTpl = '<span id="mapHead">{title}</span>' +
+      //var controlTpl = '' +
+      var controlTpl = '<span id="mapHead">{title}</span>' +
       //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
         '<ul id="selection-list"></ul>' +
         '<div class="legend-swatches">' + //bar
