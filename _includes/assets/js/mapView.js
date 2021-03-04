@@ -6,7 +6,7 @@ var mapView = function () {
   //this.initialise = function(geoData, geoCodeRegEx) {
   //this.initialise = function(geoData, geoCodeRegEx, goal) {
   //---#1 GoalDependendMapColor---stop---------------------------------------
-  this.initialise = function(geoData, geoCodeRegEx, goal, title, measurementUnit, maptitle) {
+  this.initialise = function(geoData, geoCodeRegEx, goal, title, measurementUnit) {
   //---#2.1 caseNoTimeSeriesInCsv---stop-------------------------------------
     $('.map').show();
     $('#map').sdgMap({
@@ -22,7 +22,6 @@ var mapView = function () {
       measurementUnit: measurementUnit,
       //---#2.2 footerUnitInMapLegend---stop-----------------------------------------------------------
 
-      maptitle: maptitle,
 
       title: title
     });
