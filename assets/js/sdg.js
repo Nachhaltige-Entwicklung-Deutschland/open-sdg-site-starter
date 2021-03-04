@@ -1421,7 +1421,7 @@ var indicatorDataStore = function(dataUrl) {
       //--#14 mixedCharts---stop--------------------------------------------------------------------------------------------------------
 
       //--#14.1 barsOnly---start--------------------------------------------------------------------------------------------------------
-      barCharts = ['indicator_2-2-a','indicator_3-1-e','indicator_3-3-a','indicator_5-1-b','indicator_5-1-c','indicator_5-1-e','indicator_6-2-ab','indicator_8-2-ab', 'indicator_8-2-c','indicator_8-3-a',
+      barCharts = ['indicator_2-1-a', 'indicator_2-2-a','indicator_3-1-e','indicator_3-3-a','indicator_5-1-b','indicator_5-1-c','indicator_5-1-e','indicator_6-2-ab','indicator_8-2-ab', 'indicator_8-2-c','indicator_8-3-a',
       'indicator_8-4-a','indicator_8-6-a','indicator_11-1-a','indicator_11-1-b','indicator_11-2-c','indicator_12-1-a','indicator_13-1-a','indicator_15-2-a','indicator_16-1-a','indicator_16-2-a','indicator_17-1-a','indicator_17-2-a'];
 
       bl = ['bw','by','be','bb','hb','hh','he','mv','ni','nw','rp','sl','sn','st','sh','th'];
@@ -3029,7 +3029,7 @@ $(function() {
     initialize: function(plugin) {
       this.selections = [];
       this.plugin = plugin;
-    
+
     },
 
     addSelection: function(selection) {
@@ -3049,8 +3049,8 @@ $(function() {
 
     onAdd: function() {
       //---#2 TimeSeriesNameDisplayedInMaps---start-----------Disabled an 1.3.21----------------------------------
-      var controlTpl = '' +
-      //var controlTpl = '<span id="mapHead">{title}</span>' +
+      //var controlTpl = '' +
+      var controlTpl = '<span id="mapHead">{title}</span>' +
       //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
         '<ul id="selection-list"></ul>' +
         '<div class="legend-swatches">' + //bar
