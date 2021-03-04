@@ -23,7 +23,7 @@ var mapView = function () {
       //---#2.2 footerUnitInMapLegend---stop-----------------------------------------------------------
       //mapTitle: mapTitle,
 
-      //title: title
+      title: title
     });
   };
 };
