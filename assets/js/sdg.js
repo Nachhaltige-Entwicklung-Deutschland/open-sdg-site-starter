@@ -1566,7 +1566,7 @@ var indicatorDataStore = function(dataUrl) {
             // stack: getStackGroup(that.indicatorId),
             borderWidth: combinationDescription ? 2 : 4
           }, that.datasetObject);
-        //console.log(ds);
+        console.log("DS: ",ds);
         datasetIndex++;
         return ds;
       };
