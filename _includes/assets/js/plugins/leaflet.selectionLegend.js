@@ -63,7 +63,7 @@
 
       //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
       //---4.3.21: No content but map title in maps
-      var headline = this.plugin.title
+      var headline = this.plugin.mapTitle
       // var headline = this.plugin.title
       // if (this.plugin.timeSeriesName){
       //   headline += ', <br>' + this.plugin.timeSeriesName;
