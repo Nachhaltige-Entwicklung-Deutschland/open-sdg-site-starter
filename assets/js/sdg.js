@@ -1543,22 +1543,19 @@ var indicatorDataStore = function(dataUrl) {
             pointBorderColor: '#' + getColor(datasetIndexMod),
             borderDash: getBorderDash(datasetIndex, combinationDescription),
 
-            // data: _.map(that.years, function (year) {
-            //   var found = _.findWhere(data, {
-            //     Year: year
-            //   });
-            //   return found ? found.Value : null;
-            // }),
+            data: _.map(that.years, function (year, index) {
+              var found = _.findWhere(data, {
+                Year: year
+              });
+              if (typeof ds.data[index] === 'undefined') {
+                return null;
+              }
 
-
-            data: _.map(that.years, function(year, index) {
-              return [year].concat(datasets.map(function(ds) {
-                if (typeof ds.data[index] === 'undefined') {
-                  return null;
-                }
-                return ds.data[index];
-              }));
+              return found ? found.Value : null;
             }),
+
+
+            
 
 
             //--#14 mixedCharts---start------------------------------------------------
