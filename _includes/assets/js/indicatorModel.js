@@ -658,7 +658,7 @@ var indicatorModel = function (options) {
               var found = _.findWhere(data, {
                 Year: year
               });
-              if (typeof ds.data[index] === 'undefined') {
+              if (typeof data[index] === 'undefined') {
                 return null;
               }
 
@@ -666,7 +666,14 @@ var indicatorModel = function (options) {
             }),
 
 
-            
+            // data: _.map(that.years, function(year, index) {
+            //   return [year].concat(datasets.map(function(ds) {
+            //     if (typeof ds.data[index] === 'undefined') {
+            //       return null;
+            //     }
+            //     return ds.data[index];
+            //   }));
+            // }),
 
 
             //--#14 mixedCharts---start------------------------------------------------
