@@ -653,12 +653,22 @@ var indicatorModel = function (options) {
             pointRadius: getRadius(datasetIndex, combinationDescription),
             pointBorderColor: '#' + getColor(datasetIndexMod),
             borderDash: getBorderDash(datasetIndex, combinationDescription),
-            data: _.map(that.years, function (year) {
-              var found = _.findWhere(data, {
-                Year: year
-              });
-              return found ? found.Value : null;
+            // data: _.map(that.years, function (year) {
+            //   var found = _.findWhere(data, {
+            //     Year: year
+            //   });
+            //   return found ? found.Value : null;
+            // }),
+            data: years.map(function(year, index) {
+              return [year].concat(datasets.map(function(ds) {
+                if (typeof ds.data[index] === 'undefined') {
+                  return null;
+                }
+                return ds.data[index];
+              }));
             }),
+
+
             //--#14 mixedCharts---start------------------------------------------------
             //type: getChartStyle(combinationDescription),
             //--#14 mixedCharts---stop-------------------------------------------------
