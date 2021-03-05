@@ -653,13 +653,16 @@ var indicatorModel = function (options) {
             pointRadius: getRadius(datasetIndex, combinationDescription),
             pointBorderColor: '#' + getColor(datasetIndexMod),
             borderDash: getBorderDash(datasetIndex, combinationDescription),
+
             // data: _.map(that.years, function (year) {
             //   var found = _.findWhere(data, {
             //     Year: year
             //   });
             //   return found ? found.Value : null;
             // }),
-            data: years.map(function(year, index) {
+
+
+            data: _.map(that.years, function(year, index) {
               return [year].concat(datasets.map(function(ds) {
                 if (typeof ds.data[index] === 'undefined') {
                   return null;
