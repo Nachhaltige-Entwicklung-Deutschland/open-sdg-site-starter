@@ -579,7 +579,7 @@ var indicatorModel = function (options) {
           return 2;
         }
         else {
-          return 1:
+          return 1;
         }
       }
 
