@@ -576,10 +576,10 @@ var indicatorModel = function (options) {
       //--#14.1 barsOnly---stop--------------------------------------------------------------------------------------------------------
       getOrder = function(combinationDescription) {
         if (exceptions.indexOf(combinationDescription) != -1){
-          return 2;
+          return 1;
         }
         else {
-          return 1;
+          return 2;
         }
       }
 
