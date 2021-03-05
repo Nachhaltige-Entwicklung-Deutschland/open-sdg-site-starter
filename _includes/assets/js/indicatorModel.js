@@ -574,7 +574,14 @@ var indicatorModel = function (options) {
         }
       },
       //--#14.1 barsOnly---stop--------------------------------------------------------------------------------------------------------
-
+      getOrder = function(combinationDescription) {
+        if (exceptions.indexOf(combinationDescription) != -1){
+          return 2;
+        }
+        else {
+          return 1:
+        }
+      }
 
       getBorderDash = function(datasetIndex, combinationDescription) {
         // offset if there is no headline data:
@@ -629,6 +636,7 @@ var indicatorModel = function (options) {
 
             label: combinationDescription ? combinationDescription : that.country,
             disaggregation: combination,
+            order: getOrder(combinationDescription),
             //---#13 noLineForTargets---start-------------------------------
             borderColor: getBorderColor(combinationDescription,datasetIndexMod,that.indicatorId),//'#' + getColor(datasetIndexMod),
             //borderColor: getLineStyle(combinationDescription, datasetIndexMod),
