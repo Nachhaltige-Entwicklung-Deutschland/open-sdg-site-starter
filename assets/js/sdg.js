@@ -1543,13 +1543,11 @@ var indicatorDataStore = function(dataUrl) {
             pointBorderColor: '#' + getColor(datasetIndexMod),
             borderDash: getBorderDash(datasetIndex, combinationDescription),
 
-            data: _.map(that.years, function (year, index) {
+            data: _.map(years, function (year) {
               var found = _.findWhere(data, {
                 Year: year
               });
-              if (typeof data[index] === 'undefined') {
-                return null;
-              }
+
 
               return found ? found.Value : null;
             }),
