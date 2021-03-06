@@ -654,7 +654,7 @@ var indicatorModel = function (options) {
             pointBorderColor: '#' + getColor(datasetIndexMod),
             borderDash: getBorderDash(datasetIndex, combinationDescription),
 
-            data: _.map(that.years, function (year) {
+            data: _.map(years, function (year) {
               var found = _.findWhere(data, {
                 Year: year
               });
