@@ -3095,9 +3095,16 @@ $(function() {
     onAdd: function() {
       //---#2 TimeSeriesNameDisplayedInMaps---start-----------Disabled an 1.3.21----------------------------------
       //var controlTpl = '' +
-      var controlTpl = '<span id="mapHead">{title}</span>' +
+      if (this.plugin.mapTitle == ''){
+        var controlTpl = ''
+      }
+      else{
+        var controlTpl = '<span id="mapHead">{title}</span>'
+      }
+      //var controlTpl = '<span id="mapHead">{title}</span>' +
+      controlTpl +=
       //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
-        '<ul id="selection-list"></ul>' +
+        controlTpl += '<ul id="selection-list"></ul>' +
         '<div class="legend-swatches">' + //bar
           '{legendSwatches}' +
         '</div>' +
