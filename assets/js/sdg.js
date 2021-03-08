@@ -3102,7 +3102,7 @@ $(function() {
         var controlTpl = '<span id="mapHead">{title}</span>'
       }
       //var controlTpl = '<span id="mapHead">{title}</span>' +
-      controlTpl +=
+      
       //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
         controlTpl += '<ul id="selection-list"></ul>' +
         '<div class="legend-swatches">' + //bar
