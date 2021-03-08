@@ -1440,8 +1440,8 @@ var indicatorDataStore = function(dataUrl) {
                     translations.t('b) target (min)') + ', ' + translations.t('a) drinking water and sanitation'),//6.2.ab
                     translations.t('b) target (min)') + ', ' + translations.t('b) drinking water'),//6.2.ab
                     translations.t('b) target (min)') + ', ' + translations.t('c) sanitation'),//6.2.ab
-                    translations.t('a) time series') + ', ' + translations.t('a) moving five-year average, referring to the middle year'),//2.1.a
-                    translations.t('b) target (max)') + ', ' + translations.t('a) moving five-year average, referring to the middle year'),//2.1.a
+                    translations.t('a) time series') + ', ' + translations.t('moving five-year average, referring to the middle year'),//2.1.a
+                    translations.t('b) target (max)') + ', ' + translations.t('moving five-year average, referring to the middle year'),//2.1.a
                     translations.t('a) time series') + ', ' + translations.t('so2'),//3.2.a
                     translations.t('a) time series') + ', ' + translations.t('nox'),//3.2.a
                     translations.t('a) time series') + ', ' + translations.t('nh3'),//3.2.a
