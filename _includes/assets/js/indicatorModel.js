@@ -537,7 +537,7 @@ var indicatorModel = function (options) {
       //--#14 mixedCharts---stop--------------------------------------------------------------------------------------------------------
 
       //--#14.1 barsOnly---start--------------------------------------------------------------------------------------------------------
-      barCharts = ['indicator_2-1-a', 'indicator_2-2-a','indicator_3-1-e','indicator_3-3-a','indicator_5-1-b','indicator_5-1-c','indicator_5-1-e','indicator_6-2-ab','indicator_8-2-ab', 'indicator_8-2-c','indicator_8-3-a',
+      barCharts = ['indicator_2-1-a', 'indicator_2-2-a','indicator_3-1-e','indicator_3-2-a','indicator_3-3-a','indicator_5-1-b','indicator_5-1-c','indicator_5-1-e','indicator_6-2-ab','indicator_8-2-ab', 'indicator_8-2-c','indicator_8-3-a',
       'indicator_8-4-a','indicator_8-6-a','indicator_11-1-a','indicator_11-1-b','indicator_11-2-c','indicator_12-1-a','indicator_13-1-a','indicator_15-2-a','indicator_16-1-a','indicator_16-2-a','indicator_17-1-a','indicator_17-2-a'];
 
       bl = ['bw','by','be','bb','hb','hh','he','mv','ni','nw','rp','sl','sn','st','sh','th'];
@@ -552,7 +552,13 @@ var indicatorModel = function (options) {
                     translations.t('b) target (min)') + ', ' + translations.t('b) drinking water'),//6.2.ab
                     translations.t('b) target (min)') + ', ' + translations.t('c) sanitation'),//6.2.ab
                     translations.t('a) time series') + ', ' + translations.t('a) moving five-year average, referring to the middle year'),//2.1.a
-                    translations.t('b) target (max)') + ', ' + translations.t('a) moving five-year average, referring to the middle year')];//2.1.a
+                    translations.t('b) target (max)') + ', ' + translations.t('a) moving five-year average, referring to the middle year'),//2.1.a
+                    translations.t('a) time series') + ', ' + translations.t('so2'),//3.2.a
+                    translations.t('a) time series') + ', ' + translations.t('nox'),//3.2.a
+                    translations.t('a) time series') + ', ' + translations.t('nh3'),//3.2.a
+                    translations.t('a) time series') + ', ' + translations.t('nmvoc'),//3.2.a
+                    translations.t('a) time series') + ', ' + translations.t('pm2.5')];//3.2.a
+
 
       for (var i=0; i<bl.length; i++){
         exceptions.push(translations.t('a) time series') + ', ' + translations.t('a) total (moving four-year average)') + ', ' + translations.t(bl[i]));
