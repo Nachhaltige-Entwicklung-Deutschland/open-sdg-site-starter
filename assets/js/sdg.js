@@ -2635,7 +2635,6 @@ var indicatorView = function (model, options) {
       var tableUnit = '<br><small>in %</small>';
     }
     else{
-      console.log("ID:", chartInfo.indicatorId);
       var tableUnit =  '<br><small>' + chartInfo.footerFields[translations.indicator.unit_of_measurement] + '</small>';
     }
 
