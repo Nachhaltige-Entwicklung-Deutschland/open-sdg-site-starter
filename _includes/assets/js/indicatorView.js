@@ -453,7 +453,7 @@ var indicatorView = function (model, options) {
                                   {old: 'Germany', new: 'AAA'},
                                   {old: 'Straftaten (insgesamt)', new: 'AAA'},
                                   {old: 'Criminal offences (total)', new: 'AAA'},
-                                  {old: 'Index (insgesamt)', new: 'ZZZ'},
+                                  {old: 'Index insgesamt', new: 'ZZZ'},
                                   {old: 'Index (overall)', new: 'ZZZ'}];
 
             var sorted = temp.sort(function(a, b) {
