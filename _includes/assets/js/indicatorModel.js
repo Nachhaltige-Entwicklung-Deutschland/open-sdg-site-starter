@@ -439,9 +439,9 @@ var indicatorModel = function (options) {
       },
       //---#11 setTargetPointstyle---start-----------------------------------------------------------------------------------------------
       getPointStyle = function (datasetIndex, combinationDescription) {
-        dashedLines = ['Ziel, Sanitä','Ziel, Trinkw','Ziel, Finanz','Ziel, Strukt','Ziel, Ostsee','Ziel, Nordse']//6.2, 8.2.ab, 14.1.1
+        dashedLines = ['Ziel, Sanitärvers','Ziel, Trinkwasser','Ziel, Finanzierun','Ziel, Strukturell']
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
-          return dashedLines.indexOf(combinationDescription.substr(0,12)) == -1 ? 'rect' : 'false';
+          return dashedLines.indexOf(combinationDescription.substr(0,17)) == -1 ? 'rect' : 'false';
         }
         else {
           return 'circle';
@@ -603,9 +603,9 @@ var indicatorModel = function (options) {
 
         // 0 -
         // the first dataset is the headline:
-        dashedLines = ['Ziel, Sanitä','Ziel, Trinkw','Ziel, Finanz','Ziel, Strukt','Ziel, Ostsee','Ziel, Nordse']//6.2, 8.2.ab, 14.1.1
+        dashedLines = ['Ziel, Sanitärvers','Ziel, Trinkwasser','Ziel, Finanzierun','Ziel, Strukturell']
 
-        return datasetIndex  > colors.length || dashedLines.indexOf(combinationDescription.substring(0, 12)) != -1 ? [5, 5] : undefined;
+        return datasetIndex  > colors.length || dashedLines.indexOf(combinationDescription.substring(0, 17)) != -1 ? [5, 5] : undefined;
       },
       convertToDataset = function (data, combinationDescription, combination /*field, fieldValue*/) {
         // var fieldIndex = field ? _.findIndex(that.selectedFields, function (f) {
