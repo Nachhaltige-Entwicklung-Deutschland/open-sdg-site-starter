@@ -529,11 +529,11 @@ var indicatorView = function (model, options) {
 
               //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
               //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
-              dashedLines = ['Ziel, Sanitärvers','Ziel, Trinkwasser','Ziel, Finanzierun','Ziel, Strukturell']
+              dashedLines = ['Ziel, Sanitä','Ziel, Trinkw','Ziel, Finanz','Ziel, Strukt','Ziel, Ostsee','Ziel, Nordse']//6.2, 8.2.ab, 14.1.1
               if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
                 if (dataset.type != 'bar'){
                   //edit legend for dashed target lines
-                  if (dashedLines.indexOf(dataset.label.substring(0,17)) != -1){
+                  if (dashedLines.indexOf(dataset.label.substring(0,12)) != -1){
                     text.push('<span class="swatchTgtLine dashed" style="background-color: ' + dataset.pointBorderColor + '"></span>');
                   }
                   else {
