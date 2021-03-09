@@ -478,7 +478,7 @@ var indicatorView = function (model, options) {
 
               return (subA > subB) - (subA < subB);
             });
-
+            console.log('Sorted:',sorted);
             //^^^^ #18.1 ^^^^
             _.each(sorted, function(dataset) { //#18.2 use the sorted dataset instead of the original >>> _.each(chart.data.datasets, function(dataset, datasetIndex) {
 
