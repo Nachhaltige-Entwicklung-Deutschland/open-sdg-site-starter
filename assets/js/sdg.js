@@ -1328,9 +1328,9 @@ var indicatorDataStore = function(dataUrl) {
       },
       //---#11 setTargetPointstyle---start-----------------------------------------------------------------------------------------------
       getPointStyle = function (datasetIndex, combinationDescription) {
-        dashedLines = ['Ziel, Sanitärvers','Ziel, Trinkwasser','Ziel, Finanzierun','Ziel, Strukturell']
+        dashedLines = ['Ziel, Sanitä','Ziel, Trinkw','Ziel, Finanz','Ziel, Strukt','Ziel, Ostsee','Ziel, Nordse']//6.2, 8.2.ab, 14.1.1
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
-          return dashedLines.indexOf(combinationDescription.substr(0,17)) == -1 ? 'rect' : 'false';
+          return dashedLines.indexOf(combinationDescription.substr(0,12)) == -1 ? 'rect' : 'false';
         }
         else {
           return 'circle';
@@ -1427,7 +1427,7 @@ var indicatorDataStore = function(dataUrl) {
 
       //--#14.1 barsOnly---start--------------------------------------------------------------------------------------------------------
       barCharts = ['indicator_2-1-a', 'indicator_2-2-a','indicator_3-1-e','indicator_3-2-a','indicator_3-3-a','indicator_5-1-b','indicator_5-1-c','indicator_5-1-e','indicator_6-2-ab','indicator_8-2-ab', 'indicator_8-2-c','indicator_8-3-a',
-      'indicator_8-4-a','indicator_8-6-a','indicator_11-1-a','indicator_11-1-b','indicator_11-2-c','indicator_12-1-a','indicator_13-1-a','indicator_15-1-a','indicator_15-2-a','indicator_16-1-a','indicator_16-2-a','indicator_17-1-a','indicator_17-2-a'];
+      'indicator_8-4-a','indicator_8-6-a','indicator_11-1-a','indicator_11-1-b','indicator_11-2-c','indicator_12-1-a','indicator_13-1-b','indicator_15-1-a','indicator_15-2-a','indicator_16-1-a','indicator_16-2-a','indicator_17-1-a','indicator_17-2-a'];
 
       bl = ['bw','by','be','bb','hb','hh','he','mv','ni','nw','rp','sl','sn','st','sh','th'];
 
@@ -1492,9 +1492,9 @@ var indicatorDataStore = function(dataUrl) {
 
         // 0 -
         // the first dataset is the headline:
-        dashedLines = ['Ziel, Sanitärvers','Ziel, Trinkwasser','Ziel, Finanzierun','Ziel, Strukturell']
+        dashedLines = ['Ziel, Sanitä','Ziel, Trinkw','Ziel, Finanz','Ziel, Strukt','Ziel, Ostsee','Ziel, Nordse']//6.2, 8.2.ab, 14.1.1
 
-        return datasetIndex  > colors.length || dashedLines.indexOf(combinationDescription.substring(0, 17)) != -1 ? [5, 5] : undefined;
+        return datasetIndex  > colors.length || dashedLines.indexOf(combinationDescription.substring(0, 12)) != -1 ? [5, 5] : undefined;
       },
       convertToDataset = function (data, combinationDescription, combination /*field, fieldValue*/) {
         // var fieldIndex = field ? _.findIndex(that.selectedFields, function (f) {
@@ -2429,11 +2429,11 @@ var indicatorView = function (model, options) {
 
               //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
               //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
-              dashedLines = ['Ziel, Sanitärvers','Ziel, Trinkwasser','Ziel, Finanzierun','Ziel, Strukturell']
+              dashedLines = ['Ziel, Sanitä','Ziel, Trinkw','Ziel, Finanz','Ziel, Strukt','Ziel, Ostsee','Ziel, Nordse']//6.2, 8.2.ab, 14.1.1
               if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
                 if (dataset.type != 'bar'){
                   //edit legend for dashed target lines
-                  if (dashedLines.indexOf(dataset.label.substring(0,17)) != -1){
+                  if (dashedLines.indexOf(dataset.label.substring(0,12)) != -1){
                     text.push('<span class="swatchTgtLine dashed" style="background-color: ' + dataset.pointBorderColor + '"></span>');
                   }
                   else {
