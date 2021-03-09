@@ -9,8 +9,13 @@
       <div id="chart-canvas">
         <h3 class="chart-title">
           {{ meta.graph_title | t }}
-          <br>
-          <small>{{ meta.computation_units }}</small>
+          {% if meta.indicator != "8.2.ab" %}
+            <br>
+            <small>{{ meta.computation_units }}</small>
+          {% else %}
+            <br>
+            <small>in %</small>
+          {% endif %}
         </h3>
         <div id="chart" class="plot-container">
           {% include {{graph_template}} %}
