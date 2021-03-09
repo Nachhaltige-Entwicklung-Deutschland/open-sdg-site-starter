@@ -1328,9 +1328,9 @@ var indicatorDataStore = function(dataUrl) {
       },
       //---#11 setTargetPointstyle---start-----------------------------------------------------------------------------------------------
       getPointStyle = function (datasetIndex, combinationDescription) {
-        dashedLines = ['Ziel, Sanitä','Ziel, Trinkw','Ziel, Finanz','Ziel, Strukt','Ziel, Ostsee','Ziel, Nordse']//6.2, 8.2.ab, 14.1.1
+        dashedLines = ['Ziel, Sanitärvers','Ziel, Trinkwasser','Ziel, Finanzierun','Ziel, Strukturell']
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
-          return dashedLines.indexOf(combinationDescription.substr(0,12)) == -1 ? 'rect' : 'false';
+          return dashedLines.indexOf(combinationDescription.substr(0,17)) == -1 ? 'rect' : 'false';
         }
         else {
           return 'circle';
@@ -1492,9 +1492,9 @@ var indicatorDataStore = function(dataUrl) {
 
         // 0 -
         // the first dataset is the headline:
-        dashedLines = ['Ziel, Sanitä','Ziel, Trinkw','Ziel, Finanz','Ziel, Strukt','Ziel, Ostsee','Ziel, Nordse']//6.2, 8.2.ab, 14.1.1
+        dashedLines = ['Ziel, Sanitärvers','Ziel, Trinkwasser','Ziel, Finanzierun','Ziel, Strukturell']
 
-        return datasetIndex  > colors.length || dashedLines.indexOf(combinationDescription.substring(0, 12)) != -1 ? [5, 5] : undefined;
+        return datasetIndex  > colors.length || dashedLines.indexOf(combinationDescription.substring(0, 17)) != -1 ? [5, 5] : undefined;
       },
       convertToDataset = function (data, combinationDescription, combination /*field, fieldValue*/) {
         // var fieldIndex = field ? _.findIndex(that.selectedFields, function (f) {
@@ -2429,11 +2429,11 @@ var indicatorView = function (model, options) {
 
               //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
               //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
-              dashedLines = ['Ziel, Sanitä','Ziel, Trinkw','Ziel, Finanz','Ziel, Strukt','Ziel, Ostsee','Ziel, Nordse']//6.2, 8.2.ab, 14.1.1
+              dashedLines = ['Ziel, Sanitärvers','Ziel, Trinkwasser','Ziel, Finanzierun','Ziel, Strukturell']
               if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
                 if (dataset.type != 'bar'){
                   //edit legend for dashed target lines
-                  if (dashedLines.indexOf(dataset.label.substring(0,12)) != -1){
+                  if (dashedLines.indexOf(dataset.label.substring(0,17)) != -1){
                     text.push('<span class="swatchTgtLine dashed" style="background-color: ' + dataset.pointBorderColor + '"></span>');
                   }
                   else {
@@ -2626,7 +2626,7 @@ var indicatorView = function (model, options) {
 
 
   this.createSelectionsTable = function(chartInfo) {
-    console.log("chartInfo:", chartInfo);
+    //console.log("chartInfo:", chartInfo);
     //---#19 addUnitToTableHeaderIfNeeded---start---------------------------------------------------
     //---Edit from 26.10.20: Add Unit to table heading
     //var tableUnit = (chartInfo.selectedUnit && !chartInfo.footerFields[translations.indicator.unit_of_measurement]) ? translations.t(chartInfo.selectedUnit) : '';
