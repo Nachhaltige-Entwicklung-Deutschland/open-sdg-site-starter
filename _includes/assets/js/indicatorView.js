@@ -731,7 +731,7 @@ var indicatorView = function (model, options) {
     //---Edit from 26.10.20: Add Unit to table heading
     //var tableUnit = (chartInfo.selectedUnit && !chartInfo.footerFields[translations.indicator.unit_of_measurement]) ? translations.t(chartInfo.selectedUnit) : '';
     //var tableUnit = (chartInfo.indicatorId == 'indicator_6-1-b' || chartInfo.indicatorId == 'indicator_6-1-a') ? '' : ' (' + chartInfo.footerFields[translations.indicator.unit_of_measurement] + ')';
-    if (chartInfo.indicatorId ==  "indicator_8-2-ab"){
+    if (chartInfo.indicatorId ==  '"indicator_8-2-ab"'){
       var tableUnit = '<br><small>in %</small>';
     }
     else{
