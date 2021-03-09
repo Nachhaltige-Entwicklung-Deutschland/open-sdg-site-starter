@@ -562,8 +562,9 @@ var indicatorModel = function (options) {
                     translations.t('a) time series') + ', ' + translations.t('c) sub-index farmland'),//15.1.a
                     translations.t('a) time series') + ', ' + translations.t('b) sub-index settlements'),//15.1.a
                     translations.t('a) time series') + ', ' + translations.t('d) sub-index inland waters'),//15.1.a
-                    translations.t('a) time series') + ', ' + translations.t('e) sub-index coasts/seas')];//15.1.a
-                    // translations.t('a) time series') + ', ' + translations.t('sub-index forests'),//15.1.a
+                    translations.t('a) time series') + ', ' + translations.t('e) sub-index coasts/seas'),
+                    translations.t('b) target (min)') + ', ' + translations.t('f) index overall')];//15.1.a
+                    // translations.t('a) time series') + ', ' + translations.t('sub-index forests'),//15.1.a,
                     // translations.t('a) time series') + ', ' + translations.t('sub-index farmland'),//15.1.a
                     // translations.t('a) time series') + ', ' + translations.t('sub-index settlements'),//15.1.a
                     // translations.t('a) time series') + ', ' + translations.t('sub-index inland waters'),//15.1.a
