@@ -1447,11 +1447,16 @@ var indicatorDataStore = function(dataUrl) {
                     translations.t('a) time series') + ', ' + translations.t('nh3'),//3.2.a
                     translations.t('a) time series') + ', ' + translations.t('nmvoc'),//3.2.a
                     translations.t('a) time series') + ', ' + translations.t('pm2.5'),//3.2.a
-                    translations.t('a) time series') + ', ' + translations.t('sub-index forests'),//15.1.a
-                    translations.t('a) time series') + ', ' + translations.t('sub-index farmland'),//15.1.a
-                    translations.t('a) time series') + ', ' + translations.t('sub-index settlements'),//15.1.a
-                    translations.t('a) time series') + ', ' + translations.t('sub-index inland waters'),//15.1.a
-                    translations.t('a) time series') + ', ' + translations.t('sub-index coasts/seas')];//15.1.a
+                    translations.t('a) time series') + ', ' + translations.t('a) sub-index forests'),//15.1.a
+                    translations.t('a) time series') + ', ' + translations.t('b) sub-index farmland'),//15.1.a
+                    translations.t('a) time series') + ', ' + translations.t('c) sub-index settlements'),//15.1.a
+                    translations.t('a) time series') + ', ' + translations.t('d) sub-index inland waters'),//15.1.a
+                    translations.t('a) time series') + ', ' + translations.t('e) sub-index coasts/seas')];//15.1.a
+                    // translations.t('a) time series') + ', ' + translations.t('sub-index forests'),//15.1.a
+                    // translations.t('a) time series') + ', ' + translations.t('sub-index farmland'),//15.1.a
+                    // translations.t('a) time series') + ', ' + translations.t('sub-index settlements'),//15.1.a
+                    // translations.t('a) time series') + ', ' + translations.t('sub-index inland waters'),//15.1.a
+                    // translations.t('a) time series') + ', ' + translations.t('sub-index coasts/seas')];//15.1.a
 
 
 
@@ -2353,8 +2358,9 @@ var indicatorView = function (model, options) {
                                   {old: 'Germany', new: 'AAA'},
                                   {old: 'Straftaten (insgesamt)', new: 'AAA'},
                                   {old: 'Criminal offences (total)', new: 'AAA'},
-                                  {old: 'Index insgesamt', new: 'ZZZ'},
-                                  {old: 'Index (overall)', new: 'ZZZ'}];
+                                  {old: 'Index insgesamt', new: 'AAA'},
+                                  {old: 'Index (overall)', new: 'AAA'},
+                                  {old: 'Berechnete jährliche Werte', new: 'AAA'}];
 
             var sorted = temp.sort(function(a, b) {
               var sub = a.label.substr(0,4);
