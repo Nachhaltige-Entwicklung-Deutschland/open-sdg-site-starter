@@ -104,6 +104,8 @@ menu:
     translation_key: menu.guidance
   - path: /facts_agenda/
     translation_key: menu.facts_agenda
+  - path: /facts_publications/
+    translation_key: menu.publications
   #- path: /facts_sdg/
     #translation_key: menu.facts_sdg
 
@@ -114,7 +116,7 @@ non_global_metadata: indicator.national_metadata
 # The list of languages that are translated. The first one is the default.
 languages:
     - de
-    - en
+    #- en
 
 # This makes sure that all pages have a language.
 defaults:
@@ -174,12 +176,15 @@ map_options:
   #tileURL: http://a.tile.stamen.com/toner/{z}/{x}/{y}.png
   #tileURL: https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png
   #tileURL: https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png
+  #tileURL: https://tiles.wmflabs.org/bw-mapnik/${z}/${x}/${y}.png
+  #tileURL: https://{a|b|c}.tile.opentopomap.org/{z}/{x}/{y}.png
 
   tileOptions:
     id: #mapbox.light
     #accessToken: pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjanplNTNhMmQwMTFjM21wNHEzazRlejhwIn0.ecHE5G83cklfW5AXYjI_0A
     accessToken: pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjazU1MGR4b3gwNWNzM2dzeGlkeWdkNmF5In0.7NmEzTzFKQVhdvc0Vvqv5w
-    attribution: <a href="https://www.openstreetmap.org/copyright">&copy; OpenStreetMap</a> contributors |<br class="visible-xs"> <a href="https://www.bkg.bund.de">&copy; GeoBasis-De / BKG 2020</a> |<br class="hidden-lg"> <a href="https://www.destatis.de/DE/Home/_inhalt.html">&copy; Statistisches Bundesamt (Destatis), 2020</a>
+    attribution: <a href="https://www.openstreetmap.org/copyright">&copy; OpenStreetMap</a> contributors |<br class="visible-xs"> <a href="https://www.bkg.bund.de">&copy; GeoBasis-De / BKG 2021</a> |<br class="hidden-lg"> <a href="https://www.destatis.de/DE/Home/_inhalt.html">&copy; Statistisches Bundesamt (Destatis), 2021</a>
+    #opacity: 0.5
 
   # Control the choropleth color range. See https://gka.github.io/chroma.js/#chroma-brewer
 
@@ -235,15 +240,28 @@ map_layers:
     #idProperty: CNTR_CODE
     #staticBorders: true
   #Bundesland
-  - min_zoom: 5
-    max_zoom: 15
+  - min_zoom: 4.5
+    max_zoom: 7.5
     #serviceUrl: https://g205sdgs.github.io/sdg-indicators/assets/maps/NUTS_RG_01M_2016_4326_LEVL_1.geojson
     #nameProperty: NUTS_NAME
     #idProperty: NUTS_ID
     #staticBorders: false
-    serviceUrl: https://g205sdgs.github.io/sdg-indicators/assets/maps/Ländergrenzen_ohne_Seegrenzen.geojson
+    # 0 serviceUrl: https://g205sdgs.github.io/sdg-indicators/assets/maps/Ländergrenzen_ohne_Seegrenzen.geojson -->ja
+    # 1 serviceUrl: https://g205sdgs.github.io/sdg-indicators/assets/maps/diy_lan.geojson -->ja (genaue Kopie)
+    # 2 serviceUrl:  https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/maps/Ländergrenzen_ohne_Seegrenzen.geojson  --> ja
+    # 3 serviceUrl:  https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/maps/diy_lan.geojson --> ja
+    # 4 serviceUrl:  https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/maps/diy_lan.geojson (mit Koordinaten für HH ersetzt) --> ja
+    # 5 serviceUrl:  https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/maps/vg2500.geojson # --> nö
+    serviceUrl:  https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/maps/diy_lan.geojson #(mit Koordinaten für HH und ersetzt) --> ja
     nameProperty: GEN
     idProperty: AGS
-    staticBorders: false
+    staticBorders: true
+  - min_zoom: 8
+    max_zoom: 11
+    serviceUrl:  https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/maps/diy_krs.geojson
+    nameProperty: GEN
+    idProperty: ARS
+    staticBorders: true
+
 
 # link: https://hub.arcgis.com/datasets/b7507e654334481e8e0787f42c9028c1_3

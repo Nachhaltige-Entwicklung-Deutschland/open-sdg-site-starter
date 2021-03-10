@@ -12,6 +12,7 @@
     initialize: function(plugin) {
       this.selections = [];
       this.plugin = plugin;
+
     },
 
     addSelection: function(selection) {
@@ -30,11 +31,18 @@
     },
 
     onAdd: function() {
-      //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
+      //---#2 TimeSeriesNameDisplayedInMaps---start-----------Disabled an 1.3.21----------------------------------
       //var controlTpl = '' +
-      var controlTpl = '<span id="mapHead">{title}</span>' +
+      if (this.plugin.mapTitle == ''){
+        var controlTpl = ''
+      }
+      else{
+        var controlTpl = '<span id="mapHead">{title}</span>'
+      }
+      //var controlTpl = '<span id="mapHead">{title}</span>' +
+      
       //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
-        '<ul id="selection-list"></ul>' +
+        controlTpl += '<ul id="selection-list"></ul>' +
         '<div class="legend-swatches">' + //bar
           '{legendSwatches}' +
         '</div>' +
@@ -58,28 +66,32 @@
       }).join('');
       var div = L.DomUtil.create('div', 'selection-legend');
 
+      console.log("Plugin: ", this.plugin);
+
       //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
-      var headline = this.plugin.title
-      if (this.plugin.timeSeriesName){
-        headline += ', <br>' + this.plugin.timeSeriesName;
-      }
-      if (this.plugin.sexName){
-        headline += ', <br>' + this.plugin.sexName;
-      }
-      if (this.plugin.ageName){
-        headline += ', <br>' + this.plugin.ageName;
-      }
-      if (this.plugin.typificationName){
-        headline += ', <br>' + this.plugin.typificationName;
-      }
-      if (this.plugin.criminalOffenceName){
-        headline += ', <br>' + this.plugin.criminalOffenceName;
-      }
-      headline += ', <br>' + this.plugin.unitName;
+      //---4.3.21: No content but map title in maps
+      var headline = this.plugin.mapTitle
+      // var headline = this.plugin.title
+      // if (this.plugin.timeSeriesName){
+      //   headline += ', <br>' + this.plugin.timeSeriesName;
+      // }
+      // if (this.plugin.sexName){
+      //   headline += ', <br>' + this.plugin.sexName;
+      // }
+      // if (this.plugin.ageName){
+      //   headline += ', <br>' + this.plugin.ageName;
+      // }
+      // if (this.plugin.typificationName){
+      //   headline += ', <br>' + this.plugin.typificationName;
+      // }
+      // if (this.plugin.criminalOffenceName){
+      //   headline += ', <br>' + this.plugin.criminalOffenceName;
+      // }
+      // headline += ', <br>' + this.plugin.unitName;
       //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
 
       div.innerHTML = L.Util.template(controlTpl, {
-        lowValue: this.plugin.valueRange[0],
+        lowValue: this.plugin.valueRange[0], // + ' ' + this.plugin.unitName,
         highValue: this.plugin.valueRange[1],
         legendSwatches: swatches,
 

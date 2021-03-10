@@ -154,7 +154,8 @@ var indicatorView = function (model, options) {
       //view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx);
       //view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr);
       //---#1 GoalDependendMapColor---stop---------------------------
-      view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr, args.title, args.measurementUnit); //---#2.2 footerUnitInMapLegend
+      console.log("Args: ", args);
+      view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr, args.title, args.measurementUnit, args.mapTitle); //---#2.2 footerUnitInMapLegend  , args.mapTitle
       //---#2 TimeSeriesNameDisplayedInMaps---stop------------------
 
     }
@@ -387,11 +388,13 @@ var indicatorView = function (model, options) {
     // Create a temp object to alter, and then apply. We go to all this trouble
     // to avoid completely replacing view_obj._chartInstance -- and instead we
     // just replace it's properties: "type", "data", and "options".
+    //var updatedConfig = opensdg.chartConfigAlter({
     var updatedConfig = opensdg.chartConfigAlter({
       type: view_obj._chartInstance.type,
       data: view_obj._chartInstance.data,
       options: view_obj._chartInstance.options
     });
+
     view_obj._chartInstance.type = updatedConfig.type;
     view_obj._chartInstance.data = updatedConfig.data;
     view_obj._chartInstance.options = updatedConfig.options;
@@ -435,7 +438,7 @@ var indicatorView = function (model, options) {
           }]
         },
         legendCallback: function(chart) {
-            console.log("chart: ", chart);
+            //console.log("chart: ", chart);
             var text = ['<ul id="legend" style="text-align: left; padding-left: 0px">'];// #18.3 lengend entries on the left >>> var text = ['<ul id="legend">'];
 
             //---#18 structureLegendEntries---start------------------------------------
@@ -450,8 +453,9 @@ var indicatorView = function (model, options) {
                                   {old: 'Germany', new: 'AAA'},
                                   {old: 'Straftaten (insgesamt)', new: 'AAA'},
                                   {old: 'Criminal offences (total)', new: 'AAA'},
-                                  {old: 'Index (insgesamt)', new: 'AAA'},
-                                  {old: 'Index (overall)', new: 'AAA'}];
+                                  {old: 'Index insgesamt', new: 'AAA'},
+                                  {old: 'Index (overall)', new: 'AAA'},
+                                  {old: 'Berechnete jährliche Werte', new: 'AAA'}];
 
             var sorted = temp.sort(function(a, b) {
               var sub = a.label.substr(0,4);
@@ -475,7 +479,7 @@ var indicatorView = function (model, options) {
 
               return (subA > subB) - (subA < subB);
             });
-
+            console.log('Sorted:',sorted);
             //^^^^ #18.1 ^^^^
             _.each(sorted, function(dataset) { //#18.2 use the sorted dataset instead of the original >>> _.each(chart.data.datasets, function(dataset, datasetIndex) {
 
@@ -490,6 +494,8 @@ var indicatorView = function (model, options) {
               var replace = [{old: '2,5', new: '2.5'},
                             {old: 'Siedlungsfläche: Wohnbau, Industrie und Gewerbe (ohne Abbauland), Öffentliche Einrichtungen', new: 'Siedlungsfläche: Wohnbau Industrie und Gewerbe (ohne Abbauland) Öffentliche Einrichtungen'},
                             {old: 'Siedlungsfläche: Sport-, Freizeit-, und Erholungsfläche, Friedhof', new: 'Siedlungsfläche: Sport- Freizeit- und Erholungsfläche Friedhof'},
+                            {old: 'Sport-, Freizeit- und Erholungsfläche, Friedhof', new: 'Sport- Freizeit- und Erholungsfläche Friedof'},
+                            {old: 'Wohnbau, Industrie und Gewerbe (ohne Abbauland), Öffentliche Einrichtungen', new: 'Wohnbau Industrie und Gewerbe (ohne Abbauland) Öffentliche Einrichtungen'},
                             {old: 'Konsum, Investitionen und Exporte', new: 'Konsum Investitionen und Exporte'},
                             {old: 'Entwicklungszusammenarbeit, deren', new: 'Entwicklungszusammenarbeit deren'},
                             {old: 'Moving five-year average, referring to the middle year', new: 'Moving five-year average referring to the middle year'},
@@ -524,9 +530,18 @@ var indicatorView = function (model, options) {
 
               //---#3 targetDifferentInLegend---start----------------------------------------------------------------------------------------------------------------------------
               //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
+              dashedLines = ['Ziel, Sanitärvers','Ziel, Trinkwasser','Ziel, Finanzierun','Ziel, Strukturell']
               if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
                 if (dataset.type != 'bar'){
-                  text.push('<span class="swatchTgt' + '" style="border-color: ' + dataset.pointBorderColor + '"></span>');
+                  //edit legend for dashed target lines
+                  if (dashedLines.indexOf(dataset.label.substring(0,17)) != -1){
+                    text.push('<span class="swatchTgtLine dashed" style="background-color: ' + dataset.pointBorderColor + '"></span>');
+                  }
+                  else {
+                    text.push('<span class="swatchTgt' + '" style="border-color: ' + dataset.pointBorderColor + '"></span>');
+                  }
+                  //text.push('<span class="swatchTgt' + '" style="border-color: ' + dataset.pointBorderColor + '"></span>');
+                  //
                 }
                 else{
                   text.push('<span class="swatchTgtBar' + '" style="border-color: ' + dataset.pointBorderColor + '"></span>');
@@ -566,7 +581,7 @@ var indicatorView = function (model, options) {
       }
     };
     chartConfig = opensdg.chartConfigAlter(chartConfig);
-
+    //console.log(chartInfo);
 
     this._chartInstance = new Chart($(this._rootElement).find('canvas'), chartConfig);
     Chart.pluginService.register({
@@ -712,10 +727,18 @@ var indicatorView = function (model, options) {
 
 
   this.createSelectionsTable = function(chartInfo) {
+    console.log("chartInfo:", chartInfo);
     //---#19 addUnitToTableHeaderIfNeeded---start---------------------------------------------------
     //---Edit from 26.10.20: Add Unit to table heading
     //var tableUnit = (chartInfo.selectedUnit && !chartInfo.footerFields[translations.indicator.unit_of_measurement]) ? translations.t(chartInfo.selectedUnit) : '';
-    var tableUnit = chartInfo.footerFields[translations.indicator.unit_of_measurement];
+    //var tableUnit = (chartInfo.indicatorId == 'indicator_6-1-b' || chartInfo.indicatorId == 'indicator_6-1-a') ? '' : ' (' + chartInfo.footerFields[translations.indicator.unit_of_measurement] + ')';
+    if (chartInfo.indicatorId ===  'indicator_8-2-ab'){
+      var tableUnit = '<br><small>in %</small>';
+    }
+    else{
+      var tableUnit =  '<br><small>' + chartInfo.footerFields[translations.indicator.unit_of_measurement] + '</small>';
+    }
+
     //this.createTable(chartInfo.selectionsTable, chartInfo.indicatorId, '#selectionsTable', true);
     this.createTable(chartInfo.selectionsTable, tableUnit, chartInfo.indicatorId, '#selectionsTable', true);
     //---#19 addUnitToTableHeaderIfNeeded---stop----------------------------------------------------
@@ -798,7 +821,7 @@ var indicatorView = function (model, options) {
       });
 
       //---Edit from 26.10.2020: Add Unit to table headings
-      currentTable.append('<caption>' + that._model.chartTitle + ' (' + tableUnit + ')</caption>');
+      currentTable.append('<caption>' + that._model.chartTitle +  tableUnit + '</caption>');
 
       var table_head = '<thead><tr>';
 

@@ -15,8 +15,8 @@
       attribution: '[replace me]',
     },
     // Zoom limits.
-    minZoom: 5,
-    maxZoom: 15,
+    minZoom: 4.5,
+    maxZoom: 11,
     // Visual/choropleth considerations.
     colorRange: chroma.brewer.BuGn,
     noValueColor: '#ffffff',
@@ -51,6 +51,7 @@
   };
 
   function Plugin(element, options) {
+    console.log("Options:", options);
 
     this.element = element;
     this.options = $.extend(true, {}, defaults, options.mapOptions);
@@ -132,6 +133,8 @@
     this.typificationName = translations.t(this.typification[this.typification.length -1]);
     this.criminalOffence = _.pluck(this.geoData, 'criminal offences');
     this.criminalOffenceName = translations.t(this.criminalOffence[this.criminalOffence.length -1]);
+
+    this.mapTitle = options.mapTitle;
     //---#6 enableMapsForDisagData---start-----------------------------------------------------------------
     this.startExp = 0;
     this.reloadCounter = 0; // to avoid multiple search buttons
@@ -178,6 +181,9 @@
         else if(cat == 'age'){
           var records = _.where(geoData, { GeoCode: geocode, age: exp });
         }
+        else if(cat == 'typification'){
+          var records = _.where(geoData, { GeoCode: geocode, typification: exp });
+        }
 
         //---#6 enableMapsForDisagData---stop------------------------------------------------------------------
         records.forEach(function(record) {
@@ -197,7 +203,7 @@
     //---#6 enableMapsForDisagData---start-----------------------------------------------------------------
     //Find those disaggregation-categories that have more then one expression in all lines that have geoData
     findCat: function(){
-      var categories = ['title','sex','age'];
+      var categories = ['title','sex','age', 'typification'];
       var category = '';
 
       for (var i = 0; i<categories.length; i++){
@@ -230,6 +236,35 @@
       this.map.fitBounds(layer.getBounds());
     },
 
+    // Build content for a tooltip.
+   getTooltipContent(feature) {
+     var tooltipContent = feature.properties.name;
+     var tooltipData = this.getData(feature.properties);
+     if (tooltipData) {
+       tooltipContent += ': ' + tooltipData;
+     }
+     return tooltipContent;
+   },
+
+   // Update a tooltip.
+   updateTooltip: function(layer) {
+     if (layer.getTooltip()) {
+       var tooltipContent = this.getTooltipContent(layer.feature);
+       layer.setTooltipContent(tooltipContent);
+     }
+   },
+
+   // Create tooltip.
+   createTooltip: function(layer) {
+     if (!layer.getTooltip()) {
+       var tooltipContent = this.getTooltipContent(layer.feature);
+       layer.bindTooltip(tooltipContent, {
+         permanent: true,
+       }).addTo(this.map);
+     }
+   },
+
+
     // Select a feature.
     highlightFeature: function(layer) {
       // Abort if the layer is not on the map.
@@ -239,16 +274,7 @@
       // Update the style.
       layer.setStyle(this.options.styleHighlighted);
       // Add a tooltip if not already there.
-      if (!layer.getTooltip()) {
-        var tooltipContent = layer.feature.properties.name;
-        var tooltipData = this.getData(layer.feature.properties);
-        if (tooltipData) {
-          tooltipContent += ': ' + tooltipData;
-        }
-        layer.bindTooltip(tooltipContent, {
-          permanent: true,
-        }).addTo(this.map);
-      }
+      this.createTooltip(layer);
       if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
         layer.bringToFront();
       }
@@ -303,6 +329,14 @@
       });
     },
 
+
+    // Update the tooltips of the selected Features on the map.
+    updateTooltips: function() {
+      var plugin = this;
+      this.selectionLegend.selections.forEach(function(selection) {
+        plugin.updateTooltip(selection);
+      });
+    },
     // Get the data from a feature's properties, according to the current year.
     getData: function(props) {
       if (props[this.currentYear]) {
@@ -329,6 +363,7 @@
         minZoom: this.options.minZoom,
         maxZoom: this.options.maxZoom,
         zoomControl: false,
+        zoomSnap: 0.5,
       });
       this.map.setView([51.9, 10.26],0);
       this.dynamicLayers = new ZoomShowHide();
@@ -352,6 +387,19 @@
       // Because after this point, "this" rarely works.
       var plugin = this;
 
+      // Add the year slider.
+      this.map.addControl(L.Control.yearSlider({
+        years: this.years,
+        yearChangeCallback: function(e) {
+          plugin.currentYear = new Date(e.time).getFullYear();
+          plugin.updateColors();
+          plugin.updateTooltips();
+          plugin.selectionLegend.update();
+
+        },
+        playReverseButton: true
+      }));
+
       //---#6 enableMapsForDisagData---start-----------------------------------------------------------------
       //Add the radio buttons
       //count up the reloadCounter to avoid multiple builds of the search buttons
@@ -359,18 +407,19 @@
       //Create a Button for every expression and add it to the map
       var cat = plugin.findCat();
       if (cat != ''){
+        //div.innerHTML = '<label style="background-color: #c0c2c2"><input id="command'+toString(i)+' name="disagg" value="'+i+'"> Auswahl: </label><br>';
         var exp = plugin.findDisagg(cat);
         for (var i = 0; i<exp.length; i++) {
           var label = exp[i];
-          var command = L.control({position: 'bottomright'});
+          var command = L.control({position: 'bottomleft'});
           command.onAdd = function (map) {
               var div = L.DomUtil.create('div', 'command');
               //set the Button on position 'startExp' to status checked
               if (i == plugin.startExp){
-                div.innerHTML = '<label  style="background-color: #c0c2c2"><input id="command'+toString(i)+'" type="radio" name="disagg" value="'+i+'" checked> '+translations.t(label)+' </label><br>';
+                div.innerHTML = '<label style="background-color: #c0c2c2; padding-right: 6px; padding-left: 4px; font-size: 14px"><input id="command'+toString(i)+'" type="radio" name="disagg" value="'+i+'" checked> '+translations.t(label)+' </label><br>';
               }
               else{
-                div.innerHTML = '<label style="background-color: #c0c2c2"><input id="command'+toString(i)+'" type="radio" name="disagg" value="'+i+'"> '+translations.t(label)+' </label><br>';
+                div.innerHTML = '<label style="background-color: #c0c2c2; padding-right: 6px; padding-left: 4px; font-size: 14px"><input id="command'+toString(i)+'" type="radio" name="disagg" value="'+i+'"> '+translations.t(label)+' </label><br>';
               }
               return div;
           };
@@ -390,6 +439,9 @@
         else if (cat == 'age'){
           plugin.ageName = translations.t(plugin.expression);
         }
+        else if (cat == 'typification'){
+          plugin.typificationName = translations.t(plugin.expression);
+        }
 
         //action, when click:
         $('input[type="radio"]').on('click change', function(e) {
@@ -408,17 +460,7 @@
       }
       //---#6 enableMapsForDisagData---stop------------------------------------------------------------------
 
-      // Add the year slider.
-      this.map.addControl(L.Control.yearSlider({
-        years: this.years,
-        yearChangeCallback: function(e) {
-          plugin.currentYear = new Date(e.time).getFullYear();
-          plugin.updateColors();
-          plugin.selectionLegend.update();
 
-        },
-        playReverseButton: true
-      }));
 
       //---#7 addMapboxWordmark---start-----------------------------------------------------------------------------------------
       //var logo = L.control({position: 'bottomleft'});
@@ -507,6 +549,7 @@
           plugin.searchControl = new L.Control.Search({
             layer: plugin.getAllLayers(),
             propertyName: 'name',
+            textPlaceholder: 'Suche nach Bundesländern',
             marker: false,
             moveToLocation: function(latlng) {
               plugin.zoomToFeature(latlng.layer);

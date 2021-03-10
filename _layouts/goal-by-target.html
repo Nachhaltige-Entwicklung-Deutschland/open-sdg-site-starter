@@ -25,11 +25,11 @@
 </div>
 
 <div id="main-content" class="container goal-indicators goal-{{page.sdg_goal}} goal-by-target">
-  
-  <h2 style="margin-top:10px; margin-left: 16px;">
+
+  <!-- <h2 style="margin-top:10px; margin-left: 16px;">
     <a href="https://dns-dialogfassung.github.io/{{ goal_number }}" style="color: black">  <small>{{ t.general.dialog_target_link_1 }} {{ goal_number}} {{ t.general.dialog_target_link_2}} </small></a>
-  </h2>
-  
+  </h2> -->
+
   {{ content }}
   {% include components/breadcrumb.html %}
   {% include components/navigation.html %}
@@ -47,10 +47,21 @@
   {% for group in goal_indicators %}
     {% assign target_id = group.name %}
     {% assign target_id_dashes = target_id | replace: ".", "-" %}
+
     {% assign target_title_key = target_id | append: '-title' %}
     {% assign target_title_key_dashes = target_id_dashes | append: '-title' %}
-    {% assign target_range = t.dns_ranges[target_title_key_dashes] | default: t.dns_ranges[target_title_key] %}
     {% assign target_title = t.dns_targets[target_title_key_dashes] | default: t.dns_targets[target_title_key] %}
+
+
+
+    {% assign size = target_id | size | minus: 2 %}
+    {% assign range_id = target_id | slice: 0, size | replace: "-", "." %}
+
+    {% assign range_title_key = range_id  | append: '-title' %}
+    {% assign target_range = t.dns_ranges[range_title_key] %}
+    <script>console.log({{range_title_key|json}});</script>
+    <script>console.log({{target_title_key|json}});</script>
+    <script>console.log({{target_range|json}});</script>
     <div class="indicator-cards target col-md-6">
       <span>
         {{ target_range }}

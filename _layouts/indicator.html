@@ -11,21 +11,8 @@
 {% assign goalShort = t.dns_goals[goalKey] %}
 {% assign goalLong = t.global_goals[goalKey] %}
 
-{% assign dialogLink = meta.permalink %}
-{% if dialogLink == "/5-1-b/" %}
-  {% assign dialogLink = "/5-1-bc/" %}
-{% elsif dialogLink == "/5-1-c/" %}
-  {% assign dialogLink = "/5-1-e/" %}
-{% endif %}
 
 
-
-{% assign dialogDisplay = meta.indicator_display %}
-{% if dialogDisplay == "5.1.b" %}
-  {% assign dialogDisplay = "5.1.b, c" %}
-{% elsif dialogDisplay == "5.1.c" %}
-  {% assign dialogDisplay = "5.1.e" %}
-{% endif %}
 
 <div class="heading indicator goal-{{ goal_number }}">
   <div class="container">
@@ -39,7 +26,7 @@
 
 
         <h1 class="titles goal-{{goal_number}}" title="{{ t.general.section }}: {{ meta.section }}">
-          {{ meta.section }} - <i title="{{ t.general.postulate}}: {{ meta.postulate }}">{{ meta.postulate }}</i>
+          {{ meta.section }} – <i title="{{ t.general.postulate}}: {{ meta.postulate }}">{{ meta.postulate }}</i>
         </h1>
 
         <h2 class="titles goal-{{goal_number}}">{{ t.general.indicator }} {{ meta.indicator_display }}: {{ meta.indicator | get_indicator_name }}</h2>
@@ -51,11 +38,11 @@
 </div>
 
 <div id="main-content" class="container goal-{{ goal_number }}">
-  
-  <h2 style="margin-top:10px; margin-left: 16px;">
+
+  <!-- <h2 style="margin-top:10px; margin-left: 16px;">
     <a href="https://dns-dialogfassung.github.io/{{ dialogLink }}" style="color: black">  <small>{{ t.general.dialog_indikator_1 }} {{ dialogDisplay }} {{ t.general.dialog_indikator_2}} </small></a>
-  </h2>
-  
+  </h2> -->
+
 
   {% include components/breadcrumb.html %}
   {% include components/navigation.html %}
@@ -88,7 +75,7 @@
   <div class="row" id="indicatorData" data-indicatorid='{{dataset_name}}' data-id="{{meta.indicator | slugify }}" data-country="{{ meta.national_geographical_coverage | t }}"
   data-charttitle="{{ meta.graph_title | t }}" data-measurementunit="{{ meta.computation_units | t }}" data-datasource="{{ uniqSources }}" data-copyright="{{ meta.copyright | t }}"
   data-geographicalarea="{{ meta.national_geographical_coverage | t }}" data-footnote="{{ meta.data_footnote | t }}" data-showdata="{{ show_data }}" data-graphtype="{{ meta.graph_type }}"
-  data-geocoderegex="{{ meta.data_geocode_regex }}" data-showmap="{{ meta.data_show_map }}" data-startvalues="{{ meta.data_start_values | join: '|' }}">
+  data-geocoderegex="{{ meta.data_geocode_regex }}" data-showmap="{{ meta.data_show_map }}" data-startvalues="{{ meta.data_start_values | join: '|' }}" data-maptitle="{{ meta.maptitle | t }}">
     {% if show_data %}
     <div id="indicator-sidebar" class="col-md-3">
       <div id="toolbar">
@@ -153,9 +140,17 @@
               <div id="selectionsTable"></div>
             </div>
             <div role="tabpanel" class="tab-pane" id="mapview" class="map">
-              <div id="map">
-                <img src="{{ site.baseurl }}/assets/img/loading.gif" alt="{{ t.indicator.loading_map }}" /> <!---->
+              <div>
+                <h3 class="chart-title">
+                  {{ meta.graph_title | t }}
+                  <br>
+                  <small>{{ meta.computation_units }}</small>
+                </h3>
               </div>
+              <div id="map">
+                <!--<img src="{{ site.baseurl }}/assets/img/loading.gif" alt="{{ t.indicator.loading_map }}" /> <!---->
+              </div>
+
               <!---#16 showMapDataSources---start--------------------->
               <div id="mapfooter" class="table-footer-text">
 
@@ -191,7 +186,6 @@
 
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
-
 
           <!--#22 additionalDataAsEmbedded---start-------------------------->
           {% if meta.additional_information %}

@@ -76,18 +76,18 @@
         {% assign status_d_downcase = year_d | downcase %}
         {% assign title_d = t.status[status_d_downcase] %}
 
-        {% assign alter = '-' %}
+        {% assign alter = 'Keine Bewertung möglich' %}
 
-            {% if indicator_metadata.name contains "_status" %}
+            <!-- {% if indicator_metadata.name contains "_status" %}
               <tr>
                 <th scope="row">{{ metadata_label }} </th>
                   {% if year_d and year_a %}
-                  <td align="center" style="padding-left: 0px;padding-right: 0px;"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ year_d }}.png" alt="{{ alter }}" class="responsiveWeather" title="{{ title_d }}" style="border: transparent"/></a></td>
-                  <td align="center" style="padding-left: 0px;padding-right: 0px;"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ year_c }}.png" alt="{{ alter }}" class="responsiveWeather" title="{{ title_c }}" style="border: transparent"/></a></td>
-                  <td align="center" style="padding-left: 0px;padding-right: 0px;"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ year_b }}.png" alt="{{ alter }}" class="responsiveWeather" title="{{ title_b }}" style="border: transparent"/></a></td>
-                  <td align="center" style="padding-left: 0px;padding-right: 0px;"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ year_a }}.png" alt="{{ alter }}" class="responsiveWeather" title="{{ title_a }}" style="border: transparent"/></a></td>
+                    <td align="center" style="padding-left: 0px;padding-right: 0px;"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ year_d }}.png" alt="{{ alter }}" class="responsiveWeather" title="{{ title_d }}" style="border: transparent"/></a></td>
+                    <td align="center" style="padding-left: 0px;padding-right: 0px;"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ year_c }}.png" alt="{{ alter }}" class="responsiveWeather" title="{{ title_c }}" style="border: transparent"/></a></td>
+                    <td align="center" style="padding-left: 0px;padding-right: 0px;"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ year_b }}.png" alt="{{ alter }}" class="responsiveWeather" title="{{ title_b }}" style="border: transparent"/></a></td>
+                    <td align="center" style="padding-left: 0px;padding-right: 0px;"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ year_a }}.png" alt="{{ alter }}" class="responsiveWeather" title="{{ title_a }}" style="border: transparent"/></a></td>
                   {% else %}
-                  <td align="center" style="padding-left: 0px;padding-right: 0px;"><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/x.png" alt="{{ alter }}" class="responsiveWeather" title="{{ title_a }}" style="border: transparent"/></td>
+                    <td align="center" style="padding-left: 0px;padding-right: 0px;"><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/x.png" alt="{{ alter }}" class="responsiveWeather" title="{{ title_a }}" style="border: transparent"/></td>
                   {% endif %}
               </tr>
             {% else %}
@@ -98,7 +98,45 @@
                   <td align="center" style="margin-bottom: 15px;"><p>{{ year_b }}</p></td>
                   <td align="center" style="margin-bottom: 15px;"><p>{{ year_a }}</p></td>
               </tr>
+            {% endif %} -->
+            {% if indicator_metadata.name contains "_status" %}
+              <tr>
+                <th scope="row">{{ metadata_label }} </th>
+                {% if year_d %}
+                  <td align="left" style="padding-left: 0px;padding-right: 0px;"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{ year_d }}.png" alt="{{ alter }}" class="responsiveWeather" title="{{ title_d }}" style="border: transparent"/></a></td>
+                {% endif %}
+                {% if year_c %}
+                  <td align="left" style="padding-left: 0px;padding-right: 0px;"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{ year_c }}.png" alt="{{ alter }}" class="responsiveWeather" title="{{ title_c }}" style="border: transparent"/></a></td>
+                {% endif %}
+                {% if year_b %}
+                  <td align="left" style="padding-left: 0px;padding-right: 0px;"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{ year_b }}.png" alt="{{ alter }}" class="responsiveWeather" title="{{ title_b }}" style="border: transparent"/></a></td>
+                {% endif %}
+                {% if year_a %}
+                  <td align="left" style="padding-left: 0px;padding-right: 0px;"><a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{ year_a }}.png" alt="{{ alter }}" class="responsiveWeather" title="{{ title_a }}" style="border: transparent"/></a></td>
+                {% else %}
+                  <td align="left" style="margin-bottom: 15px;"><p>{{ alter }}</p></td>
+                {% endif %}
+              </tr>
+            {% else %}
+              <tr>
+                {% if year_a %}
+                  <th scope="row" height="">{{ metadata_label }} </th>
+                {% endif %}
+                {% if year_d %}
+                  <td align="left" style="margin-bottom: 15px;"><p>{{ year_d }}</p></td>
+                {% endif %}
+                {% if year_c %}
+                  <td align="left" style="margin-bottom: 15px;"><p>{{ year_c }}</p></td>
+                {% endif %}
+                {% if year_b %}
+                  <td align="left" style="margin-bottom: 15px;"><p>{{ year_b }}</p></td>
+                {% endif %}
+                {% if year_a %}
+                  <td align="left" style="margin-bottom: 15px;"><p>{{ year_a }}</p></td>
+                {% endif %}
+              </tr>
             {% endif %}
+
         {% endif %}
 
       {% endif %}

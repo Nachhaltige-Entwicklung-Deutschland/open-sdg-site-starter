@@ -21,11 +21,10 @@
             <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ goal_number }}/"><span class="visible-xs">{{ t.general.goal }} {{ goal_number}} - <span>{{ goal_short }}</a>
 
           </h3>
-
           {% assign goal_indicators = site.data.meta | where: 'sdg_goal', goal_number | sort: 'indicator_sort_order' | group_by: 'target_id' %}
             {% for group in goal_indicators %}
               {% for indicator in group.items %}
-                {% for i in (1..2) %}
+                {% for i in (1..3) %}
                   {% assign hty_active = "history_active_" | append: i %}
                   {% assign hty_indicator = "history_indicator_" | append: i %}
                   {% assign idc_sort_order = indicator["indicator_sort_order"] %}
@@ -99,6 +98,8 @@
                             {% else %}
                               <td width="10%" align="center"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ indicator[status] }}.png" alt="{{ indicator[status] }}" class="responsiveWeather" title="{{ status_title }}"/></a> </td>
                             {% endif %}
+                          {% elsif j == 'a' %}
+                              <td width="10%" align="center"><p><span class="responsiveText">Keine Bewertung möglich</span></p></td>
                           {% endif %}
                         {% endfor %}
                         {% for k in (1..add) %}

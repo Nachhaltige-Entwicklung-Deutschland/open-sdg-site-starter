@@ -33,7 +33,10 @@ var indicatorModel = function (options) {
   this.country = options.country;
   this.indicatorId = options.indicatorId;
   this.shortIndicatorId = options.shortIndicatorId;
-  this.chartTitle = options.chartTitle;
+  this.chartTitle = options.chartTitle; // + "<br>" + options.measurementUnit;
+  //---4.3.21: No content but map title in maps
+  this.mapTitle =   options.mapTitle;
+  //---4.3.21: No content but map title in maps stop
   this.graphType = options.graphType;
   this.measurementUnit = options.measurementUnit;
   this.copyright = options.copyright;
@@ -53,6 +56,8 @@ var indicatorModel = function (options) {
   this.geoData = [];
   this.geoCodeRegEx = options.geoCodeRegEx;
   this.showMap = options.showMap;
+
+  this.stackedDisaggregation = options.stackedDisaggregation;
 
   // initialise the field information, unique fields and unique values for each field:
   (function initialise() {
@@ -433,13 +438,17 @@ var indicatorModel = function (options) {
         return datasetIndex === 0 ? headlineColor : colors[datasetIndex];
       },
       //---#11 setTargetPointstyle---start-----------------------------------------------------------------------------------------------
-      getPointStyle = function (combinationDescription) {
+      getPointStyle = function (datasetIndex, combinationDescription) {
+        dashedLines = ['Ziel, Sanitärvers','Ziel, Trinkwasser','Ziel, Finanzierun','Ziel, Strukturell']
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
-          return 'rect';
+          return dashedLines.indexOf(combinationDescription.substr(0,17)) == -1 ? 'rect' : 'false';
         }
         else {
           return 'circle';
         }
+      },
+      getRadius = function(datasetIndex, combinationDescription){
+        return getPointStyle(datasetIndex, combinationDescription) == 'circle' || getPointStyle(datasetIndex, combinationDescription) == 'rect' ? 5 : 0
       },
       //---#11 setTargetPointstyle---stop-----------------------------------------------------------------------------------------------
 
@@ -491,7 +500,7 @@ var indicatorModel = function (options) {
       },
       //---#22 xxx---stop--------------------------------------------------------------------------------------------------
 
-      stackedCharts = ['indicator_12-1-b'];
+      stackedCharts = ['indicator_3-3-a'];
       getStacked = function(indicatorId){
         if (stackedCharts.indexOf(indicatorId) != -1) {
           return true;
@@ -500,7 +509,11 @@ var indicatorModel = function (options) {
           return false;
         }
       },
-
+      getStackGroup = function(indicatorId){
+        if (indicatorId == 'indicator_3-2-e'){
+          return ''
+        }
+      }
 
       //--#14 mixedCharts---start-------------------------------------------------------------------------------------------------------
       //barCharts = [//translations.t('a) time series')+", "+translations.t('calculated annual values'),
@@ -524,14 +537,43 @@ var indicatorModel = function (options) {
       //--#14 mixedCharts---stop--------------------------------------------------------------------------------------------------------
 
       //--#14.1 barsOnly---start--------------------------------------------------------------------------------------------------------
-      barCharts = ['indicator_2-2-a','indicator_3-1-e','indicator_5-1-b','indicator_5-1-c','indicator_6-2-a','indicator_8-2-c','indicator_8-3-a',
-      'indicator_8-4-a','indicator_8-6-a','indicator_11-1-a','indicator_11-1-b','indicator_11-2-c','indicator_12-1-a','indicator_12-1-b','indicator_13-1-b','indicator_15-2-a','indicator_16-1-a','indicator_16-2-a','indicator_17-1-a','indicator_17-2-a'];
+      barCharts = ['indicator_2-1-a', 'indicator_2-2-a','indicator_3-1-e','indicator_3-2-a','indicator_3-3-a','indicator_5-1-b','indicator_5-1-c','indicator_5-1-e','indicator_6-2-ab','indicator_8-2-ab', 'indicator_8-2-c','indicator_8-3-a',
+      'indicator_8-4-a','indicator_8-6-a','indicator_11-1-a','indicator_11-1-b','indicator_11-2-c','indicator_12-1-a','indicator_13-1-b','indicator_14-1-b','indicator_15-1-a','indicator_15-2-a','indicator_16-1-a','indicator_16-2-a','indicator_17-1-a','indicator_17-2-a'];
 
       bl = ['bw','by','be','bb','hb','hh','he','mv','ni','nw','rp','sl','sn','st','sh','th'];
 
       exceptions = [translations.t('direct co2 emissions and co2 content of consumer goods'),
                     translations.t('a) time series') + ', ' + translations.t('a) total (moving four-year average)'),
-                    translations.t('b) target (max)') + ', ' + translations.t('a) total (moving four-year average)')];
+                    translations.t('b) target (max)') + ', ' + translations.t('a) total (moving four-year average)'),
+                    translations.t('a) time series') + ', ' + translations.t('gross domestic produkt (price-adjusted) (year-on-year changes in %)'),
+                    translations.t('b) target (min)') + ', ' + translations.t('structural funding balance (share of gross domestic product (at current prices) in %)'),
+                    translations.t('b) target (min)') + ', ' + translations.t('funding balance (share of gross domestic product (at current prices) in %)'),
+                    translations.t('b) target (min)') + ', ' + translations.t('a) drinking water and sanitation'),//6.2.ab
+                    translations.t('b) target (min)') + ', ' + translations.t('b) drinking water'),//6.2.ab
+                    translations.t('b) target (min)') + ', ' + translations.t('c) sanitation'),//6.2.ab
+                    translations.t('a) time series') + ', ' + translations.t('a) moving five-year average, referring to the middle year'),//2.1.a
+                    translations.t('b) target (max)') + ', ' + translations.t('a) moving five-year average, referring to the middle year'),//2.1.a
+                    translations.t('a) time series') + ', ' + translations.t('so2'),//3.2.a
+                    translations.t('a) time series') + ', ' + translations.t('nox'),//3.2.a
+                    translations.t('a) time series') + ', ' + translations.t('nh3'),//3.2.a
+                    translations.t('a) time series') + ', ' + translations.t('nmvoc'),//3.2.a
+                    translations.t('a) time series') + ', ' + translations.t('pm2.5'),//3.2.a
+                    translations.t('a) time series') + ', ' + translations.t('a) sub-index forests'),//15.1.a
+                    translations.t('a) time series') + ', ' + translations.t('c) sub-index farmland'),//15.1.a
+                    translations.t('a) time series') + ', ' + translations.t('b) sub-index settlements'),//15.1.a
+                    translations.t('a) time series') + ', ' + translations.t('d) sub-index inland waters'),//15.1.a
+                    translations.t('a) time series') + ', ' + translations.t('e) sub-index coasts/seas'),
+                    translations.t('b) target (min)') + ', ' + translations.t('f) index overall'),
+                    translations.t('a) time series') + ', ' + translations.t('proportion of sustainable managed stocks in all msy examined stocks'),
+                    translations.t('a) time series') + ', ' + translations.t('proportion of sustainable managed stocks in all msy examined stocks') + ', ' + translations.t('north sea'),
+                    translations.t('a) time series') + ', ' + translations.t('proportion of sustainable managed stocks in all msy examined stocks') + ', ' + translations.t('baltic sea')];//14.1.b
+                    // translations.t('a) time series') + ', ' + translations.t('sub-index forests'),//15.1.a,
+                    // translations.t('a) time series') + ', ' + translations.t('sub-index farmland'),//15.1.a
+                    // translations.t('a) time series') + ', ' + translations.t('sub-index settlements'),//15.1.a
+                    // translations.t('a) time series') + ', ' + translations.t('sub-index inland waters'),//15.1.a
+                    // translations.t('a) time series') + ', ' + translations.t('sub-index coasts/seas')];//15.1.a
+
+
 
       for (var i=0; i<bl.length; i++){
         exceptions.push(translations.t('a) time series') + ', ' + translations.t('a) total (moving four-year average)') + ', ' + translations.t(bl[i]));
@@ -553,9 +595,16 @@ var indicatorModel = function (options) {
         }
       },
       //--#14.1 barsOnly---stop--------------------------------------------------------------------------------------------------------
+      getOrder = function(combinationDescription) {
+        if (exceptions.indexOf(combinationDescription) != -1){
+          return 3;
+        }
+        else {
+          return 1;
+        }
+      }
 
-
-      getBorderDash = function(datasetIndex) {
+      getBorderDash = function(datasetIndex, combinationDescription) {
         // offset if there is no headline data:
         if(!this.hasHeadline) {
           datasetIndex += 1;
@@ -563,9 +612,11 @@ var indicatorModel = function (options) {
 
         // 0 -
         // the first dataset is the headline:
-        return datasetIndex > colors.length ? [5, 5] : undefined;
+        dashedLines = ['Ziel, Sanitärvers','Ziel, Trinkwasser','Ziel, Finanzierun','Ziel, Strukturell']
+
+        return datasetIndex  > colors.length || dashedLines.indexOf(combinationDescription.substring(0, 17)) != -1 ? [5, 5] : undefined;
       },
-      convertToDataset = function (data, combinationDescription /*field, fieldValue*/) {
+      convertToDataset = function (data, combinationDescription, combination /*field, fieldValue*/) {
         // var fieldIndex = field ? _.findIndex(that.selectedFields, function (f) {
         //     return f === field;
         //   }) : undefined,
@@ -605,6 +656,8 @@ var indicatorModel = function (options) {
           ds = _.extend({
 
             label: combinationDescription ? combinationDescription : that.country,
+            disaggregation: combination,
+            order: getOrder(combinationDescription),
             //---#13 noLineForTargets---start-------------------------------
             borderColor: getBorderColor(combinationDescription,datasetIndexMod,that.indicatorId),//'#' + getColor(datasetIndexMod),
             //borderColor: getLineStyle(combinationDescription, datasetIndexMod),
@@ -615,29 +668,54 @@ var indicatorModel = function (options) {
             backgroundColor: getBackground(combinationDescription,datasetIndexMod),
             //---#4 sameColorForTargetAndTimeSeries---stop------------------
             //---#11 setTargetPointstyle---start---------------------------------------
-            pointStyle: getPointStyle(combinationDescription),
+            pointStyle: getPointStyle(datasetIndex, combinationDescription),
             //---#11 setTargetPointstyle---stop----------------------------------------
-            radius: 6,
+            radius: getRadius(datasetIndex, combinationDescription), //6,
+            pointRadius: getRadius(datasetIndex, combinationDescription),
             pointBorderColor: '#' + getColor(datasetIndexMod),
-            borderDash: getBorderDash(datasetIndex),
+            borderDash: getBorderDash(datasetIndex, combinationDescription),
+
             data: _.map(that.years, function (year) {
               var found = _.findWhere(data, {
                 Year: year
               });
+
+
               return found ? found.Value : null;
             }),
+
+
+            // data: _.map(that.years, function(year, index) {
+            //   return [year].concat(datasets.map(function(ds) {
+            //     if (typeof ds.data[index] === 'undefined') {
+            //       return null;
+            //     }
+            //     return ds.data[index];
+            //   }));
+            // }),
+
+
             //--#14 mixedCharts---start------------------------------------------------
             //type: getChartStyle(combinationDescription),
             //--#14 mixedCharts---stop-------------------------------------------------
             //--#14.1 barsOnly---start------------------------------------------------
             type: getChartStyle(that.indicatorId, combinationDescription),
             //--#14.1 barsOnly---stop-------------------------------------------------
-
-            stacked: getStacked(that.indicatorId),
-
+            // options:{
+            //     scales: {
+            //         xAxes: [{
+            //             stacked:  getStacked(that.indicatorId)
+            //         }],
+            //         yAxes: [{
+            //             stacked: getStacked(that.indicatorId)
+            //         }]
+            //       }
+            //     },
+            // //stacked: getStacked(that.indicatorId),
+            // stack: getStackGroup(that.indicatorId),
             borderWidth: combinationDescription ? 2 : 4
           }, that.datasetObject);
-
+        //console.log("DS: ",ds);
         datasetIndex++;
         return ds;
       };
@@ -728,7 +806,8 @@ var indicatorModel = function (options) {
         // but some combinations may not have any data:
         filteredDatasets.push({
           data: filtered,
-          combinationDescription: getCombinationDescription(combination)
+          combinationDescription: getCombinationDescription(combination),
+          combination: combination
         });
       }
     });
@@ -741,7 +820,7 @@ var indicatorModel = function (options) {
 
     _.chain(filteredDatasets)
       .sortBy(function(ds) { return ds.combinationDescription; })
-      .each(function(ds) { datasets.push(convertToDataset(ds.data, ds.combinationDescription)); });
+      .each(function(ds) { datasets.push(convertToDataset(ds.data, ds.combinationDescription, ds.combinations)); });
 
     // convert datasets to tables:
     var selectionsTable = {
@@ -807,6 +886,8 @@ var indicatorModel = function (options) {
         //------------------------------------------------
 
         //---#2.1 caseNoTimeSeriesInCsv---start-----------------------------------
+        //---4.3.21: No content but map title in maps
+        mapTitle: this.mapTitle,
         title: this.chartTitle,
         //---#2.1 caseNoTimeSeriesInCsv---stop------------------------------------
 
