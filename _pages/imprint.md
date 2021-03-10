@@ -142,7 +142,7 @@ Quelle: Genaue Bezeichnung der Fundstelle (Tabelle, Publikation, Ausgabe bzw. be
 - <i>Beispiel für Tabelle aus Publikation (Download-Produkt):</i><br>
 Quelle: Daten zur Energiepreisentwicklung – Lange Reihe von Januar 2000 bis November 2017, Tabelle 5.3.1 Erdgas – Indizes, Statistisches Bundesamt (Destatis), 2017<br><br>
 - <i>Beispiel Internet-Auszug:</i><br>
-Quelle: Sterbefälle 2017 nach den 10 häufigsten Todesursachen der ICD-10, Statistisches Bundesamt (Destatis), 2020.
+Quelle: Sterbefälle 2017 nach den 10 häufigsten Todesursachen der ICD-10, Statistisches Bundesamt (Destatis), 2020.<br>
 In http://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Gesundheit/Todesursachen/Tabellen/gestorbene_anzahl.html<br><br>
 - <i>Beispiel für die Zusätze zum Quellennachweis, wenn die Daten nur als Grundlage für eigene Berechnungen verwendet wurden oder Daten als Grundlage für die Erstellung eigener Graphiken dienen:</i><br>
 Quelle: …; eigene Berechnung / …; eigene Darstellung
