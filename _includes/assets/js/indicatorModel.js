@@ -538,7 +538,7 @@ var indicatorModel = function (options) {
 
       //--#14.1 barsOnly---start--------------------------------------------------------------------------------------------------------
       barCharts = ['indicator_2-1-a', 'indicator_2-2-a','indicator_3-1-e','indicator_3-2-a','indicator_3-3-a','indicator_5-1-b','indicator_5-1-c','indicator_5-1-e','indicator_6-2-ab','indicator_8-2-ab', 'indicator_8-2-c','indicator_8-3-a',
-      'indicator_8-4-a','indicator_8-6-a','indicator_11-1-a','indicator_11-1-b','indicator_11-2-c','indicator_12-1-a','indicator_13-1-b','indicator_15-1-a','indicator_15-2-a','indicator_16-1-a','indicator_16-2-a','indicator_17-1-a','indicator_17-2-a'];
+      'indicator_8-4-a','indicator_8-6-a','indicator_11-1-a','indicator_11-1-b','indicator_11-2-c','indicator_12-1-a','indicator_13-1-b','indicator_14-1-b','indicator_15-1-a','indicator_15-2-a','indicator_16-1-a','indicator_16-2-a','indicator_17-1-a','indicator_17-2-a'];
 
       bl = ['bw','by','be','bb','hb','hh','he','mv','ni','nw','rp','sl','sn','st','sh','th'];
 
@@ -563,7 +563,10 @@ var indicatorModel = function (options) {
                     translations.t('a) time series') + ', ' + translations.t('b) sub-index settlements'),//15.1.a
                     translations.t('a) time series') + ', ' + translations.t('d) sub-index inland waters'),//15.1.a
                     translations.t('a) time series') + ', ' + translations.t('e) sub-index coasts/seas'),
-                    translations.t('b) target (min)') + ', ' + translations.t('f) index overall')];//15.1.a
+                    translations.t('b) target (min)') + ', ' + translations.t('f) index overall'),
+                    translations.t('a) time series') + ', ' + translations.t('proportion of sustainable managed stocks in all msy examined stocks'),
+                    translations.t('a) time series') + ', ' + translations.t('proportion of sustainable managed stocks in all msy examined stocks') + ', ' + translations.t('north sea'),
+                    translations.t('a) time series') + ', ' + translations.t('proportion of sustainable managed stocks in all msy examined stocks') + ', ' + translations.t('baltic sea')];//14.1.b
                     // translations.t('a) time series') + ', ' + translations.t('sub-index forests'),//15.1.a,
                     // translations.t('a) time series') + ', ' + translations.t('sub-index farmland'),//15.1.a
                     // translations.t('a) time series') + ', ' + translations.t('sub-index settlements'),//15.1.a
