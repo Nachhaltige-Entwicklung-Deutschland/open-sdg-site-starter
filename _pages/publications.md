@@ -6,6 +6,8 @@ layout: page
 
 ### Indikatorenberichte
 <br>
+[Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2021](https://dns-indikatoren.de/assets/publications/reports/2021.pdf)
+<br><br>
 [Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2018](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00089372)
 <br><br>
 [Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2016](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00066907)
@@ -36,8 +38,8 @@ layout: page
 <br><br>
 ### Auszug aus der Publikation "WISTA - Wirtschaft und Statistik", 1/2017
 <br>
-[Neuauflage der deutschen Nachhaltigkeitsstrategie](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/wista2017_01.pdf)
+[Neuauflage der deutschen Nachhaltigkeitsstrategie](https://dns-indikatoren.de/assets/publications/reports/wista2017_01.pdf)
 <br><br>
 ### Machbarkeitsstudie zur Darstellung der Indikatoren
 <br>
-[Machbarkeitsstudie zur Darstellung der Indikatorender Deutschen Nachhaltigkeitsstrategienach Bundesländern](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/machbarkeitsstudie.pdf)
+[Machbarkeitsstudie zur Darstellung der Indikatorender Deutschen Nachhaltigkeitsstrategienach Bundesländern](https://dns-indikatoren.de/assets/publications/reports/machbarkeitsstudie.pdf)
