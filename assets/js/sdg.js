@@ -1502,7 +1502,7 @@ var indicatorDataStore = function(dataUrl) {
         // 0 -
         // the first dataset is the headline:
         dashedLines = ['Ziel, Sanitärvers','Ziel, Trinkwasser','Ziel, Finanzierun','Ziel, Strukturell'
-                        ,'Target, Sanitärvers','Target, Trinkwasser','Target, Finanzierun','Target, Strukturell']
+                        ,'Target, Sanitärve','Target, Trinkwass','Target, Finanzier','Target, Strukture']
 
         return datasetIndex  > colors.length || dashedLines.indexOf(combinationDescription.substring(0, 17)) != -1 ? [5, 5] : undefined;
       },
