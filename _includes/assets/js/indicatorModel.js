@@ -493,7 +493,7 @@ var indicatorModel = function (options) {
           return '#ffffff';
         }
         else{
-          var color = '#' + getColor(datasetIndex);
+          var color = '#' + getColor(datasetIndexMod);
           return datasetIndex >= colors.length ? pattern.draw('line', color) : color;
           //return '#' + getColor(datasetIndexMod);
         }
