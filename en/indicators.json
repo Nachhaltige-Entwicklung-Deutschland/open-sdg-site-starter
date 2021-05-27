@@ -4,7 +4,7 @@
       "title": "End poverty in all its forms everywhere",
       "indicators": [{
           "id": "1-1-ab",
-          "title": "Material deprivation and severe material deprivation",
+          "title": "Materielle Deprivation sowie erhebliche materielle Deprivation",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/1-1-ab",
@@ -17,21 +17,21 @@
       "title": "End hunger, achieve food security and improved nutrition and promote sustainable agriculture",
       "indicators": [{
           "id": "2-1-a",
-          "title": "Nitrogen surplus in agriculture",
+          "title": "Stickstoffüberschuss der Landwirtschaft",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/2-1-a",
           "status": "complete"
         },{
           "id": "2-1-b",
-          "title": "Organic farming",
+          "title": "Ökologischer Landbau",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/2-1-b",
           "status": "complete"
         },{
           "id": "2-2-a",
-          "title": "Support for good governance in attaining appropriate nutrition globally",
+          "title": "Unterstützung guter Regierungsführung bei der Erreichung einer angemessenen Ernährung weltweit",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/2-2-a",
@@ -44,42 +44,42 @@
       "title": "Ensure healthy lives and promote well-being for all at all ages",
       "indicators": [{
           "id": "3-1-ab",
-          "title": "Premature mortality",
+          "title": "Vorzeitige Sterblichkeit",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/3-1-ab",
           "status": "complete"
         },{
           "id": "3-1-cd",
-          "title": "Smoking rate among adolescents and adults",
+          "title": "Raucherquote von Jugendlichen und Erwachsenen",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/3-1-cd",
           "status": "complete"
         },{
           "id": "3-1-e",
-          "title": "Obesity rate among adolescents",
+          "title": "Adipositasquote von Kindern und Jugendlichen",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/3-1-e",
           "status": "complete"
         },{
           "id": "3-1-f",
-          "title": "Obesity rate among adults",
+          "title": "Adipositasquote von Erwachsenen",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/3-1-f",
           "status": "complete"
         },{
           "id": "3-2-a",
-          "title": "Emissions of air pollutants",
+          "title": "Emissionen von Luftschadstoffen",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/3-2-a",
           "status": "complete"
         },{
           "id": "3-2-b",
-          "title": "Share of the population with excessive exposure to PM<sub>10</sub> in Germany",
+          "title": "Anteil der Bevölkerung mit erhöhter PM<sub>10</sub>-Feinstaubexposition",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/3-2-b",
@@ -99,21 +99,21 @@
       "title": "Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all",
       "indicators": [{
           "id": "4-1-a",
-          "title": "Early school leavers (18 to 24-year-olds leaving school without graduation)",
+          "title": "Frühe Schulabgängerinnen und Schulabgänger",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/4-1-a",
           "status": "complete"
         },{
           "id": "4-1-b",
-          "title": "30 to 34-year-olds with a tertiary or post-secondary non-tertiary level of education",
+          "title": "Akademisch Qualifizierte und beruflich Höherqualifizierte",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/4-1-b",
           "status": "complete"
         },{
           "id": "4-2-ab",
-          "title": "All-day care provision for children",
+          "title": "Ganztagsbetreuung für Kinder",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/4-2-ab",
@@ -126,14 +126,14 @@
       "title": "Achieve gender equality and empower all women and girls",
       "indicators": [{
           "id": "5-1-a",
-          "title": "Gender pay gap",
+          "title": "Verdienstabstand zwischen Frauen und Männern",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/5-1-a",
           "status": "complete"
         },{
           "id": "5-1-bc",
-          "title": "Women in management positions in business",
+          "title": "Frauen in Führungspositionen in der Wirtschaft sowie im öffentlichen Dienst des Bundes",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/5-1-bc",
@@ -147,7 +147,7 @@
           "status": "complete"
         },{
           "id": "5-1-e",
-          "title": "Vocational qualification of women and girls through German development assistance",
+          "title": "Berufliche Qualifizierung von Frauen und Mädchen durch deutsche entwicklungspolitische Zusammenarbeit",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/5-1-e",
@@ -160,21 +160,21 @@
       "title": "Ensure availability and sustainable management of water and sanitation for all",
       "indicators": [{
           "id": "6-1-a",
-          "title": "Phosphorous in flowing waters",
+          "title": "Phosphor in Fließgewässern",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/6-1-a",
           "status": "complete"
         },{
           "id": "6-1-b",
-          "title": "Nitrate in groundwater",
+          "title": "Nitrat im Grundwasser",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/6-1-b",
           "status": "complete"
         },{
           "id": "6-2-ab",
-          "title": "Development cooperation for drinking water and sanitation",
+          "title": "Entwicklungszusammenarbeit für Trinkwasser- und Sanitärversorgung",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/6-2-ab",
@@ -187,21 +187,21 @@
       "title": "Ensure access to affordable, reliable, sustainable and modern energy for all",
       "indicators": [{
           "id": "7-1-ab",
-          "title": "Final energy productivity and primary energy consumption",
+          "title": "Endenergieproduktivität und Primärenergieverbrauch",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/7-1-ab",
           "status": "complete"
         },{
           "id": "7-2-a",
-          "title": "Share of renewable energies in gross final energy consumption",
+          "title": "Anteil erneuerbarer Energien am Brutto-Endenergieverbrauch",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/7-2-a",
           "status": "complete"
         },{
           "id": "7-2-b",
-          "title": "Share of electricity from renewable energy sources in electricity consumption",
+          "title": "Anteil des Stroms aus erneuerbaren Energiequellen am Bruttostromverbrauch",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/7-2-b",
@@ -214,49 +214,49 @@
       "title": "Promote sustained, inclusive and sustainable economic growth, full and productive employment and decent work for all",
       "indicators": [{
           "id": "8-1-a",
-          "title": "Raw material input productivity",
+          "title": "Gesamtrohstoffproduktivität",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/8-1-a",
           "status": "complete"
         },{
           "id": "8-2-ab",
-          "title": "Government deficit, structural deficit",
+          "title": "Staatsdefizit und strukturelles Defizit",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/8-2-ab",
           "status": "complete"
         },{
           "id": "8-2-c",
-          "title": "Government debt",
+          "title": "Schuldenstand",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/8-2-c",
           "status": "complete"
         },{
           "id": "8-3-a",
-          "title": "Gross fixed capital formation in relation to GDP",
+          "title": "Verhältnis der Bruttoanlageinvestitionen zum BIP",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/8-3-a",
           "status": "complete"
         },{
           "id": "8-4-a",
-          "title": "Gross domestic product per capita",
+          "title": "Bruttoinlandsprodukt je Einwohner",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/8-4-a",
           "status": "complete"
         },{
           "id": "8-5-ab",
-          "title": "Employment rate",
+          "title": "Erwerbstätigenquote",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/8-5-ab",
           "status": "complete"
         },{
           "id": "8-6-a",
-          "title": "Number of members of the Textiles Partnership",
+          "title": "Mitglieder des Textilbündnisses",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/8-6-a",
@@ -269,14 +269,14 @@
       "title": "Build resilient infrastructure, promote inclusive and sustainable industrialization and foster innovation",
       "indicators": [{
           "id": "9-1-a",
-          "title": "Private and public expenditure on research and development",
+          "title": "Private und öffentliche Ausgaben für Forschung und Entwicklung",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/9-1-a",
           "status": "complete"
         },{
           "id": "9-1-b",
-          "title": "xxx",
+          "title": "Breitbandausbau",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/9-1-b",
@@ -289,14 +289,14 @@
       "title": "Reduce inequality within and among countries",
       "indicators": [{
           "id": "10-1-a",
-          "title": "Foreign school graduates",
+          "title": "Ausländische Schulabsolventinnen und Schulabsolventen",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/10-1-a",
           "status": "complete"
         },{
           "id": "10-2-a",
-          "title": "Gini coefficient of income distribution",
+          "title": "Gini-Koeffizient des Einkommens nach Sozialtransfers",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/10-2-a",
@@ -309,56 +309,56 @@
       "title": "Make cities and human settlements inclusive, safe, resilient and sustainable",
       "indicators": [{
           "id": "11-1-a",
-          "title": "Expansion of settlement and transport area",
+          "title": "Anstieg der Siedlungs- und Verkehrsfläche",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/11-1-a",
           "status": "complete"
         },{
           "id": "11-1-b",
-          "title": "Loss of open space area",
+          "title": "Freiraumverlust",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/11-1-b",
           "status": "complete"
         },{
           "id": "11-1-c",
-          "title": "Density of settlements",
+          "title": "Siedlungsdichte",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/11-1-c",
           "status": "complete"
         },{
           "id": "11-2-a",
-          "title": "Final energy consumption in goods transport",
+          "title": "Endenergieverbrauch im Güterverkehr",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/11-2-a",
           "status": "complete"
         },{
           "id": "11-2-b",
-          "title": "Final energy consumption in passenger transport",
+          "title": "Endenergieverbrauch im Personenverkehr",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/11-2-b",
           "status": "complete"
         },{
           "id": "11-2-c",
-          "title": "Accessibility of medium-sized and large cities by public transport",
+          "title": "Erreichbarkeit von Mittel- und Oberzentren mit öffentlichen Verkehrsmitteln<br><br>",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/11-2-c",
           "status": "complete"
         },{
           "id": "11-3-a",
-          "title": "Housing cost overload",
+          "title": "Überlastung durch Wohnkosten",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/11-3-a",
           "status": "complete"
         },{
           "id": "11-4-a",
-          "title": "xxx",
+          "title": "Zahl der Objekte in der Deutschen Digitalen Bibliothek",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/11-4-a",
@@ -371,28 +371,28 @@
       "title": "Ensure sustainable consumption and production patterns",
       "indicators": [{
           "id": "12-1-a",
-          "title": "Market share of products certified by publicly managed eco-labelling schemes",
+          "title": "Marktanteil von Produkten mit staatlichen Umweltzeichen",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/12-1-a",
           "status": "complete"
         },{
           "id": "12-1-b",
-          "title": "Energy consumption and CO<sub>2</sub> emissions from consumption",
+          "title": "Globale Umweltinanspruchnahme durch den Konsum privater Haushalte",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/12-1-b",
           "status": "complete"
         },{
           "id": "12-2-a",
-          "title": "EMAS eco-management",
+          "title": "Umweltmanagement EMAS",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/12-2-a",
           "status": "complete"
         },{
           "id": "12-3-ab",
-          "title": "Responsible procurement",
+          "title": "Nachhaltige Beschaffung",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/12-3-ab",
@@ -405,14 +405,14 @@
       "title": "Take urgent action to combat climate change and its impacts",
       "indicators": [{
           "id": "13-1-a",
-          "title": "Greenhouse gas emissions",
+          "title": "Treibhausgasemissionen",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/13-1-a",
           "status": "complete"
         },{
           "id": "13-1-b",
-          "title": "International climate finance for the reduction of greenhouse gases and adaptation to climate change",
+          "title": "Internationale Klimafinanzierung zur Reduktion von Treibhausgasen und zur Anpassung an den Klimawandel",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/13-1-b",
@@ -425,14 +425,14 @@
       "title": "Conserve and sustainably use the oceans, seas and marine resources for sustainable development",
       "indicators": [{
           "id": "14-1-a",
-          "title": "Nitrogen input to the North and the Baltic Sea through German inflows",
+          "title": "Stickstoffeintrag über die Zuflüsse in Nord- und Ostsee",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/14-1-a",
           "status": "complete"
         },{
           "id": "14-1-b",
-          "title": "Proportion of sustainably fished stocks of fish in the North and the Baltic Sea",
+          "title": "Anteil der nachhaltig befischten Fischbestände in Nord- und Ostsee",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/14-1-b",
@@ -445,21 +445,21 @@
       "title": "Protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, and halt and reverse land degradation and halt biodiversity loss",
       "indicators": [{
           "id": "15-1-a",
-          "title": "Biodiversity and landscape quality",
+          "title": "Artenvielfalt und Landschaftsqualität",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/15-1-a",
           "status": "complete"
         },{
           "id": "15-2-a",
-          "title": "Eutrophication of ecosystems",
+          "title": "Eutrophierung der Ökosysteme",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/15-2-a",
           "status": "complete"
         },{
           "id": "15-3-ab",
-          "title": "Preservation or restoration of forests in developing countries under the REDD+ rulebook",
+          "title": "Erhalt bzw. Wiederaufbau von Wäldern unter REDD+ sowie internationaler Bodenschutz",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/15-3-ab",
@@ -472,21 +472,21 @@
       "title": "Promote peaceful and inclusive societies for sustainable development, provide access to justice for all and build effective, accountable and inclusive institutions at all levels",
       "indicators": [{
           "id": "16-1-a",
-          "title": "Criminal offences",
+          "title": "<small>(Text currently only available in German) </small>Straftaten",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/16-1-a",
           "status": "complete"
         },{
           "id": "16-2-a",
-          "title": "Number of projects to secure, register and destroy small arms and light weapons carried out by Germany in affected regions of the world",
+          "title": "<small>(Text currently only available in German) </small>Anzahl der in betroffenen Weltregionen durchgeführten Projekte zur Sicherung, Registrierung und Zerstörung von Kleinwaffen und leichten Waffen durch Deutschland",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/16-2-a",
           "status": "complete"
         },{
           "id": "16-3-ab",
-          "title": "Corruption Perceptions Index (CPI) in Germany and in partner countries of German development assistance",
+          "title": "<small>(Text currently only available in German) </small>Corruption Perception Index in Deutschland sowie in den Partnerländern der deutschen Entwicklungszusammenarbeit",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/16-3-ab",
@@ -499,21 +499,21 @@
       "title": "Strengthen the means of implementation and revitalize the Global Partnership for Sustainable Development",
       "indicators": [{
           "id": "17-1-a",
-          "title": "Expenditure for official development assistance as a proportion of gross national income",
+          "title": "<small>(Text currently only available in German) </small>Anteil öffentlicher Entwicklungsausgaben am Bruttonationaleinkommen<br><br>",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/17-1-a",
           "status": "complete"
         },{
           "id": "17-2-a",
-          "title": "Number of students and researchers from developing countries and LDCs per year",
+          "title": "<small>(Text currently only available in German) </small>Anzahl der Studierenden und Forschenden aus Entwicklungsländern sowie LDCs pro Jahr<br><br>",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/17-2-a",
           "status": "complete"
         },{
           "id": "17-3-a",
-          "title": "Imports from least developed countries",
+          "title": "<small>(Text currently only available in German) </small>Einfuhren aus am wenigsten entwickelten Ländern",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/17-3-a",
