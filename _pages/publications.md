@@ -24,6 +24,8 @@ layout: page
 <br><br>
 ### Daten zum Indikatorenbericht
 <br>
+[Nachhaltige Entwicklung in Deutschland - Daten zum Indikatorenbericht 2021](https://dns-indikatoren.de/assets/publications/reports/daten2021.pdf)
+<br><br>
 [Nachhaltige Entwicklung in Deutschland - Daten zum Indikatorenbericht 2018](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00132993)
 <br><br>
 [Nachhaltige Entwicklung in Deutschland - Daten zum Indikatorenbericht 2016](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00132992)

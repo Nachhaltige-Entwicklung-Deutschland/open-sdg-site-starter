@@ -7,35 +7,37 @@ layout: page
 
 ### Indicator reports
 <br>
-[Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2021](https://dns-indikatoren.de/assets/publications/reports/2021.pdf)
+[Sustainable Development in Germany - Indicator report  2021](https://dns-indikatoren.de/assets/publications/reports/2021.pdf)
 <br><br>
-[Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2018](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00089372)
+[Sustainable Development in Germany - Indicator report  2018](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00089372)
 <br><br>
-[Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2016](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00066907)
+[Sustainable Development in Germany - Indicator report  2016](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00066907)
 <br><br>
-[Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2014](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00023410)
+[Sustainable Development in Germany - Indicator report  2014](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00023410)
 <br><br>
-[Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2012](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00010546)
+[Sustainable Development in Germany - Indicator report  2012](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00010546)
 <br><br>
-[Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2010](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00010549)
+[Sustainable Development in Germany - Indicator report  2010](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00010549)
 <br><br>
-[Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2008](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00010552)
+[Sustainable Development in Germany - Indicator report  2008](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00010552)
 <br><br>
-[Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2006](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00010555)
+[Sustainable Development in Germany - Indicator report  2006](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00010555)
 <br><br>
 ### Data on the indicator report
 <br>
-[Nachhaltige Entwicklung in Deutschland - Daten zum Indikatorenbericht 2018](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00132993)
+[Sustainable Development in Germany - Data on the Indicator report 2021](https://dns-indikatoren.de/assets/publications/reports/daten2021.pdf)
 <br><br>
-[Nachhaltige Entwicklung in Deutschland - Daten zum Indikatorenbericht 2016](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00132992)
+[Sustainable Development in Germany - Data on the Indicator report 2018](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00132993)
 <br><br>
-[Nachhaltige Entwicklung in Deutschland - Daten zum Indikatorenbericht 2014](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00067001)
+[Sustainable Development in Germany - Data on the Indicator report 2016](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00132992)
 <br><br>
-[Nachhaltige Entwicklung in Deutschland - Daten zum Indikatorenbericht 2012](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00010558)
+[Sustainable Development in Germany - Data on the Indicator report 2014](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00067001)
 <br><br>
-[Nachhaltige Entwicklung in Deutschland - Daten zum Indikatorenbericht 2010](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00010572)
+[Sustainable Development in Germany - Data on the Indicator report 2012](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00010558)
 <br><br>
-[Nachhaltige Entwicklung in Deutschland - Daten zum Indikatorenbericht 2008](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00010568)
+[Sustainable Development in Germany - Data on the Indicator report 2010](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00010572)
+<br><br>
+[Sustainable Development in Germany - Data on the Indicator report 2008](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00010568)
 <br><br>
 ### Extract from the publication "WISTA - Economy and Statistics", 1/2017
 <br>
