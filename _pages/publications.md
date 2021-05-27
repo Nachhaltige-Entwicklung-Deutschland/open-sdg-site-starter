@@ -42,4 +42,4 @@ layout: page
 <br><br>
 ### Machbarkeitsstudie zur Darstellung der Indikatoren
 <br>
-[Machbarkeitsstudie zur Darstellung der Indikatorender Deutschen Nachhaltigkeitsstrategienach Bundesländern](https://dns-indikatoren.de/assets/publications/reports/machbarkeitsstudie.pdf)
+[Machbarkeitsstudie zur Darstellung der Indikatorender Deutschen Nachhaltigkeitsstrategie nach Bundesländern](https://dns-indikatoren.de/assets/publications/reports/machbarkeitsstudie.pdf)
