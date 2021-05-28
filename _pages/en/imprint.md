@@ -38,7 +38,7 @@ Federal Statistical Office (Destatis)
 [GitHub](https://github.com/)
 <br><br>
 
-## Disclaimer
+<h2>Disclaimer</h2>
 
 The content of this website is researched and implemented with the utmost care. Nevertheless, it cannot be ruled out that errors occur in the process. Please send any comments and corrections to our e-mail address: [dns-indikatoren@destatis.de](mailto:dns-indikatoren@destatis.de).
 
