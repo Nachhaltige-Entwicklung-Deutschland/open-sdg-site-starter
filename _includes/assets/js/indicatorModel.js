@@ -618,7 +618,7 @@ var indicatorModel = function (options) {
         dashedLines = ['Ziel, Sanitärvers','Ziel, Trinkwasser',
                         'Ziel, Finanzierun','Ziel, Strukturell'
                         ,'Target, (a) Acces','Target, (b) Acces','Target, Access to',
-                        'Target, Finanzier','Target, Strukture',
+                        'Target, Financial','Target, Structura',
                         ]
 
         return datasetIndex  > colors.length || dashedLines.indexOf(combinationDescription.substring(0, 17)) != -1 ? [5, 5] : undefined;
