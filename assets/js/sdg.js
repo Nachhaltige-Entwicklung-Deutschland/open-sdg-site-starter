@@ -1330,7 +1330,8 @@ var indicatorDataStore = function(dataUrl) {
       getPointStyle = function (datasetIndex, combinationDescription) {
         dashedLines = ['Ziel, Sanitärvers','Ziel, Trinkwasser',
                         'Target, (a) Acces', 'Target, (b) Acces', 'Target, Access to',
-                        'Ziel, Finanzierun','Ziel, Strukturell']
+                        'Ziel, Finanzierun','Ziel, Strukturell',
+                        'Target, Financial','Target, Structura']
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
           return dashedLines.indexOf(combinationDescription.substr(0,17)) == -1 ? 'rect' : 'false';
         }
@@ -1503,8 +1504,11 @@ var indicatorDataStore = function(dataUrl) {
 
         // 0 -
         // the first dataset is the headline:
-        dashedLines = ['Ziel, Sanitärvers','Ziel, Trinkwasser','Ziel, Finanzierun','Ziel, Strukturell'
-                        ,'Target, Sanitärve','Target, Trinkwass','Target, Finanzier','Target, Strukture']
+        dashedLines = ['Ziel, Sanitärvers','Ziel, Trinkwasser',
+                        'Ziel, Finanzierun','Ziel, Strukturell'
+                        ,'Target, (a) Acces','Target, (b) Acces','Target, Access to',
+                        'Target, Finanzier','Target, Strukture',
+                        ]
 
         return datasetIndex  > colors.length || dashedLines.indexOf(combinationDescription.substring(0, 17)) != -1 ? [5, 5] : undefined;
       },
