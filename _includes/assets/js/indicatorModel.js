@@ -439,7 +439,9 @@ var indicatorModel = function (options) {
       },
       //---#11 setTargetPointstyle---start-----------------------------------------------------------------------------------------------
       getPointStyle = function (datasetIndex, combinationDescription) {
-        dashedLines = ['Ziel, Sanitärvers','Ziel, Trinkwasser','Ziel, Finanzierun','Ziel, Strukturell']
+        dashedLines = ['Ziel, Sanitärvers','Ziel, Trinkwasser',
+                        'Target, (a) Acces', 'Target, (b) Acces', 'Target, Access to',
+                        'Ziel, Finanzierun','Ziel, Strukturell']
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
           return dashedLines.indexOf(combinationDescription.substr(0,17)) == -1 ? 'rect' : 'false';
         }
