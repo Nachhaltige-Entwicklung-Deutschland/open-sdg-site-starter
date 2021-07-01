@@ -371,7 +371,7 @@
       "title": "Ensure sustainable consumption and production patterns",
       "indicators": [{
           "id": "12-1-a",
-          "title": "Market share of products certified by publicly managed ecolabelling schemes",
+          "title": "Market share of products certified by publicly managed eco-labelling schemes",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/12-1-a",
@@ -432,7 +432,7 @@
           "status": "complete"
         },{
           "id": "14-1-b",
-          "title": "Share of sustainably fished fish stocks of fish in the North Sea and Baltic Sea",
+          "title": "Share of sustainably fished stocks in the North Sea and Baltic Sea",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/14-1-b",
@@ -506,7 +506,7 @@
           "status": "complete"
         },{
           "id": "17-2-a",
-          "title": "Number of students and researchers from developing countries and LDC, per year<br><br>",
+          "title": "Number of students and researchers from developing countries and LDC per year<br><br>",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-site-starter/en/17-2-a",
