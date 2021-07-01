@@ -41,7 +41,7 @@ layout: page
 <br><br>
 ### Feasibility study for the presentation of the indicators
 <br>
-[Feasibility study for the presentation of indicators of German sustainability strategies by federal states (only available in German)](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/machbarkeitsstudie.pdf)
+[Feasibility study for the presentation of indicators of German sustainability strategies by federal states (only available in German)](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/machbarkeitsstudie.pd)
 <br><br>
 ### Special evaluation for selected indicators by territorial status
 <br>
