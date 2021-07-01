@@ -44,7 +44,7 @@ layout: page
 <br><br>
 ### Machbarkeitsstudie zur Darstellung der Indikatoren
 <br>
-[Machbarkeitsstudie zur Darstellung der Indikatorender Deutschen Nachhaltigkeitsstrategie nach Bundesländern](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/machbarkeitsstudie.pdf)
+[Machbarkeitsstudie zur Darstellung der Indikatorender Deutschen Nachhaltigkeitsstrategie nach Bundesländern](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/machbarkeitsstudie.pdf)
 <br><br>
 ### Sonderauswertung für ausgewählte Indikatoren nach Gebietsstand
 <br>

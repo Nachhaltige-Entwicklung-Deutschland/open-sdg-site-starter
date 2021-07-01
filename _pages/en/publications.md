@@ -37,7 +37,7 @@ layout: page
 <br><br>
 ### Extract from the publication "WISTA - Economy and Statistics", 1/2017
 <br>
-[New edition of the German sustainability strategy (only available in German)](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/wista2017_01.pdf)
+[New edition of the German sustainability strategy (only available in German)](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/wista2017_01.pdf)
 <br><br>
 ### Feasibility study for the presentation of the indicators
 <br>
