@@ -1,6 +1,6 @@
 ---
 title: Publikationen
-permalink: /facts_publications/
+permalink: /publications/
 layout: page
 ---
 
