@@ -46,7 +46,7 @@
                       </tr>
 
                       <tr>
-                        <th> <div class=responsiveText>{{ t.summary.year }}</div> </th>
+                        <th> <div class=responsiveText>{{ t.general.year }}</div> </th>
                         {% assign letters = "i,h,g,f,e,d,c,b,a" | split: ',' %}
                         {% assign add = letters.size %}
                         {% for j in letters %}
@@ -76,7 +76,7 @@
                       </tr>
 
                       <tr>
-                        <th> <div class=responsiveText>{{ t.summary.status }}</div> </th>
+                        <th> <div class=responsiveText>{{ t.general.status }}</div> </th>
                         {% for j in letters %}
                           {% assign status = "history_status_year_" | append: j | append: "_" | append: i %}
                           {% if indicator[status] %}
