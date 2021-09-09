@@ -100,7 +100,7 @@
                               <td width="10%" align="center"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ indicator[status] }}.png" alt="{{ indicator[status] }}" class="responsiveWeather" title="{{ status_title }}"/></a> </td>
                             {% endif %}
                           {% elsif j == 'a' %}
-                              <td width="10%" align="center"><p><span class="responsiveText">{{ t.summary.no_assessment }}</span></p></td>
+                              <td width="10%" align="center"><p><span class="responsiveText">{{ t.general.no_assessment }}</span></p></td>
                           {% endif %}
                         {% endfor %}
                         {% for k in (1..add) %}
