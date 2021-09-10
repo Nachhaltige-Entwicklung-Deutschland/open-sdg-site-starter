@@ -18,7 +18,7 @@
       </div>
       <div>
           <h3 class="status-goal">
-            <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ goal_number }}/"><span class="visible-xs">{{ t.general.goal }} {{ goal_number}} - <span>{{ goal_short }}</a>
+            <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ goal_number }}/"><span class="visible-xs">{{ t.summary.goal }} {{ goal_number}} - <span>{{ goal_short }}</a>
           </h3>
           {% assign goal_indicators = site.data.meta | where: 'sdg_goal', goal_number | sort: 'indicator_sort_order' | group_by: 'target_id' %}
             {% for group in goal_indicators %}
@@ -31,12 +31,11 @@
 
                     {% assign indicator_key = idc_sort_order | append: "_" | append: i %}
                     {% assign target_key = indicator_key | append: "_target" %}
-                    {%- assign indicator_name = t.summary[indicator_key] -%}
-        
+
                     <table class="table table-hover tableresp">
                       <tr>
-                        <th width="10%"> <div class=responsiveText>{{ t.general.indicator }}</div> </th>
-                        <th colspan="9"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/{{ idc_sort_order }}/ "><div class=responsiveText>{{ indicator_name }}</div></a> </th> <!--{{ indicator[hty_indicator] }}</div></a> </th>-->
+                        <th width="10%"> <div class=responsiveText>{{ t.summary.indicator }}</div> </th>
+                        <th colspan="9"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/{{ idc_sort_order }}/ "><div class=responsiveText>{{ t.summary[indicator_key] }}</div></a> </th> <!--{{ indicator[hty_indicator] }}</div></a> </th>-->
                       </tr>
                       <tr>
                         <th> <div class=responsiveText>{{ t.summary.target }}</div></th>
