@@ -31,7 +31,7 @@
 
                     {% assign indicator_key = idc_sort_order | append: "_" | append: i %}
                     {% assign target_key = indicator_key | append: "_target" %}
-                    {%- assign indicator_name = t.paststatuses[indicator_key] -%}
+                    {%- assign indicator_name = t.general[indicator_key] -%}
                     <table class="table table-hover tableresp">
 
                       <tr>
