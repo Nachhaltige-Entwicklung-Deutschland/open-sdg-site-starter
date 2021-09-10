@@ -38,7 +38,7 @@
                         <th colspan="9"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/{{ idc_sort_order }}/ "><div class=responsiveText>{{ indicator_name }}</div></a> </th> <!--{{ indicator[hty_indicator] }}</div></a> </th>-->
                       </tr>
                       <tr>
-                        <th> <div class=responsiveText>{{ t.summary.target }} </div></th>
+                        <th> <div class=responsiveText>{{ t.summary.target }} {{ target_key }}</div></th>
                         {% assign target = "history_target_" | append: i %}
                         <td colspan="9"> <div class=responsiveText>{{ t.paststatuses[target_key] }}</div> </td> <!--{{ indicator[target]}}</div> </td>-->
 
