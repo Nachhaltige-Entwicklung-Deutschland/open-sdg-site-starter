@@ -33,10 +33,9 @@
                     {% assign target_key = indicator_key | append: "_target" %}
                     {%- assign indicator_name = t.general[indicator_key] -%}
                     <table class="table table-hover tableresp">
-
                       <tr>
                         <th width="10%"> <div class=responsiveText>{{ t.general.indicator }}</div> </th>
-                        <th colspan="9"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/{{ idc_sort_order }}/ "><div class=responsiveText>{{ indicator_name }}{{ indicator_key }}</div></a> </th> <!--{{ indicator[hty_indicator] }}</div></a> </th>-->
+                        <th colspan="9"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/{{ idc_sort_order }}/ "><div class=responsiveText>{{ indicator_name }}</div></a> </th> <!--{{ indicator[hty_indicator] }}</div></a> </th>-->
                       </tr>
                       <tr>
                         <th> <div class=responsiveText>{{ t.general.target }} </div></th>
