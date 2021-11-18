@@ -7,6 +7,8 @@ layout: page
 
 ### Indicator reports
 <br>
+[Sustainable Development in Germany - Indicator report  2021](https://dns-indikatoren.de/assets/publications/reports/en/2021.pdf)
+<br><br>
 [Sustainable Development in Germany - Indicator report  2018](https://dns-indikatoren.de/assets/publications/reports/en/2018.pdf)
 <br><br>
 [Sustainable Development in Germany - Indicator report  2016](https://dns-indikatoren.de/assets/publications/reports/en/2016.pdf)
@@ -23,6 +25,8 @@ layout: page
 <br><br>
 ### Data on the indicator report
 <br>
+[Sustainable Development in Germany - Data on the Indicator report 2021](https://dns-indikatoren.de/assets/publications/reports/en/daten2021.pdf)
+<br><br>
 [Sustainable Development in Germany - Data on the Indicator report 2018](https://dns-indikatoren.de/assets/publications/reports/en/daten2018.pdf)
 <br><br>
 [Sustainable Development in Germany - Data on the Indicator report 2016](https://dns-indikatoren.de/assets/publications/reports/en/daten2016.pdf)
