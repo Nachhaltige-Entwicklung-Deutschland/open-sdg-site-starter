@@ -106,8 +106,8 @@ menu:
     translation_key: menu.facts_agenda
   #- path: /facts_dns/
     #translation_key: menu.facts_dns
-  - path: /facts_sdg/
-    translation_key: menu.facts_sdg
+  #- path: /facts_sdg/
+  #  translation_key: menu.facts_sdg
   - path: /publications/
     translation_key: menu.publications
 
