@@ -7,8 +7,33 @@
 
 <!---Indicator page-->
 {% if goal_uri %}
+<!---4 Btns if there are two corresponding Indicators-->
+  {% if meta.sdg_indicator2 %}
+    <div class="col-xs-3 col-md-3 col-lg-3">
+      <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.previous }}" class="btn btn-primary btn-block G{{ meta.sdg_goal }}-background" role="button">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i> <b><span class="btn-label hidden-sm hidden-xs">{{ t.general.prev_indicator }}</span></b>
+      </a>
+    </div>
+
+    <div class="col-xs-3 col-md-3 col-lg-3">
+      <a href="https://sustainabledevelopment-germany.github.io/{{ language }}/{{ meta.sdg_indicator | replace: '.', '-' }}" class="btn btn-primary btn-block G{{ meta.sdg_goal }}-background" title="{{ t.general.link_sdg_indicator }}" role="button">
+        <b><span class="btn-label hidden-sm hidden-xs"></span> SDG-{{ meta.sdg_indicator | replace: "/", "" | replace: "-", "."}}</b>
+      </a>
+    </div>
+
+    <div class="col-xs-3 col-md-3 col-lg-3">
+      <a href="https://sustainabledevelopment-germany.github.io/{{ language }}/{{ meta.sdg_indicator2 | replace: '.', '-' }}" class="btn btn-primary btn-block G{{ meta.sdg_goal }}-background" title="{{ t.general.link_sdg_indicator }}" role="button">
+        <b><span class="btn-label hidden-sm hidden-xs"></span> SDG-{{ meta.sdg_indicator2 | replace: "/", "" | replace: "-", "."}}</b>
+      </a>
+    </div>
+
+    <div class="col-xs-3 col-md-3 col-lg-3">
+      <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.next }}" class="btn btn-primary btn-block G{{ meta.sdg_goal }}-background" role="button">
+        <b><span class="btn-label hidden-sm hidden-xs">{{ t.general.next_indicator }}</span></b> <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+    </div>
   <!---3 Btns if there is a corresponding Indicator-->
-  {% if meta.sdg_indicator %}
+  {% elsif meta.sdg_indicator %}
     <div class="col-xs-3 col-md-3 col-lg-4">
       <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.previous }}" class="btn btn-primary btn-block G{{ meta.sdg_goal }}-background" role="button">
         <i class="fa fa-chevron-left" aria-hidden="true"></i> <b><span class="btn-label hidden-sm hidden-xs">{{ t.general.prev_indicator }}</span></b>
