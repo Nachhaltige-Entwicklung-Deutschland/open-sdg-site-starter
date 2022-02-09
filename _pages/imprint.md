@@ -10,7 +10,7 @@ Dieses Impressum gilt auch für unseren [Twitter-Account](https://twitter.com/de
 
 <b>Herausgeber</b> dieser Website ist das Statistische Bundesamt, Zweigstelle Bonn, vertreten durch den Präsidenten
 <br><br>
-<b>Rechtsform</b>: Obere Bundesbehörde im Geschäftsbereich des Bundesministeriums des Innernund für Heimat
+<b>Rechtsform</b>: Obere Bundesbehörde im Geschäftsbereich des Bundesministeriums des Innern und für Heimat
 <br><br>
 <b>Hausanschrift</b>:<br>
 Statistisches Bundesamt<br>
