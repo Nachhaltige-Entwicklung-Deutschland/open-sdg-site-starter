@@ -6,7 +6,7 @@ layout: page
 
 ### Indikatorenberichte
 <br>
-[Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2021](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/de/2021.pdf)
+[Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2021](https://sustainabledevelopment-deutschland.github.io/assets/publications/reports/de/2021.pdf)
 <br><br>
 [Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2018](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00089372)
 <br><br>
@@ -24,7 +24,7 @@ layout: page
 <br><br>
 ### Daten zum Indikatorenbericht
 <br>
-[Nachhaltige Entwicklung in Deutschland - Daten zum Indikatorenbericht 2021](https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/assets/publications/reports/de/daten2021.pdf)
+[Nachhaltige Entwicklung in Deutschland - Daten zum Indikatorenbericht 2021](https://sustainabledevelopment-deutschland.github.io/assets/publications/reports/de/daten2021.pdf)
 <br><br>
 [Nachhaltige Entwicklung in Deutschland - Daten zum Indikatorenbericht 2018](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00132993)
 <br><br>

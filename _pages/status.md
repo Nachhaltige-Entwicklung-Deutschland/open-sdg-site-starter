@@ -8,7 +8,7 @@ Um sich einen schnellen Überblick zum Status der einzelnen Indikatoren zu versc
 
 <b>Indikatoren mit absoluten oder relativen Zielwerten</b>
 
-In den meisten Fällen soll ein Indikator einen konkreten absoluten oder relativen Zielwert in einem Zieljahr erreichen (zum Beispiel Indikator 3.1.a). Bei einer solchen Zielformulierung wird zunächst anhand der letzten sechs Datenpunkte der Durchschnitt der letzten fünf jährlichen Veränderungen ermittelt. Dieser Wert wird für die zukünftige jährliche Entwicklung bis zum Zieljahr unterstellt. Auf dieser Entwicklung aufbauend wird ein hypothetischer Zielwert ermittelt und mit dem vorgegebenen Zielwert des Indikators verglichen. Basierend auf der resultierenden Differenz der beiden Werte wird dem Indikator eines der folgenden Symbole zugewiesen:
+In den meisten Fällen soll ein Indikator einen konkreten absoluten oder relativen Zielwert in einem Zieljahr erreichen (zum Beispiel [Indikator 3.1.a](https://sustainabledevelopment-deutschland.github.io/3-1-ab/)). Bei einer solchen Zielformulierung wird zunächst anhand der letzten sechs Datenpunkte der Durchschnitt der letzten fünf jährlichen Veränderungen ermittelt. Dieser Wert wird für die zukünftige jährliche Entwicklung bis zum Zieljahr unterstellt. Auf dieser Entwicklung aufbauend wird ein hypothetischer Zielwert ermittelt und mit dem vorgegebenen Zielwert des Indikators verglichen. Basierend auf der resultierenden Differenz der beiden Werte wird dem Indikator eines der folgenden Symbole zugewiesen:
 
 <img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/Sonne.png" alt="Sonne" /> &nbsp; Bei Fortsetzung der Entwicklung würde der Zielwert erreicht oder um weniger als 5 % der Differenz zwischen Zielwert und aktuellem Wert verfehlt.
 
@@ -22,7 +22,7 @@ In Ausnahmefällen kann die oben genannte Berechnung der durchschnittlichen Ver�
 
 <b>Indikatoren mit Zielintervallen</b>
 
-Falls kein exakter Zielwert, sondern ein Zielintervall vorgegeben ist (zum Beispiel Indikator 11.1.a), so wird zur Bestimmung des Status die schwächste Zielforderung angenommen, die sich aus dem Zielintervall ergibt. Falls für einen Indikator mehrere Zielwerte vorgegeben sind, die in unterschiedlichen Jahren erreicht werden sollen (zum Beispiel [Indikator 7.2.a](https://sustainabledevelopment-deutschland.github.io/7-2-a/)), so wird für die Bestimmung des Status jeweils das zeitlich nächste Zieljahr verwendet.
+Falls kein exakter Zielwert, sondern ein Zielintervall vorgegeben ist (zum Beispiel [Indikator 11.1.a](https://sustainabledevelopment-deutschland.github.io/11-1-a/)), so wird zur Bestimmung des Status die schwächste Zielforderung angenommen, die sich aus dem Zielintervall ergibt. Falls für einen Indikator mehrere Zielwerte vorgegeben sind, die in unterschiedlichen Jahren erreicht werden sollen (zum Beispiel [Indikator 7.2.a](https://sustainabledevelopment-deutschland.github.io/7-2-a/)), so wird für die Bestimmung des Status jeweils das zeitlich nächste Zieljahr verwendet.
 
 <b>Indikatoren mit gleichbleibender Zielvorgabe in jedem Jahr</b>
 
