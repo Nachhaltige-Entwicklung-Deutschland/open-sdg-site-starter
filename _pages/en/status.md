@@ -27,7 +27,7 @@ If the target is not an exact value but a specific interval (for example indicat
 
 <b>Indicators with a constant target for each year</b>
 
-If a target value or a threshold is not to be reached at some time in the future but to be maintained in every single year (for example [indicator 6.2](https://sustainabledevelopment-deutschland.github.io/en/6-2-ab/)), two pieces of information are combined for evaluation: primarily, the value last achieved and, subordinately, the average change over the last five years.
+If a target value or a threshold is not to be reached at some time in the future but to be maintained in every single year (for example [indicator 6.2.a ,b](https://sustainabledevelopment-deutschland.github.io/en/6-2-ab/)), two pieces of information are combined for evaluation: primarily, the value last achieved and, subordinately, the average change over the last five years.
 
 * If the target value or an even better value was reached in the last year and the average trend does not indicate that there may be a setback, a sun is shown.
 * If the target value or an even better value was reached in the last year but the average trend indicates that there may be a setback, a sun is shown which is, however, partially hidden by a cloud.
