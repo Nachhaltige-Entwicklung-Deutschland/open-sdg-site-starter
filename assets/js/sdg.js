@@ -2653,7 +2653,7 @@ var indicatorView = function (model, options) {
     if (chartInfo.indicatorId ===  'indicator_8-2-ab'){
       var tableUnit = '<br><small>in %</small>';
     }
-    else{
+    else if( chartInfo.footerFields[translations.indicator.unit_of_measurement]){
       var tableUnit =  '<br><small>' + chartInfo.footerFields[translations.indicator.unit_of_measurement] + '</small>';
     }
 
@@ -2739,12 +2739,7 @@ var indicatorView = function (model, options) {
       });
 
       //---Edit from 26.10.2020: Add Unit to table headings
-      if(tableUnit &&  tableUnit != '' && tableUnit != undefined && tableUnit != 'undefined' && typeof(tableUnit) != undefined && typeof(tableUnit) != 'undefined'){
-        currentTable.append('<caption>' + that._model.chartTitle +  tableUnit + '</caption>');
-      } else {
-        currentTable.append('<caption>' + that._model.chartTitle + '</caption>');
-      }
-      //currentTable.append('<caption>' + that._model.chartTitle +  tableUnit + '</caption>');
+      currentTable.append('<caption>' + that._model.chartTitle +  tableUnit + '</caption>');
 
       var table_head = '<thead><tr>';
 
