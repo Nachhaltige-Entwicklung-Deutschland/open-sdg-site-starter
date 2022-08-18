@@ -823,7 +823,7 @@ var indicatorView = function (model, options) {
       });
 
       //---Edit from 26.10.2020: Add Unit to table headings
-      if(tableUnit &&  tableUnit != ''){
+      if(tableUnit &&  tableUnit != '' && tableUnit != undefined){
         currentTable.append('<caption>' + that._model.chartTitle +  tableUnit + '</caption>');
       } else {
         currentTable.append('<caption>' + that._model.chartTitle + '</caption>');
