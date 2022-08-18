@@ -1457,7 +1457,7 @@ var indicatorDataStore = function(dataUrl) {
                     translations.t('a) time series') + ', ' + translations.t('e) sub-index coasts/seas'),
                     translations.t('b) target (min)') + ', ' + translations.t('f) index overall'),
                     translations.t('a) time series') + ', ' + translations.t('proportion of sustainable managed stocks in all msy examined stocks'),
-                    translations.t('b)  target (min)') + ', ' + translations.t('proportion of sustainable managed stocks in all msy examined stocks'),
+                    translations.t('b) target (min)') + ', ' + translations.t('proportion of sustainable managed stocks in all msy examined stocks'),
                     translations.t('a) time series') + ', ' + translations.t('proportion of sustainable managed stocks in all msy examined stocks') + ', ' + translations.t('north sea'),
                     translations.t('a) time series') + ', ' + translations.t('proportion of sustainable managed stocks in all msy examined stocks') + ', ' + translations.t('baltic sea')];//14.1.b
                     // translations.t('a) time series') + ', ' + translations.t('sub-index forests'),//15.1.a,
