@@ -561,12 +561,12 @@ var indicatorModel = function (options) {
                     translations.t('a) time series') + ', ' + translations.t('nh3'),//3.2.a
                     translations.t('a) time series') + ', ' + translations.t('nmvoc'),//3.2.a
                     translations.t('a) time series') + ', ' + translations.t('pm2.5'),//3.2.a
-                    translations.t('a) time series') + ' ' + translations.t('a) sub-index forests'),//15.1.a
+                    translations.t('a) time series') + ', ' + translations.t('a) sub-index forests'),//15.1.a
                     translations.t('a) time series') + ', ' + translations.t('c) sub-index farmland'),//15.1.a
                     translations.t('a) time series') + ', ' + translations.t('b) sub-index settlements'),//15.1.a
                     translations.t('a) time series') + ', ' + translations.t('d) sub-index inland waters'),//15.1.a
                     translations.t('a) time series') + ', ' + translations.t('e) sub-index coasts/seas'),
-                    translations.t('b) target (min)') + ', ' + translations.t('f) index overall'),
+                    //translations.t('b) target (min)') + ', ' + translations.t('f) index overall'),
                     translations.t('a) time series') + ', ' + translations.t('proportion of sustainable managed stocks in all msy examined stocks'),
                     translations.t('b) target (min)') + ', ' + translations.t('proportion of sustainable managed stocks in all msy examined stocks'),
                     translations.t('a) time series') + ', ' + translations.t('proportion of sustainable managed stocks in all msy examined stocks') + ', ' + translations.t('north sea'),
