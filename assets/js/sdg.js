@@ -2070,7 +2070,7 @@ var indicatorView = function (model, options) {
       //view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx);
       //view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr);
       //---#1 GoalDependendMapColor---stop---------------------------
-      console.log("Args: ", args);
+
       view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr, args.title, args.measurementUnit, args.mapTitle); //---#2.2 footerUnitInMapLegend  , args.mapTitle
       //---#2 TimeSeriesNameDisplayedInMaps---stop------------------
 
@@ -2426,7 +2426,8 @@ var indicatorView = function (model, options) {
               var exc = 0;
               var exceptions = ['Deutschland', 'Germany',
                                 'Insgesamt', 'Total',
-                                'Index insgesamt', 'Index overall'];
+                                'Index insgesamt', 'Index overall',
+                                'EU'];
               for (var j=0; j<exceptions.length; j++){
                 if (label.indexOf(exceptions[j]) != -1){
                   exc += 1;
@@ -2738,7 +2739,12 @@ var indicatorView = function (model, options) {
       });
 
       //---Edit from 26.10.2020: Add Unit to table headings
-      currentTable.append('<caption>' + that._model.chartTitle +  tableUnit + '</caption>');
+      if(tableUnit &&  tableUnit != ''){
+        currentTable.append('<caption>' + that._model.chartTitle +  tableUnit + '</caption>');
+      } else {
+        currentTable.append('<caption>' + that._model.chartTitle + '</caption>');
+      }
+      //currentTable.append('<caption>' + that._model.chartTitle +  tableUnit + '</caption>');
 
       var table_head = '<thead><tr>';
 
