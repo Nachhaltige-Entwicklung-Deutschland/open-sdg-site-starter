@@ -823,7 +823,12 @@ var indicatorView = function (model, options) {
       });
 
       //---Edit from 26.10.2020: Add Unit to table headings
-      currentTable.append('<caption>' + that._model.chartTitle +  tableUnit + '</caption>');
+      if(tableUnit{
+        currentTable.append('<caption>' + that._model.chartTitle +  tableUnit + '</caption>');
+      } else {
+        currentTable.append('<caption>' + that._model.chartTitle + '</caption>');
+      }
+      //currentTable.append('<caption>' + that._model.chartTitle +  tableUnit + '</caption>');
 
       var table_head = '<thead><tr>';
 
