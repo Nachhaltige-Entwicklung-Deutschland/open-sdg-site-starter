@@ -10,7 +10,7 @@ Dieses Impressum gilt auch für unseren [Twitter-Account](https://twitter.com/de
 
 <b>Herausgeber</b> dieser Website ist das Statistische Bundesamt, Zweigstelle Bonn, vertreten durch den Präsidenten
 <br><br>
-<b>Rechtsform</b>: Obere Bundesbehörde im Geschäftsbereich des Bundesministeriums des Innern und für Heimat
+<b>Rechtsform</b>: Obere Bundesbehörde im Geschäftsbereich des Bundesministeriums des Innern, für Bau und Heimat
 <br><br>
 <b>Hausanschrift</b>:<br>
 Statistisches Bundesamt<br>
@@ -25,10 +25,10 @@ Postfach 17 03 77<br>
 53029 Bonn
 <br><br>
 Telefon:	+49 (0)611 75-8855<br>
-E-Mail:	[dns-indikatoren@destatis.de](mailto:dns-indikatoren@destatis.de)
+E-Mail:	[sdg-indicators@destatis.de](mailto:sdg-indicators@destatis.de)
 <br><br>
 <b>Redaktion</b>:<br>
-E-Mail:	[dns-indikatoren@destatis.de](mailto:dns-indikatoren@destatis.de)
+E-Mail:	[sdg-indicators@destatis.de](mailto:sdg-indicators@destatis.de)
 <br><br>
 <b>Inhalte/Produktion</b>:<br>
 Statistisches Bundesamt (Destatis)
@@ -39,7 +39,7 @@ Statistisches Bundesamt (Destatis)
 
 ## Haftungsausschluss
 
-Die Inhalte dieser Website werden mit größtmöglicher Sorgfalt recherchiert und implementiert. Fehler im Bearbeitungsvorgang sind dennoch nicht auszuschließen. Hinweise und Korrekturen senden Sie bitte an unsere E-Mail-Adresse: [dns-indikatoren@destatis.de](mailto:dns-indikatoren@destatis.de).
+Die Inhalte dieser Website werden mit größtmöglicher Sorgfalt recherchiert und implementiert. Fehler im Bearbeitungsvorgang sind dennoch nicht auszuschließen. Hinweise und Korrekturen senden Sie bitte an unsere E-Mail-Adresse: [sdg-indicators@destatis.de](mailto:sdg-indicators@destatis.de).
 
 Eine Haftung für die Richtigkeit, Vollständigkeit und Aktualität dieser Website kann trotz sorgfältiger Prüfung nicht übernommen werden. Das Statistische Bundesamt übernimmt insbesondere keinerlei Haftung für eventuelle Schäden oder Konsequenzen, die durch die direkte oder indirekte Nutzung der angebotenen Inhalte entstehen.
 
@@ -124,7 +124,7 @@ E-Mail:	[datenschutzbeauftragter@destatis.de](mailto:datenschutzbeauftragter@des
 
 Für die Standard-Veröffentlichungen des Statistischen Bundesamtes in gedruckter und elektronischer Form sowie für die Inhalte auf dieser Website einschließlich Grafiken sowie der zum Download bereitgestellten Produkte gilt, soweit bei dem jeweiligen Produkt/Internetseite keine ergänzenden oder anderslautenden Angaben ausgewiesen sind:
 
-© Statistisches Bundesamt (Destatis), 2022 <br>
+© Statistisches Bundesamt (Destatis), 2021 <br>
 Vervielfältigung und Verbreitung, auch auszugsweise, mit Quellennachweis gestattet.
 
 Diese Regelung gilt für jede Art der Weiterverbreitung von Texten, Daten und Grafiken durch Dritte, soweit das Statistische Bundesamt Inhaber des Urheberrechts ist und die alleinigen Herausgeberrechte besitzt. Die Weiterverwendung ist sowohl für nicht gewerbliche als auch gewerbliche Zwecke erlaubt. Auch die Verbreitungsform elektronisch, via Internet oder als Print ist nicht eingeschränkt. Es bedarf keiner ausdrücklichen Genehmigung durch unser Haus. Eine Quellenangabe ist jedoch erforderlich. Das Statistische Bundesamt (Destatis) ist als Herausgeber in den Quellennachweis aufzunehmen.
@@ -142,11 +142,10 @@ Quelle: Genaue Bezeichnung der Fundstelle (Tabelle, Publikation, Ausgabe bzw. be
 - <i>Beispiel für Tabelle aus Publikation (Download-Produkt):</i><br>
 Quelle: Daten zur Energiepreisentwicklung – Lange Reihe von Januar 2000 bis November 2017, Tabelle 5.3.1 Erdgas – Indizes, Statistisches Bundesamt (Destatis), 2017<br><br>
 - <i>Beispiel Internet-Auszug:</i><br>
-Quelle: Sterbefälle 2017 nach den 10 häufigsten Todesursachen der ICD-10, Statistisches Bundesamt (Destatis), 2022.<br>
+Quelle: Sterbefälle 2017 nach den 10 häufigsten Todesursachen der ICD-10, Statistisches Bundesamt (Destatis), 2020.<br>
 In http://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Gesundheit/Todesursachen/Tabellen/gestorbene_anzahl.html<br><br>
 - <i>Beispiel für die Zusätze zum Quellennachweis, wenn die Daten nur als Grundlage für eigene Berechnungen verwendet wurden oder Daten als Grundlage für die Erstellung eigener Graphiken dienen:</i><br>
 Quelle: …; eigene Berechnung / …; eigene Darstellung
-
 
 ## Copyright Icons
 © United Nations/[www.globalgoals.org](http://www.globalgoals.org/asset-licence/), [Guidelines for the use](https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/01/SDG_Guidelines_AUG_2019_Final.pdf) (Logos und Pictogramme) / © Bundesregierung, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) (deutsche Übersetzung)

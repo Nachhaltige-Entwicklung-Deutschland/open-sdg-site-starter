@@ -2,7 +2,11 @@
  * TODO:
  * Integrate with high-contrast switcher.
  */
-(function($, L, chroma, window, document, undefined) {
+(function($) {
+
+  if (typeof L === 'undefined') {
+    return;
+  }
 
   // Create the defaults once
   var defaults = {
@@ -15,21 +19,21 @@
       attribution: '[replace me]',
     },
     // Zoom limits.
-    minZoom: 4.5,
-    maxZoom: 11,
+    minZoom: 5,
+    maxZoom: 10,
     // Visual/choropleth considerations.
     colorRange: chroma.brewer.BuGn,
-    noValueColor: '#ffffff',
+    noValueColor: '#66f0f0f0',
     styleNormal: {
       weight: 1,
       opacity: 1,
-      color: '#888',
+      color: '#888888',
       fillOpacity: 0.7
     },
     styleHighlighted: {
       weight: 1,
       opacity: 1,
-      color: '#111',
+      color: '#111111',
       fillOpacity: 0.7
     },
     styleStatic: {
@@ -40,47 +44,63 @@
       dashArray: '5,5',
     },
   };
+
   // Defaults for each map layer.
   var mapLayerDefaults = {
     min_zoom: 0,
     max_zoom: 10,
-    serviceUrl: '[replace me]',
-    nameProperty: '[replace me]',
-    idProperty: '[replace me]',
+    subfolder: 'regions',
+    label: 'indicator.map',
     staticBorders: false,
   };
 
   function Plugin(element, options) {
-    console.log("Options:", options);
 
     this.element = element;
+
+    // Support colorRange map option in string format.
+    if (typeof options.mapOptions.colorRange === 'string') {
+      var colorRangeParts = options.mapOptions.colorRange.split('.'),
+          colorRange = window,
+          overrideColorRange = true;
+      for (var i = 0; i < colorRangeParts.length; i++) {
+        var colorRangePart = colorRangeParts[i];
+        if (typeof colorRange[colorRangePart] !== 'undefined') {
+          colorRange = colorRange[colorRangePart];
+        }
+        else {
+          overrideColorRange = false;
+          break;
+        }
+      }
+      options.mapOptions.colorRange = (overrideColorRange) ? colorRange : defaults.colorRange;
+    }
+
+    // Support multiple colorsets
+    if (Array.isArray(options.mapOptions.colorRange[0])) {
+      this.goalNumber = parseInt(options.indicatorId.slice(options.indicatorId.indexOf('_')+1,options.indicatorId.indexOf('-')));
+      options.mapOptions.colorRange = options.mapOptions.colorRange[this.goalNumber-1];
+      console.log("goal: ",this.goalNumber);
+    }
+
+
     this.options = $.extend(true, {}, defaults, options.mapOptions);
-    //---#20 changeAccessToken---start-----------------------------------------
-    //var d = new Date();
-    //if (d.getDate() > 15){
-      //this.options.tileOptions.accessToken = 'pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjazU1M2lma20wOXJiM25tcTc2ZHU4NjMzIn0.elmNTh89cjLmD2roD7Mcxw'
-    //}
-    //console.log("Options:",this.options.tileOptions.accessToken)
-    //---#20 changeAccessToken---stop------------------------------------------
     this.mapLayers = [];
-    this.geoData = options.geoData;
-    this.geoCodeRegEx = options.geoCodeRegEx;
-    //---#1 GoalDependendMapColor---start--------------------------------------
-    this.goalNr = options.goal;
-    //---#1 GoalDependendMapColor---stop---------------------------------------
-    //---#2.1 caseNoTimeSeriesInCsv---start------------------------------------
-    this.title = options.title;
-
-    //---#2.2 footerUnitInMapLegend---start------------------------------------
-    this.unit1 = options.measurementUnit;
-    //---#2.2 footerUnitInMapLegend---stop-------------------------------------
-
-
-    //---#2.1 caseNoTimeSeriesInCsv---stop-------------------------------------
+    this.indicatorId = options.indicatorId;
+    this._precision = options.precision;
+    this.precisionItems = options.precisionItems;
+    this._decimalSeparator = options.decimalSeparator;
+    this._thousandsSeparator = options.thousandsSeparator;
+    this.currentDisaggregation = 0;
+    this.dataSchema = options.dataSchema;
+    this.viewHelpers = options.viewHelpers;
+    this.modelHelpers = options.modelHelpers;
+    this.chartTitles = options.chartTitles;
+    this.chartSubtitles = options.chartSubtitles;
 
     // Require at least one geoLayer.
-    if (!options.mapLayers.length) {
-      console.log('Map disabled, no mapLayers in options.');
+    if (!options.mapLayers || !options.mapLayers.length) {
+      console.log('Map disabled - please add "map_layers" in site configuration.');
       return;
     }
 
@@ -89,147 +109,68 @@
       this.mapLayers[i] = $.extend(true, {}, mapLayerDefaults, options.mapLayers[i]);
     }
 
+    // Sort the map layers according to zoom levels.
+    this.mapLayers.sort(function(a, b) {
+      if (a.min_zoom === b.min_zoom) {
+        return a.max_zoom - b.max_zoom;
+      }
+      return a.min_zoom - b.min_zoom;
+    });
+
     this._defaults = defaults;
     this._name = 'sdgMap';
-
-    this.valueRange = [_.min(_.pluck(this.geoData, 'Value')), _.max(_.pluck(this.geoData, 'Value'))];
-    //---#1 GoalDependendMapColor---start--------------------------------------
-    //this.colorScale = chroma.scale()
-    this.colorScale = chroma.scale(this.options.colorRange[this.goalNr])
-    //---#1 GoalDependendMapColor---stop---------------------------------------
-      .domain(this.valueRange)
-      //---#1 GoalDependendMapColor---start--------------------------------------
-      //.classes(9);
-      .classes(this.options.colorRange[this.goalNr].length);
-      //---#1 GoalDependendMapColor---stop-------------------------------------
-
-    this.years = _.uniq(_.pluck(this.geoData, 'Year')).sort();
-    this.currentYear = this.years.slice(-1)[0];//[0];
-    //console.log("jq:",this.years.slice(-1)[0]);
-    //---#2.1 caseNoTimeSeriesInCsv---start------------------------------------
-    this.title = translations.t(this.title);
-    //---#2.1 caseNoTimeSeriesInCsv---stop------------------------------------
-    //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
-    this.timeSeries = _.pluck(this.geoData, 'timeseries');
-    this.timeSeriesName = translations.t(this.timeSeries[this.timeSeries.length -1]);
-
-    if (this.unit1){
-      this.unit = this.unit1;
-
-      this.unitName = translations.t('unit') + ": " + translations.t(this.unit);
-    }
-    else {
-      this.unit = _.pluck(this.geoData, 'Units');
-      this.unitName = translations.t('unit') + ": " + translations.t(this.unit[this.unit.length -1]);
-    }
-
-
-    //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
-    this.sex = _.pluck(this.geoData, 'sex');
-    this.sexName = translations.t(this.sex[this.sex.length -1]);
-    this.age = _.pluck(this.geoData, 'age');
-    this.ageName = translations.t(this.age[this.age.length -1]);
-    this.typification = _.pluck(this.geoData, 'typification');
-    this.typificationName = translations.t(this.typification[this.typification.length -1]);
-    this.criminalOffence = _.pluck(this.geoData, 'criminal offences');
-    this.criminalOffenceName = translations.t(this.criminalOffence[this.criminalOffence.length -1]);
-
-    this.mapTitle = options.mapTitle;
-    //---#6 enableMapsForDisagData---start-----------------------------------------------------------------
-    this.startExp = 0;
-    this.reloadCounter = 0; // to avoid multiple search buttons
-    this.hasMapDisaggs = false;
-    //---#6 enableMapsForDisagData---stop------------------------------------------------------------------
 
     this.init();
   }
 
-
   Plugin.prototype = {
 
-
-    //---#6 enableMapsForDisagData---start-----------------------------------------------------------------
-    // Add time series to GeoJSON data and normalize the name and geocode.
-    //prepareGeoJson: function(geoJson, idProperty, nameProperty) {
-    prepareGeoJson: function(geoJson, idProperty, nameProperty, cat, exp) {
-    //---#6 enableMapsForDisagData---stop------------------------------------------------------------------
-      var geoData = this.geoData;
-      geoJson.features.forEach(function(feature) {
-        var geocode = feature.properties[idProperty];
-        var name = feature.properties[nameProperty];
-
-        // First add the time series data.
-        //---#6 enableMapsForDisagData---start-----------------------------------------------------------------
-        //var records = _.where(geoData, { GeoCode: geocode });
-        //Normal version, if there is no Disaggregation-cathegory with more than one expression.
-        if (cat == ''){
-          var records = _.where(geoData, { GeoCode: geocode});
-        }
-
-        //If there is a Disaggregation-cathegory with more than one expression:
-        /*the following part does not work in internet explorer:
-        else{
-          var records = _.where(geoData, { GeoCode: geocode, [cat]: exp });
-        }
-        */
-        else if(cat == 'title'){
-          var records = _.where(geoData, { GeoCode: geocode, title: exp });
-        }
-        else if(cat == 'sex'){
-          var records = _.where(geoData, { GeoCode: geocode, sex: exp });
-        }
-        else if(cat == 'age'){
-          var records = _.where(geoData, { GeoCode: geocode, age: exp });
-        }
-        else if(cat == 'typification'){
-          var records = _.where(geoData, { GeoCode: geocode, typification: exp });
-        }
-
-        //---#6 enableMapsForDisagData---stop------------------------------------------------------------------
-        records.forEach(function(record) {
-          // Add the Year data into the properties.
-          feature.properties[record.Year] = record.Value;
-        });
-
-        // Next normalize the geocode and name.
-        feature.properties.name = translations.t(name);
-        feature.properties.geocode = geocode;
-        delete feature.properties[idProperty];
-        delete feature.properties[nameProperty];
-      });
-      return geoJson;
+    // Update title.
+    updateTitle: function() {
+      if (!this.modelHelpers) {
+        return;
+      }
+      var currentSeries = this.disaggregationControls.getCurrentSeries(),
+          currentUnit = this.disaggregationControls.getCurrentUnit(),
+          newTitle = null;
+          newSubtitle = null;
+      if (this.modelHelpers.GRAPH_TITLE_FROM_SERIES) {
+        newTitle = currentSeries;
+      }
+      else {
+        var currentTitle = $('#map-heading').text();
+        var currentSubtitle = $('#map-subheading').text();
+        newTitle = this.modelHelpers.getChartTitle(currentTitle, this.chartTitles, currentUnit, currentSeries);
+        newSubtitle = this.modelHelpers.getChartTitle(currentSubtitle, this.chartSubtitles, currentUnit, currentSeries);
+      }
+      if (newTitle) {
+        $('#map-heading').text(newTitle);
+      }
+      if (newSubtitle) {
+        $('#map-subheading').text(newSubtitle);
+      }
     },
 
-    //---#6 enableMapsForDisagData---start-----------------------------------------------------------------
-    //Find those disaggregation-categories that have more then one expression in all lines that have geoData
-    findCat: function(){
-      var categories = ['title','sex','age', 'typification'];
-      var category = '';
-
-      for (var i = 0; i<categories.length; i++){
-        if (this.findDisagg(categories[i]).length>1){ //if more than one expression for this categorie exists...
-          var category = categories[i];
-          this.hasMapDisaggs = true;
-        }
-      };
-      return category;
+    // Update footer fields.
+    updateFooterFields: function() {
+      if (!this.viewHelpers) {
+        return;
+      }
+      var currentSeries = this.disaggregationControls.getCurrentSeries(),
+          currentUnit = this.disaggregationControls.getCurrentUnit();
+      this.viewHelpers.updateSeriesAndUnitElements(currentSeries, currentUnit);
+      this.viewHelpers.updateUnitElements(currentUnit);
     },
 
-    // Get the found category and return an array with the corresponding expressions
-    findDisagg: function(category){
-      var expressions = _.pluck(this.geoData, category);
-      //unique = [ ...new Set(expressions) ];//<------------------------does not work in internet explorer
-      var unique = [];
-      for (var i = 0; i<expressions.length; i++){
-        if (unique.indexOf(expressions[i]) == -1){
-          unique.push(expressions[i]);
-        }
-      };
-
-      return unique;
+    // Update precision.
+    updatePrecision: function() {
+      if (!this.modelHelpers) {
+        return;
+      }
+      var currentSeries = this.disaggregationControls.getCurrentSeries(),
+          currentUnit = this.disaggregationControls.getCurrentUnit();
+      this._precision = this.modelHelpers.getPrecision(this.precisionItems, currentUnit, currentSeries);
     },
-
-    //---#6 enableMapsForDisagData---stop------------------------------------------------------------------
 
     // Zoom to a feature.
     zoomToFeature: function(layer) {
@@ -237,33 +178,32 @@
     },
 
     // Build content for a tooltip.
-   getTooltipContent: function(feature) {
-     var tooltipContent = feature.properties.name;
-     var tooltipData = this.getData(feature.properties);
-     if (tooltipData) {
-       tooltipContent += ': ' + tooltipData;
-     }
-     return tooltipContent;
-   },
+    getTooltipContent: function(feature) {
+      var tooltipContent = feature.properties.name;
+      var tooltipData = this.getData(feature.properties);
+      if (typeof tooltipData === 'number') {
+        tooltipContent += ': ' + this.alterData(tooltipData);
+      }
+      return tooltipContent;
+    },
 
-   // Update a tooltip.
-   updateTooltip: function(layer) {
-     if (layer.getTooltip()) {
-       var tooltipContent = this.getTooltipContent(layer.feature);
-       layer.setTooltipContent(tooltipContent);
-     }
-   },
+    // Update a tooltip.
+    updateTooltip: function(layer) {
+      if (layer.getTooltip()) {
+        var tooltipContent = this.getTooltipContent(layer.feature);
+        layer.setTooltipContent(tooltipContent);
+      }
+    },
 
-   // Create tooltip.
-   createTooltip: function(layer) {
-     if (!layer.getTooltip()) {
-       var tooltipContent = this.getTooltipContent(layer.feature);
-       layer.bindTooltip(tooltipContent, {
-         permanent: true,
-       }).addTo(this.map);
-     }
-   },
-
+    // Create tooltip.
+    createTooltip: function(layer) {
+      if (!layer.getTooltip()) {
+        var tooltipContent = this.getTooltipContent(layer.feature);
+        layer.bindTooltip(tooltipContent, {
+          permanent: true,
+        }).addTo(this.map);
+      }
+    },
 
     // Select a feature.
     highlightFeature: function(layer) {
@@ -329,7 +269,6 @@
       });
     },
 
-
     // Update the tooltips of the selected Features on the map.
     updateTooltips: function() {
       var plugin = this;
@@ -337,12 +276,34 @@
         plugin.updateTooltip(selection);
       });
     },
+
+    // Alter data before displaying it.
+    alterData: function(value) {
+      opensdg.dataDisplayAlterations.forEach(function(callback) {
+        value = callback(value);
+      });
+      if (this._precision || this._precision === 0) {
+        value = Number.parseFloat(value).toFixed(this._precision);
+      }
+      if (this._decimalSeparator) {
+        value = value.toString().replace('.', this._decimalSeparator);
+      }
+      if (this._thousandsSeparator) {
+        value = value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, this._thousandsSeparator);
+      }
+      return value;
+    },
+
     // Get the data from a feature's properties, according to the current year.
     getData: function(props) {
-      if (props[this.currentYear]) {
-        return props[this.currentYear];
+      var ret = false;
+      if (props.values && props.values.length && this.currentDisaggregation < props.values.length) {
+        var value = props.values[this.currentDisaggregation][this.currentYear];
+        if (typeof value === 'number') {
+          ret = opensdg.dataRounding(value);
+        }
       }
-      return false;
+      return ret;
     },
 
     // Choose a color for a GeoJSON feature.
@@ -356,132 +317,53 @@
       }
     },
 
+    // Set (or re-set) the choropleth color scale.
+    setColorScale: function() {
+      this.colorScale = chroma.scale(this.options.colorRange)
+        .domain(this.valueRanges[this.currentDisaggregation])
+        .classes(this.options.colorRange.length);
+    },
+
+    // Get the (long) URL of a geojson file, given a particular subfolder.
+    getGeoJsonUrl: function(subfolder) {
+      var fileName = this.indicatorId + '.geojson';
+      return [opensdg.remoteDataBaseUrl, 'geojson', subfolder, fileName].join('/');
+    },
+
     // Initialize the map itself.
     init: function() {
+
       // Create the map.
       this.map = L.map(this.element, {
         minZoom: this.options.minZoom,
         maxZoom: this.options.maxZoom,
         zoomControl: false,
-        zoomSnap: 0.5,
       });
-      this.map.setView([51.9, 10.26],0);
+      this.map.setView([0, 0], 0);
       this.dynamicLayers = new ZoomShowHide();
       this.dynamicLayers.addTo(this.map);
       this.staticLayers = new ZoomShowHide();
       this.staticLayers.addTo(this.map);
 
-      // Add zoom control.
-      this.map.addControl(L.Control.zoomHome());
-
-      // Add full-screen functionality.
-      this.map.addControl(new L.Control.Fullscreen());
-
       // Add scale.
       this.map.addControl(L.control.scale({position: 'bottomright'}));
 
-
       // Add tile imagery.
-      L.tileLayer(this.options.tileURL, this.options.tileOptions).addTo(this.map);
+      if (this.options.tileURL && this.options.tileURL !== 'undefined' && this.options.tileURL != '') {
+        L.tileLayer(this.options.tileURL, this.options.tileOptions).addTo(this.map);
+      }
 
       // Because after this point, "this" rarely works.
       var plugin = this;
 
-      // Add the year slider.
-      this.map.addControl(L.Control.yearSlider({
-        years: this.years,
-        yearChangeCallback: function(e) {
-          plugin.currentYear = new Date(e.time).getFullYear();
-          plugin.updateColors();
-          plugin.updateTooltips();
-          plugin.selectionLegend.update();
-
-        },
-        playReverseButton: true
-      }));
-
-      //---#6 enableMapsForDisagData---start-----------------------------------------------------------------
-      //Add the radio buttons
-      //count up the reloadCounter to avoid multiple builds of the search buttons
-      this.reloadCounter ++;
-      //Create a Button for every expression and add it to the map
-      var cat = plugin.findCat();
-      if (cat != ''){
-        //div.innerHTML = '<label style="background-color: #c0c2c2"><input id="command'+toString(i)+' name="disagg" value="'+i+'"> Auswahl: </label><br>';
-        var exp = plugin.findDisagg(cat);
-        for (var i = 0; i<exp.length; i++) {
-          var label = exp[i];
-          var command = L.control({position: 'bottomleft'});
-          command.onAdd = function (map) {
-              var div = L.DomUtil.create('div', 'command');
-              //set the Button on position 'startExp' to status checked
-              if (i == plugin.startExp){
-                div.innerHTML = '<label style="background-color: #c0c2c2; padding-right: 6px; padding-left: 4px; font-size: 14px"><input id="command'+toString(i)+'" type="radio" name="disagg" value="'+i+'" checked> '+translations.t(label)+' </label><br>';
-              }
-              else{
-                div.innerHTML = '<label style="background-color: #c0c2c2; padding-right: 6px; padding-left: 4px; font-size: 14px"><input id="command'+toString(i)+'" type="radio" name="disagg" value="'+i+'"> '+translations.t(label)+' </label><br>';
-              }
-              return div;
-          };
-          command.addTo(this.map);
-        };
-
-        //set var "expression" to the array(exp) value at position of checked button
-        this.expression = exp[$('input[name="disagg"]:checked').val()];
-
-        //adjust the values for the selectionLegend
-        if (cat == 'sex'){
-          plugin.sexName = translations.t(plugin.expression);
-        }
-        else if (cat == 'title'){
-          plugin.timeSeriesName = translations.t(plugin.expression);
-        }
-        else if (cat == 'age'){
-          plugin.ageName = translations.t(plugin.expression);
-        }
-        else if (cat == 'typification'){
-          plugin.typificationName = translations.t(plugin.expression);
-        }
-
-        //action, when click:
-        $('input[type="radio"]').on('click change', function(e) {
-
-          //console.log(e.type, plugin.startExp, plugin.sexName);
-
-          //set startExp to the intiger of the Position of selectet Expression
-          plugin.startExp = $('input[name="disagg"]:checked').val();
-
-          //alert('You clicked radio!');
-
-          //reload the map with different startExp
-          plugin.map.remove();
-          plugin.init();
-        });
-      }
-      //---#6 enableMapsForDisagData---stop------------------------------------------------------------------
-
-
-
-      //---#7 addMapboxWordmark---start-----------------------------------------------------------------------------------------
-      //var logo = L.control({position: 'bottomleft'});
-      //logo.onAdd = function (map) {
-        //var div = L.DomUtil.create('div', 'logo');
-        //div.innerHTML = '<a href="https://mapbox.com"> <img src="https://g205sdgs.github.io/sdg-indicators/public/mapbox-logo-white.png"/ width=140 height=30> </a>'
-        //return div;
-      //};
-      //logo.addTo(this.map);
-      //---#7 addMapboxWordmark---stop-----------------------------------------------------------------------------------------
-
-      // Add the selection legend.
-      this.selectionLegend = L.Control.selectionLegend(plugin);
-      this.map.addControl(this.selectionLegend);
-
-      // Add the download button.
-      this.map.addControl(L.Control.downloadGeoJson(plugin));
+      // Below we'll be figuring out the min/max values and available years.
+      var minimumValues = [],
+          maximumValues = [],
+          availableYears = [];
 
       // At this point we need to load the GeoJSON layer/s.
       var geoURLs = this.mapLayers.map(function(item) {
-        return $.getJSON(item.serviceUrl);
+        return $.getJSON(plugin.getGeoJsonUrl(item.subfolder));
       });
       $.when.apply($, geoURLs).done(function() {
 
@@ -498,7 +380,37 @@
           geoJsons = [geoJsons];
         }
 
+        // Do a quick loop through to see which layers actually have data.
         for (var i = 0; i < geoJsons.length; i++) {
+          var layerHasData = true;
+          if (typeof geoJsons[i][0].features === 'undefined') {
+            layerHasData = false;
+          }
+          else if (!plugin.featuresShouldDisplay(geoJsons[i][0].features)) {
+            layerHasData = false;
+          }
+          if (layerHasData === false) {
+            // If a layer has no data, we'll be skipping it.
+            plugin.mapLayers[i].skipLayer = true;
+            // We also need to alter a sibling layer's min_zoom or max_zoom.
+            var hasLayerBefore = i > 0;
+            var hasLayerAfter = i < (geoJsons.length - 1);
+            if (hasLayerBefore) {
+              plugin.mapLayers[i - 1].max_zoom = plugin.mapLayers[i].max_zoom;
+            }
+            else if (hasLayerAfter) {
+              plugin.mapLayers[i + 1].min_zoom = plugin.mapLayers[i].min_zoom;
+            }
+          }
+          else {
+            plugin.mapLayers[i].skipLayer = false;
+          }
+        }
+
+        for (var i = 0; i < geoJsons.length; i++) {
+          if (plugin.mapLayers[i].skipLayer) {
+            continue;
+          }
           // First add the geoJson as static (non-interactive) borders.
           if (plugin.mapLayers[i].staticBorders) {
             var staticLayer = L.geoJson(geoJsons[i][0], {
@@ -512,15 +424,7 @@
             plugin.staticLayers.addLayer(staticLayer);
           }
           // Now go on to add the geoJson again as choropleth dynamic regions.
-          var idProperty = plugin.mapLayers[i].idProperty;
-          var nameProperty = plugin.mapLayers[i].nameProperty;
-          //---#6 enableMapsForDisagData---start-----------------------------------------------------------------
-          //var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty);
-          var cat = plugin.findCat();
-          var expression = plugin.expression;
-          var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, cat, expression);//cat, expression);
-          //---#6 enableMapsForDisagData---stop------------------------------------------------------------------
-
+          var geoJson = geoJsons[i][0]
           var layer = L.geoJson(geoJson, {
             style: plugin.options.styleNormal,
             onEachFeature: onEachFeature,
@@ -535,33 +439,117 @@
           layer.geoJsonObject = geoJson;
           // Add the layer to the ZoomShowHide group.
           plugin.dynamicLayers.addLayer(layer);
+
+          // Add a download button below the map.
+          var downloadLabel = translations.t(plugin.mapLayers[i].label)
+          var downloadButton = $('<a></a>')
+            .attr('href', plugin.getGeoJsonUrl(plugin.mapLayers[i].subfolder))
+            .attr('download', '')
+            .attr('class', 'btn btn-primary btn-download')
+            .attr('title', translations.indicator.download_geojson_title + ' - ' + downloadLabel)
+            .attr('aria-label', translations.indicator.download_geojson_title + ' - ' + downloadLabel)
+            .text(translations.indicator.download_geojson + ' - ' + downloadLabel);
+          $(plugin.element).parent().append(downloadButton);
+
+          // Keep track of the minimums and maximums.
+          _.each(geoJson.features, function(feature) {
+            if (feature.properties.values && feature.properties.values.length > 0) {
+              for (var valueIndex = 0; valueIndex < feature.properties.values.length; valueIndex++) {
+                var validEntries = _.reject(Object.entries(feature.properties.values[valueIndex]), function(entry) {
+                  return isMapValueInvalid(entry[1]);
+                });
+                var validKeys = validEntries.map(function(entry) {
+                  return entry[0];
+                });
+                var validValues = validEntries.map(function(entry) {
+                  return entry[1];
+                });
+                availableYears = availableYears.concat(validKeys);
+                if (minimumValues.length <= valueIndex) {
+                  minimumValues.push([]);
+                  maximumValues.push([]);
+                }
+                minimumValues[valueIndex].push(_.min(validValues));
+                maximumValues[valueIndex].push(_.max(validValues));
+              }
+            }
+          });
         }
 
+        // Calculate the ranges of values, years and colors.
+        function isMapValueInvalid(val) {
+          return _.isNaN(val) || val === '';
+        }
 
+        plugin.valueRanges = [];
+        for (var valueIndex = 0; valueIndex < minimumValues.length; valueIndex++) {
+          minimumValues[valueIndex] = _.reject(minimumValues[valueIndex], isMapValueInvalid);
+          maximumValues[valueIndex] = _.reject(maximumValues[valueIndex], isMapValueInvalid);
+          plugin.valueRanges[valueIndex] = [_.min(minimumValues[valueIndex]), _.max(maximumValues[valueIndex])];
+        }
+        plugin.setColorScale();
+
+        plugin.years = _.uniq(availableYears).sort();
+        //Start the map with the most recent year
+        plugin.currentYear = plugin.years.slice(-1)[0];
+
+        // And we can now update the colors.
         plugin.updateColors();
 
-        // Now that we have layers, we can add the search feature.
-        //---#6 enableMapsForDisagData---start-----------------------------------------------------------------
-        //A reload due to Radio-button change creates a second search-Button.
-        //Therefor we need to ask if it is the first load here:
-        if (plugin.reloadCounter == 1){
-        //---#6 enableMapsForDisagData---stop------------------------------------------------------------------
-          plugin.searchControl = new L.Control.Search({
-            layer: plugin.getAllLayers(),
-            propertyName: 'name',
-            textPlaceholder: 'Suche nach Bundesländern',
-            marker: false,
-            moveToLocation: function(latlng) {
-              plugin.zoomToFeature(latlng.layer);
-              if (!plugin.selectionLegend.isSelected(latlng.layer)) {
-                plugin.highlightFeature(latlng.layer);
-                plugin.selectionLegend.addSelection(latlng.layer);
-              }
-            },
-            autoCollapse: true,
-          });
+        // Add zoom control.
+        plugin.zoomHome = L.Control.zoomHome({
+          zoomInTitle: translations.indicator.map_zoom_in,
+          zoomOutTitle: translations.indicator.map_zoom_out,
+          zoomHomeTitle: translations.indicator.map_zoom_home,
+        });
+        plugin.map.addControl(plugin.zoomHome);
 
-        }//---#6 enableMapsForDisagData---start/stop-----------------------------------------------------------------
+        // Add full-screen functionality.
+        plugin.map.addControl(new L.Control.FullscreenAccessible({
+          title: {
+              'false': translations.indicator.map_fullscreen,
+              'true': translations.indicator.map_fullscreen_exit,
+          },
+        }));
+
+        // Add the year slider.
+        plugin.yearSlider = L.Control.yearSlider({
+          years: plugin.years,
+          yearChangeCallback: function(e) {
+            plugin.currentYear = plugin.years[e.target._currentTimeIndex];
+            plugin.updateColors();
+            plugin.updateTooltips();
+            plugin.selectionLegend.update();
+          }
+        });
+        plugin.map.addControl(plugin.yearSlider);
+
+        // Add the selection legend.
+        plugin.selectionLegend = L.Control.selectionLegend(plugin);
+        plugin.map.addControl(plugin.selectionLegend);
+
+        // Add the disaggregation controls.
+        plugin.disaggregationControls = L.Control.disaggregationControls(plugin);
+        plugin.map.addControl(plugin.disaggregationControls);
+        plugin.updateTitle();
+        plugin.updateFooterFields();
+        plugin.updatePrecision();
+
+        // Add the search feature.
+        plugin.searchControl = new L.Control.SearchAccessible({
+          textPlaceholder: 'Search map',
+          autoCollapseTime: 7000,
+          layer: plugin.getAllLayers(),
+          propertyName: 'name',
+          marker: false,
+          moveToLocation: function(latlng) {
+            plugin.zoomToFeature(latlng.layer);
+            if (!plugin.selectionLegend.isSelected(latlng.layer)) {
+              plugin.highlightFeature(latlng.layer);
+              plugin.selectionLegend.addSelection(latlng.layer);
+            }
+          },
+        });
         plugin.map.addControl(plugin.searchControl);
         // The search plugin messes up zoomShowHide, so we have to reset that
         // with this hacky method. Is there a better way?
@@ -569,11 +557,18 @@
         plugin.map.setZoom(plugin.options.maxZoom);
         plugin.map.setZoom(zoom);
 
+        // Hide the loading image.
+        $('.map-loading-image').hide();
+        // Make the map unfocusable.
+        $('#map').removeAttr('tabindex');
+
         // The list of handlers to apply to each feature on a GeoJson layer.
         function onEachFeature(feature, layer) {
-          layer.on('click', clickHandler);
-          layer.on('mouseover', mouseoverHandler);
-          layer.on('mouseout', mouseoutHandler);
+          if (plugin.featureShouldDisplay(feature)) {
+            layer.on('click', clickHandler);
+            layer.on('mouseover', mouseoverHandler);
+            layer.on('mouseout', mouseoutHandler);
+          }
         }
         // Event handler for click/touch.
         function clickHandler(e) {
@@ -613,15 +608,37 @@
             }
           });
           plugin.updateStaticLayers();
+          if (plugin.disaggregationControls) {
+            plugin.disaggregationControls.update();
+          }
         }
         // Event handler for when a geoJson layer is zoomed into.
         function zoomInHandler(e) {
           plugin.updateStaticLayers();
+          if (plugin.disaggregationControls) {
+            plugin.disaggregationControls.update();
+          }
         }
       });
 
-      // Perform some last-minute tasks when the user clicks on the "Map" tab.
-      $('.map .nav-link').click(function() {
+      // Certain things cannot be done until the map is visible. Because our
+      // map is in a tab which might not be visible, we have to postpone those
+      // things until it becomes visible.
+      if ($('#map').is(':visible')) {
+        finalMapPreparation();
+      }
+      else {
+        $('#tab-mapview').parent().click(finalMapPreparation);
+      }
+      function finalMapPreparation() {
+        // Update the series/unit stuff in case it changed
+        // while on the chart/table.
+        plugin.updateTitle();
+        plugin.updateFooterFields();
+        plugin.updatePrecision();
+        // The year slider does not seem to be correct unless we refresh it here.
+        plugin.yearSlider._timeDimension.setCurrentTimeIndex(plugin.yearSlider._timeDimension.getCurrentTimeIndex());
+        // Delay other things to give time for browser to do stuff.
         setTimeout(function() {
           $('#map #loader-container').hide();
           // Leaflet needs "invalidateSize()" if it was originally rendered in a
@@ -629,6 +646,8 @@
           plugin.map.invalidateSize();
           // Also zoom in/out as needed.
           plugin.map.fitBounds(plugin.getVisibleLayers().getBounds());
+          // Set the home button to return to that zoom.
+          plugin.zoomHome.setHomeBounds(plugin.getVisibleLayers().getBounds());
           // Limit the panning to what we care about.
           plugin.map.setMaxBounds(plugin.getVisibleLayers().getBounds());
           // Make sure the info pane is not too wide for the map.
@@ -640,13 +659,35 @@
           }
           // Make sure the map is not too high.
           var heightPadding = 75;
+          var minHeight = 400;
           var maxHeight = $(window).height() - heightPadding;
+          if (maxHeight < minHeight) {
+            maxHeight = minHeight;
+          }
           if ($('#map').height() > maxHeight) {
             $('#map').height(maxHeight);
           }
         }, 500);
-      });
+      };
     },
+
+    featureShouldDisplay: function(feature) {
+      var display = true;
+      display = display && typeof feature.properties.name !== 'undefined';
+      display = display && typeof feature.properties.geocode !== 'undefined';
+      display = display && typeof feature.properties.values !== 'undefined';
+      display = display && typeof feature.properties.disaggregations !== 'undefined';
+      return display;
+    },
+
+    featuresShouldDisplay: function(features) {
+      for (var i = 0; i < features.length; i++) {
+        if (this.featureShouldDisplay(features[i])) {
+          return true;
+        }
+      }
+      return false;
+    }
   };
 
   // A really lightweight plugin wrapper around the constructor,
@@ -658,4 +699,4 @@
       }
     });
   };
-})(jQuery, L, chroma, window, document);
+})(jQuery);
