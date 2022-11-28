@@ -44,7 +44,7 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@3.7.1
       with:
-        REPOSITORY_NAME: DnsUpgradeProduction/DnsUpgradeProduction.github.io
+        REPOSITORY_NAME: sustainabledevelopment-deutschland/sustainabledevelopment-deutschland.github.io
         ACCESS_TOKEN: ${{ secrets.token }}
         BRANCH: main
         FOLDER: _site
