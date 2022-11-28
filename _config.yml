@@ -84,7 +84,7 @@ languages:
   - en
 
 logos:
-  - src: assets/img/de/dns_logo.png
+  - src: assets/img/de/DNS_logo.png
     alt: DESTATIS - Deutsche Nachhaltikeitsstrategie
   - language: en
     src: assets/img/en/DNS_logo.png
