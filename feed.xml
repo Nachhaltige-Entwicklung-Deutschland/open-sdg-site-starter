@@ -3,10 +3,10 @@
   <channel>
     <title>frontpage.heading</title>
     <description>Data Platform Prototype</description>
-    <link>https://sustainabledevelopment-deutschland.github.io/open-sdg-site-starter/</link>
-    <atom:link href="https://sustainabledevelopment-deutschland.github.io/open-sdg-site-starter/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 29 Nov 2022 07:26:21 +0000</pubDate>
-    <lastBuildDate>Tue, 29 Nov 2022 07:26:21 +0000</lastBuildDate>
+    <link>/open-sdg-site-starter/</link>
+    <atom:link href="/open-sdg-site-starter/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 29 Nov 2022 07:32:11 +0000</pubDate>
+    <lastBuildDate>Tue, 29 Nov 2022 07:32:11 +0000</lastBuildDate>
     <generator>Jekyll v3.8.4</generator>
     
   </channel>
