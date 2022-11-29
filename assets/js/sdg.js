@@ -5491,12 +5491,15 @@ $(function() {
 (function () {
   "use strict";
 
+  if (typeof L === 'undefined') {
+    return;
+  }
+
   L.Control.SelectionLegend = L.Control.extend({
 
     initialize: function(plugin) {
       this.selections = [];
       this.plugin = plugin;
-
     },
 
     addSelection: function(selection) {
@@ -5515,115 +5518,103 @@ $(function() {
     },
 
     onAdd: function() {
-      //---#2 TimeSeriesNameDisplayedInMaps---start-----------Disabled an 1.3.21----------------------------------
-      //var controlTpl = '' +
-      if (this.plugin.mapTitle == ''){
-        var controlTpl = ''
-      }
-      else{
-        var controlTpl = '<span id="mapHead">{title}</span>'
-      }
-      //var controlTpl = '<span id="mapHead">{title}</span>' +
-      
-      //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
-        controlTpl += '<ul id="selection-list"></ul>' +
-        '<div class="legend-swatches">' + //bar
-          '{legendSwatches}' +
-        '</div>' +
-        '<div class="legend-values">' + //values
-          '<span class="legend-value left">{lowValue}</span>' +
-          '<span class="arrow left"></span>' +
-          '<span class="legend-value right">{highValue}</span>' +
-          '<span class="arrow right"></span>' +
+      var div = L.DomUtil.create('div', 'selection-legend');
+      this.legendDiv = div;
+      this.resetSwatches();
+      return div;
+    },
+
+    renderSwatches: function() {
+      var controlTpl = '' +
+        '<dl id="selection-list"></dl>' +
+        '<div class="legend-footer">' +
+          '<div class="legend-swatches">' +
+            '{legendSwatches}' +
+          '</div>' +
+          '<div class="legend-values">' +
+            '<span class="legend-value left">{lowValue}</span>' +
+            '<span class="arrow left"></span>' +
+            '<span class="legend-value right">{highValue}</span>' +
+            '<span class="arrow right"></span>' +
+          '</div>' +
         '</div>';
       var swatchTpl = '<span class="legend-swatch" style="width:{width}%; background:{color};"></span>';
-      //---#1 GoalDependendMapColor---start---------------------------------------------------------------------------------------------------------------
-      //var swatchWidth = 100 / this.plugin.options.colorRange.length;
-      var swatchWidth = 100 / this.plugin.options.colorRange[this.plugin.goalNr].length;
-      //var swatches = this.plugin.options.colorRange.map(function(swatchColor) {
-      var swatches = this.plugin.options.colorRange[this.plugin.goalNr].map(function(swatchColor) {
-      //---#1 GoalDependendMapColor---stop----------------------------------------------------------------------------------------------------------------
+      var swatchWidth = 100 / this.plugin.options.colorRange.length;
+      var swatches = this.plugin.options.colorRange.map(function(swatchColor) {
         return L.Util.template(swatchTpl, {
           width: swatchWidth,
           color: swatchColor,
         });
       }).join('');
-      var div = L.DomUtil.create('div', 'selection-legend');
-
-      console.log("Plugin: ", this.plugin);
-
-      //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
-      //---4.3.21: No content but map title in maps
-      var headline = this.plugin.mapTitle
-      // var headline = this.plugin.title
-      // if (this.plugin.timeSeriesName){
-      //   headline += ', <br>' + this.plugin.timeSeriesName;
-      // }
-      // if (this.plugin.sexName){
-      //   headline += ', <br>' + this.plugin.sexName;
-      // }
-      // if (this.plugin.ageName){
-      //   headline += ', <br>' + this.plugin.ageName;
-      // }
-      // if (this.plugin.typificationName){
-      //   headline += ', <br>' + this.plugin.typificationName;
-      // }
-      // if (this.plugin.criminalOffenceName){
-      //   headline += ', <br>' + this.plugin.criminalOffenceName;
-      // }
-      // headline += ', <br>' + this.plugin.unitName;
-      //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
-
-      div.innerHTML = L.Util.template(controlTpl, {
-        lowValue: this.plugin.valueRange[0], // + ' ' + this.plugin.unitName,
-        highValue: this.plugin.valueRange[1],
+      var context = { indicatorId: this.plugin.indicatorId };
+      return L.Util.template(controlTpl, {
+        lowValue: this.plugin.alterData(opensdg.dataRounding(this.plugin.valueRanges[this.plugin.currentDisaggregation][0], context)),
+        highValue: this.plugin.alterData(opensdg.dataRounding(this.plugin.valueRanges[this.plugin.currentDisaggregation][1], context)),
         legendSwatches: swatches,
-
-        //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
-        title: headline,
-        //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
-
       });
-      return div;
+    },
+
+    resetSwatches: function() {
+      this.legendDiv.innerHTML = this.renderSwatches();
     },
 
     update: function() {
       var selectionList = L.DomUtil.get('selection-list');
-      var selectionTpl = '' +
-        '<li class="{valueStatus}">' +
-          '<span class="selection-name">{name}</span>' +
-          //'<span class="selection-value" style="left: {percentage}%;">{value}</span>' +
-          '<span class="selection-bar" style="width: {percentage}%;"></span>' +
+      var selectionTplHighValue = '' +
+        '<dt class="selection-name"><span class="selection-name-background">{name}</span></dt>' +
+        '<dd class="selection-value-item {valueStatus}">' +
+          '<span class="selection-bar" style="background-color: {color}; width: {percentage}%;">' +
+            '<span class="selection-value selection-value-high">' +
+              '<span class="selection-value-high-background">{value}</span>' +
+            '</span>' +
+          '</span>' +
           '<i class="selection-close fa fa-remove"></i>' +
-        '</li>';
+        '</dd>';
+      var selectionTplLowValue = '' +
+      '<dt class="selection-name"><span class="selection-name-background">{name}</span></dt>' +
+      '<dd class="selection-value-item {valueStatus}">' +
+        '<span class="selection-bar" style="background-color: {color}; width: {percentage}%;"></span>' +
+        '<span class="selection-value selection-value-low" style="left: {percentage}%;">' +
+          '<span class="selection-value-low-background">{value}</span>' +
+        '</span>' +
+        '<i class="selection-close fa fa-remove"></i>' +
+      '</dd>';
       var plugin = this.plugin;
-      var valueRange = this.plugin.valueRange;
+      var valueRange = this.plugin.valueRanges[this.plugin.currentDisaggregation];
       selectionList.innerHTML = this.selections.map(function(selection) {
         var value = plugin.getData(selection.feature.properties);
+        var color = '#FFFFFF';
         var percentage, valueStatus;
-        if (value) {
+        var templateToUse = selectionTplHighValue;
+        if (typeof value === 'number') {
+          color = plugin.colorScale(value).hex();
           valueStatus = 'has-value';
           var fraction = (value - valueRange[0]) / (valueRange[1] - valueRange[0]);
           percentage = Math.round(fraction * 100);
+          if (percentage <= 50) {
+            templateToUse = selectionTplLowValue;
+          }
         }
         else {
           value = '';
           valueStatus = 'no-value';
           percentage = 0;
         }
-        return L.Util.template(selectionTpl, {
+        return L.Util.template(templateToUse, {
           name: selection.feature.properties.name,
           valueStatus: valueStatus,
           percentage: percentage,
-          value: value,
+          value: plugin.alterData(value),
+          color: color,
         });
       }).join('');
 
       // Assign click behavior.
-      var control = this;
-      $('#selection-list li').click(function(e) {
-        var index = $(e.target).closest('li').index()
-        var selection = control.selections[index];
+      var control = this,
+          clickSelector = '#selection-list dd';
+      $(clickSelector).click(function(e) {
+        var index = $(clickSelector).index(this),
+            selection = control.selections[index];
         control.removeSelection(selection);
         control.plugin.unhighlightFeature(selection);
       });
@@ -5636,6 +5627,7 @@ $(function() {
     return new L.Control.SelectionLegend(plugin);
   };
 }());
+
 /*
  * Leaflet year Slider.
  *
@@ -5645,6 +5637,10 @@ $(function() {
 (function () {
   "use strict";
 
+  if (typeof L === 'undefined') {
+    return;
+  }
+
   var defaultOptions = {
     // YearSlider options.
     yearChangeCallback: null,
@@ -5653,26 +5649,102 @@ $(function() {
     timeSliderDragUpdate: true,
     speedSlider: false,
     position: 'bottomleft',
-    timeSlider: false,
-    // Player options.
-    playerOptions: {
-      transitionTime: 1000,
-      loop: true,
-      startOver: true
-    },
+    playButton: false,
   };
 
   L.Control.YearSlider = L.Control.TimeDimension.extend({
 
     // Hijack the displayed date format.
     _getDisplayDateFormat: function(date){
-      return date.getFullYear();
+      var time = date.toISOString().slice(0, 10);
+      var match = this.options.years.find(function(y) { return y.time == time; });
+      if (match) {
+        return match.display;
+      }
+      else {
+        return date.getFullYear();
+      }
+    },
+
+    // Override the _createButton method to prevent the date from being a link.
+    _createButton: function(title, container) {
+      if (title === 'Date') {
+        var span = L.DomUtil.create('span', this.options.styleNS + ' timecontrol-' + title.toLowerCase(), container);
+        span.title = title;
+        return span;
+      }
+      else {
+        return L.Control.TimeDimension.prototype._createButton.call(this, title, container);
+      }
+    },
+
+    // Override the _createSliderTime method to give the slider accessibility features.
+    _createSliderTime: function(className, container) {
+      var knob = L.Control.TimeDimension.prototype._createSliderTime.call(this, className, container),
+          control = this,
+          times = this._timeDimension.getAvailableTimes(),
+          years = times.map(function(time) {
+            var date = new Date(time);
+            return control._getDisplayDateFormat(date);
+          }),
+          minYear = years[0],
+          maxYear = years[years.length - 1],
+          knobElement = knob._element;
+
+      control._buttonBackward.title = translations.indicator.map_slider_back;
+      control._buttonBackward.setAttribute('aria-label', control._buttonBackward.title);
+      control._buttonForward.title = translations.indicator.map_slider_forward;
+      control._buttonForward.setAttribute('aria-label', control._buttonForward.title);
+
+      knobElement.setAttribute('tabindex', '0');
+      knobElement.setAttribute('role', 'slider');
+      knobElement.setAttribute('aria-label', translations.indicator.map_slider_keyboard);
+      knobElement.title = translations.indicator.map_slider_mouse;
+      knobElement.setAttribute('aria-valuemin', minYear);
+      knobElement.setAttribute('aria-valuemax', maxYear);
+
+      function updateSliderAttributes() {
+        var yearIndex = 0;
+        if (knob.getValue()) {
+          yearIndex = knob.getValue();
+        }
+        knobElement.setAttribute('aria-valuenow', years[yearIndex]);
+      }
+      updateSliderAttributes();
+
+      // Give the slider left/right keyboard functionality.
+      knobElement.addEventListener('keydown', function(e) {
+        if (e.which === 37 || e.which === 40) {
+          var min = knob.getMinValue();
+          var value = knob.getValue();
+          value = value - 1;
+          if (value >= min) {
+            knob.setValue(value);
+            control._sliderTimeValueChanged(value);
+            updateSliderAttributes();
+          }
+          e.preventDefault();
+        }
+        else if (e.which === 39 || e.which === 38) {
+          var max = knob.getMaxValue();
+          var value = knob.getValue();
+          value = value + 1;
+          if (value <= max) {
+            knob.setValue(value);
+            control._sliderTimeValueChanged(value);
+            updateSliderAttributes();
+          }
+          e.preventDefault();
+        }
+      });
+      return knob;
     }
 
   });
 
   // Helper function to compose the full widget.
   L.Control.yearSlider = function(options) {
+    var years = getYears(options.years);
     // Extend the defaults.
     options = L.Util.extend(defaultOptions, options);
     // Hardcode the timeDimension to year intervals.
@@ -5680,19 +5752,69 @@ $(function() {
       // We pad our years to at least January 2nd, so that timezone issues don't
       // cause any problems. This converts the array of years into a comma-
       // delimited string of YYYY-MM-DD dates.
-      times: options.years.join('-01-02,') + '-01-02',
-      currentTime: new Date(options.years.slice(-1)[0] + '-01-02').getTime(),
+      times: years.map(function(y) { return y.time }).join(','),
+      //Set the map to the most recent year
+      currentTime: new Date(years.slice(-1)[0].time).getTime(),
     });
-    //console.log("ys:",options.years);
-    // Create the player.
-    options.player = new L.TimeDimension.Player(options.playerOptions, options.timeDimension);
     // Listen for time changes.
     if (typeof options.yearChangeCallback === 'function') {
       options.timeDimension.on('timeload', options.yearChangeCallback);
     };
+    // Also pass in another callback for managing the back/forward buttons.
+    options.timeDimension.on('timeload', function(e) {
+      var currentTimeIndex = this.getCurrentTimeIndex(),
+          availableTimes = this.getAvailableTimes(),
+          $backwardButton = $('.timecontrol-backward'),
+          $forwardButton = $('.timecontrol-forward'),
+          isFirstTime = (currentTimeIndex === 0),
+          isLastTime = (currentTimeIndex === availableTimes.length - 1);
+      $backwardButton
+        .attr('disabled', isFirstTime)
+        .attr('aria-disabled', isFirstTime);
+      $forwardButton
+        .attr('disabled', isLastTime)
+        .attr('aria-disabled', isLastTime);
+    });
+    // Pass in our years for later use.
+    options.years = years;
     // Return the control.
     return new L.Control.YearSlider(options);
   };
+
+  function isYear(year) {
+    var parsedInt = parseInt(year, 10);
+    return /^\d+$/.test(year) && parsedInt > 1900 && parsedInt < 3000;
+  }
+
+  function getYears(years) {
+    // Support an array of years or an array of strings starting with years.
+    var day = 2;
+    return years.map(function(year) {
+      var mapped = {
+        display: year,
+        time: year,
+      };
+      // Usually this is a year.
+      if (isYear(year)) {
+        mapped.time = year + '-01-02';
+        // Start over that day variable.
+        day = 2;
+      }
+      // Otherwise we get the year from the beginning of the string.
+      else {
+        var delimiters = ['-', '.', ' ', '/'];
+        for (var i = 0; i < delimiters.length; i++) {
+          var parts = year.split(delimiters[i]);
+          if (parts.length > 1 && isYear(parts[0])) {
+            mapped.time = parts[0] + '-01-0' + day;
+            day += 1;
+            break;
+          }
+        }
+      }
+      return mapped;
+    });
+  }
 }());
 /*
  * Leaflet fullscreenAccessible.
