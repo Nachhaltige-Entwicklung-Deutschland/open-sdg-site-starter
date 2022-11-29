@@ -8,8 +8,7 @@
 # Site settings
 title: frontpage.heading
 description: Data Platform Prototype
-baseurl: "/dns-indicators" # the subpath of your site, e.g. /blog
-url: "https://sustainabledevelopment-deutschland.github.io"
+url: ""
 data_dir: data
 environment: staging
 remote_data_prefix: "https://Nachhaltige-Entwicklung-Deutschland.github.io/open-sdg-data-starter"
