@@ -46,6 +46,6 @@ jobs:
       with:
         REPOSITORY_NAME: sustainabledevelopment-deutschland/sustainabledevelopment-deutschland.github.io
         ACCESS_TOKEN: ${{ secrets.token }}
-        BRANCH: main
+        BRANCH: gh-pages #main
         FOLDER: _site
         CLEAN: true
