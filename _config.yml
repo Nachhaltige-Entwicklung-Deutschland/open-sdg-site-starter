@@ -153,8 +153,8 @@ footer_menu:
     translation_key: menu.contact_us
   - path: menu.twitterPath #https://twitter.com/destatis?lang=de
     translation_key:  general.twitter
-  # - path: /faq/
-  #   translation_key: menu.faq
+  - path: /faq/
+    translation_key: menu.faq
   - path: /imprint/
     translation_key: menu.imprint
 
