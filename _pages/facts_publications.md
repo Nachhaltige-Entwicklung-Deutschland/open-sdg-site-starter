@@ -8,7 +8,7 @@ layout: page
 <br>
 Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2022 - Bericht zum Download folgt in Kürze.
 <br><br>
-[Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2021](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00089372)
+[Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2021](https://dns-indikatoren.de/assets/publications/reports/de/2021.pdf)
 <br><br>
 [Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2018](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00089372)
 <br><br>
@@ -26,7 +26,7 @@ Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2022 - Bericht zum D
 <br><br>
 ### Daten zum Indikatorenbericht
 <br>
-[Nachhaltige Entwicklung in Deutschland - Daten zum Indikatorenbericht 2021](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00089372)
+[Nachhaltige Entwicklung in Deutschland - Daten zum Indikatorenbericht 2021](https://dns-indikatoren.de/assets/publications/reports/de/daten2021.pdf)
 <br><br>
 [Nachhaltige Entwicklung in Deutschland - Daten zum Indikatorenbericht 2018](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00132993)
 <br><br>
@@ -42,12 +42,12 @@ Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2022 - Bericht zum D
 <br><br>
 ### Auszug aus der Publikation "WISTA - Wirtschaft und Statistik", 1/2017
 <br>
-[Neuauflage der deutschen Nachhaltigkeitsstrategie](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00089372)
+[Neuauflage der deutschen Nachhaltigkeitsstrategie](https://dns-indikatoren.de/assets/publications/wista2017_01.pdf)
 <br><br>
 ### Machbarkeitsstudie zur Darstellung der Indikatoren
 <br>
-[Machbarkeitsstudie zur Darstellung der Indikatorender Deutschen Nachhaltigkeitsstrategie nach Bundesländern](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00089372)
+[Machbarkeitsstudie zur Darstellung der Indikatorender Deutschen Nachhaltigkeitsstrategie nach Bundesländern](https://dns-indikatoren.de/assets/publications/machbarkeitsstudie.pdf)
 <br><br>
 ### Sonderauswertung für ausgewählte Indikatoren nach Gebietsstand
 <br>
-[Sonderauswertung für ausgewählte Indikatoren nach Gebietsstand](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00089372)
+[Sonderauswertung für ausgewählte Indikatoren nach Gebietsstand](https://dns-indikatoren.de/assets/publications/DNS_Sonderauswertung_2021.pdf)
