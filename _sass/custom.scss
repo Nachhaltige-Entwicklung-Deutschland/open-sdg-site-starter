@@ -341,3 +341,9 @@ body{
 	}
 
 }
+
+// abbreviation on touch screens
+abbr[title]:hover::after,
+abbr[title]:focus::after {
+  content: ': ' attr(title);
+}
