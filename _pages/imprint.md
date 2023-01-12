@@ -8,7 +8,7 @@ Dieses Impressum gilt auch für unseren [Twitter-Account](https://twitter.com/de
 
 ## Herausgeber
 
-<b>Herausgeber</b> dieser Website ist das Statistische Bundesamt, Zweigstelle Bonn, vertreten durch den Präsidenten
+<b>Herausgeber</b> dieser Website ist das Statistische Bundesamt, Zweigstelle Bonn, vertreten durch die Präsidentin
 <br><br>
 <b>Rechtsform</b>: Obere Bundesbehörde im Geschäftsbereich des Bundesministeriums des Innern, für Bau und Heimat
 <br><br>
@@ -109,7 +109,7 @@ Liegt aus Ihrer Sicht ein Verstoß gegen die datenschutzrechtlichen Bestimmungen
 
 ## Kontaktdaten des Verantwortlichen
 
-Statistisches Bundesamt,<br>Gustav-Stresemann-Ring 11,<br>65189 Wiesbaden,<br> vertreten durch den [Präsidenten](https://www.destatis.de/DE/Ueber-uns/Leitung-Organisation/_inhalt.html#sprg240100).
+Statistisches Bundesamt,<br>Gustav-Stresemann-Ring 11,<br>65189 Wiesbaden,<br> vertreten durch die [Präsidentin](https://www.destatis.de/DE/Ueber-uns/Leitung-Organisation/_inhalt.html#sprg240100).
 
 ## Kontaktdaten des/der behördlichen Datenschutzbeauftragten
 
@@ -118,7 +118,7 @@ Da uns Ihr Vertrauen wichtig ist, möchten wir Ihnen jederzeit Rede und Antwort 
 Datenschutzbeauftragte im Statistischen Bundesamt<br>
 65180 Wiesbaden<br>
 Telefon:	+49 (0)611 75-4449<br>
-E-Mail:	[datenschutzbeauftragter@destatis.de](mailto:datenschutzbeauftragter@destatis.de)
+E-Mail:	[datenschutz@destatis.de](mailto:datenschutz@destatis.de)
 
 ## Copyright allgemein
 
