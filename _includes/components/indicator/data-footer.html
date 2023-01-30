@@ -9,15 +9,28 @@
 {% endfor %}
 {% assign uniqSources = sources_list | uniq | join: ", " %}
 
+
+{% if page.indicator.special_evaluation == true %}
+  {% if sources_list.size < 2 %}
+    {% assign source = page.t.indicator.special_eval | append: ' ' | append: page.t.indicator.source %}
+  {% else %}
+    {% assign source = page.t.indicator.special_eval | append: ' ' | append: page.t.indicator.sources %}
+  {% endif %}
+{% else %}
+  {% if sources_list.size < 2 %}
+    {% assign source = page.t.indicator.source %}
+  {% else %}
+    {% assign source = page.t.indicator.sources %}
+  {% endif %}
+{% endif %}
+
+
+
 <div id="{{ include.footerId | default: 'selectionChartFooter' }}" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         {% if uniqSources != '' %}
-          {% if sources_list.size < 2 %}
-            <dt><u>{{ page.t.indicator.source }}</u>:</dt>
-          {% else %}
-            <dt><u>{{ page.t.indicator.sources }}</u>:</dt>
-          {% endif %}
+          <dt><u>{{ source }}</u>:</dt>
           <dd>{{ uniqSources }}</dd>
         {% endif %}
 
