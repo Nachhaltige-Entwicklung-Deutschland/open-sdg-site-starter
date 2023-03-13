@@ -112,14 +112,16 @@ menu:
     dropdown:
       - path: /about_platform/
         translation_key: menu.about_this_site
-      - path: /about_guidance/
+      - path: /guidance/
         translation_key: menu.guidance
-  - translation_key: menu.facts
+  - translation_key: menu.publications
     dropdown:
-      - path: /facts_agenda/
-        translation_key: menu.facts_agenda
-  - path: /facts_publications/
-    translation_key: menu.publications
+      - path: /publications_reports/
+        translation_key: menu.reports
+      - path: /publications_strategy/
+        translation_key: menu.sustainable_development_strategy
+      - path: /publications_other/
+        translation_key: menu.other_publications
   - path: menu.pathtosdg
     translation_key: menu.sdglogo
 
