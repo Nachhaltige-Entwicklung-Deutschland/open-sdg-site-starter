@@ -15,7 +15,7 @@ Beide Indikatorensets sind nach den 17 Zielen der Agenda 2030 der Vereinten Nati
 <div class="container" style="padding-left: 0px;">
 <div class="row">
 <div class="col-xs-12 col-md-6 col-lg-6" style="padding-left: 100px; padding-right: 100px;">
-<img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/sdgIconsInvert.PNG" alt="Abbildung 1: SDG Icons inverted" class="responsiveImg" style="width: 100%;">
+<img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/sdgIconsInvert.PNG" alt="SDG Icons inverted" class="responsiveImg" style="width: 100%;">
 <small> Abb. 1: 17 invertierte SDG-Symbole der Vereinten Nationen und das N im Kreis aus der Deutschen Nachhaltigkeitsstrategie, eingesetzt auf der <b>DNS-Online Plattform</b></small>
 </div>
 
@@ -29,7 +29,7 @@ Beide Indikatorensets sind nach den 17 Zielen der Agenda 2030 der Vereinten Nati
 <h3>Ziel und Hintergrund</h3>
 Die im Rahmen der Deutschen Nachhaltigkeitsstrategie zu erreichenden Zielwerte, die Indikatoren, ihre Datengrundlagen und Berechnungen sowie die grafischen Darstellungen sind von der Bundesregierung beschlossen worden. Hierbei war auch das Statistische Bundesamt beratend beteiligt. Im Aufbau der Deutschen Nachhaltigkeitsstrategie und der Auswahl der Indikatoren orientiert sich die Bundesregierung inhaltlich an der [Agenda 2030](https://dns-indikatoren.de/facts_agenda/) der Vereinten Nationen und deren 17 Zielen für eine nachhaltige Entwicklung (Sustainable Development Goals, SDGs). Demzufolge wurde, thematisch passend, mindestens ein Indikator zu jedem der 17 Ziele in die Deutsche Nachhaltigkeitsstrategie mitaufgenommen.
 
-Bereits seit dem Jahr 2006 ist das Statistische Bundesamt damit beauftragt, die Messung der nationalen Indikatoren, fachlich unabhängig, mit eigenen Daten aus der amtlichen Statistik zu stützen und die Integration von Daten anderer Behörden zu koordinieren. Aus diesem Grund veröffentlicht das Statistische Bundesamt zusätzlich zu den nun auf der Online Plattform veröffentlichten Indikatoren zur Nachhaltigkeitsstrategie, im zweijährigen Rhythmus, einen [Indikatorenbericht](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Nachhaltigkeitsindikatoren/Deutsche-Nachhaltigkeit/_inhalt.html#sprg352504)) für die Deutsche Nachhaltigkeitsstrategie (zuletzt 2021).
+Bereits seit dem Jahr 2006 ist das Statistische Bundesamt damit beauftragt, die Messung der nationalen Indikatoren, fachlich unabhängig, mit eigenen Daten aus der amtlichen Statistik zu stützen und die Integration von Daten anderer Behörden zu koordinieren. Aus diesem Grund veröffentlicht das Statistische Bundesamt zusätzlich zu den nun auf der Online Plattform veröffentlichten Indikatoren zur Nachhaltigkeitsstrategie, im zweijährigen Rhythmus, einen [Indikatorenbericht](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Nachhaltigkeitsindikatoren/Deutsche-Nachhaltigkeit/_inhalt.html#sprg352504)) für die Deutsche Nachhaltigkeitsstrategie (zuletzt 2022).
 
 
 <h3>Struktur der DNS-Online Plattform</h3>
