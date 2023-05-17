@@ -107,4 +107,4 @@ Einen Direktlink zur Startseite der SDG-Online Plattform finden Sie oben rechts 
 
 <h3>Technischer Hintergrund</h3>
 Um die Daten aufbereitet darstellen zu können, bietet das Open-Source-Projekt Open SDG auf GitHub eine normierte Vorlage einer Online Plattform.
-Mehr dazu finden Sie unter <a href="dns-indikatoren.de/about_guidance/">Technische Hinweise</a>.
+Mehr dazu finden Sie unter <a href="https://dns-indikatoren.de/about_guidance/">Technische Hinweise</a>.
