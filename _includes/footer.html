@@ -17,7 +17,7 @@
                         {% if site.footer_menu %}
                         {% for item in site.footer_menu %}
                         {%- assign item_path = item.path | t -%}
-                        {%- assign item_alert = item.alert | t -%}
+                        {% assign item_alert = item.alert | t %}
                         <li>
                             {% if item_path contains ":" %}
                               <a href="{{ item_path }}" target="_blank" {% if item_alert %} onclick="return confirm_alert('{{ item_alert }}', '{{ language }}');"{% endif %}>{{ item.translation_key | t }}</a>
