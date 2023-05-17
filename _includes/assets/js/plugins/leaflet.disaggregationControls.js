@@ -1,3 +1,9 @@
+/*
+ * Leaflet disaggregation controls.
+ *
+ * This is a Leaflet control designed replicate the disaggregation
+ * controls that are in the sidebar for tables and charts.
+ */
 (function () {
     "use strict";
 

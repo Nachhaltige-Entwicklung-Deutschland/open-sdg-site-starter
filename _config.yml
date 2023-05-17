@@ -112,7 +112,9 @@ menu:
     dropdown:
       - path: /about_platform/
         translation_key: menu.about_this_site
-      - path: /guidance/
+      - path: /about_joint_action/
+        translation_key: menu.community
+      - path: /about_guidance/
         translation_key: menu.guidance
   - translation_key: menu.publications
     dropdown:
@@ -126,23 +128,17 @@ menu:
     translation_key: menu.sdglogo
 
 frontpage_cards:
-    -
-      # This controls the color of the line at the top of the card.
-      rule_color: orange
-      # This sets the title of the card.
-      title: frontpage.download_all
-      # This sets the content of the card. Markdown is supported. Note that all
-      # internal links should be relative to the frontpage. For example, instead
-      # of [link](/path) you should use [link](path).
-      #content: |
-      #  * List item
-      #  * List item with [link](https://example.com)
-      # This displays any file in the `_includes` folder.
+    - rule_color: grey
+      title: ''
       include: components/download-all-data.html
-      # This controls the text for a call-to-action button.
-      #button_label: My button text
-      # This controls the URL the button links to.
-      #button_link: https://example.com
+    - rule_color: grey
+      title: ''
+      include: components/community.html
+    - rule_color: grey
+      title: ''
+      include: components/government.html
+
+
 
 contrast_type: single
 
@@ -155,8 +151,7 @@ footer_menu:
     translation_key: menu.contact_us
   - path: menu.twitterPath #https://twitter.com/destatis?lang=de
     translation_key:  general.twitter
-  # - path: /faq/
-  #   translation_key: menu.faq
+    alert: twitter
   - path: /imprint/
     translation_key: menu.imprint
 
@@ -236,8 +231,8 @@ map_options:
   disaggregation_controls: true
 
   # Control the limits on zooming in/out in the map:
-  minZoom: 5
-  maxZoom: 10
+  minZoom: 0
+  maxZoom: 11
   # If you would like to use tile (background) imagery, use these:
   tileURL: https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
   tileOptions:
