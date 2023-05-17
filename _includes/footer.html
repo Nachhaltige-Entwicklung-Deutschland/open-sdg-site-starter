@@ -22,7 +22,7 @@
                             {% if item_path contains ":" %}
                               <a href="{{ item_path }}" target="_blank" {% if item_alert %} onclick="return confirm_alert('{{ item_alert }}', '{{ language }}');"{% endif %}>{{ item.translation_key | t }}</a>
                             {% else %}
-                            {%- assign item_path_first = item_path | slice: 0 %}
+                              {%- assign item_path_first = item_path | slice: 0 %}
                             {%- if item_path_first == '/' -%}
                             {%- assign item_path = item_path | slice: 1, item_path.size -%}
                             {%- endif -%}
