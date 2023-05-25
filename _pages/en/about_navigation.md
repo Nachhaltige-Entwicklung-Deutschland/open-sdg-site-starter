@@ -55,7 +55,7 @@ The “Data sources“ tab provides links to the organisation(s) that submitted 
 
 There are numerous overlaps between the indicators of the UN Sustainable Development Goals and the indicators of the German Sustainable Development Strategy (DNS).
 
-About half of the DNS- indicators are similar to or congruent with the SDG- indicators. Both sets of indicators are also structured according to the 17 goals of the United Nations 2030 Agenda, as the DNS represents the national implementation ofGerman Sustainable Development Strategy is aimed at implementing the global agenda. at the national level. More information on the DNSGerman strategy can be found in the “Useful information“ section „Interesting Facts“ andunder [DNS](https://sustainabledevelopment-germany.github.io/en/sdg-indicators/facts_dns/).
+About half of the DNS- indicators are similar to or congruent with the SDG- indicators. Both sets of indicators are also structured according to the 17 goals of the United Nations 2030 Agenda, as the DNS represents the German Sustainable Development Strategy is aimed at implementing the global agenda. at the national level. More information on the DNSGerman strategy can be found in the “Useful information“ section „Interesting Facts“ andunder [DNS](https://sustainabledevelopment-germany.github.io/en/sdg-indicators/facts_dns/).
 
 However, there are also differences. The names of the DNS indicators and especially their numbering are not identical to those of the SDG indicators. If an SDG indicator is comparable to a DNS indicator, this is indicated by a button with a direct link to the respective indicator (Fig. 3).
 
