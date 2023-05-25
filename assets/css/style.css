@@ -3723,9 +3723,7 @@ abbr[title]:focus::after {
 
 .flex-container {
   display: flex;
-  flex-wrap: wrap;
-  font-size: 30px;
-  text-align: center; }
+  flex-wrap: wrap; }
 
 /* Responsive layout - makes a one column-layout instead of a two-column layout */
 @media (max-width: 500px) {
