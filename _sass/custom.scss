@@ -348,6 +348,29 @@ abbr[title]:focus::after {
   content: ': ' attr(title);
 }
 
+
+// for multiple levels of dropdowns
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+  margin-left: 0px;
+}
+
+.dropdown-menu li:hover > ul
+{
+    /* On hover, display the next level's menu */
+    display: inline;
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+    margin-left: 0px;
+}
+
 .container_frontpage {
   display: grid;
   grid-template-columns: 95px 1fr;
@@ -361,6 +384,7 @@ abbr[title]:focus::after {
     font-size: 290%;
     color: #b90e0a;
 }
+
 
 * {
   box-sizing: border-box;

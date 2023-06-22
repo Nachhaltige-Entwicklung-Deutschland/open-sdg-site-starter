@@ -210,7 +210,7 @@ plugins:
 
 # Use a remote Jekyll theme.
 #remote_theme: brockfanning/open-sdg@alter-data-display-decimal-fix
-remote_theme: open-sdg/open-sdg@2.1.1
+remote_theme: open-sdg/open-sdg@2.2.0
 
 goal_image_base: https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns
 
@@ -299,3 +299,9 @@ map_layers:
     staticBorders: false
     subfolder: kreise
     label: indicator.counties
+
+progressive_web_app:
+  enabled: true
+  name: DNS Indikatoren
+  short_name: DNS App
+  precaching: true
