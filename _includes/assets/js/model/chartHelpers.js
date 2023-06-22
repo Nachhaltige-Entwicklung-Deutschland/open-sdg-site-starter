@@ -380,6 +380,8 @@ function makeDataset(years, rows, combination, labelFallback, color, background,
   var dataset = getBaseDataset();
   return Object.assign(dataset, {
     label: getCombinationDescription(combination, labelFallback),
+    combination: combination,
+    //type: getCombinationType(combination, labelFallback, mixedTypes),
     disaggregation: combination,
     borderColor: color,
     backgroundColor: background,
@@ -408,8 +410,26 @@ function getBaseDataset() {
     spanGaps: true,
     showLine: true,
     maxBarThickness: 150,
+    //type: 'x',
   });
 }
+
+// /**
+//  * @param {Object} combination Key/value representation of a field combo
+//  * @param {string} fallback
+//  * @param {Object} mixedTypes combinations and the respective charttype
+//  * @return {string} type of chart for the given combination
+//  */
+// function getCombinationType(combination, fallback, mixedTypes) {
+//   var combi = getCombinationDescription(combination, fallback);
+//   if (mixedTypes.length === 0) {
+//     return 'line';
+//   }
+//   else {
+//     console.log("MT", typeof mixedTypes);
+//     return 'bar';//mixedTypes.find(item => item.combination === combi).chartType;
+//   }
+// }
 
 /**
  * @param {Object} combination Key/value representation of a field combo
@@ -470,6 +490,7 @@ function makeHeadlineDataset(years, rows, label, showLine, spanGaps, colors) {
     data: prepareDataForDataset(years, rows),
     showLine: showLine,
     spanGaps: spanGaps,
+    //type: getCombinationType([], '', mixedTypes),
   });
 }
 
