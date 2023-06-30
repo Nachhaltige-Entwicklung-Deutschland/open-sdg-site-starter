@@ -212,7 +212,7 @@ plugins:
 #remote_theme: brockfanning/open-sdg@alter-data-display-decimal-fix
 remote_theme: open-sdg/open-sdg@2.2.0
 
-goal_image_base: https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns
+goal_image_base: https://sdg-indikatoren.de/assets/img/goals/dns
 
 accessible_tabs: true
 accessible_charts: true
@@ -287,13 +287,13 @@ map_options:
     dashArray: 5,5
 
 map_layers:
-  - serviceUrl:  https:///Nachhaltige-Entwicklung-Deutschland.github.io/open-sdg-site-starter/assets/maps/boundariesKrs.geojson
+  - serviceUrl:  https:///dns-indikatoren.de/assets/maps/boundariesKrs.geojson
     min_zoom: 8
     max_zoom: 11
     staticBorders: true
     subfolder: kreise
     label: indicator.counties
-  - serviceUrl:  https:///Nachhaltige-Entwicklung-Deutschland.github.io/open-sdg-site-starter/assets/maps/boundaries.geojson
+  - serviceUrl:  https:///dns-indikatoren.de/assets/maps/boundaries.geojson
     min_zoom: 0
     max_zoom: 7
     staticBorders: true
