@@ -28,4 +28,4 @@ For some indicators data are available at the national level, but the underlying
 This makes it necessary to look for new data sources, link existing sources or model data. The relevant units at the Federal Statistical Office (Destatis) are continuously involved in this process.
 
 ## Can other countries copy this website?
-Yes. The website can be freely used by other countries to create their own online platform. The terms and conditions for using GitHub apply. For more information, please see [Technical instructions](https://g205sdgs.github.io/sdg-indicators/en/guidance/).
+Yes. The website can be freely used by other countries to create their own online platform. The terms and conditions for using GitHub apply. For more information, please see [Technical instructions](https://dns-indicators/about_guidance/).
