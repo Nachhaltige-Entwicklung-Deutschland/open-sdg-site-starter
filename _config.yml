@@ -97,35 +97,48 @@ date_formats:
     language: en
     format: "%b %d, %Y"
 
-
 # Menu
 menu:
-  - path: /
-    translation_key: general.seventeen_goals
-  - translation_key: menu.status_title
+  - translation_key: menu.1_start
     dropdown:
-      - path: /status_summary/
-        translation_key: menu.status_summary
+    - path: /
+      translation_key: menu.1_start_2_dns_platform
+    - path: menu.1_start_2_sdg_platform_path
+      translation_key: menu.1_start_2_sdg_platform
+  - translation_key: menu.1_about
+    dropdown:
+    - translation_key: menu.1_about_2_dns
+      dropdown:
+      - path: /about/dns/monitoring/
+        translation_key: menu.1_about_2_dns_3_indicators
+      - path: /about/dns/publications/
+        translation_key: menu.1_about_2_dns_3_publications
+    - translation_key: menu.1_about_2_sdg
+      dropdown:
+      - path: menu.1_about_2_sdg_3_indicators_path
+        translation_key: menu.1_about_2_sdg_3_indicators
+      - path: menu.1_about_2_sdg_3_publications_path
+        translation_key: menu.1_about_2_sdg_3_publications
+  - translation_key: menu.1_status
+    dropdown:
       - path: /status/
-        translation_key: menu.status
-  - translation_key: menu.about
+        translation_key: menu.1_status_2_methodology
+      - path: /status_summary/
+        translation_key: menu.1_status_2_overview
+  - translation_key: menu.1_strategy
     dropdown:
-      - path: /about_platform/
-        translation_key: menu.about_this_site
-      - path: /about_joint_action/
-        translation_key: menu.community
-      - path: /about_guidance/
-        translation_key: menu.guidance
-  - translation_key: menu.publications
+    - path: /strategy/federal_government/
+      translation_key: menu.1_strategy_2_government
+    - path: /strategy/laender/
+      translation_key: menu.1_strategy_2_laender
+  - translation_key: menu.1_help
     dropdown:
-      - path: /publications_reports/
-        translation_key: menu.reports
-      - path: /publications_strategy/
-        translation_key: menu.sustainable_development_strategy
-      - path: /publications_other/
-        translation_key: menu.other_publications
-  - path: menu.pathtosdg
-    translation_key: menu.sdglogo
+    - path: /help/navigation/
+      translation_key: menu.1_help_2_navigation
+    - path: /help/guidance/
+      translation_key: menu.1_help_2_guidance
+    - path: /help/faq/
+      translation_key: menu.1_help_2_faq
 
 frontpage_cards:
     - rule_color: grey
@@ -133,25 +146,20 @@ frontpage_cards:
       include: components/download-all-data.html
     - rule_color: grey
       title: ''
-      include: components/community.html
+      include: components/joint_action_column.html
     - rule_color: grey
       title: ''
-      include: components/government.html
-
-
-
-contrast_type: single
+      include: components/strategy_column.html
 
 header_language_toggle: links
+contrast_type: single
+
 header:
     include: header-default.html
 
 footer_menu:
   - path: 'mailto:dns-indikatoren@destatis.de' #menu.contactPath
     translation_key: menu.contact_us
-  - path: menu.twitterPath #https://twitter.com/destatis?lang=de
-    translation_key:  general.twitter
-    alert: twitter
   - path: /imprint/
     translation_key: menu.imprint
 
@@ -188,7 +196,6 @@ footer_fields:
   - unit: number
     label: metadata_fields.computation_units
     value: data.number
-
 
 series_toggle: true
 graph_title_from_series: false
