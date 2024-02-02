@@ -145,7 +145,7 @@ var translations = {
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/style.css?v=20240202082700">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/style.css?v=20240202090951">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -202,49 +202,64 @@ layout-goal
             </button>
             <div class="d-flex flex-wrap w-100 justify-content-between">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav" id="menu"><li class="nav-item ">
-    <a class="nav-link" href="/open-sdg-site-starter/">17 Ziele</a>
-</li>
-<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-status-title" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Bewertung
+                    <ul class="navbar-nav" id="menu"><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-start" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    menu.1_start
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-status-title"><li class=" ">
-    <a class="dropdown-item" href="/open-sdg-site-starter/status_summary/">Statusübersicht</a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-start"><li class=" ">
+    <a class="dropdown-item" href="/open-sdg-site-starter/">menu.1_start_2_dns_platform</a>
 </li>
 <li class=" ">
-    <a class="dropdown-item" href="/open-sdg-site-starter/status/">Methodik</a>
+    <a class="dropdown-item" href="/open-sdg-site-starter/menu.1_start_2_sdg_platform_path">menu.1_start_2_sdg_platform</a>
 </li>
 </ul>
-          </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Über uns
+          </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    menu.1_about
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-about"><li class=" ">
-    <a class="dropdown-item" href="/open-sdg-site-starter/about_platform/">Die&nbspDNS&#8209;Online&nbspPlattform</a>
-</li>
-<li class=" ">
-    <a class="dropdown-item" href="/open-sdg-site-starter/about_joint_action/">Gemeinschaftswerk</a>
-</li>
-<li class=" ">
-    <a class="dropdown-item" href="/open-sdg-site-starter/about_guidance/">Technische&nbspHinweise</a>
-</li>
-</ul>
-          </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-publications" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Publikationen
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-about"><li>
+                      <a class="dropdown-item dropdown-toggle" href="#">
+                          menu.1_about_2_dns
+                      </a>
+                      <ul class="submenu dropdown-menu"><li><a class="dropdown-item" href="/open-sdg-site-starter//about/dns/monitoring/">menu.1_about_2_dns_3_indicators</a></li><li><a class="dropdown-item" href="/open-sdg-site-starter//about/dns/publications/">menu.1_about_2_dns_3_publications</a></li></ul>
+                    </li><li>
+                      <a class="dropdown-item dropdown-toggle" href="#">
+                          menu.1_about_2_sdg
+                      </a>
+                      <ul class="submenu dropdown-menu"><li><a class="dropdown-item" href="/open-sdg-site-starter/menu.1_about_2_sdg_3_indicators_path">menu.1_about_2_sdg_3_indicators</a></li><li><a class="dropdown-item" href="/open-sdg-site-starter/menu.1_about_2_sdg_3_publications_path">menu.1_about_2_sdg_3_publications</a></li></ul>
+                    </li></ul>
+          </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-status" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    menu.1_status
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-publications"><li class=" ">
-    <a class="dropdown-item" href="/open-sdg-site-starter/publications_reports/">Indikatorenberichte</a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-status"><li class=" ">
+    <a class="dropdown-item" href="/open-sdg-site-starter/status/">menu.1_status_2_methodology</a>
 </li>
 <li class=" ">
-    <a class="dropdown-item" href="/open-sdg-site-starter/publications_strategy/">Nachhaltigkeitsstrategie</a>
+    <a class="dropdown-item" href="/open-sdg-site-starter/status_summary/">menu.1_status_2_overview</a>
+</li>
+</ul>
+          </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-strategy" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    menu.1_strategy
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-strategy"><li class=" ">
+    <a class="dropdown-item" href="/open-sdg-site-starter/strategy/federal_government/">menu.1_strategy_2_government</a>
 </li>
 <li class=" ">
-    <a class="dropdown-item" href="/open-sdg-site-starter/publications_other/">Weitere Publikationen</a>
+    <a class="dropdown-item" href="/open-sdg-site-starter/strategy/laender/">menu.1_strategy_2_laender</a>
 </li>
 </ul>
-          </li><li class="nav-item ">
-    <a class="nav-link" href="https://www.sdg-indikatoren.de"><img class="link_btn" src="https://sdg-indikatoren.de/public/SDG%20Wheel_Transparent.png" title="Klicken Sie hier um zur Seite der SDG Indikatoren zu gelangen" alt="Link SDG" style="width:24px;height:24px;"/></a>
+          </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-help" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    menu.1_help
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-help"><li class=" ">
+    <a class="dropdown-item" href="/open-sdg-site-starter/help/navigation/">menu.1_help_2_navigation</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="/open-sdg-site-starter/help/guidance/">menu.1_help_2_guidance</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="/open-sdg-site-starter/help/faq/">menu.1_help_2_faq</a>
 </li>
 </ul>
+          </li></ul>
 
                 </div>
                 <div class="header-search-bar">
@@ -584,13 +599,6 @@ data-event-label="high"
                               
                           </li>
                         <li>
-                              
-                                
-                                  <a href="https://twitter.com/destatis?lang=de" target="_blank" onclick="return confirm_alert('', 'De');"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
-                                
-                              
-                          </li>
-                        <li>
                               <a href="/open-sdg-site-starter/imprint/ ">Im­pres­s­um</a>
                               
                           </li>
@@ -630,12 +638,12 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20240202082700'></script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20240202090951'></script>
 
 
     
     
-    <script src="/open-sdg-site-starter/assets/js/custom.js?v=20240202082700"></script><script>
+    <script src="/open-sdg-site-starter/assets/js/custom.js?v=20240202090951"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
