@@ -1,13 +1,11 @@
 {% if site.environment == 'staging' %}
   {% assign baseurl = 'https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter' %}
 {% else %}
-  {% assign baseurl = 'https://dns-indikatoren.de' %}
-{% endif %}
-
-{% if page.language == 'de' %}
-  {% assign language = '' %}
-{% else %}
-  {% assign language = '/en' %}
+  {% if page.language == 'de' %}
+    {% assign baseurl = 'https://dns-indikatoren.de' %}
+  {% else %}
+    {% assign baseurl = 'https://dns-indicators.de' %}
+  {% endif %}
 {% endif %}
 
 
@@ -40,7 +38,7 @@
                               <ul class="submenu dropdown-menu">
                                 {%- for triple_dropdown_item in double_dropdown_item.dropdown -%}
                                   {%- assign triple_dropdown_item_path = triple_dropdown_item.path | t -%}
-                                  <li><a class="dropdown-item" href="{% unless triple_dropdown_item_path contains 'http' %}{{ baseurl }}{{ language }}{% endunless %}{{ triple_dropdown_item_path }}">{{ triple_dropdown_item.translation_key | t }}</a></li>
+                                  <li><a class="dropdown-item" href="{% unless triple_dropdown_item_path contains 'http' %}{{ baseurl }}{% endunless %}{{ triple_dropdown_item_path }}">{{ triple_dropdown_item.translation_key | t }}</a></li>
                                 {%- endfor -%}
                               </ul>
                             </li>
@@ -50,7 +48,7 @@
 
 
                             {%- assign double_dropdown_item_path = double_dropdown_item.path | t -%}
-                            <li><a class="dropdown-item" href="{% unless double_dropdown_item_path contains 'http' %}{{ baseurl }}{{ language }}{% endunless %}{{ double_dropdown_item_path }}">{{ double_dropdown_item.translation_key | t }}</a></li>
+                            <li><a class="dropdown-item" href="{% unless double_dropdown_item_path contains 'http' %}{{ baseurl }}{% endunless %}{{ double_dropdown_item_path }}">{{ double_dropdown_item.translation_key | t }}</a></li>
                           {%- endif -%}
                         {%- endfor -%}
                       </ul>
