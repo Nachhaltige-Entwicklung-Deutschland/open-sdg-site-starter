@@ -205,7 +205,6 @@ plugins:
   - jekyll-remote-theme
   - jekyll-open-sdg-plugins
 
-
 # Use a remote Jekyll theme.
 #remote_theme: brockfanning/open-sdg@alter-data-display-decimal-fix
 remote_theme: open-sdg/open-sdg@2.2.1
