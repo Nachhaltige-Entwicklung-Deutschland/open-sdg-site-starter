@@ -197,14 +197,12 @@ graph_color_headline: ['#e5243b', '#dda63a', '#4c9f38', '#c5192d', '#ff3a21', '#
 useHeadlineColor: false
 no_value_character: ' '
 
-
 hide_empty_metadata: true
 hide_single_unit: true
 
 plugins:
   - jekyll-remote-theme
   - jekyll-open-sdg-plugins
-
 
 # Use a remote Jekyll theme.
 #remote_theme: brockfanning/open-sdg@alter-data-display-decimal-fix
