@@ -197,6 +197,7 @@ graph_color_headline: ['#e5243b', '#dda63a', '#4c9f38', '#c5192d', '#ff3a21', '#
 useHeadlineColor: false
 no_value_character: ' '
 
+
 hide_empty_metadata: true
 hide_single_unit: true
 
@@ -204,9 +205,10 @@ plugins:
   - jekyll-remote-theme
   - jekyll-open-sdg-plugins
 
+
 # Use a remote Jekyll theme.
 #remote_theme: brockfanning/open-sdg@alter-data-display-decimal-fix
-remote_theme: open-sdg/open-sdg@2.2.1
+remote_theme: open-sdg/open-sdg@2.3.3
 
 goal_image_base: https://sdg-indikatoren.de/assets/img/goals/dns
 
