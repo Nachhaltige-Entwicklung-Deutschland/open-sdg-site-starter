@@ -80,7 +80,6 @@ collections:
 # The list of languages that are translated. The first one is the default.
 languages:
   - de
-  - en
 
 logos:
   - src: assets/img/de/DNS_logo.png
@@ -161,9 +160,9 @@ metadata_tabs:
   - scope: content
     title: indicator.contentAndProgress
     description: ''
-  - scope: history_1
-    title: indicator.history
-    description: indicator.history_blurb
+  # - scope: history_1
+  #   title: indicator.history
+  #   description: indicator.history_blurb
   - scope: sources
     title: indicator.sources
     description: ''
