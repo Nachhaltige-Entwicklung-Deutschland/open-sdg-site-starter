@@ -149,7 +149,7 @@ function getDatasets(headline, data, combinations, years, defaultLabel, colors, 
   var datasets = [], index = 0, dataset, colorIndex, color, background, border, striped, excess, combinationKey, colorAssignment, showLine, spanGaps, mixedTypes;
   var numColors = colors.length,
       maxColorAssignments = numColors * 2;
-
+  console.log("mixeTypes in getDatasets: ", mixedTypes);
   prepareColorAssignments(colorAssignments, maxColorAssignments);
   setAllColorAssignmentsReadyForEviction(colorAssignments);
 
@@ -242,6 +242,7 @@ function getDataMatchingCombination(data, combination, selectableFields) {
  * @return {Object|undefined} Color assignment object if found.
  */
 function getColorAssignmentByCombination(colorAssignments, combination) {
+  console.log("colorAssignement: ", colorAssignments);
   return colorAssignments.find(function(assignment) {
     return assignment.combination === combination;
   });
@@ -385,6 +386,7 @@ function makeDataset(years, rows, combination, labelFallback, color, background,
     label: getCombinationDescription(combination, labelFallback),
     combination: combination,
     type: getCombinationType(combination, labelFallback, mixedTypes),
+    order: getCombinationType(combination, labelFallback, mixedTypes) == undefined ? 0 : 1,
     disaggregation: combination,
     borderColor: color,
     backgroundColor: background,
@@ -431,15 +433,11 @@ function getCombinationType(combination, fallback, mixedTypes) {
     var values = mixedTypes.map(a => a.value);
     if (values.indexOf(combi) != -1) {
       return mixedTypes.find(function(item) {
-        console.log("AB", typeof mixedTypes, mixedTypes, combi, combination, getCombinationDescription([item.value],''));
-        console.log("ABx", getCombinationDescription([item.value],'') === combi);
         return getCombinationDescription([item.value],'') === combi;
       }).type;
-      //return '';//mixedTypes.find(item => item.combination === combi).chartType;
     }
   }
   else {
-    console.log("B", typeof mixedTypes, mixedTypes, combi, combination);
     return '';
   }
 
@@ -451,6 +449,7 @@ function getCombinationType(combination, fallback, mixedTypes) {
  * @return {string} Human-readable description of combo
  */
 function getCombinationDescription(combination, fallback) {
+  //console.log("what does getCombinationDescp recive?", combination);
   var keys = Object.keys(combination);
   if (keys.length === 0) {
     return fallback;
@@ -534,6 +533,7 @@ function makeHeadlineDataset(years, rows, label, showLine, spanGaps, colors, all
     showLine: showLine,
     spanGaps: spanGaps,
     type: getCombinationType([], '', mixedTypes),
+    order: getCombinationType([], '', mixedTypes) == '' ? 0 : 1,
   });
 }
 
