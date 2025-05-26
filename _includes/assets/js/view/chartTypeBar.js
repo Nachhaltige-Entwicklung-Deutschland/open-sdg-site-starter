@@ -49,6 +49,14 @@ opensdg.chartTypes.bar = function (info) {
       }
         //dataset.borderWidth = 0;
     });
+    config.data.datasets.forEach(function(dataset) {
+      if (dataset.type == 'line') {
+        dataset.order = 0;
+      }
+      else {
+        dataset.order = 1;
+      }
+    });
     // Add these overrides onto the normal config, and return it.
     _.merge(config, overrides);
     return config;
