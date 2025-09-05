@@ -79,7 +79,7 @@ frontpage_cards:
 frontpage_goals_grid:
     title: frontpage.heading
     description: frontpage.instructions
-goal_image_base: 'https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns'
+goal_image_base: 'https://sdg-indikatoren.de/assets/img/goals/dns'
 goal_image_extension: ''
 goals_page:
   title: general.goals
