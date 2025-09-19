@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/style.css?v=20250912115128">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/style.css?v=20250919074513">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -525,7 +525,7 @@ data-event-label="high"
   data-graphtype="bar"
   data-graphtypes="null"
   data-geocoderegex=""
-  data-showmap="false"
+  data-showmap="true"
   data-startvalues="null"
   data-graphlimits="[{&quot;series&quot;:&quot;a) 0 to 2-year-olds&quot;,&quot;maximum&quot;:100.0},{&quot;series&quot;:&quot;b) 3 to 5-year-olds&quot;,&quot;maximum&quot;:100.0}]"
   data-stackeddisaggregation="Type of care"
@@ -539,7 +539,7 @@ data-event-label="high"
   data-graphseriesbreaks="null"
   data-grapherrorbars="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Percentage&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;a) 0 to 2-year-olds&quot;,&quot;b) 3 to 5-year-olds&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Series&quot;},{&quot;name&quot;:&quot;type of care&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Day care centres&quot;,&quot;Day care&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Type of care&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Percentage&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;a) 0 to 2-year-olds&quot;,&quot;b) 3 to 5-year-olds&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Series&quot;},{&quot;name&quot;:&quot;federal state&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Baden-Wuerttemberg&quot;,&quot;Bavaria&quot;,&quot;Berlin&quot;,&quot;Brandenburg&quot;,&quot;Bremen&quot;,&quot;Hamburg&quot;,&quot;Hesse&quot;,&quot;Mecklenburg Western Pomerania&quot;,&quot;Lower Saxony&quot;,&quot;North Rhine-Westphalia&quot;,&quot;Rhineland Palatinate&quot;,&quot;Saarland&quot;,&quot;Saxony&quot;,&quot;Saxony-Anhalt&quot;,&quot;Schleswig-Holstein&quot;,&quot;Thuringia&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Federal state&quot;},{&quot;name&quot;:&quot;GeoCode&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;GeoCode&quot;},{&quot;name&quot;:&quot;type of care&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Day care centres&quot;,&quot;Day care&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Type of care&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:1.0}]"
   data-graphstepsize="[{&quot;step&quot;:10.0}]"
@@ -598,7 +598,11 @@ data-event-label="high"
         
         
         
-        <th scope="col" class="table-value">Series</th>
+        <th scope="col">Series</th>
+        
+        
+        
+        <th scope="col" class="table-value">GeoCode</th>
         
         
       </thead>
@@ -619,7 +623,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">a) 0 to 2-year-olds</td>
+          <td>a) 0 to 2-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -639,7 +647,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">a) 0 to 2-year-olds</td>
+          <td>a) 0 to 2-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -659,7 +671,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">a) 0 to 2-year-olds</td>
+          <td>a) 0 to 2-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -679,7 +695,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">a) 0 to 2-year-olds</td>
+          <td>a) 0 to 2-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -699,7 +719,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">a) 0 to 2-year-olds</td>
+          <td>a) 0 to 2-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -719,7 +743,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">a) 0 to 2-year-olds</td>
+          <td>a) 0 to 2-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -739,7 +767,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">a) 0 to 2-year-olds</td>
+          <td>a) 0 to 2-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -759,7 +791,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">a) 0 to 2-year-olds</td>
+          <td>a) 0 to 2-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -779,7 +815,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">a) 0 to 2-year-olds</td>
+          <td>a) 0 to 2-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -799,7 +839,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">a) 0 to 2-year-olds</td>
+          <td>a) 0 to 2-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -819,7 +863,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">a) 0 to 2-year-olds</td>
+          <td>a) 0 to 2-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -839,7 +887,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">a) 0 to 2-year-olds</td>
+          <td>a) 0 to 2-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -859,7 +911,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">a) 0 to 2-year-olds</td>
+          <td>a) 0 to 2-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -879,7 +935,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">a) 0 to 2-year-olds</td>
+          <td>a) 0 to 2-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -899,7 +959,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">a) 0 to 2-year-olds</td>
+          <td>a) 0 to 2-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -919,7 +983,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">a) 0 to 2-year-olds</td>
+          <td>a) 0 to 2-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -939,7 +1007,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">a) 0 to 2-year-olds</td>
+          <td>a) 0 to 2-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -959,7 +1031,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">a) 0 to 2-year-olds</td>
+          <td>a) 0 to 2-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -979,7 +1055,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">a) 0 to 2-year-olds</td>
+          <td>a) 0 to 2-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -999,7 +1079,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">a) 0 to 2-year-olds</td>
+          <td>a) 0 to 2-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -1019,7 +1103,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">b) 3 to 5-year-olds</td>
+          <td>b) 3 to 5-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -1039,7 +1127,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">b) 3 to 5-year-olds</td>
+          <td>b) 3 to 5-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -1059,7 +1151,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">b) 3 to 5-year-olds</td>
+          <td>b) 3 to 5-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -1079,7 +1175,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">b) 3 to 5-year-olds</td>
+          <td>b) 3 to 5-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -1099,7 +1199,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">b) 3 to 5-year-olds</td>
+          <td>b) 3 to 5-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -1119,7 +1223,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">b) 3 to 5-year-olds</td>
+          <td>b) 3 to 5-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -1139,7 +1247,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">b) 3 to 5-year-olds</td>
+          <td>b) 3 to 5-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -1159,7 +1271,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">b) 3 to 5-year-olds</td>
+          <td>b) 3 to 5-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -1179,7 +1295,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">b) 3 to 5-year-olds</td>
+          <td>b) 3 to 5-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -1199,7 +1319,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">b) 3 to 5-year-olds</td>
+          <td>b) 3 to 5-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -1219,7 +1343,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">b) 3 to 5-year-olds</td>
+          <td>b) 3 to 5-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -1239,7 +1367,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">b) 3 to 5-year-olds</td>
+          <td>b) 3 to 5-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -1259,7 +1391,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">b) 3 to 5-year-olds</td>
+          <td>b) 3 to 5-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -1279,7 +1415,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">b) 3 to 5-year-olds</td>
+          <td>b) 3 to 5-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -1299,7 +1439,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">b) 3 to 5-year-olds</td>
+          <td>b) 3 to 5-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -1319,7 +1463,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">b) 3 to 5-year-olds</td>
+          <td>b) 3 to 5-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -1339,7 +1487,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">b) 3 to 5-year-olds</td>
+          <td>b) 3 to 5-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -1359,7 +1511,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">b) 3 to 5-year-olds</td>
+          <td>b) 3 to 5-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -1379,7 +1535,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">b) 3 to 5-year-olds</td>
+          <td>b) 3 to 5-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -1399,7 +1559,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">b) 3 to 5-year-olds</td>
+          <td>b) 3 to 5-year-olds</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -1487,6 +1651,32 @@ data-event-label="Change to Table tab"
         ><i class="fa fa-table" aria-hidden="true"></i>
       
     <span class="hidden-xs" style="color:black">Table</span></button>
+  </li>
+  
+  <li role="presentation"
+    class="
+      nav-item
+      map
+      
+    ">
+    <button
+      class="nav-link "
+      data-bs-toggle="tab"
+      role="tab"
+      type="button"
+      
+        id="tab-mapview"
+        data-bs-target="#mapview"
+        aria-controls="mapview"
+        data-no-disagg="true"
+        data-on="click"
+data-event-category="Tab change"
+data-event-action="Change data view"
+data-event-label="Change to Map tab"
+
+        ><i class="fa fa-map" aria-hidden="true"></i>
+      
+    <span class="hidden-xs" style="color:black">Map</span></button>
   </li>
   
 </ul>
@@ -1663,6 +1853,76 @@ data-event-label="Change to Table tab"
         </div>
       
     
+      
+        <div role="tabpanel" class="tab-pane " id="mapview" class="map">
+          
+
+<h4 id="map-heading" class="chart-title">All-day care for children</h4>
+<h6 id="map-subheading" class="chart-subtitle">a) 0 to 2-year-old children</h6>
+<div id="map" aria-describedby="table-alternative">
+  <img class="map-loading-image" src="/open-sdg-site-starter/assets/img/loading.gif" alt="Loading map" />
+</div>
+
+
+
+
+
+
+
+<div id="mapFooter" class="table-footer-text">
+  <h5 class="sr-only">Chart details</h5>
+    <dl>
+        
+          <dt><u>Data source</u>:</dt>
+          <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></dd>
+        
+
+        
+          <dt><u>Data state</u>:</dt>
+          <dd>26/09/2024</dd>
+        
+
+        
+          <dt><u>Geographical Area</u>:</dt>
+          <dd>Germany</dd>
+        
+
+        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
+        <dd class="data-controlled-footer-field unit-from-data"></dd>
+
+        
+          <dt><u>Note</u>:</dt>
+          <dd>All-day childcare: Childcare for more than seven hours.</dd>
+        
+
+        
+
+        
+        
+        
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ><u>Note</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        
+
+        
+        <dt><u>Copyright</u>:</dt>
+        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
+        
+    </dl>
+</div>
+
+
+        </div>
+      
+    
   </div>
   
 
@@ -1794,7 +2054,32 @@ data-event-label="Change to indicator.sources tab"
   
       
         
-          
+      
+
+      
+      
+
+
+      
+        
+           <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Definition </th>
+            <td>
+              
+                <p>The indicators shows the proportion of children in all-day care on 1 March as a percentage of all children in the same age group on 31 December of the previous year. All-day care corresponds to a continuous contractually agreed care period of more than seven hours per day. Childcare for school children is not included. Indicator 4.2.a refers to the group of 0 to 2-year-old children, indicator 4.2.b to the group of 3 to 5-year-old children.</p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
       
         
           
@@ -4687,6 +4972,15 @@ data-event-label="Change to indicator.sources tab"
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.2.2/dist/chartjs-plugin-annotation.min.js" integrity="sha256-XuHhf6q+GD7fscc96mTm/228GXf1Nn9wOYOE0EgeFzY=" crossorigin="anonymous"></script>
 
 
+<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet.zoomshowhide@0.1.0/dist/leaflet-zoom-show-hide.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.4.0/chroma.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/iso8601-js-period@0.2.1/iso8601.min.js"></script>
+<script src="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.min.js"></script>
+<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+<script src="https://cdn.jsdelivr.net/gh/torfsen/leaflet.zoomhome@master/dist/leaflet.zoomhome.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
 
@@ -4702,12 +4996,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20250912115128'></script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20250919074513'></script>
 
 
     
     
-    <script src="/open-sdg-site-starter/assets/js/custom.js?v=20250912115128"></script><script>
+    <script src="/open-sdg-site-starter/assets/js/custom.js?v=20250919074513"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
