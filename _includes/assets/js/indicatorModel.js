@@ -226,10 +226,10 @@ var indicatorModel = function (options) {
         this.selectedUnit = startingUnit;
       }
 
-      // Decide on starting field values if not changing series.
+      // Decide on a starting series.
       if (this.hasSerieses && !options.changingSeries) {
         var startingSeries = this.selectedSeries;
-        if (this.hasStartValues && !options.changingSeries) {
+        if (this.hasStartValues) {
           var seriesInStartValues = helpers.getSeriesFromStartValues(this.startValues);
           if (seriesInStartValues) {
             startingSeries = seriesInStartValues;
@@ -249,9 +249,9 @@ var indicatorModel = function (options) {
         this.selectedSeries = startingSeries;
       }
 
-      // Decide on starting field values.
+      // Decide on starting field values if not changing series.
       var startingFields = this.selectedFields;
-      if (this.hasStartValues) {
+      if (this.hasStartValues && !options.changingSeries) {
         startingFields = helpers.selectFieldsFromStartValues(this.startValues, this.selectableFields);
       }
       else {
@@ -355,8 +355,8 @@ var indicatorModel = function (options) {
       datasets: datasets.filter(function(dataset) { return dataset.excess !== true }),
       labels: this.years,
       headlineTable: helpers.getHeadlineTable(headline, this.selectedUnit),
-      observationAttributesTable: observationAttributesTable,
       selectionsTable: selectionsTable,
+      observationAttributesTable: observationAttributesTable,
       indicatorId: this.indicatorId,
       shortIndicatorId: this.shortIndicatorId,
       selectedUnit: this.selectedUnit,

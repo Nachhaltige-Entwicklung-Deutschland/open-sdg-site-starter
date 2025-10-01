@@ -149,7 +149,7 @@ function getDatasets(headline, data, combinations, years, defaultLabel, colors, 
   var datasets = [], index = 0, dataset, colorIndex, color, background, border, striped, excess, combinationKey, colorAssignment, showLine, spanGaps, mixedTypes;
   var numColors = colors.length,
       maxColorAssignments = numColors * 2;
-  console.log("mixeTypes in getDatasets: ", mixedTypes);
+  console.log("allObservationAttributes in getDatasets: ", allObservationAttributes);
   prepareColorAssignments(colorAssignments, maxColorAssignments);
   setAllColorAssignmentsReadyForEviction(colorAssignments);
 
@@ -192,7 +192,7 @@ function getDatasets(headline, data, combinations, years, defaultLabel, colors, 
   }, this);
 
   if (headline.length > 0) {
-    dataset = makeHeadlineDataset(years, headline, defaultLabel, showLine, spanGaps, allObservationAttributes, mixedTypes);
+    dataset = makeHeadlineDataset(years, headline, defaultLabel, showLine, spanGaps, colors, allObservationAttributes, mixedTypes);
     datasets.unshift(dataset);
   }
   return datasets;
@@ -382,6 +382,7 @@ function makeDataset(years, rows, combination, labelFallback, color, background,
        prepared = prepareDataForDataset(years, rows, allObservationAttributes),
        data = prepared.data,
        obsAttributes = prepared.observationAttributes;
+  console.log("getCOmType:", getCombinationType(combination, labelFallback, mixedTypes) );
   return Object.assign(dataset, {
     label: getCombinationDescription(combination, labelFallback),
     combination: combination,
@@ -393,7 +394,7 @@ function makeDataset(years, rows, combination, labelFallback, color, background,
     pointBorderColor: color,
     pointBackgroundColor: background,
     borderDash: border,
-    borderWidth: 2,
+    borderWidth:  2,
     headline: false,
     pointStyle: 'circle',
     data: data,
