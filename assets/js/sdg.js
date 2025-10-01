@@ -2572,7 +2572,7 @@ function makeDataset(years, rows, combination, labelFallback, color, background,
     pointBorderColor: color,
     pointBackgroundColor: background,
     borderDash: border,
-    borderWidth: getCombinationType(combination, labelFallback, mixedTypes) == undefined ? 0 : 2,
+    borderWidth:  2,
     headline: false,
     pointStyle: 'circle',
     data: data,
@@ -3557,11 +3557,23 @@ function updateObservationAttributes(obsAttributes) {
         return;
     }
     $listElement.show();
+    var listedAttributes = ["test", "test2"];
     Object.values(obsAttributes).forEach(function(obsAttribute) {
         var label = getObservationAttributeText(obsAttribute),
-            num = getObservationAttributeFootnoteSymbol(obsAttribute.footnoteNumber);
-        var $listItem = $('<dt id="observation-footnote-title-' + num + '">' + num + '</dt><dd id="observation-footnote-desc-' + num + '">' + label + '</dd>');
-        $listElement.append($listItem);
+            num = obsAttribute.footnoteNumber;
+
+        if (num == 0){
+          var $listItem = $('<dt><u>' + translations.t('+++symbols') + '</u>:</dt>');
+          $listElement.append($listItem);
+          var br = '<br>'
+        }
+        else
+          {var br = ''}
+        if (listedAttributes.indexOf(label) == -1) {
+          listedAttributes.push(label);
+          var $listItem = $('<dd id="observation-footnote-desc-' + num + '" style="margin-bottom: 0px">' + br + label + ' = ' +  translations.t('+++' + label) + '</dd>');
+          $listElement.append($listItem);
+        }
     });
 }
 
@@ -3576,9 +3588,17 @@ function getObservationAttributeText(obsAttribute) {
     if (!attributeConfig) {
         return '';
     }
-    var label = translations.t(obsAttribute.value);
+    // make sure we do not get 0.000 for obsValue
+    if (isNaN(parseInt(obsAttribute.value))) {
+      var label = translations.t(obsAttribute.value);
+    }
+    else{
+        var label = translations.t(String(parseInt(obsAttribute.value)));
+    }
+    //var label = translations.t(obsAttribute.value);
+
     if (attributeConfig.label) {
-        label = translations.t(attributeConfig.label) + ': ' + label;
+        label = translations.t(attributeConfig.label) + ' = ' + label;
     }
     return label;
 }
