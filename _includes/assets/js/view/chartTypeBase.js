@@ -106,7 +106,7 @@ opensdg.chartTypes.base = function(info) {
                         afterLabel: function(tooltipItem) {
 
                           var label =  tooltipItem.dataset.label;
-                          label = label.replace('<sub>','').replace('</sub>','').replace("<u>","").replace("</u>","");
+                          label = label.replace('<sub>','').replace('</sub>','').replace('<u>','').replace('</u>','');
                           if (label.length > 45){
                             label = label.split(' ');
                             var re = [];
