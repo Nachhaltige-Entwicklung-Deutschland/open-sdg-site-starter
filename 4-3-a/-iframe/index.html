@@ -146,7 +146,7 @@ var translations = {
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/style.css?v=20251128075750">
+        <link rel="stylesheet" href="/open-sdg-site-starter/assets/css/style.css?v=20251201060647">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -334,7 +334,7 @@ layout-indicator-iframe
   data-graphseriesbreaks="null"
   data-grapherrorbars="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Prozent&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_0&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;.&quot;,&quot;…&quot;,&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_0&quot;},{&quot;name&quot;:&quot;sex&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Weiblich&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Geschlecht&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Prozent&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_0&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;.&quot;,&quot;…&quot;,&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_0&quot;},{&quot;name&quot;:&quot;sex&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Weiblich&quot;,&quot;Männlich&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Geschlecht&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:0.0}]"
   data-graphstepsize="null"
@@ -713,15 +713,15 @@ data-event-label="Change to Table tab"
 
         </div>
       </figure>
-      <div id="chartSelectionDownload" class="clearfix">
+      <!--<div id="chartSelectionDownload" class="clearfix">
         <button
           id="btnSave"
           title=""
           aria-label=""
           class='btn btn-primary btn-download'>
           Grafik als Bild speichern
-        </button><!--
-   --></div>
+        </button>
+      </div>-->
     </div>
 
 
@@ -918,11 +918,6 @@ data-event-label="Change to indicator.sources tab"
 
 
       
-
-      <!-- weather -->
-      
-
-      
     
   
       
@@ -945,11 +940,6 @@ data-event-label="Change to indicator.sources tab"
             </td>
           </tr>
         
-      
-
-      <!-- weather -->
-      
-
       
     
   
@@ -980,11 +970,6 @@ data-event-label="Change to indicator.sources tab"
           </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
     
   
       
@@ -1007,11 +992,6 @@ data-event-label="Change to indicator.sources tab"
             </td>
           </tr>
         
-      
-
-      <!-- weather -->
-      
-
       
     
   
@@ -1036,11 +1016,6 @@ data-event-label="Change to indicator.sources tab"
           </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
     
   
       
@@ -1064,11 +1039,6 @@ data-event-label="Change to indicator.sources tab"
           </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
     
   
       
@@ -1091,11 +1061,6 @@ data-event-label="Change to indicator.sources tab"
             </td>
           </tr>
         
-      
-
-      <!-- weather -->
-      
-
       
     
   
@@ -1926,11 +1891,6 @@ data-event-label="Change to indicator.sources tab"
           <p> <p><b style="color: #c5192d; font-size: large">4.3.a Weiterbildungsbeteiligung</b><br /><br />Der Indikator erfasst den Anteil der Bevölkerung im Alter von 25&nbsp;bis 64&nbsp;Jahren, der in den letzten zwölf Monaten vor seiner Erhebung an formalen oder non-formalen Aus- oder Weiterbildungsmaßnahmen teilgenommen hat. Formale Bildung umfasst Bildungsaktivitäten an Schulen, Hochschulen und Universitäten, die einem festgelegten Lehrplan folgen, mit einem im nationalen Qualifikationsrahmen anerkannten Abschluss wie Abitur, Bachelor- oder Masterabschluss enden und mindestens sechs Monate dauern. Non-formale Weiterbildung bezieht sich auf organisierte Lernaktivitäten außerhalb des formalen Bildungssystems, wie berufliche Schulungen, Workshops oder Online-Kurse, die spezifische Kompetenzen oder Wissen vermitteln und zu keinem formalen Abschluss führen.<br /><br />Die Daten des Indikators stammen aus dem Adult Education Survey (AES), einer europaweit koordinierten Erhebung, die das Weiterbildungsverhalten der erwachsenen Bevölkerung abbildet. Sie erfasst, inwieweit Erwachsene an formalen oder non-formalen Bildungsmaßnahmen teilnehmen, welche Art von Weiterbildungsaktivitäten sie verfolgen und welche Gründe sie für oder gegen die Teilnahme an Weiterbildung haben. Die Erhebung ist für alle Mitgliedsstaaten der Europäischen Union (EU) verpflichtend und wird alle sechs Jahre durchgeführt. In den Zwischenjahren erfolgen in Deutschland nationale Erhebungen, die ab 2025&nbsp;im Dreijahresrhythmus durchgeführt werden (zuvor alle zwei Jahre).<br /><br />Seit der ersten Erhebung in 2007&nbsp;stieg der Anteil der 25- bis 64-Jährigen in Weiterbildung von 45&nbsp;% kontinuierlich auf 62&nbsp;% im Jahr 2020. Die Weiterbildungsquoten von Frauen und Männern in dieser Altersgruppe sind seit 2016&nbsp;nahezu gleich. Bei der letzten Erhebung im Jahr 2022&nbsp;wurde ein leichter Rückgang auf 60&nbsp;% beobachtet, was möglicherweise mit der COVID-19-Pandemie und den damit verbundenen Einschränkungen, wie dem Fehlen von Präsenzveranstaltungen, zusammenhängt. Ein ähnlicher Rückgang wurde auch in anderen Erhebungen zur Weiterbildung beobachtet. Im EU-weiten Vergleich liegt Deutschland damit deutlich über der EU-weiten Weiterbildungsquote von 46,6&nbsp;%.<br /><br />Die non-formale Aus- oder Weiterbildung machte den weitaus größeren Anteil an dem Indikatorwert aus. Im Jahr 2022&nbsp;gaben 57,8&nbsp;% der Befragten an, an solchen Maßnahmen teilgenommen zu haben, während nur 7,4&nbsp;% in formaler Ausbildung waren. Die Summe übersteigt den Indikatorwert, da 5,2&nbsp;% der Befragten neben einer formalen Ausbildung zusätzlich an non-formalen Bildungsmaßnahmen teilgenommen haben.<br /><br />Bei den in Anspruch genommenen non-formalen Bildungsmaßnahmen war das Themengebiet <i>Wirtschaft, Verwaltung und Recht</i> mit 25,4&nbsp;% am stärksten vertreten, gefolgt von <i>Dienstleistungen</i> mit 18,9&nbsp;%, <i>Gesundheit und soziale Dienste</i> mit 14,3&nbsp;% und <i>Informations- und Kommunikationstechnologien</i> mit 14,0&nbsp;%.<br /><br />Eine Auswertung der Befragungsergebnisse nach Altersklassen zeigt, dass mit zunehmendem Alter die Weiterbildungsbeteiligung deutlich nachlässt. Nehmen bei den 25- bis 34-Jährigen noch 70,5&nbsp;% an Weiterbildungsmaßnahmen teil, gilt dies nur noch für 61,8&nbsp;% der 35- bis 44-Jährigen, 60,1&nbsp;% der 45- bis 54-Jährigen und 51,5&nbsp;% der 55- bis 64-Jährigen.<br /><br />Der Indikator nimmt keinerlei Wertung der Weiterbildungsmaßnahmen vor. So werden etwa Masterstudiengänge genauso berücksichtigt, wie einmalige, kurze Workshops, die aus rein privatem Interesse wahrgenommen werden. Dadurch liefert der Indikator einen guten Gesamteindruck vom quantitativen Ausmaß der Aus- und Weiterbildung, erlaubt jedoch keine Rückschlüsse auf die zeitlichen und qualitativen Ausprägungen der in Anspruch genommenen Maßnahmen.<br /><br />Trotz des Rückgangs zeigt die durchschnittliche Entwicklung der letzten Jahre einen positiven Trend, sodass der politisch festgelegte Zielwert von 65&nbsp;% Weiterbildungsbeteiligung möglicherweise bereits im Jahr 2027&nbsp;erreicht werden könnte, sofern die durchschnittliche Entwicklung der letzten Jahre weiterhin anhält.</p>
  </p>
         
-      
-
-      <!-- weather -->
-      
-
       
     
   
@@ -3512,11 +3472,6 @@ data-event-label="Change to indicator.sources tab"
           </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
     
   
       
@@ -3526,11 +3481,6 @@ data-event-label="Change to indicator.sources tab"
       
       
 
-
-      
-
-      <!-- weather -->
-      
 
       
     
@@ -3555,11 +3505,6 @@ data-event-label="Change to indicator.sources tab"
             </td>
           </tr>
         
-      
-
-      <!-- weather -->
-      
-
       
     
   
@@ -3599,11 +3544,6 @@ data-event-label="Change to indicator.sources tab"
           </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
     
   
       
@@ -3613,11 +3553,6 @@ data-event-label="Change to indicator.sources tab"
       
       
 
-
-      
-
-      <!-- weather -->
-      
 
       
     
@@ -4484,11 +4419,6 @@ data-event-label="Change to indicator.sources tab"
           </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
     
   
       
@@ -4498,11 +4428,6 @@ data-event-label="Change to indicator.sources tab"
       
       
 
-
-      
-
-      <!-- weather -->
-      
 
       
     
@@ -4527,11 +4452,6 @@ data-event-label="Change to indicator.sources tab"
             </td>
           </tr>
         
-      
-
-      <!-- weather -->
-      
-
       
     
   
@@ -4571,11 +4491,6 @@ data-event-label="Change to indicator.sources tab"
           </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
     
   
       
@@ -4585,11 +4500,6 @@ data-event-label="Change to indicator.sources tab"
       
       
 
-
-      
-
-      <!-- weather -->
-      
 
       
     
@@ -5456,11 +5366,6 @@ data-event-label="Change to indicator.sources tab"
           </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
     
   
       
@@ -5470,11 +5375,6 @@ data-event-label="Change to indicator.sources tab"
       
       
 
-
-      
-
-      <!-- weather -->
-      
 
       
     
@@ -5499,11 +5399,6 @@ data-event-label="Change to indicator.sources tab"
             </td>
           </tr>
         
-      
-
-      <!-- weather -->
-      
-
       
     
   
@@ -5576,7 +5471,6 @@ data-event-label="Change to indicator.sources tab"
     </div>
     
   
-  
 </div>
 
 </div>
@@ -5611,12 +5505,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20251128075750'></script>
+<script src='/open-sdg-site-starter/assets/js/sdg.js?v=20251201060647'></script>
 
 
     
     
-    <script src="/open-sdg-site-starter/assets/js/custom.js?v=20251128075750"></script><script>
+    <script src="/open-sdg-site-starter/assets/js/custom.js?v=20251201060647"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
