@@ -129,6 +129,7 @@ observation_attributes:
     label: ''
   - field: COMMENT_OBS_2
     label: ''
+
 languages_public: []
 logos:
   - src: assets/img/de/DNS_logo.png
@@ -233,9 +234,9 @@ metadata_tabs:
   - scope: content
     title: indicator.contentAndProgress
     description: ''
-  # - scope: history_1
-  #   title: indicator.history
-  #   description: indicator.history_blurb
+  - scope: downloads
+    title: indicator.downloads
+    description: indicator.download_blurb
   - scope: sources
     title: indicator.sources
     description: ''
