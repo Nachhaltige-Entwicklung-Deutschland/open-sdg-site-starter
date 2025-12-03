@@ -4,22 +4,25 @@
   {% assign language = 'En'' %}
 {% endif %}
 <table class="table" style="width:100%; table-layout: fixed;">
-  <tr id="everythingElse">
-   <th scope="row" style="text-align: left; width: 130px;">
-     {{ page.t.indicator.indicator }}
-   </th>
-   <td>
-     <a role="button" href="https://dnstestenvironment.github.io/dns-indicators/public/indicator_downloads_de/{{ page.indicator.slug }}.pdf" class="btn btn-primary btn-download" tabindex='0' role='button' style="width: 300px;" >
-       {{ page.t.indicator.download_indicator }}
-     </a>
-   </td>
- </tr>
+  {% if page.indicator.download_content %}
+    <tr id="everythingElse">
+     <th scope="row" style="text-align: left; width: 130px;">
+       {{ page.t.indicator.indicator }}
+     </th>
+     <td>
+       <a href="{{ page.indicator.download_content }}" target="_blank">
+         {{ page.t.indicator.download_indicator }}
+       </a>
+       <small> {{ page.t.indicator.download_indicator_addition}}</small>
+     </td>
+   </tr>
+  {% endif %}
   <tr id="everythingElse">
    <th scope="row" style="text-align: left; width: 130px;">
      {{ page.t.indicator.data }}
    </th>
    <td>
-     <a role="button" href="{{ page.remote_data_prefix }}/data/{{ page.indicator.slug }}.csv" class="btn btn-primary btn-download" download='indicator_{{ page.indicator.slug }}.csv' tabindex='0' role='button' style="width: 300px;">
+     <a href="{{ page.remote_data_prefix }}/data/{{ page.indicator.slug }}.csv" download='indicator_{{ page.indicator.slug }}.csv'>
        {{ page.t.indicator.download_data }}
      </a>
    </td>
@@ -30,15 +33,10 @@
   </th>
   <td>
     <div id="chartSelectionDownload" class="clearfix">
-      <button
-        id="btnSave"
-        title="{{ page.t.indicator.download_chart_image_title }}"
-        aria-label="{{ page.t.indicator.download_chart_image_title }}"
-        class='btn btn-primary btn-download'
-        style= 'margin-top: 0px; width: 300px;"'
+      <a href="javascript:void(0);"
         onclick='getChart()'>
         {{ page.t.indicator.download_chart }}
-      </button>
+      </a>
     </div>
   </td>
 </tr>
