@@ -1,0 +1,93 @@
+{% if page.language == 'de' %}
+  {% assign language = 'De' %}
+{% else %}
+  {% assign language = 'En'' %}
+{% endif %}
+<table class="table" style="width:100%; table-layout: fixed;">
+  {% if page.indicator.download_content %}
+    <tr id="everythingElse">
+     <th scope="row" style="text-align: left; width: 130px;">
+       {{ page.t.indicator.indicator }}
+     </th>
+     <td>
+       <a href="{{ page.indicator.download_content }}" target="_blank">
+         {{ page.t.indicator.download_indicator }}
+       </a>
+       <small style="margin-left: 15px;">{{ page.t.indicator.download_indicator_addition}}</small>
+     </td>
+   </tr>
+  {% endif %}
+  <tr id="everythingElse">
+   <th scope="row" style="text-align: left; width: 130px;">
+     {{ page.t.indicator.data }}
+   </th>
+   <td>
+     <a href="{{ page.remote_data_prefix }}/data/{{ page.indicator.slug }}.csv" download='indicator_{{ page.indicator.slug }}.csv'>
+       {{ page.t.indicator.download_data }}
+     </a>
+   </td>
+ </tr>
+ <tr id="everythingElse">
+  <th scope="row" style="text-align: left; width: 130px;">
+    {{ page.t.indicator.chart }}
+  </th>
+  <td>
+    <div id="chartSelectionDownload" class="clearfix">
+      <a href="javascript:void(0);"
+        onclick='getChart()'>
+        {{ page.t.indicator.download_chart }}
+      </a>
+    </div>
+  </td>
+</tr>
+</table>
+
+
+<script>
+  function getChart() {
+        var filename = 'chart.png',
+            element = document.getElementById('chart-canvas'),
+            height = element.clientHeight + 50,
+            width = element.clientWidth + 50;
+        var options = {
+            // These options fix the height, width, and position.
+            height: height,
+            width: width,
+            windowHeight: height,
+            windowWidth: width,
+            x: 0,
+            y: 0,
+            scrollX: 0,
+            scrollY: 0,
+            scale: 2,
+            backgroundColor: isHighContrast() ? '#000000' : '#FFFFFF',
+            // Allow a chance to alter the screenshot's HTML.
+            onclone: function (clone) {
+                // Add a body class so that the screenshot style can be custom.
+                clone.body.classList.add('image-download-in-progress');
+            },
+            // Decide which elements to skip.
+            ignoreElements: function (el) {
+                // Keep all style, head, and link elements.
+                var keepTags = ['STYLE', 'HEAD', 'LINK'];
+                if (keepTags.indexOf(el.tagName) !== -1) {
+                    return false;
+                }
+                // Keep all elements contained by (or containing) the screenshot
+                // target element.
+                if (element.contains(el) || el.contains(element)) {
+                    return false;
+                }
+                // Leave out everything else.
+                return true;
+            }
+        };
+        // First convert the target to a canvas.
+        html2canvas(element, options).then(function (canvas) {
+            // Then download that canvas as a PNG file.
+            canvas.toBlob(function (blob) {
+                saveAs(blob, filename);
+            });
+        });
+    };
+</script>
