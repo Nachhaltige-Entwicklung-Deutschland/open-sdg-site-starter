@@ -150,11 +150,14 @@ map_layers:
     staticBorders: true
     subfolder: laender
     label: indicator.laender
+
+
+    
 map_options:
   disaggregation_controls: true
   minZoom: 0
   maxZoom: 11
-  tileURL: https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
+  tileURL: https://{s}.tile.openstreetmap.org/{z}//{y}.png
   tileOptions:
     id: mapbox.light
     #accessToken: pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjazU1M2trazQwYnFwM2trYmdwNm9rOWxkIn0.u36w-RJPqoTGmivl_zED1w
