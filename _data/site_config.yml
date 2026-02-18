@@ -160,7 +160,7 @@ map_options:
   tileURL: https://{s}.tile.openstreetmap.org/{z}//{y}.png
   tileOptions:
     id: mapbox.light
-    accessToken: ACCESS_TOKEN: ${{ secrets.maptoken }}
+    accessToken: ${{ secrets.maptoken }}
     attribution: <a href="https://www.openstreetmap.org/copyright">&copy; OpenStreetMap</a> contributors |<br class="visible-xs"> <a href="https://www.bkg.bund.de">&copy; GeoBasis-De / BKG 2024</a> |<br class="hidden-lg"> <a href="https://www.destatis.de/DE/Home/_inhalt.html">&copy; Statistisches Bundesamt (Destatis), 2026</a>
   colorRange: [["#FCE9EB", "#F7BDC4", "#F2929D", "#ED6676", "#E83A4F", "#E5243B", "#B71D2F", "#891623", "#5C0E18", "#2E070C"],
               ["#FCF8EB", "#F7E9C2", "#F2DB9A", "#EDCD72", "#E8BE49", "#E5B735", "#CEA530", "#A08025", "#735C1B", "#453710"],
