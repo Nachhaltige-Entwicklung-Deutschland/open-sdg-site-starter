@@ -53,6 +53,6 @@
     sortFieldGroup: sortFieldGroup,
     getObservationAttributeFootnoteSymbol: getObservationAttributeFootnoteSymbol,
     getObservationAttributeText: getObservationAttributeText,
-    getBrowserDecimalSeparator: getBrowserDecimalSeparator,
+    getBrowserDecimalSeparator: getBrowserDecimalSeparator, 
   }
 })();
