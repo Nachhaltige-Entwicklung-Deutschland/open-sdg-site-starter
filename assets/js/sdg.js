@@ -5414,7 +5414,7 @@ function createIndicatorDownloadButtons(indicatorDownloads, indicatorId, el) {
     sortFieldGroup: sortFieldGroup,
     getObservationAttributeFootnoteSymbol: getObservationAttributeFootnoteSymbol,
     getObservationAttributeText: getObservationAttributeText,
-    getBrowserDecimalSeparator: getBrowserDecimalSeparator,
+    getBrowserDecimalSeparator: getBrowserDecimalSeparator, 
   }
 })();
 
