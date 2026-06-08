@@ -21,6 +21,7 @@ opensdg.chartTypes.base = function(info) {
             responsive: true,
             maintainAspectRatio: false,
             spanGaps: true,
+            fill: false,
             scrollX: true,
             scrollCollapse: true,
             sScrollXInner: '150%',
