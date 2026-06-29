@@ -57,7 +57,6 @@
   function Plugin(element, options) {
 
     this.element = element;
-
     // Support colorRange map option in string format.
     if (typeof options.mapOptions.colorRange === 'string') {
       var colorRangeParts = options.mapOptions.colorRange.split('.'),
@@ -197,15 +196,17 @@
         var obsAtts = feature.properties.observation_attributes[plugin.currentDisaggregation][plugin.currentYear],
             footnoteNumbers = [];
         if (obsAtts) {
+          var tooltipAtts = []
           Object.keys(obsAtts).forEach(function(field) {
             if (obsAtts[field]) {
-              var hashKey = field + '|' + obsAtts[field];
-              var footnoteNumber = plugin.allObservationAttributes[hashKey].footnoteNumber;
-              footnoteNumbers.push(plugin.viewHelpers.getObservationAttributeFootnoteSymbol(footnoteNumber));
+              tooltipAtts.push(obsAtts[field]);
+              //var hashKey = field + '|' + obsAtts[field];
+              //var footnoteNumber = plugin.allObservationAttributes[hashKey].footnoteNumber;
+              //footnoteNumbers.push(plugin.viewHelpers.getObservationAttributeFootnoteSymbol(footnoteNumber));
             }
           });
-          if (footnoteNumbers.length > 0) {
-            tooltipContent += ' ' + footnoteNumbers.join(' ');
+          if (tooltipAtts.length > 0) {
+            tooltipContent += ' [' + tooltipAtts.join(', ') + ']';
           }
         }
       }
@@ -308,6 +309,7 @@
       opensdg.dataDisplayAlterations.forEach(function(callback) {
         value = callback(value);
       });
+
       if (typeof value !== 'number') {
         if (this._precision || this._precision === 0) {
           value = Number.parseFloat(value).toFixed(this._precision);
@@ -337,6 +339,11 @@
       if (props.values && props.values.length && this.currentDisaggregation < props.values.length) {
         var value = props.values[this.currentDisaggregation][this.currentYear];
         if (typeof value === 'number') {
+          ret = opensdg.dataRounding(value, { indicatorId: this.indicatorId });
+        }
+        if (typeof value === 'string') {
+          //get rid of observationAttributes
+          value = value.replace(value.match(/\[(.*?)\]/)[0],'')/1;
           ret = opensdg.dataRounding(value, { indicatorId: this.indicatorId });
         }
       }
