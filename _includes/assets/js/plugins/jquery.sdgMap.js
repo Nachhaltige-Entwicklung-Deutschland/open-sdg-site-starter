@@ -343,7 +343,7 @@
         }
         if (typeof value === 'string') {
           //get rid of observationAttributes
-          value = value.replace(value.match(/\[(.*?)\]/)[0],'')/1;
+          value = value.replace(/\[.*?\]/g, "")/1;
           ret = opensdg.dataRounding(value, { indicatorId: this.indicatorId });
         }
       }
